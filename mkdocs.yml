@@ -1,0 +1,16 @@
+site_name: Content Management Platform
+dev_addr: 127.0.0.1:4000
+nav:
+    - Home: index.md
+    - About: about.md
+theme:
+     name: 'material'
+     custom_dir: 'theme'
+     palette:
+             primary: 'blue'
+markdown_extensions:
+  - admonition
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details
+  - pymdownx.superfences

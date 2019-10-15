@@ -1,19 +1,35 @@
-site_name: Content Management Platform
-dev_addr: 127.0.0.1:4000
-nav:
-    - Home: index.md
-    - About: about.md
-    - Personalization: personalization.md
-    - Content Types: content-types.md
-    - Workflow: workflow.md
+site_name: Flotiq
+dev_addr: 0.0.0.0:4000
 theme:
      name: 'material'
      custom_dir: 'theme'
      palette:
-             primary: 'blue'
+             primary: 'teal'
+     feature:
+             tabs: true
+plugins:
+  - search
+  - awesome-pages
+
+extra_css:
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
+    #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
+
 markdown_extensions:
   - admonition
+  - attr_list
+  - codehilite
+  - toc
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_javascript:
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
+    #- https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.js
+    #- https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/javascript/javascript.min.js

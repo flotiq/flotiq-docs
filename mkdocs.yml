@@ -3,6 +3,9 @@ dev_addr: 127.0.0.1:4000
 nav:
     - Home: index.md
     - About: about.md
+    - Personalization: personalization.md
+    - Content Types: content-types.md
+    - Workflow: workflow.md
 theme:
      name: 'material'
      custom_dir: 'theme'

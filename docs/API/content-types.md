@@ -11,10 +11,6 @@ The internal system API is used to define and list Content Types (models), which
 
 The user public API exposes the user-defined Content Types (models) via a REST interface.
 
-Full JSON Schema for CMS is described in [Swagger](https://swagger-test.dev.cdwv.pl/?url=https://new-cms-staging.api.dev.cdwv.pl/api/v1/internal/open-api-schema.json)
-
-![](http://minio.dev.cdwv.pl:80/hackmd/uploads/upload_872bff076138069389e7fc0076b6d994.png)
-
 ## Key concepts
 
 * **Content Repository** - the headless part of the Content Management Platform.
@@ -41,16 +37,10 @@ Example:
     * Title – string, required 
     * PostContent – string, required 
 
-##Example request flow
-
-Basic request processing flow, executed when any user-defined <abbr title="Content Object - an instance of a Content Type.">Content Object</abbr> is created. Each step of the basic flow can be extended by registering custom event handlers for a given <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> and event type.
-
-![](http://minio.dev.cdwv.pl:80/hackmd/uploads/upload_c37e876095e4d33903a5cd51fcd9d7a9.png)
-
 
 ##API token
 
-API token (described in requests below as `YOUR API TOKEN`) should be obtained from the CMS panel. It is displayed on the User account, accessible from the menu under avatar in the right top corner. All examples here have authentication in the request header, but you can also use `?auth_token=YOUR_API_TOKEN` in the request URL.
+API token (described in requests below as `YOUR API TOKEN`) should be obtained from the User profile view of the Flotiq panel.  All examples here have authentication in the request header, but you can also use `?auth_token=YOUR_API_TOKEN` in the request URL.
 
 ![](images/contentObject.jpg)
 
@@ -142,7 +132,7 @@ In this case, Blog Post will have `title` property which will be unique and will
 
 Full curl request:
 ```
-curl -X POST "https://new-cms-staging.api.dev.cdwv.pl/api/v1/internal/contenttype" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOU API TOKEN' -H 'Content-Type: application/json' --data-binary '{"name":"blogposts","label":"Blog Posts","workflowId":"_workflow-1","schemaDefinition":{"type":"object","allOf":[{"$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"},{"type":"object","properties":{"title":{"type":"string"},"postContent":{"type":"string"}}}],"required":["title","postContent"],"additionalProperties":false},"metaDefinition":{"propertiesConfig":{"title":{"inputType":"text","unique":true},"postContent":{"inputType":"richtext","unique":false}},"order":["title","postContent"]}}'
+curl -X POST "https://api.flotiq.com/api/v1/internal/contenttype" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H 'Content-Type: application/json' --data-binary '{"name":"blogposts","label":"Blog Posts","workflowId":"_workflow-1","schemaDefinition":{"type":"object","allOf":[{"$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"},{"type":"object","properties":{"title":{"type":"string"},"postContent":{"type":"string"}}}],"required":["title","postContent"],"additionalProperties":false},"metaDefinition":{"propertiesConfig":{"title":{"inputType":"text","unique":true},"postContent":{"inputType":"richtext","unique":false}},"order":["title","postContent"]}}'
 ```
 
 After such call is made and <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> is created - the User API is immediately extended to support interaction with this new Content Type:
@@ -737,7 +727,7 @@ Possible request parameters:
 
 Example request with parameters:
 ``` 
-curl -X GET "https://new-cms-staging.api.dev.cdwv.pl/api/v1/internal/contenttype?page=1&limit=20&order_by=name&order_direction=asc&name=blog" -H "X-AUTH-TOKEN: YOUR API TOKEN" -H "accept: application/json"
+curl -X GET "https://api.flotiq.com/api/v1/internal/contenttype?page=1&limit=20&order_by=name&order_direction=asc&name=blog" -H "X-AUTH-TOKEN: YOUR API TOKEN" -H "accept: application/json"
 ```
 
 ## Content Objects
@@ -764,7 +754,7 @@ For a <abbr title="Content Type - a model of data that has been defined inside t
 Full curl request:
 
 ```
-curl -X POST "https://new-cms-staging.api.dev.cdwv.pl/api/v1/content/blogposts" -H "accept: */*" -H "X-AUTH-TOKEN: YOUR API TOKEN" -H "Content-Type: application/json" -d "{\"id\":\"123123123\",\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}"
+curl -X POST "https://api.flotiq.com/api/v1/content/blogposts" -H "accept: */*" -H "X-AUTH-TOKEN: YOUR API TOKEN" -H "Content-Type: application/json" -d "{\"id\":\"123123123\",\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}"
 ```
 
 

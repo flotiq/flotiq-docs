@@ -9,7 +9,7 @@ Let's start right away with a quick tour of the essential elements you will need
 
 Everything you can see and do with your content in the Flotiq UI is also available through the API. Each Flotiq account has 2 API keys assigned to id - a read-write key and a read-only key. Both are accessible in the User profile view. As a best practice we recommend you start with the read-only and only plug-in the read-write key in case you make data modifications.
 
-Read more in the [API description](/API).
+Read more in the [API description](API/index.md).
 
 ## Type definitions
 
@@ -17,15 +17,15 @@ Also referred to as Content Type Definitions - are the key part of the system, w
 
 ![](panel/images/edit-content-type-definitions.png)
 
-Read more about how to use the Content Type editor in the [Panel docs](/panel/content-types)
+Read more about how to use the Content Type editor in the [Panel docs](panel/content-types)
 
-You can also create and modify your Content Type Definitions using the API, please head to the [API description](/API) for more information.
+You can also create and modify your Content Type Definitions using the API, please head to the [API description](API/index.md) for more information.
 
 
 
 ## Content Objects
 
-For each Content Type you define - you can store multiple Content Objects. You can access these entries from the application sidebar and create new entries via the provided forms, which are automatically generated, based on the Content Type Definition you built. You can also work with your content in multiple ways through the API, please head to the [API description](/API) for more information.
+For each Content Type you define - you can store multiple Content Objects. You can access these entries from the application sidebar and create new entries via the provided forms, which are automatically generated, based on the Content Type Definition you built. You can also work with your content in multiple ways through the API, please head to the [API description](API/index.md) for more information.
 
 ## Dynamic Content API
 

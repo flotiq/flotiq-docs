@@ -29,7 +29,7 @@ and this is how the Content Type Editor should look like in the end:
 If you're happy with the result - click the `Save` button and navigate to `Content` → `Blog Posts` in the side menu. 
 
 !!! hint
-    At this point you can also verify the result of your work in the [Dynamic Content API](/API/dynamic-content-api) - head to you API docs and see how the API has automatically expanded to support your new Content Type:
+    At this point you can also verify the result of your work in the [Dynamic Content API](../API/dynamic-content-api.md) - head to you API docs and see how the API has automatically expanded to support your new Content Type:
     ![](images/3-minute-blog-content-api.png)
 
     Three important things to note here:
@@ -49,7 +49,7 @@ It's now time to write your first post! The first time you go to the `Blog Posts
 
 ![](images/3-minute-blog-first-post.png){: .center .width75 .border}
 
-That's it. Now make sure you have your [read-only API key](/API/) in your clipboard!
+That's it. Now make sure you have your [read-only API key](../API/index.md) in your clipboard!
 
 ## Deploy
 
@@ -82,4 +82,4 @@ Congrats! Your all-shiny blog should now be live. You also learned a couple of i
 2. Populating data,
 3. Deploying a Flotiq-powered blog to Heroku, via Gatsby.
 
-You probably want to get your hands dirty now, huh? Try the [next deep dive](/Deep-Dives/wordpress-import) and see how Flotiq makes your work easier with SDK packages that will put your Content Types straight into your favorite IDE. Oh, and by the way we will import all your Wordpress posts at the same time.
+You probably want to get your hands dirty now, huh? Try the [next deep dive](wordpress-import.md) and see how Flotiq makes your work easier with SDK packages that will put your Content Types straight into your favorite IDE. Oh, and by the way we will import all your Wordpress posts at the same time.

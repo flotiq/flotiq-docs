@@ -39,4 +39,4 @@ In a similar fashion - we also provide a downloadable Postman collection, which 
 
 ![](images/postman.jpeg)
 
-Read more on how to configure Postman to work with Flotiq in [API access → Postman](/API/#postman)
+Read more on how to configure Postman to work with Flotiq in [API access → Postman](../#postman)

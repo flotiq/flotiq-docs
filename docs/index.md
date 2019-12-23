@@ -33,4 +33,4 @@ Flotiq does not force you to learn your API, instead we let you define it. Whene
 
 ![](API/images/dynamic-content-api-docs.png)
 
-Read more in [Dynamic Content API](/API/dynamic-content-api) section.
+Read more in [Dynamic Content API](API/dynamic-content-api) section.

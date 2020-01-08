@@ -1,4 +1,5 @@
-site_name: Flotiq
+site_name: Flotiq Developer Documentation
+site_url: https://flotiq.com/docs/
 dev_addr: 0.0.0.0:4000
 theme:
      name: 'material'

@@ -14,7 +14,7 @@ You can use the `GET ​/api​/v1​/search` endpoint to search through all Con
     | content_type    | array  | Restrict search to content types set                                                          |
     | aggregate_by    | array  | Fields to aggregate results direction                                                         |
     | filters         | object | Filter by object properties. Expected format: `{propertyName: value1, propertyName2: value2} `|
-    |                 |        |                                                                                               |
+    | post_filters    | object | Filter by object properties. Use it when you want aggregated counts without filters applied. Expected format: {property1: value1, property2: value2} |                                                                                              |
 
 ## Example: Search for "Flotiq" in posts
 

@@ -5,6 +5,11 @@ The Dynamic Content API is how Flotiq provides you with access to your content. 
 !!! hint
     Remember - to work with the API you will need your API keys, you can find them in your User profile.
 
+
+<div class="video-wrapper">
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/XHR4pANj4A8" frameborder="0" allowfullscreen></iframe>
+</div>    
+
 ## API docs
 
 Part of the Content API are the beautiful API docs, along with code samples to simplify your work. You can explore your Content API or share with other teams to jumpstart integration.

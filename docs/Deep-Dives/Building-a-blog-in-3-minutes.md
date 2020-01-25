@@ -2,6 +2,10 @@
 
 In this deep dive you will learn how easy it is to build and deploy a blog with Flotiq, Gatsby and Heroku. Follow along and you should end up with a working blog page in no more than 3 minutes!
 
+
+<div class="video-wrapper">
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/bMCmirgaI2M" frameborder="0" allowfullscreen></iframe>
+</div>    
 ## Define a Content Type
 
 First off - you will need to define how your content will be structured in Flotiq. Open the `Type definitions` menu and click on `Add Definition`.

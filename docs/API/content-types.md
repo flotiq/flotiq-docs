@@ -799,6 +799,86 @@ If you would post the same object as in the first example the server will respon
   ]
 }
 ```
+
+
+#### Batch content upload
+
+There is a way to add up to 100 of Content Objects at once. It is possible by using `/batch` endpoint (in our example the url would be `https://api.flotiq.com/api/v1/content/blogposts/batch`). It can be only `insert` or `insert or update` operation. To use `insert or update` you need to set `updateExisting` to `true` in query. 
+
+All objects must meet the same conditions as when adding a single object. The only difference is array of objects in request body instead of one object.
+
+Updating one blog post and adding one new:
+
+!!! Example
+    
+    ```
+    curl 'http://localhost:8069/api/v1/content/blogpost/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","postContent":"This will be the new <b>content</b>"},{"id":"123123124","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    ```
+    
+    response (code: 200):
+    ```json
+    {
+        "batch_total_count": 2,
+        "batch_success_count": 2,
+        "batch_error_count": 0,
+        "errors": []
+    }
+    ```
+    
+Trying updating one blog post and adding one new with wrong data
+    
+!!! Example
+    
+    ```
+    curl 'http://localhost:8069/api/v1/content/blogpost/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object"},{"id":"123123124","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    ```
+    
+    response (code: 400):
+    ```json
+    {
+        "batch_total_count": 2,
+        "batch_success_count": 1,
+        "batch_error_count": 1,
+        "errors": [
+          {
+            "id": "123123123",
+            "errors": {
+              "postContent": [
+                "The property postContent is required"
+              ]
+            }
+          }
+        ]
+    }
+    ```
+
+Trying updating one blog post and adding one new with duplicated id:
+    
+!!! Example
+    
+    ```
+    curl 'http://localhost:8069/api/v1/content/blogpost/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","content": "This will be the new <b>content</b>"},{"id":"123123123","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    ```
+    
+    response (code: 400):
+    ```json
+    {
+      "data": [
+        "There are duplications in object data, key: id"
+      ]
+    }
+    ```
+
+Response parameters:
+
+| Parameter           | Description |
+| ------------------- | ----------- |
+| batch_total_count   | number of elements sent in the request, present when there is no duplications in data |
+| batch_success_count | number of correct elements sent in the request, present when there is no duplications in data |
+| batch_error_count   | number of incorrect elements sent in the request, present when there is no duplications in data |
+| errors              | array of errors in the elements, errors are object containing id of the object and list of errors, present when there is no duplications in data |
+| data                | present only when there are duplications in data, listing keys containing duplications (see example above) | 
+
 ### Listing content through the API
 
 | Parameter       | Description |

@@ -1,3 +1,6 @@
+title: Building a blog in 3 minutes with Flotiq, Gatsby and Heroku | Flotiq docs
+description: A deep dive tutorial on how to bulid your first blog using a headless CMS system like Flotiq, GatsbyJS and Heroku.
+
 # Building a blog in 3 minutes with Flotiq, Gatsby and Heroku
 
 In this deep dive you will learn how easy it is to build and deploy a blog with Flotiq, Gatsby and Heroku. Follow along and you should end up with a working blog page in no more than 3 minutes!

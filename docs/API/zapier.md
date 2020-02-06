@@ -1,3 +1,6 @@
+title: Flotiq Zapier integration | Flotiq docs
+description: Flotiq allows you to easily integrate your content with any system.
+
 # Zapier integrations
 
 Thanks to Zapier it's become extremely easy to build complex pipelines that 

@@ -1,3 +1,6 @@
+title: Flotiq Media Library | Flotiq docs
+description: Learn more about the powerful Media Library that Flotiq offers.
+
 #Media library
 
 The process of uploading files to the media library consists of two steps:

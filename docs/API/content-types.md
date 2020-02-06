@@ -1,3 +1,7 @@
+title: How to handle Content Type Definitions | Flotiq docs
+description: How to handle Content Type Definitions in Flotiq
+
+
 # Content Types
 
 ##API description

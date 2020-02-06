@@ -1,3 +1,6 @@
+title: Importing Wordpress posts, migrate from Wordpress to Flotiq headless CMS | Flotiq docs
+description: Get into this deep dive into Flotiq to learn how to easily import your blog posts from Wordpress to Flotiq.
+
 # Importing posts from Wordpress
 
 Replacing Wordpress is one of the most common use cases for Headless CMS, and for good reasons. Let's take a look at how easy it's going to be.

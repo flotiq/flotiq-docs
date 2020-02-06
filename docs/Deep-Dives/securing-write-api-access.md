@@ -1,3 +1,6 @@
+title: How to secure a JAMstack app with Cloudflare workers | Flotiq docs
+description: Read this tutorial to learn how you can use Cloudflare workers to secure the API access to a headless CMS system like Flotiq.
+
 # How to secure your write API
 
 If you're building a JAMstack app - odds are you're not just going to use Flotiq for pulling your content, you might also need to update or create new content objects. In such case you should be careful not to expose your API key that allows write access to your content. While it's usually safe to expose the Read Only API key - the read/write key should be protected at all times. In this article we'll cover one way of doing it, by using Cloudflare Workers.

@@ -1,3 +1,6 @@
+title: Flotiq Search API | Flotiq docs
+description: Flotiq's search API provides an easy way to query all your content through one endpoint.
+
 #Search API
 
 The Flotiq API contains search engine implementation. 

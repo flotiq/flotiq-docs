@@ -91,3 +91,5 @@ Congrats! Your all-shiny blog should now be live. You also learned a couple of i
 3. Deploying a Flotiq-powered blog to Heroku, via Gatsby.
 
 You probably want to get your hands dirty now, huh? Try the [next deep dive](wordpress-import.md) and see how Flotiq makes your work easier with SDK packages that will put your Content Types straight into your favorite IDE. Oh, and by the way we will import all your Wordpress posts at the same time.
+
+You can also learn how to add a custom domain to your blog, for free, in [this Deep Dive](../add-a-custom-domain-to-heroku-for-free/), featuring Cloudflare Workers.

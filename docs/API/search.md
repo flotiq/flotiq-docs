@@ -19,6 +19,8 @@ You can use the `GET ​/api​/v1​/search` endpoint to search through all Con
     | filters         | object | Filter by object properties. Expected format: `{propertyName: value1, propertyName2: value2} `|
     | post_filters    | object | Filter by object properties. Use it when you want aggregated counts without filters applied. Expected format: `{property1: value1, property2: value2}` |                                                                                              |
     | fields          | array  | List of content fields to be searched                                                         |
+    | order_by        | string | Name of the field to sort results by (they are always primarily sorted by `_score`)            |
+    | order_direction | string | Direction of sorting (`asc` for ascending or `desc` for descending, default `asc`)           |
 
 ## Example: Search for "Flotiq" in posts
 

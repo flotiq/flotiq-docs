@@ -95,7 +95,7 @@ in this case, the user has specified that the ``Blog Post`` Content Type will ha
 
 ### Updating Content Types
 
-You can edit the schema of content type using `PUT https://new-cms-staging.api.dev.cdwv.pl/api/v1/internal/contenttype/{id}`, but you should be aware that **previously added objects would not be consistent with the schema**.
+You can edit the schema of content type using `PUT https://api.flotiq.com/api/v1/internal/contenttype/{id}`, but you should be aware that **previously added objects would not be consistent with the schema**.
 
 ## Content Objects
 

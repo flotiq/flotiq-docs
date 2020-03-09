@@ -892,7 +892,23 @@ Response parameters:
 | order_by        | What field should the list be ordered by, possible values are based on content type schema |
 | order_direction | Order direction, possible values: `asc`, `desc`, default `asc` |
 | hydrate         | If you want to hydrate datasources in object you need to set it to `1`, it will hydrate one level of datasources in objects, you can also use this parameter when requesting single object |
-| *               | Filter fields are based on content type schema, for example `name`, `title` |
+| filters         | Array of objects containing conditions pn which the list of CO should be filtered, the object key is name of parameter (eg. `title`) and it should have 2 keys, `type` describing how list should be filtered, and `filter` with filter query, both parameters should be string, you can filter on every subset of object parameters including `internal` parameters (eg. `internal.created_at`) |
+
+Filter types
+
+| Type               | Description                                    |
+| ------------------ | ---------------------------------------------- |
+| equals             | Object parameter must be equal to `filter`     |
+| notEquals          | Object parameter must not be equal to `filter` |
+| contains           | Object parameter must contain `filter`         |
+| notContains        | Object parameter must not contain `filter`     |
+| startsWith         | Object parameter must start with `filter`      |
+| endsWith           | Object parameter must end with `filter`        |
+| lessThanOrEqual    | Object parameter must be less or equal to `filter` |
+| lessThan           | Object parameter must be less than filter      |
+| greaterThanOrEqual | Object parameter must be greater or equal than `filter` |
+| greaterThan        | Object parameter must be greater than `filter` |
+| inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that have 3 keys in filter object |
 
 Example response:
 ```json

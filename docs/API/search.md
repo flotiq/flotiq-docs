@@ -3,8 +3,9 @@ description: Flotiq's search API provides an easy way to query all your content 
 
 #Search API
 
-The Flotiq API contains search engine implementation. 
-You can use the `GET ​/api​/v1​/search` endpoint to search through all Content Objects.
+The Flotiq API provides a powerful search engine, which is a wrapper for ElasticSearch queries. We tried to balance between resembling the ES API (for those, who already know it) and keeping it simple and cohesive with Flotiq API. 
+
+You can use the search engine via the `GET ​/api​/v1​/search` endpoint to search through all Content Objects.
 
 ??? "Search parameters "
     | Name            | Type   | Description                                                                                   |
@@ -69,3 +70,18 @@ Response:
 }
 ```
 
+## Limit the search to a specific Content Type
+
+You can easily limit the search to a specific Content Type by providing its name in `content_type[]` argument.
+
+## Limit the search to a specific field
+
+You can restrict querying to a specific field by passing the `fields[]` argument, for example `fields[]=name` would only search in the `name` field.
+
+## Increase scoring for specific fields
+
+If you'd like to search in several fields, but give better score to results which match the query in a specific field - you can use [ElasticSearch's field boosting](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/query-dsl-query-string-query.html#query-string-multi-field) to promote fields. In order to do that - psas the fields and their weights through the `fields[]` argument, for example `fields[]=title^3&fields[]=content^1` would assign a weight of 3 to the `title` field and a weight of 1 to `content` field.
+
+## Aggregate results by field
+
+If you'd like to display faceted results of your searches you can use the `aggregate_by[]` param. Add `aggregate_by[]=category` to aggregate by the `category` field. This works best with fields that have discreet values (like status, category, etc).

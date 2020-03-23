@@ -46,10 +46,6 @@ Example:
 
 API token (described in requests below as `YOUR API TOKEN`) should be obtained from the User profile view of the Flotiq panel.  All examples here have authentication in the request header, but you can also use `?auth_token=YOUR_API_TOKEN` in the request URL.
 
-![](images/contentObject.jpg)
-
-![](images/contentObject2.jpg)
-
 ## Creating new Content Types 
 
 A new <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> can be created either by sending a properly formatted POST request to the ``/api/v1/internal/contenttype`` endpoint or through the Content Modeler tool provided with the platform.

@@ -11,7 +11,7 @@
 The central part of the CMS system is the Content Repository. It enables users to store different kinds of content within the system. The users are allowed to design their content types and define them within the Content Repository using Content Type Definitions (a concept similar to DTDs familiar from XML), described in a [JSON Schema](https://json-schema.org/) format.
 
 
-Every CTD that is created in the system is validated against the predefined schema of ``ContentTypeDefinitionSchema`` type. A detailed example will be discussed [below](#creating-new-content-types-via-api).
+Every CTD that is created in the system is validated against the predefined schema of ``ContentTypeDefinitionSchema`` type. A detailed example will be discussed below.
 
 Once created, the Content Type becomes available in the system, and Content Objects of that type can be created, updated, deleted via API calls to their respective endpoints.  
 

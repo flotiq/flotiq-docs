@@ -23,7 +23,7 @@ Also referred to as Content Type Definitions - are the key part of the system, w
 
 ![](panel/images/edit-content-type-definitions.png)
 
-Read more about how to use the Content Type editor in the [Panel docs](panel/content-types)
+Read more about how to use the Content Type editor in the [Panel docs](panel/content-types.md)
 
 You can also create and modify your Content Type Definitions using the API, please head to the [API description](API/index.md) for more information.
 
@@ -40,4 +40,4 @@ Flotiq does not force you to learn your API, instead we let you define it. Whene
 
 ![](API/images/dynamic-content-api-docs.png)
 
-Read more in [Dynamic Content API](API/dynamic-content-api) section.
+Read more in [Dynamic Content API](API/dynamic-content-api.md) section.

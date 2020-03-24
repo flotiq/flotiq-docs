@@ -17,8 +17,8 @@ You can use the search engine via the `GET ​/api​/v1​/search` endpoint to 
     | order_direction | string | Order direction                                                                               |
     | content_type    | array  | Restrict search to content types set                                                          |
     | aggregate_by    | array  | Fields to aggregate results direction                                                         |
-    | filters         | object | Filter by object properties. Expected format: `{propertyName: value1, propertyName2: value2} `|
-    | post_filters    | object | Filter by object properties. Use it when you want aggregated counts without filters applied. Expected format: `{property1: value1, property2: value2}` |                                                                                              |
+    | filters         | array  | Filter by object properties. Expected format: `filters[propertyName]=value1&filters[propertyName2]=value2`|
+    | post_filters    | array  | Filter by object properties. Use it when you want aggregated counts without filters applied. Expected format: `filters[propertyName]=value1&filters[propertyName2]=value2` |                                                                                              |
     | fields          | array  | List of content fields to be searched                                                         |
     | order_by        | string | Name of the field to sort results by (they are always primarily sorted by `_score`)            |
     | order_direction | string | Direction of sorting (`asc` for ascending or `desc` for descending, default `asc`)           |

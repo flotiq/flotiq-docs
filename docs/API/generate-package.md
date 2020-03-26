@@ -23,7 +23,7 @@ These packages are automatically generated every time you modify your Content Ty
 ## Generate server libraries or clients for other languages
 
 If you need more control over how the packages are generated or if you'd like to generate a server package instead - it's fairly easy to do using [OpenAPI generator](https://openapi-generator.tech).
-Flotiq always provides your up-to-date API definition in an OpenAPI 3.0 compatible schema, read [how to find your Flotiq OpenAPI schema](./open-api-schema/). 
+Flotiq always provides your up-to-date API definition in an OpenAPI 3.0 compatible schema, read [how to find your Flotiq OpenAPI schema](../open-api-schema/). 
 
 
 ``` shell

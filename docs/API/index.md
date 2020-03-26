@@ -29,6 +29,8 @@ You can also mix and match access to any Content Objects from your account (5), 
 
 Every key has to be saved separately.
 
+To restrict access for already used keys you can remove all rules or remove the key. There isn't a way to regenerate Application Keys for now, so you should protect access to them.
+
 And here you can see how it looks all in the User Interface:
 
 ![](images/api-keys.png)

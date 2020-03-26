@@ -1,24 +1,35 @@
-title: Generate your own package
-description: If you didn't found a package, on your Flotiq dashboard, that suits your needs then you can generate it by yourself for the framework/language you like.
+title: Client libraries and SDKs
+description: Flotiq provides SDKs, or client libraries, to access your Content, but if you would like to build your own - you can use the OpenAPI compatible schema to generate clients and servers for mulitple languages.
 
-# Generate your own package using OpenApiGenerator
+## Download a package for your language
 
-On your Flotiq dashboard you can find a few logos that represents certain frameworks or languages. 
+On your Flotiq dashboard you can find links to download client libraries (SDK packages) for several frameworks and languages.
 
 ![Available frameworks and languages](images/frameworkslogos.png)
 
-Currently available are:
+Currently supported generators are:
 
-* C#
-* Go
-* Java
-* Node
-* Php
-* Python
-* Angular
-* Postman
+* C# client
+* Go client
+* Java client
+* Node client
+* PHP client
+* Python client
+* Angular client
+* Postman collection.
+ 
+These packages are automatically generated every time you modify your Content Type definitions, just like your API documentation.
 
-If any of these positions don't satisfy your needs you can generate your own package by running the following commands:
+## Generate server libraries or clients for other languages
+
+If you need more control over how the packages are generated or if you'd like to generate a server package instead - it's fairly easy to do using [OpenAPI generator](https://openapi-generator.tech).
+Flotiq always provides your up-to-date API definition in an OpenAPI 3.0 compatible schema, read [how to find your Flotiq OpenAPI schema](./open-api-schema/). 
+
+
+Or run simple curl request in terminal:
+
+`curl -X GET "https://api.flotiq.com/api/v1/internal/open-api-schema.json" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H 'Content-Type: application/json'`
+
 
 `npm install @openapitools/openapi-generator-cli@cli-4.2.3 -g`
 

@@ -26,20 +26,23 @@ If you need more control over how the packages are generated or if you'd like to
 Flotiq always provides your up-to-date API definition in an OpenAPI 3.0 compatible schema, read [how to find your Flotiq OpenAPI schema](./open-api-schema/). 
 
 
-Or run simple curl request in terminal:
+``` shell
+npm install @openapitools/openapi-generator-cli@cli-4.2.3 -g
+```
 
-`curl -X GET "https://api.flotiq.com/api/v1/internal/open-api-schema.json" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H 'Content-Type: application/json'`
 
+This will instal the OpenAPI generator that will allow you to generate more packages. List of supported generators is mentioned [here](https://openapi-generator.tech/docs/generators)
 
-`npm install @openapitools/openapi-generator-cli@cli-4.2.3 -g`
-
-This will instal an OpenApi generator that will generate such package for you. List of available is mentioned [here](https://openapi-generator.tech/docs/generators)
-
-`openapi-generator generate -g <name> -i <path_to_open_api_schema_json> --skip-validate-spec -o <output_path>`
+```
+openapi-generator generate -g <name> -i <path_to_open_api_schema_json> --skip-validate-spec -o <output_path>
+```
 
 Parameters description:
-`<name>` - name of framework/language you want to generate package for (ex. typescript-angular)
-`<path_to_open_api_schema_json>` - path to generated OpenApiSchema file.
-`<output_path>` - specify where you want to output your generated package   
+
+* `<name>` - name of framework/language you want to generate package for (ex. typescript-angular)
+* `<path_to_open_api_schema_json>` - path to generated OpenApiSchema file.
+* `<output_path>` - specify where you want to output your generated package   
+
+## Use Swagger Editor to generate server and client libraries
 
 Alternatively you can go to [Swagger Editor](https://editor.swagger.io), paste the contents of you open-api-schema.json file there and generate a package that you are interested in.

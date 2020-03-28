@@ -96,19 +96,3 @@ in this case, the user has specified that the ``Blog Post`` Content Type will ha
 ### Updating Content Types
 
 You can edit the schema of content type using `PUT https://api.flotiq.com/api/v1/internal/contenttype/{id}`, but you should be aware that **previously added objects would not be consistent with the schema**.
-
-## Content Objects
-
-Once a Content Type has been defined in the system - the user can create Content Objects of that Content Type. This is done either directly through the API or via the convenient Content Entry tools provided within the Content Management Platform.
-
-### Authoring content through the Content Entry component
-
-The Content Entry component of the system consists of 2 elements - Content browser and the forms used for editing and authoring content.
-
-To quickly browse and search through large amounts of data, the content browser provides a convenient grid interface that can be customized according to users preferences:
-
-![](http://minio.dev.cdwv.pl:80/hackmd/uploads/upload_7c47fde72a061fafcefc90652080f9f1.png)
-
-From the grid, the users can go to the form that allows them to edit particular Content Object:
-
-![](http://minio.dev.cdwv.pl:80/hackmd/uploads/upload_a33a17f2a8dba98e9108a57f519811fe.png)

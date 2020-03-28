@@ -39,5 +39,5 @@ From the grid view you can easily access individual objects by clicking the penc
 
 Follow these resources to learn more about Flotiq:
 
-- [how to create Content Type Definitions](../content-types/)
-- [how to retrieve your API keys](../../API/)
+- [how to create Content Type Definitions](./content-types/)
+- [how to retrieve your API keys](../API/)

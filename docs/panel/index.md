@@ -32,8 +32,13 @@ From the grid view you can easily access individual objects by clicking the penc
 
 ![Flotiq object editor](images/EditObject.png)
 
+## Media Library
 
+Flotiq provides storage for images and other media within our Media Library. The main screen of the Media Library shows all images and files that are currently present in your account:
 
+![Flotiq Media Library](images/MediaLibrary-home.png)
+
+when you switch to the `Stock photos` view - you will have access to the entire [Unsplash](https://unsplash.com) library of images, which you can use in your projects.
 
 ## Read more
 
@@ -41,3 +46,4 @@ Follow these resources to learn more about Flotiq:
 
 - [how to create Content Type Definitions](./content-types/)
 - [how to retrieve your API keys](../API/)
+- [how to use Unsplash in Flotiq](./media-library/)

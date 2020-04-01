@@ -25,6 +25,7 @@ When we extract downloaded package we will see some directories and typescript c
 *    `/model` directory, which has all Content Type Definitions that exists on your Flotiq account. They are implemented as exported interfaces with the following template body:
 
 Example: 
+
 ![](images/angular_sdk_1.png)
 
 

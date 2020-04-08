@@ -1,3 +1,7 @@
+.md-content{
+  border-left: #BBBBBB33 1px solid;
+  border-right: #BBBBBB33 1px solid;
+}
 .video-wrapper {
   position: relative;
   display: block;

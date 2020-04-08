@@ -7,6 +7,8 @@ This time, we'll dive deep into building e-commerce with Snipcart, Flotiq and Ga
 
 What you'll get:
 
+1. A simple, but beautiful, functional e-commerce website with your own products, running live on the Internet.
+
 ![Live e-commerce website, built and released in 5 minutes](images/snipcart-gatsby-demo/live-website.png)
 
 What you'll need:
@@ -14,12 +16,14 @@ What you'll need:
 1. Flotiq account (free),
 2. Snipcart account (free for testing), register [here](https://snipcart.com)
 3. Node.js & NPM installed
-4. [This repository](https://github.com/flotiq/gatsby-starter-products).
+4. [This repository](https://github.com/flotiq/gatsby-starter-products)
+5. Heroku account (free) if you'd like to put it live.
 
 Let's get started!
 
 ## Prepare your Flotiq account
 
+For this particular project - we'll use Flotiq to store the information about products - names, prices, etc.
 There's a couple of simple steps that shouldn't take longer than 1 minute to complete.
 
 ### Register an account, 30 seconds
@@ -57,6 +61,10 @@ You can upload your images or use our awesome Unsplash integration - head over t
 Finally - click the `Save button`. 
 
 Repeat for as many products as you want.
+
+!!! hint
+    If you'd like to programmatically import hundreds or thousands of products, instead of typing them by hand - you can use Flotiq's `batch` endpoints in your API. Read more about [batch content creation in Flotiq](https://flotiq.com/docs/API/content-types/#batch-content-upload).
+
 
 ## Start your Gatsby project, 2 minutes
 
@@ -150,6 +158,8 @@ and then copy the details from your `.env` file in the input fields
 and hit `Deploy app`. In a minute (or two) - your app is live!
 ![Deploy App to Heroku button](images/snipcart-gatsby-demo/upload_0e11e37662064ad43e0fc994f4cf7401.png)
 
+!!! hint
+    If you'd like to host this project under your own domain name, you can use the wonderful **and free** service provided by Cloudflare and [this hack](../add-a-custom-domain-to-heroku-for-free/) to add a custom domain to a free Heroku account. Normally - you would have to pay for that in Heroku, but hey - times are difficult.
 
 
 ### Provide the domain name in Snipcart

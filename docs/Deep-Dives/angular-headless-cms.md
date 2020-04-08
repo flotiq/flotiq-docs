@@ -1,5 +1,5 @@
 title: Angular 8 and Flotiq headless CMS - getting started with your custom application using Angular 8 generated package in Flotiq.
-desctiption: Start building your Angular 8 app quickly with an SDK package generated in Flotiq.
+description: Start building your Angular 8 app quickly with an SDK package generated in Flotiq.
 
 
 ## Prerequisites

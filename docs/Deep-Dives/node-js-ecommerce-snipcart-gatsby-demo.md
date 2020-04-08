@@ -5,6 +5,19 @@ description: Start selling products online instantly. Use our step-by-step tutor
 
 This time, we'll dive deep into building e-commerce with Snipcart, Flotiq and Gatsby. We'll start with a fresh Flotiq account, build a Content Type Definition, hook it up with a Gatsby starter and finally - deploy it live using Heroku.
 
+What you'll get:
+
+![Live e-commerce website, built and released in 5 minutes](images/snipcart-gatsby-demo/live-website.png)
+
+What you'll need:
+
+1. Flotiq account (free),
+2. Snipcart account (free for testing), register [here](https://snipcart.com)
+3. Node.js & NPM installed
+4. [This repository](https://github.com/flotiq/gatsby-starter-products).
+
+Let's get started!
+
 ## Prepare your Flotiq account
 
 There's a couple of simple steps that shouldn't take longer than 1 minute to complete.
@@ -68,10 +81,12 @@ FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
 ```
 
 You can find your Flotiq API keys in the user profile section of the interface:
+
 ![Flotiq user API key](images/snipcart-gatsby-demo/upload_61473eb050d5e4992b8c88eac716e52b.png)
 
-We strongly recommend that you create a scoped API key, but for development, you can use the default Read Only key provided in the interface. 
-
+!!! caution
+    We strongly recommend that you create a scoped API key (read more about [API access](../API/index.md)), but for development, you can use the default Read Only key provided in the interface. 
+  
 ### Check if it works!
 
 It's as simple as that. You should be good to go. Install the NPM dependencies and start your gatsby project:

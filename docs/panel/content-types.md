@@ -13,7 +13,7 @@ Example:
     * thumbnail - relation to Media type
     * headerImage - relation to Media type
 
-You need an activated account to see the CDT page in the Dashboard. This documentation page does not describe how to create CTDs using API if you want to learn about it head to the [Working with Content Types API](../API/content-types.md)
+You need an activated account to see the CTD page in the Dashboard. This documentation page does not describe how to create CTDs using API if you want to learn about it head to the [Working with Content Types API](../API/content-types.md)
 
 ## Creating Content Type Definitions
 
@@ -51,7 +51,7 @@ Click pencil icon to edit title property, as you see title is required property 
 
 Also, because `Part of object title` is checked, objects listing; to use them in the relation of other objects; use this property value to describe the object. Learn more about connecting object via relations in [managing Content Objects](content-objects.md#Relations). You can find more about [property settings below](#property-settings).
 
-The slug property is also required, but also must be unique across all your blogpost objects in the system, of course, if someone else would make blogpost CTD with unique slug value of the slug could repeat across one of the objects of their type and one of the objects of your type.
+The slug property is also required, but also must be unique across all your blogpost objects in the system, of course, if someone else would make blogpost CTD with unique value of the slug could repeat across one of the objects of their type and one of the objects of your type.
 
 ![](images/AddContentTypeDefinitionsSlug.png){: .center .width75 .border}
 

@@ -24,7 +24,7 @@ Click Type definitions in the menu on the left to get to CTDs list:
 
 ![](images/TypeDefinitionsMenu.png){: .center .border}
 
-If you don't have any CTDs yet, you see tiles with predefined CTDs from which you can choose your first one by clicking on the tile representing your chosen CTD. You can also create one from scratch by clicking `Custom` tile or by clicking `Add definition` button in the top right corner of the page.
+If you don't have any CTDs yet, you see tiles with predefined CTDs from which you can choose your first one by clicking on the tile representing your chosen CTD. You can also create one from scratch by clicking `Custom` tile or by clicking `Add definition` button in the top right corner of the page. To learn more about predefined CTDs, head [here](./predefined-content-types.md)
 
 ![](images/TypeDefinitionsTiles.png){: .center .width75 .border}
 
@@ -79,39 +79,39 @@ As you see, you can no longer click predefined CTDs tile, but you can use the dr
 
 ## Updating Content Type Definitions
 
-You can always edit your CTDs. Click the cog icon on the CTD tile to do that, but you should be aware that **previously added objects would not be consistent with the schema**. Flotiq automatically updates the search index after the CTD update. If you would change the types of properties it can lead to data loss in the search index, as the property data have to be wipe out to keep the index working correctly, it can especially occur when you change the type from Text to Relation or vice versa. The save type change is between string types (Text, Textarea, RichText, Email) and between Number and string types (but changing string to number leads to data loss).
+You can always edit your CTDs. Click the cog icon on the CTD tile to do that, but you should be aware that **previously added objects would not be consistent with the schema**. Flotiq automatically updates the search index after the CTD update. If you would change the types of properties it can lead to data loss in the search index, as the property data have to be wipe out to keep the index working correctly, it can especially occur when you change the type from Text to Relation or vice versa. The safe type change is between string types (Text, Textarea, RichText, Email) and between Number and string types (but changing string to number leads to data loss).
 
 ## Property settings
 
-Here you can find the explanation of property settings:
+Here you can find the explanation of property settings and for what types of properties they apply:
 
-| Setting | Description |
-| ------- | ----------- |
-| Property key | Name of the property have to be unique throughout the definition. |
-| Property type | Type of the property, its options are described in the table below |
-| Unique | Information if value of property should be unique across all objects of this type |
-| Required |
-| Part of object title |
-| Regex pattern |
-| Read-only |
-| Hidden | 
-| Default value |
-| Help text |
-| Multiple |
-| Restrict to type |
+| Setting              | Possible for types                                         | Description |
+| -------------------- | ---------------------------------------------------------- | ----------- |
+| Property key         | all                                                        | Name of the property have to be unique throughout the definition. Required. |
+| Property type        | all                                                        | Type of the property, its options are described in the table below. Required. |
+| Unique               | Text, Textarea, Rich Text, Email, Number, Select, Relation | Information if the value of the property should be unique across all objects of this type |
+| Required             | all                                                        | Information if the value should exist in the object, for strings it has to non-empty string |
+| Part of object title | Text, Textarea, Email, Number, Select                      | Information if the value of this property should be used when displaying a list of objects in the relation creation |
+| Regex pattern        | Text                                                       | Validation information, the pattern that every string should follow to be the correct value for the property (it follows [ECMA 262](https://www.ecma-international.org/ecma-262/5.1/#sec-7.8.5){:target="_blank"} specification, but [here](https://json-schema.org/understanding-json-schema/reference/regular_expressions.html#example){:target="_blank"} you can find more user-friendly description). E.g.` ^\d{3}-\d{2}-\d{4}$` for ensuring that string is Social Security Number (SSN) in the 123-45-6789 format - Note that the regular expression is enclosed in the ^…$ tokens, where ^ means the beginning of the string, and $ means the end of the string. Without ^…$, pattern works as a partial match, that is, matches any string that contains the specified regular expression. For example, pattern: pet matches pet, petstore and carpet. The ^…$ token forces an exact match. |
+| Read-only            | Text, Textarea, Email, Number, Radio, Checkbox, Select     | Information if the Dashboard user can insert the value only on creating of the object or also on update (you can always edit it through API) if checked user can insert value only on object creation |
+| Hidden               | Text, Textarea, Email, Number, Radio, Checkbox, Select     | If checked property can be changed only through API, the form input will not be rendered in object form in Dashboard | 
+| Default value        | Text, Textarea, Number, Select                             | Sets default value in object forms it is not respected when sending incomplete object through API |
+| Help text            | all                                                        | Additional description shown under generated input, it is also displayed in API documentation |
+| Options              | Radio, Select                                              | Options to choose from in generated object form |
+| Multiple             | Relation                                                   | Information if the list of objects in relation should be bigger than one |
+| Restrict to type     | Relation                                                   | Information on which types can be attached as the relation. required if Property type is Relation |
 
+Property types:
 
-Property types
-
-| Type | Description |
-| ---- | ----------- |
-| Text | String type, generating Text Input in object form |
-| Textarea | Long string type accepting new line characters, generating Textarea in object form |
-| RichText | Long string type accepting HTML, generating CKEditor in object form |
-| Email | String type, generating Email Input in object form |
-| Number | Number type accepting only integers, generating Number Input |
-| Radio |
-| Checkbox |
-| Select |
-| Relation |
-| List |
+| Type      | Description |
+| --------- | ----------- |
+| Text      | String type, generating Text Input in object form |
+| Textarea  | Long string type accepting new line characters, generating Textarea in object form |
+| Rich Text | Long string type accepting HTML, generating CKEditor in object form |
+| Email     | String type, generating Email Input in object form |
+| Number    | Number type accepting only integers, generating Number Input |
+| Radio     | String type, generating Radio Input in object form |
+| Checkbox  | Boolean type, generating single Checkbox in object form |
+| Select    | String type, generating Select Dropdown in object form |
+| Relation  | Array type accepts only objects specified in `Restrict to type`, items in relation array cannot be duplicated |
+| List      | Object type generates subforms in object form; the inside object can have all types of properties except List. Properties of the inside object cannot be required, unique, read-only or hidden, cannot be part of the object title either. |

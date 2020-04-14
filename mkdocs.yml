@@ -45,12 +45,12 @@ extra_javascript:
 
 extra:
   disqus: 'flotiq'
-  
+
 pages:
   - 'Home': index.md
   - API:
     - 'API access & scoped keys': API/index.md
-    - 'Working with Content Types': API/content-types.md 
+    - 'Working with Content Types': API/content-types.md
     - 'Dynamic Content API': API/dynamic-content-api.md
     - 'GraphQL': API/graph-ql.md
     - 'Generating SDKs': API/generate-package.md
@@ -61,6 +61,7 @@ pages:
   - Dashboard:
     - 'Overview': panel/index.md
     - 'Content types': panel/content-types.md
+    - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
   - Deep dives:

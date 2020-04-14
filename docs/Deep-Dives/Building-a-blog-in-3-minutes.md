@@ -27,8 +27,8 @@ Here are the details of the fields we added for this tutorial:
 | title | Text | Required, Part of object title | Title of your post |
 | slug | Text | Required, Unique | URL of the post |
 | content | Richtext | - | The post itself |
-| thumbnail | Relation | Restrict to type: Media, Multiple | Thumbnail image |
-| headerImage | Relation | Restrict to type: Media, Multiple | Main image of the post |
+| thumbnail | Relation | Restrict to type: Media | Thumbnail image |
+| headerImage | Relation | Restrict to type: Media | Main image of the post |
 
 and this is how the Content Type Editor should look like in the end:
 

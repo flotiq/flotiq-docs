@@ -11,15 +11,17 @@ If you already have at least one CTD you can use the dropdown menu on the top ri
 
 ## Blog Post
 
-Type for storing simple blog posts. It contains properties storing title, slug, content and images for post.
+Type for storing simple blog posts. It contains properties storing title, slug, content and images for post:
 
-| Field name  | Field type | Additional attributes          | Comments               |
-|-------------|------------|--------------------------------|------------------------|
-| title       | Text       | Required, Part of object title | Title of your post     |
-| slug        | Text       | Required, Unique               | URL of the post        |
-| content     | Richtext   | -                              | The post itself        |
-| thumbnail   | Relation   | Restrict to type: Media        | Thumbnail image        |
-| headerImage | Relation   | Restrict to type: Media        | Main image of the post |
+| Field name  | Field type | Additional attributes          | Comments                           |
+|-------------|------------|--------------------------------|------------------------------------|
+| title       | Text       | Required, Part of object title | Title of your post                 |
+| slug        | Text       | Required, Unique               | URL of the post                    |
+| content     | Rich Text  | Required                       | The post itself, with HTML content |
+| thumbnail   | Relation   | Restrict to type: Media        | Thumbnail image                    |
+| headerImage | Relation   | Restrict to type: Media        | Main image of the post             |
+
+![](../Deep-Dives/images/3-minute-blog-content-type-all-fields.png){: .center .width75 .border}
 
 Gatsby starter for blog post:
 

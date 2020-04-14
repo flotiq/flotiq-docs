@@ -89,7 +89,7 @@ Here you can find the explanation of property settings:
 | ------- | ----------- |
 | Property key | Name of the property have to be unique throughout the definition. |
 | Property type | Type of the property, its options are described in the table below |
-| Unique |
+| Unique | Information if value of property should be unique across all objects of this type |
 | Required |
 | Part of object title |
 | Regex pattern |

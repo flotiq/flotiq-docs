@@ -55,9 +55,6 @@ A new <abbr title="Content Type - a model of data that has been defined inside t
 
 The API endpoint ``/api/v1/internal/contenttype`` can be used to interact with <abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">Content Type Definitions</abbr> inside the Content Repository. The endpoint documentation is provided in the API docs and describes the following actions:
 
-![](images/contentObject7.jpg)
-
-
 Creating a new <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> is simply a ``POST`` call with a payload similar to:
 
 ??? "Content Type POST payload"
@@ -782,9 +779,6 @@ The server will respond with:
   ]
 }
 ```
-
-![](images/contentObject3.jpg)
-
 
 If a property should be unique, API will respond with `400` response and will list validation errors in the response body, exactly like with required fields.
 

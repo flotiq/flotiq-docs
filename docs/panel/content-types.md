@@ -17,7 +17,7 @@ You need an activated account to see the CTD page in the Dashboard. This documen
 
 ## Creating Content Type Definitions
 
-The Content Modeler is a convenient tool for modelling CTDs, which can you can access through the ``Type definitions`` menu entry.
+The Content Modeler is a convenient tool for modelling CTDs, which you can access through the ``Type definitions`` menu entry.
 The Modeler interacts with the ``/api/v1/internal/contenttype`` endpoint on behalf of the user and seamlessly integrate into the Content Management Platform.
 
 Click Type definitions in the menu on the left to get to CTDs list:

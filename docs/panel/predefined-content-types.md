@@ -31,6 +31,8 @@ Gatsby starter for blog post:
 
 ## Event
 
+![](./images/PredefinedCTDEvent.png){: .center .width75 .border}
+
 Gatsby starter for event calendar:
 
 [GitHub](https://github.com/flotiq/gatsby-starter-event-calendar){:target="_blank"}
@@ -38,6 +40,8 @@ Gatsby starter for event calendar:
 [Working example](https://flotiq-starter-for-events-cal.herokuapp.com/){:target="_blank"}
 
 ## Product
+
+![](./images/PredefinedCTDProduct.png){: .center .width75 .border}
 
 Gatsby starter for products:
 
@@ -47,6 +51,8 @@ Gatsby starter for products:
 
 ## Project
 
+![](./images/PredefinedCTDProject.png){: .center .width75 .border}
+
 Gatsby starter for projects:
 
 [GitHub](https://github.com/flotiq/gatsby-starter-projects){:target="_blank"}
@@ -54,6 +60,8 @@ Gatsby starter for projects:
 [Working example](https://flotiq-starter-for-projects.herokuapp.com/){:target="_blank"}
 
 ## Recipe
+
+![](./images/PredefinedCTDRecipe.png){: .center .width75 .border}
 
 Gatsby starter for recipes:
 

@@ -21,7 +21,7 @@ The key concept in Flotiq is the **Content Type Definition**. In any given use c
 
 Also referred to as Content Type Definitions - are the key part of the system, where you - the user - describe the content you will be storing in Flotiq. The Content Type builder is the tool we provide for you to easily define your Content Types, using a graphical User Interface. Type Definitions are like classes in object-oriented programming, they describe object properties. 
 
-![](panel/images/edit-content-type-definitions.png)
+![](panel/images/EditContentTypeDefinitions.png)
 
 Read more about how to use the Content Type editor in the [Panel docs](panel/content-types.md)
 

@@ -56,11 +56,11 @@ Of course, if someone else would make blogpost CTD with the unique value of the 
 
 ![](images/AddContentTypeDefinitionsSlug.png){: .center .width75 .border}
 
-The content property is set to generate Rich Text input (CKEditor in Dashboard case):
+The content property is set to generate Rich Text input (we use CKEditor in Flotiq):
 
 ![](images/AddContentTypeDefinitionsContent.png){: .center .width75 .border}
 
-The thumbnail property is the relation to Media CTD. It can only have one element added. Media CTD is system CTD that anyone can use, but everyone sees only their entries.
+The thumbnail property is the relation to Media CTD - a system type definition that anyone can use but sees only their entries. It can only have one element added.
 
 ![](images/AddContentTypeDefinitionsThumbnail.png){: .center .width75 .border}
 
@@ -70,11 +70,11 @@ The headerImage is set up exactly like the thumbnail; the only difference is the
 
 You can add more fields by clicking the `Add property` button, which opens the modal window, where you can define the property name, data type, and it's basic validation. It opens the same modal as for editing of the property.
 
-After saving your CTD Dashboard redirects you on the CTDs list, where you can click on the tile to add Content Objects or click on the cog to edit CTD.
+After saving your CTD, Dashboard redirects you on the CTDs list, where you can click on the tile to list Content Objects or click on the cog to edit CTD.
 
 ![](images/TypeDefinitionsList.png){: .center .width75 .border}
 
-As you see, you can no longer click predefined CTDs tile, but you can use the dropdown menu on the top right corner to add more predefined CTDs.
+Predefined CTD tiles are no longer visible. You can use the dropdown menu on the top right corner to add more of such types.
 
 ![](images/TypeDefinitionsAddButton.png){: .center .border}
 
@@ -93,7 +93,7 @@ Here you can find the explanation of property settings and for what types of pro
 | Unique               | Text, Textarea, Rich Text, Email, Number, Select, Relation |   no                                          |  no    | Information if the value of the property should be unique across all objects of this type |
 | Required             | all                                                        |   no                                          |  no    | Information if the value should exist in the object, for strings it has to non-empty string |
 | Part of object title | Text, Textarea, Email, Number, Select                      |   no                                          |  no    | Information if the value of this property should be used when displaying a list of objects in the relation creation |
-| Regex pattern        | Text                                                       |   no                                          |  no    | Validation information, the pattern that every string should follow to be the correct value for the property (it follows [ECMA 262](https://www.ecma-international.org/ecma-262/5.1/#sec-7.8.5){:target="_blank"} specification, but [here](https://json-schema.org/understanding-json-schema/reference/regular_expressions.html#example){:target="_blank"} you can find more user-friendly description). E.g.` ^\d{3}-\d{2}-\d{4}$` for ensuring that string is Social Security Number (SSN) in the 123-45-6789 format - Note that the regular expression is enclosed in the ^…$ tokens, where ^ means the beginning of the string, and $ means the end of the string. Without ^…$, pattern works as a partial match, that is, matches any string that contains the specified regular expression. For example, pattern: pet matches pet, petstore and carpet. The ^…$ token forces an exact match. |
+| Regex pattern        | Text                                                       |   no                                          |  no    | Validation information, the pattern that every string should follow to be the correct value for the property (it follows [ECMA 262](https://www.ecma-international.org/ecma-262/5.1/#sec-7.8.5){:target="_blank"} specification, but [here](https://json-schema.org/understanding-json-schema/reference/regular_expressions.html#example){:target="_blank"} you can find more user-friendly description). E.g.` ^\d{3}-\d{2}-\d{4}$` for ensuring that string is Social Security Number (SSN) in the 123-45-6789 format - Note that the regular expression is enclosed in the ^…$ tokens, where ^ means the beginning of the string, and $ means the end of the string. Without ^…$, the pattern works as a partial match, that is, matches any string that contains the specified regular expression. For example, pattern: pet matches pet, petstore and carpet. The ^…$ token forces an exact match. |
 | Read-only            | Text, Textarea, Email, Number, Radio, Checkbox, Select     |   no                                          |  no    | Information if the Dashboard user can insert the value only on creating of the object or also on update (you can always edit it through API) if checked user can insert value only on object creation |
 | Hidden               | Text, Textarea, Email, Number, Radio, Checkbox, Select     |   no                                          |  no    | If checked property can be changed only through API, the form input will not be rendered in object form in Dashboard | 
 | Default value        | Text, Textarea, Number, Select                             |   no                                          |  no    | Sets default value in object forms it is not respected when sending incomplete object through API |

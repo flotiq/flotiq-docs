@@ -28,11 +28,11 @@ If you don't have any CTDs yet, you see tiles with predefined CTDs. Select your 
 
 ![](images/TypeDefinitionsTiles.png){: .center .width75 .border}
 
-In this example, you should click `Blog Post` predefined type.
+In this example, click `Blog Post` predefined type.
 
 ![](images/AddContentTypeDefinitions.png){: .center .width75 .border}
 
-As you can see, it has five properties:
+It has five properties:
 
 1. title
 

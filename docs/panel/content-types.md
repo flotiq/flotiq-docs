@@ -45,11 +45,11 @@ It has five properties:
 5. headerImage
     
 
-Click pencil icon to edit title property, as you see title is required property of Text type, it will render Text Input in Blog Post Content Object form:
+Click pencil icon to edit title property. As you see title is required property of Text type. It will render Text Input in Blog Post Content Object form:
 
 ![](images/AddContentTypeDefinitionsTitle.png){: .center .width75 .border}
 
-Also, because `Part of object title` is checked, objects listing; to use them in the relation of other objects; use this property value to describe the object. Learn more about connecting object via relations in [managing Content Objects](content-objects.md#Relations). You can find more about [property settings below](#property-settings).
+Also, because `Part of object title` is checked, objects listing; to use them in the relation of other objects; use this property value to describe the object. Learn more about connecting objects via relations in [managing Content Objects](content-objects.md#Relations). You can find more about property settings [below](#property-settings).
 
 The slug property is also required, but also must be unique across all your blogpost objects in the system.
 Of course, if someone else would make blogpost CTD with the unique value of the slug, you could make an object with the same slug as the owner of the second blogpost CTD.

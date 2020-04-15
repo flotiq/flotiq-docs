@@ -1,6 +1,6 @@
 # Content Types
 
-On this page, we describe how to create **Content Type Definition** (**CTD**) using Flotiq Dashboard. 
+On this page, we describe how to create **Content Type Definition** (**CTD**) using [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 
 
 We use simple Blog Post CTD as an example:
 
@@ -24,7 +24,7 @@ Click Type definitions in the menu on the left to get to CTDs list:
 
 ![](images/TypeDefinitionsMenu.png){: .center .border}
 
-If you don't have any CTDs yet, you see tiles with predefined CTDs from which you can choose your first one by clicking on the tile representing your chosen CTD. You can also create one from scratch by clicking `Custom` tile or by clicking `Add definition` button in the top right corner of the page. To learn more about predefined CTDs, head [here](./predefined-content-types.md)
+If you don't have any CTDs yet, you see tiles with predefined CTDs. Select your first one or create such from scratch by choosing `Custom`. It is also possible to create additional CTD by clicking `Add definition` button in the top right corner of the page. To learn more about predefined CTDs, head [here](./predefined-content-types.md)
 
 ![](images/TypeDefinitionsTiles.png){: .center .width75 .border}
 
@@ -86,21 +86,21 @@ You can always edit your CTDs. Click the cog icon on the CTD tile to do that, bu
 
 Here you can find the explanation of property settings and for what types of properties they apply:
 
-| Setting              | Possible for types                                         | Description |
-| -------------------- | ---------------------------------------------------------- | ----------- |
-| Property key         | all                                                        | Name of the property have to be unique throughout the definition. Required. |
-| Property type        | all                                                        | Type of the property, its options are described in the table below. Required. |
-| Unique               | Text, Textarea, Rich Text, Email, Number, Select, Relation | Information if the value of the property should be unique across all objects of this type |
-| Required             | all                                                        | Information if the value should exist in the object, for strings it has to non-empty string |
-| Part of object title | Text, Textarea, Email, Number, Select                      | Information if the value of this property should be used when displaying a list of objects in the relation creation |
-| Regex pattern        | Text                                                       | Validation information, the pattern that every string should follow to be the correct value for the property (it follows [ECMA 262](https://www.ecma-international.org/ecma-262/5.1/#sec-7.8.5){:target="_blank"} specification, but [here](https://json-schema.org/understanding-json-schema/reference/regular_expressions.html#example){:target="_blank"} you can find more user-friendly description). E.g.` ^\d{3}-\d{2}-\d{4}$` for ensuring that string is Social Security Number (SSN) in the 123-45-6789 format - Note that the regular expression is enclosed in the ^…$ tokens, where ^ means the beginning of the string, and $ means the end of the string. Without ^…$, pattern works as a partial match, that is, matches any string that contains the specified regular expression. For example, pattern: pet matches pet, petstore and carpet. The ^…$ token forces an exact match. |
-| Read-only            | Text, Textarea, Email, Number, Radio, Checkbox, Select     | Information if the Dashboard user can insert the value only on creating of the object or also on update (you can always edit it through API) if checked user can insert value only on object creation |
-| Hidden               | Text, Textarea, Email, Number, Radio, Checkbox, Select     | If checked property can be changed only through API, the form input will not be rendered in object form in Dashboard | 
-| Default value        | Text, Textarea, Number, Select                             | Sets default value in object forms it is not respected when sending incomplete object through API |
-| Help text            | all                                                        | Additional description shown under generated input, it is also displayed in API documentation |
-| Options              | Radio, Select                                              | Options to choose from in generated object form |
-| Multiple             | Relation                                                   | Information if the list of objects in relation should be bigger than one |
-| Restrict to type     | Relation                                                   | Information on which types can be attached as the relation. required if Property type is Relation |
+| Setting              | Possible for types                                         | Required                                      | Unique | Description |
+| -------------------- | ---------------------------------------------------------- | --------------------------------------------- |------- | ----------- |
+| Property key         | all                                                        |   yes                                         |  yes   | Name of the property have to be unique throughout the definition. |
+| Property type        | all                                                        |   yes                                         |  no    | Type of the property, its options are described in the table below. |
+| Unique               | Text, Textarea, Rich Text, Email, Number, Select, Relation |   no                                          |  no    | Information if the value of the property should be unique across all objects of this type |
+| Required             | all                                                        |   no                                          |  no    | Information if the value should exist in the object, for strings it has to non-empty string |
+| Part of object title | Text, Textarea, Email, Number, Select                      |   no                                          |  no    | Information if the value of this property should be used when displaying a list of objects in the relation creation |
+| Regex pattern        | Text                                                       |   no                                          |  no    | Validation information, the pattern that every string should follow to be the correct value for the property (it follows [ECMA 262](https://www.ecma-international.org/ecma-262/5.1/#sec-7.8.5){:target="_blank"} specification, but [here](https://json-schema.org/understanding-json-schema/reference/regular_expressions.html#example){:target="_blank"} you can find more user-friendly description). E.g.` ^\d{3}-\d{2}-\d{4}$` for ensuring that string is Social Security Number (SSN) in the 123-45-6789 format - Note that the regular expression is enclosed in the ^…$ tokens, where ^ means the beginning of the string, and $ means the end of the string. Without ^…$, pattern works as a partial match, that is, matches any string that contains the specified regular expression. For example, pattern: pet matches pet, petstore and carpet. The ^…$ token forces an exact match. |
+| Read-only            | Text, Textarea, Email, Number, Radio, Checkbox, Select     |   no                                          |  no    | Information if the Dashboard user can insert the value only on creating of the object or also on update (you can always edit it through API) if checked user can insert value only on object creation |
+| Hidden               | Text, Textarea, Email, Number, Radio, Checkbox, Select     |   no                                          |  no    | If checked property can be changed only through API, the form input will not be rendered in object form in Dashboard | 
+| Default value        | Text, Textarea, Number, Select                             |   no                                          |  no    | Sets default value in object forms it is not respected when sending incomplete object through API |
+| Help text            | all                                                        |   no                                          |  no    | Additional description shown under generated input, it is also displayed in API documentation |
+| Options              | Radio, Select                                              |   no                                          |  no    | Options to choose from in generated object form |
+| Multiple             | Relation                                                   |   no                                          |  no    | Information if the list of objects in relation should be bigger than one |
+| Restrict to type     | Relation                                                   |   yes (only when Property type == Relation)   |  no    | Information on which types can be attached as the relation |
 
 Property types:
 

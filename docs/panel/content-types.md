@@ -80,7 +80,7 @@ Predefined CTD tiles are no longer visible. You can use the dropdown menu on the
 
 ## Updating Content Type Definitions
 
-You can always edit your CTDs. Click the cog icon on the CTD tile to do that, but you should be aware that **previously added objects would not be consistent with the schema**. Flotiq automatically updates the search index after the CTD update. If you would change the types of properties it can lead to data loss in the search index, as the property data have to be wiped out to keep the index working correctly, it can especially occur when you change the type from Text to Relation or vice versa. The safe type change is between string types (Text, Textarea, RichText, Email) and between Number and string types (but changing string to number leads to data loss).
+You can always edit your CTDs. Click the cog icon on the CTD tile to do that, but you should be aware that **previously added objects would not be consistent with the schema**. Flotiq automatically updates the search index after the CTD update. If you change the types of properties it can lead to data loss in the search index, as the property data have to be wiped out to keep the index working correctly. It can especially occur when you change the type from Text to Relation or vice versa. The safe type change is between string types (Text, Textarea, RichText, Email) and between Number and string types (but changing string to number leads to data loss).
 
 ## Property settings
 

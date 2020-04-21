@@ -118,6 +118,52 @@ We used the `list` datatype in this [Gatsby & Flotiq recipes starter](https://gi
 
 ![Full example of a recipe using Flotiq lists](images/jamstack-recipes-complex-data-structures/upload_7dd4947f6433fabfaf9c94170b445dc4.png)
 
+## Experiment with the Gatsby starter
+
+If you'd like to dig a little deeper into this recipe website, here's your quickstart:
+
+1. **Install gatsby**
+    ```bash
+    npm install -g gatsby
+    ```
+
+1. **Start project from the template using Gatsby CLI**
+    
+    ```bash
+    gatsby new gatsby-starter-recipes https://github.com/flotiq/gatsby-starter-recipes.git
+    ```
+
+1. **Setup "Recipe" Content Type in Flotiq** 
+
+    Create your [Flotiq.com](https://flotiq.com) account. Next, create the `Recipe` Content Type:
+    ![Recipe content type in flotiq](https://github.com/flotiq/gatsby-starter-recipes/raw/master/docs/create-definition-recipe.png)
+    _Note: You can also create `Recipe` using [Flotiq REST API](https://flotiq.com/docs/API/)._ 
+    
+4. **Configure application**
+
+    The next step is to configure our application to know from where it has to fetch the data.
+       
+    You need to create a file called `.env` inside the root of the directory, with the following structure:
+
+    ```
+    GATSBY_FLOTIQ_BASE_URL="https://api.flotiq.com"
+    FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
+    ```
+
+5.  **Launch the Gatsby project**
+
+    Navigate into your new site’s directory and start it up.
+
+    ```sh
+    cd gatsby-starter-recipes
+    npm install
+    gatsby develop
+    ```
+   
+6.  **Open the source code and start editing!**
+    
+    Your site is now running at `http://localhost:8000`!
+
 ## Conclusions
 
 Flotiq's list data type is an extremely easy to use solution for structuring your data. It organizes the content and makes it easy for content editors to build content, at the same time it's fully supported in the API and API docs. 

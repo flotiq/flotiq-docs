@@ -23,6 +23,109 @@ Type for storing simple blog posts. It contains properties storing title, slug, 
 
 ![](../Deep-Dives/images/3-minute-blog-content-type-all-fields.png){: .center .width75 .border}
 
+Full schema for the Blog Post type:
+
+??? "Blog Post json schema"
+    ```json
+    {
+        "name": "blogpost",
+        "label": "Blog Post",
+        "schemaDefinition": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "slug": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "title": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "content": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "thumbnail": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        },
+                        "headerImage": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        }
+                    }
+                }
+            ],
+            "required": [
+                "title",
+                "slug",
+                "content"
+            ],
+            "additionalProperties": false
+        },
+        "metaDefinition": {
+            "order": [
+                "title",
+                "slug",
+                "content",
+                "thumbnail",
+                "headerImage"
+            ],
+            "propertiesConfig": {
+                "slug": {
+                    "unique": true,
+                    "helpText": "",
+                    "inputType": "text"
+                },
+                "title": {
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "text",
+                    "isTitlePart": true
+                },
+                "content": {
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "richtext"
+                },
+                "thumbnail": {
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "datasource",
+                    "validation": {
+                        "relationMultiple": false,
+                        "relationContenttype": "_media"
+                    }
+                },
+                "headerImage": {
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "datasource",
+                    "validation": {
+                        "relationContenttype": "_media"
+                    }
+                }
+            }
+        }
+    }
+    ```
+
+Form generated for Blog Post:
+
+![](images/BlogPostForm.png){: .center .width75 .border}
+
 Gatsby starter for blog post:
 
 [GitHub](https://github.com/flotiq/gatsby-starter-blog){:target="_blank"}
@@ -43,6 +146,108 @@ Type for storing simple events. It contains name, slug, address, date, descripti
 | gallery     | Relation   | Restrict to type: Media, Multiple | Gallery for the event                                 |
 
 ![](./images/PredefinedCTDEvent.png){: .center .width75 .border}
+
+Full schema for the Event type:
+
+??? "Event json schema"
+    ```json
+    {
+        "name": "event",
+        "label": "Event",
+        "schemaDefinition": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "slug": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "address": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "date": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "gallery": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        }
+                    }
+                }
+            ],
+            "required": [
+                "name",
+                "slug",
+                "address",
+                "date"
+            ],
+            "additionalProperties": false
+        },
+        "metaDefinition": {
+            "propertiesConfig": {
+                "name": {
+                    "inputType": "text",
+                    "unique": false,
+                    "isTitlePart": true
+                },
+                "slug": {
+                    "inputType": "text",
+                    "unique": true
+                },
+                "address": {
+                    "inputType": "textarea",
+                    "unique": false
+                },
+                "date": {
+                    "inputType": "text",
+                    "unique": false
+                },
+                "description": {
+                    "inputType": "richtext",
+                    "unique": false
+                },
+                "gallery": {
+                    "inputType": "datasource",
+                    "unique": false,
+                    "validation": {
+                        "relationContenttype": "_media",
+                        "relationMultiple": true
+                    }
+                }
+            },
+            "order": [
+                "name",
+                "slug",
+                "address",
+                "date",
+                "description",
+                "gallery"
+            ]
+        }
+    }
+    ```
+
+Form generated for Event:
+
+![](images/EventForm.png){: .center .width75 .border}
+
 
 Gatsby starter for event calendar:
 
@@ -65,6 +270,113 @@ Type for storing simple products. It contains properties storing name, slug, pri
 
 ![](./images/PredefinedCTDProduct.png){: .center .width75 .border}
 
+Full schema for the Product type:
+
+??? "Product json schema"
+    ```json
+    {
+        "name": "product",
+        "label": "Product",
+        "schemaDefinition": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "slug": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "price": {
+                            "type": "number",
+                            "minLength": 1
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "productImage": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        },
+                        "productGallery": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        }
+                    }
+                }
+            ],
+            "required": [
+                "name",
+                "slug",
+                "price"
+            ],
+            "additionalProperties": false
+        },
+        "metaDefinition": {
+            "propertiesConfig": {
+                "name": {
+                    "inputType": "text",
+                    "unique": true,
+                    "isTitlePart": true
+                },
+                "slug": {
+                    "inputType": "text",
+                    "unique": true
+                },
+                "price": {
+                    "inputType": "number",
+                    "unique": false
+                },
+                "description": {
+                    "inputType": "richtext",
+                    "unique": false
+                },
+                "productImage": {
+                    "inputType": "datasource",
+                    "unique": false,
+                    "validation": {
+                        "relationContenttype": "_media"
+                    }
+                },
+                "productGallery": {
+                    "inputType": "datasource",
+                    "unique": false,
+                    "validation": {
+                        "relationMultiple": true,
+                        "relationContenttype": "_media"
+                    }
+                }
+            },
+            "order": [
+                "name",
+                "slug",
+                "price",
+                "description",
+                "productImage",
+                "productGallery"
+            ]
+        }
+    }
+    ```
+
+Form generated for Product:
+
+![](images/ProductForm.png){: .center .width75 .border}
+
+
 Gatsby starter for products:
 
 [GitHub](https://github.com/flotiq/gatsby-starter-products){:target="_blank"}
@@ -85,6 +397,88 @@ Type for storing simple project portfolio entries. It contains properties storin
 ![](./images/PredefinedCTDProject.png){: .center .width75 .border}
 
 Gatsby starter for projects:
+
+Full schema for the Project type:
+
+??? "Project json schema"
+    ```json
+    {
+        "name": "project",
+        "label": "Project",
+        "schemaDefinition": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "slug": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "gallery": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        }
+                    }
+                }
+            ],
+            "required": [
+                "name",
+                "slug"
+            ],
+            "additionalProperties": false
+        },
+        "metaDefinition": {
+            "propertiesConfig": {
+                "name": {
+                    "inputType": "text",
+                    "unique": true,
+                    "isTitlePart": true
+                },
+                "slug": {
+                    "inputType": "text",
+                    "unique": true
+                },
+                "description": {
+                    "inputType": "richtext",
+                    "unique": false
+                },
+                "gallery": {
+                    "inputType": "datasource",
+                    "unique": false,
+                    "validation": {
+                        "relationContenttype": "_media",
+                        "relationMultiple": true
+                    }
+                }
+            },
+            "order": [
+                "name",
+                "slug",
+                "description",
+                "gallery"
+            ]
+        }
+    }
+    ```
+
+Form generated for Project:
+
+![](images/ProjectForm.png){: .center .width75 .border}
+
 
 [GitHub](https://github.com/flotiq/gatsby-starter-projects){:target="_blank"}
 
@@ -122,6 +516,215 @@ Steps list properties description:
 
 
 ![](./images/PredefinedCTDRecipe.png){: .center .width75 .border}
+
+Full schema for the Recipe type:
+
+??? "Recipe json schema"
+    ```json
+    {
+        "name": "recipe",
+        "label": "Recipe",
+        "schemaDefinition": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "slug": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "image": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        },
+                        "steps": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "step": {
+                                        "type": "string"
+                                    },
+                                    "image": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/DataSource"
+                                        },
+                                        "minItems": 0
+                                    }
+                                }
+                            }
+                        },
+                        "servings": {
+                            "type": "number"
+                        },
+                        "cookingTime": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "ingredients": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "unit": {
+                                        "type": "string"
+                                    },
+                                    "amount": {
+                                        "type": "number"
+                                    },
+                                    "product": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "required": [
+                "name",
+                "slug"
+            ],
+            "additionalProperties": false
+        },
+        "metaDefinition": {
+            "order": [
+                "name",
+                "slug",
+                "image",
+                "description",
+                "ingredients",
+                "steps",
+                "cookingTime",
+                "servings"
+            ],
+            "propertiesConfig": {
+                "name": {
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "text",
+                    "isTitlePart": true
+                },
+                "slug": {
+                    "unique": true,
+                    "helpText": "",
+                    "inputType": "text"
+                },
+                "image": {
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "datasource",
+                    "validation": {
+                        "relationContenttype": "_media"
+                    }
+                },
+                "steps": {
+                    "items": {
+                        "order": [
+                            "image",
+                            "step"
+                        ],
+                        "propertiesConfig": {
+                            "step": {
+                                "unique": false,
+                                "helpText": "",
+                                "inputType": "textarea"
+                            },
+                            "image": {
+                                "unique": false,
+                                "helpText": "",
+                                "inputType": "datasource",
+                                "validation": {
+                                    "relationContenttype": "_media"
+                                }
+                            }
+                        }
+                    },
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "object"
+                },
+                "servings": {
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "number"
+                },
+                "cookingTime": {
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "text"
+                },
+                "description": {
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "richtext"
+                },
+                "ingredients": {
+                    "items": {
+                        "order": [
+                            "amount",
+                            "unit",
+                            "product"
+                        ],
+                        "propertiesConfig": {
+                            "unit": {
+                                "unique": false,
+                                "options": [
+                                    "",
+                                    "g",
+                                    "kg",
+                                    "ml",
+                                    "pcs",
+                                    "tablespoon",
+                                    "teaspoon",
+                                    "ounce",
+                                    "pound",
+                                    "cup",
+                                    "clove",
+                                    "pinch"
+                                ],
+                                "helpText": "",
+                                "inputType": "select"
+                            },
+                            "amount": {
+                                "unique": false,
+                                "helpText": "",
+                                "inputType": "number"
+                            },
+                            "product": {
+                                "unique": false,
+                                "helpText": "",
+                                "inputType": "text"
+                            }
+                        }
+                    },
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "object"
+                }
+            }
+        }
+    }
+    ```
+
+Form generated for Recipe:
+
+![](images/RecipeForm.png){: .center .width75 .border}
+
 
 Gatsby starter for recipes:
 

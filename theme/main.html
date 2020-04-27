@@ -10,6 +10,9 @@
             "@id": "{{ page.canonical_url }}"
         },
         "headline": "{{ page.title | striptags }} - {{ config.site_name }}",
+        "image": [
+            "https://api.flotiq.com/image/1920x0/_media-5dfa4bed252da.png"
+        ],
         "datePublished": "{{ page.meta.git_revision_date_localized  }}",
         "dateModified": "{{ page.meta.git_revision_date_localized  }}",
         "author": {
@@ -21,7 +24,7 @@
             "name": "Flotiq",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://editor.flotiq.com/fonts/fq-logo.svg"
+                "url": "https://api.flotiq.com/image/1920x0/_media-5dfa4bed252da.png"
             }
         },
         "description": "{{ page.meta.description }}"

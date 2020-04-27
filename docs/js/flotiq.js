@@ -25,3 +25,5 @@ function load_navpane() {
        nav.item(i).checked = true;
     }
 }
+
+hljs.initHighlightingOnLoad();

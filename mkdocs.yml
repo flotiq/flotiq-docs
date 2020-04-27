@@ -7,14 +7,19 @@ theme:
      logo: 'API/images/f.png'
      custom_dir: 'theme'
      palette:
-             primary: 'teal'
+         primary: 'teal'
+     features:
+       - instant
 plugins:
   - search
   - awesome-pages
+  - git-revision-date-localized
 
 extra_css:
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
   - 'css/flotiq.css'
+  - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
+  - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/nord.min.css
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
 google_analytics:
@@ -39,12 +44,20 @@ markdown_extensions:
 
 extra_javascript:
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
+  - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/highlight.min.js
   - 'js/flotiq.js'
     #- https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.js
     #- https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/javascript/javascript.min.js
 
 extra:
   disqus: 'flotiq'
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/flotiq
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/flotiq
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/flotiq/
 
 nav:
   - 'Home': index.md

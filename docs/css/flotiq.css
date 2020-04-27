@@ -1,3 +1,7 @@
+.md-grid {
+  max-width: 70rem;
+}
+
 .md-content{
   border-left: #BBBBBB33 1px solid;
   border-right: #BBBBBB33 1px solid;
@@ -50,7 +54,7 @@ pre::before {
   // Code Blocks //
   /////////////////
   */
-  
+
   /*
   line number
   */
@@ -58,7 +62,7 @@ pre::before {
     color: #f5f5f5 !important;
     background-color: #313131 !important;
   }
-  
+
   /*
   code block background
   */
@@ -68,11 +72,11 @@ pre::before {
   /*
   scroll bar size
   */
-  
+
   .md-typeset .codehilite::-webkit-scrollbar {
     height: 1rem !important;
   }
-  
+
   /*!**/
   /*actual syntax highlighting*/
   /**!*/
@@ -258,7 +262,7 @@ pre::before {
   /*.codehilite .il {*/
   /*  color: #ae81ff !important;*/
   /*} !* Literal.Number.Integer.Long *!*/
-  
+
   /*.codehilite .gh {*/
   /*} !* Generic Heading & Diff Header *!*/
   /*.codehilite .gu {*/
@@ -270,7 +274,7 @@ pre::before {
   /*.codehilite .gi {*/
   /*  color: #a6e22e !important ;*/
   /*} !* Generic.Inserted & Diff Inserted *!*/
-  
+
   /*.md-clipboard:before {*/
   /*  color: rgba(255, 255, 255, 0.31);*/
   /*}*/
@@ -279,32 +283,45 @@ pre::before {
   /*pre:hover .md-clipboard:before {*/
   /*  color: rgba(255, 255, 255, 0.6);*/
   /*}*/
-  
+
   .md-typeset summary:after {
     color: rgba(255, 255, 255, 0.26);
   }
-  
+
   .md-typeset .admonition.example > .admonition-title,
   .md-typeset .admonition.example > summary,
   .md-typeset details.example > .admonition-title,
   .md-typeset details.example > summary {
     background-color: rgba(154, 109, 255, 0.21);
   }
-  
+
   .md-nav__link[data-md-state='blur'] {
     color: #aec0ff;
   }
-  
+
   /*
   ///////////////
   // Footnote //
   /////////////
   */
-  
+
   .md-typeset .footnote {
     color: #888484 !important;
   }
-  
+
   .md-typeset .footnote-ref:before {
     border-color: #888484 !important;
   }
+
+.md-typeset code.hljs {
+  background-color: #2e3440;
+  color: #d8dee9;
+}
+
+.md-clipboard svg {
+  color: #4C9BA6;
+}
+
+.md-clipboard svg:hover {
+  color: #86CEA6;
+}

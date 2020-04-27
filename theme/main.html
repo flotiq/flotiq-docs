@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ page.canonical_url }}"
+        },
+        "headline": "{{ page.title | striptags }} - {{ config.site_name }}",
+        "datePublished": "{{ page.meta.git_revision_date_localized  }}",
+        "dateModified": "{{ page.meta.git_revision_date_localized  }}",
+        "author": {
+            "@type": "Organization",
+            "name": "Flotiq"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Flotiq",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://editor.flotiq.com/fonts/fq-logo.svg"
+            }
+        },
+        "description": "{{ page.meta.description }}"
+    }
+</script>
+{% endblock %}

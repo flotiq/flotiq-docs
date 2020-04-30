@@ -29,10 +29,10 @@ Let's dive deep.
 
 ## Prerequisites
 
-1. Netlify Account (free)
-2. GitHub/Gitlab/Bitbucket account (free)
-3. Zapier account (free)
-4. Flotiq account (free) [Register a Flotiq account here](https://editor.flotiq.com/register.html).
+1. Netlify Account (free) [Sign up for Netlify](https://app.netlify.com/signup){:target="_blank"}
+2. GitHub/Gitlab/Bitbucket account (free) [Sign up for GitHub](https://github.com/join){:target="_blank"}
+3. Zapier account (free) [Sign up for Zapier](https://zapier.com/sign-up/){:target="_blank"}
+4. Flotiq account (free) [Register a Flotiq account here](https://editor.flotiq.com/register.html){:target="_blank"}.
 
 ## Grab one of our Gatsby Starters!
 
@@ -54,7 +54,7 @@ This handy command will add 4 images and 2 recipes to your Flotiq account.
 
 Each of our gatsby starters has a "Deploy to Netlify" button at the bottom of the README:
 
-![Deploy to Netlify button](images/serverless-deployment-pipeline/github-1.png)
+![Deploy to Netlify button](images/serverless-deployment-pipeline/github-1.png){: .center .width75 .border}
 
 Click it: [![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/gatsby-starter-recipes){: .button-center-vertical}
 
@@ -66,7 +66,7 @@ You'll now see a 3-step configuration process, that involves:
 2. Setting up required parameters for deploy
 3. Deploying your site
 
-![Connect to your provider in Netlify](images/serverless-deployment-pipeline/netlify-1.png)
+![Connect to your provider in Netlify](images/serverless-deployment-pipeline/netlify-1.png){: .center .width75 .border}
 
 Connect your GitHub account and head on to the next step.
 
@@ -78,14 +78,14 @@ In the next view, you will be prompted to enter 3 parameters:
 
 > We advise that you always create a scoped API key. Its disposable nature makes it a safer choice. More about Flotiq API Keys [here](https://flotiq.com/docs/API/)
 
-![Configure your build](images/serverless-deployment-pipeline/netlify-2.png)
+![Configure your build](images/serverless-deployment-pipeline/netlify-2.png){: .center .width75 .border}
 
 
 After filling in all the fields, hit the `Save & Deploy` button and wait for your site to build.
 
 That's all! You will be redirected to your Netlify dashboard. You can check the build logs by clicking here:
 
-![Netlify dashboard](images/serverless-deployment-pipeline/netlify-3.png)
+![Netlify dashboard](images/serverless-deployment-pipeline/netlify-3.png){: .center .width75 .border}
 
 ## Manage Netlify deploys using Zapier
 
@@ -97,30 +97,30 @@ But your website is not just the code in your repository. You want your **conten
 2. On your account dashboard, hover over the left sidebar and click `Make a Zap`.
 3. As a trigger application, choose `Flotiq`, and for the event `New Content Object`.
 
-    ![Choose trigger app in Zapier](images/serverless-deployment-pipeline/zapier-1.png)
+    ![Choose trigger app in Zapier](images/serverless-deployment-pipeline/zapier-1.png){: .center .width75 .border}
 
 4. Next, choose your Flotiq account and click `Continue`. 
 
-    ![Choose Flotiq Account in Zapier](images/serverless-deployment-pipeline/zapier-2.png)
+    ![Choose Flotiq Account in Zapier](images/serverless-deployment-pipeline/zapier-2.png){: .center .width75 .border}
 
 
 5. Choose your Content Type Definition from the list.
 
-    ![Choose Content Type Definition from the list](images/serverless-deployment-pipeline/zapier-3.png)
+    ![Choose Content Type Definition from the list](images/serverless-deployment-pipeline/zapier-3.png){: .center .width75 .border}
 
 6. Click continue. You can skip the test phase and proceed to the next action.
 
 7. Choose `Netlify` as an action application, and `Start deploy` as an event.
 
-    ![Choose action application](images/serverless-deployment-pipeline/zapier-4.png)
+    ![Choose action application](images/serverless-deployment-pipeline/zapier-4.png){: .center .width75 .border}
 
 8. Sign in to your Netlify account and proceed further.
 
-    ![Choose your Netlify account](images/serverless-deployment-pipeline/zapier-5.png)
+    ![Choose your Netlify account](images/serverless-deployment-pipeline/zapier-5.png){: .center .width75 .border}
 
 9. Select your site from the list. Alternatively, you can choose to clear build cache, but it will increase the build time.
 
-    ![Select site to be built](images/serverless-deployment-pipeline/zapier-6.png)
+    ![Select site to be built](images/serverless-deployment-pipeline/zapier-6.png){: .center .width75 .border}
 
 10. In the last step, you can test if this action works properly. It will rebuild your site.
 
@@ -129,9 +129,11 @@ You're set! Click `Turn the Zap On!`. Now you can create a new entry in the [Flo
 
 ## Useful links
 Learn more about building powerful integrations with Zapier and Flotiq:
+
 1. [More about Zapier Integrations in Flotiq](https://flotiq.com/docs/API/zapier/)
 
 Or try one of the awesome Gatsby starters we've integrated with Flotiq:
+
 1. [Build an e-commerce site using Gatsby, Flotiq and Snipcart](https://dev.to/flotiq/build-an-e-commerce-site-with-gatsby-and-snipcart-3jpg)
 2. [Build a recipe website using Gatsby and Flotiq](https://dev.to/flotiq/building-a-recipes-website-using-gatsby-and-flotiq-2b3a)
 

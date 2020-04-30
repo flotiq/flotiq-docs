@@ -4,7 +4,7 @@ copyright: Copyright &copy; 2019 onwards Flotiq
 dev_addr: 0.0.0.0:4000
 theme:
      name: 'material'
-     logo: '/API/images/f.png'
+     logo: 'API/images/f.png'
      custom_dir: 'theme'
      palette:
          primary: 'teal'

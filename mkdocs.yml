@@ -77,6 +77,8 @@ nav:
     - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
+    - Plugins:
+      - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Angular8 with Flotiq SDK': Deep-Dives/angular-headless-cms.md

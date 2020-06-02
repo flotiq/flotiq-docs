@@ -19,6 +19,7 @@ This article will walk you through the process of connecting your Flotiq account
     - [Project portfolio Gatsby starter](https://github.com/flotiq/gatsby-starter-projects){:target="_blank"}
     - [Simple blog Gatsby starter](https://github.com/flotiq/gatsby-starter-blog){:target="_blank"}
     - [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/gatsby-starter-products){:target="_blank"}
+    - [Gatsby and Snipcart, e-commerce with products and categories from Flotiq](https://github.com/flotiq/gatsby-starter-products-with-categories){:target="_blank"}
     - [Snipcart and Next.js, sourcing products from Flotiq](https://github.com/flotiq/snipcart-nextjs){:target="_blank"}
     
     These starters all come with detailed READMEs and a one-line content import command, be sure to check those!

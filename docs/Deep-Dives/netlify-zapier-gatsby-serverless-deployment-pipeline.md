@@ -94,7 +94,10 @@ By default, Netlify will observe any changes in your repository, so any push wil
 But your website is not just the code in your repository. You want your **content** to be up to date too! We'll show you how to use [Zapier](https://zapier.com) to update your website every time you create new content.
 
 1. Log in to Zapier
-2. On your account dashboard, hover over the left sidebar and click `Make a Zap`.
+2. On your account dashboard, hover over the left sidebar and click `Make a Zap` or use our [Zap Template](https://zapier.com/apps/flotiq/integrations/netlify/137950/deploy-your-netlify-site-when-new-content-objects-are-created-in-flotiq) to speed up the basic setup.
+
+    ![Flotiq-Netlify Zap Template](images/serverless-deployment-pipeline/zapier-7.png){: .center .width75 .border}
+
 3. As a trigger application, choose `Flotiq`, and for the event `New Content Object`.
 
     ![Choose trigger app in Zapier](images/serverless-deployment-pipeline/zapier-1.png){: .center .width75 .border}
@@ -123,6 +126,7 @@ But your website is not just the code in your repository. You want your **conten
     ![Select site to be built](images/serverless-deployment-pipeline/zapier-6.png){: .center .width75 .border}
 
 10. In the last step, you can test if this action works properly. It will rebuild your site.
+
 
 ## That's it
 You're set! Click `Turn the Zap On!`. Now you can create a new entry in the [Flotiq editor](https://editor.flotiq.com) and see that your recipe will appear on your website in a moment.

@@ -42,7 +42,7 @@ export interface Blogpost {
 
 1. Download Angular package from your account dashboard 
 
-![Flotiq SDK packages](images/angular_sdk.png)
+![Flotiq SDK packages](images/angular_sdk.png){: .center .width75 .border}
 
 
 2. In package directory run:

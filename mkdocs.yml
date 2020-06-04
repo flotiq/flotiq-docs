@@ -81,7 +81,7 @@ nav:
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
-    - 'Angular8 with Flotiq SDK': Deep-Dives/angular-headless-cms.md
+    - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md
     - 'Building a blog': Deep-Dives/Building-a-blog-in-3-minutes.md
     - 'Building a contact form': Deep-Dives/Headless-CMS-Contact-Forms.md
     - 'Complex data structures': Deep-Dives/jamstack-recipes-website-complex-data-structures.md

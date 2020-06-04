@@ -1,5 +1,5 @@
-title: Angular 8 and Flotiq headless CMS - getting started with your custom application using Angular 8 generated package in Flotiq.
-description: Start building your Angular 8 app quickly with an SDK package generated in Flotiq.
+title: Angular 9 and Flotiq headless CMS - getting started with your custom application using Angular 8 generated package in Flotiq.
+description: Start building your Angular 9 app quickly with an SDK package generated in Flotiq.
 
 
 ## Prerequisites
@@ -8,8 +8,7 @@ description: Start building your Angular 8 app quickly with an SDK package gener
 2. At least one your own Content Type in Flotiq (we will use Blogpost as an example)
 3. Generated Angular package that you can download on your Flotiq Dashboard page.
 4. Little knowledge of [rxjs](https://angular.io/guide/rx-library)
-
-Additional information: We used Angular 8.3.25 in this example, but it shouldn't be problem if you use the newest one (for now it's Angular 9).
+5. Your Angular application.
 
 ## Overview
 
@@ -26,12 +25,24 @@ When we extract downloaded package we will see some directories and typescript c
 
 Example: 
 
-![](images/angular_sdk_1.png)
+```typescript
+export interface Blogpost { 
+    id: string;
+    internal?: AbstractContentTypeSchemaDefinitionInternal;
+    slug: string;
+    title: string;
+    content: string;
+    thumbnail?: Array<DataSource>;
+    headerImage?: Array<DataSource>;
+}
+```
 
 
 ## Package installation
 
-1. Download Angular package from your account dashboard ![](images/angular_sdk_2.png)
+1. Download Angular package from your account dashboard 
+
+![Flotiq SDK packages](images/angular_sdk.png)
 
 
 2. In package directory run:
@@ -40,21 +51,25 @@ npm install
 npm run build
 ```
 
-
 This will create a `dist` directory, which will be used for installing your package in project.
-
-Go to generated `dist` directory and run:
-```
-npm link
-```
-    
 
 3. In your application directory:
 ```
-npm install
 npm install <path_to_your_package>/dist
-npm link flotiq
 ```
+
+or
+```
+npm link
+``` 
+
+in package `dist` folder and then 
+
+```
+npm link flotiq
+``` 
+
+in application directory.
 
 
 And that's all. Basic setup is done!
@@ -65,23 +80,40 @@ And that's all. Basic setup is done!
 
 In your project `app.module.ts` file import following classes:
 
-![](images/angular_sdk_3.png)
+```typescript
+import { ApiModule, Configuration, ConfigurationParameters } from 'flotiq';
+```
 
 
 In `environments` directory are two `env` files. Add your `API_KEY` as a key-value pair in your `environtment.ts` file, so it should look like this:
 
-![](images/angular_sdk_4.png)
+```typescript
+export const environment = {
+  production: false,
+  apiKey: 'YOUR_API_KEY'
+};
+```
 
 
 If you plan to deploy your application, remember to fill out `environment.prod.ts` file too!
 
 Next, you have to export a function that will hold all needed configuration to work with Flotiq. You can include it in your `app.module.ts` file below the imports. As a minimum only your `API_KEY` is required:
 
-![](images/angular_sdk_5.png)
+```typescript
+import { ApiModule, Configuration, ConfigurationParameters} from 'flotiq';
+import { environment } from '../environments/environment';
 
-For the final step add Flotiq `ApiModule` into providers array in your application `AppModule`. You must call `fotRoot()` function on `ApiModule` providing required configuration that you set step before:
-
+export function apiConfigFactory(): Configuration {
+  const params: ConfigurationParameters = {
+    apiKeys: {'X-AUTH-TOKEN': environment.apiKey}
+  };
+  return new Configuration(params);
+}
 ```
+
+For the final step add Flotiq `ApiModule` into imports array in your application `AppModule`. You must call `fotRoot()` function on `ApiModule` providing required configuration that you set step before:
+
+```typescript
 ApiModule.forRoot(apiConfigFactory);
 ```
 
@@ -90,7 +122,21 @@ It's important to also import `HttpClientModule` from `@angular/common/http`. Ot
 
 Your `@NgModule` decorator should look like that after whole setup process:
 
-![](images/angular_sdk_6.png)
+```typescript
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ApiModule.forRoot(apiConfigFactory),
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+```
 
 
 
@@ -104,18 +150,25 @@ To make this service application-wide pass an parameter object `{providedIn: 'ro
 
 Your file should like this:
 
-![](images/angular_sdk_7.png)
+```typescript
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class BlogpostService {}
+```
 
 
 Next, import your Blogpost model and ContentService provided by installed package. 
 
-```
+```typescript
 import { ContentBlogpostService, Blogpost } from 'flotiq';
 ```
 
 Next, create a constructor and add your ContentService
 
-```
+```typescript
 constructor(private blogpostApiService: ContentBlogpostService) {}
 ```
 
@@ -124,13 +177,13 @@ constructor(private blogpostApiService: ContentBlogpostService) {}
 
 Add a simple method (for example `addBlogpost`) which will take any value as an argument, but it's preferred that it has `Blogpost` model type.
 
-```
+```typescript
 addBlogpost(blogpost: Blogpost) {}
 ```
 
 In the body return a result of ContentService function, so you can `subscribe` to it later and handle response and errors.
 
-```
+```typescript
 addBlogpost(blogpost: Blogpost) {
     return this.blogpostApiService.createblogpost(post);
 }
@@ -138,13 +191,19 @@ addBlogpost(blogpost: Blogpost) {
 
 It's important here to pass an object of type `Blogpost` here, because in other cases types will mismatch and Typescript will throw an error.
 
+As the last step, modify your `tsconfig.app.json` by adding the following line in `compilerOptions` section:
+
+```json
+"paths": { "@angular/*": [ "./node_modules/@angular/*" ] }
+```
+
 That's all! Implement the rest of methods and use your custom service in other parts of your application.
 
 Look into your generated package to find what models and ContentServices where created for you and start developing!
 
 Here is a small animation that shows you an example project based on generated package(To-do-list content type definition used) and [Tailwind CSS](https://tailwindcss.com/):
 
-![](images/angular_sdk_8.gif)
+![Example Application](images/angular_sdk_app.gif)
 
 
 ## Important information

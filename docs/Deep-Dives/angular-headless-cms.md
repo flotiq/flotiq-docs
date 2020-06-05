@@ -46,6 +46,7 @@ export interface Blogpost {
 
 
 2. In package directory run:
+
 ```
 npm install
 npm run build
@@ -54,23 +55,12 @@ npm run build
 This will create a `dist` directory, which will be used for installing your package in project.
 
 3. In your application directory:
+
 ```
 npm install <path_to_your_package>/dist
 ```
 
-or
-```
-npm link
-``` 
-
-in package `dist` folder and then 
-
-```
-npm link flotiq
-``` 
-
-in application directory.
-
+alternatively: `npm link` in package `dist` folder and then `npm link flotiq` in application directory.
 
 And that's all. Basic setup is done!
 
@@ -185,7 +175,7 @@ In the body return a result of ContentService function, so you can `subscribe` t
 
 ```typescript
 addBlogpost(blogpost: Blogpost) {
-    return this.blogpostApiService.createblogpost(post);
+    return this.blogpostApiService.createblogpost(blogpost);
 }
 ```
 

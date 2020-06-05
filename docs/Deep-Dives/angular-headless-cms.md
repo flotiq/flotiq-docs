@@ -1,6 +1,15 @@
 title: Angular 9 and Flotiq headless CMS - getting started with your custom application using Angular 8 generated package in Flotiq.
 description: Start building your Angular 9 app quickly with an SDK package generated in Flotiq.
 
+## Overview
+
+### About packages
+
+We love VS Code. And Atom. And VIM. And Sublime. And PHP Storm. Whatever IDE or language you choose - your CMS should help you work with your content. The library packages that you can download from your Flotiq dashboard do exactly that. They contain all the required information about your Content Type Definitions to work with your content through Flotiq's API. Once you import a package into your project - your IDE will pick up your attributes, classes and methods and you'll be able to use autocomplete and code documentation. Yay!
+
+!!!note 
+    Flotiq is using OpenAPI 3.0 behind the scenes to support generating library packages and API docs. Thanks to [Open API Generator](https://github.com/OpenAPITools/openapi-generator) it's possible to work with various frameworks or programming languages as well as a Postman Collection just for API calls.
+
 
 ## Prerequisites
 
@@ -10,11 +19,6 @@ description: Start building your Angular 9 app quickly with an SDK package gener
 4. Little knowledge of [rxjs](https://angular.io/guide/rx-library)
 5. Your Angular application.
 
-## Overview
-
-### About packages
-
-We decided to give a hand to developers by automatically generate a layer package that contains all required materials to work with Flotiq API. Thanks to [Open API Generator](https://github.com/OpenAPITools/openapi-generator) it is possible to work with various frameworks or programming languages as well as a Postman Collection just for API calls.
 
 ## Package overview
 
@@ -64,7 +68,8 @@ alternatively: `npm link` in package `dist` folder and then `npm link flotiq` in
 
 And that's all. Basic setup is done!
 
-**IMPORTANT!** There are known issues with `npm link` on Windows OS, but they only concern installed packages via path, not registry.
+!!!danger
+    **IMPORTANT!** There are known issues with `npm link` on Windows OS, but they only concern installed packages via path, not registry.
 
 ## Package usage
 
@@ -204,7 +209,9 @@ When you start your application use `npm start` instead of `ng serve`. This will
 
 Generated package based on your OpenApiSchema is a powerful tool, that can speed up your development process a lot. You can install it in your project and don't worry anymore about writing API calls
 
-Helpful links:
-1. Learn how to get your own OpenApiSchema [here](https://flotiq.com/docs/API/open-api-schema/).
-2. Didn't find a package in a langauage or framework you love? No problem check this [link](https://flotiq.com/docs/API/generate-package/) to learn how to generate your own!
+!!!hint
+    Helpful links:
+
+    1. Learn how to get your own OpenApiSchema [here](https://flotiq.com/docs/API/open-api-schema/).
+    2. Didn't find a package in a langauage or framework you love? No problem check this [link](https://flotiq.com/docs/API/generate-package/) to learn how to generate your own!
 

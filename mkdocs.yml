@@ -79,6 +79,10 @@ nav:
     - 'Media library': panel/media-library.md
     - Plugins:
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
+  - CLI:
+    - 'Overview': CLI/index.md
+    - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
+    - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Angular8 with Flotiq SDK': Deep-Dives/angular-headless-cms.md

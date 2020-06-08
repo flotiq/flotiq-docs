@@ -49,6 +49,6 @@ If during installation without docker you will encounter error with no git prese
 
 If you wish to talk with us about this project, feel free to hop on [![Discord Chat](https://img.shields.io/discord/682699728454025410.svg)](https://discord.gg/FwXcHnX)  .
    
-If you found a bug, please report it in [issues](https://github.com/flotiq/docs/issues).
+If you found a bug, please report it in [issues](https://github.com/flotiq/flotiq-docs/issues).
 
 We also welcome any PR with documentation improvements (or typo fixes ;) ).

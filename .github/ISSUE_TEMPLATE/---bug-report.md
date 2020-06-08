@@ -1,6 +1,6 @@
 ---
 name: "Bug report"
-about: Report unclear or misleading parts of the documentation so we can improve
+about: Report unclear or misleading parts of the documentation so we can improve it
 
 ---
 

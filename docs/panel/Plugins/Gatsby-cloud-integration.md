@@ -69,7 +69,7 @@ After following the "Automatic Integration" or "Manual Integration" flow, you no
 
 An environment variable references a value that can affect how running processes will behave on a computer, for example, in staging and production environments. You must save environment variables in Gatsby Cloud to authorize your instance to pull source data from Flotiq.
 
-The essential 2 environment variables needed for every project are `FLOTIQ_API_KEY` and `GATSBY_FLOTIQ_BASE_URL`. In some cases, you will provide additional env variables for your application to work.
+The essential 2 environment variables needed for every project are `GATSBY_FLOTIQ_API_KEY` and `GATSBY_FLOTIQ_BASE_URL`. In some cases, you will provide additional env variables for your application to work.
 
 For example, if you're using the [Gatsby and Snipcart starter](https://github.com/flotiq/gatsby-starter-products){:target="_blank"} you will also provide the Snipcart API key.
 
@@ -85,7 +85,7 @@ You can either select the application-wide read-only key:
 
 Or as a safer option, create a scoped read-only API key that will only be used for the purpose of Gatsby Cloud, read more about [Flotiq API access](https://flotiq.com/docs/API/).
 
-Copy the Read-Only key and paste it in Gatsby Cloud settings as `FLOTIQ_API_KEY`. For the `GATSBY_FLOTIQ_BASE_URL` put `https://api.flotiq.com`.
+Copy the Read-Only key and paste it in Gatsby Cloud settings as `GATSBY_FLOTIQ_API_KEY`. For the `GATSBY_FLOTIQ_BASE_URL` put `https://api.flotiq.com`.
 
 Click **Save** once you've entered your variables.
 

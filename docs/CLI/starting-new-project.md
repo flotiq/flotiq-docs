@@ -1,10 +1,12 @@
 # Starting new Gatsby project with Flotiq CLI
 
-To start new Gatsby project with Flotiq CLI you need Flotiq account (you can [register here](http://editor.flotiq.com/register.html)) and your "Read and write API key" (more about API keys [here](../API/index.md)).
+To start a new Gatsby project with Flotiq CLI you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)) and your "Read and write API key" (more about API keys [here](../API/index.md)).
 
 The command looks like this:
 
-`flotiq-cli start [apiKey] [projectName] [flotiqSterterUrl]`
+```bash
+flotiq-cli start [apiKey] [projectName] [flotiqSterterUrl]
+```
 
 After running the command, you should have new project cloned with installed dependencies, data imported to your Flotiq account and started server with the project.
 
@@ -12,7 +14,7 @@ After running the command, you should have new project cloned with installed dep
 
 `apiKey` - API key to your Flotiq account
 
-`projectName` - project name or project path (if you wish to start or import data from the directory you are in, use `.`)
+`projectName` - project name or project path (if you wish to start or import data from current directory - use `.`)
 
 `flotiqStartUrl` - full link to GatsbyJs starter, the list below
 

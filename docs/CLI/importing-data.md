@@ -1,10 +1,12 @@
-# Importing example data from Gatsby starter with Flotiq CLI
+# Importing example data for Gatsby starters with Flotiq CLI
 
-To importing example data from Gatsby starter with Flotiq CLI you need Flotiq account (you can [register here](http://editor.flotiq.com/register.html)), your "Read and write API key" (more about API keys [here](../API/index.md)), and cloned one of our [Gatsby starters](#gatsby-starters).
+To importing example data for a Gatsby starter with Flotiq CLI you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)), your "Read and write API key" (more about API keys [here](../API/index.md)), and a clone of one of our [Gatsby starters](#gatsby-starters).
 
 The command looks like this:
 
-`flotiq-cli import [apiKey] [projectName]`
+```bash
+flotiq-cli import [apiKey] [projectName]
+```
 
 After running the command, you should have data imported to your Flotiq account.
 

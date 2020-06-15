@@ -2,18 +2,19 @@
 
 ## Overview
 
-We've prepared Flotiq CLI to start GatsbyJS projects with Flotiq integration event faster than before. 
+We've prepared Flotiq CLI to help launch Flotiq projects even faster than before. 
 
-You can now clone gatsby starter, install dependencies, import data to Flotiq, and start the project with [exactly one command](./starting-new-project.md).
+For now the set of commands is limited for Gatsby users - you can now clone a Gatsby starter, install dependencies, import data to Flotiq, and start the project with [exactly one command](./starting-new-project.md).
 
-You can also import data more straightforward if you already cloned the gatsby starter repository with [import data command](./importing-data.md).
+Importing example data is also more straightforward - if you already cloned one of the Gatsby starter repositories you can simply import the examples with [import data command](./importing-data.md).
 
 ## Installation
 
-You need [node](https://nodejs.org/en/download/) in version 9 or higher to install and use Flotiq CLI.
+!!! Warning
+       You need [node](https://nodejs.org/en/download/) version 9 or higher to install and use Flotiq CLI.
 
-To install it use:
+To install flotiq-cli globally use:
 
-`npm install -g flotiq-cli`
-
-It installs CLI globally.
+```bash
+npm install -g flotiq-cli
+```

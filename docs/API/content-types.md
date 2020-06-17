@@ -112,7 +112,7 @@ Creating a new <abbr title="Content Type - a model of data that has been defined
 
 `workflowId` informs which type of workflow (by its `id`) should object of this type abide. Possible workflows can be obtained from `/api/v1/content/_workflow`, as the workflow is the internal <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> of the system.
 
-The `schemaDefinition` part of the JSON payload is based on the bare JSON Schema and is fully compatible. It holds information about properties of the <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">CT</abbr> (in the `properties` key), its types and which properties are required (`required` key). It always should have `"type":"object"`, as it is an object, and `"additionalProperties": false` to ensure that API users will not post garbage to the objects of this CTD. To ensure that all objects have id property <abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">CTD</abbr> also should have information about the connection with `AbstractContentTypeSchemaDefinition` using:
+The `schemaDefinition` part of the JSON payload is based on the bare JSON Schema and is fully compatible. It holds information about properties of the <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">CT</abbr> (in the `properties` key), its types and which properties are required (`required` key). It always should have `"type": "object"`, as it is an object, and `"additionalProperties": false` to ensure that API users will not post garbage to the objects of this CTD. To ensure that all objects have id property <abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">CTD</abbr> also should have information about the connection with `AbstractContentTypeSchemaDefinition` using:
 ```json
 "allOf": [
     {
@@ -123,7 +123,7 @@ The `schemaDefinition` part of the JSON payload is based on the bare JSON Schema
 
 In the case of this example, it will add two properties, `title` and `postContent` which are both strings and required.
 
-`metaDefinition` is used to tell CMS panel how to render a form for the Content Object, it holds information about the order of the properties (`order` key, which should contains all properties of the object), and about type and validation of the field, it also contains information about relations of the object with another Content Types. 
+`metaDefinition` is used to tell CMS panel how to render a form for the Content Object, it holds information about the order of the properties (`order` key, which should contain all properties of the object), and about type and validation of the field. It also includes information on relations of the object with other Content Types. 
 
 In this case, Blog Post will have `title` property which will be unique and will render as text input in CMS panel and `postContent` which can be duplicated and will be presented as CKEditor input in CMS panel. First input in the form in CMS panel will be `title` input, and second will be `postContent`.
 
@@ -134,7 +134,7 @@ curl -X POST "https://api.flotiq.com/api/v1/internal/contenttype" -H 'accept: */
 
 After such call is made and <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> is created - the User API is immediately extended to support interaction with this new Content Type:
 
-![](http://minio.dev.cdwv.pl:80/hackmd/uploads/upload_4c8ba2ed8288f9b7a84769a62d1022aa.png)
+![](images/endpoints.png){: .center .width75 .border}
 
 All Content Types have automatically added properties from `AbstractContentTypeSchemaDefinition`; they are:
 
@@ -736,7 +736,7 @@ Once a <abbr title="Content Type - a model of data that has been defined inside 
 
 The supporting endpoints of a given <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> allow the user to perform basic REST operations 
 
-![](http://minio.dev.cdwv.pl:80/hackmd/uploads/upload_4c8ba2ed8288f9b7a84769a62d1022aa.png)
+![](images/endpoints.png){: .center .width75 .border}
 
 
 For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> defined according to the example described above, a very simple POST payload can be sent to the supporting endpoint to create a new Content Object:
@@ -758,7 +758,7 @@ curl -X POST "https://api.flotiq.com/api/v1/content/blogposts" -H "accept: */*" 
 
 which should result in a ``200`` server response containing the details of the created object:
 
-![](http://minio.dev.cdwv.pl:80/hackmd/uploads/upload_a505c0503a97ac4961b81daee835d9c6.png)
+![](http://minio.dev.cdwv.pl:80/hackmd/uploads/upload_a505c0503a97ac4961b81daee835d9c6.png){: .center .width75 .border}
 
 
 If a property is required in the <abbr title="Content Type Definition - a JSON payload that defines the Content Type and it's validation rules">Content Type Definition</abbr> of the object being added, API will respond with `400` response and will list validation errors in the response body.
@@ -798,9 +798,9 @@ If you would post the same object as in the first example the server will respon
 
 #### Batch content upload
 
-There is a way to add up to 100 of Content Objects at once. It is possible by using `/batch` endpoint (in our example the url would be `https://api.flotiq.com/api/v1/content/blogposts/batch`). It can be only `insert` or `insert or update` operation. To use `insert or update` you need to set `updateExisting` to `true` in query. 
+There is a way to add up to 100 of Content Objects at once. It is possible by using `/batch` endpoint (in our example the URL would be `https://api.flotiq.com/api/v1/content/blogposts/batch`). It can be only `insert` or `insert or update` operation. To use `insert or update` you need to set `updateExisting` to `true` in the query. 
 
-All objects must meet the same conditions as when adding a single object. The only difference is array of objects in request body instead of one object.
+All objects must meet the same conditions as when adding a single object. The only difference is an array of objects in the request body instead of one object.
 
 Updating one blog post and adding one new:
 
@@ -820,7 +820,7 @@ Updating one blog post and adding one new:
     }
     ```
     
-Trying updating one blog post and adding one new with wrong data
+Trying updating one blog post and adding one new with wrong data:
     
 !!! Example
     
@@ -868,10 +868,10 @@ Response parameters:
 
 | Parameter           | Description |
 | ------------------- | ----------- |
-| batch_total_count   | number of elements sent in the request, present when there is no duplications in data |
-| batch_success_count | number of correct elements sent in the request, present when there is no duplications in data |
-| batch_error_count   | number of incorrect elements sent in the request, present when there is no duplications in data |
-| errors              | array of errors in the elements, errors are object containing id of the object and list of errors, present when there is no duplications in data |
+| batch_total_count   | number of elements sent in the request, present when there are no duplications in data |
+| batch_success_count | number of correct elements sent in the request, present when there are no duplications in data |
+| batch_error_count   | number of incorrect elements sent in the request, present when there are no duplications in data |
+| errors              | array of errors in the elements, errors are objects containing the id of the object and list of errors, present when there are no duplications in data |
 | data                | present only when there are duplications in data, listing keys containing duplications (see example above) | 
 
 ### Listing content through the API
@@ -882,8 +882,8 @@ Response parameters:
 | page            | Number of the requested page, 1-based, default `1` |
 | order_by        | What field should the list be ordered by, possible values are based on content type schema |
 | order_direction | Order direction, possible values: `asc`, `desc`, default `asc` |
-| hydrate         | If you want to hydrate datasources in object you need to set it to `1`, it will hydrate one level of datasources in objects, you can also use this parameter when requesting single object |
-| filters         | Json encoded array of objects containing conditions on which the list of CO should be filtered, the object key is name of parameter (eg. `title`) and it should have 2 keys, `type` describing how list should be filtered, and `filter` with filter query, both parameters should be string, you can filter on every subset of object parameters including `internal` parameters (eg. `internal.created_at`) |
+| hydrate         | If you want to hydrate datasources in the object, you need to set it to `1`, it will hydrate one level of datasources in objects, you can also use this parameter when requesting single object |
+| filters         | Json encoded array of objects containing conditions on which the list of CO should be filtered, the object key is the name of the parameter (e.g. `title`), and it should have two keys, `type` describing how the list should be filtered, and `filter` with filter query, both parameters should be string, you can filter on every subset of object parameters including `internal` parameters (e.g. `internal.created_at`) |
 
 Filter types
 
@@ -899,7 +899,7 @@ Filter types
 | lessThan           | Object parameter must be less than filter      |
 | greaterThanOrEqual | Object parameter must be greater or equal than `filter` |
 | greaterThan        | Object parameter must be greater than `filter` |
-| inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that have 3 keys in filter object |
+| inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object |
 
 Example response:
 ```json
@@ -924,7 +924,7 @@ Example response:
 }
 ```
 
-**Filtering by relation**, for example "Show products in category category-1" is possible using [JsonPath](https://github.com/json-path/JsonPath) standard.
+**Filtering by relation**, for example, "Show products in category category-1" is possible using [JsonPath](https://github.com/json-path/JsonPath) standard.
 You have to care about encoding url params. Dots should also be converted to ASCII codes, for example:
 
 1. Using JsonPath, product category path is `categories[*].dataUrl`
@@ -939,6 +939,22 @@ When updating the object (`PUT` requests), all properties have to be present in 
 ### Deleting content through the API
 
 Deleting of the object is done as the soft delete, it will be still in the database, but not accessible by API. It can be restored directly in the database, by setting `deleted_at` as `NULL`. 
+
+### Listing ids of deleted Content Objects through API
+
+To list ids of the deleted Content Objects, you use `/removed` endpoint. It lists all of the deleted Content Objects of the Content Type you can filter Content Objects using `deletedAfter` query parameter containing the date after which the Content Objects were deleted.
+
+Example query without the parameter:
+
+`curl -X GET "https://api.flotiq.com/api/v1/content/blogposts/removed" -H "accept: application/json" -H "X-AUTH-TOKEN: YOUR_API_TOKEN"`
+
+Example query with the parameter:
+
+`curl -X GET "https://api.flotiq.com/api/v1/content/blogposts/removed?deletedAfter=2020-06-17%2009:00:00" -H "accept: application/json" -H "X-AUTH-TOKEN: YOUR_API_TOKEN"`
+
+Example response:
+
+`["blogposts-1","blogposts-2"]`
 
 ### Authoring content through the Content Entry component
 

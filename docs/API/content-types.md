@@ -190,7 +190,8 @@ Property types (as of `schemaDefinition` properties), recognized by CMS panel:
     | boolean | Represents two values `true` and `false`. Note that truthy and falsy values such as "true", "", 0 or null are not considered boolean values. | none allowed                |
     | array   | Used for lists or relations.                                                                                                                 | items                       | For relations: it has to be an object containing `{"$ref": "#/components/schemas/DataSource"}`, as the items of the array are objects described in DataSource schema.<br>For list items: it should be a valid json schema following the same restrictions as wrapping schema |
     |         |                                                                                                                                              | minItems                    | `0` for a not required property, and `1` for required property                                                                                   |
-
+    | object  | Used for geo point type                                                                                                                      | properties                  | must be `{"lat": { "type": "number"}, "lng": {"type": "number"}}`
+    |         |                                                                                                                                              | required                    | if the field is required it must be `["lat","lng"]`
 
 Input types in `metaDefinition` of properties:
 
@@ -211,7 +212,8 @@ Input types in `metaDefinition` of properties:
     | datasource | array                    | Renders picker for choosing the objects of specified or any other Content Type, depending on `validation` property | unique                      | *                                                     | none allowed        |
     |            |                          |                                                                                                                    | validation                  | Object contains restrictions for datasource           | relationContenttype | Name of the Content Type to which relation should be restricted |
     |            |                          |                                                                                                                    |                             |                                                       | relationMultiple    | Boolean value informing if the array should have only one ora can have more elements |
-
+    | geo        | object                   | Renders two fields, one for the latitude, second for the longitude, saves it as an object                          | unique                      | *                                                     | none allowed        | 
+    
     *Information if the value of the property should be unique in all object of the specified type. 
 
 ### Creating Content Types through the Content modeller

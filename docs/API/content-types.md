@@ -948,7 +948,7 @@ Example query without the `deletedAfter` parameter:
 
 `curl -X GET "https://api.flotiq.com/api/v1/content/blogposts/removed" -H "accept: application/json" -H "X-AUTH-TOKEN: YOUR_API_TOKEN"`
 
-Example query with the parameter:
+Example query with the `deletedAfter` parameter:
 
 `curl -X GET "https://api.flotiq.com/api/v1/content/blogposts/removed?deletedAfter=2020-06-17%2009:00:00" -H "accept: application/json" -H "X-AUTH-TOKEN: YOUR_API_TOKEN"`
 

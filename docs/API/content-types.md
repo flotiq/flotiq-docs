@@ -944,7 +944,7 @@ Deleting of the object is done as the soft delete, it will be still in the datab
 
 To list ids of the deleted Content Objects, you use `/removed` endpoint. It lists all of the deleted Content Objects of the Content Type. You can filter Content Objects using `deletedAfter` query parameter containing the date after which the Content Objects were deleted.
 
-Example query without the parameter:
+Example query without the `deletedAfter` parameter:
 
 `curl -X GET "https://api.flotiq.com/api/v1/content/blogposts/removed" -H "accept: application/json" -H "X-AUTH-TOKEN: YOUR_API_TOKEN"`
 

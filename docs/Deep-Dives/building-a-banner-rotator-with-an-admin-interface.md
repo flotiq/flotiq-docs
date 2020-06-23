@@ -1,17 +1,19 @@
 title: Building a banner rotator with an admin interface | Flotiq docs
-description: This example shows how you can build your own system that can rotate ads on your website.
+description: This example shows how you can use Flotiq to build your own system that can rotate ads on your website.
 
 # Building a banner rotator with an admin interface
 
 This example shows how you can build your own system that can rotate ads on your website. You can easily adapt it to many other solutions and several techniques shown here may come handy in different projects.
 
 Requirements:
+
 - easy to use interface for administering ad banners,
 - banner admin system decoupled from website CMS,
 - option to group banners, for example vertical / horizontal,
 - no changes to existing Web CMS code.
 
 Plan:
+
 - prepare a data model in Flotiq headless CMS,
 - generate a read-only API key,
 - write a simple script to load banners and display random one,
@@ -23,21 +25,22 @@ The first step will be to define the data model. In Flotiq you do that by creati
 
 Since one of the requirements is the ability to group banners together - we can create a single Content Type Definition that will reflect a `Rotator` which will be composed of an array of `Banner` objects. In our case we chose not to build a separate `Banner` type - we'll simply add the required properties using Flotiq's `List` field.
 
-![The Rotator Content Type Definition](./images/building-a-banner-rotator/rotator-content-type-definition-sketch.png){: .center}
+![The Rotator Content Type Definition](images/building-a-banner-rotator/rotator-content-type-definition-sketch.png){: .center}
 
 Here are the properties we will require:
+
 * Name (text)
 * Width (number)
 * Height (number)
 * Banners (list)
-  * Enabled (boolean)
-  * Image (media)
-  * Link (text)
-  * Title (text)
+    * Enabled (boolean)
+    * Image (media)
+    * Link (text)
+    * Title (text)
 
 after adding that into a new Flotiq Content Type you should see the following:
 
-![The Rotator Content Type Definition in Flotiq](./images/building-a-banner-rotator/rotator-content-type-definition-flotiq.png){: .center .border .width75}
+![The Rotator Content Type Definition in Flotiq](images/building-a-banner-rotator/rotator-content-type-definition-flotiq.png){: .center .border .width75}
 
 Hit Save and you can start adding new Rotators!
 
@@ -45,7 +48,7 @@ Hit Save and you can start adding new Rotators!
 
 It's always recommended to use a scoped API key - that way access to content is restricted to specific Content Types and even if you add new data models in the future - your data will be safe.In our case - we will need access to 2 Content Types - `Rotator` and `Media`, so let's add a key for that purpose.
 
-![Flotiq scoped API Keys](./images/building-a-banner-rotator/flotiq-api-keys.png){: .center .border .width75}
+![Flotiq scoped API Keys](images/building-a-banner-rotator/flotiq-api-keys.png){: .center .border .width75}
 
 ## 3. Build the rotator script
 
@@ -128,11 +131,11 @@ With that - we don't need to put the entire script on our website, it's enough t
 
 This code can be pasted in any CMS. Here's how it looks in BoltCMS 
 
-![Flotiq Rotator in Bolt CMS](./images/building-a-banner-rotator/rotator-bolt-cms.png){: .center .border .width75}
+![Flotiq Rotator in Bolt CMS](images/building-a-banner-rotator/rotator-bolt-cms.png){: .center .border .width75}
 
 and Wordpress
 
-![Flotiq Rotator in Wordpress](./images/building-a-banner-rotator/rotator-wordpress.png){: .center .border .width75}
+![Flotiq Rotator in Wordpress](images/building-a-banner-rotator/rotator-wordpress.png){: .center .border .width75}
 
 
 ## Next Steps
@@ -143,4 +146,5 @@ The solution shown in this article meets the basic requirements and is ready to 
 - sending out a click event to Google Analytics
 - ability to add AdSense ads to the Rotator.
 
-> Note - try not to use `ad` or `adv` or `banner` in your paths and filenames. This way your chances of triggering AdBlock tools is lower!
+!!! hint 
+        Heads up! Try not to use `ad` or `adv` or `banner` in your paths and filenames. This way your chances of triggering AdBlock tools are lower!

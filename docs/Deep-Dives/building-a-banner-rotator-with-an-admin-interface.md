@@ -33,10 +33,10 @@ Here are the properties we will require:
 * Width (number)
 * Height (number)
 * Banners (list)
-  * Enabled (boolean)
-  * Image (media)
-  * Link (text)
-  * Title (text)
+    * Enabled (boolean)
+    * Image (media)
+    * Link (text)
+    * Title (text)
 
 after adding that into a new Flotiq Content Type you should see the following:
 

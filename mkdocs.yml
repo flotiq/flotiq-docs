@@ -8,9 +8,8 @@ theme:
      custom_dir: 'theme'
      palette:
          primary: 'teal'
-# instant breaks loading of code highlight library
-#     features:
-#       - instant
+     features:
+       - instant
 plugins:
   - search
   - awesome-pages

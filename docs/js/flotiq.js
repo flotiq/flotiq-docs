@@ -25,5 +25,14 @@ function load_navpane() {
        nav.item(i).checked = true;
     }
 }
+window.addEventListener('click', function (event) {
+    setTimeout(() => {
+        if (event.target.className === 'md-nav__link') {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        }
+    }, 200);
+});
 
 hljs.initHighlightingOnLoad();

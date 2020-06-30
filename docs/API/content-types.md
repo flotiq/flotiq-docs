@@ -62,7 +62,6 @@ Creating a new <abbr title="Content Type - a model of data that has been defined
         {
             "name": "blogposts",
             "label": "Blog Posts",
-            "workflowId": "_workflow-1",
             "schemaDefinition": {
                 "type": "object",
                 "allOf": [
@@ -110,10 +109,8 @@ Creating a new <abbr title="Content Type - a model of data that has been defined
 
 `label` is only for displaying the name correctly on the CMS panel.
 
-`workflowId` informs which type of workflow (by its `id`) should object of this type abide. Possible workflows can be obtained from `/api/v1/content/_workflow`, as the workflow is the internal <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> of the system.
-
 The `schemaDefinition` part of the JSON payload is based on the bare JSON Schema and is fully compatible. It holds information about properties of the <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">CT</abbr> (in the `properties` key), its types and which properties are required (`required` key). It always should have `"type": "object"`, as it is an object, and `"additionalProperties": false` to ensure that API users will not post garbage to the objects of this CTD. To ensure that all objects have id property <abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">CTD</abbr> also should have information about the connection with `AbstractContentTypeSchemaDefinition` using:
-```json
+```
 "allOf": [
     {
         "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
@@ -129,7 +126,7 @@ In this case, Blog Post will have `title` property which will be unique and will
 
 Full curl request:
 ```
-curl -X POST "https://api.flotiq.com/api/v1/internal/contenttype" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H 'Content-Type: application/json' --data-binary '{"name":"blogposts","label":"Blog Posts","workflowId":"_workflow-1","schemaDefinition":{"type":"object","allOf":[{"$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"},{"type":"object","properties":{"title":{"type":"string"},"postContent":{"type":"string"}}}],"required":["title","postContent"],"additionalProperties":false},"metaDefinition":{"propertiesConfig":{"title":{"inputType":"text","unique":true},"postContent":{"inputType":"richtext","unique":false}},"order":["title","postContent"]}}'
+curl -X POST "https://api.flotiq.com/api/v1/internal/contenttype" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H 'Content-Type: application/json' --data-binary '{"name":"blogposts","label":"Blog Posts","schemaDefinition":{"type":"object","allOf":[{"$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"},{"type":"object","properties":{"title":{"type":"string"},"postContent":{"type":"string"}}}],"required":["title","postContent"],"additionalProperties":false},"metaDefinition":{"propertiesConfig":{"title":{"inputType":"text","unique":true},"postContent":{"inputType":"richtext","unique":false}},"order":["title","postContent"]}}'
 ```
 
 After such call is made and <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> is created - the User API is immediately extended to support interaction with this new Content Type:
@@ -139,7 +136,7 @@ After such call is made and <abbr title="Content Type - a model of data that has
 All Content Types have automatically added properties from `AbstractContentTypeSchemaDefinition`; they are:
 
 * id - string identifier of Content Object, required in all requests, unique within the Content Type,
-* internal - object necessary to proper work of CMS backend (information about dates of creation and update, workflow type attached to Content Type, the whole object is described in JSON below). 
+* internal - object necessary to proper work of CMS backend (information about dates of creation and update, the whole object is described in JSON below). 
 
 ??? "Schema of Abstract Content Type"
     ```json
@@ -167,9 +164,6 @@ All Content Types have automatically added properties from `AbstractContentTypeS
                         },
                         "deletedAt": {
                             "type": "string"
-                        },
-                        "_workflow": {
-                            "type": "object"
                         }
                     }
                 }
@@ -229,140 +223,15 @@ To get the list of <abbr title="Content Type - a model of data that has been def
 ??? Response
     ```json
     {
-      "total_count": 6,
+      "total_count": 2,
       "total_pages": 1,
       "current_page": 1,
-      "count": 6,
+      "count": 2,
       "data": [
-        {
-          "id": "853b73fe-fb28-11e9-a032-164983a8ff87",
-          "name": "_creator_content_container",
-          "label": "Creator Content Container",
-          "workflowId": null,
-          "schemaDefinition": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "content": {
-                    "type": "object"
-                  }
-                },
-              }
-            ],
-            "required": [
-              "name",
-              "content"
-            ],
-            "additionalProperties": false
-          },
-          "metaDefinition": {
-            "order": [
-              "name",
-              "content"
-            ],
-            "propertiesConfig": {
-              "id": {
-                "unique": true,
-                "inputType": "text"
-              },
-              "name": {
-                "unique": true,
-                "inputType": "text"
-              },
-              "content": {
-                "unique": false,
-                "inputType": "text"
-              }
-            }
-          },
-          "deletedAt": null,
-          "createdAt": "2019-10-30T15:18:26.000000+0000",
-          "updatedAt": null
-        },
-        {
-          "id": "d2c60a5b-fa31-11e9-886d-3afe2f8d7a3c",
-          "name": "_editBlock",
-          "label": "_editBlock",
-          "workflowId": "",
-          "schemaDefinition": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "hash": {
-                    "type": "string"
-                  },
-                  "user": {
-                    "type": "string"
-                  },
-                  "elementId": {
-                    "type": "string"
-                  },
-                  "elementType": {
-                    "type": "string"
-                  }
-                }
-              }
-            ],
-            "required": [
-              "user",
-              "hash",
-              "elementId",
-              "elementType"
-            ],
-            "additionalProperties": false
-          },
-          "metaDefinition": {
-            "order": [
-              "user",
-              "hash",
-              "elementId",
-              "elementType"
-            ],
-            "propertiesConfig": {
-              "hash": {
-                "unique": true,
-                "options": [],
-                "inputType": "text"
-              },
-              "user": {
-                "unique": false,
-                "options": [],
-                "inputType": "text"
-              },
-              "elementId": {
-                "unique": false,
-                "options": [],
-                "inputType": "text"
-              },
-              "elementType": {
-                "unique": false,
-                "options": [],
-                "inputType": "text"
-              }
-            }
-          },
-          "deletedAt": null,
-          "createdAt": "2019-10-29T09:52:30.000000+0000",
-          "updatedAt": null
-        },
         {
           "id": "1e64237a-f4db-11e9-991e-d2c03bd6f499",
           "name": "_media",
           "label": "Media",
-          "workflowId": "",
           "schemaDefinition": {
             "type": "object",
             "allOf": [
@@ -493,141 +362,9 @@ To get the list of <abbr title="Content Type - a model of data that has been def
           "updatedAt": "2019-10-30T11:15:47.000000+0000"
         },
         {
-          "id": "edf6794c-f4da-11e9-991e-d2c03bd6f499",
-          "name": "_workflow",
-          "label": "Workflow",
-          "workflowId": null,
-          "schemaDefinition": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "definition": {
-                    "type": "string",
-                    "description": "Workflow definition - key from workflows.yaml"
-                  }
-                },
-              }
-            ],
-            "required": [
-              "id",
-              "name",
-              "definition"
-            ],
-            "additionalProperties": false
-          },
-          "metaDefinition": {
-            "order": [
-              "name",
-              "definition"
-            ],
-            "propertiesConfig": {
-              "name": {
-                "unique": true,
-                "inputType": "text"
-              },
-              "definition": {
-                "unique": false,
-                "inputType": "textarea"
-              }
-            }
-          },
-          "deletedAt": null,
-          "createdAt": "2019-10-22T14:47:54.000000+0000",
-          "updatedAt": null
-        },
-        {
-          "id": "0b1809f9-f4db-11e9-991e-d2c03bd6f499",
-          "name": "_workflow_state",
-          "label": "Workflow state",
-          "workflowId": null,
-          "schemaDefinition": {
-            "type": "object",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
-              }
-              {
-                "type": "object",
-                "properties": {
-                  "state": {
-                    "type": "string",
-                    "description": "State name (eg. draft, published)"
-                  },
-                  "workflow": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/DataSource"
-                    },
-                    "maxItems": 1,
-                    "minItems": 1,
-                    "description": "Link to workflow definition"
-                  },
-                  "content_type": {
-                    "type": "string"
-                  },
-                  "content_object_id": {
-                    "type": "string",
-                    "description": "Pointing to ContentObject. @todo Use relation"
-                  }
-                },
-              }
-            ],
-            "required": [
-              "id",
-              "content_object_id",
-              "content_type",
-              "state",
-              "workflow"
-            ],
-            "additionalProperties": false
-          },
-          "metaDefinition": {
-            "order": [
-              "content_object_id",
-              "content_type",
-              "state",
-              "workflow"
-            ],
-            "propertiesConfig": {
-              "state": {
-                "unique": false,
-                "inputType": "text"
-              },
-              "workflow": {
-                "unique": false,
-                "inputType": "datasource",
-                "validation": {
-                  "relationMultiple": false,
-                  "relationContenttype": "_workflow"
-                }
-              },
-              "content_type": {
-                "unique": false,
-                "inputType": "text"
-              },
-              "content_object_id": {
-                "unique": false,
-                "inputType": "text"
-              }
-            }
-          },
-          "deletedAt": null,
-          "createdAt": "2019-10-22T14:48:43.000000+0000",
-          "updatedAt": null
-        },
-        {
           "id": "77721433-f727-11e9-bf7c-129df7ebe82d",
           "name": "blogposts",
           "label": "Blog Posts",
-          "workflowId": "_workflow-1",
           "schemaDefinition": {
             "type": "object",
             "allOf": [

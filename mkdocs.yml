@@ -8,15 +8,15 @@ theme:
      custom_dir: 'theme'
      palette:
          primary: 'teal'
-     features:
-       - instant
+# instant breaks loading of code highlight library
+#     features:
+#       - instant
 plugins:
   - search
   - awesome-pages
   - git-revision-date-localized
 
 extra_css:
-  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
   - 'css/flotiq.css'
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/nord.min.css

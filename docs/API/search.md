@@ -18,6 +18,7 @@ You can use the search engine via the `GET ​/api​/v1​/search` endpoint to 
     | content_type    | array  | Restrict search to content types set                                                          |
     | aggregate_by    | array  | Fields to aggregate results direction                                                         |
     | filters         | array  | Filter by object properties. Expected format: `filters[propertyName]=value1&filters[propertyName2]=value2`|
+    | geo_filters     | array  | Filter by object geolocation properties. Example value: `geo_distance,1.50km,40.1,-19.2` which means: `filter name`, `distance`, `latitude`, `longitude`. For more information see [ElasticSearch docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-geo-distance-query.html). Only `geo_distance` query is supported. | 
     | post_filters    | array  | Filter by object properties. Use it when you want aggregated counts without filters applied. Expected format: `filters[propertyName]=value1&filters[propertyName2]=value2` |                                                                                              |
     | fields          | array  | List of content fields to be searched                                                         |
     | order_by        | string | Name of the field to sort results by (they are always primarily sorted by `_score`)            |

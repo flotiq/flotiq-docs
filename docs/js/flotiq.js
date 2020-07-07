@@ -33,6 +33,14 @@ window.addEventListener('click', function (event) {
             });
         }
     }, 200);
+    //fallback if page do not rendered in 200ms
+    setTimeout(() => {
+        if (event.target.className === 'md-nav__link') {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        }
+    }, 200);
 });
 
 hljs.initHighlightingOnLoad();

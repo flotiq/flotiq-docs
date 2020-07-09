@@ -184,10 +184,10 @@ Property types (as of `schemaDefinition` properties), recognized by CMS panel:
     | boolean | Represents two values `true` and `false`. Note that truthy and falsy values such as "true", "", 0 or null are not considered boolean values. | none allowed                |
     | array   | Used for lists or relations.                                                                                                                 | items                       | For relations: it has to be an object containing `{"$ref": "#/components/schemas/DataSource"}`, as the items of the array are objects described in DataSource schema.<br>For list items: it should be a valid json schema following the same restrictions as wrapping schema |
     |         |                                                                                                                                              | minItems                    | `0` for a not required property, and `1` for required property                                                                                 |
-    | object  | Used for geo point type                                                                                                                      | properties                  | must be `{"lat": {"type": "number"},"lng": {"type": "number"}}`
+    | object  | Used for geo point type                                                                                                                      | properties                  | must be `{"lat": {"type": "number"},"lon": {"type": "number"}}`
     |         |                                                                                                                                              | additionalProperties        | must be `false`
     |         |                                                                                                                                              | type                        | must be `object`
-    |         |                                                                                                                                              | required                    | if the field is required it must be `["lat","lng"]`
+    |         |                                                                                                                                              | required                    | if the field is required it must be `["lat","lon"]`
 
 Input types in `metaDefinition` of properties:
 

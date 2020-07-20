@@ -89,10 +89,12 @@ Creating a new <abbr title="Content Type - a model of data that has been defined
             "metaDefinition": {
                 "propertiesConfig": {
                     "title": {
+                        "label": "Title",
                         "inputType": "text",
                         "unique": true
                     },
                     "postContent": {
+                        "label": "Post content",
                         "inputType": "richtext",
                         "unique": false
                     }
@@ -126,7 +128,7 @@ In this case, Blog Post will have `title` property which will be unique and will
 
 Full curl request:
 ```
-curl -X POST "https://api.flotiq.com/api/v1/internal/contenttype" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H 'Content-Type: application/json' --data-binary '{"name":"blogposts","label":"Blog Posts","schemaDefinition":{"type":"object","allOf":[{"$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"},{"type":"object","properties":{"title":{"type":"string"},"postContent":{"type":"string"}}}],"required":["title","postContent"],"additionalProperties":false},"metaDefinition":{"propertiesConfig":{"title":{"inputType":"text","unique":true},"postContent":{"inputType":"richtext","unique":false}},"order":["title","postContent"]}}'
+curl -X POST "https://api.flotiq.com/api/v1/internal/contenttype" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H 'Content-Type: application/json' --data-binary '{"name":"blogposts","label":"Blog Posts","schemaDefinition":{"type":"object","allOf":[{"$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"},{"type":"object","properties":{"title":{"type":"string"},"postContent":{"type":"string"}}}],"required":["title","postContent"],"additionalProperties":false},"metaDefinition":{"propertiesConfig":{"title":{"label":"Title",inputType":"text","unique":true},"postContent":{"label":"Post content","inputType":"richtext","unique":false}},"order":["title","postContent"]}}'
 ```
 
 After such call is made and <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> is created - the User API is immediately extended to support interaction with this new Content Type:
@@ -300,16 +302,19 @@ To get the list of <abbr title="Content Type - a model of data that has been def
             ],
             "propertiesConfig": {
               "url": {
+                "label": "Url",
                 "unique": false,
                 "options": [],
                 "inputType": "text"
               },
               "size": {
+                "label": "Size",
                 "unique": false,
                 "options": [],
                 "inputType": "number"
               },
               "type": {
+                "label": "Type",
                 "unique": false,
                 "options": [
                   "image",
@@ -318,16 +323,19 @@ To get the list of <abbr title="Content Type - a model of data that has been def
                 "inputType": "select"
               },
               "width": {
+                "label": "Width",
                 "unique": false,
                 "options": [],
                 "inputType": "number"
               },
               "height": {
+                "label": "Height",
                 "unique": false,
                 "options": [],
                 "inputType": "number"
               },
               "source": {
+                "label": "Source",
                 "unique": false,
                 "options": [
                   "disk",
@@ -336,21 +344,25 @@ To get the list of <abbr title="Content Type - a model of data that has been def
                 "inputType": "select"
               },
               "fileName": {
+                "label": "File name",
                 "unique": false,
                 "options": [],
                 "inputType": "text"
               },
               "mimeType": {
+                "label": "MIME type",
                 "unique": false,
                 "options": [],
                 "inputType": "text"
               },
               "extension": {
+                "label": "Extension",
                 "unique": false,
                 "options": [],
                 "inputType": "text"
               },
               "externalId": {
+                "label": "External id",
                 "unique": false,
                 "options": [],
                 "inputType": "text"
@@ -359,7 +371,7 @@ To get the list of <abbr title="Content Type - a model of data that has been def
           },
           "deletedAt": null,
           "createdAt": "2019-10-22T14:49:15.000000+0000",
-          "updatedAt": "2019-10-30T11:15:47.000000+0000"
+          "updatedAt": "2020-20-07T16:33:47.000000+0000"
         },
         {
           "id": "77721433-f727-11e9-bf7c-129df7ebe82d",
@@ -411,6 +423,7 @@ To get the list of <abbr title="Content Type - a model of data that has been def
             ],
             "propertiesConfig": {
               "tags": {
+                "label": "Tags",
                 "unique": false,
                 "inputType": "datasource",
                 "validation": {
@@ -419,6 +432,7 @@ To get the list of <abbr title="Content Type - a model of data that has been def
                 }
               },
               "media": {
+                "label": "Media",
                 "unique": false,
                 "inputType": "datasource",
                 "validation": {
@@ -427,10 +441,12 @@ To get the list of <abbr title="Content Type - a model of data that has been def
                 }
               },
               "title": {
+                "label": "Title",
                 "unique": false,
                 "inputType": "text"
               },
               "content": {
+                "label": "Content",
                 "unique": false,
                 "inputType": "richtext"
               }
@@ -438,7 +454,7 @@ To get the list of <abbr title="Content Type - a model of data that has been def
           },
           "deletedAt": null,
           "createdAt": "2019-10-25T13:00:50.000000+0000",
-          "updatedAt": "2019-10-30T20:30:59.000000+0000"
+          "updatedAt": "2020-07-20T16:34:11.000000+0000"
         }
       ]
     }

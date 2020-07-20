@@ -152,44 +152,54 @@ Because sending and storing files as their base64 hash is ineffective, files hav
             ],
             "propertiesConfig": {
                 "fileName": {
+                    "label": "File name",
                     "inputType": "text",
                     "unique": false,
                     "idTitlePart": true
                 },
                 "mimeType": {
+                    "label": "MIME type",
                     "inputType": "text",
                     "unique": false
                 },
                 "size": {
+                    "label": "Size",
                     "inputType": "number",
                     "unique": false
                 },
                 "width": {
+                    "label": "Width",
                     "inputType": "number",
                     "unique": false
                 },
                 "height": {
+                    "label": "Height",
                     "inputType": "number",
                     "unique": false
                 },
                 "url": {
+                    "label": "Url",
                     "inputType": "text",
                     "unique": false
                 },
                 "externalId": {
+                    "label": "External id",
                     "inputType": "text",
                     "unique": false
                 },
                 "source": {
+                    "label": "Source",
                     "inputType": "select",
                     "unique": false,
                     "options": ["disk","unsplash"]
                 },
                 "extension": {
+                    "label": "Extension",
                     "inputType": "text",
                     "unique": false
                 },
                 "type": {
+                    "label": "Type",
                     "inputType": "select",
                     "unique": false,
                     "options": ["file","image"]

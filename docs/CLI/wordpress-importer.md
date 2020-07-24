@@ -15,3 +15,7 @@ After running the command, you should have new content types added to your Floti
 `apiKey` - API key to your Flotiq account
 
 `wordpressUrl` - full link to WordPress site
+
+### Imported Data
+
+The importer will make all the required Content Type Definitions and will pull all your posts, authors, categories, tags, pages and media into your Flotiq account. They are all properly linked and ready to use, e.g. in a Gatsby-based website. 

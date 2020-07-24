@@ -6,8 +6,12 @@ description: Online documentation for Flotiq - the effortless headless CMS.
 
 Welcome to Flotiq Documentation.
 
-Here you will find everything you need to know about Flotiq.
-Let's start right away!
+Here you will find everything you need to know about Flotiq. The documentation is divided into several sections:
+
+- API - provides essential information about accessing Flotiq's APIs,
+- Dashboard - gives a quick tour of the most important features of the User Interface,
+- CLI - discusses the Flotiq CLI application and its basic use cases,
+- Deep dives - collects tutorials and technical documents that dive deep into a particular scenario.
 
 ## What is Flotiq?
 

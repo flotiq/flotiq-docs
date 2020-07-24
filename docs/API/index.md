@@ -1,7 +1,8 @@
 # API access
 
-## API Key
-There are two types of API keys - [Application Keys](#application-api-keys) and [User Defined Keys](#user-defined-api-keys). Both types of keys can be retrieved from the API Keys page in the Flotiq Panel (click on your avatar to open menu):
+All API endpoints that are published in Flotiq are currently using an API-key authorization method. 
+
+There are two types of API keys - [Application Keys](#application-api-keys) and [User Defined Keys](#user-defined-api-keys). Both types of keys can be retrieved from the API Keys page in the Flotiq Panel (click on your avatar to open the menu):
 
 ![](images/user-profile.png){: .center .border}
 
@@ -10,9 +11,9 @@ All keys restrict access to not only CRUD of the Content Objects, but also to th
 !!! note 
     _**Keys CAN NOT be obtained through programmatic API, and they are accessible only from the Flotiq Panel.**_
 
-### Application API Keys
+## Application API Keys
 
-There are 2 Application API keys - read-write and read-only. Application keys are system-wide keys, and you can use them to manage Content Objects and Content Type Definitions. Although as the best practice, we recommend you use the Application read-only API key or User Defined API key whenever possible.
+Every Flotiq account has 2 Application API keys - read-write and read-only. Application keys are system-wide keys, and you can use them to manage all of your Content Objects and Content Type Definitions. Please note, that for most applications you should create User Defined API keys - scoped to a particular set of Content Types and permissions.
 
 ![](images/api-keys_1.png){: .center .width75 .border}
 
@@ -21,7 +22,10 @@ You can open QR code with the key using ![](images/qr_button.png){: style="margi
 and you can regenerate keys using ![](images/regenerate_button.png){: style="margin-bottom: -7px;"} button. 
 Only user defined keys can be removed using ![](images/remove_button.png){: style="margin-bottom: -7px;"} button.
 
-### User Defined API Keys
+!!! hint
+    You can use the QR code of your API keys to authorize your Flotiq Mobile Expo installation to access your data. Head over to the [Flotiq Mobile Expo repository](https://github.com/flotiq/flotiq-mobile-demo) to learn more.
+
+## User Defined API Keys
 
 ![](images/api-keys_2.png){: .center .width75 .border}
 
@@ -42,4 +46,16 @@ And here you can see how it looks all in the User Interface:
 ![](images/api-keys.png){: .center .width75 .border}
 
 
+## Frequently Asked Questions
 
+### What can I do if my API key got compromised?
+
+If you accidentally commited your `.env` file to a public repository or in any other way shared your key publicly - you can regenerate the key using the ![](images/regenerate_button.png){: style="margin-bottom: -7px;"} button.
+
+### How can I provide read-only access to a single kind of data?
+
+You can use the User Define API keys and create a key that has a limited scope and permissions. For example - you can easily create a new key that only provides access to `Product` data and set it to be read-only.
+
+### Are the API request limits calculated on a per-key or per-account basis?
+
+API request limits are assigned to your account, so all your keys' usage will add to the consumption of the API request quotas.

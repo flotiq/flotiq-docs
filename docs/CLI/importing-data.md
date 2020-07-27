@@ -5,14 +5,14 @@ To importing example data for a Gatsby starter with Flotiq CLI you need a Flotiq
 The command looks like this:
 
 ```bash
-flotiq import [apiKey] [projectName]
+flotiq import [flotiqApiKey] [projectName]
 ```
 
 After running the command, you should have data imported to your Flotiq account.
 
 ### Parameters
 
-`apiKey` - API key to your Flotiq account
+`flotiqApiKey` - API key to your Flotiq account
 
 `projectName` - project name or project path (if you wish to start or import data from the directory you are in, use `.`)
 

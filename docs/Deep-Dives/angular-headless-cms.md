@@ -85,7 +85,7 @@ In `environments` directory are two `env` files. Add your `API_KEY` as a key-val
 ```typescript
 export const environment = {
   production: false,
-  apiKey: 'YOUR_API_KEY'
+  flotiqApiKey: 'YOUR_API_KEY'
 };
 ```
 
@@ -100,7 +100,7 @@ import { environment } from '../environments/environment';
 
 export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = {
-    apiKeys: {'X-AUTH-TOKEN': environment.apiKey}
+    apiKeys: {'X-AUTH-TOKEN': environment.flotiqApiKey}
   };
   return new Configuration(params);
 }

@@ -5,17 +5,19 @@ To migrate content from any WordPress site with Flotiq CLI you need a Flotiq acc
 The command looks like this:
 
 ```bash
-flotiq wordpress-import [apiKey] [wordpressUrl]
+flotiq wordpress-import [flotiqApiKey] [wordpressUrl]
 ```
 
 After running the command, you should have new content types added to your Flotiq account that was imported from Wordpress site.
 
 ### Parameters
 
-`apiKey` - API key to your Flotiq account
+`flotiqApiKey` - Read and write API key to your Flotiq account
 
 `wordpressUrl` - full link to WordPress site
 
 ### Imported Data
 
 The importer will make all the required Content Type Definitions and will pull all your posts, authors, categories, tags, pages and media into your Flotiq account. They are all properly linked and ready to use, e.g. in a Gatsby-based website. 
+
+![](images/wordpress-content-types.png)

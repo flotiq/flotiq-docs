@@ -1,6 +1,6 @@
-# Migrate any WordPress content to Flotiq
+# Migrate WordPress blog content to Flotiq
 
-To migrate content from any WordPress site with Flotiq CLI you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)) and your "Read and write API key" (more about API keys [here](../API/index.md)).
+To migrate content from WordPress blog with Flotiq CLI you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)) and your "Read and write API key" (more about API keys [here](../API/index.md)).
 
 The command looks like this:
 

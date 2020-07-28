@@ -82,7 +82,7 @@ nav:
     - 'Overview': CLI/index.md
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
     - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
-    - 'Migrate any WordPress content to Flotiq': CLI/wordpress-importer.md
+    - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md

@@ -110,7 +110,7 @@ Property types:
 | Textarea  | Long string type accepting new line characters, generating Textarea in object form |
 | Rich Text | Long string type accepting HTML, generating CKEditor in object form |
 | Email     | String type, generating Email Input in object form |
-| Number    | Number type accepting only integers, generating Number Input |
+| Number    | Number type accepting any number, integer, float and doubles, generating Number Input |
 | Radio     | String type, generating Radio Input in object form |
 | Checkbox  | Boolean type, generating single Checkbox in object form |
 | Select    | String type, generating Select Dropdown in object form |

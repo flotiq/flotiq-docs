@@ -85,22 +85,26 @@ Full schema for the Blog Post type:
             ],
             "propertiesConfig": {
                 "slug": {
+                    "label": "Slug",
                     "unique": true,
                     "helpText": "",
                     "inputType": "text"
                 },
                 "title": {
+                    "label": "Title",
                     "unique": false,
                     "helpText": "",
                     "inputType": "text",
                     "isTitlePart": true
                 },
                 "content": {
+                    "label": "Content",
                     "unique": false,
                     "helpText": "",
                     "inputType": "richtext"
                 },
                 "thumbnail": {
+                    "label": "Thumbnail",
                     "unique": false,
                     "helpText": "",
                     "inputType": "datasource",
@@ -110,6 +114,7 @@ Full schema for the Blog Post type:
                     }
                 },
                 "headerImage": {
+                    "label": "Header image",
                     "unique": false,
                     "helpText": "",
                     "inputType": "datasource",
@@ -203,27 +208,33 @@ Full schema for the Event type:
         "metaDefinition": {
             "propertiesConfig": {
                 "name": {
+                    "label": "Name",
                     "inputType": "text",
                     "unique": false,
                     "isTitlePart": true
                 },
                 "slug": {
+                    "label": "Slug",
                     "inputType": "text",
                     "unique": true
                 },
                 "address": {
+                    "label": "Address",
                     "inputType": "textarea",
                     "unique": false
                 },
                 "date": {
+                    "label": "Date",
                     "inputType": "text",
                     "unique": false
                 },
                 "description": {
+                    "label": "Description",
                     "inputType": "richtext",
                     "unique": false
                 },
                 "gallery": {
+                    "label": "Gallery",
                     "inputType": "datasource",
                     "unique": false,
                     "validation": {
@@ -328,23 +339,28 @@ Full schema for the Product type:
         "metaDefinition": {
             "propertiesConfig": {
                 "name": {
+                    "label": "Name",
                     "inputType": "text",
                     "unique": true,
                     "isTitlePart": true
                 },
                 "slug": {
+                    "label": "Slug",
                     "inputType": "text",
                     "unique": true
                 },
                 "price": {
+                    "label": "Price",
                     "inputType": "number",
                     "unique": false
                 },
                 "description": {
+                    "label": "Description",
                     "inputType": "richtext",
                     "unique": false
                 },
                 "productImage": {
+                    "label": "Product image",
                     "inputType": "datasource",
                     "unique": false,
                     "validation": {
@@ -352,6 +368,7 @@ Full schema for the Product type:
                     }
                 },
                 "productGallery": {
+                    "label": "Product gallery",
                     "inputType": "datasource",
                     "unique": false,
                     "validation": {
@@ -444,19 +461,23 @@ Full schema for the Project type:
         "metaDefinition": {
             "propertiesConfig": {
                 "name": {
+                    "label": "Name",
                     "inputType": "text",
                     "unique": true,
                     "isTitlePart": true
                 },
                 "slug": {
+                    "label": "Slug",
                     "inputType": "text",
                     "unique": true
                 },
                 "description": {
+                    "label": "Description",
                     "inputType": "richtext",
                     "unique": false
                 },
                 "gallery": {
+                    "label": "Gallery",
                     "inputType": "datasource",
                     "unique": false,
                     "validation": {
@@ -614,17 +635,20 @@ Full schema for the Recipe type:
             ],
             "propertiesConfig": {
                 "name": {
+                    "label": "Name",
                     "unique": false,
                     "helpText": "",
                     "inputType": "text",
                     "isTitlePart": true
                 },
                 "slug": {
+                    "label": "Slug",
                     "unique": true,
                     "helpText": "",
                     "inputType": "text"
                 },
                 "image": {
+                    "label": "Image",
                     "unique": false,
                     "helpText": "",
                     "inputType": "datasource",
@@ -633,6 +657,7 @@ Full schema for the Recipe type:
                     }
                 },
                 "steps": {
+                    "label": "Steps",
                     "items": {
                         "order": [
                             "image",
@@ -640,11 +665,13 @@ Full schema for the Recipe type:
                         ],
                         "propertiesConfig": {
                             "step": {
+                                "label": "Step",
                                 "unique": false,
                                 "helpText": "",
                                 "inputType": "textarea"
                             },
                             "image": {
+                                "label": "Image",
                                 "unique": false,
                                 "helpText": "",
                                 "inputType": "datasource",
@@ -659,21 +686,25 @@ Full schema for the Recipe type:
                     "inputType": "object"
                 },
                 "servings": {
+                    "label": "Servings",
                     "unique": false,
                     "helpText": "",
                     "inputType": "number"
                 },
                 "cookingTime": {
+                    "label": "Cooking time",
                     "unique": false,
                     "helpText": "",
                     "inputType": "text"
                 },
                 "description": {
+                    "label": "Description",
                     "unique": false,
                     "helpText": "",
                     "inputType": "richtext"
                 },
                 "ingredients": {
+                    "label": "Ingredients",
                     "items": {
                         "order": [
                             "amount",
@@ -682,6 +713,7 @@ Full schema for the Recipe type:
                         ],
                         "propertiesConfig": {
                             "unit": {
+                                "label": "Unit",
                                 "unique": false,
                                 "options": [
                                     "",
@@ -701,11 +733,13 @@ Full schema for the Recipe type:
                                 "inputType": "select"
                             },
                             "amount": {
+                                "label": "Amount",
                                 "unique": false,
                                 "helpText": "",
                                 "inputType": "number"
                             },
                             "product": {
+                                "label": "Product",
                                 "unique": false,
                                 "helpText": "",
                                 "inputType": "text"

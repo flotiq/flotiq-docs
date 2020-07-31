@@ -65,10 +65,12 @@ To get list of images with metadata use `GET /api/v1/content/_media` endpoint.
 Fetching original or resized files directly is described in the next sections.
 
 
-### The Media Content Type Definition
+## Media Content Object
 
-As we see in the response uploaded media has its own representation as Content Object. Below we listed
-all parameters describing the `Media` object.
+As we see in the response uploaded media has its own representation as Content Object. You can use all the content 
+api methods to get, list, remove Content objects. Be aware, that changing the `_media` metadata can lead to unexpected behaviour.
+
+Below we listed all parameters describing the `Media` object.
 
 | Parameter  | Description |
 | ---------- | ----------- |
@@ -84,7 +86,9 @@ all parameters describing the `Media` object.
 | height     | Height, or 0 for 'file' type |
 | width      | Width, or 0 for 'file' type |
 
-All parameters are described also in the `Media` Content Type Definition.
+### Media Content Type Definition
+
+All the Media Content Object parameters are described also in the `Media` Content Type Definition.
 
 ??? "Structure of the `_media` Content Type Definition:"
     ```json
@@ -217,10 +221,6 @@ All parameters are described also in the `Media` Content Type Definition.
     ```
 
 
-
-##Content Object
-
-Media upload endpoint creates Content Object automatically when you use `save = 1` parameter. It would be best if you only used `getMedia` and `listMedia` endpoints, as changing the `_media` objects can lead to unexpected behaviour.
 
 
 ##Viewing and resizing photos, returning files

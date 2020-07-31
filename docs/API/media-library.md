@@ -36,7 +36,7 @@ Because sending and storing files as their base64 hash is ineffective, files hav
     form.append(`file`, fs.createReadStream(file), file);
     form.append(`type`, `image`);
     form.append(`save`, 1);
-    let json = await fetch(apiUrl + `/api/media`, {
+    let json = await fetch(`https://api.flotiq.com/api/media`, {
         method: `POST`,
         body: form,
         headers: headers,

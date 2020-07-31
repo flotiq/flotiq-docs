@@ -13,6 +13,7 @@ The advantage of using a Flotiq system is that we do not have to worry about pre
 You use `POST` `https://api.flotiq.com/api/media` endpoint in Flotiq, for uploading photos.
 
 The request should contain:
+
 * `file` - payload with a file
 * `type` - the type of the transferred file, `image` or `file`
 * `save` - a value of 1 means that the saved file will go to the media library.

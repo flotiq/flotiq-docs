@@ -77,11 +77,11 @@ For example, if you're using the [Gatsby and Snipcart starter](https://github.co
 
 To obtain the Flotiq API key - in your Flotiq account, click your profile icon in the sidebar and go to `API keys`:
 
-![Access Flotiq API keys](https://flotiq.com/docs/API/images/user-profile.png)
+![Access Flotiq API keys](https://flotiq.com/docs/API/images/user-profile.png){: .center .width25 .border}
 
 You can either select the application-wide read-only key:
 
-![Use global read-only](https://flotiq.com/docs/API/images/api-keys_1.png)
+![Use global read-only](https://flotiq.com/docs/API/images/api-keys_1.png){: .center .width75 .border}
 
 Or as a safer option, create a scoped read-only API key that will only be used for the purpose of Gatsby Cloud, read more about [Flotiq API access](https://flotiq.com/docs/API/).
 
@@ -111,15 +111,15 @@ Next - fill in the details from your Gatsby Cloud instance and click `Save chang
 
 ### Configuring Gatsby Preview plugin
 
-The 2 elements you will need to copy from Gatsby Cloud is the Preview instance URL:
+The 3 elements you will need to copy from Gatsby Cloud is the Preview instance URL:
 
-![Gatsby Preview Instance URL](https://www.gatsbyjs.com/static/2f824dc7c09a5c5b4d133d633bfbaeb5/6af66/preview-domain.png){: .center .width75 .border}
+![Gatsby Preview Instance URL](images/gatsby-preview-url.png){: .center .width75 .border}
 
-and the Preview Webhook URL:
+and the Preview and Builds Webhook URLs from Site Settings:
 
-![Gatsby Preview Webhook URL](https://www.gatsbyjs.com/static/fbe7f981d3a82689659ea3342fe95cf2/6af66/webhook-preview.png){: .center .width75 .border}
+![Gatsby Preview and Builds Webhook URLs](images/gatsby-webhooks.png){: .center .width75 .border}
 
-You will paste both of them in Flotiq Gatsby Preview plugin settings, don't forget to click the `Save changes` button.
+You will paste all three of them in Flotiq Gatsby Preview plugin settings, don't forget to click the `Save changes` button.
 
 
 ## That's it!

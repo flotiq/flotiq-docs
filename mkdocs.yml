@@ -87,6 +87,7 @@ nav:
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md
+    - 'Mobile product showcase application': Deep-Dives/mobile-expo-product-showcase.md
     - 'Building a blog': Deep-Dives/Building-a-blog-in-3-minutes.md
     - 'Building a contact form': Deep-Dives/Headless-CMS-Contact-Forms.md
     - 'Building a banner rotator': Deep-Dives/building-a-banner-rotator-with-an-admin-interface.md

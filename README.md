@@ -5,9 +5,9 @@
 Flotiq documentation
 ========================
 
-This is the [Flotiq](https://flotiq.com) documentation. It's available [here](https://flotiq.com/docs/). 
+This is the [Flotiq](https://flotiq.com) documentation. It's available online [here](https://flotiq.com/docs/). 
 
-We are improving our documentation along as the Flotiq improves. We are trying our best to keep it as up to date and clear as it is possible. If you wish to help us with that task, we welcome your PRs.
+We are improving our documentation along as Flotiq improves. We are trying our best to keep it as up to date and clear as it is possible. If you wish to help us with that task - PRs are welcome.
 
 ## Prerequisites
 

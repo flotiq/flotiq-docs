@@ -13,8 +13,8 @@
         "image": [
             "https://api.flotiq.com/image/1920x0/_media-5dfa4bed252da.png"
         ],
-        "datePublished": "{{ page.meta.git_revision_date_localized  }}",
-        "dateModified": "{{ page.meta.git_revision_date_localized  }}",
+        "datePublished": "{% if page and page.meta.revision_date_localized %} {{ page.meta.git_revision_date_localized }} {% endif %}",
+        "dateModified": "{% if page and page.meta.revision_date_localized %} {{ page.meta.git_revision_date_localized  }} {% endif %}",
         "author": {
             "@type": "Organization",
             "name": "Flotiq"
@@ -27,7 +27,7 @@
                 "url": "https://api.flotiq.com/image/1920x0/_media-5dfa4bed252da.png"
             }
         },
-        "description": "{{ page.meta.description }}"
+        "description": "{% if page and page.meta.description %} {{ page.meta.description }} {% endif %}"
     }
 </script>
 {% endblock %}

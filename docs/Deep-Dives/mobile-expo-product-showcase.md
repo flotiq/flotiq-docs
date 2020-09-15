@@ -99,7 +99,6 @@ Open the `StackNavigator.js` file and make the necessary adjustments:
         import SplashScreen from 'react-native-splash-screen';
         ```
         - add the following `useEffect()` before the first one:
-
         ```
         useEffect(() => {
             if (!isLoading) {
@@ -108,9 +107,9 @@ Open the `StackNavigator.js` file and make the necessary adjustments:
         }, [isLoading]);
         ```
         - In the `contentTypeObjectsScreenOptions` method - replace the `screenTitle` const with a static one:
-            ```
-                const screenTitle = "Products"
-            ```
+        ```
+        const screenTitle = "Products"
+        ```
             
 Here's the [full list of changes](https://github.com/andrzejwp/flotiq-mobile-demo/pull/1/files) that have to be made to simplify the original app, in case you missed something.
 

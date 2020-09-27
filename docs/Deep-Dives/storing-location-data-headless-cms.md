@@ -14,20 +14,20 @@ What we'll need:
 
 And here's a sneak peak at what we'll build.
 
-![Flotiq-based store locator](http://minio.dev.cdwv.pl/hackmd/uploads/upload_41c5f5b3c6437c599bcf9ea47110c446.png){: .center .border .width75}
+![Flotiq-based store locator](images/store-locator-1.png){: .center .border .width75}
 
 
 ## Setting up Flotiq
 
 Once you [registered a Flotiq account](https://editor.flotiq.com/register.html) and logged in, you'll have to create a new Content Type Definition. This is how you tell Flotiq what kind of data you will be dealing with. Mine looks like this:
 
-![Store Content Type Definition](https://minio.dev.cdwv.pl/hackmd/uploads/upload_a9346a15c9a78b7f8470207d7c19cfb2.png){: .center .border .width75}
+![Store Content Type Definition](images/store-locator-2.png){: .center .border .width75}
 
 I recommend that you use the same labels - it will be easier to follow the rest of the tutorial.
 
 Next - create several Content Objects under the `Store` type. I added 3 shops in central London:
 
-![Store entries in grid](https://minio.dev.cdwv.pl/hackmd/uploads/upload_2a057787d9abd8a830fdc688f8305148.png){: .center .border .width75}
+![Store entries in grid](images/store-locator-3.png){: .center .border .width75}
 
 Finally - setup a scoped API key - you'll need it in a moment.
 
@@ -139,7 +139,7 @@ body, html {
 ```
 
 Once this is done - you should see a map rendered in your browser:
-![First map rendered](https://minio.dev.cdwv.pl/hackmd/uploads/upload_1c59738b770bdb80c6a7f49136ce986d.png){: .center .border .width75}
+![First map rendered](images/store-locator-4.png){: .center .border .width75}
 
 !!! note 
     I intentionally skipped some minor details from the above implementation. Check the full source code in `01-scaffolding` folder in [this repo](https://github.com/flotiq/flotiq-demo-storing-location-data).
@@ -294,7 +294,7 @@ Next, load the markers! Add this, below the `onMarkersLoaded` definition.
 ```
 When you reload the page - you should now see the markers appear on your map.
 
-![First markers appear on map](http://minio.dev.cdwv.pl/hackmd/uploads/upload_a190b045c6ceaf48b0aaca47d5c5788c.png){: .center .border .width75}
+![First markers appear on map](images/store-locator-5.png){: .center .border .width75}
 
 !!! note
     Again - you can verify your progress in `02-pull-data` folder in [this repo](https://github.com/flotiq/flotiq-demo-storing-location-data).
@@ -431,7 +431,7 @@ and apply the required styling
 
 A neat, yellow box with a positioning icon should appear in your browser:
 
-![Browser location can be used to navigate the map](http://minio.dev.cdwv.pl/hackmd/uploads/upload_fe6e83ed4a21234730c8fa5441d321d4.png){: .center .border .width75}
+![Browser location can be used to navigate the map](images/store-locator-6.png){: .center .border .width75}
 
 Let's now add an input field and connect the geocodeing service to translate location names to coordinates.
 
@@ -614,4 +614,4 @@ and finally - drop this at the end of the `onMarkersLoaded()` function:
 
 That's it! You should  now have a fully working webpage, which will display the list of stores you store in Flotiq and will place the store's on a map. Look into our [Git repository](https://github.com/flotiq/flotiq-demo-storing-location-data) for some extra style and let us know in the comments when you build something!
 
-![The final result - store locator webpage with data dynamically pulled from Flotiq](http://minio.dev.cdwv.pl/hackmd/uploads/upload_f5771e72cfb55cf8e72c6953ee7ac7f9.png){: .center .border .width75}
+![The final result - store locator webpage with data dynamically pulled from Flotiq](images/store-locator-7.png){: .center .border .width75}

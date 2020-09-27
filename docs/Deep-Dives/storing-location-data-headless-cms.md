@@ -14,20 +14,20 @@ What we'll need:
 
 And here's a sneak peak at what we'll build.
 
-![](http://minio.dev.cdwv.pl/hackmd/uploads/upload_41c5f5b3c6437c599bcf9ea47110c446.png)
+![Flotiq-based store locator](http://minio.dev.cdwv.pl/hackmd/uploads/upload_41c5f5b3c6437c599bcf9ea47110c446.png){: .center .border .width75}
 
 
 ## Setting up Flotiq
 
 Once you [registered a Flotiq account](https://editor.flotiq.com/register.html) and logged in, you'll have to create a new Content Type Definition. This is how you tell Flotiq what kind of data you will be dealing with. Mine looks like this:
 
-![](https://minio.dev.cdwv.pl/hackmd/uploads/upload_a9346a15c9a78b7f8470207d7c19cfb2.png)
+![Store Content Type Definition](https://minio.dev.cdwv.pl/hackmd/uploads/upload_a9346a15c9a78b7f8470207d7c19cfb2.png){: .center .border .width75}
 
 I recommend that you use the same labels - it will be easier to follow the rest of the tutorial.
 
 Next - create several Content Objects under the `Store` type. I added 3 shops in central London:
 
-![](https://minio.dev.cdwv.pl/hackmd/uploads/upload_2a057787d9abd8a830fdc688f8305148.png)
+![Store entries in grid](https://minio.dev.cdwv.pl/hackmd/uploads/upload_2a057787d9abd8a830fdc688f8305148.png){: .center .border .width75}
 
 Finally - setup a scoped API key - you'll need it in a moment.
 
@@ -38,7 +38,7 @@ We will now build a very simple page, which will display the store's locations o
 ### Scaffolding
 
 Our `index.html`:
-```htmlmixed=
+```
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,7 +77,7 @@ And Leaflet:
         crossorigin="anonymous">
 </head>
 <body>
-<!-- Add this before </body>
+<!-- Add this before </body> -->
  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
@@ -97,7 +97,7 @@ Now, add a map container to your `<body>`:
 
 And you can now initialize the map, by adding this to your `index.js`:
 
-```javascript=
+```
 document.querySelectorAll('[data-map]').forEach(function (mapContainer) {
     /**
      * Create:
@@ -121,7 +121,8 @@ document.querySelectorAll('[data-map]').forEach(function (mapContainer) {
   });
 ```
 
-> Thanks to Leaflet - it's super simple to use both Google Maps and Open Street Map as our map providers. You can leave both, or choose one and remove the other. If you stick with Google, though, please remember to provide your Google Maps API key.
+!!! note 
+    Thanks to Leaflet - it's super simple to use both Google Maps and Open Street Map as our map providers. You can leave both, or choose one and remove the other. If you stick with Google, though, please remember to provide your Google Maps API key.
 
 Finally - to make your map render in the browser, set the proper size in the `index.css` file:
 ```css
@@ -138,9 +139,10 @@ body, html {
 ```
 
 Once this is done - you should see a map rendered in your browser:
-![](https://minio.dev.cdwv.pl/hackmd/uploads/upload_1c59738b770bdb80c6a7f49136ce986d.png)
+![First map rendered](https://minio.dev.cdwv.pl/hackmd/uploads/upload_1c59738b770bdb80c6a7f49136ce986d.png){: .center .border .width75}
 
-> I intentionally skipped some minor details from the above implementation. Check the full source code in `01-scaffolding` folder in [this repo]().
+!!! note 
+    I intentionally skipped some minor details from the above implementation. Check the full source code in `01-scaffolding` folder in [this repo](https://github.com/flotiq/flotiq-demo-storing-location-data).
 
 ### Pulling data
 
@@ -167,11 +169,14 @@ let placeCollection = {};
 let doNotUpdate = false;
 
 ```
-You will need to populate the `TOKEN` constant with your API key, copied from Flotiq. We strongly recommend to create a dedicated key for every application you build and explicitly define the access scope to cover only the least amount of privileges required for a given app. Read more about [Flotiq's scoped API keys](https://flotiq.com/docs/API/#user-defined-api-keys) in our docs.
+You will need to populate the `TOKEN` constant with your API key, copied from Flotiq. 
+
+!!! warning
+    We strongly recommend to create a dedicated key for every application you build and explicitly define the access scope to cover only the least amount of privileges required for a given app. Read more about [Flotiq's scoped API keys](https://flotiq.com/docs/API/#user-defined-api-keys) in our docs.
 
 Now, define the `loadMarkers()` function, like this:
 
-```javascript=
+```
 /**
  * Load store markers to the visible map area
  * @param {L.Map} map 
@@ -250,7 +255,7 @@ Now, let's work out how the data should be displayed on the map, once it's pulle
 
 The `onMarkersLoaded()` function will be used to put markers on the map.
 
-```javascript=
+```
 
   /**
    * Register mmarkers for display within the map using clustering group
@@ -284,22 +289,23 @@ The `onMarkersLoaded()` function will be used to put markers on the map.
 
 Next, load the markers! Add this, below the `onMarkersLoaded` definition.
 
-```javascript=
+```
   loadMarkers(map, onMarkersLoaded);
 ```
 When you reload the page - you should now see the markers appear on your map.
 
-![](http://minio.dev.cdwv.pl/hackmd/uploads/upload_a190b045c6ceaf48b0aaca47d5c5788c.png)
+![First markers appear on map](http://minio.dev.cdwv.pl/hackmd/uploads/upload_a190b045c6ceaf48b0aaca47d5c5788c.png){: .center .border .width75}
 
-> Again - you can verify your progress in `02-pull-data` folder in [this repo]().
-> 
+!!! note
+    Again - you can verify your progress in `02-pull-data` folder in [this repo](https://github.com/flotiq/flotiq-demo-storing-location-data).
+
 
 ### Handling events
 
 We will now add several event handlers that will refresh the list of locations when the map is moved or zoomed and we will enable navigating to the current location, based on Leaflet's `map.locate()` method.
 
 Add the event handlers:
-```javascript=
+```
 /**
    * Load data and Handle markers:
    * - after initial loading
@@ -333,7 +339,7 @@ Add the event handlers:
 
 You can now verify if indeed moving around the map will load new markers. Let's now enable positioning to our current location - once we receive the current point coordinates from the browser - we will update the map's center.
 
-```javascript=
+```
   function getCurrentLocation() {
     // When the browser provides our location 
     // move the map to the point provided.
@@ -357,7 +363,7 @@ You can now verify if indeed moving around the map will load new markers. Let's 
 
 We will now need to add a navigation box on top of the map. Add this under `<body>` in your index.html.
 
-```htmlmixed=
+```
  <div class="container-fluid" style="margin-top: 20px;">
         <div class="row">
             <div class="col-12">
@@ -396,7 +402,7 @@ We will now need to add a navigation box on top of the map. Add this under `<bod
 
 and apply the required styling
 
-```css=
+```
 .search-container {
     background-color: #f0c800;
     color: #FFF;
@@ -425,12 +431,12 @@ and apply the required styling
 
 A neat, yellow box with a positioning icon should appear in your browser:
 
-![](http://minio.dev.cdwv.pl/hackmd/uploads/upload_fe6e83ed4a21234730c8fa5441d321d4.png)
+![Browser location can be used to navigate the map](http://minio.dev.cdwv.pl/hackmd/uploads/upload_fe6e83ed4a21234730c8fa5441d321d4.png){: .center .border .width75}
 
 Let's now add an input field and connect the geocodeing service to translate location names to coordinates.
 
 Add a text input to the yellow overlay:
-```htmlmixed=
+```
 <form id="storeSearch">
     <h4>Find by address</h4>
     <div class="form-group">
@@ -454,7 +460,7 @@ Add a text input to the yellow overlay:
 
 Now, let's add an event handler on the form's submit event. Once a user submits the form - we will take the address from the `searchAdress` input and pass it to the geocoding service. The service should then respond with the point coordinates of the address, which we will use to update the map's center.
 
-```javascript=
+```
   const form = document.getElementById('storeSearch');
 
   form.addEventListener('submit', function(event) {
@@ -488,12 +494,13 @@ As a final touch - let's add 2 elements: popovers with store details and a list 
 
 Update the `onMarkersLoaded()` method and replace 
 
-```javascript=
+```
 localMarkers[store.id] = L.marker([store.Location.lat, store.Location.lon])
 ```
 
-with 
-```javascript=
+with
+
+```
 
       storePopupHtml = `
         <div class="store-name">
@@ -514,7 +521,7 @@ with
 
 This should provide standard maps popovers, if you'd like to give them some extra style - add this to the CSS file and adjust to your needs:
 
-```css=
+```
 .leaflet-popup-content-wrapper {
     background-color: #4a4a4a;
     color: white;
@@ -528,7 +535,7 @@ Finally - we will put the list of stores that were found under the map.
 
 Add the container in HTML:
 
-```htmlmixed=
+```
 <div class="container store-table" id="storeTable">
     <div class="row store-row">
         <div class="col-6">
@@ -547,7 +554,7 @@ Add the container in HTML:
 
 and the following method, which will populate the list:
 
-```javascript=
+```
 function renderList(collection = placeCollection) {
     if(!collection) {
       return;
@@ -586,7 +593,8 @@ function renderList(collection = placeCollection) {
 ```
 
 and the next one, that will clear the list's contents:
-```javascript=
+
+```
 function resetList() {
     
     const storeTable = document.getElementById('storeTable');
@@ -597,11 +605,13 @@ function resetList() {
     }
   }
 ```
+
 and finally - drop this at the end of the `onMarkersLoaded()` function:
+
 ```
  renderList(collection);
 ```
 
-That's it! You should  now have a fully working webpage, which will display the list of stores you store in Flotiq and will place the store's on a map. Look into our Git repository for some extra style and let us know in the comments when you build something!
+That's it! You should  now have a fully working webpage, which will display the list of stores you store in Flotiq and will place the store's on a map. Look into our [Git repository](https://github.com/flotiq/flotiq-demo-storing-location-data) for some extra style and let us know in the comments when you build something!
 
-![](http://minio.dev.cdwv.pl/hackmd/uploads/upload_f5771e72cfb55cf8e72c6953ee7ac7f9.png)
+![The final result - store locator webpage with data dynamically pulled from Flotiq](http://minio.dev.cdwv.pl/hackmd/uploads/upload_f5771e72cfb55cf8e72c6953ee7ac7f9.png){: .center .border .width75}

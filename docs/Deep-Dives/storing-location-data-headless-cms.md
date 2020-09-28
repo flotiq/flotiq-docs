@@ -6,6 +6,7 @@ description: This tutorial shows how to build a store locator webpage using Flot
 Flotiq plays really well with location data, especially once you get to use our search capabilities. In this quick tutorial we'll build a very simple web page that displays locations on a map and allows to easily search your location database.
 
 What we'll need:
+
 - Flotiq account
 - A `Store` Content Type Definition
 - Some `Store` objects
@@ -56,7 +57,7 @@ For Google Maps:
 ```
 <body>
 <!-- ... -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLD4W27vYfy5b2I9PQqjtwiiFANBWIJr4&libraries=places" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_KEY" async defer></script>
 </body>
 ```
 

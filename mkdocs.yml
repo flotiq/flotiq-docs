@@ -73,7 +73,7 @@ nav:
   - Dashboard:
     - 'Overview': panel/index.md
     - 'Content types': panel/content-types.md
-    - 'Stand-alone forms': panel/stand-alone-forms.md
+    - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md
     - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md

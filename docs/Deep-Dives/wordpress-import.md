@@ -5,6 +5,11 @@ description: Get into this deep dive into Flotiq to learn how to easily import y
 
 Replacing Wordpress is one of the most common use cases for Headless CMS, and for good reasons. Let's take a look at how easy it's going to be.
 
+!!! hint
+    Instead of coding, you can try our [one-click migration tool](https://flotiq.com/services/migrate-wordpress-to-flotiq-headless-cms/) to move your data from WordPress to Flotiq.
+    All you need is your personal [Flotiq Read And Write API Key](http://flotiq.com/docs/API/#application-api-keys) and your WordPress Site address.
+    Read more in our [blog post](https://flotiq.com/blog/migrate-wordpress-to-flotiq-headless-cms).
+
 ## Export Wordpress data
 
 Go to Tools → Export in the main Wordpress menu

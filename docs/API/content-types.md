@@ -640,7 +640,7 @@ Response parameters:
 | order_by        | What field should the list be ordered by, possible values are based on content type schema |
 | order_direction | Order direction, possible values: `asc`, `desc`, default `asc` |
 | hydrate         | If you want to hydrate datasources in the object, you need to set it to `1`, it will hydrate one level of datasources in objects, you can also use this parameter when requesting single object |
-| filters         | Json encoded object containing conditions on which the list of CO should be filtered. The object keys are the name of the parameter (e.g. `title`). The object value is filter object with two keys, `type` describing how the list should be filtered, and `filter` with filter query. Both parameters should be string, you can filter on every subset of object parameters including `internal` parameters (e.g. `internal.created_at`). Example filter value: `{"title":{"type":"equals","filter":"Hello world!"}}` |
+| filters         | Json encoded object containing conditions on which the list of CO should be filtered. The object keys are the name of the parameter (e.g. `title`). The object value is filter object with two keys, `type` describing how the list should be filtered, and `filter` with filter query. Both parameters should be string, you can filter on every subset of object parameters including `internal` parameters (e.g. `internal.created_at`). <br><br>Example filter value: `{"title":{"type":"equals","filter":"Hello world!"}}` |
 
 Filter types
 

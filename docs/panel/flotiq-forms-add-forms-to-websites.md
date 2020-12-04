@@ -16,6 +16,17 @@ Here are the most important features of Flotiq Forms:
 - automatically updated to match your Flotiq Content Types
 - provides anti-spam and security features out of the box.
 
+## Restrictions
+
+Not all type of form fields are supported. The unsupported field types are:
+
+- Markdown
+- Rich text
+- Relation
+- List
+- Geo
+- Media
+
 ## How to generate HTML forms
 
 You can generate an HTML form that you can put on any webpage you like. 

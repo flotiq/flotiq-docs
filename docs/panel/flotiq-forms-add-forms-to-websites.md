@@ -18,9 +18,7 @@ Here are the most important features of Flotiq Forms:
 
 ## Restrictions
 
-Not all type of form fields are supported.
-
-The unsupported field types are:
+Not all type of form fields are supported. The unsupported field types are:
 
 - Markdown
 - Rich text

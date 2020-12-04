@@ -54,8 +54,10 @@ When domain and API key are in place, you can click on the `Generate` button. Pl
 
 Once your Flotiq Forms are generated, you will see a window with two lines of HTML code. You need to put them inside your HTML page to start immediately collecting data to your Flotiq account.
 
-1. Put the first code - `<flotiq-form/>` in your page, wherever you want the form to be displayed. 
-2. Paste the second line - `<script ... ></script>` at the end of your HTML, just before the  `</body>` tag.
+1. Put the first code - `<link rel="stylesheet" href="https://flotiq-form-generator-styles.s3.amazonaws.com/styles.css"/>` in the `<head>` section of your page, if you wish to use our styles: 
+![](images/FormCssExample.png){: .center .border}
+1. Put the second code - `<flotiq-form/>` in your page, wherever you want the form to be displayed. 
+1. Paste the third line - `<script ... ></script>` at the end of your HTML, just before the  `</body>` tag.
 
 ![](images/GenerateModal4.png){: .center .border}
 

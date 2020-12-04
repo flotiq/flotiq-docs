@@ -19,6 +19,7 @@ extra_css:
   - 'css/flotiq.css'
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/nord.min.css
+  - https://flotiq-form-generator-styles.s3.amazonaws.com/styles.css
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
 google_analytics:

@@ -699,7 +699,7 @@ Deleting of the object is done as the soft delete, it will be still in the datab
 
 ### Listing ids of deleted Content Objects through API
 
-To list ids of the deleted Content Objects, you use `/removed` endpoint. It lists all of the deleted Content Objects of the Content Type. You can filter Content Objects using `deletedAfter` query parameter containing the date after which the Content Objects were deleted.
+To list ids of the deleted Content Objects, you use `/removed` endpoint. It lists all of the deleted Content Objects of the Content Type. You can filter Content Objects using `deletedAfter` query parameter containing the date after which the Content Objects were deleted, date must be in the format accepted by the [DateTime::format](https://www.php.net/manual/en/datetime.format.php) function.
 
 Example query without the `deletedAfter` parameter:
 

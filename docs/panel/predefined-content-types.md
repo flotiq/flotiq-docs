@@ -137,6 +137,22 @@ Gatsby starter for blog post:
 
 [Working example](https://flotiq-blog.herokuapp.com/){:target="_blank"}
 
+Scully starter for blog post:
+
+[GitHub](https://github.com/flotiq/scully-blog-starter){:target="_blank"}
+
+[Working example](https://thirsty-hoover-9327b3.netlify.app/){:target="_blank"}
+
+Documentation examples:
+
+[Our API documentation](https://flotiq-apidoc-cache-prod.s3.eu-central-1.amazonaws.com/23a419dd26f2dbe61cf37c3625cf77de){:target="_blank"}
+
+[Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3D23a419dd26f2dbe61cf37c3625cf77de){:target="_blank"}
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/a5c3102f2b2bfb71783e#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
+
+[Postman documentation](https://documenter.getpostman.com/view/10599962/TVzYfZUQ){:target="_blank"}
+
 ## Event
 
 Type for storing simple events. It contains name, slug, address, date, description and gallery for the event:
@@ -265,6 +281,22 @@ Gatsby starter for event calendar:
 [GitHub](https://github.com/flotiq/gatsby-starter-event-calendar){:target="_blank"}
 
 [Working example](https://flotiq-starter-for-events-cal.herokuapp.com/){:target="_blank"}
+
+Scully starter for event calendar:
+
+[GitHub](https://github.com/flotiq/scully-event-calendar-starter){:target="_blank"}
+
+[Working example](https://awesome-sammet-8accee.netlify.app/){:target="_blank"}
+
+Documentation examples:
+
+[Our API documentation](https://flotiq-apidoc-cache-prod.s3.eu-central-1.amazonaws.com/f42a50abdedb94da5ff573d08cbaee97){:target="_blank"}
+
+[Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3Df42a50abdedb94da5ff573d08cbaee97){:target="_blank"}
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/0591d738333d41ce50e7#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
+
+[Postman documentation](https://documenter.getpostman.com/view/10599962/TVzYfZYr){:target="_blank"}
 
 ## Product
 
@@ -400,6 +432,22 @@ Gatsby starter for products:
 
 [Working example](https://flotiq-starter-products.herokuapp.com/){:target="_blank"}
 
+Scully starter for products:
+
+[GitHub](https://github.com/flotiq/scully-products-starter){:target="_blank"}
+
+[Working example](https://competent-visvesvaraya-bb732c.netlify.app/){:target="_blank"}
+
+Documentation examples:
+
+[Our API documentation](https://flotiq-apidoc-cache-prod.s3.eu-central-1.amazonaws.com/9a7dc942c9451f67d86a4cac241453c8){:target="_blank"}
+
+[Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3D9a7dc942c9451f67d86a4cac241453c8){:target="_blank"}
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/7f5d59a7a21b8e368ed1#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
+
+[Postman documentation](https://documenter.getpostman.com/view/10599962/TVzYfZUU){:target="_blank"}
+
 ## Project
 
 Type for storing simple project portfolio entries. It contains properties storing name, slug, description and images for the project:
@@ -500,10 +548,27 @@ Form generated for Project:
 
 ![](images/ProjectForm.png){: .center .width75 .border}
 
+Gatsby starter for projects:
 
 [GitHub](https://github.com/flotiq/gatsby-starter-projects){:target="_blank"}
 
 [Working example](https://flotiq-starter-for-projects.herokuapp.com/){:target="_blank"}
+
+Scully starter for projects:
+
+[GitHub](https://github.com/flotiq/scully-projects-starter){:target="_blank"}
+
+[Working example](https://angry-brattain-f446a1.netlify.app/){:target="_blank"}
+
+Documentation examples:
+
+[Our API documentation](https://flotiq-apidoc-cache-prod.s3.eu-central-1.amazonaws.com/40b1fb39638c8367b9839fbd918c903d){:target="_blank"}
+
+[Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3D40b1fb39638c8367b9839fbd918c903d){:target="_blank"}
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/1fdce8e3ec5d3d793471#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
+
+[Postman documentation](https://documenter.getpostman.com/view/10599962/TVzYfZdG){:target="_blank"}
 
 ## Recipe
 
@@ -765,3 +830,19 @@ Gatsby starter for recipes:
 [GitHub](https://github.com/flotiq/gatsby-starter-recipes){:target="_blank"}
 
 [Working example](https://flotiq-starter-recipes.herokuapp.com/){:target="_blank"}
+
+Scully starter for recipes:
+
+[GitHub](https://github.com/flotiq/scully-recipes-starter){:target="_blank"}
+
+[Working example](https://vibrant-mclean-8da635.netlify.app/){:target="_blank"}
+
+Documentation examples:
+
+[Our API documentation](https://flotiq-apidoc-cache-prod.s3.eu-central-1.amazonaws.com/f1df8b031f5aa7c3092f177c5f9139a5){:target="_blank"}
+
+[Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3Df1df8b031f5aa7c3092f177c5f9139a5){:target="_blank"}
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/d65e364c6a0e41c2cc1e#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
+
+[Postman documentation](https://documenter.getpostman.com/view/10599962/TVzYfZdJ){:target="_blank"}

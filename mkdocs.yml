@@ -67,7 +67,7 @@ nav:
     - 'Dynamic Content API': API/dynamic-content-api.md
     - 'GraphQL': API/graph-ql.md
     - 'Generating SDKs': API/generate-package.md
-    - 'OpenAPI': API/open-api-schema.md
+    - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
     - 'Working with media': API/media-library.md
     - 'Zapier & integrations': API/zapier.md

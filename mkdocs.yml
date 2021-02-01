@@ -63,7 +63,15 @@ nav:
   - 'Home': index.md
   - API:
     - 'API access & scoped keys': API/index.md
-    - 'Working with Content Types': API/content-types.md
+    - 'Working with Content Types':
+      - 'Overview': API/content-types.md
+      - 'Creating new Content Types': API/content-type/creating-ctd.md
+      - 'Listing Content Types': API/content-type/listing-ctd.md
+      - 'Creating new Content Objects': API/content-type/creating-co.md
+      - 'Updating Content Objects': API/content-type/updating-co.md
+      - 'Listing Content Objects': API/content-type/listing-co.md
+      - 'Deleting Content Objects': API/content-type/deleting-co.md
+      - 'Listing deleted Content Objects': API/content-type/listing-deleted-co.md
     - 'Dynamic Content API': API/dynamic-content-api.md
     - 'GraphQL': API/graph-ql.md
     - 'Generating SDKs': API/generate-package.md

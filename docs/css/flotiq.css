@@ -364,3 +364,19 @@ pre::before {
   height: 100%;
   border: 0;
 }
+
+.flotiq-form .mat-fab.mat-primary, .flotiq-form .mat-flat-button.mat-primary, .flotiq-form .mat-mini-fab.mat-primary, .flotiq-form .mat-raised-button.mat-primary[type="submit"] {
+  background-color: #26a69a;
+}
+
+.flotiq-form .mat-input-element[matinput] {
+  caret-color: #26a69a;
+}
+
+.flotiq-form .mat-form-field.mat-focused.mat-primary .mat-form-field-label {
+  color: #26a69a;
+}
+
+.flotiq-form .mat-form-field.mat-focused.mat-primary .mat-form-field-ripple {
+  background-color: #26a69a;
+}

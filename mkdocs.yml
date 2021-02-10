@@ -1,13 +1,14 @@
 site_name: Flotiq Developer Documentation
 site_url: https://flotiq.com/docs/
-copyright: Copyright &copy; 2019 onwards Flotiq
+copyright: Copyright &copy; 2019 onwards <a href="https://www.flotiq.com/">Flotiq<a>
 dev_addr: 0.0.0.0:4000
 theme:
-     name: 'material'
-     logo: 'API/images/f.png'
-     custom_dir: 'theme'
+     name: material
+     logo: API/images/f.png
+     favicon: API/images/favicon.ico
+     custom_dir: theme
      palette:
-         primary: 'teal'
+         primary: teal
      features:
        - instant
 plugins:
@@ -40,6 +41,12 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - theme/.icons
 
 extra_javascript:
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
@@ -51,12 +58,19 @@ extra_javascript:
 extra:
   disqus: 'flotiq'
   social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/flotiq
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/FwXcHnX
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UC4wpV-D9mIt1JjN_g_iyXXw
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/flotiq
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/flotiq
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/flotiq/
+    - icon: custom/flotiq
+      link: https://flotiq.com/
+
 
 nav:
   - 'Home': index.md

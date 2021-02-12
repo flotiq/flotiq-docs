@@ -48,6 +48,16 @@ header.md-header {
     background:linear-gradient(45deg, #4c9ba6, #86cea6);
 }
 
+.flotiq-button {
+  background:linear-gradient(45deg, #4c9ba6, #86cea6);
+  color: white !important;
+  padding: 15px;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
 .center {
   display: block;
   margin: 0 auto;

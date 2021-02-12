@@ -92,7 +92,6 @@ nav:
     - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
     - 'Working with media': API/media-library.md
-    - 'Zapier & integrations': API/zapier.md
   - Dashboard:
     - 'Overview': panel/index.md
     - 'Content types': panel/content-types.md
@@ -108,6 +107,14 @@ nav:
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
     - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
     - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
+  - Flotiq Universe:
+    - 'Overview': Universe/index.md
+    - 'Postman': Universe/postman.md
+    - 'Zapier': Universe/zapier.md
+    - 'Gatsby': Universe/gatsby.md
+    - 'Scully': Universe/scully.md
+#    - 'Netlify': Universe/netlify.md
+#    - 'Heroku': Universe/heroku.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md

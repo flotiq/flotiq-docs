@@ -11,6 +11,7 @@ Here you will find everything you need to know about Flotiq. The documentation i
 - API - provides essential information about accessing Flotiq's APIs,
 - Dashboard - gives a quick tour of the most important features of the User Interface,
 - CLI - discusses the Flotiq CLI application and its basic use cases,
+- Flotiq Universe - describes Flotiq integrations and tools that can be used with Flotiq API,
 - Deep dives - collects tutorials and technical documents that dive deep into a particular scenario.
 
 ## What is Flotiq?

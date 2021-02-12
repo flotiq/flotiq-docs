@@ -1,7 +1,7 @@
 site_name: Flotiq Developer Documentation
 site_url: https://flotiq.com/docs/
 copyright: Copyright &copy; 2019 onwards <a target="_blank" href="https://www.flotiq.com/">Flotiq<a>
-dev_addr: localhost:4000
+dev_addr: 0.0.0.0:4000
 theme:
      name: material
      logo: API/images/f.png

@@ -25,7 +25,7 @@ For a <abbr title="Content Type - a model of data that has been defined inside t
 Full curl request:
 
 ```
-curl -X POST "https://api.flotiq.com/api/v1/content/blogposts" -H "accept: */*" -H "X-AUTH-TOKEN: YOUR API TOKEN" -H "Content-Type: application/json" -d "{\"id\":\"123123123\",\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}"
+curl -X POST "https://api.flotiq.com/api/v1/internal/contenttype" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H "Content-Type: application/json' --data-binary '{"name":"blogposts","label":"Blog Posts","schemaDefinition":{"type":"object","allOf":[{"$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"},{"type":"object","properties":{"title":{"type":"string"},"postContent":{"type":"string"}}}],"required":["title","postContent"],"additionalProperties":false},"metaDefinition":{"propertiesConfig":{"title":{"label":"Title","inputType":"text","unique":true},"postContent":{"label":"Post content","inputType":"richtext","unique":false}},"order":["title","postContent"]}}"
 ```
 
 

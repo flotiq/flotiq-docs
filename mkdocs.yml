@@ -93,7 +93,6 @@ nav:
     - 'Full-text search': API/search.md
     - 'Working with media': API/media-library.md
     - 'Workflows': 'API/workflow/content-publishing-workflow.md'
-    - 'Zapier & integrations': API/zapier.md
   - Dashboard:
     - 'Overview': panel/index.md
     - 'Content types': panel/content-types.md

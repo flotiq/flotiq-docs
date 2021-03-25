@@ -80,7 +80,7 @@ Updating one blog post and adding one new:
 !!! Example
     
     ```
-    curl 'https://api.flotiq.com/api/v1/content/blogpost/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","postContent":"This will be the new <b>content</b>"},{"id":"123123124","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","postContent":"This will be the new <b>content</b>"},{"id":"123123124","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
     
     response (code: 200):
@@ -98,7 +98,7 @@ Trying updating one blog post and adding one new with wrong data:
 !!! Example
     
     ```
-    curl 'https://api.flotiq.com/api/v1/content/blogpost/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object"},{"id":"123123124","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object"},{"id":"123123124","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
     
     response (code: 400):
@@ -125,7 +125,7 @@ Trying updating one blog post and adding one new with duplicated id:
 !!! Example
     
     ```
-    curl 'https://api.flotiq.com/api/v1/content/blogpost/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","content": "This will be the new <b>content</b>"},{"id":"123123123","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","content": "This will be the new <b>content</b>"},{"id":"123123123","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
     
     response (code: 400):

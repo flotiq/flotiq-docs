@@ -16,7 +16,6 @@ For a <abbr title="Content Type - a model of data that has been defined inside t
 
 ``` json
 {
-  "id": "123123123",
   "title": "New object",
   "postContent": "This will be the new <b>content</b>"
 }
@@ -25,7 +24,14 @@ For a <abbr title="Content Type - a model of data that has been defined inside t
 Full curl request:
 
 ```
-curl -X POST "https://api.flotiq.com/api/v1/internal/contenttype" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H "Content-Type: application/json' --data-binary '{"name":"blogposts","label":"Blog Posts","schemaDefinition":{"type":"object","allOf":[{"$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"},{"type":"object","properties":{"title":{"type":"string"},"postContent":{"type":"string"}}}],"required":["title","postContent"],"additionalProperties":false},"metaDefinition":{"propertiesConfig":{"title":{"label":"Title","inputType":"text","unique":true},"postContent":{"label":"Post content","inputType":"richtext","unique":false}},"order":["title","postContent"]}}"
+curl --location --request POST 'https://api.flotiq.com/api/v1/content/blogpost' \
+--header 'X-AUTH-TOKEN: YOUR_API_KEY' \
+--header 'Content-Type: application/json' \
+--header 'Accept: */*' \
+--data-raw '{
+  "title": "New object",
+  "postContent": "This will be the new <b>content</b>"
+}'
 ```
 
 
@@ -39,7 +45,7 @@ If a property is required in the <abbr title="Content Type Definition - a JSON p
 For example for request with payload with the missing title:
 ```json
 {
-  "id": "123123123",
+ 
   "postContent": "This will be the new <b>content</b>"
 }
 ```
@@ -80,7 +86,7 @@ Updating one blog post and adding one new:
 !!! Example
     
     ```
-    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","postContent":"This will be the new <b>content</b>"},{"id":"123123124","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","postContent":"This will be the new <b>content</b>"},{"title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
     
     response (code: 200):
@@ -98,7 +104,7 @@ Trying updating one blog post and adding one new with wrong data:
 !!! Example
     
     ```
-    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object"},{"id":"123123124","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object"},{"title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
     
     response (code: 400):

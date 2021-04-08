@@ -379,140 +379,140 @@ When you change existing property, depending on the type od changes Flotiq will:
 
 ### Conversion table
 
-| Old Type (type/inputType) | New Type (type/inputType) | Conversion |
-| ------------------------- | ------------------------- | ---------- |
-| string/text               | string/textarea           | Data are preserved |
-| string/text               | string/markdown           | Data are preserved |
-| string/text               | string/richtext           | Data are preserved |
-| string/text               | string/email              | Data are preserved |
-| string/text               | number/number             | All objects gets `0` value |
-| string/text               | string/radio              | Data are preserved |
-| string/text               | boolean/checkbox          | All objects gets `false` value |
-| string/text               | string/select             | Data are preserved |
-| string/text               | array/object              | All object gets empty array |
-| string/text               | array/datasource          | All object gets empty array |
-| string/text               | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
-| string/textarea           | string/text               | Data are preserved |
-| string/textarea           | string/markdown           | Data are preserved |
-| string/textarea           | string/richtext           | Data are preserved |
-| string/textarea           | string/email              | Data are preserved |
-| string/textarea           | number/number             | All objects gets `0` value |
-| string/textarea           | string/radio              | Data are preserved |
-| string/textarea           | boolean/checkbox          | All objects gets `false` value |
-| string/textarea           | string/select             | Data are preserved |
-| string/textarea           | array/object              | All object gets empty array |
-| string/textarea           | array/datasource          | All object gets empty array |
-| string/textarea           | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
-| string/markdown           | string/text               | Data are preserved |
-| string/markdown           | string/textarea           | Data are preserved |
-| string/markdown           | string/richtext           | Data are preserved |
-| string/markdown           | string/email              | Data are preserved |
-| string/markdown           | number/number             | All objects gets `0` value |
-| string/markdown           | string/radio              | Data are preserved |
-| string/markdown           | boolean/checkbox          | All objects gets `false` value |
-| string/markdown           | string/select             | Data are preserved |
-| string/markdown           | array/object              | All object gets empty array |
-| string/markdown           | array/datasource          | All object gets empty array |
-| string/markdown           | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
-| string/richtext           | string/text               | Data are preserved |
-| string/richtext           | string/textarea           | Data are preserved |
-| string/richtext           | string/markdown           | Data are preserved |
-| string/richtext           | string/email              | Data are preserved |
-| string/richtext           | number/number             | All objects gets `0` value |
-| string/richtext           | string/radio              | Data are preserved |
-| string/richtext           | boolean/checkbox          | All objects gets `false` value |
-| string/richtext           | string/select             | Data are preserved |
-| string/richtext           | array/object              | All object gets empty array |
-| string/richtext           | array/datasource          | All object gets empty array |
-| string/richtext           | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
-| string/email              | string/text               | Data are preserved |
-| string/email              | string/textarea           | Data are preserved |
-| string/email              | string/markdown           | Data are preserved |
-| string/email              | string/richtext           | Data are preserved |
-| string/email              | number/number             | All objects gets `0` value |
-| string/email              | string/radio              | Data are preserved |
-| string/email              | boolean/checkbox          | All objects gets `false` value |
-| string/email              | string/select             | Data are preserved |
-| string/email              | array/object              | All object gets empty array |
-| string/email              | array/datasource          | All object gets empty array |
-| string/email              | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
-| number/number             | string/text               | Numbers are converted to string counterparts |
-| number/number             | string/textarea           | Numbers are converted to string counterparts |
-| number/number             | string/markdown           | Numbers are converted to string counterparts |
-| number/number             | string/richtext           | Numbers are converted to string counterparts |
-| number/number             | string/email              | Numbers are converted to string counterparts |
-| number/number             | string/radio              | Numbers are converted to string counterparts |
-| number/number             | boolean/checkbox          | All objects gets `false` value |
-| number/number             | string/select             | Numbers are converted to string counterparts |
-| number/number             | array/object              | All object gets empty array |
-| number/number             | array/datasource          | All object gets empty array |
-| number/number             | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
-| string/radio              | string/text               | Data are preserved |
-| string/radio              | string/textarea           | Data are preserved |
-| string/radio              | string/markdown           | Data are preserved |
-| string/radio              | string/richtext           | Data are preserved |
-| string/radio              | string/email              | Data are preserved |
-| string/radio              | number/number             | All objects gets `0` value |
-| string/radio              | boolean/checkbox          | All objects gets `false` value |
-| string/radio              | string/select             | Data are preserved |
-| string/radio              | array/object              | All object gets empty array |
-| string/radio              | array/datasource          | All object gets empty array |
-| string/radio              | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
-| boolean/checkbox          | string/text               | Data are converted to the string counterparts |
-| boolean/checkbox          | string/textarea           | Data are converted to the string counterparts |
-| boolean/checkbox          | string/markdown           | Data are converted to the string counterparts |
-| boolean/checkbox          | string/richtext           | Data are converted to the string counterparts |
-| boolean/checkbox          | string/email              | Data are converted to the string counterparts |
-| boolean/checkbox          | number/number             | All objects gets `0` value |
-| boolean/checkbox          | string/radio              | Data are converted to the string counterparts |
-| boolean/checkbox          | string/select             | Data are converted to the string counterparts |
-| boolean/checkbox          | array/object              | All object gets empty array |
-| boolean/checkbox          | array/datasource          | All object gets empty array |
-| boolean/checkbox          | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
-| string/select             | string/text               | Data are preserved |
-| string/select             | string/textarea           | Data are preserved |
-| string/select             | string/markdown           | Data are preserved |
-| string/select             | string/richtext           | Data are preserved |
-| string/select             | string/email              | Data are preserved |
-| string/select             | number/number             | All objects gets `0` value |
-| string/select             | string/radio              | Data are preserved |
-| string/select             | boolean/checkbox          | All objects gets `false` value |
-| string/select             | array/object              | All object gets empty array |
-| string/select             | array/datasource          | All object gets empty array |
-| string/select             | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
-| array/object              | string/text               | All objects gets `''` value |
-| array/object              | string/textarea           | All objects gets `''` value |
-| array/object              | string/markdown           | All objects gets `''` value |
-| array/object              | string/richtext           | All objects gets `''` value |
-| array/object              | string/email              | All objects gets `''` value |
-| array/object              | number/number             | All objects gets `0` value |
-| array/object              | string/radio              | All objects gets `''` value |
-| array/object              | boolean/checkbox          | All objects gets `false` value |
-| array/object              | string/select             | All objects gets `''` value |
-| array/object              | array/datasource          | All object gets empty array |
-| array/object              | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
-| array/datasource          | string/text               | Data are converted to dataUrls joined with `', '` |
-| array/datasource          | string/textarea           | Data are converted to dataUrls joined with `', '` |
-| array/datasource          | string/markdown           | Data are converted to dataUrls joined with `', '` |
-| array/datasource          | string/richtext           | Data are converted to dataUrls joined with `', '` |
-| array/datasource          | string/email              | Data are converted to dataUrls joined with `', '` |
-| array/datasource          | number/number             | All objects gets `0` value |
-| array/datasource          | string/radio              | Data are converted to dataUrls joined with `', '` |
-| array/datasource          | boolean/checkbox          | All objects gets `false` value |
-| array/datasource          | string/select             | Data are converted to dataUrls joined with `', '` |
-| array/datasource          | array/object              | All object gets empty array |
-| array/datasource          | object/geo                | All object gets object with value: `{lat: 0, lon: 0}` |
+| Old Type (type/inputType) | New Type (type/inputType) | Conversion                                                   |
+| ------------------------- | ------------------------- | ------------------------------------------------------------ |
+| string/text               | string/textarea           | Data are preserved                                           |
+| string/text               | string/markdown           | Data are preserved                                           |
+| string/text               | string/richtext           | Data are preserved                                           |
+| string/text               | string/email              | Data are preserved                                           |
+| string/text               | number/number             | All objects gets `0` value                                   |
+| string/text               | string/radio              | Data are preserved                                           |
+| string/text               | boolean/checkbox          | All objects gets `false` value                               |
+| string/text               | string/select             | Data are preserved                                           |
+| string/text               | array/object              | All object gets empty array                                  |
+| string/text               | array/datasource          | All object gets empty array                                  |
+| string/text               | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
+| string/textarea           | string/text               | Data are preserved                                           |
+| string/textarea           | string/markdown           | Data are preserved                                           |
+| string/textarea           | string/richtext           | Data are preserved                                           |
+| string/textarea           | string/email              | Data are preserved                                           |
+| string/textarea           | number/number             | All objects gets `0` value                                   |
+| string/textarea           | string/radio              | Data are preserved                                           |
+| string/textarea           | boolean/checkbox          | All objects gets `false` value                               |
+| string/textarea           | string/select             | Data are preserved                                           |
+| string/textarea           | array/object              | All object gets empty array                                  |
+| string/textarea           | array/datasource          | All object gets empty array                                  |
+| string/textarea           | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
+| string/markdown           | string/text               | Data are preserved                                           |
+| string/markdown           | string/textarea           | Data are preserved                                           |
+| string/markdown           | string/richtext           | Data are preserved                                           |
+| string/markdown           | string/email              | Data are preserved                                           |
+| string/markdown           | number/number             | All objects gets `0` value                                   |
+| string/markdown           | string/radio              | Data are preserved                                           |
+| string/markdown           | boolean/checkbox          | All objects gets `false` value                               |
+| string/markdown           | string/select             | Data are preserved                                           |
+| string/markdown           | array/object              | All object gets empty array                                  |
+| string/markdown           | array/datasource          | All object gets empty array                                  |
+| string/markdown           | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
+| string/richtext           | string/text               | Data are preserved                                           |
+| string/richtext           | string/textarea           | Data are preserved                                           |
+| string/richtext           | string/markdown           | Data are preserved                                           |
+| string/richtext           | string/email              | Data are preserved                                           |
+| string/richtext           | number/number             | All objects gets `0` value                                   |
+| string/richtext           | string/radio              | Data are preserved                                           |
+| string/richtext           | boolean/checkbox          | All objects gets `false` value                               |
+| string/richtext           | string/select             | Data are preserved                                           |
+| string/richtext           | array/object              | All object gets empty array                                  |
+| string/richtext           | array/datasource          | All object gets empty array                                  |
+| string/richtext           | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
+| string/email              | string/text               | Data are preserved                                           |
+| string/email              | string/textarea           | Data are preserved                                           |
+| string/email              | string/markdown           | Data are preserved                                           |
+| string/email              | string/richtext           | Data are preserved                                           |
+| string/email              | number/number             | All objects gets `0` value                                   |
+| string/email              | string/radio              | Data are preserved                                           |
+| string/email              | boolean/checkbox          | All objects gets `false` value                               |
+| string/email              | string/select             | Data are preserved                                           |
+| string/email              | array/object              | All object gets empty array                                  |
+| string/email              | array/datasource          | All object gets empty array                                  |
+| string/email              | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
+| number/number             | string/text               | Numbers are converted to string counterparts                 |
+| number/number             | string/textarea           | Numbers are converted to string counterparts                 |
+| number/number             | string/markdown           | Numbers are converted to string counterparts                 |
+| number/number             | string/richtext           | Numbers are converted to string counterparts                 |
+| number/number             | string/email              | Numbers are converted to string counterparts                 |
+| number/number             | string/radio              | Numbers are converted to string counterparts                 |
+| number/number             | boolean/checkbox          | All objects gets `false` value                               |
+| number/number             | string/select             | Numbers are converted to string counterparts                 |
+| number/number             | array/object              | All object gets empty array                                  |
+| number/number             | array/datasource          | All object gets empty array                                  |
+| number/number             | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
+| string/radio              | string/text               | Data are preserved                                           |
+| string/radio              | string/textarea           | Data are preserved                                           |
+| string/radio              | string/markdown           | Data are preserved                                           |
+| string/radio              | string/richtext           | Data are preserved                                           |
+| string/radio              | string/email              | Data are preserved                                           |
+| string/radio              | number/number             | All objects gets `0` value                                   |
+| string/radio              | boolean/checkbox          | All objects gets `false` value                               |
+| string/radio              | string/select             | Data are preserved                                           |
+| string/radio              | array/object              | All object gets empty array                                  |
+| string/radio              | array/datasource          | All object gets empty array                                  |
+| string/radio              | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
+| boolean/checkbox          | string/text               | Data are converted to the string counterparts                |
+| boolean/checkbox          | string/textarea           | Data are converted to the string counterparts                |
+| boolean/checkbox          | string/markdown           | Data are converted to the string counterparts                |
+| boolean/checkbox          | string/richtext           | Data are converted to the string counterparts                |
+| boolean/checkbox          | string/email              | Data are converted to the string counterparts                |
+| boolean/checkbox          | number/number             | All objects gets `0` value                                   |
+| boolean/checkbox          | string/radio              | Data are converted to the string counterparts                |
+| boolean/checkbox          | string/select             | Data are converted to the string counterparts                |
+| boolean/checkbox          | array/object              | All object gets empty array                                  |
+| boolean/checkbox          | array/datasource          | All object gets empty array                                  |
+| boolean/checkbox          | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
+| string/select             | string/text               | Data are preserved                                           |
+| string/select             | string/textarea           | Data are preserved                                           |
+| string/select             | string/markdown           | Data are preserved                                           |
+| string/select             | string/richtext           | Data are preserved                                           |
+| string/select             | string/email              | Data are preserved                                           |
+| string/select             | number/number             | All objects gets `0` value                                   |
+| string/select             | string/radio              | Data are preserved                                           |
+| string/select             | boolean/checkbox          | All objects gets `false` value                               |
+| string/select             | array/object              | All object gets empty array                                  |
+| string/select             | array/datasource          | All object gets empty array                                  |
+| string/select             | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
+| array/object              | string/text               | All objects gets `''` value                                  |
+| array/object              | string/textarea           | All objects gets `''` value                                  |
+| array/object              | string/markdown           | All objects gets `''` value                                  |
+| array/object              | string/richtext           | All objects gets `''` value                                  |
+| array/object              | string/email              | All objects gets `''` value                                  |
+| array/object              | number/number             | All objects gets `0` value                                   |
+| array/object              | string/radio              | All objects gets `''` value                                  |
+| array/object              | boolean/checkbox          | All objects gets `false` value                               |
+| array/object              | string/select             | All objects gets `''` value                                  |
+| array/object              | array/datasource          | All object gets empty array                                  |
+| array/object              | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
+| array/datasource          | string/text               | Data are converted to dataUrls joined with `', '`            |
+| array/datasource          | string/textarea           | Data are converted to dataUrls joined with `', '`            |
+| array/datasource          | string/markdown           | Data are converted to dataUrls joined with `', '`            |
+| array/datasource          | string/richtext           | Data are converted to dataUrls joined with `', '`            |
+| array/datasource          | string/email              | Data are converted to dataUrls joined with `', '`            |
+| array/datasource          | number/number             | All objects gets `0` value                                   |
+| array/datasource          | string/radio              | Data are converted to dataUrls joined with `', '`            |
+| array/datasource          | boolean/checkbox          | All objects gets `false` value                               |
+| array/datasource          | string/select             | Data are converted to dataUrls joined with `', '`            |
+| array/datasource          | array/object              | All object gets empty array                                  |
+| array/datasource          | object/geo                | All object gets object with value: `{lat: 0, lon: 0}`        |
 | object/geo                | string/text               | Data are converted to `'lat: {lat value}, lon: {lon value}'` |
 | object/geo                | string/textarea           | Data are converted to `'lat: {lat value}, lon: {lon value}'` |
 | object/geo                | string/markdown           | Data are converted to `'lat: {lat value}, lon: {lon value}'` |
 | object/geo                | string/richtext           | Data are converted to `'lat: {lat value}, lon: {lon value}'` |
 | object/geo                | string/email              | Data are converted to `'lat: {lat value}, lon: {lon value}'` |
-| object/geo                | number/number             | All objects gets `0` value |
+| object/geo                | number/number             | All objects gets `0` value                                   |
 | object/geo                | string/radio              | Data are converted to `'lat: {lat value}, lon: {lon value}'` |
-| object/geo                | boolean/checkbox          | All objects gets `false` value |
+| object/geo                | boolean/checkbox          | All objects gets `false` value                               |
 | object/geo                | string/select             | Data are converted to `'lat: {lat value}, lon: {lon value}'` |
-| object/geo                | array/object              | All object gets empty array |
-| object/geo                | array/datasource          | All object gets empty array |
+| object/geo                | array/object              | All object gets empty array                                  |
+| object/geo                | array/datasource          | All object gets empty array                                  |
 
 ## Updating Content Types through the Content modeller
 

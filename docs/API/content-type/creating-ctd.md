@@ -281,6 +281,8 @@ First input in the form in CMS panel will be `title` input, and second will be `
 
     === "200 OK"
 
+        Returned when schema has been correct and was saved
+
         ```
         {
             "name": "blogposts",
@@ -334,6 +336,8 @@ First input in the form in CMS panel will be `title` input, and second will be `
 
     === "400 Validation error"
 
+        Returned when shema has not been correct and wasn't saved
+
         ```
         {
             "name": [
@@ -357,6 +361,8 @@ First input in the form in CMS panel will be `title` input, and second will be `
         ```
 
     === "401 Unauthorized"
+
+        Returned when API key was missing or incorrect
   
         ```
         {

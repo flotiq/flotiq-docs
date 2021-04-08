@@ -26,13 +26,12 @@ Now you should have our Sandbox Package available to send requests from Postman 
 ![](images/postman/list-Blogpost-My-Workspace.png){: .center .width75 .border}
 
 !!! warning
-We provide Read-Only API key in our Sandbox Packages, so only `GET` and `GraphQL` requests will work, `POST`, `PUT` and `DELETE` request will all return `403 Unauthorized` response.
+    We provide Read-Only API key in our Sandbox Packages, so only `GET` and `GraphQL` requests will work, `POST`, `PUT` and `DELETE` request will all return `403 Unauthorized` response.
 
 !!! hint
-If you experience CORS errors while using Postman page, you need to install Postman agent as described in [this Postman article](https://blog.postman.com/introducing-the-postman-agent-send-api-requests-from-your-browser-without-limits/).
-
+    If you experience CORS errors while using Postman page, you need to install Postman agent as described in [this Postman article](https://blog.postman.com/introducing-the-postman-agent-send-api-requests-from-your-browser-without-limits/).
     Shortcuts:
-    
+
     * Download the Postman agent for macOS [here](https://dl.pstmn.io/download/channel/agent_stable/osx).
     * Download the Postman agent for Linux [here](https://dl.pstmn.io/download/channel/agent_stable/linux).
     * Download the Postman agent for Windows 64-bit [here](https://dl.pstmn.io/download/channel/agent_stable/win64).

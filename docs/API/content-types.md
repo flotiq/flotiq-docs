@@ -52,7 +52,10 @@ You can learn how to obtain your API key [here](index.md).
 
 ## Working with Content Type Definitions
 
-While working with Content Type Definitions, you can:
+The API endpoint ``/api/v1/internal/contenttype`` can be used to interact with
+<abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">
+Content Type Definitions</abbr> inside the Content Repository.
+The endpoint documentation is provided in the API docs and describes the following actions:
 
 * [Create](content-type/creating-ctd.md)
 * [List](content-type/listing-ctd.md)
@@ -70,3 +73,4 @@ While working with Content Objects, you can:
     * [Batch delete](/API/content-type/deleting-co/#batch-deleting)
 * [List ids of deleted objects](content-type/listing-deleted-co.md)
 
+[Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

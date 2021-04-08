@@ -152,3 +152,5 @@ Response parameters:
 | batch_error_count   | number of incorrect elements sent in the request, present when there are no duplications in data |
 | errors              | array of errors in the elements, errors are objects containing the id of the object and list of errors, present when there are no duplications in data |
 | data                | present only when there are duplications in data, listing keys containing duplications (see example above) | 
+
+[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

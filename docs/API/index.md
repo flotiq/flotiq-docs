@@ -45,12 +45,16 @@ And here you can see how it looks all in the User Interface:
 
 ![](images/api-keys.png){: .center .width75 .border}
 
+## Usage
+
+You can authenticate your requests by `X-AUTH-TOKEN` header, or by the query part of the request url: `?auth_token=YOUR_API_TOKEN`.
+
 
 ## Frequently Asked Questions
 
 ### What can I do if my API key got compromised?
 
-If you accidentally commited your `.env` file to a public repository or in any other way shared your key publicly - you can regenerate the key using the ![](images/regenerate_button.png){: style="margin-bottom: -7px;"} button.
+If you accidentally committed your `.env` file to a public repository or in any other way shared your key publicly - you can regenerate the key using the ![](images/regenerate_button.png){: style="margin-bottom: -7px;"} button.
 
 ### How can I provide read-only access to a single kind of data?
 
@@ -59,3 +63,5 @@ You can use the User Define API keys and create a key that has a limited scope a
 ### Are the API request limits calculated on a per-key or per-account basis?
 
 API request limits are assigned to your account, so all your keys' usage will add to the consumption of the API request quotas.
+
+[Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

@@ -169,7 +169,7 @@ First input in the form in CMS panel will be `title` input, and second will be `
     === "Java + Unirest"
       
         ```
-        HttpResponse<String> response = Unirest.post("https://api.flotiq.com/api/v1/internal/contenttyp")
+        HttpResponse<String> response = Unirest.post("https://api.flotiq.com/api/v1/internal/contenttype")
             .header("content-type", "application/json")
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .body("{\"name\":\"blogposts\",\"label\":\"Blog Posts\",\"schemaDefinition\":{\"type\":\"object\",\"allOf\":[{\"$ref\":\"#/components/schemas/AbstractContentTypeSchemaDefinition\"},{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"postContent\":{\"type\":\"string\"}}}],\"required\":[\"title\",\"postContent\"],\"additionalProperties\":false},\"metaDefinition\":{\"propertiesConfig\":{\"title\":{\"label\":\"Title\",inputType\":\"text\",\"unique\":true},\"postContent\":{\"label\":\"Post content\",\"inputType\":\"richtext\",\"unique\":false}},\"order\":[\"title\",\"postContent\"]}}")
@@ -183,7 +183,7 @@ First input in the form in CMS panel will be `title` input, and second will be `
 
         const options = {
             method: 'POST',
-            url: 'https://api.flotiq.com/api/v1/internal/contenttyp',
+            url: 'https://api.flotiq.com/api/v1/internal/contenttype',
             headers: {'content-type': 'application/json', 'X-AUTH-TOKEN': 'YOUR_API_KEY'},
             body: {
                 "name": "blogposts",
@@ -251,7 +251,7 @@ First input in the form in CMS panel will be `title` input, and second will be `
         $curl = curl_init();
         
         curl_setopt_array($curl, [
-            CURLOPT_URL => "https://api.flotiq.com/api/v1/internal/contenttyp",
+            CURLOPT_URL => "https://api.flotiq.com/api/v1/internal/contenttype",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,

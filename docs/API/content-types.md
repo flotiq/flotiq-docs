@@ -58,6 +58,7 @@ Content Type Definitions</abbr> inside the Content Repository.
 The endpoint documentation is provided in the API docs and describes the following actions:
 
 * [Create](content-type/creating-ctd.md)
+* [Update](content-type/updating-ctd.md)
 * [List](content-type/listing-ctd.md)
 
 ## Working with Content Objects

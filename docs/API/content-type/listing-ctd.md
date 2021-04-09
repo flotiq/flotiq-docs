@@ -7,9 +7,11 @@ description: How to list Content Type Definitions in Flotiq
 To get the list of 
 <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Types</abbr> 
 you need to send `GET` call to `/api/v1/internal/contenttype`. 
-It returns the paginated list of Content Types. It can be filtered and limited. 
+It returns a paginated list of Content Types defined for your account. It can be filtered and limited. 
 
-`Read only API KEY` is sufficient to perform this action.
+!!! note
+    You can use your `Application Read Only API KEY` to perform this action. Read more about [API keys and scoped API keys](/API/).
+
 
 Possible request parameters:
 

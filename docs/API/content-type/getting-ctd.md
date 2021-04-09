@@ -4,18 +4,20 @@ description: How to get single Content Type Definitions in Flotiq
 
 # Getting single Content Type
 
-To get single 
-<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
-you need to send `GET` call to `/api/v1/internal/contenttype/{name}`. It returns full schema of that Content Type.
+To get a single 
+<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> definition
+you need to send a `GET` request to the `/api/v1/internal/contenttype/{name}` endpoint. It will return a full schema of that Content Type.
 
-`Read only API KEY` is sufficient to perform this action.
+!!! note
+    You can use your `Application Read Only API KEY` to perform this action. Read more about [API keys and scoped API keys](/API/).
+
 
 Possible request parameters:
 
 | Parameter    | Description                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------- |
 | resolveRef   | Should the system resolve references done using $ref, default `false`                                           |
-| strictSchema | Use `schema` instead of `schemaDefinition`, default `false`, does not have effect when resolveRef is not `true` |
+| strictSchema | For compatibility with OpenAPI 3.0 - use `schema` property instead of `schemaDefinition`, default `false`, does not have effect when resolveRef is not `true` |
 
 !!! Example 
     

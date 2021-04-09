@@ -5,9 +5,10 @@ description: How to add Content Type Definitions in Flotiq API
 
 A new <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
 can be created either by sending a properly formatted POST request to the ``/api/v1/internal/contenttype`` 
-endpoint or through the Content Modeler tool provided with the platform.
+endpoint or through the [Content Modeler tool](/panel/content-types) provided with the platform.
 
-You need `Read and write API KEY` to perform this action.
+!!! note
+    You will need to use your `Application Read and write API KEY` to perform this action. Read more about [API keys and scoped API keys](/API/).
 
 
 ## Creating new Content Types via API
@@ -66,33 +67,45 @@ Content Type</abbr> is simply a ``POST`` call with a payload similar to:
 }
 ```
 
-`name` is the name of the <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">
+Let's quickly look at the properties of this object. On the top level, there are the following properties:
+
+- **name** - is an API-friendly name of the <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">
 Content Type</abbr> and name of the endpoints that will be generated to handle requests with 
 <abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that type.
+- **label** - is a human-friendly label used to refer to this Content Type in the UI
+- **schemaDefinition** - contains an OpenAPI-compliant schema of the Content Type (more about this below)
+- **metaDefinition** - contains additional properties of the fields
 
-`label` is only for displaying the name correctly on the CMS panel.
+For simplicity - this example uses a very simple Content Type, which only has 2 attributes:
 
-The `schemaDefinition` part of the JSON payload is based on the bare JSON OpenAPI 3.0 Schema and is fully compatible. 
-It holds information about properties of the 
-<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">CT</abbr> 
-(in the `properties` key), its types and which properties are required (`required` key). 
-It always should have `"type": "object"`, as it is an object, and `"additionalProperties": false` 
-to ensure that API users will not post garbage to the objects of this CTD. To ensure that all objects have id property 
-<abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">CTD</abbr> 
-also should have information about the connection with `AbstractContentTypeSchemaDefinition` using:
-```
-"allOf": [
-    {
-        "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
-    }
-],
-```
+- title
+- postContent
 
-In the case of this example, it will add two properties, `title` and `postContent` which are both strings and required.
+and you can see those listed under the `schemaDefinition` property.
 
-`metaDefinition` is used to tell CMS panel how to render a form for the Content Object, 
-it holds information about the order of the properties (`order` key, which should contain all properties of the object), 
-and about type and validation of the field. It also includes information on relations of the object with other Content Types. 
+!!! note 
+    The `schemaDefinition` part of the JSON payload is based on the bare JSON OpenAPI 3.0 Schema and is fully compatible. 
+    It holds information about properties of the 
+    <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">CT</abbr> 
+    (in the `properties` key), its types and which properties are required (`required` key). 
+    It always should have `"type": "object"`, as it is an object, and `"additionalProperties": false` 
+    to ensure that API users will not post garbage to the objects of this CTD.
+    
+    To ensure that all objects have a proper `id` property 
+    <abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">CTD</abbr> 
+    also should have information about the connection with `AbstractContentTypeSchemaDefinition` using:
+    ```
+    "allOf": [
+        {
+            "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+        }
+    ],
+    ```
+
+Finally - the `metaDefinition` attribute is used to store additional properties, which for example tell us how to 
+render forms for the Content Object, it holds information about the order of the properties (`order` key, which 
+should contain all properties of the object),  and about type and validation of the field. It also includes information 
+on relations of the object with other Content Types. 
 
 In this case, Blog Post will have `title` property which will be unique and will render as text input in CMS panel 
 and `postContent` which can be duplicated and will be presented as CKEditor input in CMS panel. 
@@ -912,6 +925,6 @@ Input types of properties in `metaDefinition`:
 
 ## Creating Content Types through the Content modeller
 
-[It is described in the public part of the documentation.](/panel/content-types/)
+If you'd rather use our graphical interface to design your Content Types - read the [Content modeller documentation](/panel/content-types/)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

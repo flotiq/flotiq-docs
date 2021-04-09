@@ -8,10 +8,11 @@ Type</abbr>
 can be updated either by sending a properly formatted PUT request to the ``/api/v1/internal/contenttype/{name}``
 endpoint or through the Content Modeler tool provided with the platform.
 
-You need `Read and write API KEY` to perform this action.
+!!! note
+    You will need to use your `Application Read and write API KEY` to perform this action. Read more about [API keys and scoped API keys](/API/).
 
 !!! warning 
-    Changes made to the Content Type Definition may lead to problems with programs and pages already using this CTD.
+    Changes made to the Content Type Definition may lead to problems with programs and pages already using this CTD if they break compatibility. We suggest to only apply non-breaking changes to existing CTDs.
 
 ## Updating Content Types via API
 
@@ -69,14 +70,20 @@ Content Type</abbr> is simply a ``PUT`` call with a payload similar to:
 }
 ```
 
-You can find description of the schema [here](http://api/content-type/creating-ctd/#creating-new-content-types-via-api)
+You can find description of the schema [here](/API/content-type/creating-ctd/#creating-new-content-types-via-api)
 
-After every change in Content Definition Schema Flotiq automatically updates your API documentation and Elastic Search
-index attached to this type.
+!!! tip 
+    After every change in Content Definition Schema Flotiq automatically updates your API documentation and Elastic Search
+    index attached to this type. This means your API docs will always stay up to date with your current schema, and so will
+    the results of the [full-text search feature](/API/search/).
 
 When you are adding new properties objects already in the system will not have that property present until added by you.
 
+## What happens if you remove a property?
+
 If you remove property all objects will be stripped of the value for that property after schema would be saved.
+
+## What happens if you change a property?
 
 When you change existing property, depending on the type od changes Flotiq will:
 
@@ -89,7 +96,7 @@ When you change existing property, depending on the type od changes Flotiq will:
 
 !!! warning 
     When updating Content Definition Schema you must remember that Flotiq will try to update objects of that
-    type to reflect changes in the schema, which can provide to data loss, if the old types and new types of 
+    type to reflect changes in the schema, which can result in data loss, if the old types and new types of 
     the properties are not compatible.
 
 
@@ -379,7 +386,7 @@ When you change existing property, depending on the type od changes Flotiq will:
         }
         ```
 
-### Conversion table
+### How are fields converted from one type to another?
 
 | Old Type (type/inputType) | New Type (type/inputType) | Conversion                                                   |
 | ------------------------- | ------------------------- | ------------------------------------------------------------ |
@@ -518,6 +525,6 @@ When you change existing property, depending on the type od changes Flotiq will:
 
 ## Updating Content Types through the Content modeller
 
-[It is described in the public part of the documentation.](/panel/content-types/)
+If you'd rather use our graphical interface to update your Content Types - read the [Content modeller documentation](/panel/content-types/)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

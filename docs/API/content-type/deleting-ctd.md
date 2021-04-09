@@ -5,10 +5,12 @@ description: How to delete Content Type Definitions in Flotiq API
 
 Existing <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content
 Type</abbr>
-can be deleted either by sending a properly formatted DELETE request to the ``/api/v1/internal/contenttype/{name}``
+can be deleted either by sending a properly formatted `DELETE` request to the ``/api/v1/internal/contenttype/{name}``
 endpoint or through the Content Modeler tool provided with the platform.
 
-You need `Read and write API KEY` to perform this action.
+!!! note
+    You will need to use your `Application Read and write API KEY` to perform this action. Read more about [API keys and scoped API keys](/API/).
+
 
 ## Deleting Content Types via API
 
@@ -182,6 +184,6 @@ You can only delete Content Types that do not have any Content Objects or are no
 
 ## Deleting Content Types through the Content modeller
 
-[It is described in the public part of the documentation.](/panel/content-types/)
+If you'd rather use our graphical interface to delete your Content Types - read the [Content modeller documentation](/panel/content-types/)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

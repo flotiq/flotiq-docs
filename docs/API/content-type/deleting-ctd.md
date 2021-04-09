@@ -8,6 +8,8 @@ Type</abbr>
 can be deleted either by sending a properly formatted DELETE request to the ``/api/v1/internal/contenttype/{name}``
 endpoint or through the Content Modeler tool provided with the platform.
 
+You need `Read and write API KEY` to perform this action.
+
 ## Deleting Content Types via API
 
 Deleting <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">

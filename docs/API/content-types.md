@@ -60,6 +60,7 @@ The endpoint documentation is provided in the API docs and describes the followi
 * [Create](content-type/creating-ctd.md)
 * [Update](content-type/updating-ctd.md)
 * [List](content-type/listing-ctd.md)
+* [Get single](content-type/getting-ctd.md)
 * [Delete](content-type/deleting-ctd.md)
 
 ## Working with Content Objects

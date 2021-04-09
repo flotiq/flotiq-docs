@@ -8,6 +8,8 @@ Type</abbr>
 can be updated either by sending a properly formatted PUT request to the ``/api/v1/internal/contenttype/{name}``
 endpoint or through the Content Modeler tool provided with the platform.
 
+You need `Read and write API KEY` to perform this action.
+
 !!! warning 
     Changes made to the Content Type Definition may lead to problems with programs and pages already using this CTD.
 

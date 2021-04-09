@@ -9,6 +9,8 @@ To get the list of
 you need to send `GET` call to `/api/v1/internal/contenttype`. 
 It returns the paginated list of Content Types. It can be filtered and limited. 
 
+`Read only API KEY` is sufficient to perform this action.
+
 Possible request parameters:
 
 | Parameter       | Description                                                                                                                               |
@@ -31,7 +33,7 @@ Possible request parameters:
     === "C# + Restasharp"
 
         ```
-        var client = new RestClient("hhttps://api.flotiq.com/api/v1/internal/contenttype?page=1&limit=20&order_by=name&order_direction=asc&name=blog");
+        var client = new RestClient("https://api.flotiq.com/api/v1/internal/contenttype?page=1&limit=20&order_by=name&order_direction=asc&name=blog");
         var request = new RestRequest(Method.GET);
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);

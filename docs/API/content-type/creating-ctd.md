@@ -7,6 +7,8 @@ A new <abbr title="Content Type - a model of data that has been defined inside t
 can be created either by sending a properly formatted POST request to the ``/api/v1/internal/contenttype`` 
 endpoint or through the Content Modeler tool provided with the platform.
 
+You need `Read and write API KEY` to perform this action.
+
 
 ## Creating new Content Types via API
 

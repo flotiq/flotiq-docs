@@ -71,7 +71,7 @@ Let's quickly look at the properties of this object. On the top level, there are
 
 - **name** - is an API-friendly name of the <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">
 Content Type</abbr> and name of the endpoints that will be generated to handle requests with 
-<abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that type.
+<abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that type. Can only have `a-z` characters and `_`.
 - **label** - is a human-friendly label used to refer to this Content Type in the UI
 - **schemaDefinition** - contains an OpenAPI-compliant schema of the Content Type (more about this below)
 - **metaDefinition** - contains additional properties of the fields
@@ -102,9 +102,11 @@ and you can see those listed under the `schemaDefinition` property.
     ],
     ```
 
+    All property names shold have only `a-z`, `A-Z`, `0-9` and `_` characters. `id` and `objectType` property names are restricted.
+
 Finally - the `metaDefinition` attribute is used to store additional properties, which for example tell us how to 
 render forms for the Content Object, it holds information about the order of the properties (`order` key, which 
-should contain all properties of the object),  and about type and validation of the field. It also includes information 
+should contain all properties of the object), and about type and validation of the field. It also includes information 
 on relations of the object with other Content Types. 
 
 In this case, Blog Post will have `title` property which will be unique and will render as text input in CMS panel 
@@ -362,9 +364,7 @@ First input in the form in CMS panel will be `title` input, and second will be `
                 "Must be at least 1 characters long"
             ],
             "schemaDefinition.allOf[1].properties.title.type": [
-                "Does not have a value in the enumeration [\"array\",\"boolean\",\"integer\",\"null\",\"number\",\"object\",\"string\"]",
-                "String value found, but an array is required",
-                "Failed to match at least one schema"
+                "Does not have a value in the enumeration [\"array\",\"boolean\",\"integer\",\"null\",\"number\",\"object\",\"string\"]"
             ],
             "metaDefinition.propertiesConfig.price.label": [
                 "The property label is required"
@@ -385,6 +385,31 @@ First input in the form in CMS panel will be `title` input, and second will be `
             "massage": "Unauthorized"
         }
         ```
+
+#### Possible validation errors
+
+| Property path                                    | Possible errors                                                                                                                                                                                                                                                           | Description                                                                                                                                                            |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                                             | `This value is already used`                                                                                                                                                                                                                                              | Send when Content Type with that type already exists                                                                                                                   |
+|                                                  | `The property name is required`                                                                                                                                                                                                                                           | Send when property name is missing                                                                                                                                     |
+|                                                  | `Must be at least 1 characters long`                                                                                                                                                                                                                                      | Send when property name has empty string value                                                                                                                         |
+|                                                  | `This value is not valid.`                                                                                                                                                                                                                                                | Send when property name have non-acceptable characters                                                                                                                 |
+| label                                            | `The property label is required`                                                                                                                                                                                                                                          | Send when property label is missing                                                                                                                                    |
+|                                                  | `Must be at least 1 characters long`                                                                                                                                                                                                                                      | Send when property label has empty string value                                                                                                                        |
+| schemaDefinition.properties                      | `You must specify at least one schema property`                                                                                                                                                                                                                           | Send when `schemaDefinition` does not have any properties specified                                                                                                    |
+|                                                  | `Invalid value. Only a-z, A-Z, 0-9 and _ are allowed`                                                                                                                                                                                                                     | Send when property name in `schemaDefinition` has invalid characters                                                                                                   |
+|                                                  | `Property name {propertyName} not allowed`                                                                                                                                                                                                                                | Send when property name is `id` or `objectType`                                                                                                                        |
+| schemaDefinition.allOf                           | `Invalid schema definition for content type. Schema definition should have 2 elements: reference to #/components/schemas/AbstractContentTypeSchemaDefinition and object with properties list. Check https://flotiq.com/docs/API/content-types/creating-ctd/ for details.` | Send when `schemaDefinition` property have more than 2 objects in `allOf` array                                                                                        |
+| schemaDefinition.allOf.0.$ref                    | `Invalid schema definition for content type. Schema definition should have reference to #/components/schemas/AbstractContentTypeSchemaDefinition. Check https://flotiq.com/docs/API/content-types/creating-ctd/ for details.`                                             | Send when `schemaDefinition` property does not have reference to Abstract Content Type Schema Definition in the first object of `allOf` array                          |
+| schemaDefinition.allOf.1.$ref                    | `Invalid schema definition for content type. Schema definition should have object with properties list. Check https://flotiq.com/docs/API/content-types/creating-ctd/ for details.`                                                                                       | Send when `schemaDefinition` property does not have properties definitions in the first object of `allOf` array                                                        |
+| schemaDefinition.allOf[1].properties.{name}.type | `Does not have a value in the enumeration [\"array\", \"boolean\", \"integer\", \"null\", \"number\", \"object\", \"string\"]`                                                                                                                                            | Send when property type is invalid, for valid properties type check [properties table](#property-types)                                                                |
+| metaDefinition.propertiesConfig.{name}.label     | `The property label is required`                                                                                                                                                                                                                                          | Send when property label is missing                                                                                                                                    |
+| metaDefinition.propertiesConfig.{name}.inputType | `Does not have a value in the enumeration [\"text\", \"richtext\", \"textarea\", \"textMarkdown\", \"email\", \"number\", \"radio\", \"checkbox\", \"select\", \"datasource\", \"object\", \"geo\"]`                                                                      | Send when property inputType in `metaDefinition`is invalid, for valid properties inputTYpe check [meta definition properties table](#meta-definition-properties-types) |
+| metaDefinition.order                             | `Property name {propertyName} not existing in the order`                                                                                                                                                                                                                  | Send when property is not included in the `order` array                                                                                                                |
+| metaDefinition.propertiesConfig                  | `Property name {propertyName} not existing in meta definition`                                                                                                                                                                                                            | Send when property existing in `schemaDefinition` is not included in the `metaDefinition` properties config                                                            |
+|                                                  | `Property name {propertyName} not existing in schema definition`                                                                                                                                                                                                          | Send when property existing in `metaDefinition` is not included in the `schemaDefinition` properties config                                                            |
+| metaDefinition.propertiesConfig.{name}           | `Wrong meta type for type of {propertyName}`                                                                                                                                                                                                                              | Send when property has incompatible inputType in `metaDefinition` properties config to its type in `schemaDefinition`                                                 |
+|                                                  | `You have to specify type of relation for {propertyName}`                                                                                                                                                                                                                 | Send when property is a relation to other type, but not specify in `validation` to which type it is restricted                                                         |
 
 
 After such call is made the 
@@ -466,6 +491,8 @@ Property types (as of `schemaDefinition` properties), recognized by CMS panel:
 |         |                                                                                                                                              | type                        | must be `object`                                                                                                                                                                                                                                                             |
 |         |                                                                                                                                              | required                    | if the field is required it must be `["lat","lon"]`                                                                                                                                                                                                                          |
 
+Every type can be used multiple times across the Content Type Definition.
+
 ### Meta definition properties types
 
 Input types of properties in `metaDefinition`:
@@ -520,6 +547,7 @@ Input types of properties in `metaDefinition`:
 
 *Required property
 
+### Example with every type of field
 
 ??? "Example with every type of field"
 

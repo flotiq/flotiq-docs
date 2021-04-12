@@ -77,6 +77,8 @@ You can find description of the schema [here](/API/content-type/creating-ctd/#cr
     index attached to this type. This means your API docs will always stay up to date with your current schema, and so will
     the results of the [full-text search feature](/API/search/).
 
+## What happens if you add a new property?
+
 When you are adding new properties objects already in the system will not have that property present until added by you.
 
 ## What happens if you remove a property?
@@ -385,6 +387,11 @@ When you change existing property, depending on the type od changes Flotiq will:
             "massage": "Not found"
         }
         ```
+
+#### Possible validation errors
+
+Possible validation errors are the same as in creating Content Types, 
+you can find the list [here](/API/content-type/creating-ctd/#possible-validation-errors).
 
 ### How are fields converted from one type to another?
 

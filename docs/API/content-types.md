@@ -65,7 +65,11 @@ The endpoint documentation is provided in the API docs and describes the followi
 
 ## Working with Content Objects
 
-While working with Content Objects, you can:
+The supporting endpoints of a given
+<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
+allow the user to perform basic REST operations
+
+![](images/endpoints.png){: .center .width75 .border}
 
 * [Create](content-type/creating-co.md)
     * [Batch create](/API/content-type/creating-co/#batch-content-upload)

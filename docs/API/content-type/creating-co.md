@@ -18,7 +18,8 @@ Content Management Platform.
 
 For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
 defined according to the [create Content Type example](/API/content-type/creating-ctd), a very simple `POST` payload can be sent 
-to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}` to create a new Content Object:
+to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}` 
+(where `name` is the name of the content type definition) to create a new Content Object:
 
 ```
 {
@@ -229,7 +230,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}` to cre
 
     === "404 Not found"
 
-        Returned when content type definition wasn't found
+        Returned when content object wasn't found
 
         ```
         {

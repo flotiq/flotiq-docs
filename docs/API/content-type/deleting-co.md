@@ -4,22 +4,184 @@ description: How to delete Content Objects in Flotiq
 
 # Deleting content objects
 
-Deleting of the object is done as the soft delete. All items will be still in the database, but not accessible by the API. It can be restored directly in the database, by setting `deleted_at` as `NULL` by the system administrator, if you need to bring back the deleted object, you can contact us on <a href="mailto:hello@flotiq.com">hello@flotiq.com</a>, please include your email, content type name and object id in the email.
+Deleting of the object is done as the soft delete. All items will be still in the database, but not accessible by the API. 
+It can be restored directly in the database, by the system administrator, 
+if you need to bring back the deleted object, you can contact us on <a href="mailto:hello@flotiq.com">hello@flotiq.com</a>, 
+please include your email on which the account was created, content type name and object id in the email.
 
 ## Deleting single object
 
-Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/content/{CTD name}/{object ID}`, where:
+Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/content/{name}/{id}`, where:
 
-* `CTD name` is the name of the content type definition
-* `object ID` is the ID of the object to remove
+* `name` is the name of the content type definition
+* `id` is the ID of the object to remove
 
-For example: 
 
-```
-curl -X DELETE "https://api.flotiq.com/api/v1/content/blogposts/blogposts-1" -H "accept: application/json" -H "X-AUTH-TOKEN: YOUR_API_TOKEN"
-``` 
+!!! Example
 
-For successful delete Flotiq will return `204 OK` response, for non-existing objects `404 Not Found` response, and for objects in relation within another object `400 Validation error` response.
+    === "CURL" 
+
+        ```
+        curl -X DELETE "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712" -H "accept: application/json" -H "X-AUTH-TOKEN: YOUR_API_TOKEN"
+        ``` 
+
+        === "C# + Restasharp"
+
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712");
+        var request = new RestRequest(Method.DELETE);
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
+        IRestResponse response = client.Execute(request);
+        ```
+    
+    === "Go + Native"
+
+        ```
+        package main
+
+        import (
+            "fmt"
+            "net/http"
+            "io/ioutil"
+        )
+        
+        func main() {
+        
+            url := "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712"
+        
+            req, _ := http.NewRequest("DELETE", url, nil)
+        
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_KEY")
+        
+            res, _ := http.DefaultClient.Do(req)
+        
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+        
+            fmt.Println(res)
+            fmt.Println(string(body))
+            
+        }
+        ```
+    
+    === "Java + Okhttp"
+        
+        ```
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+        .url("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712")
+        .delete(null)
+        .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
+        .build();
+        
+        Response response = client.newCall(request).execute();
+        ```
+
+    === "Java + Unirest"
+      
+        ```
+        HttpResponse<String> response = Unirest.delete("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712")
+            .header("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .asString();
+        ```
+
+    === "Node + Request"
+      
+        ```
+        const request = require('request');
+
+        const options = {
+            method: 'DELETE',
+            url: 'https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712',
+            headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'}
+        };
+        
+        request(options, function (error, response, body) {
+            if (error) throw new Error(error);
+            
+            console.log(body);
+        });
+        ```
+
+    === "PHP + CURL"
+    
+        ```
+        <?php
+
+        $curl = curl_init();
+        
+        curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "DELETE",
+        CURLOPT_HTTPHEADER => [
+                "X-AUTH-TOKEN: YOUR_API_KEY",
+            ],
+        ]);
+        
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        
+        curl_close($curl);
+        
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
+
+
+!!! Responses
+
+    === "204 OK"
+
+        Returned when object was deleted
+
+    === "400 Validation error"
+
+        Returned when data has not been correct and object was not saved
+
+        ```
+        {
+            "errors": [
+                "This content object is used in another content object."
+            ]
+        }
+        ```
+
+    === "401 Unauthorized"
+
+        Returned when API key was missing or incorrect
+  
+        ```
+        {
+            "code": 401,
+            "massage": "Unauthorized"
+        }
+        ```
+
+    === "404 Not found"
+
+        Returned when content object wasn't found
+
+        ```
+        {
+            "code": 404,
+            "massage": "Not found"
+        }
+        ```
+
+#### Possible validation errors
+
+| Error                                                  | Description                                          |
+| ------------------------------------------------------ | ---------------------------------------------------- |
+| This content object is used in another content object. | Send when object is used in relation of other object |
 
 ## Batch deleting
 

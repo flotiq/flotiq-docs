@@ -230,7 +230,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
     === "404 Not found"
 
-        Returned when content object wasn't found
+        Returned when content type definition wasn't found
 
         ```
         {

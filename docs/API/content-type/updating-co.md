@@ -10,7 +10,7 @@ Validation of update request works the same as in saving requests.
 
 !!! note
     You will need to use your `Application Read and write API KEY` to perform this action
-    or `User API KEY` scoped to accept update on the Content Type you wish to add.
+    or `User API KEY` scoped to accept update on the Content Type you wish to update.
     Read more about [API keys and scoped API keys](/API/).
 
 ## Updating Content Objects through the API

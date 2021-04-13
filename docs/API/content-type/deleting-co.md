@@ -9,6 +9,12 @@ It can be restored directly in the database, by the system administrator,
 if you need to bring back the deleted object, you can contact us on <a href="mailto:hello@flotiq.com">hello@flotiq.com</a>, 
 please include your email on which the account was created, content type name and object id in the email.
 
+
+!!! note
+    You will need to use your `Application Read and write API KEY` to perform this action
+    or `User API KEY` scoped to accept delete on the Content Type you wish to delete.
+    Read more about [API keys and scoped API keys](/API/).
+
 ## Deleting single object
 
 Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/content/{name}/{id}`, where:
@@ -25,7 +31,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
         curl -X DELETE "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712" -H "accept: application/json" -H "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ``` 
 
-        === "C# + Restasharp"
+    === "C# + Restasharp"
 
         ```
         var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712");
@@ -236,3 +242,5 @@ Request example:
 ```
 curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-delete" -H "accept: schema" -H "X-AUTH-TOKEN: YOUR_API_TOKEN" -H "Content-Type: application/json" -d "[\"blogposts-1\",\"blogposts-2\"]"
 ```
+
+[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

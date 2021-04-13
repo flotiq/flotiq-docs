@@ -1,61 +1,411 @@
 title: How to list Content Objects | Flotiq docs
 description: How to list Content Objects in Flotiq
 
+# Listing content
 
-# Listing content through the API
+Once a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
+has been defined in the system - the user can create
+<abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that Content Type.
+This is done either directly through the API or via the convenient Content Entry tools provided within the
+Content Management Platform.
 
-| Parameter       | Description |
-| --------------- | ----------- |
-| limit           | Numer of objects on page, default `20` |
-| page            | Number of the requested page, 1-based, default `1` |
-| order_by        | What field should the list be ordered by, possible values are based on content type schema |
-| order_direction | Order direction, possible values: `asc`, `desc`, default `asc` |
-| hydrate         | If you want to hydrate datasources in the object, you need to set it to `1`, it will hydrate one level of datasources in objects, you can also use this parameter when requesting single object |
-| filters         | Json encoded object containing conditions on which the list of CO should be filtered. The object keys are the name of the parameter (e.g. `title`). The object value is filter object with two keys, `type` describing how the list should be filtered, and `filter` with filter query. Both parameters should be string, you can filter on every subset of object parameters including `internal` parameters (e.g. `internal.created_at`). <br><br>Example filter value: `{"title":{"type":"equals","filter":"Hello world!"}}` |
+!!! note
+    You can use your `Application Read Only API KEY` to perform this action
+    or `User API KEY` scoped to accept read on the Content Type you wish to list.
+    Read more about [API keys and scoped API keys](/API/).
+
+## Listing content through the API
+
+For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
+defined according to the [create Content Type example](/API/content-type/creating-ctd), a very simple `PUT` payload can be sent
+to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}` to update Content Object:
+
+!!! Example
+
+    === "CURL"
+
+        ``` 
+        curl -X GET "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%7D" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
+        ```
+
+    === "C# + Restasharp"
+
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%7D");
+        var request = new RestRequest(Method.GET);
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
+        IRestResponse response = client.Execute(request);
+        ```
+    
+    === "Go + Native"
+
+        ```
+        package main
+
+        import (
+            "fmt"
+            "net/http"
+            "io/ioutil"
+        )
+        
+        func main() {
+        
+            url := "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%7D"
+        
+            req, _ := http.NewRequest("GET", url, nil)
+
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_KEY")
+        
+            res, _ := http.DefaultClient.Do(req)
+        
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+        
+            fmt.Println(res)
+            fmt.Println(string(body))
+        
+        }
+        ```
+    
+    === "Java + Okhttp"
+        
+        ```
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+            .url("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%7D")
+            .get()
+            .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .build();
+        
+        Response response = client.newCall(request).execute();
+        ```
+
+    === "Java + Unirest"
+      
+        ```
+        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%7D")
+            .header("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .asString();
+        ```
+
+    === "Node + Request"
+      
+        ```
+        const request = require('request');
+
+        const options = {
+            method: 'DELETE',
+            url: 'https://api.flotiq.com/api/v1/content/blogposts',
+            qs: {
+                page: '1',
+                limit: '20',
+                order_by: 'internal.createdAt',
+                order_direction: 'asc',
+                hydrate: '0',
+                filters: '{}'
+            },
+            headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
+        };
+        
+        request(options, function (error, response, body) {
+            if (error) throw new Error(error);
+            
+            console.log(body);
+        });
+        ```
+
+    === "PHP + CURL"
+    
+        ```
+        <?php
+
+        $curl = curl_init();
+        
+        curl_setopt_array($curl, [
+            CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%7D",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_HTTPHEADER => [
+                    "X-AUTH-TOKEN: YOUR_API_KEY",
+                ],
+        ]);
+        
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        
+        curl_close($curl);
+        
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
+
+Request parameters
+
+| Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| limit           | Number of objects on page, default `20`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| page            | Number of the requested page, 1-based, default `1`                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| order_by        | What field should the list be ordered by, possible values are based on content type schema                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| order_direction | Order direction, possible values: `asc`, `desc`, default `asc`                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| hydrate         | If you want to hydrate datasources in the object, you need to set it to `1`, it will hydrate one level of datasources in objects, you can also use this parameter when requesting single object                                                                                                                                                                                                                                                                                                                                 |
+| filters         | Json encoded object containing conditions on which the list of CO should be filtered. The object keys are the name of the parameter (e.g. `title`). The object value is filter object with two keys, `type` describing how the list should be filtered, and `filter` with filter query. Both parameters should be string, you can filter on every subset of object parameters including `internal` parameters (e.g. `internal.created_at`). Filters must be url encoded. <br><br>Example filter value: `{"title":{"type":"equals","filter":"Hello world!"}}` |
 
 Filter types
 
-| Type               | Description                                    |
-| ------------------ | ---------------------------------------------- |
-| equals             | Object parameter must be equal to `filter`     |
-| notEquals          | Object parameter must not be equal to `filter` |
-| contains           | Object parameter must contain `filter`         |
-| notContains        | Object parameter must not contain `filter`     |
-| startsWith         | Object parameter must start with `filter`      |
-| endsWith           | Object parameter must end with `filter`        |
-| lessThanOrEqual    | Object parameter must be less or equal to `filter` |
-| lessThan           | Object parameter must be less than filter      |
-| greaterThanOrEqual | Object parameter must be greater or equal than `filter` |
-| greaterThan        | Object parameter must be greater than `filter` |
-| inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object |
+| Type               | Description                                                                                                                                                   |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| equals             | Object parameter must be equal to `filter`, can be used with string type parameters                                                                           |
+| notEquals          | Object parameter must not be equal to `filter`, can be used with string type parameters                                                                       |
+| contains           | Object parameter must contain `filter`, can be used with every type parameters                                                                                |
+| notContains        | Object parameter must not contain `filter`, can be used with every type parameters                                                                            |
+| startsWith         | Object parameter must start with `filter`, can be used with string type parameters                                                                            |
+| endsWith           | Object parameter must end with `filter`, can be used with string type parameters                                                                              |
+| lessThanOrEqual    | Object parameter must be less or equal to `filter`, can be used with number type parameters                                                                   |
+| lessThan           | Object parameter must be less than filter, can be used with number type parameters                                                                            |
+| greaterThanOrEqual | Object parameter must be greater or equal than `filter`, can be used with number type parameters                                                              |
+| greaterThan        | Object parameter must be greater than `filter`, can be used with number type parameters                                                                       |
+| inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object, can be used with number type parameters |
 
-Example response:
-```json
-{
-  "total_count": 1,
-  "total_pages": 1,
-  "current_page": 1,
-  "count": 1,
-  "data": [
+!!! Example
+
+    ```
     {
-      "id": "123123123",
-      "title": "New object",
-      "postContent": "This will be the new <b>content</b>",
-      "internal": {
-        "createdAt": "2019-10-25T20:22:37+00:00",
-        "deletedAt": "",
-        "updatedAt": "2019-10-30T20:32:42+00:00",
-        "contentType": "blogposts"
-      }
+        filters: {
+            title: {
+                type: "equals",
+                filter: "New object"
+            },
+            postContent: {
+                type: "contains",
+                filter: "content"
+            }
+        }
     }
-  ]
-}
-```
+    ```
 
-**Filtering by relation**, for example, "Show products in category category-1" is possible using [JsonPath](https://github.com/json-path/JsonPath) standard.
-You have to care about encoding url params. Dots should also be converted to ASCII codes, for example:
+    === "CURL"
+    
+        ```
+        curl -X GET "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
+        ```
+
+    === "C# + Restasharp"
+
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D");
+        var request = new RestRequest(Method.GET);
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
+        IRestResponse response = client.Execute(request);
+        ```
+    
+    === "Go + Native"
+
+        ```
+        package main
+
+        import (
+            "fmt"
+            "net/http"
+            "io/ioutil"
+        )
+        
+        func main() {
+        
+            url := "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D"
+        
+            req, _ := http.NewRequest("GET", url, nil)
+
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_KEY")
+        
+            res, _ := http.DefaultClient.Do(req)
+        
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+        
+            fmt.Println(res)
+            fmt.Println(string(body))
+        
+        }
+        ```
+    
+    === "Java + Okhttp"
+        
+        ```
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+            .url("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D")
+            .get()
+            .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .build();
+        
+        Response response = client.newCall(request).execute();
+        ```
+
+    === "Java + Unirest"
+      
+        ```
+        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D")
+            .header("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .asString();
+        ```
+
+    === "Node + Request"
+      
+        ```
+        const request = require('request');
+
+        const options = {
+            method: 'DELETE',
+            url: 'https://api.flotiq.com/api/v1/content/blogposts',
+            qs: {
+                page: '1',
+                limit: '20',
+                order_by: 'internal.createdAt',
+                order_direction: 'asc',
+                hydrate: '0',
+                filters: '{title:{type:"equals",filter:"New object"},postContent:{type:filter:"content"}}'
+            },
+            headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
+        };
+        
+        request(options, function (error, response, body) {
+            if (error) throw new Error(error);
+            
+            console.log(body);
+        });
+        ```
+
+    === "PHP + CURL"
+    
+        ```
+        <?php
+
+        $curl = curl_init();
+        
+        curl_setopt_array($curl, [
+            CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_HTTPHEADER => [
+                    "X-AUTH-TOKEN: YOUR_API_KEY",
+                ],
+        ]);
+        
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        
+        curl_close($curl);
+        
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
+        
+
+!!! Responses
+
+    === "200 OK"
+
+        Returned when request was correctly formatted
+
+        ```
+        {
+          "total_count": 1,
+          "total_pages": 1,
+          "current_page": 1,
+          "count": 1,
+          "data": [
+            {
+              "id": "blogposts-456712",
+                "internal": {
+                    "contentType": "blogposts",
+                    "createdAt": "2021-04-09T13:30:48+00:00",
+                    "updatedAt": "2021-04-09T13:30:48+00:00",
+                    "deletedAt": ""
+                },
+                "title": "New object",
+                "postContent": "This will be the new <b>content</b>"
+              }
+            }
+          ]
+        }
+        ```
+
+        `total_count` is the number of Content Objects in the database (if any filters are present, it's a number of filtered Content Objects).
+        
+        `total_pages` is the number of pages available to the user.
+        
+        `current_page` is the currently returned page.
+        
+        `count` number of elements in `data` key, can't be more than limit set in request (default 20).
+        
+        `data` list of Content Objects, every object contains all data.
+
+    === "400 Validation error"
+
+        Returned when data has not been correct and object was not saved
+
+        ```
+        {
+            "filters": [
+                "Malformed filters json - Syntax error"
+            ]
+        }
+        ```
+
+    === "401 Unauthorized"
+
+        Returned when API key was missing or incorrect
+  
+        ```
+        {
+            "code": 401,
+            "massage": "Unauthorized"
+        }
+        ```
+
+    === "404 Not found"
+
+        Returned when content type definition wasn't found
+
+        ```
+        {
+            "code": 404,
+            "massage": "Not found"
+        }
+        ```
+
+#### Possible validation errors
+
+| Error                                 | Description                                      |
+| ------------------------------------- | ------------------------------------------------ |
+| Malformed filters json - Syntax error | Send when filters are not correctly json encoded |
+
+#### Filtering by relation
+
+For example, "Show products in category category-1" is possible using [JsonPath](https://github.com/json-path/JsonPath) standard.
+You have to care about encoding url params. For example:
 
 1. Using JsonPath, product category path is `categories[*].dataUrl`
 1. Expected value is `/api/v1/content/categories/category-1`
-1. Raw query: `GET /api/v1/content/products?categories[*].dataUrl=/api/v1/content/categories/category-1`
-1. Encoded query: `GET /api/v1/content/products?categories%255B*%255D%2EdataUrl=%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcategory-1`
+1. Raw query: `GET /api/v1/content/products?filters={"categories[*].dataUrl":{"type":"contains","filter":"/api/v1/content/categories/category-1"}}`
+1. Encoded query: `GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcategory-1%22%7D%7D`
+
+Only `contains` and `notContains` type filters can be used with filtering by relation
+
+[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

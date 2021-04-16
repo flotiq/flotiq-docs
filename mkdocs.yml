@@ -88,6 +88,7 @@ nav:
       - 'Creating new Content Objects': API/content-type/creating-co.md
       - 'Updating Content Objects': API/content-type/updating-co.md
       - 'Listing Content Objects': API/content-type/listing-co.md
+      - 'Getting single Content Object': API/content-type/getting-co.md
       - 'Deleting Content Objects': API/content-type/deleting-co.md
       - 'Listing deleted Content Objects': API/content-type/listing-deleted-co.md
     - 'Dynamic Content API': API/dynamic-content-api.md

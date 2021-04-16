@@ -76,6 +76,7 @@ allow the user to perform basic REST operations
 * [Update](content-type/updating-co.md)
     * [Batch update](/API/content-type/creating-co/#batch-content-upload)
 * [List](content-type/listing-co.md)
+* [Get single](content-type/getting-co.md)
 * [Delete](content-type/deleting-co.md)
     * [Batch delete](/API/content-type/deleting-co/#batch-deleting)
 * [List ids of deleted objects](content-type/listing-deleted-co.md)

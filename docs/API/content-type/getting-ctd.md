@@ -4,23 +4,24 @@ description: How to get single Content Type Definitions in Flotiq
 
 # Getting single Content Type
 
-To get a single 
+To get a single
 <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> definition
 you need to send a `GET` request to the `/api/v1/internal/contenttype/{name}` endpoint. It will return a full schema of that Content Type.
 
 !!! note
-    You can use your `Application Read Only API KEY` to perform this action. Read more about [API keys and scoped API keys](/API/).
+    You can use your `Application Read Only API KEY` to perform this action. 
+    Read more about [API keys and scoped API keys](/API/).
 
 
 Possible request parameters:
 
-| Parameter    | Description                                                                                                     |
-| ------------ | --------------------------------------------------------------------------------------------------------------- |
-| resolveRef   | Should the system resolve references done using $ref, default `false`                                           |
+| Parameter    | Description                                                                                                                                                   |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| resolveRef   | Should the system resolve references done using $ref, default `false`                                                                                         |
 | strictSchema | For compatibility with OpenAPI 3.0 - use `schema` property instead of `schemaDefinition`, default `false`, does not have effect when resolveRef is not `true` |
 
-!!! Example 
-    
+!!! Example
+
     === "CURL"
 
         ``` 
@@ -142,7 +143,7 @@ Possible request parameters:
 
     === "200 OK"
 
-        Returned when content type was found
+        Returned when the content type was found
 
         ```
         {
@@ -201,14 +202,13 @@ Possible request parameters:
 
     === "200 OK for resolveRef"
 
-        Returned when content type was found
+        Returned when the content type was found
 
         ```
         {
           "id": "77721433-f727-11e9-bf7c-129df7ebe82d",
           "name": "blogposts",
           "label": "Blog Posts",
-          "internal": false,
           "schemaDefinition": {
             "type": "object",
             "properties": {
@@ -290,7 +290,7 @@ Possible request parameters:
 
     === "200 OK for resolveRef and strictSchema"
 
-        Returned when content type was found
+        Returned when the content type was found
 
         ```
         {
@@ -327,7 +327,7 @@ Possible request parameters:
 
     === "404 Not found"
 
-        Returned when schema wasn't found
+        Returned when the schema wasn't found
 
         ```
         {

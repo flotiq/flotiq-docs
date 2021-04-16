@@ -10,8 +10,8 @@ This is done either directly through the API or via the convenient Content Entry
 Content Management Platform.
 
 !!! note
-    You will need to use your `Application Read and write API KEY` to perform this action 
-    or `User API KEY` scoped to accept create on the Content Type you wish to add. 
+    You will need to use your `Application Read and write API KEY` to perform this action
+    or `User API KEY` scoped to accept create on the Content Type you wish to add.
     Read more about [API keys and scoped API keys](/API/).
 
 ## Creating Content Objects through the API
@@ -29,8 +29,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 ```
 
 !!! note
-    You can send custom `id` in the object data to assign particular `id` to the object. 
-    Random `id` will be assigned when `id` property is not present in the object.
+    You can send custom `id` in the object data to assign a particular `id` to the object.
+    Random `id` will be assigned when the `id` property is not present in the object.
 
 !!! Example
 
@@ -178,7 +178,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
     === "200 OK"
 
-        Returned when data has been correct and object was saved
+        Returned when data has been correct, and the object was saved
 
         ```
         {
@@ -196,7 +196,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
     === "400 Validation error"
 
-        Returned when data has not been correct and object was not saved
+        Returned when data has not been correct, and the object was not saved
 
         ```
         {
@@ -241,27 +241,27 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
 #### Possible validation errors
 
-| Error                                        | Description                                                                                        |
-| -------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| This value is already used                   | Send when property have to be unique and the value is already used in existing object of that type |
-| Must be at least 1 characters long           | Send when property is required and empty string was sent in object                                 |
-| The property {name} is required              | Send when property is required and was missing in the sent object                                  |
-| String value found, but a number is required | Send when type of the property is `number` and string was sent                                     |
-| The value does not match possible options    | Send when sent value do not match options in `select` and `radio` type                             |
-| Does not match the regex pattern {pattern}   | Send when value do not match regex pattern specified for the property                              |
-| This value does not exist in database        | Send when object attached in relation or media array not exists in the database                    |
+| Error                                        | Description                                                                                               |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| This value is already used                   | Send when the property has to be unique, and the value is already used in an existing object of that type |
+| Must be at least 1 characters long           | Send when the property is required, and an empty string was sent in object                                |
+| The property {name} is required              | Send when the property is required and was missing in the sent object                                     |
+| String value found, but a number is required | Send when the type of the property is `number` and string was sent                                        |
+| The value does not match possible options    | Send when sent value do not match options in `select` and `radio` type                                    |
+| Does not match the regex pattern {pattern}   | Send when the value does not match regex pattern specified for the property                               |
+| This value does not exist in database        | Send when object attached in relation or media array does not exist in the database                       |
 
 
 ### Creating Content Objects with relations to other types or media
 
-To add objects with relations you need to know ids and types of relation objects. 
-Relations are always an array, event if only one relation object is allowed.
+To add objects with relations, you need to know ids and types of related objects. 
+Relations are always an array, even if only one relation object is allowed. 
 Order of relation object is preserved. 
 Every relation object have to have `type` property (now only `internal` is possible), 
 and `dataUrl` property containing relative url to the object (`/api/v1/content/{type}/{id}`).
 
 !!! Example
-    
+
     === "Relation to `test` content type object"
         
         ```
@@ -289,7 +289,7 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
         ```        
 
 
-??? "Example of object containing all property types"
+??? "Example of an object containing all property types"
 
     This exmple represents object for Content Type with every type of property, described [here](/API/content-type/creating-ctd/#example-with-every-type-of-field)
 
@@ -352,9 +352,9 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
 
 ## Batch create Content Objects through API
 
-There is a way to add up to 100 of Content Objects at once. 
-It is possible by using `/batch` endpoint 
-(in our example the URL would be `https://api.flotiq.com/api/v1/content/blogposts/batch`). 
+There is a way to add up to 100 Content Objects at once. 
+It is possible by using the `/batch` endpoint 
+(in our example, the URL would be `https://api.flotiq.com/api/v1/content/blogposts/batch`). 
 It can be only `insert` or `insert or update` operation. To use `insert or update` 
 you need to set `updateExisting` to `true` in the query. 
 
@@ -364,7 +364,7 @@ The only difference is an array of objects in the request body instead of one ob
 Updating one blog post and adding one new:
 
 !!! Example
-    
+
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","postContent":"This will be the new <b>content</b>"},{"title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
@@ -378,11 +378,11 @@ Updating one blog post and adding one new:
         "errors": []
     }
     ```
-    
+
 Trying updating one blog post and adding one new with wrong data:
-    
+
 !!! Example
-    
+
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object"},{"title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
@@ -407,9 +407,9 @@ Trying updating one blog post and adding one new with wrong data:
     ```
 
 Trying updating one blog post and adding one new with duplicated id:
-    
+
 !!! Example
-    
+
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","content": "This will be the new <b>content</b>"},{"id":"123123123","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```

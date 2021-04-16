@@ -4,10 +4,10 @@ description: How to list Content Type Definitions in Flotiq
 
 # Listing Content Types
 
-To get the list of 
-<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Types</abbr> 
-you need to send `GET` call to `/api/v1/internal/contenttype`. 
-It returns a paginated list of Content Types defined for your account. It can be filtered and limited. 
+To get the list of
+<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Types</abbr>
+you need to send `GET` call to `/api/v1/internal/contenttype`.
+It returns a paginated list of Content Types defined for your account. It can be filtered and limited.
 
 !!! note
     You can use your `Application Read Only API KEY` to perform this action. Read more about [API keys and scoped API keys](/API/).
@@ -24,8 +24,8 @@ Possible request parameters:
 | name            | Used for filtering Content Types by name, filtering is case insensitive and returns everything containing parameter value, default empty  |
 | label           | Used for filtering Content Types by label, filtering is case insensitive and returns everything containing parameter value, default empty |
 
-!!! Example 
-    
+!!! Example
+
     === "CURL"
 
         ``` 
@@ -366,7 +366,7 @@ Possible request parameters:
         
         `current_page` is the currently returned page.
         
-        `count` number of elements in `data` key, can't be more than limit set in request (default 20).
+        `count` number of elements in `data` key; can't be more than limit set in request (default 20).
         
         `data` list of Content Types, every object contains all data.
 

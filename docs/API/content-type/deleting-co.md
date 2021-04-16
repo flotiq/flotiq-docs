@@ -4,9 +4,9 @@ description: How to delete Content Objects in Flotiq
 
 # Deleting content objects
 
-Deleting of the object is done as the soft delete. All items will be still in the database, but not accessible by the API. 
-It can be restored directly in the database, by the system administrator, 
-if you need to bring back the deleted object, you can contact us on <a href="mailto:hello@flotiq.com">hello@flotiq.com</a>, 
+Deleting of the object is done as the soft delete. All items will be still in the database, but not accessible by the API.
+It can be restored directly in the database, by the system administrator,
+if you need to bring back the deleted object, you can contact us on <a href="mailto:hello@flotiq.com">hello@flotiq.com</a>,
 please include your email on which the account was created, content type name and object id in the email.
 
 
@@ -15,7 +15,7 @@ please include your email on which the account was created, content type name an
     or `User API KEY` scoped to accept delete on the Content Type you wish to delete.
     Read more about [API keys and scoped API keys](/API/).
 
-## Deleting single object
+## Deleting a single object
 
 Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/content/{name}/{id}`, where:
 
@@ -147,11 +147,11 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
 
     === "204 OK"
 
-        Returned when object was deleted
+        Returned when the object was deleted
 
     === "400 Validation error"
 
-        Returned when data has not been correct and object was not saved
+        Returned when data has not been correct, and the object was not deleted
 
         ```
         {
@@ -174,7 +174,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
 
     === "404 Not found"
 
-        Returned when content object wasn't found
+        Returned when the content object wasn't found
 
         ```
         {
@@ -185,14 +185,14 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
 
 #### Possible validation errors
 
-| Error                                                  | Description                                          |
-| ------------------------------------------------------ | ---------------------------------------------------- |
-| This content object is used in another content object. | Send when object is used in relation of other object |
+| Error                                                  | Description                                                |
+| ------------------------------------------------------ | ---------------------------------------------------------- |
+| This content object is used in another content object. | Send when the object is used in relation of another object |
 
 ## Batch deleting
 
 Batch deleting can remove up to 100 objects at a time.
-If you need to batch delete items you need to send `POST` request to `https://api.flotiq.com/api/v1/content/{CTD name}/batch-delete`, where:
+If you need to batch delete items, you need to send `POST` request to `https://api.flotiq.com/api/v1/content/{CTD name}/batch-delete`, where:
 
 * `CTD name` is the name of the content type definition
 
@@ -225,7 +225,7 @@ If any of the objects could not be removed (as being used in the relation or as 
 ```
 where:
 
-* `listOfErrors` is the list of errors, each line have information about id
+* `listOfErrors` is the list of errors; each line have information about the id
 
 For example:
 ```

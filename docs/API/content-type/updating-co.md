@@ -3,8 +3,8 @@ description: How to update Content Objects in Flotiq
 
 # Updating content through the API
 
-When updating the object (`PUT` requests), all properties have to be present in the request body, 
-as the object data are replaced with the request body. The id property inside object are ignored in `PUT` requests. 
+When updating the object (`PUT` requests), all properties must be present in the request body,
+as the object data are replaced with the request body. The id property inside the object is ignored in `PUT` requests.
 Validation of update request works the same as in saving requests.
 
 
@@ -175,7 +175,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
 
     === "200 OK"
 
-        Returned when data has been correct and object was saved
+        Returned when data has been correct, and the object was saved
 
         ```
         {
@@ -193,7 +193,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
 
     === "400 Validation error"
 
-        Returned when data has not been correct and object was not saved
+        Returned when data has not been correct, and the object was not saved
 
         ```
         {
@@ -223,7 +223,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
 
     === "404 Not found"
 
-        Returned when content object wasn't found
+        Returned when the content object wasn't found
 
         ```
         {
@@ -239,8 +239,8 @@ you can find the list [here](/API/content-type/creating-co/#possible-validation-
 
 ## Batch update Content Objects through API
 
-Updating up to 100 objects at once is described 
-[here](/API/content-type/creating-co/#batch-create-content-objects-through-api), 
+Updating up to 100 objects at once is described
+[here](/API/content-type/creating-co/#batch-create-content-objects-through-api),
 as batch creating and updating are done on the same API endpoint.
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

@@ -18,7 +18,7 @@ Content Management Platform.
 
 For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
 defined according to the [create Content Type example](/API/content-type/creating-ctd), a very simple `GET` request can be sent
-to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` 
+to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
 (where `name` is the name of the content type definition and `id` is the ID of the object to retrieve) to get Content Object.
 
 !!! Example
@@ -142,15 +142,15 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
 
 Request parameters
 
-| Parameter | Description                                                                                                                     |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| hydrate   | If you want to hydrate datasources in the object, you need to set it to `1`, it will hydrate one level of datasources in object |
+| Parameter | Description                                                                                                                           |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| hydrate   | If you want to hydrate data sources in the object, you need to set it to `1`; it will hydrate one level of data sources in the object |
 
 !!! Responses
 
     === "200 OK"
 
-        Returned when object was found
+        Returned when the object was found
 
         ```
         {
@@ -191,8 +191,8 @@ Request parameters
 
 ### Hydrating object
 
-If you wish to receive underling objects attached to object you are retrieving you need to send request with query parameter `hydrate` set to `1`.
-There is only 1 level of hydration. Example below shows example response for product with a category, product image and product gallery.
+If you wish to receive underlying objects attached to the object you are retrieving, you need to send a request with query parameter `hydrate` set to `1`.
+There is only 1 level of hydration. The example below shows an example response for the product with a category, product image and product gallery.
 
 !!! Example
 
@@ -451,7 +451,7 @@ There is only 1 level of hydration. Example below shows example response for pro
 
     === "404 Not found"
 
-        Returned when content object wasn't found
+        Returned when the content object wasn't found
 
         ```
         {

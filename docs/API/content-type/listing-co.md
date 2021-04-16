@@ -18,7 +18,7 @@ Content Management Platform.
 
 For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
 defined according to the [create Content Type example](/API/content-type/creating-ctd), a very simple `GET` request can be sent
-to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}` 
+to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 (where `name` is the name of the content type definition) to get Content Objects.
 
 !!! Example
@@ -150,14 +150,14 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
 Request parameters
 
-| Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| limit           | Number of objects on page, default `20`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| page            | Number of the requested page, 1-based, default `1`                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| order_by        | What field should the list be ordered by, possible values are based on content type schema                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| order_direction | Order direction, possible values: `asc`, `desc`, default `asc`                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| hydrate         | If you want to hydrate datasources in the object, you need to set it to `1`, it will hydrate one level of datasources in objects, you can also use this parameter when requesting single object                                                                                                                                                                                                                                                                                                                                 |
-| filters         | Json encoded object containing conditions on which the list of CO should be filtered. The object keys are the name of the parameter (e.g. `title`). The object value is filter object with two keys, `type` describing how the list should be filtered, and `filter` with filter query. Both parameters should be string, you can filter on every subset of object parameters including `internal` parameters (e.g. `internal.created_at`). Filters must be url encoded. <br><br>Example filter value: `{"title":{"type":"equals","filter":"Hello world!"}}` |
+| Parameter       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| limit           | Number of objects on page, default `20`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| page            | Number of the requested page, 1-based, default `1`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| order_by        | What field should the list be ordered by, possible values are based on content type schema                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| order_direction | Order direction, possible values: `asc`, `desc`, default `asc`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| hydrate         | If you want to hydrate data sources in the object, you need to set it to `1`, it will hydrate one level of data sources in objects; you can also use this parameter when requesting a single object                                                                                                                                                                                                                                                                                                                                                              |
+| filters         | Json encoded object containing conditions on which the list of CO should be filtered. The object keys are the name of the parameter (e.g. `title`). The object value is a filter object with two keys, `type` describing how the list should be filtered and `filter` with filter query. Both parameters should be a string; you can filter on every subset of object parameters, including `internal` parameters (e.g. `internal.created_at`). Filters must be url encoded. <br><br>Example filter value: `{"title":{"type":"equals","filter":"Hello world!"}}` |
 
 Filter types
 
@@ -170,7 +170,7 @@ Filter types
 | startsWith         | Object parameter must start with `filter`, can be used with string type parameters                                                                            |
 | endsWith           | Object parameter must end with `filter`, can be used with string type parameters                                                                              |
 | lessThanOrEqual    | Object parameter must be less or equal to `filter`, can be used with number type parameters                                                                   |
-| lessThan           | Object parameter must be less than filter, can be used with number type parameters                                                                            |
+| lessThan           | Object parameter must be less than a filter, can be used with number type parameters                                                                          |
 | greaterThanOrEqual | Object parameter must be greater or equal than `filter`, can be used with number type parameters                                                              |
 | greaterThan        | Object parameter must be greater than `filter`, can be used with number type parameters                                                                       |
 | inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object, can be used with number type parameters |
@@ -316,13 +316,13 @@ Filter types
             echo $response;
         }
         ```
-        
+
 
 !!! Responses
 
     === "200 OK"
 
-        Returned when request was correctly formatted
+        Returned when the request was correctly formatted
 
         ```
         {
@@ -353,13 +353,13 @@ Filter types
         
         `current_page` is the currently returned page.
         
-        `count` number of elements in `data` key, can't be more than limit set in request (default 20).
+        `count` number of elements in `data` key; can't be more than limit set in request (default 20).
         
         `data` list of Content Objects, every object contains all data.
 
     === "400 Validation error"
 
-        Returned when data has not been correct and object was not saved
+        Returned when data has not been correct, and the object was not saved
 
         ```
         {
@@ -407,12 +407,12 @@ You have to care about encoding url params. For example:
 1. Raw query: `GET /api/v1/content/products?filters={"categories[*].dataUrl":{"type":"contains","filter":"/api/v1/content/categories/category-1"}}`
 1. Encoded query: `GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcategory-1%22%7D%7D`
 
-Only `contains` and `notContains` type filters can be used with filtering by relation
+Only `contains` and `notContains` type filters can be used with filtering by relation.
 
 ### Hydrating objects
 
-If you wish to receive underling objects attached to objects you are listing you need to send request with query parameter `hydrate` set to `1`.
-There is only 1 level of hydration. Example below shows example response for products with a category, product image and product gallery.
+If you wish to receive underlying objects attached to objects you are listing, you need to send a request with query parameter `hydrate` set to `1`.
+There is only 1 level of hydration. The example below shows example response for products with a category, product image and product gallery.
 
 !!! Example
 

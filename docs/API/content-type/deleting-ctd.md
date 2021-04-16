@@ -1,4 +1,4 @@
-title: How to delete Content Type Definitions | Flotiq docs 
+title: How to delete Content Type Definitions | Flotiq docs
 description: How to delete Content Type Definitions in Flotiq API
 
 # Deleting Content Types
@@ -143,12 +143,12 @@ You can only delete Content Types that do not have any Content Objects or are no
 
     === "200 OK"
 
-        Returned when schema has been removed
+        Returned when the schema has been removed
 
 
     === "400 Validation error"
 
-        Returned when shema has not been removed
+        Returned when the schema has not been removed
 
         ```
         {
@@ -172,7 +172,7 @@ You can only delete Content Types that do not have any Content Objects or are no
 
     === "404 Not found"
 
-        Returned when schema wasn't found
+        Returned when the schema wasn't found
 
         ```
         {

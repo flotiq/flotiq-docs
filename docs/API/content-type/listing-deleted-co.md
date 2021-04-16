@@ -14,15 +14,14 @@ has been defined in the system - the user can list ids of removed objects
 
 ## Listing ids of deleted Content Objects through API
 
-To list ids of the deleted Content Objects, you use `/api/v1/content/{name}/removed` endpoint 
-(where `name` is the name of the content type definition). 
-It lists all of the deleted Content Objects of the Content Type. 
-You can filter Content Objects using `deletedAfter` query parameter 
-containing the date after which the Content Objects were deleted, 
-date must be in the format accepted by the [DateTime::format](https://www.php.net/manual/en/datetime.format.php) function.
+To list ids of the deleted Content Objects, you use the `/api/v1/content/{name}/removed` endpoint
+(where `name` is the name of the content type definition).
+It lists all of the deleted Content Objects of the Content Type.
+You can filter Content Objects using the `deletedAfter` query parameter
+containing the date after which the Content Objects were deleted; the date must be in the format accepted by the [DateTime::format](https://www.php.net/manual/en/datetime.format.php) function.
 
 
-!!! Example 
+!!! Example
 
     === "CURL"
 
@@ -142,7 +141,7 @@ date must be in the format accepted by the [DateTime::format](https://www.php.ne
         ```
 
 !!! Response
-    
+
     === "200 OK"
 
         Returned when content type exists and deletedAfter was correct or not sent
@@ -176,9 +175,9 @@ date must be in the format accepted by the [DateTime::format](https://www.php.ne
 
 #### Possible validation errors
 
-| Error              | Description                                                             |
-| ------------------ | ----------------------------------------------------------------------- |
-| Wrong date format. | Send when Flotiq could not parse date in `deletedAfter` query parameter |
+| Error              | Description                                                                     |
+| ------------------ | ------------------------------------------------------------------------------- |
+| Wrong date format. | Send when Flotiq could not parse the date in the `deletedAfter` query parameter |
 
 ## Listing ids of deleted Content Objects through Content modeller
 

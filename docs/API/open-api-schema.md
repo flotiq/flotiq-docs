@@ -41,6 +41,15 @@ as not all tools can handle the whole Open API Schema format.
 
 ??? "Response for full version 3"
 
+    Example curl request
+    ```
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" 
+         -H 'accept: */*' 
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+         -H 'Content-Type: application/json'
+    ```
+
+    Response
     ```
     {
       "openapi": "3.0.0",
@@ -3325,6 +3334,16 @@ as not all tools can handle the whole Open API Schema format.
     ```
 
 ??? "Response for user only version 3"
+
+    Example curl request
+    ```
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?user_only=true" 
+         -H 'accept: */*' 
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+         -H 'Content-Type: application/json'
+    ```
+
+    Response
     
     ```
     {
@@ -4393,6 +4412,15 @@ as not all tools can handle the whole Open API Schema format.
 
 ??? "Response for full version 2"
 
+    Example curl request
+    ```
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?version=2" 
+         -H 'accept: */*' 
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+         -H 'Content-Type: application/json'
+    ```
+
+    Response
     ```
     {
       "swagger": "2.0",
@@ -7247,6 +7275,15 @@ as not all tools can handle the whole Open API Schema format.
 
 ??? "Response for user only version 2"
 
+    Example curl request
+    ```
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?version=2&user_only=true" 
+         -H 'accept: */*' 
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+         -H 'Content-Type: application/json'
+    ```
+
+    Response
     ```
     {
       "swagger": "2.0",

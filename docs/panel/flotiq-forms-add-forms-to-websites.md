@@ -22,10 +22,8 @@ Not all type of form fields are supported. The unsupported field types are:
 
 - Markdown
 - Rich text
-- Relation
 - List
 - Geo
-- Media
 
 ## How to generate HTML forms
 
@@ -75,6 +73,18 @@ Once your Flotiq Forms are generated, you will see a window with two lines of HT
 !!! note
     Please be advised that as for now you can add only one type of the form on a page. 
     If you wish to use more than one form, you have to put them on different sub-pages.
+
+## Media
+
+Media relations are handled as a file upload. Sum of files sizes cannot exceed 4MB. You can allow multiple file upload by 
+checking `multiple` option in media relation filed in Content Type Definition settings, which form was generated for.
+
+## Other relations
+
+Other relations are displayed as a checkbox or radio button group, determined by `multiple` option in relation field in Content Type Definition settings, which form was generated for.
+
+!!! note
+    You can display only existing relations. You cannot make user add one by form.
 
 ## Working example
 

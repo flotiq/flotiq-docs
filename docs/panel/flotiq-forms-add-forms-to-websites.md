@@ -83,6 +83,16 @@ checking `multiple` option in media relation filed in Content Type Definition se
 
 Other relations are displayed as a checkbox or radio button group, determined by `multiple` option in relation field in Content Type Definition settings, which form was generated for.
 
+Single relations display example:
+![](images/single-relation-display-example.png){: .center .border}
+
+
+Multiple relations display example:
+![](images/multiple-relations-display-example.png){: .center .border}
+
+!!! note
+    Your relation Content Type Definition must have `name` attribute to display properly!
+
 !!! note
     You can display only existing relations. You cannot make user add one by form.
 

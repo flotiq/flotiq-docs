@@ -245,7 +245,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | This value is already used                   | Send when the property has to be unique, and the value is already used in an existing object of that type |
 | Must be at least 1 characters long           | Send when the property is required, and an empty string was sent in object                                |
-| The property {name} is required              | Send when the property is required and was missing in the sent object                                     |
+| The property \{name\} is required              | Send when the property is required and was missing in the sent object                                     |
 | String value found, but a number is required | Send when the type of the property is `number` and string was sent                                        |
 | The value does not match possible options    | Send when sent value do not match options in `select` and `radio` type                                    |
 | Does not match the regex pattern {pattern}   | Send when the value does not match regex pattern specified for the property                               |

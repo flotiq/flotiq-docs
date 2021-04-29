@@ -96,7 +96,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         const request = require('request');
 
         const options = {
-            method: 'DELETE',
+            method: 'GET',
             url: 'https://api.flotiq.com/api/v1/content/blogposts',
             qs: {
                 page: '1',
@@ -130,7 +130,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                     "X-AUTH-TOKEN: YOUR_API_KEY",
                 ],
@@ -179,15 +179,13 @@ Filter types
 
     ```
     {
-        filters: {
-            title: {
-                type: "equals",
-                filter: "New object"
-            },
-            postContent: {
-                type: "contains",
-                filter: "content"
-            }
+        "title": {
+            "type": "equals",
+            "filter": "New object"
+        },
+        "postContent": {
+            "type": "contains",
+            "filter": "content"
         }
     }
     ```
@@ -195,13 +193,13 @@ Filter types
     === "CURL"
     
         ```
-        curl -X GET "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
+        curl -X GET "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%22title%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22New%20object%22%7D%2C%22postContent%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22content%22%7D%7D" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
         ```
 
     === "C# + Restasharp"
 
         ```
-        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D");
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%22title%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22New%20object%22%7D%2C%22postContent%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22content%22%7D%7D");
         var request = new RestRequest(Method.GET);
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
@@ -220,7 +218,7 @@ Filter types
         
         func main() {
         
-            url := "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D"
+            url := "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%22title%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22New%20object%22%7D%2C%22postContent%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22content%22%7D%7D"
         
             req, _ := http.NewRequest("GET", url, nil)
 
@@ -243,7 +241,7 @@ Filter types
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-            .url("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D")
+            .url("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%22title%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22New%20object%22%7D%2C%22postContent%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22content%22%7D%7D")
             .get()
             .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
             .build();
@@ -254,7 +252,7 @@ Filter types
     === "Java + Unirest"
       
         ```
-        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D")
+        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%22title%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22New%20object%22%7D%2C%22postContent%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22content%22%7D%7D")
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
@@ -265,7 +263,7 @@ Filter types
         const request = require('request');
 
         const options = {
-            method: 'DELETE',
+            method: 'GET',
             url: 'https://api.flotiq.com/api/v1/content/blogposts',
             qs: {
                 page: '1',
@@ -273,7 +271,7 @@ Filter types
                 order_by: 'internal.createdAt',
                 order_direction: 'asc',
                 hydrate: '0',
-                filters: '{title:{type:"equals",filter:"New object"},postContent:{type:filter:"content"}}'
+                filters: '{"title":{"type":"equals","filter":"New object"},"postContent":{"type":"contains","filter":"content"}}'
             },
             headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
         };
@@ -293,13 +291,12 @@ Filter types
         $curl = curl_init();
         
         curl_setopt_array($curl, [
-            CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7Btitle%3A%7Btype%3A%22equals%22%2Cfilter%3A%22New%20object%22%7D%2CpostContent%3A%7Btype%3A%22contains%22%2Cfilter%3A%22content%22%7D%7D",
+            CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%22title%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22New%20object%22%7D%2C%22postContent%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22content%22%7D%7D",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "DELETE",
             CURLOPT_HTTPHEADER => [
                     "X-AUTH-TOKEN: YOUR_API_KEY",
                 ],

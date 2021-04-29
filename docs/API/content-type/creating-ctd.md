@@ -75,7 +75,7 @@ Let's quickly look at the properties of this object. On the top level, there are
   <abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that type. Can only have `a-z` characters and `_`.
 - **label** - is a human-friendly label used to refer to this Content Type in the UI
 - **schemaDefinition** - contains an OpenAPI-compliant schema of the Content Type (more about this below)
-- **metaDefinition** - contains additional properties of the fields
+- **metaDefinition** - contains additional properties of the fields (more about this below)
 
 For simplicity - this example uses a straightforward Content Type, which only has two attributes:
 
@@ -84,26 +84,29 @@ For simplicity - this example uses a straightforward Content Type, which only ha
 
 and you can see those listed under the `schemaDefinition` property.
 
-!!! note
-    The `schemaDefinition` part of the JSON payload is based on the bare JSON OpenAPI 3.0 Schema and is fully compatible. 
-    It holds information about the properties of the 
-    <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">CT</abbr> 
-    (in the `properties` key), its types and which properties are required (`required` key). 
-    It always should have `"type": "object"`, as it is an object, and `"additionalProperties": false` 
-    to ensure that API users will not post garbage to the objects of this CTD.
+### The schema definition property
+The `schemaDefinition` part of the JSON payload is based on the bare JSON OpenAPI 3.0 Schema and is fully compatible. 
+It holds information about the properties of the 
+<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">CT</abbr> 
+(in the `properties` key), its types and which properties are required (`required` key). 
 
-    To ensure that all objects have a proper `id` property 
-    <abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">CTD</abbr> 
-    also should have information about the connection with `AbstractContentTypeSchemaDefinition` using:
-    ```
-    "allOf": [
-        {
-            "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
-        }
-    ],
-    ```
+Schema definition always should have `"type": "object"`, as it is an object, and `"additionalProperties": false` 
+to ensure that API users will not post garbage to the objects of this CTD.
 
-    All property names should have only `a-z`, `A-Z`, `0-9` and `_` characters. `id` and `objectType` property names are restricted.
+To ensure that all objects have a proper `id` property 
+<abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">CTD</abbr> 
+also should have information about the connection with `AbstractContentTypeSchemaDefinition` using:
+```
+"allOf": [
+    {
+        "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+    }
+],
+```
+
+All property names should have only `a-z`, `A-Z`, `0-9` and `_` characters. `id` and `objectType` property names are restricted.
+
+### The meta definition property
 
 Finally - the `metaDefinition` attribute is used to store additional properties, which for example, tell us how to 
 render forms for the Content Object; it holds information about the order of the properties (`order` key, which 
@@ -113,6 +116,8 @@ on relations of the object with other Content Types.
 In this case, Blog Post will have `title` property which will be unique and will render as text input in the CMS panel 
 and `postContent`, which can be duplicated and presented as CKEditor input in the CMS panel. 
 The first input in the form in the CMS panel will be `title` input, and the second will be `postContent`.
+
+### Creating Content Type Definition examples
 
 !!! Example
 
@@ -387,7 +392,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
         }
         ```
 
-#### Possible validation errors
+### Possible validation errors
 
 | Property path                                    | Possible errors                                                                                                                                                                                                                                                           | Description                                                                                                                                                            |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

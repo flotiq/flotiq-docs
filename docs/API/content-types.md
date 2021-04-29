@@ -72,9 +72,9 @@ allow the user to perform basic REST operations
 ![](images/endpoints.png){: .center .width75 .border}
 
 * [Create](content-type/creating-co.md)
-    * [Batch create](/API/content-type/creating-co/#batch-content-upload)
+    * [Batch create](/API/content-type/creating-co/#batch-create-content-objects-through-api)
 * [Update](content-type/updating-co.md)
-    * [Batch update](/API/content-type/creating-co/#batch-content-upload)
+    * [Batch update](/API/content-type/creating-co/#batch-create-content-objects-through-api)
 * [List](content-type/listing-co.md)
 * [Get single](content-type/getting-co.md)
 * [Delete](content-type/deleting-co.md)

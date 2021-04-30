@@ -1,11 +1,13 @@
 # Content Types
 
-On this page, we describe how to create **Content Type Definition** (**CTD**) using [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 
+This page describes how to create a **Content Type Definition** (**CTD**) using [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 
 
-We use simple Blog Post CTD as an example:
+We will use a simple Blog Post CTD as an example:
 
 Example: 
 !!! note "Example: Content Type Definition for Blog Post"
+    A blog post typically can be described with the following set of properties:
+
     * id – string, unique, required, Flotiq Dashboard adds this automatically
     * title – string, required, part of the object title
     * slug – string, unique, required 
@@ -13,18 +15,24 @@ Example:
     * thumbnail - relation to Media type
     * headerImage - relation to Media type
 
-You need an activated account to see the CTD page in the Dashboard. This documentation page does not describe how to create CTDs using API if you want to learn about it head to the [Working with Content Types API](../API/content-types.md)
+You need an activated account to see the CTD page in the Dashboard. 
+
+!!! hint 
+    This documentation page does not describe how to create CTDs using API if you want to learn about it head to the [Working with Content Types API](../API/content-types.md)
 
 ## Creating Content Type Definitions
 
 The Content Modeler is a convenient tool for modelling CTDs, which you can access through the ``Type definitions`` menu entry.
-The Modeler interacts with the ``/api/v1/internal/contenttype`` endpoint on behalf of the user and seamlessly integrate into the Content Management Platform.
+The Modeler interacts with the ``/api/v1/internal/contenttype`` endpoint on behalf of the user and seamlessly integrates into Flotiq's UI.
 
-Click Type definitions in the menu on the left to get to CTDs list:
+Click `Type definitions` in the menu on the left to get to CTDs list:
 
 ![](images/TypeDefinitionsMenu.png){: .center .border}
 
-If you don't have any CTDs yet, you see tiles with predefined CTDs. Select your first one or create such from scratch by choosing `Custom`. It is also possible to create additional CTD by clicking `Add definition` button in the top right corner of the page. To learn more about predefined CTDs, head [here](./predefined-content-types.md)
+If you don't have any Content Types defined yet, you will see a list of tiles which will help you to quickly create . Select your first one or create such from scratch by choosing `Custom`. It is also possible to create additional CTD by clicking `Add definition` button in the top right corner of the page. 
+
+!!! hint 
+    To learn more about our predefined CTDs and how to use them in your projects - head [here](./predefined-content-types.md)
 
 ![](images/TypeDefinitionsTiles.png){: .center .width75 .border}
 
@@ -35,42 +43,41 @@ In this example, click `Blog Post` predefined type.
 It has five properties:
 
 1. title
-
 2. slug
-
 3. content
-
 4. thumbnail
-
 5. headerImage
     
 
-Click pencil icon to edit title property. As you see title is required property of Text type. It will render Text Input in Blog Post Content Object form:
+Click the pencil icon to edit the `title` property. As you can see - `title` is a required property of Text type. Once you create the the CTD - this property will render as a Text Input in Blog Post Content Object form:
 
 ![](images/AddContentTypeDefinitionsTitle.png){: .center .width75 .border}
 
-Also, because `Part of object title` is checked, objects listing; to use them in the relation of other objects; use this property value to describe the object. Learn more about connecting objects via relations in [managing Content Objects](content-objects.md#relations). You can find more about property settings [below](#property-settings).
+Also, because the `Part of object title` checkbox is checked, the value of this field will be used to describe objects in different places of Flotiq's UI - object listings or when linking objects through relations.
 
-The slug property is also required, but also must be unique across all your blogpost objects in the system.
-Of course, if someone else would make blogpost CTD with the unique value of the slug, you could make an object with the same slug as the owner of the second blogpost CTD.
+!!! hint 
+    Learn more about connecting objects via relations in [managing Content Objects](content-objects.md#relations). 
+    You can find more about other property settings [below](#property-settings).
+
+The `slug` property is also required, but also must be unique across all your blogpost objects in the system.
 
 ![](images/AddContentTypeDefinitionsSlug.png){: .center .width75 .border}
 
-The content property is set to generate Rich Text input (we use CKEditor in Flotiq):
+The `content` property is set to generate Rich Text input (we use CKEditor in Flotiq):
 
 ![](images/AddContentTypeDefinitionsContent.png){: .center .width75 .border}
 
-The thumbnail property is the relation to Media CTD - a system type definition that anyone can use but sees only their entries. It can only have one element added.
+The `thumbnail` property is defined as a relation to Media CTD - a system type definition that anyone can use but sees only their entries. It can only have one element added.
 
 ![](images/AddContentTypeDefinitionsThumbnail.png){: .center .width75 .border}
 
-The headerImage is set up exactly like the thumbnail; the only difference is the property name.
+The `headerImage` is set up exactly like the thumbnail; the only difference is the property name.
 
 ![](images/AddContentTypeDefinitionsHeaderImage.png){: .center .width75 .border}
 
 You can add more fields by clicking the `Add property` button, which opens the modal window, where you can define the property name, data type, and it's basic validation. It opens the same modal as for editing of the property.
 
-After saving your CTD, Dashboard redirects you on the CTDs list, where you can click on the tile to list Content Objects or click on the cog to edit CTD.
+After saving your CTD you will be redirected to the CTDs list, where you can click on the tile to list Content Objects or click on the cog to further edit CTD.
 
 ![](images/TypeDefinitionsList.png){: .center .width75 .border}
 

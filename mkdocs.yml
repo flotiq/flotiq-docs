@@ -48,6 +48,7 @@ markdown_extensions:
       options:
         custom_icons:
           - theme/.icons
+  - pymdownx.tabbed
 
 extra_javascript:
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
@@ -80,10 +81,14 @@ nav:
     - 'Working with Content Types':
       - 'Overview': API/content-types.md
       - 'Creating new Content Types': API/content-type/creating-ctd.md
+      - 'Updating Content Types': API/content-type/updating-ctd.md
       - 'Listing Content Types': API/content-type/listing-ctd.md
+      - 'Getting single Content Type': API/content-type/getting-ctd.md
+      - 'Deleting Content Type': API/content-type/deleting-ctd.md
       - 'Creating new Content Objects': API/content-type/creating-co.md
       - 'Updating Content Objects': API/content-type/updating-co.md
       - 'Listing Content Objects': API/content-type/listing-co.md
+      - 'Getting single Content Object': API/content-type/getting-co.md
       - 'Deleting Content Objects': API/content-type/deleting-co.md
       - 'Listing deleted Content Objects': API/content-type/listing-deleted-co.md
     - 'Dynamic Content API': API/dynamic-content-api.md

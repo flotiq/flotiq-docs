@@ -3,88 +3,377 @@ description: How to add Content Objects in Flotiq
 
 # Content Objects
 
-Once a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> has been defined in the system - the user can create <abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that Content Type. This is done either directly through the API or via the convenient Content Entry tools provided within the Content Management Platform.
+Once a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
+has been defined in the system - the user can create 
+<abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that Content Type. 
+This is done either directly through the API or via the convenient Content Entry tools provided within the 
+Content Management Platform.
 
-## Authoring content through the API
+!!! note
+    You will need to use your `Application Read and write API KEY` to perform this action
+    or `User API KEY` scoped to accept create on the Content Type you wish to add.
+    Read more about [API keys and scoped API keys](/API/).
 
-The supporting endpoints of a given <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> allow the user to perform basic REST operations 
+## Creating Content Objects through the API
 
-![](../images/endpoints.png){: .center .width75 .border}
+For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
+defined according to the [create Content Type example](/API/content-type/creating-ctd), a very simple `POST` payload can be sent 
+to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}` 
+(where `name` is the name of the content type definition) to create a new Content Object:
 
-
-For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> defined according to the example described above, a very simple POST payload can be sent to the supporting endpoint to create a new Content Object:
-
-``` json
+```
 {
-  "id": "123123123",
   "title": "New object",
   "postContent": "This will be the new <b>content</b>"
 }
 ```
 
-Full curl request:
+!!! note
+    You can send custom `id` in the object data to assign a particular `id` to the object.
+    Random `id` will be assigned when the `id` property is not present in the object.
 
-```
-curl -X POST "https://api.flotiq.com/api/v1/content/blogposts" -H "accept: */*" -H "X-AUTH-TOKEN: YOUR API TOKEN" -H "Content-Type: application/json" -d "{\"id\":\"123123123\",\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}"
-```
+!!! Example
+
+    === "CURL"
+
+        ```shell
+        curl --location --request POST 'https://api.flotiq.com/api/v1/content/blogposts' \
+        --header 'X-AUTH-TOKEN: YOUR_API_KEY' \
+        --header 'Content-Type: application/json' \
+        --header 'Accept: */*' \
+        --data-raw '{
+          "title": "New object",
+          "postContent": "This will be the new <b>content</b>"
+        }'
+        ```
+
+    === "C# + Restasharp"
+
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts");
+        var request = new RestRequest(Method.POST);
+        request.AddHeader("content-type", "application/json");
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
+        request.AddParameter("application/json", "{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}", ParameterType.RequestBody);
+        IRestResponse response = client.Execute(request);
+        ```
+    
+    === "Go + Native"
+
+        ```
+        package main
+
+        import (
+            "fmt"
+            "strings"
+            "net/http"
+            "io/ioutil"
+        )
+        
+        func main() {
+        
+            url := "https://api.flotiq.com/api/v1/content/blogposts"
+        
+            payload := strings.NewReader("{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}")
+        
+            req, _ := http.NewRequest("POST", url, payload)
+        
+            req.Header.Add("content-type", "application/json")
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_KEY")
+        
+            res, _ := http.DefaultClient.Do(req)
+        
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+        
+            fmt.Println(res)
+            fmt.Println(string(body))
+            
+        }
+        ```
+    
+    === "Java + Okhttp"
+        
+        ```
+        OkHttpClient client = new OkHttpClient();
+
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, "{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}");
+        Request request = new Request.Builder()
+        .url("https://api.flotiq.com/api/v1/content/blogposts")
+        .post(body)
+        .addHeader("content-type", "application/json")
+        .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
+        .build();
+        
+        Response response = client.newCall(request).execute();
+        ```
+
+    === "Java + Unirest"
+      
+        ```
+        HttpResponse<String> response = Unirest.post("https://api.flotiq.com/api/v1/content/blogposts")
+            .header("content-type", "application/json")
+            .header("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .body("{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}")
+            .asString();
+        ```
+
+    === "Node + Request"
+      
+        ```
+        const request = require('request');
+
+        const options = {
+            method: 'POST',
+            url: 'https://api.flotiq.com/api/v1/content/blogposts',
+            headers: {'content-type': 'application/json', 'X-AUTH-TOKEN': 'YOUR_API_KEY'},
+            body: {title: 'New object', postContent: 'This will be the new <b>content</b>'},
+            json: true
+        };
+        
+        request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+        
+        console.log(body);
+        });
+        ```
+
+    === "PHP + CURL"
+    
+        ```
+        <?php
+
+        $curl = curl_init();
+        
+        curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}",
+        CURLOPT_HTTPHEADER => [
+                "X-AUTH-TOKEN: YOUR_API_KEY",
+                "content-type: application/json"
+            ],
+        ]);
+        
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        
+        curl_close($curl);
+        
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
 
 
-which should result in a ``200`` server response containing the details of the created object:
+!!! Responses
 
-![](http://minio.dev.cdwv.pl:80/hackmd/uploads/upload_a505c0503a97ac4961b81daee835d9c6.png){: .center .width75 .border}
+    === "200 OK"
+
+        Returned when data has been correct, and the object was saved
+
+        ```
+        {
+            "id": "blogposts-456712",
+            "internal": {
+                "contentType": "blogposts",
+                "createdAt": "2021-04-09T13:30:48+00:00",
+                "updatedAt": "2021-04-09T13:30:48+00:00",
+                "deletedAt": ""
+            },
+            "title": "New object",
+            "postContent": "This will be the new <b>content</b>"
+        }
+        ```
+
+    === "400 Validation error"
+
+        Returned when data has not been correct, and the object was not saved
+
+        ```
+        {
+            "id": [
+                "This value is already used",
+                "Must be at least 1 characters long",
+            ],
+            "title": [
+                "The property title is required",
+                "Must be at least 1 characters long",
+                "The property title is required"
+            ],
+            "postContent": [
+                "The property postContent is required",
+                "Must be at least 1 characters long",
+                "The property postContent is required"
+            ]
+        }
+        ```
+
+    === "401 Unauthorized"
+
+        Returned when API key was missing or incorrect
+  
+        ```
+        {
+            "code": 401,
+            "massage": "Unauthorized"
+        }
+        ```
+
+    === "404 Not found"
+
+        Returned when content type definition wasn't found
+
+        ```
+        {
+            "code": 404,
+            "massage": "Not found"
+        }
+        ```
+
+#### Possible validation errors
+
+| Error                                        | Description                                                                                               |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| This value is already used                   | Send when the property has to be unique, and the value is already used in an existing object of that type |
+| Must be at least 1 characters long           | Send when the property is required, and an empty string was sent in object                                |
+| The property \{name\} is required              | Send when the property is required and was missing in the sent object                                     |
+| String value found, but a number is required | Send when the type of the property is `number` and string was sent                                        |
+| The value does not match possible options    | Send when sent value do not match options in `select` and `radio` type                                    |
+| Does not match the regex pattern {pattern}   | Send when the value does not match regex pattern specified for the property                               |
+| This value does not exist in database        | Send when object attached in relation or media array does not exist in the database                       |
 
 
-If a property is required in the <abbr title="Content Type Definition - a JSON payload that defines the Content Type and it's validation rules">Content Type Definition</abbr> of the object being added, API will respond with `400` response and will list validation errors in the response body.
+### Creating Content Objects with relations to other types or media
 
-For example for request with payload with the missing title:
-```json
-{
-  "id": "123123123",
-  "postContent": "This will be the new <b>content</b>"
-}
-```
+To add objects with relations, you need to know ids and types of related objects. 
+Relations are always an array, even if only one relation object is allowed. 
+Order of relation object is preserved. 
+Every relation object have to have `type` property (now only `internal` is possible), 
+and `dataUrl` property containing relative url to the object (`/api/v1/content/{type}/{id}`).
 
-The server will respond with:
-```json
-{
-  "title": [
-    "The property title is required"
-  ]
-}
-```
+!!! Example
 
-If a property should be unique, API will respond with `400` response and will list validation errors in the response body, exactly like with required fields.
+    === "Relation to `test` content type object"
+        
+        ```
+        "relation": [
+            {
+              "dataUrl": "/api/v1/content/test/test-1",
+              "type": "internal"
+            }
+        ]
+        ```
 
-If you would post the same object as in the first example the server will response with:
+    === "Multiple relation to media objects"
+        
+        ```
+        "media": [
+            {
+              "dataUrl": "/api/v1/content/_media/_media-1",
+              "type": "internal"
+            },
+            {
+              "dataUrl": "/api/v1/content/_media/_media-2",
+              "type": "internal"
+            }
+        ]
+        ```        
 
-```json
-{
-  "title": [
-    "This value is already used"
-  ],
-  "id": [
-    "This value is already used"
-  ]
-}
-```
+
+??? "Example of an object containing all property types"
+
+    This exmple represents object for Content Type with every type of property, described [here](/API/content-type/creating-ctd/#example-with-every-type-of-field)
+
+    ```
+    {
+      "id": "example-1",
+      "geo": {
+        "lat": 0,
+        "lon": 0
+      },
+      "list": [
+        {
+          "text_in_subobject": "text",
+          "emain_in_subobject": "emain_in_subobject",
+          "media_in_subobject": [
+            {
+              "dataUrl": "/api/v1/content/_media/_media-1",
+              "type": "internal"
+            }
+          ],
+          "radio_in_subobject": "radio_in_subobject",
+          "number_in_subobject": 0,
+          "select_in_subobject": "Option a",
+          "checkbox_in_subobject": false,
+          "markdown_in_subobject": "markdown_in_subobject",
+          "relation_in_subobject": [
+            {
+              "dataUrl": "/api/v1/content/test/test-1",
+              "type": "internal"
+            }
+          ],
+          "textarea_in_subobject": "textarea_in_subobject",
+          "rich_text_in_subobject": "rich_text_in_subobject"
+        }
+      ],
+      "text": "02-02-2021",
+      "email": "email",
+      "media": [
+        {
+          "dataUrl": "/api/v1/content/_media/_media-1",
+          "type": "internal"
+        }
+      ],
+      "radio": "Option 1",
+      "number": 0,
+      "select": "Option 1",
+      "checkbox": false,
+      "markdown": "markdown",
+      "relation": [
+        {
+          "dataUrl": "/api/v1/content/test/test-1",
+          "type": "internal"
+        }
+      ],
+      "textarea": "textarea",
+      "rich_text": "rich_text"
+    }
+    ```
 
 
-## Batch content upload
+## Batch create Content Objects through API
 
-There is a way to add up to 100 of Content Objects at once. It is possible by using `/batch` endpoint (in our example the URL would be `https://api.flotiq.com/api/v1/content/blogposts/batch`). It can be only `insert` or `insert or update` operation. To use `insert or update` you need to set `updateExisting` to `true` in the query. 
+There is a way to add up to 100 Content Objects at once. 
+It is possible by using the `/batch` endpoint 
+(in our example, the URL would be `https://api.flotiq.com/api/v1/content/blogposts/batch`). 
+It can be only `insert` or `insert or update` operation. To use `insert or update` 
+you need to set `updateExisting` to `true` in the query. 
 
-All objects must meet the same conditions as when adding a single object. The only difference is an array of objects in the request body instead of one object.
+All objects must meet the same conditions as when adding a single object. 
+The only difference is an array of objects in the request body instead of one object.
+
+!!! note
+    In the next examples we assume that we have an object with id `existing-id-1` in our system.
 
 Updating one blog post and adding one new:
 
 !!! Example
-    
+
     ```
-    curl 'https://api.flotiq.com/api/v1/content/blogpost/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","postContent":"This will be the new <b>content</b>"},{"id":"123123124","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"existing-id-1","title":"Updated object","postContent":"This will be the updated <b>content</b>"},{"id":"new-object-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
     
     response (code: 200):
-    ```json
+    ```
     {
         "batch_total_count": 2,
         "batch_success_count": 2,
@@ -92,24 +381,24 @@ Updating one blog post and adding one new:
         "errors": []
     }
     ```
-    
+
 Trying updating one blog post and adding one new with wrong data:
-    
+
 !!! Example
-    
+
     ```
-    curl 'https://api.flotiq.com/api/v1/content/blogpost/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object"},{"id":"123123124","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"existing-id-1","title":"Updated object"},{"id":"new-object-2","title":"New object 3","postContent":"This will be the brand new <b>content</b>"}]'
     ```
     
     response (code: 400):
-    ```json
+    ```
     {
         "batch_total_count": 2,
         "batch_success_count": 1,
         "batch_error_count": 1,
         "errors": [
           {
-            "id": "123123123",
+            "id": "existing-id-1",
             "errors": {
               "postContent": [
                 "The property postContent is required"
@@ -121,15 +410,15 @@ Trying updating one blog post and adding one new with wrong data:
     ```
 
 Trying updating one blog post and adding one new with duplicated id:
-    
+
 !!! Example
-    
+
     ```
-    curl 'https://api.flotiq.com/api/v1/content/blogpost/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"123123123","title":"New object","content": "This will be the new <b>content</b>"},{"id":"123123123","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"example-id-1","title":"New object","content": "This will be the new <b>content</b>"},{"id":"example-id-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
     
     response (code: 400):
-    ```json
+    ```
     {
       "data": [
         "There are duplications in object data, key: id"
@@ -139,10 +428,12 @@ Trying updating one blog post and adding one new with duplicated id:
 
 Response parameters:
 
-| Parameter           | Description |
-| ------------------- | ----------- |
-| batch_total_count   | number of elements sent in the request, present when there are no duplications in data |
-| batch_success_count | number of correct elements sent in the request, present when there are no duplications in data |
-| batch_error_count   | number of incorrect elements sent in the request, present when there are no duplications in data |
+| Parameter           | Description                                                                                                                                            |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| batch_total_count   | number of elements sent in the request, present when there are no duplications in data                                                                 |
+| batch_success_count | number of correct elements sent in the request, present when there are no duplications in data                                                         |
+| batch_error_count   | number of incorrect elements sent in the request, present when there are no duplications in data                                                       |
 | errors              | array of errors in the elements, errors are objects containing the id of the object and list of errors, present when there are no duplications in data |
-| data                | present only when there are duplications in data, listing keys containing duplications (see example above) | 
+| data                | present only when there are duplications in data, listing keys containing duplications (see example above)                                             |
+
+[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

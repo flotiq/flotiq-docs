@@ -316,7 +316,7 @@ pre::before {
   /*}*/
 
   .md-typeset summary:after {
-    color: rgba(255, 255, 255, 0.26);
+    color: #4C9BA6;
   }
 
   .md-typeset .admonition.example > .admonition-title,

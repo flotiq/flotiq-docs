@@ -4,12 +4,6 @@ description: How to delete Content Objects in Flotiq
 
 # Deleting content objects
 
-Deleting of the object is done as the soft delete. All items will be still in the database, but not accessible by the API.
-It can be restored directly in the database, by the system administrator,
-if you need to bring back the deleted object, you can contact us on <a href="mailto:hello@flotiq.com">hello@flotiq.com</a>,
-please include your email on which the account was created, content type name and object id in the email.
-
-
 !!! note
     You will need to use your `Application Read and write API KEY` to perform this action
     or `User API KEY` scoped to accept delete on the Content Type you wish to delete.

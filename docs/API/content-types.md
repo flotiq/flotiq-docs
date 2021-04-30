@@ -72,13 +72,13 @@ allow the user to perform basic REST operations
 ![](images/endpoints.png){: .center .width75 .border}
 
 * [Create](content-type/creating-co.md)
-    * [Batch create](content-type/creating-co/#batch-create-content-objects-through-api)
+    * [Batch create](/API/content-type/creating-co/#batch-create-content-objects-through-api)
 * [Update](content-type/updating-co.md)
-    * [Batch update](content-type/creating-co/#batch-create-content-objects-through-api)
+    * [Batch update](/API/content-type/creating-co/#batch-create-content-objects-through-api)
 * [List](content-type/listing-co.md)
 * [Get single](content-type/getting-co.md)
 * [Delete](content-type/deleting-co.md)
-    * [Batch delete](content-type/deleting-co/#batch-deleting)
+    * [Batch delete](/API/content-type/deleting-co/#batch-deleting)
 * [List ids of deleted objects](content-type/listing-deleted-co.md)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

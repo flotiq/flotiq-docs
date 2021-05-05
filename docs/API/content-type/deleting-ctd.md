@@ -25,7 +25,9 @@ You can only delete Content Types that do not have any Content Objects or are no
     === "CURL"
     
         ```
-        curl -X DELETE "https://api.flotiq.com/api/v1/internal/contenttype/blogposts" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY'
+        curl --location --request DELETE "https://api.flotiq.com/api/v1/internal/contenttype/blogposts" \
+        --header 'accept: */*' \
+        --header 'X-AUTH-TOKEN: YOUR_API_KEY'
         ```
 
     === "C# + Restasharp"

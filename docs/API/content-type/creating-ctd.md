@@ -124,7 +124,38 @@ The first input in the form in the CMS panel will be `title` input, and the seco
     === "CURL"
     
         ```
-        curl -X POST "https://api.flotiq.com/api/v1/internal/contenttype" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H 'Content-Type: application/json' --data-binary '{"name":"blogposts","label":"Blog Posts","schemaDefinition":{"type":"object","allOf":[{"$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"},{"type":"object","properties":{"title":{"type":"string"},"postContent":{"type":"string"}}}],"required":["title","postContent"],"additionalProperties":false},"metaDefinition":{"propertiesConfig":{"title":{"label":"Title","inputType":"text","unique":true},"postContent":{"label":"Post content","inputType":"richtext","unique":false}},"order":["title","postContent"]}}'
+        curl --location --request POST "https://api.flotiq.com/api/v1/internal/contenttype" \
+        --header 'X-AUTH-TOKEN: YOUR_API_KEY' \
+        --header 'Content-Type: application/json' \
+        --header 'Accept: */*' \
+        --data-raw '{
+            "name":"blogposts",
+            "label":"Blog Posts",
+            "schemaDefinition":{
+                "type":"object",
+                "allOf":[{
+                    "$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"
+                    },{
+                    "type":"object",
+                    "properties":{
+                        "title":{"type":"string"},
+                        "postContent":{"type":"string"}}}
+                ],
+                "required":["title","postContent"],
+                "additionalProperties":false
+            },
+            "metaDefinition":{
+                "propertiesConfig":{
+                    "title":{
+                        "label":"Title",
+                        "inputType":"text",
+                        "unique":true},
+                    "postContent":{
+                        "label":"Post content",
+                        "inputType":"richtext",
+                        "unique":false}},
+                "order":["title","postContent"]}
+        }'
         ```
 
     === "C# + Restasharp"

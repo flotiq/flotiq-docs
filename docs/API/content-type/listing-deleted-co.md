@@ -26,7 +26,9 @@ containing the date after which the Content Objects were deleted; the date must 
     === "CURL"
 
         ```
-        curl -X GET "https://api.flotiq.com/api/v1/content/blogposts/removed?deletedAfter=2020-06-17%2009:00:00" -H "accept: application/json" -H "X-AUTH-TOKEN: YOUR_API_TOKEN"
+        curl --location --request GET "https://api.flotiq.com/api/v1/content/blogposts/removed?deletedAfter=2020-06-17%2009:00:00" \
+        --header "accept: application/json" \
+        --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ``` 
 
     === "C# + Restasharp"

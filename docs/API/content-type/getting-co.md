@@ -26,7 +26,9 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
     === "CURL"
 
         ``` 
-        curl -X GET "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
+        curl --location --request GET "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712" \
+        --header "accept: application/json" \
+        --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ```
 
     === "C# + Restasharp"

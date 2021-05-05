@@ -36,14 +36,14 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
     === "CURL"
 
-        ```shell
+        ```
         curl --location --request POST 'https://api.flotiq.com/api/v1/content/blogposts' \
         --header 'X-AUTH-TOKEN: YOUR_API_KEY' \
         --header 'Content-Type: application/json' \
         --header 'Accept: */*' \
         --data-raw '{
-          "title": "New object",
-          "postContent": "This will be the new <b>content</b>"
+            "title": "New object",
+            "postContent": "This will be the new <b>content</b>"
         }'
         ```
 

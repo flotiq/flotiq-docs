@@ -22,7 +22,9 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
     === "CURL" 
 
         ```
-        curl -X DELETE "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712" -H "accept: application/json" -H "X-AUTH-TOKEN: YOUR_API_TOKEN"
+        curl --location --request DELETE "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712" \
+        --header "accept: application/json" \
+        --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ``` 
 
     === "C# + Restasharp"

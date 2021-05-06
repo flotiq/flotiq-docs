@@ -48,7 +48,10 @@ Please contact us to tell us what kind of service you wish to migrate to receive
 
 ## Can I use Flotiq to make an online shop?
 
-Yes.
+Yes. U can use Flotiq to store your products, but we do not provide customer accounts or payment methods. 
+Our shop starters use [Snipcart](https://snipcart.com/) to manage purchase process.
+You can find shop starters [here](https://github.com/flotiq?q=gatsby-starter-products) 
+and [here](https://github.com/flotiq?q=scully-products).
 
 ## Can I integrate Flotiq with other tools like Mailchimp or Gmail?
 

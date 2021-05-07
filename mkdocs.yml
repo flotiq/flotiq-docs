@@ -85,6 +85,8 @@ nav:
       - 'Listing Content Types': API/content-type/listing-ctd.md
       - 'Getting single Content Type': API/content-type/getting-ctd.md
       - 'Deleting Content Type': API/content-type/deleting-ctd.md
+    - 'Working with Content Objects':
+      - 'Overview': API/content-objects.md
       - 'Creating new Content Objects': API/content-type/creating-co.md
       - 'Updating Content Objects': API/content-type/updating-co.md
       - 'Listing Content Objects': API/content-type/listing-co.md

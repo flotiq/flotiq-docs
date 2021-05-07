@@ -1,8 +1,8 @@
-title: How to handle Content Type Definitions | Flotiq docs
-description: How to handle Content Type Definitions in Flotiq
+title: How to handle Content Objects | Flotiq docs
+description: How to handle Content Objects in Flotiq
 
 
-# Content Types
+# Content Objects
 
 ##API description
 
@@ -50,17 +50,22 @@ API token (described across the documentation as `YOUR API TOKEN` or `YOUR_API_T
 All examples here have authentication in the request header, but you can also use `?auth_token=YOUR_API_TOKEN` in the request URL.
 You can learn how to obtain your API key [here](index.md).
 
-## Working with Content Type Definitions
+## Working with Content Objects
 
-The API endpoint ``/api/v1/internal/contenttype`` can be used to interact with
-<abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">
-Content Type Definitions</abbr> inside the Content Repository.
-The endpoint documentation is provided in the API docs and describes the following actions:
+The supporting endpoints of a given
+<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
+allow the user to perform basic REST operations
 
-* [Create](content-type/creating-ctd.md)
-* [Update](content-type/updating-ctd.md)
-* [List](content-type/listing-ctd.md)
-* [Get single](content-type/getting-ctd.md)
-* [Delete](content-type/deleting-ctd.md)
+![](images/endpoints.png){: .center .width75 .border}
+
+* [Create](content-type/creating-co.md)
+    * [Batch create](/docs/API/content-type/creating-co/#batch-create-content-objects-through-api)
+* [Update](content-type/updating-co.md)
+    * [Batch update](/docs/API/content-type/creating-co/#batch-create-content-objects-through-api)
+* [List](content-type/listing-co.md)
+* [Get single](content-type/getting-co.md)
+* [Delete](content-type/deleting-co.md)
+    * [Batch delete](/docs/API/content-type/deleting-co/#batch-deleting)
+* [List ids of deleted objects](content-type/listing-deleted-co.md)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

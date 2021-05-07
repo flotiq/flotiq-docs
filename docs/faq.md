@@ -5,13 +5,13 @@ description: Frequently Asked Questions on Flotiq CMS
 
 ## What's the difference between Flotiq and traditional CMSes?
 
-In traditional CMSes, data, content and presentation in one monolith; in Flotiq, content is separated from presentation.
+In traditional CMSes, data, content and presentation is one monolith; in Flotiq, content is separated from presentation.
 Because of that, you can enable content reuse and an omnichannel experience.
 Learn more in our [blog post](https://flotiq.com/blog/advantages-of-headless-cms).
 
 ## What's the difference between Flotiq and WordPress?
 
-WordPress at the core is traditional CMS with data entangled with the presentation,
+WordPress at its core is traditional CMS with data entangled with the presentation,
 it introduced the headless version some time ago, but it still is not based on Open API, 
 so using it is more challenging than using Flotiq API.
 Learn more in our [blog post](https://flotiq.com/blog/why-you-should-consider-flotiq-headless-cms-over-wordpress).

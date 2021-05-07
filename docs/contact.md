@@ -23,7 +23,7 @@ for any user from 8AP to 6PM CET, Monday to Friday.
 
 If the issue concerns Flotiq dashboard or API, API docs or SDKs, please report it on
 [Discord server](https://discord.com/invite/FwXcHnX).
-If the issue concerns any projects available on [GitHub](https://github.com/flotiq) (starters, docs, mobile app demo),
+If the issue concerns any projects available on [GitHub](https://github.com/flotiq) (starters, docs, mobile app demo, etc.),
 please report it in the respective project issues.
 
 ## Contact form

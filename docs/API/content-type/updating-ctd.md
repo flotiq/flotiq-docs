@@ -110,7 +110,38 @@ When you change existing property, depending on the type of changes, Flotiq will
     === "CURL"
     
         ```
-        curl -X PUT "https://api.flotiq.com/api/v1/internal/contenttype/blogposts" -H 'accept: */*' -H 'X-AUTH-TOKEN: YOUR_API_KEY' -H 'Content-Type: application/json' --data-binary '{"name":"blogposts","label":"Blog Posts","schemaDefinition":{"type":"object","allOf":[{"$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"},{"type":"object","properties":{"title":{"type":"string"},"postContent":{"type":"string"}}}],"required":["title","postContent"],"additionalProperties":false},"metaDefinition":{"propertiesConfig":{"title":{"label":"Title","inputType":"text","unique":true},"postContent":{"label":"Post content","inputType":"richtext","unique":false}},"order":["title","postContent"]}}'
+        curl --location --request PUT "https://api.flotiq.com/api/v1/internal/contenttype/blogposts" \
+        --header 'X-AUTH-TOKEN: YOUR_API_KEY' \
+        --header 'Content-Type: application/json' \
+        --header 'Accept: */*' \
+        --data-raw '{
+            "name":"blogpost",
+            "label":"Blog Posts",
+            "schemaDefinition":{
+                "type":"object",
+                "allOf":[{
+                    "$ref":"#/components/schemas/AbstractContentTypeSchemaDefinition"
+                    },{
+                    "type":"object",
+                    "properties":{
+                        "title":{"type":"string"},
+                        "postContent":{"type":"string"}}}
+                ],
+                "required":["title","postContent"],
+                "additionalProperties":false
+            },
+            "metaDefinition":{
+                "propertiesConfig":{
+                    "title":{
+                        "label":"Title",
+                        "inputType":"text",
+                        "unique":true},
+                    "postContent":{
+                        "label":"Post content",
+                        "inputType":"richtext",
+                        "unique":false}},
+                "order":["title","postContent"]}
+        }'
         ```
 
     === "C# + Restasharp"

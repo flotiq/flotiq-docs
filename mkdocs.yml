@@ -121,6 +121,7 @@ nav:
     - 'Zapier': Universe/zapier.md
     - 'Gatsby': Universe/gatsby.md
     - 'Scully': Universe/scully.md
+    - 'WordPress': Universe/wordpress.md
 #    - 'Netlify': Universe/netlify.md
 #    - 'Heroku': Universe/heroku.md
   - Deep dives:

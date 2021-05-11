@@ -3,7 +3,7 @@ description: Move your WordPress content pain-free to Flotiq
 
 # WordPress Flotiq sync plugin
 
-Use this WordPress plugin to connect your WordPress instance to Flotiq easily and synchronize your data.
+Use this [WordPress plugin](https://wordpress.org/plugins/flotiq-sync/) to connect your WordPress instance to Flotiq easily and synchronize your data.
 
 The purpose of this plugin is to let you fill your Flotiq account with your WordPress data.
 Thanks to this, you can take advantage of WordPress and dive into the Flotiq universe.

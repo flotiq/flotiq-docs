@@ -17,7 +17,7 @@ for links to the projects based on Flotiq to celebrate them with our users :)
 ## Chat
 
 Chat on the [Flotiq main page](https://flotiq.com) and on the [dashboard](https://editor.flotiq.com) is available 
-for any user from 8AP to 6PM CET, Monday to Friday.
+for any user from 8AM to 6PM CET, Monday to Friday.
 
 ## Issues reporting
 

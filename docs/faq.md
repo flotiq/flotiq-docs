@@ -48,7 +48,7 @@ Please contact us to tell us what kind of service you wish to migrate to receive
 
 ## Can I use Flotiq to make an online shop?
 
-Yes. U can use Flotiq to store your products, but we do not provide customer accounts or payment methods. 
+Yes. You can use Flotiq to store your products, but we do not provide customer accounts or payment methods. 
 Our shop starters use [Snipcart](https://snipcart.com/) to manage purchase process.
 You can find shop starters [here](https://github.com/flotiq?q=gatsby-starter-products) 
 and [here](https://github.com/flotiq?q=scully-products).
@@ -60,9 +60,9 @@ so you can integrate thousands of tools with Flotiq fast and painless.
 
 ## Can I recover my deleted data?
 
-If you need to bring back the deleted object, you can contact us on [hello@flotiq.com](mailto:hello@flotiq.com),
-please include your email, content type name and object id in the email.
-We can recover them from the backups, but remember that we keep backups for a short time, which unfortunately vary,
+If you need to bring back the deleted object, you can contact us on [hello@flotiq.com](mailto:hello@flotiq.com).
+Please include your email, content type name and object id in the email.
+We can recover them from the backups, but remember that we keep them for a short time, which unfortunately vary,
 only to bring the service back to work if something went wrong with deploying the new version or servers.
 
 ## I'm running out of space; what can I do?

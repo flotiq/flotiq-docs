@@ -114,12 +114,14 @@ Property types:
 | Type      | Description |
 | --------- | ----------- |
 | Text      | String type, generating Text Input in object form |
-| Textarea  | Long string type accepting new line characters, generating Textarea in object form |
-| Rich Text | Long string type accepting HTML, generating CKEditor in object form |
+| Textarea  | Long string type, accepting new line characters, generating Textarea in object form |
+| Rich Text | Long string type, accepting HTML, generating CKEditor in object form |
 | Email     | String type, generating Email Input in object form |
 | Number    | Number type accepting any number, integer, float and doubles, generating Number Input |
 | Radio     | String type, generating Radio Input in object form |
 | Checkbox  | Boolean type, generating single Checkbox in object form |
 | Select    | String type, generating Select Dropdown in object form |
-| Relation  | Array type accepts only objects specified in `Restrict to type`, items in relation array cannot be duplicated |
-| List      | Object type generates subforms in object form; the inside object can have all types of properties except List. Properties of the inside object cannot be required, unique, read-only or hidden, cannot be part of the object title either. |
+| Relation  | Array type, accepts only objects specified in `Restrict to type`, items in relation array cannot be duplicated |
+| List      | Object type, generates subforms in object form; the inside object can have all types of properties except List. Properties of the inside object cannot be required, unique, read-only or hidden, cannot be part of the object title either. |
+| Geo       | Object type, containing two attributes, `lat` and `lon` corresponding to  latitude and longitude |
+| Date time | String type, in the dashboard date can be added using date-picker or added by hand in `dd.mm.yyyy` format. Using API request attribute will accept only dates written in the `ISO 8601` standard. |

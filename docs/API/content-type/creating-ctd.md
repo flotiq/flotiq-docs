@@ -1,16 +1,14 @@
-title: How to add Content Type Definitions | Flotiq docs
-description: How to add Content Type Definitions in Flotiq API
+title: How to add Content Type Definitions | Flotiq docs description: How to add Content Type Definitions in Flotiq API
 
 # Creating new Content Types
 
-A new <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
-can be created either by sending a properly formatted POST request to the ``/api/v1/internal/contenttype`` 
+A new <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content
+Type</abbr>
+can be created either by sending a properly formatted POST request to the ``/api/v1/internal/contenttype``
 endpoint or through the [Content Modeler tool](/panel/content-types) provided with the platform.
 
-!!! note
-    You will need to use your `Application Read and write API KEY` to perform this action. 
-    Read more about [API keys and scoped API keys](/API/).
-
+!!! note You will need to use your `Application Read and write API KEY` to perform this action. Read more
+about [API keys and scoped API keys](/API/).
 
 ## Creating new Content Types via API
 
@@ -70,9 +68,11 @@ Content Type</abbr> is simply a ``POST`` call with a payload similar to:
 
 Let's quickly look at the properties of this object. On the top level, there are the following properties:
 
-- **name** - is an API-friendly name of the <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">
+- **name** - is an API-friendly name of
+  the <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">
   Content Type</abbr> and name of the endpoints that will be generated to handle requests with
-  <abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that type. Can only have `a-z` characters and `_`.
+  <abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that type. Can only
+  have `a-z` characters and `_`.
 - **label** - is a human-friendly label used to refer to this Content Type in the UI
 - **schemaDefinition** - contains an OpenAPI-compliant schema of the Content Type (more about this below)
 - **metaDefinition** - contains additional properties of the fields (more about this below)
@@ -85,17 +85,20 @@ For simplicity - this example uses a straightforward Content Type, which only ha
 and you can see those listed under the `schemaDefinition` property.
 
 ### The schema definition property
-The `schemaDefinition` part of the JSON payload is based on the bare JSON OpenAPI 3.0 Schema and is fully compatible. 
-It holds information about the properties of the 
-<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">CT</abbr> 
-(in the `properties` key), its types and which properties are required (`required` key). 
 
-Schema definition always should have `"type": "object"`, as it is an object, and `"additionalProperties": false` 
+The `schemaDefinition` part of the JSON payload is based on the bare JSON OpenAPI 3.0 Schema and is fully compatible. It
+holds information about the properties of the
+<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">CT</abbr>
+(in the `properties` key), its types and which properties are required (`required` key).
+
+Schema definition always should have `"type": "object"`, as it is an object, and `"additionalProperties": false`
 to ensure that API users will not post garbage to the objects of this CTD.
 
-To ensure that all objects have a proper `id` property 
-<abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">CTD</abbr> 
+To ensure that all objects have a proper `id` property
+<abbr title="Content Type Definition - a JSON payload that defines the Content Type, it's validation rules, etc.">
+CTD</abbr>
 also should have information about the connection with `AbstractContentTypeSchemaDefinition` using:
+
 ```
 "allOf": [
     {
@@ -104,18 +107,19 @@ also should have information about the connection with `AbstractContentTypeSchem
 ],
 ```
 
-All property names should have only `a-z`, `A-Z`, `0-9` and `_` characters. `id` and `objectType` property names are restricted.
+All property names should have only `a-z`, `A-Z`, `0-9` and `_` characters. `id` and `objectType` property names are
+restricted.
 
 ### The meta definition property
 
-Finally - the `metaDefinition` attribute is used to store additional properties, which for example, tell us how to 
-render forms for the Content Object; it holds information about the order of the properties (`order` key, which 
-should contain all properties of the object), and about type and validation of the field. It also includes information 
-on relations of the object with other Content Types. 
+Finally - the `metaDefinition` attribute is used to store additional properties, which for example, tell us how to
+render forms for the Content Object; it holds information about the order of the properties (`order` key, which should
+contain all properties of the object), and about type and validation of the field. It also includes information on
+relations of the object with other Content Types.
 
-In this case, Blog Post will have `title` property which will be unique and will render as text input in the CMS panel 
-and `postContent`, which can be duplicated and presented as CKEditor input in the CMS panel. 
-The first input in the form in the CMS panel will be `title` input, and the second will be `postContent`.
+In this case, Blog Post will have `title` property which will be unique and will render as text input in the CMS panel
+and `postContent`, which can be duplicated and presented as CKEditor input in the CMS panel. The first input in the form
+in the CMS panel will be `title` input, and the second will be `postContent`.
 
 ### Creating Content Type Definition examples
 
@@ -448,9 +452,8 @@ The first input in the form in the CMS panel will be `title` input, and the seco
 | metaDefinition.propertiesConfig.\{name\}           | `Wrong meta type for type of {propertyName}`                                                                                                                                                                                                                              | Send when property has incompatible inputType in `metaDefinition` properties config to its type in `schemaDefinition`                                                  |
 |                                                    | `You have to specify type of relation for {propertyName}`                                                                                                                                                                                                                 | Send when property is a relation to other type, but not specify in `validation` to which type it is restricted                                                         |
 
-
-After such call is made the 
-<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
+After such call is made the
+<abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
 is created - the User API is immediately extended to support interaction with this new Content Type:
 
 ![](../images/endpoints.png){: .center .width75 .border}
@@ -458,10 +461,11 @@ is created - the User API is immediately extended to support interaction with th
 All Content Types have automatically added properties from `AbstractContentTypeSchemaDefinition`; they are:
 
 * id - string identifier of Content Object, required in all requests, unique within the Content Type,
-* internal - object necessary to proper work of CMS backend 
+* internal - object necessary to proper work of CMS backend
   (information about dates of creation and update, the whole object is described in JSON below).
 
 **Schema of Abstract Content Type**
+
 ```
 "AbstractContentTypeSchemaDefinition": {
     "type": "object",
@@ -534,55 +538,36 @@ You can use every type of property multiple times across the Content Type Defini
 
 Input types of properties in `metaDefinition`:
 
-| inputType  | Possible for schema type | Description                                                                                                        | Additional keys in property | Type   | Description                                                                                                        | Additional keys                                                      | Description                                                                          |
-| ---------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------ | --------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| text       | string                   | Renders text input in form                                                                                         | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| textarea   | string                   | Renders textarea in form                                                                                           | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| markdown   | string                   | Renders Markdown in form                                                                                           | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| richtext   | string                   | Renders CKEditor in form                                                                                           | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| email      | string                   | Renders email input in form                                                                                        | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| number     | number                   | Renders number input in the form; min is 0, max is MAX INT                                                         | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| radio      | string                   | Renders radio input, options are taken from `options` property                                                     | unique*                     | bool   | Information if the value of the property should be unique in all object of the specified type, Can only be `false` | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | options                     | array  | Array of string options possible for the radio input                                                               | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| checkbox   | boolean                  | Renders single checkbox input returning `true`/`false` value                                                       | unique*                     | bool   | Information if the value of the property should be unique in all object of the specified type, Can only be `false` | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| select     | string                   | Renders single item select input, options are taken from `options` property                                        | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | options                     | array  | Array of string options possible for the select input                                                              | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| object     | array                    | Renders one or multiple forms for nested `meta definition` element                                                 | items                       | object | `Meta definition` for single list item                                                                             | same as in wrapping meta definition (`order` and `propertiesConfig`) |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| datasource | array                    | Renders picker for choosing the objects of specified or any other Content Type, depending on `validation` property | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | validation                  | array  | Object contains restrictions for datasource                                                                        | relationContenttype                                                  | Name of the Content Type to which relation should be restricted                      |
-|            |                          |                                                                                                                    |                             |        |                                                                                                                    | relationMultiple                                                     | Boolean value informing if the array should have only one ora can have more elements |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| geo        | object                   | Renders two fields, one for the latitude, second for the longitude, saves it as an object                          | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
+| inputType  | Possible for schema type | Description                                                                                                        | Additional keys in property                                   | 
+| ---------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- | 
+| text       | string                   | Renders text input in form                                                                                         | unique\*, label\*, isTitlePart, helpText                      |
+| textarea   | string                   | Renders textarea in form                                                                                           | unique\*, label\*, isTitlePart, helpText                      |
+| markdown   | string                   | Renders Markdown in form                                                                                           | unique*, label\*, helpText                                    |
+| richtext   | string                   | Renders CKEditor in form                                                                                           | unique\*, label\*, helpText                                   | 
+| email      | string                   | Renders email input in form                                                                                        | unique\*, label\*, isTitlePart, helpText                      | 
+| number     | number                   | Renders number input in the form; min is 0, max is MAX INT                                                         | unique\*, label\*, isTitlePart, helpText                      |
+| radio      | string                   | Renders radio input, options are taken from `options` property                                                     | unique\*, label\*, **options**, helpText                      |
+| checkbox   | boolean                  | Renders single checkbox input returning `true`/`false` value                                                       | unique\*, label\*, helpText                                   |
+| select     | string                   | Renders single item select input, options are taken from `options` property                                        | unique\*, label\*, options, isTitlePart, helpText             |
+| object     | array                    | Renders one or multiple forms for nested `meta definition` element                                                 | label\*, **items**, helpText                                  |
+| datasource | array                    | Renders picker for choosing the objects of specified or any other Content Type, depending on `validation` property | unique\*, label\*, **validation**, helpText                   |
+| geo        | object                   | Renders two fields, one for the latitude `lat`, second for the longitude `lon`, saves it as an object              | unique\*, label\*, helpText                                   |
+| date time  | string                   | Renders text input in form                                                                                         | unique\*, label\*, isTitlePart, helpText                      | 
 
 *Required property
+
+# Additional keys in property
+
+| Additional key name         | Type   | Description                                                                                                        | Additional keys                                                       | Description                                                                         |
+| --------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          |  none allowed                                                         ||
+| isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             |  none allowed                                                         ||
+| helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         |  none allowed                                                         ||
+| label*                      | string | People friendly name of the field                                                                                  |  none allowed                                                         ||
+|options                      | array  | Array of string options possible for the radio input                                                               |  none allowed                                                         ||
+| validation                  | array  | Object contains restrictions for datasource                                                                        |  relationContenttype                                                  | Name of the Content Type to which relation should be restricted                      |
+|||                                                                                                                                                         |  relationMultiple                                                     | Boolean value informing if the array should have only one ora can have more elements |
+| items                       | object | `Meta definition` for single list item                                                                             |  same as in wrapping meta definition (`order` and `propertiesConfig`) ||
 
 ### Example with every type of field
 
@@ -990,6 +975,7 @@ Input types of properties in `metaDefinition`:
 
 ## Creating Content Types through the Content modeller
 
-If you'd rather use our graphical interface to design your Content Types - read the [Content modeller documentation](/panel/content-types/)
+If you'd rather use our graphical interface to design your Content Types - read
+the [Content modeller documentation](/panel/content-types/)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

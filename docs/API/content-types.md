@@ -210,7 +210,8 @@ Input types in `metaDefinition` of properties:
     | datasource | array                    | Renders picker for choosing the objects of specified or any other Content Type, depending on `validation` property | unique                      | *                                                     | none allowed        |
     |            |                          |                                                                                                                    | validation                  | Object contains restrictions for datasource           | relationContenttype | Name of the Content Type to which relation should be restricted |
     |            |                          |                                                                                                                    |                             |                                                       | relationMultiple    | Boolean value informing if the array should have only one ora can have more elements |
-    | geo        | object                   | Renders two fields, one for the latitude, second for the longitude, saves it as an object                          | unique                      | *                                                     | none allowed        | 
+    | geo        | object                   | Renders two fields, one for the latitude, second for the longitude, saves it as an object                          | unique                      | *                                                     | none allowed        |
+    | dateTime   | string                   | Render two or single field: date time picker, time picker                                                          | showTime                    |  enable time picker                                   | none allowed        |
     
     *Information if the value of the property should be unique in all object of the specified type. 
 

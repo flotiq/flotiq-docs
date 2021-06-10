@@ -1,13 +1,14 @@
 site_name: Flotiq Developer Documentation
 site_url: https://flotiq.com/docs/
-copyright: Copyright &copy; 2019 onwards Flotiq
+copyright: Copyright &copy; 2019 onwards <a target="_blank" href="https://www.flotiq.com/">Flotiq<a>
 dev_addr: 0.0.0.0:4000
 theme:
-     name: 'material'
-     logo: 'API/images/f.png'
-     custom_dir: 'theme'
+     name: material
+     logo: API/images/f.png
+     favicon: API/images/favicon.ico
+     custom_dir: theme
      palette:
-         primary: 'teal'
+         primary: teal
      features:
        - instant
 plugins:
@@ -16,9 +17,10 @@ plugins:
   - git-revision-date-localized
 
 extra_css:
-  - 'css/flotiq.css'
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/nord.min.css
+  - https://flotiq-form-generator-styles.s3.amazonaws.com/styles.css
+  - 'css/flotiq.css'
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
 google_analytics:
@@ -40,6 +42,13 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - theme/.icons
+  - pymdownx.tabbed
 
 extra_javascript:
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
@@ -51,25 +60,46 @@ extra_javascript:
 extra:
   disqus: 'flotiq'
   social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/flotiq
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/FwXcHnX
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UC4wpV-D9mIt1JjN_g_iyXXw
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/flotiq
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/flotiq
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/flotiq/
+    - icon: custom/flotiq
+      link: https://flotiq.com/
+
 
 nav:
   - 'Home': index.md
   - API:
     - 'API access & scoped keys': API/index.md
-    - 'Working with Content Types': API/content-types.md
+    - 'Working with Content Types':
+      - 'Overview': API/content-types.md
+      - 'Creating new Content Types': API/content-type/creating-ctd.md
+      - 'Updating Content Types': API/content-type/updating-ctd.md
+      - 'Listing Content Types': API/content-type/listing-ctd.md
+      - 'Getting single Content Type': API/content-type/getting-ctd.md
+      - 'Deleting Content Type': API/content-type/deleting-ctd.md
+    - 'Working with Content Objects':
+      - 'Overview': API/content-objects.md
+      - 'Creating new Content Objects': API/content-type/creating-co.md
+      - 'Updating Content Objects': API/content-type/updating-co.md
+      - 'Listing Content Objects': API/content-type/listing-co.md
+      - 'Getting single Content Object': API/content-type/getting-co.md
+      - 'Deleting Content Objects': API/content-type/deleting-co.md
+      - 'Listing deleted Content Objects': API/content-type/listing-deleted-co.md
     - 'Dynamic Content API': API/dynamic-content-api.md
     - 'GraphQL': API/graph-ql.md
     - 'Generating SDKs': API/generate-package.md
-    - 'OpenAPI': API/open-api-schema.md
+    - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
     - 'Working with media': API/media-library.md
-    - 'Zapier & integrations': API/zapier.md
+    - 'Workflows': 'API/workflow/content-publishing-workflow.md'
   - Dashboard:
     - 'Overview': panel/index.md
     - 'Content types': panel/content-types.md
@@ -85,6 +115,15 @@ nav:
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
     - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
     - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
+  - Flotiq Universe:
+    - 'Overview': Universe/index.md
+    - 'Postman': Universe/postman.md
+    - 'Zapier': Universe/zapier.md
+    - 'Gatsby': Universe/gatsby.md
+    - 'Scully': Universe/scully.md
+    - 'WordPress': Universe/wordpress.md
+#    - 'Netlify': Universe/netlify.md
+#    - 'Heroku': Universe/heroku.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md
@@ -101,3 +140,5 @@ nav:
     - 'Custom domains in Heroku': Deep-Dives/add-a-custom-domain-to-heroku-for-free.md
     - 'Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content': 'Deep-Dives/netlify-zapier-gatsby-serverless-deployment-pipeline.md'
     - 'Upload media example app': Deep-Dives/upload-media.md
+  - FAQ: faq.md
+  - 'Contact us': contact.md

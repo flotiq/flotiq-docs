@@ -7,20 +7,19 @@ The Flotiq API provides a powerful search engine, which is a wrapper for Elastic
 
 You can use the search engine via the `GET ​/api​/v1​/search` endpoint to search through all Content Objects.
 
-??? "Search parameters "
+???+ "Search parameters "
     | Name            | Type   | Description                                                                                   |
     |-----------------| -------| ----------------------------------------------------------------------------------------------|
-    | q               | string | Query (required)                                                                              |
+    | q               | string | Query (required).                                                                              |
     | page            | number | Listing page number                                                                           |
     | limit           | number | Results per page                                                                              |
-    | order_by        | string | Order by field                                                                                |
-    | order_direction | string | Order direction                                                                               |
-    | content_type    | array  | Restrict search to content types set                                                          |
-    | aggregate_by    | array  | Fields to aggregate results direction                                                         |
-    | filters         | array  | Filter by object properties. Expected format: `filters[propertyName]=value1&filters[propertyName2]=value2`|
+    | order_by        | string | Order by a field.                                                                           |                                                                               
+    | content_type[]    | array  | Restrict search to content types set  The expected format: `content_type[]=type1&content_type[]=type2`                                                        |
+    | aggregate_by[]    | array  | Fields to aggregate results direction. The expected format: `aggregate_by[]=name&aggregate_by[]=slug`                               |
+    | filters[]         | array  | Filter by object properties. The expected format: `filters[propertyName]=value1&filters[propertyName2]=value2`|
     | geo_filters     | array  | Filter by object geolocation properties. Example value: `geo_distance,1.50km,40.1,-19.2` which means: `filter name`, `distance`, `latitude`, `longitude`. For more information see [ElasticSearch docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-geo-distance-query.html). Only `geo_distance` query is supported. | 
     | post_filters    | array  | Filter by object properties. Use it when you want aggregated counts without filters applied. Expected format: `filters[propertyName]=value1&filters[propertyName2]=value2` |                                                                                              |
-    | fields          | array  | List of content fields to be searched                                                         |
+    | fields[]          | array  | List of content fields to be searched. The expected format: `fields[]=field1&fields[]=field2`                                                         |
     | order_by        | string | Name of the field to sort results by (they are always primarily sorted by `_score`)            |
     | order_direction | string | Direction of sorting (`asc` for ascending or `desc` for descending, default `asc`)           |
 

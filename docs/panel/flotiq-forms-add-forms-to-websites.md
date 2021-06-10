@@ -16,6 +16,15 @@ Here are the most important features of Flotiq Forms:
 - automatically updated to match your Flotiq Content Types
 - provides anti-spam and security features out of the box.
 
+## Restrictions
+
+Not all type of form fields are supported. The unsupported field types are:
+
+- Markdown
+- Rich text
+- List
+- Geo
+
 ## How to generate HTML forms
 
 You can generate an HTML form that you can put on any webpage you like. 
@@ -54,14 +63,38 @@ When domain and API key are in place, you can click on the `Generate` button. Pl
 
 Once your Flotiq Forms are generated, you will see a window with two lines of HTML code. You need to put them inside your HTML page to start immediately collecting data to your Flotiq account.
 
-1. Put the first code - `<flotiq-form/>` in your page, wherever you want the form to be displayed. 
-2. Paste the second line - `<script ... ></script>` at the end of your HTML, just before the  `</body>` tag.
+1. Put the first code - `<link rel="stylesheet" href="https://flotiq-form-generator-styles.s3.amazonaws.com/styles.css"/>` in the `<head>` section of your page, if you wish to use our styles: 
+![](images/FormCssExample.png){: .center .border}
+1. Put the second code - `<flotiq-form/>` in your page, wherever you want the form to be displayed. 
+1. Paste the third line - `<script ... ></script>` at the end of your HTML, just before the  `</body>` tag.
 
 ![](images/GenerateModal4.png){: .center .border}
 
 !!! note
     Please be advised that as for now you can add only one type of the form on a page. 
     If you wish to use more than one form, you have to put them on different sub-pages.
+
+## Media
+
+Media relations are handled as a file upload. Sum of files sizes cannot exceed 4MB. You can allow multiple file upload by 
+checking `multiple` option in media relation filed in Content Type Definition settings, which form was generated for.
+
+## Other relations
+
+Other relations are displayed as a checkbox or radio button group, determined by `multiple` option in relation field in Content Type Definition settings, which form was generated for.
+
+Single relations display example:
+![](images/single-relation-display-example.png){: .center .border}
+
+
+Multiple relations display example:
+![](images/multiple-relations-display-example.png){: .center .border}
+
+!!! note
+    Your relation Content Type Definition must have `name` attribute to display properly!
+
+!!! note
+    You can display only existing relations. You cannot make user add one by form.
 
 ## Working example
 

@@ -108,6 +108,7 @@ Here you can find the explanation of property settings and for what types of pro
 | Options              | Radio, Select                                              |   no                                          |  no    | Options to choose from in generated object form |
 | Multiple             | Relation                                                   |   no                                          |  no    | Information if the list of objects in relation should be bigger than one |
 | Restrict to type     | Relation                                                   |   yes (only when Property type == Relation)   |  no    | Information on which types can be attached as the relation |
+| Show Time            | Date time                                                  |   no                                          |  no    | Enables the time picker next to the date picker  |
 
 Property types:
 
@@ -123,3 +124,4 @@ Property types:
 | Select    | String type, generating Select Dropdown in object form |
 | Relation  | Array type accepts only objects specified in `Restrict to type`, items in relation array cannot be duplicated |
 | List      | Object type generates subforms in object form; the inside object can have all types of properties except List. Properties of the inside object cannot be required, unique, read-only or hidden, cannot be part of the object title either. |
+| Date time | String type, the correct format is: RRRR-MM-DD or RRRR-MM-DDTHH-mm. Example: 2021-06-17T13:10 or 2021-06-17.

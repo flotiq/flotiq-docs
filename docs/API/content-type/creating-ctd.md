@@ -1,7 +1,7 @@
 title: How to add Content Type Definitions | Flotiq docs
 description: How to add Content Type Definitions in Flotiq API
 
-# Creating new Content Types
+# Creating new Content Types :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
 
 A new <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
 can be created either by sending a properly formatted POST request to the ``/api/v1/internal/contenttype`` 
@@ -998,3 +998,5 @@ Input types of properties in `metaDefinition`:
 If you'd rather use our graphical interface to design your Content Types - read the [Content modeller documentation](/panel/content-types/)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}
+
+[^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}

@@ -390,3 +390,9 @@ pre::before {
 .flotiq-form .mat-form-field.mat-focused.mat-primary .mat-form-field-ripple {
   background-color: #26a69a;
 }
+
+.pricing-info {
+  font-size: 16px;
+  color: #dfb81c;
+  cursor: help;
+}

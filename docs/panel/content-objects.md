@@ -2,7 +2,7 @@
 
 Once a Content Type has been defined in the system - the user can create Content Objects of that Content Type. This is done either directly through the API or via the convenient Content Entry tools provided within the [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 
 
-## Authoring content
+## Authoring content :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
 
 The Content Entry component consists of two elements - content browser and the content editor.
 
@@ -73,3 +73,6 @@ Or by selecting it on the content browser, and clicking 'Remove selected' button
 
 !!! warning
     You can only remove objects that are not linked to any other object in the system.
+
+
+[^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}

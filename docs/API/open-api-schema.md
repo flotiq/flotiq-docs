@@ -8210,7 +8210,7 @@ as not all tools can handle the whole Open API Schema format.
     }
     ```
 
-## Getting your Scoped Open API Schema
+## Getting your Scoped Open API Schema :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Unavailable in Free subscription plan" }[^1]
 
 If you want to get your Scoped Open API Schema from Flotiq, 
 you have to make a call at the following endpoint with the User Defined API key (using a Web browser, Postman or Insomnia):
@@ -9305,3 +9305,6 @@ You can use the same request parameters for scoped API schemas as for full API s
     Read more about [API keys and scoped API keys](/API/)
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+
+
+[^1]: Unavailable in Free subscription plan. Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}

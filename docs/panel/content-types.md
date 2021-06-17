@@ -20,7 +20,7 @@ You need an activated account to see the CTD page in the Dashboard.
 !!! hint 
     This documentation page does not describe how to create CTDs using API if you want to learn about it head to the [Working with Content Types API](../API/content-types.md)
 
-## Creating Content Type Definitions
+## Creating Content Type Definitions :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
 
 The Content Modeler is a convenient tool for modelling CTDs, which you can access through the ``Type definitions`` menu entry.
 The Modeler interacts with the ``/api/v1/internal/contenttype`` endpoint on behalf of the user and seamlessly integrates into Flotiq's UI.
@@ -124,4 +124,7 @@ Property types:
 | Select    | String type, generating Select Dropdown in object form |
 | Relation  | Array type accepts only objects specified in `Restrict to type`, items in relation array cannot be duplicated |
 | List      | Object type generates subforms in object form; the inside object can have all types of properties except List. Properties of the inside object cannot be required, unique, read-only or hidden, cannot be part of the object title either. |
-| Date time | String type, the correct format is: RRRR-MM-DD or RRRR-MM-DDTHH-mm. Example: 2021-06-17T13:10 or 2021-06-17.
+| Date time | String type, the correct format is: YYYY-MM-DD or YYYY-MM-DDTHH-mm. Example: 2021-06-17T13:10 or 2021-06-17.
+
+
+[^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}

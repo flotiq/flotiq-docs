@@ -1,7 +1,7 @@
 title: How to add Content Objects | Flotiq docs
 description: How to add Content Objects in Flotiq
 
-# Content Objects
+# Content Objects :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
 
 Once a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
 has been defined in the system - the user can create 
@@ -437,3 +437,6 @@ Response parameters:
 | data                | present only when there are duplications in data, listing keys containing duplications (see example above)                                             |
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+
+
+[^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}

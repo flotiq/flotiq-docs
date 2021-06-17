@@ -5,7 +5,7 @@ description: Learn more about the powerful Media Library that Flotiq offers.
 
 You can interact with the media library via Flotiq Dashboard or REST API. In this section, we show you how to use our REST API to store and retrieve files.
 
-##File upload
+##File upload :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
 
 To upload a file to the Flotiq, you need to send `POST` multipart request to `/api/media` endpoint with required request parameters.
 
@@ -249,4 +249,8 @@ We've changed the upload process during Flotiq evolution. Below you can see docs
         
     2. Next step is to create Content Object passing data from step 1. (id, size, type, etc.) with Content Type Definition of `_media` type to the `/api/v1/content/_media`  endpoint.
     
-    Saving the `_media` type object can only take place after the file has been saved on the server. At that point, the object identifier is assigned. The `id` property is unique, final and immutable and is used to create the URI of the uploaded object. 
+    Saving the `_media` type object can only take place after the file has been saved on the server. At that point, the object identifier is assigned. The `id` property is unique, final and immutable and is used to create the URI of the uploaded object.
+
+[Register to start storing your files](https://editor.flotiq.com/register.html){: .flotiq-button}
+
+[^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}

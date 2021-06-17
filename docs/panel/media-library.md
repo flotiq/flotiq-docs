@@ -9,7 +9,7 @@ The Media Library has 2 sections:
 * Uploaded files - shows files currently uploaded by the user, as well as those downloaded from Unsplash
 * Stock photos - allows to browse through and download images from Unsplash.
 
-## Uploaded files
+## Uploaded files :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
 
 This section of the Media Library gives you access to all of your files that you're storing in Flotiq. You can upload, search, sort, and remove files from the library in this screen.
 
@@ -27,3 +27,5 @@ In order to use images from Unsplash - you need to download them to your library
 ## API Endpoints
 
 Media library is accessible via `/api/v1/media/` endpoints. Visit your API docs to learn more.
+
+[^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}

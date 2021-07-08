@@ -63,7 +63,7 @@ You can specify some advanced settings to make the form fit better to your page 
 
 ### Advanced settings:
 
-#### ReCatpcha settings
+#### ReCaptcha settings
 
 Protect your form against bots using reCAPTCHA.
 You need a Google account and registered site

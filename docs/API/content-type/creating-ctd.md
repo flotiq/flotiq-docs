@@ -513,20 +513,20 @@ All Content Types have automatically added properties from `AbstractContentTypeS
 
 Property types (as of `schemaDefinition` properties), recognized by CMS panel:
 
-| type    | Description                                                                                                                                   | Additional keys in property | Description                                                                                                                                                                                                                                                                  |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| string  | Any string data that includes date and files                                                                                                  | minLength                   | Minimal length of filed content                                                                                                                                                                                                                                              |
-|         |                                                                                                                                               | pattern                     | Regex pattern of filed content                                                                                                                                                                                                                                               |
-|         |                                                                                                                                               | default                     | Default value of the field                                                                                                                                                                                                                                                   |
-| number  | Any number, integer, float and double                                                                                                         | minLength                   | Minimal length of filed content                                                                                                                                                                                                                                              |
-|         |                                                                                                                                               | default                     | Default value of the field                                                                                                                                                                                                                                                   |
-| boolean | Represents two values, `true` and `false`. Note that truthy and falsy values such as "true", "", 0 or null are not considered boolean values. | none allowed                |                                                                                                                                                                                                                                                                              |
-| array   | Used for lists or relations.                                                                                                                  | items                       | For relations: it has to be an object containing `{"$ref": "#/components/schemas/DataSource"}`, as the items of the array are objects described in DataSource schema.<br>For list items: it should be a valid json schema following the same restrictions as wrapping schema |
-|         |                                                                                                                                               | minItems                    | `0` for a not required property, and `1` for required property                                                                                                                                                                                                               |
-| object  | Used for geo point type                                                                                                                       | properties                  | must be `{"lat": {"type": "number"},"lon": {"type": "number"}}`                                                                                                                                                                                                              |
-|         |                                                                                                                                               | additionalProperties        | must be `false`                                                                                                                                                                                                                                                              |
-|         |                                                                                                                                               | type                        | must be `object`                                                                                                                                                                                                                                                             |
-|         |                                                                                                                                               | required                    | if the field is required it must be `["lat","lon"]`                                                                                                                                                                                                                          |
+| type    | Description                                                                                                                                   | Additional keys in property | Description                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| string  | Any string data that includes date and files                                                                                                  | minLength                   | Minimal length of filed content                                                                                                                                                                                                                                                                                                                                                                         |
+|         |                                                                                                                                               | pattern                     | Regex pattern of filed content                                                                                                                                                                                                                                                                                                                                                                          |
+|         |                                                                                                                                               | default                     | Default value of the field                                                                                                                                                                                                                                                                                                                                                                              |
+| number  | Any number, integer, float and double                                                                                                         | minLength                   | Minimal length of filed content                                                                                                                                                                                                                                                                                                                                                                         |
+|         |                                                                                                                                               | default                     | Default value of the field                                                                                                                                                                                                                                                                                                                                                                              |
+| boolean | Represents two values, `true` and `false`. Note that truthy and falsy values such as "true", "", 0 or null are not considered boolean values. | none allowed                |                                                                                                                                                                                                                                                                                                                                                                                                         |
+| array   | Used for lists or relations.                                                                                                                  | items                       | For relations: it has to be an object containing `{"$ref": "#/components/schemas/DataSource"}`, as the items of the array are objects described in DataSource schema.<br>For list items: it should be a valid json schema following the same restrictions as wrapping schema                                                                                                                            |
+|         |                                                                                                                                               | minItems                    | `0` for a not required property, and `1` for required property                                                                                                                                                                                                                                                                                                                                          |
+| object  | Used for geo point and block types                                                                                                            | properties                  | must be `{"lat": {"type": "number"},"lon": {"type": "number"}}` for geo object and `{"time": {"type": "number"}, "blocks": {"type": "array", "items": {"type": "object", "properties": {"id": {"type": "string"}, "type": {"type": "string"}, "data": {"type": "object", "properties": {"text": {"type": "string"}}, "additionalProperties": true}}}}, "version": {"type": "string"}}` for block object |
+|         |                                                                                                                                               | additionalProperties        | must be `false`                                                                                                                                                                                                                                                                                                                                                                                         |
+|         |                                                                                                                                               | type                        | must be `object`                                                                                                                                                                                                                                                                                                                                                                                        |
+|         |                                                                                                                                               | required                    | if it is geo field and the field is required it must be `["lat","lon"]`                                                                                                                                                                                                                                                                                                                                                     |
 
 You can use every type of property multiple times across the Content Type Definition.
 
@@ -534,58 +534,62 @@ You can use every type of property multiple times across the Content Type Defini
 
 Input types of properties in `metaDefinition`:
 
-| inputType  | Possible for schema type | Description                                                                                                        | Additional keys in property | Type   | Description                                                                                                        | Additional keys                                                      | Description                                                                          |
-| ---------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------ | --------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| text       | string                   | Renders text input in form                                                                                         | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| textarea   | string                   | Renders textarea in form                                                                                           | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| markdown   | string                   | Renders Markdown in form                                                                                           | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| richtext   | string                   | Renders CKEditor in form                                                                                           | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| email      | string                   | Renders email input in form                                                                                        | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| number     | number                   | Renders number input in the form; min is 0, max is MAX INT                                                         | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| radio      | string                   | Renders radio input, options are taken from `options` property                                                     | unique*                     | bool   | Information if the value of the property should be unique in all object of the specified type, Can only be `false` | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | options                     | array  | Array of string options possible for the radio input                                                               | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| checkbox   | boolean                  | Renders single checkbox input returning `true`/`false` value                                                       | unique*                     | bool   | Information if the value of the property should be unique in all object of the specified type, Can only be `false` | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| select     | string                   | Renders single item select input, options are taken from `options` property                                        | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | options                     | array  | Array of string options possible for the select input                                                              | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| object     | array                    | Renders one or multiple forms for nested `meta definition` element                                                 | items                       | object | `Meta definition` for single list item                                                                             | same as in wrapping meta definition (`order` and `propertiesConfig`) |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| datasource | array                    | Renders picker for choosing the objects of specified or any other Content Type, depending on `validation` property | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | validation                  | array  | Object contains restrictions for datasource                                                                        | relationContenttype                                                  | Name of the Content Type to which relation should be restricted                      |
-|            |                          |                                                                                                                    |                             |        |                                                                                                                    | relationMultiple                                                     | Boolean value informing if the array should have only one ora can have more elements |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| geo        | object                   | Renders two fields, one for the latitude, second for the longitude, saves it as an object                          | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-| dateTime   | string                   | Render date picker input, and time picker if option showTime is selected.                                          | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                         | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                             | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                  | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | showTime                    | bool   | Whether to display a picker for hours                                                                              | none allowed                                                         |                                                                                      |
-|            |                          |                                                                                                                    | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                          | none allowed                                                         |                                                                                      |
+| inputType  | Possible for schema type | Description                                                                                                        | Additional keys in property | Type   | Description                                                                                                                                                                                 | Additional keys                                                      | Description                                                                          |
+| ---------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------ | --------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| text       | string                   | Renders text input in form                                                                                         | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                                                                                                      | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| textarea   | string                   | Renders textarea in form                                                                                           | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                                                                                                      | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| markdown   | string                   | Renders Markdown in form                                                                                           | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| richtext   | string                   | Renders CKEditor in form                                                                                           | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| email      | string                   | Renders email input in form                                                                                        | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                                                                                                      | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| number     | number                   | Renders number input in the form; min is 0, max is MAX INT                                                         | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                                                                                                      | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| radio      | string                   | Renders radio input, options are taken from `options` property                                                     | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type, Can only be `false`                                                                               | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | options                     | array  | Array of string options possible for the radio input                                                                                                                                        | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| checkbox   | boolean                  | Renders single checkbox input returning `true`/`false` value                                                       | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type, Can only be `false`                                                                               | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| select     | string                   | Renders single item select input, options are taken from `options` property                                        | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | options                     | array  | Array of string options possible for the select input                                                                                                                                       | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                                                                                                      | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| object     | array                    | Renders one or multiple forms for nested `meta definition` element                                                 | items                       | object | `Meta definition` for single list item                                                                                                                                                      | same as in wrapping meta definition (`order` and `propertiesConfig`) |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| datasource | array                    | Renders picker for choosing the objects of specified or any other Content Type, depending on `validation` property | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | validation                  | array  | Object contains restrictions for datasource                                                                                                                                                 | relationContenttype                                                  | Name of the Content Type to which relation should be restricted                      |
+|            |                          |                                                                                                                    |                             |        |                                                                                                                                                                                             | relationMultiple                                                     | Boolean value informing if the array should have only one ora can have more elements |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| geo        | object                   | Renders two fields, one for the latitude, second for the longitude, saves it as an object                          | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+| dateTime   | string                   | Render date picker input, and time picker if option showTime is selected.                                          | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | isTitlePart                 | bool   | Should this field be displayed when listing objects in relation select                                                                                                                      | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | showTime                    | bool   | Whether to display a picker for hours                                                                                                                                                       | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                      |
+| block      | object                   | Renders editor.js in form and contains json with description of html blocks instead of the html blocks             | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type, Can only be `false`                                                                               | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | blockEditorTypes            | array  | Names of plugins used in editor, possible plugins: `header`, `list`, `image`, `youtubeEmbed`, `quote`, `warning`, `delimiter`. `Paragraph` is available always as it is default text block. | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                      |
+|            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                      |
 
 *Required property
 
@@ -595,401 +599,535 @@ Input types of properties in `metaDefinition`:
 
     ```
     {
-      "name": "example",
-      "label": "Example",
-      "schemaDefinition": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
-          },
-          {
+        "name": "example",
+        "label": "Example",
+        "internal": false,
+        "schemaDefinition": {
             "type": "object",
-            "properties": {
-              "text": {
-                "type": "string",
-                "minLength": 1,
-                "pattern": "^\\d{2}-\\d{2}-\\d{4}$",
-                "default": "01-01-2021"
-              },
-              "textarea": {
-                "type": "string",
-                "minLength": 1,
-                "default": "Lorem ipsum dolor sit amet."
-              },
-              "markdown": {
-                "type": "string",
-                "minLength": 1
-              },
-              "rich_text": {
-                "type": "string",
-                "minLength": 1
-              },
-              "email": {
-                "type": "string",
-                "minLength": 1
-              },
-              "number": {
-                "type": "number",
-                "minLength": 1,
-                "default": 0
-              },
-              "radio": {
-                "type": "string",
-                "minLength": 1
-              },
-              "checkbox": {
-                "type": "boolean"
-              },
-              "select": {
-                "type": "string",
-                "minLength": 1,
-                "default": "Option 1"
-              },
-              "relation": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/DataSource"
+            "allOf": [
+                {
+                    "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
                 },
-                "minItems": 1
-              },
-              "list": {
-                "type": "array",
-                "minLength": 1,
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "text_in_subobject": {
-                      "type": "string",
-                      "pattern": "^[a-zA-Z ]*$",
-                      "default": "Lorem"
-                    },
-                    "textarea_in_subobject": {
-                      "type": "string",
-                      "default": "Lorem ipsum"
-                    },
-                    "markdown_in_subobject": {
-                      "type": "string"
-                    },
-                    "rich_text_in_subobject": {
-                      "type": "string"
-                    },
-                    "emain_in_subobject": {
-                      "type": "string"
-                    },
-                    "number_in_subobject": {
-                      "type": "number",
-                      "default": 1000
-                    },
-                    "radio_in_subobject": {
-                      "type": "string"
-                    },
-                    "checkbox_in_subobject": {
-                      "type": "boolean"
-                    },
-                    "select_in_subobject": {
-                      "type": "string",
-                      "default": "Option c"
-                    },
-                    "relation_in_subobject": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/DataSource"
-                      },
-                      "minItems": 0
-                    },
-                    "geo_in_subobject": {
-                      "type": "object",
-                      "properties": {
-                        "lat": {
-                          "type": "number"
+                {
+                    "type": "object",
+                    "properties": {
+                        "geo": {
+                            "type": "object",
+                            "required": [
+                                "lat",
+                                "lon"
+                            ],
+                            "properties": {
+                                "lat": {
+                                    "type": "number"
+                                },
+                                "lon": {
+                                    "type": "number"
+                                }
+                            },
+                            "additionalProperties": false
                         },
-                        "lon": {
-                          "type": "number"
+                        "date": {
+                            "type": "string",
+                            "default": "2021-12-12T12:00",
+                            "pattern": "^([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))T?(([0-1]?[0-9]|2[0-3]):[0-5][0-9])?$",
+                            "minLength": 1
+                        },
+                        "list": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "geo_in_subobject": {
+                                        "type": "object",
+                                        "properties": {
+                                            "lat": {
+                                                "type": "number"
+                                            },
+                                            "lon": {
+                                                "type": "number"
+                                            }
+                                        },
+                                        "additionalProperties": false
+                                    },
+                                    "date_in_subobject": {
+                                        "type": "string",
+                                        "default": "2021-12-12T12:00",
+                                        "pattern": "^([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))T?(([0-1]?[0-9]|2[0-3]):[0-5][0-9])?$"
+                                    },
+                                    "text_in_subobject": {
+                                        "type": "string",
+                                        "default": "Lorem",
+                                        "pattern": "^[a-zA-Z ]*$"
+                                    },
+                                    "block_in_subobject": {
+                                        "type": "object",
+                                        "properties": {
+                                            "time": {
+                                                "type": "number"
+                                            },
+                                            "blocks": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string"
+                                                        },
+                                                        "data": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "text": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "additionalProperties": true
+                                                        },
+                                                        "type": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "version": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "additionalProperties": false
+                                    },
+                                    "emain_in_subobject": {
+                                        "type": "string"
+                                    },
+                                    "media_in_subobject": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/DataSource"
+                                        },
+                                        "minItems": 0
+                                    },
+                                    "radio_in_subobject": {
+                                        "type": "string"
+                                    },
+                                    "number_in_subobject": {
+                                        "type": "number",
+                                        "default": 1000
+                                    },
+                                    "select_in_subobject": {
+                                        "type": "string",
+                                        "default": "Option c"
+                                    },
+                                    "checkbox_in_subobject": {
+                                        "type": "boolean"
+                                    },
+                                    "markdown_in_subobject": {
+                                        "type": "string"
+                                    },
+                                    "relation_in_subobject": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/DataSource"
+                                        },
+                                        "minItems": 0
+                                    },
+                                    "textarea_in_subobject": {
+                                        "type": "string",
+                                        "default": "Lorem ipsum"
+                                    },
+                                    "rich_text_in_subobject": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "minLength": 1
+                        },
+                        "text": {
+                            "type": "string",
+                            "default": "01-01-2021",
+                            "pattern": "^\\d{2}-\\d{2}-\\d{4}$",
+                            "minLength": 1
+                        },
+                        "block": {
+                            "type": "object",
+                            "minLength": 1,
+                            "properties": {
+                                "time": {
+                                    "type": "number"
+                                },
+                                "blocks": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "data": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "text": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "additionalProperties": true
+                                            },
+                                            "type": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "additionalProperties": false
+                        },
+                        "email": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "media": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 1
+                        },
+                        "radio": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "number": {
+                            "type": "number",
+                            "default": 0,
+                            "minLength": 1
+                        },
+                        "select": {
+                            "type": "string",
+                            "default": "Option 1",
+                            "minLength": 1
+                        },
+                        "checkbox": {
+                            "type": "boolean"
+                        },
+                        "markdown": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "relation": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 1
+                        },
+                        "textarea": {
+                            "type": "string",
+                            "default": "Lorem ipsum dolor sit amet.",
+                            "minLength": 1
+                        },
+                        "rich_text": {
+                            "type": "string",
+                            "minLength": 1
                         }
-                      },
-                      "additionalProperties": false
-                    },
-                    "media_in_subobject": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/DataSource"
-                      },
-                      "minItems": 0
                     }
-                  }
                 }
-              },
-              "geo": {
-                "type": "object",
-                "properties": {
-                  "lat": {
-                    "type": "number"
-                  },
-                  "lon": {
-                    "type": "number"
-                  }
-                },
-                "additionalProperties": false,
-                "required": [
-                  "lat",
-                  "lon"
-                ]
-              },
-              "media": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/DataSource"
-                },
-                "minItems": 1
-              }
-            }
-          }
-        ],
-        "required": [
-          "text",
-          "textarea",
-          "markdown",
-          "rich_text",
-          "email",
-          "number",
-          "radio",
-          "select",
-          "relation",
-          "list",
-          "geo",
-          "media"
-        ],
-        "additionalProperties": false
-      },
-      "metaDefinition": {
-        "propertiesConfig": {
-          "text": {
-            "inputType": "text",
-            "unique": true,
-            "isTitlePart": true,
-            "helpText": "Text with regex for date, e.g. 01-01-2021",
-            "label": "text"
-          },
-          "textarea": {
-            "inputType": "textarea",
-            "unique": true,
-            "isTitlePart": true,
-            "helpText": "Long text with default value",
-            "label": "Textarea"
-          },
-          "markdown": {
-            "inputType": "textMarkdown",
-            "unique": true,
-            "helpText": "Markdown long text",
-            "label": "Markdown"
-          },
-          "rich_text": {
-            "inputType": "richtext",
-            "unique": true,
-            "helpText": "Rich long text",
-            "label": "Rich text"
-          },
-          "email": {
-            "inputType": "email",
-            "unique": true,
-            "isTitlePart": true,
-            "helpText": "Email field",
-            "label": "Email"
-          },
-          "number": {
-            "inputType": "number",
-            "unique": true,
-            "isTitlePart": true,
-            "helpText": "Number filed with default value",
-            "label": "Number"
-          },
-          "radio": {
-            "inputType": "radio",
-            "unique": false,
-            "options": [
-              "Option 1",
-              "Option 2",
-              "Option 3"
             ],
-            "helpText": "Radio field with 3 options",
-            "label": "Radio"
-          },
-          "checkbox": {
-            "inputType": "checkbox",
-            "unique": false,
-            "helpText": "Checkbox field, if it would be required everybody would have to check it.",
-            "label": "Checkbox"
-          },
-          "select": {
-            "inputType": "select",
-            "unique": true,
-            "options": [
-              "Option 1",
-              "Option 2",
-              "Option 3"
+            "required": [
+                "text",
+                "textarea",
+                "markdown",
+                "rich_text",
+                "email",
+                "number",
+                "radio",
+                "select",
+                "relation",
+                "list",
+                "geo",
+                "media",
+                "date",
+                "block"
             ],
-            "isTitlePart": true,
-            "helpText": "Select field, because it must be unique and has only 3 options, there will be a maximum of 3 objects of this type",
-            "label": "Select"
-          },
-          "relation": {
-            "inputType": "datasource",
-            "unique": true,
-            "validation": {
-              "relationMultiple": true,
-              "relationContenttype": "test"
-            },
-            "helpText": "Multiple relation restricted to test type",
-            "label": "Relation"
-          },
-          "list": {
-            "inputType": "object",
-            "unique": false,
-            "items": {
-              "order": [
-                "text_in_subobject",
-                "textarea_in_subobject",
-                "markdown_in_subobject",
-                "rich_text_in_subobject",
-                "emain_in_subobject",
-                "number_in_subobject",
-                "radio_in_subobject",
-                "checkbox_in_subobject",
-                "select_in_subobject",
-                "relation_in_subobject",
-                "geo_in_subobject",
-                "media_in_subobject"
-              ],
-              "propertiesConfig": {
-                "text_in_subobject": {
-                  "inputType": "text",
-                  "unique": false,
-                  "helpText": "Text in subobject with regex ensuring only letters and spaces",
-                  "label": "Text in subobject"
-                },
-                "textarea_in_subobject": {
-                  "inputType": "textarea",
-                  "unique": false,
-                  "helpText": "Textarea in subobject",
-                  "label": "Textarea in subobject"
-                },
-                "markdown_in_subobject": {
-                  "inputType": "textMarkdown",
-                  "unique": false,
-                  "helpText": "Markdown in subobject",
-                  "label": "Markdown in subobject"
-                },
-                "rich_text_in_subobject": {
-                  "inputType": "richtext",
-                  "unique": false,
-                  "helpText": "Rich text in subobject",
-                  "label": "Rich text in subobject"
-                },
-                "emain_in_subobject": {
-                  "inputType": "email",
-                  "unique": false,
-                  "helpText": "Email field in subobject",
-                  "label": "Emain in subobject"
-                },
-                "number_in_subobject": {
-                  "inputType": "number",
-                  "unique": false,
-                  "helpText": "NUmber field in subobject with default value",
-                  "label": "Number in subobject"
-                },
-                "radio_in_subobject": {
-                  "inputType": "radio",
-                  "unique": false,
-                  "options": [
-                    "Option a",
-                    "Option b",
-                    "Option c"
-                  ],
-                  "helpText": "Radio in subobject with 3 options",
-                  "label": "Radio in subobject"
-                },
-                "checkbox_in_subobject": {
-                  "inputType": "checkbox",
-                  "unique": false,
-                  "helpText": "Checkbox in subobject",
-                  "label": "Checkbox in subobject"
-                },
-                "select_in_subobject": {
-                  "inputType": "select",
-                  "unique": false,
-                  "options": [
-                    "Option a",
-                    "Option b",
-                    "Option c"
-                  ],
-                  "helpText": "Select filed in subobject with 3 options and default value",
-                  "label": "Select in subobject"
-                },
-                "relation_in_subobject": {
-                  "inputType": "datasource",
-                  "unique": false,
-                  "validation": {
-                    "relationMultiple": true,
-                    "relationContenttype": "test"
-                  },
-                  "helpText": "Multiple relation in subobject restricted to test type",
-                  "label": "Relation in subobject"
-                },
-                "geo_in_subobject": {
-                  "inputType": "geo",
-                  "unique": false,
-                  "helpText": "Geo field in subobject, cantains lat and lon properties",
-                  "label": "Geo in subobject"
-                },
-                "media_in_subobject": {
-                  "inputType": "datasource",
-                  "unique": false,
-                  "validation": {
-                    "relationContenttype": "_media",
-                    "relationMultiple": true
-                  },
-                  "helpText": "Multiple relation to media in subobject",
-                  "label": "Media in subobject"
-                }
-              }
-            },
-            "helpText": "List of subobjects",
-            "label": "List"
-          },
-          "geo": {
-            "inputType": "geo",
-            "unique": true,
-            "helpText": "Geo field, it has lat and lon property",
-            "label": "Geo"
-          },
-          "media": {
-            "inputType": "datasource",
-            "unique": true,
-            "validation": {
-              "relationContenttype": "_media",
-              "relationMultiple": true
-            },
-            "helpText": "Multiple relation to media type",
-            "label": "Media"
-          }
+            "additionalProperties": false
         },
-        "order": [
-          "text",
-          "textarea",
-          "markdown",
-          "rich_text",
-          "email",
-          "number",
-          "radio",
-          "checkbox",
-          "select",
-          "relation",
-          "list",
-          "geo",
-          "media"
-        ]
-      }
+        "metaDefinition": {
+            "order": [
+                "text",
+                "textarea",
+                "markdown",
+                "rich_text",
+                "email",
+                "number",
+                "radio",
+                "checkbox",
+                "select",
+                "relation",
+                "list",
+                "geo",
+                "media",
+                "date",
+                "block"
+            ],
+            "propertiesConfig": {
+                "geo": {
+                    "label": "Geo",
+                    "unique": true,
+                    "helpText": "Geo field, it has lat and lon property",
+                    "inputType": "geo"
+                },
+                "date": {
+                    "label": "Date",
+                    "unique": true,
+                    "helpText": "Date value following short ISO format (YYYY-MM-DDTHH:mm / YYYY-MM-DD), without timezone, can be with or without time",
+                    "showTime": true,
+                    "inputType": "dateTime",
+                    "isTitlePart": true
+                },
+                "list": {
+                    "items": {
+                        "order": [
+                            "text_in_subobject",
+                            "textarea_in_subobject",
+                            "markdown_in_subobject",
+                            "rich_text_in_subobject",
+                            "emain_in_subobject",
+                            "number_in_subobject",
+                            "radio_in_subobject",
+                            "checkbox_in_subobject",
+                            "select_in_subobject",
+                            "relation_in_subobject",
+                            "geo_in_subobject",
+                            "media_in_subobject",
+                            "date_in_subobject",
+                            "block_in_subobject"
+                        ],
+                        "propertiesConfig": {
+                            "geo_in_subobject": {
+                                "label": "Geo in subobject",
+                                "unique": false,
+                                "helpText": "Geo field in subobject, cantains lat and lon properties",
+                                "inputType": "geo"
+                            },
+                            "date_in_subobject": {
+                                "label": "Date in subobject",
+                                "unique": false,
+                                "helpText": "Date value following short ISO format (YYYY-MM-DDTHH:mm / YYYY-MM-DD), without timezone, can be with or without time",
+                                "showTime": true,
+                                "inputType": "dateTime"
+                            },
+                            "text_in_subobject": {
+                                "label": "Text in subobject",
+                                "unique": false,
+                                "helpText": "Text in subobject with regex ensuring only letters and spaces",
+                                "inputType": "text"
+                            },
+                            "block_in_subobject": {
+                                "label": "Block in subobject",
+                                "unique": false,
+                                "helpText": "Block editor with all blocks possible",
+                                "inputType": "block",
+                                "blockEditorTypes": [
+                                    "header",
+                                    "list",
+                                    "image",
+                                    "youtubeEmbed",
+                                    "quote",
+                                    "warning",
+                                    "delimiter"
+                                ]
+                            },
+                            "emain_in_subobject": {
+                                "label": "Emain in subobject",
+                                "unique": false,
+                                "helpText": "Email field in subobject",
+                                "inputType": "email"
+                            },
+                            "media_in_subobject": {
+                                "label": "Media in subobject",
+                                "unique": false,
+                                "helpText": "Multiple relation to media in subobject",
+                                "inputType": "datasource",
+                                "validation": {
+                                    "relationMultiple": true,
+                                    "relationContenttype": "_media"
+                                }
+                            },
+                            "radio_in_subobject": {
+                                "label": "Radio in subobject",
+                                "unique": false,
+                                "options": [
+                                    "Option a",
+                                    "Option b",
+                                    "Option c"
+                                ],
+                                "helpText": "Radio in subobject with 3 options",
+                                "inputType": "radio"
+                            },
+                            "number_in_subobject": {
+                                "label": "Number in subobject",
+                                "unique": false,
+                                "helpText": "NUmber field in subobject with default value",
+                                "inputType": "number"
+                            },
+                            "select_in_subobject": {
+                                "label": "Select in subobject",
+                                "unique": false,
+                                "options": [
+                                    "Option a",
+                                    "Option b",
+                                    "Option c"
+                                ],
+                                "helpText": "Select filed in subobject with 3 options and default value",
+                                "inputType": "select"
+                            },
+                            "checkbox_in_subobject": {
+                                "label": "Checkbox in subobject",
+                                "unique": false,
+                                "helpText": "Checkbox in subobject",
+                                "inputType": "checkbox"
+                            },
+                            "markdown_in_subobject": {
+                                "label": "Markdown in subobject",
+                                "unique": false,
+                                "helpText": "Markdown in subobject",
+                                "inputType": "textMarkdown"
+                            },
+                            "relation_in_subobject": {
+                                "label": "Relation in subobject",
+                                "unique": false,
+                                "helpText": "Multiple relation in subobject restricted to test type",
+                                "inputType": "datasource",
+                                "validation": {
+                                    "relationMultiple": true,
+                                    "relationContenttype": "test"
+                                }
+                            },
+                            "textarea_in_subobject": {
+                                "label": "Textarea in subobject",
+                                "unique": false,
+                                "helpText": "Textarea in subobject",
+                                "inputType": "textarea"
+                            },
+                            "rich_text_in_subobject": {
+                                "label": "Rich text in subobject",
+                                "unique": false,
+                                "helpText": "Rich text in subobject",
+                                "inputType": "richtext"
+                            }
+                        }
+                    },
+                    "label": "List",
+                    "unique": false,
+                    "helpText": "List of subobjects",
+                    "inputType": "object"
+                },
+                "text": {
+                    "label": "text",
+                    "unique": true,
+                    "helpText": "Text with regex for date, e.g. 01-01-2021",
+                    "inputType": "text",
+                    "isTitlePart": true
+                },
+                "block": {
+                    "label": "Block",
+                    "unique": false,
+                    "helpText": "Block editor with all blocks possible",
+                    "inputType": "block",
+                    "blockEditorTypes": [
+                        "header",
+                        "list",
+                        "image",
+                        "youtubeEmbed",
+                        "quote",
+                        "warning",
+                        "delimiter"
+                    ]
+                },
+                "email": {
+                    "label": "Email",
+                    "unique": true,
+                    "helpText": "Email field",
+                    "inputType": "email",
+                    "isTitlePart": true
+                },
+                "media": {
+                    "label": "Media",
+                    "unique": true,
+                    "helpText": "Multiple relation to media type",
+                    "inputType": "datasource",
+                    "validation": {
+                        "relationMultiple": true,
+                        "relationContenttype": "_media"
+                    }
+                },
+                "radio": {
+                    "label": "Radio",
+                    "unique": false,
+                    "options": [
+                        "Option 1",
+                        "Option 2",
+                        "Option 3"
+                    ],
+                    "helpText": "Radio field with 3 options",
+                    "inputType": "radio"
+                },
+                "number": {
+                    "label": "Number",
+                    "unique": true,
+                    "helpText": "Number filed with default value",
+                    "inputType": "number",
+                    "isTitlePart": true
+                },
+                "select": {
+                    "label": "Select",
+                    "unique": true,
+                    "options": [
+                        "Option 1",
+                        "Option 2",
+                        "Option 3"
+                    ],
+                    "helpText": "Select field, because it must be unique and has only 3 options, there will be maximum of 3 objects of this type",
+                    "inputType": "select",
+                    "isTitlePart": true
+                },
+                "checkbox": {
+                    "label": "Checkbox",
+                    "unique": false,
+                    "helpText": "Checkbox field, if it would be required everybody would have to check it.",
+                    "inputType": "checkbox"
+                },
+                "markdown": {
+                    "label": "Markdown",
+                    "unique": true,
+                    "helpText": "Markdown long text",
+                    "inputType": "textMarkdown"
+                },
+                "relation": {
+                    "label": "Relation",
+                    "unique": true,
+                    "helpText": "Multiple relation restricted to test type",
+                    "inputType": "datasource",
+                    "validation": {
+                        "relationMultiple": true,
+                        "relationContenttype": "test"
+                    }
+                },
+                "textarea": {
+                    "label": "Textarea",
+                    "unique": true,
+                    "helpText": "Long text with default value",
+                    "inputType": "textarea",
+                    "isTitlePart": true
+                },
+                "rich_text": {
+                    "label": "Rich text",
+                    "unique": true,
+                    "helpText": "Rich long text",
+                    "inputType": "richtext"
+                }
+            }
+        }
     }
     ```
 

@@ -241,15 +241,16 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
 #### Possible validation errors
 
-| Error                                        | Description                                                                                               |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| This value is already used                   | Send when the property has to be unique, and the value is already used in an existing object of that type |
-| Must be at least 1 characters long           | Send when the property is required, and an empty string was sent in object                                |
-| The property \{name\} is required              | Send when the property is required and was missing in the sent object                                     |
-| String value found, but a number is required | Send when the type of the property is `number` and string was sent                                        |
-| The value does not match possible options    | Send when sent value do not match options in `select` and `radio` type                                    |
-| Does not match the regex pattern {pattern}   | Send when the value does not match regex pattern specified for the property                               |
-| This value does not exist in database        | Send when object attached in relation or media array does not exist in the database                       |
+| Error                                                                                    | Description                                                                                                 |
+| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| This value is already used                                                               | Send when the property has to be unique, and the value is already used in an existing object of that type   |
+| Must be at least 1 characters long                                                       | Send when the property is required, and an empty string was sent in object                                  |
+| The property \{name\} is required                                                        | Send when the property is required and was missing in the sent object                                       |
+| String value found, but a number is required                                             | Send when the type of the property is `number` and string was sent                                          |
+| The value does not match possible options                                                | Send when sent value do not match options in `select` and `radio` type                                      |
+| Does not match the regex pattern \{pattern\}                                             | Send when the value does not match regex pattern specified for the property                                 |
+| This value does not exist in database                                                    | Send when object attached in relation or media array does not exist in the database                         |
+| One of the block types (\{block type\} on index \{index\}) does not match possible types | Send when one of the types in the property of the type `block` does not match types specified in the schema |
 
 
 ### Creating Content Objects with relations to other types or media
@@ -288,10 +289,286 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
         ]
         ```        
 
+### Creating Content Objects with the editor.js blocks
+
+Blocks contain json definitions of the html blocks instead of the real html blocks
+to make sure that the data will be displayed correctly in every environment
+(developer can manage them correctly in the standard React and React Native for example).
+
+Block parameters:
+
+| Parameter | Required | Description                                                                                                                                                                  |
+| --------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id        | true     | Random identifier of the block                                                                                                                                               |
+| data      | true     | Data of the block, the parameters depend on the type of the block                                                                                                            |
+| type      | true     | Type of the block, the supported types are `paragraph`, `header`, `list`, `image`, `youtubeEmbed`, `quote`, `warning`, and `delimiter`, types can be narrowed down in schema |
+| tunes     | false    | Additional settings of the block, parameters depend on the type of the block                                                                                                 |
+
+Blocks:
+
+??? Paragraph
+
+    === "Description"
+
+        Contains standard text with limited text formatting (bolding, italicizing, alignment). Type: `paragraph`.
+        
+        Data parameters:
+        
+        | Parameter | Required | Description                                                                                                    |
+        | --------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+        | text      | true     | Content of the paragraph, it can contain html formatting (`<b></b>` for bolding and `<i></i>` for italicizing) |
+        
+        Tunes parameters: 
+        
+        | Parameter         | Required | Description                                              |
+        | ----------------- | -------- | -------------------------------------------------------- |
+        | alignmentTuneTool | true     | Information obout text alignment in the whole paragraph. |
+        
+        alignmentTuneTool parameters:
+        
+        | Parameter | Required | Description                                                                                         |
+        | --------- | -------- | --------------------------------------------------------------------------------------------------- |
+        | alignment | true     | Information about text alignment in the whole paragraph. Possible values: `left`, `center`, `right` |
+
+    === "Example"
+
+        ```
+        {
+            "id": "i5RZbGlOWy",
+            "data": {
+                "text": "<b>Exaple</b> <i>paragraph </i>with formatting"
+            },
+            "type": "paragraph",
+            "tunes": {
+                "alignmentTuneTool": {
+                    "alignment": "left"
+                }
+            }
+        }
+        ```
+
+??? Header
+
+    === "Description"
+        Contains standard header text with limited text formatting (bolding, italicizing, alignment). Type: `header`.
+        
+        Data parameters:
+        
+        | Parameter | Required | Description                                                                                                 |
+        | --------- | -------- | ----------------------------------------------------------------------------------------------------------- |
+        | text      | true     | Content of the header, it can contain html formatting (`<b></b>` for bolding and `<i></i>` for italicizing) |
+        | level     | true     | Level of the header. Possible values `1`, `2`, `3`, `4`, `5`, `6`.                                          |
+        | anchor    | false    | Name of the navigation anchor fo the header                                                                 |
+        
+        Tunes parameters:
+        
+        | Parameter         | Required | Description                                              |
+        | ----------------- | -------- | -------------------------------------------------------- |
+        | alignmentTuneTool | true     | Information obout text alignment in the whole header.    |
+        
+        alignmentTuneTool parameters:
+        
+        | Parameter | Required | Description                                                                                         |
+        | --------- | -------- | --------------------------------------------------------------------------------------------------- |
+        | alignment | true     | Information about text alignment in the whole header. Possible values: `left`, `center`, `right`    |
+
+
+    === "Example"
+        ```
+        {
+            "id": "dPSax4QzPU",
+            "data": {
+                "text": "Example level 2 header",
+                "level": 2,
+                "anchor": "anchor"
+            },
+            "type": "header",
+            "tunes": {
+                "alignmentTuneTool": {
+                    "alignment": "center"
+                }
+            }
+        }
+        ```
+
+??? List
+
+    === "Description"
+        Contains nested lists with limited text formatting (bolding, italicizing). Type: `list`.
+        
+        Data parameters:
+        
+        | Parameter | Required | Description                                                |
+        | --------- | -------- | ---------------------------------------------------------- |
+        | items     | true     | Items of the list                                          |
+        | style     | true     | Style of the list. Possible values `ordered`, `unordered`. |
+        
+        
+        Items parameters:
+        
+        | Parameter | Required | Description                                                                                                  |
+        | --------- | -------- | ------------------------------------------------------------------------------------------------------------ |
+        | items     | true     | Items of the sublist                                                                                         |
+        | content   | true     | Text of the liust item, it can contain html formatting (`<b></b>` for bolding and `<i></i>` for italicizing) |
+
+    === "Example"
+        ```
+        {
+            "id": "oCJRGb2FFb",
+            "data": {
+                "items": [
+                    {
+                        "items": [
+                            {
+                                "items": [],
+                                "content": "Example <i>list</i>"
+                            }
+                        ],
+                        "content": "Exaple list"
+                    }
+                ],
+                "style": "ordered"
+            },
+            "type": "list"
+        }
+        ```
+
+??? Image
+
+    === "Description"
+        Contains image from Flotiq Media Library. Type: `image`.
+        
+        Data parameters:
+        
+        | Parameter      | Required | Description                                                             |
+        | -------------- | -------- | ----------------------------------------------------------------------- |
+        | url            | true     | Url to full size file                                                   |
+        | width          | true     | Width of the image                                                      |
+        | height         | true     | Height of the image                                                     |
+        | fileName       | true     | Name of the file                                                        |
+        | extension      | true     | File extension                                                          |
+        | caption        | true     | File caption                                                            |
+        | stretched      | true     | Information whether the image should be stretched to full display width |
+        | withBorder     | true     | Information whether the image should have border                        |
+        | withBackground | true     | Information whether the image should have background                    |
+
+    === "Example"
+        ```
+        {
+            "id": "zX1gTCKJee",
+            "data": {
+                "url": "https://api.flotiq.com/image/0x0/_media-1bb7c3ad-53de-4029-a5a0-3500f9b8867e.png",
+                "width": 317,
+                "height": 265,
+                "caption": "Example Caption",
+                "fileName": "example.png",
+                "extension": "png",
+                "stretched": true,
+                "withBorder": true,
+                "withBackground": true
+            },
+            "type": "image"
+        }
+        ```
+
+??? YouTube embed
+
+    === "Description"
+        Contains link to YouTube video. Type: `youtubeEmbed`.
+        
+        Data parameters:
+        
+        | Parameter | Required | Description        |
+        | --------- | -------- | ------------------ |
+        | url       | true     | YouTube video link |
+
+    === "Example"
+        ```
+        {
+            "id": "JIRwiQdzs9",
+            "data": {
+                "url": "https://www.youtube.com/watch?v=hz3RK5qqhrQ"
+            },
+            "type": "youtubeEmbed"
+        }
+        ```
+
+??? "Quote"
+
+    === "Description"
+        Contains the quote with the caption. Type: `quote`.
+        
+        Data parameters:
+        
+        | Parameter | Required | Description                                               |
+        | --------- | -------- | --------------------------------------------------------- |
+        | text      | true     | Text of the quote                                         |
+        | caption   | true     | Caption of the quote                                      |
+        | text      | true     | Alignment of the quote. Possible values: `left`, `center` |
+
+
+    === "Example"
+        ```
+        {
+            "id": "V7WlZmeTuJ",
+            "data": {
+                "text": "Example quote",
+                "caption": "Example quote caption",
+                "alignment": "left"
+            },
+            "type": "quote"
+        }
+        ```
+
+??? "Warning"
+
+    === "Description"
+        Contains the warning with the name. Type: `warning`.
+        
+        Data parameters:
+        
+        | Parameter | Required | Description          |
+        | --------- | -------- | -------------------- |
+        | message   | true     | Text of the warning  |
+        | title     | true     | Title of the warning |
+
+    === "Example"
+        ```
+        {
+            "id": "sVDwJq9ZCe",
+            "data": {
+                "title": "Exaple warning name",
+                "message": "Example warning message"
+            },
+            "type": "warning"
+        }
+        ```
+
+??? Delimiter
+
+    === "Description"
+        Contains the information that displaying application should display delimiter, without other fomatting.
+        Type: `delimiter`.
+
+        Data have to be empty object.
+
+    === "Example"
+        ```
+        {
+            "id": "dPSax4QzPU",
+            "data": {},
+            "type": "delimiter"
+        }
+        ```
+
+
+If we are missing a block type or tune that you require for your project,
+please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@flotiq.com).
 
 ??? "Example of an object containing all property types"
 
-    This exmple represents object for Content Type with every type of property, described [here](/API/content-type/creating-ctd/#example-with-every-type-of-field)
+    This example represents object for Content Type with every type of property,
+    described [here](/API/content-type/creating-ctd/#example-with-every-type-of-field)
 
     ```
     {
@@ -300,9 +577,127 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
         "lat": 0,
         "lon": 0
       },
+      "date": "2021-12-12T12:00",
       "list": [
         {
-          "text_in_subobject": "text",
+          "geo_in_subobject": {
+            "lat": 0,
+            "lon": 0
+          },
+          "date_in_subobject": "2021-12-12T12:00",
+          "text_in_subobject": "text_in_subobject",
+          "block_in_subobject": {
+            "time": "1624628260",
+            "version": "2.22.0",
+            "blocks": [
+              {
+                "id": "dPSax4QzPU",
+                "data": {
+                  "text": "Example level 2 header",
+                  "level": 2,
+                  "anchor": "anchor"
+                },
+                "type": "header",
+                "tunes": {
+                  "alignmentTuneTool": {
+                    "alignment": "center"
+                  }
+                }
+              },
+              {
+                "id": "i5RZbGlOWy",
+                "data": {
+                  "text": "<b>Exaple</b> <i>paragraph </i>with formatting"
+                },
+                "type": "paragraph",
+                "tunes": {
+                  "alignmentTuneTool": {
+                    "alignment": "left"
+                  }
+                }
+              },
+              {
+                "id": "oCJRGb2FFb",
+                "data": {
+                  "items": [
+                    {
+                      "items": [
+                        {
+                          "items": [],
+                          "content": "Example <i>list</i>"
+                        }
+                      ],
+                      "content": "Exaple list"
+                    }
+                  ],
+                  "style": "ordered"
+                },
+                "type": "list"
+              },
+              {
+                "id": "XB_EtsgceZ",
+                "data": {
+                  "items": [
+                    {
+                      "items": [
+                        {
+                          "items": [],
+                          "content": "Example bullet list"
+                        }
+                      ],
+                      "content": "Example bullet <b>list</b>"
+                    }
+                  ],
+                  "style": "unordered"
+                },
+                "type": "list"
+              },
+              {
+                "id": "zX1gTCKJee",
+                "data": {
+                  "url": "https://api.flotiq.com/image/0x0/_media-1bb7c3ad-53de-4029-a5a0-3500f9b8867e.png",
+                  "width": 317,
+                  "height": 265,
+                  "caption": "Example Caption",
+                  "fileName": "example.png",
+                  "extension": "png",
+                  "stretched": true,
+                  "withBorder": true,
+                  "withBackground": true
+                },
+                "type": "image"
+              },
+              {
+                "id": "JIRwiQdzs9",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=hz3RK5qqhrQ"
+                },
+                "type": "youtubeEmbed"
+              },
+              {
+                "id": "V7WlZmeTuJ",
+                "data": {
+                  "text": "Example quote",
+                  "caption": "Example quote caption",
+                  "alignment": "left"
+                },
+                "type": "quote"
+              },
+              {
+                "id": "sVDwJq9ZCe",
+                "data": {
+                  "title": "Exaple warning name",
+                  "message": "Example warning message"
+                },
+                "type": "warning"
+              },
+              {
+                "id": "RTJ0lo2VGB",
+                "data": [],
+                "type": "delimiter"
+              }
+            ]
+          },
           "emain_in_subobject": "emain_in_subobject",
           "media_in_subobject": [
             {
@@ -325,7 +720,119 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
           "rich_text_in_subobject": "rich_text_in_subobject"
         }
       ],
-      "text": "02-02-2021",
+      "text": "text",
+      "block": {
+        "time": "1624628260",
+        "version": "2.22.0",
+        "blocks": [
+          {
+            "id": "dPSax4QzPU",
+            "data": {
+              "text": "Example level 2 header",
+              "level": 2,
+              "anchor": "anchor"
+            },
+            "type": "header",
+            "tunes": {
+              "alignmentTuneTool": {
+                "alignment": "center"
+              }
+            }
+          },
+          {
+            "id": "i5RZbGlOWy",
+            "data": {
+              "text": "<b>Exaple</b> <i>paragraph </i>with formatting"
+            },
+            "type": "paragraph",
+            "tunes": {
+              "alignmentTuneTool": {
+                "alignment": "left"
+              }
+            }
+          },
+          {
+            "id": "oCJRGb2FFb",
+            "data": {
+              "items": [
+                {
+                  "items": [
+                    {
+                      "items": [],
+                      "content": "Example <i>list</i>"
+                    }
+                  ],
+                  "content": "Exaple list"
+                }
+              ],
+              "style": "ordered"
+            },
+            "type": "list"
+          },
+          {
+            "id": "XB_EtsgceZ",
+            "data": {
+              "items": [
+                {
+                  "items": [
+                    {
+                      "items": [],
+                      "content": "Example bullet list"
+                    }
+                  ],
+                  "content": "Example bullet <b>list</b>"
+                }
+              ],
+              "style": "unordered"
+            },
+            "type": "list"
+          },
+          {
+            "id": "zX1gTCKJee",
+            "data": {
+              "url": "https://api.flotiq.com/image/0x0/_media-1bb7c3ad-53de-4029-a5a0-3500f9b8867e.png",
+              "width": 317,
+              "height": 265,
+              "caption": "Example Caption",
+              "fileName": "example.png",
+              "extension": "png",
+              "stretched": true,
+              "withBorder": true,
+              "withBackground": true
+            },
+            "type": "image"
+          },
+          {
+            "id": "JIRwiQdzs9",
+            "data": {
+              "url": "https://www.youtube.com/watch?v=hz3RK5qqhrQ"
+            },
+            "type": "youtubeEmbed"
+          },
+          {
+            "id": "V7WlZmeTuJ",
+            "data": {
+              "text": "Example quote",
+              "caption": "Example quote caption",
+              "alignment": "left"
+            },
+            "type": "quote"
+          },
+          {
+            "id": "sVDwJq9ZCe",
+            "data": {
+              "title": "Exaple warning name",
+              "message": "Example warning message"
+            },
+            "type": "warning"
+          },
+          {
+            "id": "RTJ0lo2VGB",
+            "data": [],
+            "type": "delimiter"
+          }
+        ]
+      },
       "email": "email",
       "media": [
         {

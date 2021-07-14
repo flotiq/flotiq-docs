@@ -41,7 +41,7 @@ To generate a new stand-alone form click `Generate` button:
 It will display a modal where you need to provide some details.
 
 !!! hint
-There are only two required details you have to provide:
+    There are only two required details you have to provide:
 
     * `Domain` - Forms will only accept data from this domain; put `*` if you want to allow access from anywhere,
     * `API key` - select the API key you want to use for incoming form submissions.

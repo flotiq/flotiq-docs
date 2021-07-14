@@ -41,11 +41,11 @@ To generate a new stand-alone form click `Generate` button:
 It will display a modal where you need to provide some details.
 
 !!! hint
-There are only two required details you have to provide:
+    There are only two required details you have to provide:
 
-    - `Domain` - Forms will only accept data from this domain; put `*` if you want to allow access from anywhere,
-    - `API key` - select the API key you want to use for incoming form submissions.
-
+    * `Domain` - Forms will only accept data from this domain; put `*` if you want to allow access from anywhere,
+    * `API key` - select the API key you want to use for incoming form submissions.
+    
     As best practice - we advise you to enter your domain (without `http://` or `https://`) and create a dedicated, scoped API key that only allows `CREATE` access to handle form submissions.
 
 Don't worry - your API key is secure. It's not displayed anywhere in the form and is only used internally for a set of serverless functions, which work under the hood to deliver your Forms. You can always revoke or regenerate the key if you have any suspicions it might have been compromised.
@@ -107,7 +107,7 @@ If no value provided, the default value will be used.
 | Max upload limit error   | Displayed when the sum of the uploaded files exceeds 4 MB                                                                        | Sum of uploaded files exceeded 4 MB limit                         |
 
 !!! note
-Flotiq uses Amazon Web Services (AWS Lambda in particular) to deliver Flotiq Forms to our users. AWS provides a global network of secure data centres, which allow us to easily expand our services and provide the best value to our customers.
+    Flotiq uses Amazon Web Services (AWS Lambda in particular) to deliver Flotiq Forms to our users. AWS provides a global network of secure data centres, which allow us to easily expand our services and provide the best value to our customers. 
 
 ## How to use Forms
 
@@ -123,8 +123,8 @@ Once your Flotiq Forms are generated, you will see a window with two lines of HT
 You can edit all settings of your form by clicking the `Edit form settings` button.
 
 !!! note
-Please be advised that, as for now, you can add only one type of form on a page.
-If you wish to use more than one form, you have to put them on different sub-pages.
+    Please be advised that, as for now, you can add only one type of form on a page.
+    If you wish to use more than one form, you have to put them on different sub-pages.
 
 ## Media
 
@@ -143,7 +143,7 @@ Multiple relations display example:
 ![](images/multiple-relations-display-example.png){: .center .border}
 
 !!! note
-You can display only existing relations. You cannot make users add one by form.
+    You can display only existing relations. You cannot make users add one by form.
 
 ## Working example
 

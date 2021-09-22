@@ -10,7 +10,7 @@ theme:
      palette:
          primary: teal
      features:
-       - instant
+       - navigation.instant
 plugins:
   - search
   - awesome-pages

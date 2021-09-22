@@ -25,10 +25,6 @@ From the grid, the users can go to the form that allows them to edit particular 
 
 ![Flotiq Object Editor](images/EditObject.png){: .center .width75 .border}
 
-The form view also displays information about previous versions of a particular Content Object.
-From this view, you can also switch to older revisions.
-To save older revisions, click on the version tile and click the `Save` button.
-
 There are 15 types of controls in the dashboard, all described in detail below:
 
 * [Text](#text)
@@ -204,13 +200,13 @@ If it is not a Media object, you can edit it by clicking the `pencil` button in 
 
 #### Objects relations
 
-Where you can either open the form for object creation using the `Add new object and link` button:
+You can either open the form for object creation using the `Add new object and link` button:
 
 ![](images/BlogPostFormModal.png){: .center .width75 .border}
 
 After saving the object, the system automatically links it to the object you are editing/creating right now.
 
-You can also click the `Link existing object` button and link the object created earlier:
+Or you can also click the `Link existing object` button and link the object created earlier:
 
 ![](images/LinkExistingObject.png){: .center .border}
 
@@ -332,6 +328,11 @@ Or by selecting it on the content browser and clicking the `Remove selected` but
 !!! warning
     You can only remove objects that are not linked to any other object in the system.
 
+## Content versioning
+
+The form view also displays information about previous versions of a particular Content Object.
+From this view, you can also switch to older revisions.
+To save older revisions, click on the version tile and click the `Save` button.
 
 [^1]: The number of available Content Objects depends on the chosen subscription plan.
 Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}

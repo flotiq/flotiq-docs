@@ -145,7 +145,7 @@ Scully starter for blog post:
 
 Documentation examples:
 
-[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=23a419dd26f2dbe61cf37c3625cf77de){:target="_blank"}
+[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=MjNhNDE5ZGQyNmYyZGJlNjFjZjM3YzM2MjVjZjc3ZGVAZjdhNTE3OWYtM2UxYS0xMWViLThkNTctMDJiMTYyOGYzNzNh){:target="_blank"}
 
 [Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3D23a419dd26f2dbe61cf37c3625cf77de){:target="_blank"}
 
@@ -290,7 +290,7 @@ Scully starter for event calendar:
 
 Documentation examples:
 
-[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=f42a50abdedb94da5ff573d08cbaee97){:target="_blank"}
+[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=ZjQyYTUwYWJkZWRiOTRkYTVmZjU3M2QwOGNiYWVlOTdAYzFkMDA2MjctM2UxYy0xMWViLThkNTctMDJiMTYyOGYzNzNh){:target="_blank"}
 
 [Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3Df42a50abdedb94da5ff573d08cbaee97){:target="_blank"}
 
@@ -440,7 +440,7 @@ Scully starter for products:
 
 Documentation examples:
 
-[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=9a7dc942c9451f67d86a4cac241453c8){:target="_blank"}
+[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=OWE3ZGM5NDJjOTQ1MWY2N2Q4NmE0Y2FjMjQxNDUzYzhANGEyZGY2ODMtM2UyNy0xMWViLThkNTctMDJiMTYyOGYzNzNh){:target="_blank"}
 
 [Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3D9a7dc942c9451f67d86a4cac241453c8){:target="_blank"}
 
@@ -562,7 +562,7 @@ Scully starter for projects:
 
 Documentation examples:
 
-[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=40b1fb39638c8367b9839fbd918c903d){:target="_blank"}
+[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=NDBiMWZiMzk2MzhjODM2N2I5ODM5ZmJkOTE4YzkwM2RAZGJiYWY1MzYtM2UyNy0xMWViLThkNTctMDJiMTYyOGYzNzNh){:target="_blank"}
 
 [Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3D40b1fb39638c8367b9839fbd918c903d){:target="_blank"}
 
@@ -839,7 +839,7 @@ Scully starter for recipes:
 
 Documentation examples:
 
-[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=f1df8b031f5aa7c3092f177c5f9139a5){:target="_blank"}
+[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=ZjFkZjhiMDMxZjVhYTdjMzA5MmYxNzdjNWY5MTM5YTVAMzIwNTVjMTAtM2UyOC0xMWViLThkNTctMDJiMTYyOGYzNzNh){:target="_blank"}
 
 [Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3Df1df8b031f5aa7c3092f177c5f9139a5){:target="_blank"}
 

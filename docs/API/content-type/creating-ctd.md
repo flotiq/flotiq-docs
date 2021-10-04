@@ -9,7 +9,7 @@ endpoint or through the [Content Modeler tool](/panel/content-types) provided wi
 
 !!! note
     You will need to use your `Application Read and write API KEY` to perform this action. 
-    Read more about [API keys and scoped API keys](/API/).
+    Read more about [API keys and scoped API keys](/docs/API/).
 
 
 ## Creating new Content Types via API

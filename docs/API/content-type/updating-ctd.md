@@ -10,7 +10,7 @@ endpoint or through the Content Modeler tool provided with the platform.
 
 !!! note
     You will need to use your `Application Read and write API KEY` to perform this action. 
-    Read more about [API keys and scoped API keys](/API/).
+    Read more about [API keys and scoped API keys](/docs/API/).
 
 !!! warning
     Changes made to the Content Type Definition may lead to problems with programs and pages 

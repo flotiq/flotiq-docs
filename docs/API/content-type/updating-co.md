@@ -11,12 +11,12 @@ Validation of update request works the same as in saving requests.
 !!! note
     You will need to use your `Application Read and write API KEY` to perform this action
     or `User API KEY` scoped to accept update on the Content Type you wish to update.
-    Read more about [API keys and scoped API keys](/API/).
+    Read more about [API keys and scoped API keys](/docs/API/).
 
 ## Updating Content Objects through the API
 
 For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
-defined according to the [create Content Type example](/API/content-type/creating-ctd), a very simple `PUT` payload can be sent
+defined according to the [create Content Type example](/docs/API/content-type/creating-ctd), a very simple `PUT` payload can be sent
 to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` to update Content Object:
 
 ```
@@ -235,12 +235,12 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
 #### Possible validation errors
 
 Possible validation errors are the same as in creating Content Object,
-you can find the list [here](/API/content-type/creating-co/#possible-validation-errors).
+you can find the list [here](/docs/API/content-type/creating-co/#possible-validation-errors).
 
 ## Batch update Content Objects through API
 
 Updating up to 100 objects at once is described
-[here](/API/content-type/creating-co/#batch-create-content-objects-through-api),
+[here](/docs/API/content-type/creating-co/#batch-create-content-objects-through-api),
 as batch creating and updating are done on the same API endpoint.
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

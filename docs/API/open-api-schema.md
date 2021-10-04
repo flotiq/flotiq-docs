@@ -9302,7 +9302,7 @@ You can use the same request parameters for scoped API schemas as for full API s
     ```
 
 !!! note
-    Read more about [API keys and scoped API keys](/API/)
+    Read more about [API keys and scoped API keys](/docs/API/)
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
 

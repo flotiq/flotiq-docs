@@ -10,7 +10,7 @@ you need to send `GET` call to `/api/v1/internal/contenttype`.
 It returns a paginated list of Content Types defined for your account. It can be filtered and limited.
 
 !!! note
-    You can use your `Application Read Only API KEY` to perform this action. Read more about [API keys and scoped API keys](/API/).
+    You can use your `Application Read Only API KEY` to perform this action. Read more about [API keys and scoped API keys](/docs/API/).
 
 
 Possible request parameters:

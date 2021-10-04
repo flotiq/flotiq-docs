@@ -12,12 +12,12 @@ Content Management Platform.
 !!! note
     You will need to use your `Application Read and write API KEY` to perform this action
     or `User API KEY` scoped to accept create on the Content Type you wish to add.
-    Read more about [API keys and scoped API keys](/API/).
+    Read more about [API keys and scoped API keys](/docs/API/).
 
 ## Creating Content Objects through the API
 
 For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
-defined according to the [create Content Type example](/API/content-type/creating-ctd), a very simple `POST` payload can be sent 
+defined according to the [create Content Type example](/docs/API/content-type/creating-ctd), a very simple `POST` payload can be sent 
 to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}` 
 (where `name` is the name of the content type definition) to create a new Content Object:
 

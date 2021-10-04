@@ -12,12 +12,12 @@ Content Management Platform.
 !!! note
     You can use your `Application Read Only API KEY` to perform this action
     or `User API KEY` scoped to accept read on the Content Type you wish to list.
-    Read more about [API keys and scoped API keys](/API/).
+    Read more about [API keys and scoped API keys](/docs/API/).
 
 ## Listing content through the API
 
 For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
-defined according to the [create Content Type example](/API/content-type/creating-ctd), a very simple `GET` request can be sent
+defined according to the [create Content Type example](/docs/API/content-type/creating-ctd), a very simple `GET` request can be sent
 to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 (where `name` is the name of the content type definition) to get Content Objects.
 

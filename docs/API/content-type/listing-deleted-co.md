@@ -10,7 +10,7 @@ has been defined in the system - the user can list ids of removed objects
 !!! note
     You have to use your `Application Read and write API KEY` to perform this action
     or `User API KEY` scoped to accept read and delete on the Content Type you wish to list.
-    Read more about [API keys and scoped API keys](/API/).
+    Read more about [API keys and scoped API keys](/docs/API/).
 
 ## Listing ids of deleted Content Objects through API
 

@@ -10,7 +10,7 @@ you need to send a `GET` request to the `/api/v1/internal/contenttype/{name}` en
 
 !!! note
     You can use your `Application Read Only API KEY` to perform this action. 
-    Read more about [API keys and scoped API keys](/API/).
+    Read more about [API keys and scoped API keys](/docs/API/).
 
 
 Possible request parameters:

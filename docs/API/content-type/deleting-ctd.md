@@ -9,7 +9,7 @@ can be deleted either by sending a properly formatted `DELETE` request to the ``
 endpoint or through the Content Modeler tool provided with the platform.
 
 !!! note
-    You will need to use your `Application Read and write API KEY` to perform this action. Read more about [API keys and scoped API keys](/API/).
+    You will need to use your `Application Read and write API KEY` to perform this action. Read more about [API keys and scoped API keys](/docs/API/).
 
 
 ## Deleting Content Types via API

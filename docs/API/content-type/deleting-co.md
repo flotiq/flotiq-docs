@@ -7,7 +7,7 @@ description: How to delete Content Objects in Flotiq
 !!! note
     You will need to use your `Application Read and write API KEY` to perform this action
     or `User API KEY` scoped to accept delete on the Content Type you wish to delete.
-    Read more about [API keys and scoped API keys](/API/).
+    Read more about [API keys and scoped API keys](/docs/API/).
 
 ## Deleting a single object
 

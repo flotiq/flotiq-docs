@@ -2,17 +2,32 @@
   max-width: 70rem;
 }
 
-.md-content{
-  border-right: #BBBBBB33 1px solid;
+.md-container {
+  background: linear-gradient(to right, #E9F3FF, #E9F3FF calc((100% - 70rem)/2 + 12.5rem), #fff calc((100% - 70rem)/2 + 12.5rem), #fff 100%);
 }
 
-.md-sidebar__scrollwrap {
-  border-right: #BBBBBB33 1px solid;
+@media screen and (max-width: 88rem) {
+  .md-container {
+    background: linear-gradient(to right, #E9F3FF, #E9F3FF 12.5rem, #fff 12.5rem, #fff 100%);
+  }
+}
+
+@media screen and (max-width: 76.1875em) {
+  .md-container {
+    background: white;
+  }
+}
+
+
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
+    margin-left: 2.5rem;
+  }
 }
 
 .md-typeset, .md-nav__link{
-  color: #172B4D;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #141046;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -20,8 +35,20 @@
   letter-spacing: -0.005em;
 }
 
-.md-typeset h1 {
-  color: #172B4D;
+.md-nav__link:focus, .md-nav__link:hover {
+  color: #0083FC;
+}
+.md-nav__item .md-nav__link--active {
+  color: #0083FC;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5 {
+  color: #050038;
+  font-weight: bold;
 }
 .video-wrapper {
   position: relative;
@@ -42,20 +69,28 @@
 }
 
 header.md-header {
-  background-image: linear-gradient(45deg, #4C9BA6, #86CEA6);
+  background-color: #141046;
+  height: 88px;
+  padding: 20px 0;
 }
+
 .md-tabs{
-    background:linear-gradient(45deg, #4c9ba6, #86cea6);
+  background-color: #141046;
+}
+
+.md-sidebar__scrollwrap, .md-content {
+  border-right: none;
 }
 
 .flotiq-button {
-  background:linear-gradient(45deg, #4c9ba6, #86cea6);
+  background-color: #0083FC;
   color: white !important;
   padding: 15px;
   margin-top: 20px;
   display: block;
   text-align: center;
   font-weight: bold;
+  border-radius: 40px;
 }
 
 .center {
@@ -64,7 +99,7 @@ header.md-header {
 }
 
 .border {
-  border: 1px solid #4c9ba6;
+  border: 1px solid rgba(142, 161, 184, 0.3);
 }
 
 .width75 {
@@ -94,11 +129,6 @@ pre::before {
     background-color: #313131 !important;
   }
 
-  /*
-  code block background
-  */
-  /*.codehilite {*/
-  /*  background-color: #44484e !important;*/
 
   /*
   scroll bar size
@@ -108,212 +138,6 @@ pre::before {
     height: 1rem !important;
   }
 
-  /*!**/
-  /*actual syntax highlighting*/
-  /**!*/
-  /*.codehilite pre {*/
-  /*  color: #fafafa !important;*/
-  /*  background-color: transparent !important;*/
-  /*}*/
-  /*.codehilite .hll {*/
-  /*  background-color: #272822 !important;*/
-  /*}*/
-  /*.codehilite .c {*/
-  /*  color: #8a8f98 !important;*/
-  /*} !* Comment *!*/
-  /*.codehilite .err {*/
-  /*  color: #960050 !important;*/
-  /*  background-color: #1e0010 !important;*/
-  /*} !* Error *!*/
-  /*.codehilite .k {*/
-  /*  color: #66d9ef !important;*/
-  /*} !* Keyword *!*/
-  /*.codehilite .l {*/
-  /*  color: #ae81ff !important;*/
-  /*} !* Literal *!*/
-  /*.codehilite .n {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name *!*/
-  /*.codehilite .o {*/
-  /*  color: #f92672 !important;*/
-  /*} !* Operator *!*/
-  /*.codehilite .p {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Punctuation *!*/
-  /*.codehilite .cm {*/
-  /*  color: #8a8f98 !important;*/
-  /*} !* Comment.Multiline *!*/
-  /*.codehilite .cp {*/
-  /*  color: #8a8f98 !important;*/
-  /*} !* Comment.Preproc *!*/
-  /*.codehilite .c1 {*/
-  /*  color: #8a8f98 !important;*/
-  /*} !* Comment.Single *!*/
-  /*.codehilite .cs {*/
-  /*  color: #8a8f98 !important;*/
-  /*} !* Comment.Special *!*/
-  /*.codehilite .ge {*/
-  /*  font-style: italic !important;*/
-  /*} !* Generic.Emph *!*/
-  /*.codehilite .gs {*/
-  /*  font-weight: bold !important;*/
-  /*} !* Generic.Strong *!*/
-  /*.codehilite .kc {*/
-  /*  color: #66d9ef !important;*/
-  /*} !* Keyword.Constant *!*/
-  /*.codehilite .kd {*/
-  /*  color: #66d9ef !important;*/
-  /*} !* Keyword.Declaration *!*/
-  /*.codehilite .kn {*/
-  /*  color: #f92672 !important;*/
-  /*} !* Keyword.Namespace *!*/
-  /*.codehilite .kp {*/
-  /*  color: #66d9ef !important;*/
-  /*} !* Keyword.Pseudo *!*/
-  /*.codehilite .kr {*/
-  /*  color: #66d9ef !important;*/
-  /*} !* Keyword.Reserved *!*/
-  /*.codehilite .kt {*/
-  /*  color: #66d9ef !important;*/
-  /*} !* Keyword.Type *!*/
-  /*.codehilite .ld {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.Date *!*/
-  /*.codehilite .m {*/
-  /*  color: #ae81ff !important;*/
-  /*} !* Literal.Number *!*/
-  /*.codehilite .s {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String *!*/
-  /*.codehilite .na {*/
-  /*  color: #a6e22e !important;*/
-  /*} !* Name.Attribute *!*/
-  /*.codehilite .nb {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name.Builtin *!*/
-  /*.codehilite .nc {*/
-  /*  color: #a6e22e !important;*/
-  /*} !* Name.Class *!*/
-  /*.codehilite .no {*/
-  /*  color: #66d9ef !important;*/
-  /*} !* Name.Constant *!*/
-  /*.codehilite .nd {*/
-  /*  color: #a6e22e !important;*/
-  /*} !* Name.Decorator *!*/
-  /*.codehilite .ni {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name.Entity *!*/
-  /*.codehilite .ne {*/
-  /*  color: #a6e22e !important;*/
-  /*} !* Name.Exception *!*/
-  /*.codehilite .nf {*/
-  /*  color: #a6e22e !important;*/
-  /*} !* Name.Function *!*/
-  /*.codehilite .nl {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name.Label *!*/
-  /*.codehilite .nn {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name.Namespace *!*/
-  /*.codehilite .nx {*/
-  /*  color: #a6e22e !important;*/
-  /*} !* Name.Other *!*/
-  /*.codehilite .py {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name.Property *!*/
-  /*.codehilite .nt {*/
-  /*  color: #f92672 !important;*/
-  /*} !* Name.Tag *!*/
-  /*.codehilite .nv {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name.Variable *!*/
-  /*.codehilite .ow {*/
-  /*  color: #f92672 !important;*/
-  /*} !* Operator.Word *!*/
-  /*.codehilite .w {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Text.Whitespace *!*/
-  /*.codehilite .mf {*/
-  /*  color: #ae81ff !important;*/
-  /*} !* Literal.Number.Float *!*/
-  /*.codehilite .mh {*/
-  /*  color: #ae81ff !important;*/
-  /*} !* Literal.Number.Hex *!*/
-  /*.codehilite .mi {*/
-  /*  color: #ae81ff !important;*/
-  /*} !* Literal.Number.Integer *!*/
-  /*.codehilite .mo {*/
-  /*  color: #ae81ff !important;*/
-  /*} !* Literal.Number.Oct *!*/
-  /*.codehilite .sb {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String.Backtick *!*/
-  /*.codehilite .sc {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String.Char *!*/
-  /*.codehilite .sd {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String.Doc *!*/
-  /*.codehilite .s2 {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String.Double *!*/
-  /*.codehilite .se {*/
-  /*  color: #ae81ff !important;*/
-  /*} !* Literal.String.Escape *!*/
-  /*.codehilite .sh {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String.Heredoc *!*/
-  /*.codehilite .si {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String.Interpol *!*/
-  /*.codehilite .sx {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String.Other *!*/
-  /*.codehilite .sr {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String.Regex *!*/
-  /*.codehilite .s1 {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String.Single *!*/
-  /*.codehilite .ss {*/
-  /*  color: #e6db74 !important;*/
-  /*} !* Literal.String.Symbol *!*/
-  /*.codehilite .bp {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name.Builtin.Pseudo *!*/
-  /*.codehilite .vc {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name.Variable.Class *!*/
-  /*.codehilite .vg {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name.Variable.Global *!*/
-  /*.codehilite .vi {*/
-  /*  color: #f8f8f2 !important;*/
-  /*} !* Name.Variable.Instance *!*/
-  /*.codehilite .il {*/
-  /*  color: #ae81ff !important;*/
-  /*} !* Literal.Number.Integer.Long *!*/
-
-  /*.codehilite .gh {*/
-  /*} !* Generic Heading & Diff Header *!*/
-  /*.codehilite .gu {*/
-  /*  color: #8a8f98 !important ;*/
-  /*} !* Generic.Subheading & Diff Unified/Comment? *!*/
-  /*.codehilite .gd {*/
-  /*  color: #f92672 !important ;*/
-  /*} !* Generic.Deleted & Diff Deleted *!*/
-  /*.codehilite .gi {*/
-  /*  color: #a6e22e !important ;*/
-  /*} !* Generic.Inserted & Diff Inserted *!*/
-
-  /*.md-clipboard:before {*/
-  /*  color: rgba(255, 255, 255, 0.31);*/
-  /*}*/
-  /*.codehilite:hover .md-clipboard:before,*/
-  /*.md-typeset .highlight:hover .md-clipboard:before,*/
-  /*pre:hover .md-clipboard:before {*/
-  /*  color: rgba(255, 255, 255, 0.6);*/
-  /*}*/
 
   .md-typeset summary:after {
     color: #4C9BA6;
@@ -354,7 +178,7 @@ pre::before {
 }
 
 .md-clipboard svg:hover {
-  color: #86CEA6;
+  color: #0083FC;
 }
 
 .video_container {
@@ -376,23 +200,200 @@ pre::before {
 }
 
 .flotiq-form .mat-fab.mat-primary, .flotiq-form .mat-flat-button.mat-primary, .flotiq-form .mat-mini-fab.mat-primary, .flotiq-form .mat-raised-button.mat-primary[type="submit"] {
-  background-color: #26a69a;
+  background-color: #0083FC;
 }
 
 .flotiq-form .mat-input-element[matinput] {
-  caret-color: #26a69a;
+  caret-color: #0083FC;
 }
 
 .flotiq-form .mat-form-field.mat-focused.mat-primary .mat-form-field-label {
-  color: #26a69a;
+  color: #0083FC;
 }
 
 .flotiq-form .mat-form-field.mat-focused.mat-primary .mat-form-field-ripple {
-  background-color: #26a69a;
+  background-color: #0083FC;
 }
 
 .pricing-info {
   font-size: 16px;
   color: #dfb81c;
   cursor: help;
+}
+
+.md-header__inner {
+  justify-content: space-between;
+}
+
+.nav-additional-element {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.25px;
+  color: #FFFFFF;
+  margin-left: 40px;
+}
+
+.nav-button {
+  background: #0083FC;
+  border-radius: 40px;
+  padding: 10px 20px;
+}
+
+.nav-badge {
+  display: none;
+}
+
+.md-header__logo {
+  margin: .2rem;
+  padding: .4rem;
+}
+
+.md-typeset table:not([class]) {
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid rgba(142, 161, 184, 0.3);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: #8EA1B8;
+}
+
+.md-typeset .admonition, .md-typeset details {
+  border-radius: 0;
+  box-shadow: none;
+  border-top: 1px solid;
+  border-top-color: rgba(142, 161, 184, 0.3) !important;
+  border-right: 1px solid;
+  border-right-color: rgba(142, 161, 184, 0.3) !important;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(142, 161, 184, 0.3) !important;
+}
+
+.md-footer {
+  background: white;
+  color: #8EA1B8;
+}
+
+.md-footer-nav {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+.md-footer-meta {
+  background: white;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+  justify-content: space-between;
+}
+
+.md-footer-copyright__highlight {
+  color: #8EA1B8;
+  text-align: left;
+  padding: 0 5px;
+}
+
+html .md-footer-meta.md-typeset a {
+  color: #8EA1B8;
+}
+
+.md-footer-social__link svg {
+  fill: #8EA1B8;
+}
+
+.md-footer__direction, .md-footer__title {
+  padding: 0;
+  max-width: 100%;
+  color: #8EA1B8;
+}
+
+.md-footer .md-icon svg {
+  display: inline-block;
+}
+
+.md-flex__ellipsis {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #0083FC;
+}
+
+.md-footer-social {
+  width: 48%;
+}
+
+.footer-links {
+  padding: 0 5px;
+}
+
+li.md-nav__item {
+  border-left: 4px solid transparent;
+}
+
+li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
+  border-left: 4px solid #0083FC;
+}
+
+@media screen and (max-width: 76.1875em) {
+  .md-header__button.md-logo {
+    display: block;
+  }
+
+  .nav-badge {
+    margin-top: 1rem;
+    display: block;
+    max-height: 21px;
+  }
+
+  header.md-header {
+    height: 60px;
+    padding: 6px 0;
+  }
+
+  .nav-additional-element {
+    display: none;
+  }
+
+  .width75 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .md-logo.middle {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .md-search__inner {
+    width: 25rem;
+  }
+  .md-search__input {
+    background-color: #E9F3FF;
+  }
+
+  .md-search__input::-webkit-input-placeholder { /* Edge */
+    color: #8EA1B8;
+  }
+
+  .md-search__input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #8EA1B8;
+  }
+
+  .md-search__input::placeholder {
+    color: #8EA1B8;
+  }
+
+  .md-search__input+.md-search__icon {
+    color: #0083FC;
+  }
+
+  .md-footer-copyright__highlight {
+    text-align: right;
+  }
 }

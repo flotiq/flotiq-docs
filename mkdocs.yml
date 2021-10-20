@@ -7,10 +7,12 @@ theme:
      logo: API/images/f.png
      favicon: API/images/favicon.ico
      custom_dir: theme
+     language: en
      palette:
-         primary: teal
+         primary: '#0083FC'
      features:
        - navigation.instant
+       - navigation.top
 plugins:
   - search
   - awesome-pages
@@ -54,6 +56,7 @@ markdown_extensions:
 extra_javascript:
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/highlight.min.js
+  - https://unpkg.com/was-it-helpful@latest/dist/build.js
   - 'js/flotiq.js'
     #- https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.js
     #- https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/javascript/javascript.min.js
@@ -71,8 +74,6 @@ extra:
       link: https://github.com/flotiq
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/flotiq/
-    - icon: custom/flotiq
-      link: https://flotiq.com/
 
 
 nav:

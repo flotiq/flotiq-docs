@@ -27,10 +27,7 @@ It will also start docs server.
 
 Without docker:
 ```bash
-pip install mkdocs
-pip install mkdocs-material
-pip install mkdocs-awesome-pages-plugin
-pip install mkdocs-git-revision-date-localized-plugin
+pip install -r requirements.txt
 ```
 
 To start server use:

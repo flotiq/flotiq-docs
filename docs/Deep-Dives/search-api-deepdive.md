@@ -1,3 +1,7 @@
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/Deep-Dives/">Deep Dives</a> / <a href="/Deep-Dives/search-api-deepdive/">Full-text search</a>
+</div>
+
 # Search API in Flotiq
 
 ## Overview

@@ -1,6 +1,9 @@
 title: How to handle Content Type Definitions | Flotiq docs
 description: How to handle Content Type Definitions in Flotiq
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-types/">Content types</a>
+</div>
 
 # Content Types
 

@@ -1,6 +1,10 @@
 title: Flotiq workflows - content publishing | Flotiq documentation
 description: Flotiq support for custom workflows helps teams collaborate and produce quality content.
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/workflow/content-publishing-workflow/">Flotiq workflows</a>
+</div>
+
 # Flotiq workflows
 
 !!! note 

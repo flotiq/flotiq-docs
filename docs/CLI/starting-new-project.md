@@ -1,3 +1,7 @@
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/CLI/">CLI</a> / <a href="/CLI/starting-new-project/">Staring new project</a>
+</div>
+
 # Starting new Gatsby project with Flotiq CLI
 
 To start a new Gatsby project with Flotiq CLI you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)) and your "Read and write API key" (more about API keys [here](../API/index.md)).

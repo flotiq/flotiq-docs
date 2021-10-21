@@ -1,6 +1,12 @@
 title: Get your own Open Api Schema | Flotiq docs
 description: How to get your open API schema
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/open-api-schema/">Open API schema</a>
+</div>
+
+# Open API schema
+
 You can generate Full Open API Schema for every Content Type Definition 
 in your account or scope it making User Defined API key as described [here](/API/#user-defined-api-keys).
 

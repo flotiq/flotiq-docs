@@ -2,6 +2,10 @@ title: Media Library & Unsplash
 description: How to use Flotiq Media Library and Unsplash integration.
 
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/panel/">Dashboard</a> / <a href="/panel/media-library/">Media Library</a>
+</div>
+
 # Media Library
 
 The Media Library has 2 sections:

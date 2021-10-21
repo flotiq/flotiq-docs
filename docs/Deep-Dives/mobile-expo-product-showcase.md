@@ -1,6 +1,10 @@
 title: React-native mobile product showcase | Flotiq docs
 description: This example shows how to use Flotiq and the Flotiq Mobile Expo to quickly build a CMS-managed mobile application.
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/Deep-Dives/">Deep Dives</a> / <a href="/Deep-Dives/mobile-expo-product-showcase/">Mobile product showcase application</a>
+</div>
+
 # React-native mobile product showcase
 
 

@@ -1,3 +1,7 @@
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/CLI/">CLI</a> / <a href="/CLI/importing-data/">Importing example data</a>
+</div>
+
 # Importing example data for Gatsby starters with Flotiq CLI
 
 To importing example data for a Gatsby starter with Flotiq CLI you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)), your "Read and write API key" (more about API keys [here](../API/index.md)), and a clone of one of our [Gatsby starters](#gatsby-starters).

@@ -1,3 +1,7 @@
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/panel/">Dashboard</a> / <a href="/panel/content-objects/">Content Objects</a>
+</div>
+
 # Content Objects
 
 Once a Content Type has been defined in the system - the user can create Content Objects of that Content Type.

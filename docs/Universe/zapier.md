@@ -1,6 +1,10 @@
 title: Flotiq Zapier integration | Flotiq docs
 description: Flotiq allows you to integrate your content with any system easily.
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/Universe/">Flotiq Universe</a> / <a href="/Universe/zapier/">Zapier</a>
+</div>
+
 # Zapier integrations (version 1.2.0)
 
 Thanks to Zapier, it has become straightforward to build complex pipelines that integrate multiple sources of content. Flotiq's goal is to help you make the best use of your content, so we provide [Zapier integrations](https://zapier.com/apps/flotiq/integrations) 

@@ -1,3 +1,7 @@
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API access & scoped keys</a>
+</div>
+
 # API access
 
 All API endpoints that are published in Flotiq are currently using an API-key authorization method. 

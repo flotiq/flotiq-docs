@@ -1,6 +1,10 @@
 title: How to handle Content Objects | Flotiq docs
 description: How to handle Content Objects in Flotiq
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-objects/">Content objects</a>
+</div>
+
 
 # Content Objects
 

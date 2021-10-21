@@ -135,7 +135,7 @@ nav:
     - 'Building a banner rotator': Deep-Dives/building-a-banner-rotator-with-an-admin-interface.md
     - 'Building a store locator': Deep-Dives/storing-location-data-headless-cms.md
     - 'Complex data structures': Deep-Dives/jamstack-recipes-website-complex-data-structures.md
-    - 'Importing from Wordpress': Deep-Dives/wordpress-import.md
+    - 'Importing from WordPress': Deep-Dives/wordpress-import.md
     - 'E-commerce with Snipcart & Gatsby': Deep-Dives/node-js-ecommerce-snipcart-gatsby-demo.md
     - 'Full-text search': Deep-Dives/search-api-deepdive.md
     - 'Securing JAMstack APIs': Deep-Dives/securing-write-api-access.md

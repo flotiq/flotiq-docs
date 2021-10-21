@@ -44,3 +44,29 @@ window.addEventListener('click', function (event) {
 });
 
 hljs.initHighlightingOnLoad();
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    if (document.querySelector('#was-it-helpful')) {
+        new WasItHelpful('#was-it-helpful', {
+            labels: {
+                "question_text": "Was this article helpful?",
+                "answer_yes": "Yes!",
+                "answer_no": "No.",
+                "sorry_text": "Sorry about that! How can we improve it?",
+                "submit_btn": "Send feedback",
+                "thank_you": "Thanks!"
+            },
+            onSubmit: function(data) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", 'https://api.flotiq.com/api/v1/content/doc_helpful_articles_info', true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.setRequestHeader('X-AUTH-TOKEN', '67435b482ad3a3bf2ad1667add0745c4');
+                xhr.send(JSON.stringify({
+                    'subject': document.getElementsByTagName("title")[0].innerHTML,
+                    'url': window.location.href,
+                    'helpful': data.helpful,
+                    'message': data.message
+                }));
+            }});
+    }
+});

@@ -34,18 +34,21 @@
             <a
                     href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
                     title="{{ config.site_name | e }}"
-                    class="md-header__button md-logo"
+                    class="md-header__button md-logo desktop"
                     aria-label="{{ config.site_name }}"
                     data-md-component="logo"
             >
-                {% include "partials/logo.html" %}
+                <img src="{{ 'API/images/full_logo.png' | url }}" alt="Flotiq">
             </a>
-            <div class="md-header__logo md-logo middle">
-                <img src="{{ 'API/images/flotiq.png' | url }}" alt="Flotiq">
-            </div>
-            <div class="md-header__logo md-logo">
-                <img src="{{ 'API/images/docs_badge.png' | url }}" alt="Docs">
-            </div>
+            <a
+                    href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
+                    title="{{ config.site_name | e }}"
+                    class="md-header__button md-logo mobile"
+                    aria-label="{{ config.site_name }}"
+                    data-md-component="logo"
+            >
+                <img src="{{ 'API/images/small_logo.png' | url }}" alt="Flotiq">
+            </a>
         </div>
         <div>
             <!-- Color palette -->

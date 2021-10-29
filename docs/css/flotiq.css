@@ -565,6 +565,7 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
   .md-search__input {
     background-color: #E9F3FF;
     color: #8EA1B8;
+    border-radius: .1rem;
   }
 
   .md-search__input::-webkit-input-placeholder { /* Edge */

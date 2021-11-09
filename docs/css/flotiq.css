@@ -71,6 +71,16 @@ header.md-header {
   width:75%;
 }
 
+@media (min-width: 768px) {
+.width25 {
+    width:25%;
+  }
+}
+
+.margin20 {
+  margin-right: 20px;
+}
+
 .button-center-vertical {
   vertical-align: middle;
 }

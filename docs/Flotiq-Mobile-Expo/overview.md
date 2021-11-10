@@ -76,9 +76,15 @@ npm start
 
 This will start Metro server [http://localhost:19002](http://localhost:19002/) where you can start the app on Android and iOS simulator or on the real device.
 
-![](images/metro.png){: .center .width75 .border}
+![](images/metro.png){: .border}
 
-More development tips you can find in the projects [GitHub repository](https://github.com/flotiq/flotiq-mobile-demo).
+
+To run app on the real device you have to have Expo Go app installed ([Android app](https://play.google.com/store/apps/details?id=host.exp.exponent), [iOS app](https://apps.apple.com/us/app/expo-go/id982107779)).
+
+When you open Expo Go app you have to scan the QR code presented on the [http://localhost:19002](http://localhost:19002/) page.
+
+!!! note
+    More development tips you can find in the projects [GitHub repository](https://github.com/flotiq/flotiq-mobile-demo).
 
 ### Create your own products showcase mobile app
 

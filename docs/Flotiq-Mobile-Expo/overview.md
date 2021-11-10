@@ -11,7 +11,7 @@ description: Use Flotiq Mobile Expo application to browse and manage your conten
 
 ## For Content Editors: Browse and manage your content
 
-The Flotiq Expo app is a React Native application which allows you to browse and manage your content directly from the mobile.
+The Flotiq Expo app is a React Native application that allows you to browse and manage your content directly from the mobile.
 
 Regardless of what data you store in the Flotiq, the mobile application can provide convenient and quick access to the data.
 
@@ -23,7 +23,7 @@ Main features:
 * Search through the Content Objects
 * Upload photos directly from your smartphone camera
 
-Ready-to-use application is available in Google Play or Apple App Store. Install the app, use the QR code in your API keys to connect the app to Flotiq and browse through your content.
+A ready-to-use application is available in Google Play or Apple App Store. Install the app, use the QR code in your API keys to connect the app to Flotiq and browse through your content.
 
 ![](images/mobile-0.png){: .width25 }
 ![](images/mobile-1.png){: .width25 }
@@ -33,7 +33,7 @@ Ready-to-use application is available in Google Play or Apple App Store. Install
 ## For Developers: Boilerplate for your new application
 
 
-The Flotiq Mobile Expo is MIT-licensed app, so you can modify it for your needs and use in the next mobile project.
+The Flotiq Mobile Expo is an MIT-licensed app, so you can modify it for your needs and use it in the next mobile project.
 
 This project was implemented using:
 
@@ -42,7 +42,7 @@ This project was implemented using:
 * React Navigation
 * React Native Elements
 * Redux
-* Flotiq as data source
+* Flotiq as the data source
 
 
 ![](images/react-native.png){: .margin20 }
@@ -52,8 +52,8 @@ This project was implemented using:
 
 ### Start your project in 3 simple steps
 
-Thanks to [Expo.io](https://expo.dev) ecosystem you can run your application without installing any complex
-tools like Android SDK, XCode or take care about your JDK version.
+Thanks to the [Expo.io](https://expo.dev) ecosystem you can run your application without installing any complex
+tools like Android SDK, XCode or take care of your JDK version.
 
 Follow these 3 steps to develop Flotiq based application:
 
@@ -74,20 +74,20 @@ npm install
 npm start
 ```
 
-This will start Metro server [http://localhost:19002](http://localhost:19002/) where you can start the app on Android and iOS simulator or on the real device.
+This will start Metro server [http://localhost:19002](http://localhost:19002/) where you can start the app on Android and iOS simulator or the real device.
 
 ![](images/metro.png){: .border}
 
 
-To run app on the real device you have to have Expo Go app installed ([Android app](https://play.google.com/store/apps/details?id=host.exp.exponent), [iOS app](https://apps.apple.com/us/app/expo-go/id982107779)).
+To run the app on the real device you have to have the Expo Go app installed ([Android app](https://play.google.com/store/apps/details?id=host.exp.exponent), [iOS app](https://apps.apple.com/us/app/expo-go/id982107779)).
 
-When you open Expo Go app you have to scan the QR code presented on the [http://localhost:19002](http://localhost:19002/) page.
+When you open the Expo Go app you have to scan the QR code presented on the [http://localhost:19002](http://localhost:19002/) page.
 
 !!! note
-    More development tips you can find in the projects [GitHub repository](https://github.com/flotiq/flotiq-mobile-demo).
+For more development tips check the projects [GitHub repository](https://github.com/flotiq/flotiq-mobile-demo).
 
 ### Create your own products showcase mobile app
 
-Check out our [simple guide](/docs/Deep-Dives/mobile-expo-product-showcase/) how to adapt the Flotiq Mobile Expo application source code
+Check out our [simple guide](/docs/Deep-Dives/mobile-expo-product-showcase/) on how to adapt the Flotiq Mobile Expo application source code
 to work as a product showcase app.
 

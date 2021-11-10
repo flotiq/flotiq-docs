@@ -14,7 +14,7 @@ You will build a mobile app that will let your users:
 - search through the product list.
 
 The app will be synchronized with your Flotiq account, so you can use the CMS to add and update products and it will compile for Android and iOS phones, out of the box. 
-The code changes required in this guide are minimal, but it might take some time to setup the working environment.
+The code changes required in this guide are minimal, but it might take some time to set up the working environment.
 
 
 ## Before you start
@@ -56,22 +56,22 @@ npm install
 npm start
 ```
 
-Above commands will start Metro server [http://localhost:19002](http://localhost:19002/) where you can start the app on Android and iOS simulator or on the real device.
+The above commands will start Metro server [http://localhost:19002](http://localhost:19002/) where you can start the app on Android and iOS simulator or the real device.
 
 ![](../Flotiq-Mobile-Expo/images/metro.png){: .border}
 
 
 ### Explore the Flotiq Mobile app 
 
-To run app on the real device you have to have Expo Go app installed ([Android app](https://play.google.com/store/apps/details?id=host.exp.exponent), [iOS app](https://apps.apple.com/us/app/expo-go/id982107779)).
+To run the app on a real device you have to have the Expo Go app installed ([Android app](https://play.google.com/store/apps/details?id=host.exp.exponent), [iOS app](https://apps.apple.com/us/app/expo-go/id982107779)).
 
-When you open Expo Go app you have to scan the QR code presented on the [http://localhost:19002](http://localhost:19002/) page.
+When you open the Expo Go app you have to scan the QR code presented on the [http://localhost:19002](http://localhost:19002/) page.
 
 !!! note
-    More development tips you can find in the projects [GitHub repository](https://github.com/flotiq/flotiq-mobile-demo).
+    For more development tips check the projects [GitHub repository](https://github.com/flotiq/flotiq-mobile-demo).
 
 
-Now, on your device (or emulator) you should see start screen of the Flotiq app.
+Now, on your device (or emulator) you should see the start screen of the Flotiq app.
 
 ![](images/mobile-expo-product-showcase/mobile-start.png){.width25}
 
@@ -81,12 +81,12 @@ The screen you will see allows you to connect with your Flotiq account, but we w
     If you have any issues - consult the README file in the application repo.
 
 
-## Create product content type in Flotiq
+## Create product Content Type in Flotiq
 
 Now it's time to create the Content Type definition in the Flotiq. You can use our predefined
-types to speed up the modelling process. Content Type definition can be updated in further development.
+types to speed up the modelling process. The Content Type definition can be updated in further development.
 
-Go to content type definitions tab and choose `Products`. 
+Go to the Content Type definitions tab and choose `Products`. 
 Save your Content Type definition. Now you can add your products to the Flotiq.
 
 ![](images/mobile-expo-product-showcase/create-product-ctd.png){: .border}
@@ -119,7 +119,7 @@ Once you save the file - the application should automatically reload in the emul
 
 ### Simplify navigation
 
-For our Product Showcase app we would like to skip to the product list immediately, instead of showing the default Home screen and Content Type browser screen. To achieve that - you will need to update how the navigation is structured. 
+For our Product Showcase app, we would like to skip to the product list immediately, instead of showing the default Home screen and Content Type browser screen. To achieve that - you will need to update how the navigation is structured. 
 
 Open the `StackNavigator.js` file and make the necessary adjustments:
 
@@ -143,7 +143,7 @@ const refetchData = true;
 
 ### Cleanup list view
    
-In products list view we want to replace empty state view, and hide edit/remove options.
+In the products list view we want to replace the empty state view, and hide edit/remove options.
 
 Open the `ContentTypeObjectsScreen.js` file and change those lines:
 

@@ -1,5 +1,5 @@
 title: Flotiq Mobile Expo app for Content Editors & Developers | Flotiq docs
-description: Use Flotiq Mobile Expo application to browse and manage your content directly from the mobile application
+description: Use the Flotiq Mobile Expo application to browse and manage your content directly from the mobile application
 
 # Flotiq Mobile Expo app for Content Editors & Developers
 
@@ -23,7 +23,7 @@ Main features:
 * Search through the Content Objects
 * Upload photos directly from your smartphone camera
 
-A ready-to-use application is available in Google Play or Apple App Store. Install the app, use the QR code in your API keys to connect the app to Flotiq and browse through your content.
+A ready-to-use application is available on Google Play and Apple App Store. Install the app, use the QR code in your API keys to connect the app to Flotiq and browse through your content.
 
 ![](images/mobile-0.png){: .width25 }
 ![](images/mobile-1.png){: .width25 }
@@ -52,10 +52,10 @@ This project was implemented using:
 
 ### Start your project in 3 simple steps
 
-Thanks to the [Expo.io](https://expo.dev) ecosystem you can run your application without installing any complex
-tools like Android SDK, XCode or take care of your JDK version.
+Thanks to the [Expo.io](https://expo.dev) ecosystem, you can run your application without installing any complex
+tools like Android SDK, XCode, or take care of your JDK version.
 
-Follow these 3 steps to develop Flotiq based application:
+Follow these three steps to develop Flotiq based application:
 
 1. Install expo
 ```shell
@@ -79,12 +79,12 @@ This will start Metro server [http://localhost:19002](http://localhost:19002/) w
 ![](images/metro.png){: .border}
 
 
-To run the app on the real device you have to have the Expo Go app installed ([Android app](https://play.google.com/store/apps/details?id=host.exp.exponent), [iOS app](https://apps.apple.com/us/app/expo-go/id982107779)).
+To run the app on the real device, you have to have the Expo Go app installed ([Android app](https://play.google.com/store/apps/details?id=host.exp.exponent), [iOS app](https://apps.apple.com/us/app/expo-go/id982107779)).
 
-When you open the Expo Go app you have to scan the QR code presented on the [http://localhost:19002](http://localhost:19002/) page.
+When you open the Expo Go app, you have to scan the QR code presented on the [http://localhost:19002](http://localhost:19002/) page.
 
 !!! note
-For more development tips check the projects [GitHub repository](https://github.com/flotiq/flotiq-mobile-demo).
+    For more development tips, check the projects [GitHub repository](https://github.com/flotiq/flotiq-mobile-demo).
 
 ### Create your own products showcase mobile app
 

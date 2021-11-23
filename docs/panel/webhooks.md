@@ -13,7 +13,7 @@ Performing actions on the content, you can automatically **notify other external
 What **external services** could handle webhook notifications from Flotiq? The number of potential integrations is almost endless. In addition to your implementations that respond to changes in Flotiq, you can use many ready-made systems open to this way of communication.
 
 !!! Note
-    Purely technically, webhooks are HTTP requests with specified payload performed automatically after selected actions in Flotiq occurs, e.g. after adding content.
+    Purely technically, webhooks are HTTP requests with specified payload performed automatically when selected actions in Flotiq occurs, e.g. when content was added.
 
 
 ## Webhooks common use cases

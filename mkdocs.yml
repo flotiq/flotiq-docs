@@ -77,30 +77,30 @@ extra:
 
 nav:
   - 'Home': index.md
-  - API:
-    - 'API access & scoped keys': API/index.md
-    - 'Working with Content Types':
-      - 'Overview': API/content-types.md
-      - 'Creating new Content Types': API/content-type/creating-ctd.md
-      - 'Updating Content Types': API/content-type/updating-ctd.md
-      - 'Listing Content Types': API/content-type/listing-ctd.md
-      - 'Getting single Content Type': API/content-type/getting-ctd.md
-      - 'Deleting Content Type': API/content-type/deleting-ctd.md
-    - 'Working with Content Objects':
-      - 'Overview': API/content-objects.md
-      - 'Creating new Content Objects': API/content-type/creating-co.md
-      - 'Updating Content Objects': API/content-type/updating-co.md
-      - 'Listing Content Objects': API/content-type/listing-co.md
-      - 'Getting single Content Object': API/content-type/getting-co.md
-      - 'Deleting Content Objects': API/content-type/deleting-co.md
-      - 'Listing deleted Content Objects': API/content-type/listing-deleted-co.md
-    - 'Dynamic Content API': API/dynamic-content-api.md
-    - 'GraphQL': API/graph-ql.md
-    - 'Generating SDKs': API/generate-package.md
-    - 'Open API schema': API/open-api-schema.md
-    - 'Full-text search': API/search.md
-    - 'Working with media': API/media-library.md
-    - 'Workflows': 'API/workflow/content-publishing-workflow.md'
+#  - API:
+#    - 'API access & scoped keys': API/index.md
+#    - 'Working with Content Types':
+#      - 'Overview': API/content-types.md
+#      - 'Creating new Content Types': API/content-type/creating-ctd.md
+#      - 'Updating Content Types': API/content-type/updating-ctd.md
+#      - 'Listing Content Types': API/content-type/listing-ctd.md
+#      - 'Getting single Content Type': API/content-type/getting-ctd.md
+#      - 'Deleting Content Type': API/content-type/deleting-ctd.md
+#    - 'Working with Content Objects':
+#      - 'Overview': API/content-objects.md
+#      - 'Creating new Content Objects': API/content-type/creating-co.md
+#      - 'Updating Content Objects': API/content-type/updating-co.md
+#      - 'Listing Content Objects': API/content-type/listing-co.md
+#      - 'Getting single Content Object': API/content-type/getting-co.md
+#      - 'Deleting Content Objects': API/content-type/deleting-co.md
+#      - 'Listing deleted Content Objects': API/content-type/listing-deleted-co.md
+#    - 'Dynamic Content API': API/dynamic-content-api.md
+#    - 'GraphQL': API/graph-ql.md
+#    - 'Generating SDKs': API/generate-package.md
+#    - 'Open API schema': API/open-api-schema.md
+#    - 'Full-text search': API/search.md
+#    - 'Working with media': API/media-library.md
+#    - 'Workflows': 'API/workflow/content-publishing-workflow.md'
   - Dashboard:
     - 'Overview': panel/index.md
     - 'Content types': panel/content-types.md
@@ -108,40 +108,42 @@ nav:
     - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
-    - 'Webhooks': panel/webhooks.md
+    - 'Webhooks':
+      - Overview: panel/webhooks/index.md
+      - Examples: panel/webhooks/examples.md
     - Plugins:
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
       - 'Netlify': panel/Plugins/Netlify-integration.md
-  - CLI:
-    - 'Overview': CLI/index.md
-    - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
-    - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
-    - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
-  - Flotiq Universe:
-    - 'Overview': Universe/index.md
-    - 'Postman': Universe/postman.md
-    - 'Zapier': Universe/zapier.md
-    - 'Gatsby': Universe/gatsby.md
-    - 'Scully': Universe/scully.md
-    - 'WordPress': Universe/wordpress.md
-#    - 'Netlify': Universe/netlify.md
-#    - 'Heroku': Universe/heroku.md
-  - Deep dives:
-    - 'Overview': Deep-Dives/index.md
-    - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md
-    - 'Mobile product showcase application': Deep-Dives/mobile-expo-product-showcase.md # TO UPDATE
-    - 'Building a blog': Deep-Dives/Building-a-blog-in-3-minutes.md
-    - 'Building a contact form': Deep-Dives/Headless-CMS-Contact-Forms.md
-    - 'Building a banner rotator': Deep-Dives/building-a-banner-rotator-with-an-admin-interface.md
-    - 'Building a store locator': Deep-Dives/storing-location-data-headless-cms.md
-    - 'Complex data structures': Deep-Dives/jamstack-recipes-website-complex-data-structures.md
-    - 'Importing from Wordpress': Deep-Dives/wordpress-import.md
-    - 'E-commerce with Snipcart & Gatsby': Deep-Dives/node-js-ecommerce-snipcart-gatsby-demo.md
-    - 'Full-text search': Deep-Dives/search-api-deepdive.md
-    - 'Securing JAMstack APIs': Deep-Dives/securing-write-api-access.md
-    - 'Custom domains in Heroku': Deep-Dives/add-a-custom-domain-to-heroku-for-free.md
-    - 'Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content': 'Deep-Dives/netlify-zapier-gatsby-serverless-deployment-pipeline.md'
-    - 'Upload media example app': Deep-Dives/upload-media.md
-  - Flotiq Mobile Expo: Flotiq-Mobile-Expo/overview.md
-  - FAQ: faq.md
-  - 'Contact us': contact.md
+#  - CLI:
+#    - 'Overview': CLI/index.md
+#    - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
+#    - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
+#    - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
+#  - Flotiq Universe:
+#    - 'Overview': Universe/index.md
+#    - 'Postman': Universe/postman.md
+#    - 'Zapier': Universe/zapier.md
+#    - 'Gatsby': Universe/gatsby.md
+#    - 'Scully': Universe/scully.md
+#    - 'WordPress': Universe/wordpress.md
+##    - 'Netlify': Universe/netlify.md
+##    - 'Heroku': Universe/heroku.md
+#  - Deep dives:
+#    - 'Overview': Deep-Dives/index.md
+#    - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md
+#    - 'Mobile product showcase application': Deep-Dives/mobile-expo-product-showcase.md # TO UPDATE
+#    - 'Building a blog': Deep-Dives/Building-a-blog-in-3-minutes.md
+#    - 'Building a contact form': Deep-Dives/Headless-CMS-Contact-Forms.md
+#    - 'Building a banner rotator': Deep-Dives/building-a-banner-rotator-with-an-admin-interface.md
+#    - 'Building a store locator': Deep-Dives/storing-location-data-headless-cms.md
+#    - 'Complex data structures': Deep-Dives/jamstack-recipes-website-complex-data-structures.md
+#    - 'Importing from Wordpress': Deep-Dives/wordpress-import.md
+#    - 'E-commerce with Snipcart & Gatsby': Deep-Dives/node-js-ecommerce-snipcart-gatsby-demo.md
+#    - 'Full-text search': Deep-Dives/search-api-deepdive.md
+#    - 'Securing JAMstack APIs': Deep-Dives/securing-write-api-access.md
+#    - 'Custom domains in Heroku': Deep-Dives/add-a-custom-domain-to-heroku-for-free.md
+#    - 'Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content': 'Deep-Dives/netlify-zapier-gatsby-serverless-deployment-pipeline.md'
+#    - 'Upload media example app': Deep-Dives/upload-media.md
+#  - Flotiq Mobile Expo: Flotiq-Mobile-Expo/overview.md
+#  - FAQ: faq.md
+#  - 'Contact us': contact.md

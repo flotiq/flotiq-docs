@@ -46,7 +46,7 @@ Webhooks are useful if you want to **extend the system functionality** or **inte
 
 To create a Webhook, click on the main menu `Webhooks` -> `Add new Webhook`.
 
-![](images/webhooks/webhooks-product-added-notification.png){: .border}
+![](../images/webhooks/webhooks-product-added-notification.png){: .border}
 
 !!! Note
     The above configuration means: Send a POST request to `https://my-example-app.com/notify` with an `AUTH` header of `secret_token` when the new `product` in Flotiq was `created`.
@@ -86,7 +86,7 @@ The headers to add to the HTTP request made by Flotiq.
 To view existing webhooks, click `Webhooks` on the Flotiq main menu.
 The table shows all the webhooks available in your account.
 
-![](images/webhooks/webhooks-list.png){: .border }
+![](../images/webhooks/webhooks-list.png){: .border }
 
 ### How to execute Create, Update, Delete webhook
 
@@ -104,7 +104,7 @@ Webhooks with a `Custom` action assigned can be launched manually, at any time, 
 Additionally, if the object is not saved, the execute webhook button will save the object.
 The custom action is not possible to be performed from the API level.
 
-![](images/webhooks/webhooks-custom-hook.png){: .border }
+![](../images/webhooks/webhooks-custom-hook.png){: .border }
 
 
 ### Webhooks payload
@@ -152,7 +152,7 @@ Note: When executing the `Delete` action, only the object's id is sent in the pa
 To track your webhooks activity, go to the `Edit` webhook screen.
 In the sidebar, you can browse webhook execution logs.
 
-![](images/webhooks/webhooks-logs.png){: .border }
+![](../images/webhooks/webhooks-logs.png){: .border }
 
 The details of the single webhook execution, such as request payload and server response, are available after clicking on a single record.
 
@@ -162,7 +162,7 @@ The execution of a webhook can have one of the following statuses:
 * done (webhook was executed and received `HTTP 2xx` response code)
 * error (webhook was executed with issues, e.g. target URL was not found, or the response was not in the `HTTP 2xx` range)
 
-![](images/webhooks/webhooks-log-details.png)
+![](../images/webhooks/webhooks-log-details.png)
 
 Flotiq will keep 300 last execution logs. Older entries will be removed.
 

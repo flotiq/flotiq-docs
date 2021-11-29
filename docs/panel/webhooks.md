@@ -6,7 +6,7 @@ description: How to use webhooks in Flotiq
 
 ## What is a Webhook?
 
-Webhooks are **automated notifications** sent from the application when something changes, that allows you to extend the standard Flotiq behaviour.
+Webhooks are **automated notifications** sent from the application when something changes, which allows you to extend the standard Flotiq behaviour.
 
 Performing actions on the content, you can automatically **notify other external services**, and order them to perform additional actions, e.g. sending an email after adding a comment.
 
@@ -38,17 +38,17 @@ As you can see, there are a lot of possible integrations. You can implement your
 
 ## Do I need a webhook?
 
-Webhooks are useful if you want to **extend the system functionality** or **integrate quickly with other apps** that fit your business process. You can enable or disable webhooks at any time, without any effort.
+Webhooks are useful if you want to **extend the system functionality** or **integrate quickly with other apps** that fit your business process. You can enable or disable webhooks at any time without any effort.
 
 ## Define Webhooks with Flotiq
 
 ### Creating webhook
 
-To create a Webhook click on the main menu `Webhooks` -> `Add new Webhook`.
+To create a Webhook, click on the main menu `Webhooks` -> `Add new Webhook`.
 
 ![](images/webhooks/webhooks-product-added-notification.png){: .border}
 
-!!! Note 
+!!! Note
     The above configuration means: Send a POST request to `https://my-example-app.com/notify` with an `AUTH` header of `secret_token` when the new `product` in Flotiq was `created`.
 
 Flotiq allows you to specify the following webhook properties:
@@ -63,19 +63,19 @@ The URL address, with `https://` prefix, on which the request will be sent.
 Whether the webhook is currently enabled.
 
 #### Actions
-Actions performed on Content Objects, that trigger the webhook execution:
+Actions performed on Content Objects that trigger the webhook execution:
 
 * `Create` - when the Content Object was created,
 * `Update` - when the Content Object was updated,
 * `Delete` - when the Content Object was deleted,
 
-Additionally, there is a `Custom` option. 
+Additionally, there is a `Custom` option.
 When you choose this, the webhook can be manually triggered, at any time, in the Content Object editing panel (read more in the [How to execute custom action webhook](#how-to-execute-custom-action-webhook) section).
 Multiple actions can be selected.
 
 #### Content type definitions
 What type of objects in Flotiq the webhook applies to.
-The list includes all user types on the system. 
+The list includes all user types on the system.
 Multiple types can be selected.
 
 #### Headers
@@ -83,14 +83,14 @@ The headers to add to the HTTP request made by Flotiq.
 
 ### Listing your webhooks
 
-To view existing webhooks, click `Webhooks` on the Flotiq main menu. 
+To view existing webhooks, click `Webhooks` on the Flotiq main menu.
 The table shows all the webhooks available in your account.
 
 ![](images/webhooks/webhooks-list.png){: .border }
 
 ### How to execute Create, Update, Delete webhook
 
-All you need to do is perform the chosen action (`Create`, `Update` or `Delete`) on the selected Content Object, in the `Flotiq panel` or using the `API`. 
+All you need to do is perform the chosen action (`Create`, `Update` or `Delete`) on the selected Content Object, in the `Flotiq panel` or using the `API`.
 Then the webhook will be executed.
 
 !!! Note
@@ -101,7 +101,7 @@ Then the webhook will be executed.
 
 Webhooks with a `Custom` action assigned can be launched manually, at any time, by clicking the button in the Content Object editing view.
 
-Additionally, if the object is not saved, execute webhook button will save the object.
+Additionally, if the object is not saved, the execute webhook button will save the object.
 The custom action is not possible to be performed from the API level.
 
 ![](images/webhooks/webhooks-custom-hook.png){: .border }
@@ -109,7 +109,7 @@ The custom action is not possible to be performed from the API level.
 
 ### Webhooks payload
 
-When a Webhook is executed, a payload containing information about the webhook, 
+When a Webhook is executed, a payload containing information about the webhook,
 the action name (`Create`, `Update`, `Delete`, `Custom`) and the content object data is sent to the target URL.
 
 ```json
@@ -133,7 +133,7 @@ the action name (`Create`, `Update`, `Delete`, `Custom`) and the content object 
 }
 ```
 
-Note: When executing the `Delete` action, only the object's id is sent in payload:
+Note: When executing the `Delete` action, only the object's id is sent in the payload:
 
 ```json
 {
@@ -149,12 +149,12 @@ Note: When executing the `Delete` action, only the object's id is sent in payloa
 
 ## Webhook execution logs
 
-To track your webhooks activity, go to the `Edit` webhook screen. 
-In the sidebar, you can browse webhook execution logs. 
+To track your webhooks activity, go to the `Edit` webhook screen.
+In the sidebar, you can browse webhook execution logs.
 
 ![](images/webhooks/webhooks-logs.png){: .border }
 
-The details of the single webhook execution, such as request payload and server response are available after clicking on a single record.
+The details of the single webhook execution, such as request payload and server response, are available after clicking on a single record.
 
 The execution of a webhook can have one of the following statuses:
 
@@ -169,13 +169,13 @@ Flotiq will keep 300 last execution logs. Older entries will be removed.
 
 ## Frequently Asked Questions
 
-### How many webhook calls I can execute? 
+### How many webhook calls I can execute?
 There are no limits in the webhooks execution count. In this situation, you should take care of the Flotiq monthly call limits.
 
 ### Are there any additional costs for making webhook requests?
 No, there are no additional costs for executing the webhook.
 
-### How many webhooks I can create in the Free plan? 
+### How many webhooks I can create in the Free plan?
 In the Free plan, you can add 5 webhook definitions.
 
 ### What is the IP range of webhook calls?
@@ -185,7 +185,7 @@ The webhooks will be executed from the `us-east-1` region of AWS. For the actual
 This status means that the target URL specified in the webhook configuration was not reachable.
 
 ### Will the webhook run immediately?
-The webhook will be queued immediately after the trigger action will be performed. Webhook processing (from queue handling to the final HTTP request) may take a few seconds. 
+The webhook will be queued immediately after the trigger action will be performed. Webhook processing (from queue handling to the final HTTP request) may take a few seconds.
 
 
 [Register to create your first webhook](https://editor.flotiq.com/register.html){: .flotiq-button}

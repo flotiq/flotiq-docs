@@ -24,17 +24,20 @@ Webhooks can help with many scenarios; here are examples:
 * Sending a free e-book when the landing page form was submitted.
 * Sending a hello email when the contact form was submitted.
 * Adding an event to the Google calendar when the event in Flotiq was added.
-* Sending a Slack chat notification when the new entry was added.
+* Sending a chat notification when the new entry was added.
 * Sending an email to the moderator when the new article comment was submitted.
 
 You can also improve your development workflow using webhooks:
 
 * Run CI/CD pipeline on Bitbucket/GitLab/GitHub when site content was changed.
-* Trigger a Heroku/Netlify/Gatsby preview build when site content was changed.
-* Trigger a Heroku/Netlify/Gatsby production build when a `Build production` button was clicked.
+* Trigger a Netlify/Gatsby preview build when site content was changed.
+* Trigger a Netlify/Gatsby production build when a `Build production` button was clicked.
 * Trigger AWS Lambda serverless function when entry is changed.
 
 As you can see, there are a lot of possible integrations. You can implement your applications or microservices or use existing systems like Slack, Google Calendar, Google Spreadsheets, Mailchimp, Mailgun, Git, Gitlab, Bitbucket, AWS Lambda, Heroku, Netlify and so on.
+
+!!! Note
+    Check out our [Examples](/docs/panel/webhooks/examples/) page to see how to implement simple but powerful integrations based on webhooks.
 
 ## Do I need a webhook?
 

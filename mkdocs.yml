@@ -117,6 +117,7 @@ nav:
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
     - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
     - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
+    - 'Purging data from Flotiq account': CLI/purge.md
   - Flotiq Universe:
     - 'Overview': Universe/index.md
     - 'Postman': Universe/postman.md

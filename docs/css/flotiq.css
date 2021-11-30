@@ -84,6 +84,10 @@ header.md-header {
   margin-right: 20px;
 }
 
+.mt5 {
+  margin-top: 5px;
+}
+
 .button-center-vertical {
   vertical-align: middle;
 }

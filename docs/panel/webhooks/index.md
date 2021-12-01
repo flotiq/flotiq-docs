@@ -24,17 +24,20 @@ Webhooks can help with many scenarios; here are examples:
 * Sending a free e-book when the landing page form was submitted.
 * Sending a hello email when the contact form was submitted.
 * Adding an event to the Google calendar when the event in Flotiq was added.
-* Sending a Slack chat notification when the new entry was added.
+* Sending a chat notification when the new entry was added.
 * Sending an email to the moderator when the new article comment was submitted.
 
 You can also improve your development workflow using webhooks:
 
 * Run CI/CD pipeline on Bitbucket/GitLab/GitHub when site content was changed.
-* Trigger a Heroku/Netlify/Gatsby preview build when site content was changed.
-* Trigger a Heroku/Netlify/Gatsby production build when a `Build production` button was clicked.
+* Trigger a Netlify/Gatsby preview build when site content was changed.
+* Trigger a Netlify/Gatsby production build when a `Build production` button was clicked.
 * Trigger AWS Lambda serverless function when entry is changed.
 
 As you can see, there are a lot of possible integrations. You can implement your applications or microservices or use existing systems like Slack, Google Calendar, Google Spreadsheets, Mailchimp, Mailgun, Git, Gitlab, Bitbucket, AWS Lambda, Heroku, Netlify and so on.
+
+!!! Note
+    Check out our [Examples](/docs/panel/webhooks/examples/) page to see how to implement simple but powerful integrations based on webhooks.
 
 ## Do I need a webhook?
 
@@ -46,7 +49,7 @@ Webhooks are useful if you want to **extend the system functionality** or **inte
 
 To create a Webhook, click on the main menu `Webhooks` -> `Add new Webhook`.
 
-![](images/webhooks/webhooks-product-added-notification.png){: .border}
+![](../images/webhooks/webhooks-product-added-notification.png){: .border}
 
 !!! Note
     The above configuration means: Send a POST request to `https://my-example-app.com/notify` with an `AUTH` header of `secret_token` when the new `product` in Flotiq was `created`.
@@ -86,7 +89,7 @@ The headers to add to the HTTP request made by Flotiq.
 To view existing webhooks, click `Webhooks` on the Flotiq main menu.
 The table shows all the webhooks available in your account.
 
-![](images/webhooks/webhooks-list.png){: .border }
+![](../images/webhooks/webhooks-list.png){: .border }
 
 ### How to execute Create, Update, Delete webhook
 
@@ -104,7 +107,7 @@ Webhooks with a `Custom` action assigned can be launched manually, at any time, 
 Additionally, if the object is not saved, the execute webhook button will save the object.
 The custom action is not possible to be performed from the API level.
 
-![](images/webhooks/webhooks-custom-hook.png){: .border }
+![](../images/webhooks/webhooks-custom-hook.png){: .border }
 
 
 ### Webhooks payload
@@ -152,7 +155,7 @@ Note: When executing the `Delete` action, only the object's id is sent in the pa
 To track your webhooks activity, go to the `Edit` webhook screen.
 In the sidebar, you can browse webhook execution logs.
 
-![](images/webhooks/webhooks-logs.png){: .border }
+![](../images/webhooks/webhooks-logs.png){: .border }
 
 The details of the single webhook execution, such as request payload and server response, are available after clicking on a single record.
 
@@ -162,7 +165,7 @@ The execution of a webhook can have one of the following statuses:
 * done (webhook was executed and received `HTTP 2xx` response code)
 * error (webhook was executed with issues, e.g. target URL was not found, or the response was not in the `HTTP 2xx` range)
 
-![](images/webhooks/webhooks-log-details.png)
+![](../images/webhooks/webhooks-log-details.png)
 
 Flotiq will keep 300 last execution logs. Older entries will be removed.
 

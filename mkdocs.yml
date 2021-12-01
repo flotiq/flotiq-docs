@@ -108,7 +108,9 @@ nav:
     - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
-    - 'Webhooks': panel/webhooks.md
+    - 'Webhooks':
+      - Overview: panel/webhooks/index.md
+      - Examples: panel/webhooks/examples.md
     - Plugins:
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
       - 'Netlify': panel/Plugins/Netlify-integration.md

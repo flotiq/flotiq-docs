@@ -85,4 +85,4 @@ If you'd like to search in several fields, but give better score to results whic
 
 ## Aggregate results by field
 
-If you'd like to display faceted results of your searches you can use the `aggregate_by[]` param. Add `aggregate_by[]=category` to aggregate by the `category` field. This works best with fields that have discreet values (like status, category, etc), a nd only works with string fields, if you wish to aggregate with numeric fields, use `aggregate_by_numeric[]` param.
+If you'd like to display faceted results of your searches you can use the `aggregate_by[]` param. Add `aggregate_by[]=category` to aggregate by the `category` field. This works best with fields that have discreet values (like status, category, etc), and only works with string fields, if you wish to aggregate with numeric fields, use `aggregate_by_numeric[]` param.

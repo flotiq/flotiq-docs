@@ -1,6 +1,10 @@
 title: How to update Content Type Definitions | Flotiq docs
 description: How to update Content Type Definitions in Flotiq API
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-types/">Content types</a> / <a href="/API/content-type/updating-ctd/">Updating Content Types</a>
+</div>
+
 # Updating Content Types
 
 Existing <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content
@@ -76,9 +80,9 @@ Content Type</abbr> is simply a ``PUT`` call with a payload similar to:
 You can find description of the schema [here](/API/content-type/creating-ctd/#creating-new-content-types-via-api)
 
 !!! tip
-After every change in Content Definition Schema Flotiq automatically updates your API documentation and Elastic Search
-index attached to this type. This means your API docs will always stay up to date with your current schema, and so will
-the results of the [full-text search feature](/API/search/).
+    After every change in Content Definition Schema Flotiq automatically updates your API documentation and Elastic Search
+    index attached to this type. This means your API docs will always stay up to date with your current schema, and so will
+    the results of the [full-text search feature](/API/search/).
 
 ## What happens if you add a new property?
 

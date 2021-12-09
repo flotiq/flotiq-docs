@@ -1,6 +1,10 @@
 title: How to get single Content Type Definitions | Flotiq docs
 description: How to get single Content Type Definitions in Flotiq
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-types/">Content types</a> / <a href="/API/content-type/getting-ctd/">Getting single Content Type</a>
+</div>
+
 
 # Getting single Content Type
 

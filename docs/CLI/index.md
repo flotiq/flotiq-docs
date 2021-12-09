@@ -1,3 +1,7 @@
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/CLI/">CLI</a>
+</div>
+
 # Flotiq CLI
 
 ## Overview

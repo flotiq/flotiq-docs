@@ -1,6 +1,10 @@
 title: How to update Content Objects | Flotiq docs
 description: How to update Content Objects in Flotiq
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-objects/">Content objects</a> / <a href="/API/content-type/updating-co/">Updating Content Objects</a>
+</div>
+
 # Updating content through the API
 
 When updating the object (`PUT` requests), all properties must be present in the request body,

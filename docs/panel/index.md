@@ -1,3 +1,7 @@
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/panel/">Dashboard</a>
+</div>
+
 # Flotiq Panel
 
 Here you will find the documentation about Flotiq Panel, which is the graphical interface that you will be using to work with your Content Type Definitions and Content Objects.

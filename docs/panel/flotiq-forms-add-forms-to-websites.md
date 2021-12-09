@@ -1,6 +1,10 @@
 title: Flotiq Forms - the easiest way to add forms to static websites | Flotiq documentation
 description: Use Flotiq Forms for an easy way to add forms to static websites and collect feedback from your users. Flotiq Forms is always up to date with your content model and keeps your forms spam-free and secure.
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/panel/">Dashboard</a> / <a href="/panel/flotiq-forms-add-forms-to-websites/">Flotiq Forms</a>
+</div>
+
 # Flotiq Forms
 
 Headless content management systems work best if you actually have, ehm, content that you can keep in them. Flotiq Forms makes it dead-simple to put a form on any website to start accepting user data and make it automatically adapt to your data model in Flotiq. Like everything else in Flotiq - the forms will automatically update with any changes you make in your content type definitions, so you're always covered! Forms also support anti-spam and security features, so you don't have to worry about that, either.

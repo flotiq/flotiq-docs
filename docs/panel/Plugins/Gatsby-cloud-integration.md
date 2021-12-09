@@ -1,6 +1,10 @@
 title: Integrate Gatsby Cloud and Flotiq | Flotiq documentation
 description: Enable seamless Gatsby content preview using Flotiq Gatsby plugin.
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/panel/">Dashboard</a> / <a href="/panel/Plugins/Gatsby-cloud-integration/">Gatsby Cloud Integration</a>
+</div>
+
 # Connecting your Flotiq account to Gatsby Cloud
 
 This article will walk you through the process of connecting your Flotiq account and your Gatsby Cloud account. By doing so, your content will be automatically synchronized with your Gatsby Cloud preview instance. You will also be able to easily navigate to your Gatsby Preview pages from the Flotiq content editor.

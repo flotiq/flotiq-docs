@@ -1,6 +1,10 @@
 title: Integrate Netlify and Flotiq | Flotiq documentation
 description: Enable content build using Flotiq Netlify plugin.
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/panel/">Dashboard</a> / <a href="/panel/Plugins/Netlify-integration/">Netlify Integration</a>
+</div>
+
 # Connecting your Flotiq account to Netlify
 
 This article will walk you through the process of connecting your Flotiq account, and your Netlify account. 

@@ -1,3 +1,7 @@
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/graph-ql/">GraphQL</a>
+</div>
+
 # GraphQL
 
 The Flotiq API supports a GraphQL endpoint, which is currently in `BETA` state.

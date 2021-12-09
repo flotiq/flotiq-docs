@@ -1,6 +1,10 @@
 title: How to add Content Objects | Flotiq docs
 description: How to add Content Objects in Flotiq
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-objects/">Content objects</a> / <a href="/API/content-type/creating-co/">Creating Content Objects</a>
+</div>
+
 # Content Objects :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
 
 Once a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 

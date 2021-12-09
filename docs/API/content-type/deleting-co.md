@@ -1,6 +1,10 @@
 title: How to delete Content Objects | Flotiq docs
 description: How to delete Content Objects in Flotiq
 
+<div class="breadcrumbs">
+<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-objects/">Content objects</a> / <a href="/API/content-type/deleting-co/">Deleting Content Objects</a>
+</div>
+
 
 # Deleting content objects
 

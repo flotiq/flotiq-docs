@@ -305,7 +305,7 @@ Block parameters:
 | --------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id        | true     | Random identifier of the block                                                                                                                                               |
 | data      | true     | Data of the block, the parameters depend on the type of the block                                                                                                            |
-| type      | true     | Type of the block, the supported types are `paragraph`, `header`, `list`, `image`, `youtubeEmbed`, `quote`, `warning`, and `delimiter`, types can be narrowed down in schema |
+| type      | true     | Type of the block, the supported types are `paragraph`, `header`, `list`, `image`, `youtubeEmbed`, `quote`, `warning`, `code`, `table` and `delimiter`, types can be narrowed down in schema |
 | tunes     | false    | Additional settings of the block, parameters depend on the type of the block                                                                                                 |
 
 Blocks:
@@ -565,6 +565,67 @@ Blocks:
         }
         ```
 
+??? "Code"
+
+    === "Description"
+        Contains the code block. Type: `code`.
+        
+        Data parameters:
+        
+        | Parameter | Required | Description          |
+        | --------- | -------- | -------------------- |
+        | code      | true     | Code block  |
+
+    === "Example"
+        ```
+        {
+            "id": "sVDwJq9ZCf",
+            "data": {
+                "code": "npm run dev",
+            },
+            "type": "code"
+        }
+        ```
+
+??? "Table"
+
+    === "Description"
+        Contains the table. Type: `table`.
+        
+        Data parameters:
+        
+        | Parameter | Required | Description          |
+        | --------- | -------- | -------------------- |
+        | content   | true     | Array of arrays of data in rows, every row is an array of srings   |
+        | withHeadings   | true     | Information if the first row should be treated as header |
+
+    === "Example"
+        ```
+        {
+            "id": "sVDwJq9ZCg",
+            "data": {
+                "content": [
+                    [
+                        "First header",
+                        "Second header",
+                        "Third header"
+                    ],
+                    [
+                        "First column of the first row",
+                        "Second column of the first row",
+                        "Third column of the first row"
+                    ],
+                    [
+                        "First column of the second row",
+                        "Second column of the second row",
+                        "Third column of the second row"
+                    ]
+                ],
+                "withHeadings": true
+            },
+            "type": "table"
+        }
+        ```
 
 If we are missing a block type or tune that you require for your project,
 please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@flotiq.com).
@@ -699,6 +760,37 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
                 "id": "RTJ0lo2VGB",
                 "data": [],
                 "type": "delimiter"
+              },
+              {
+                "id": "sVDwJq9ZCf",
+                "data": {
+                  "code": "npm run dev",
+                },
+                "type": "code"
+              },
+              {
+                "id": "sVDwJq9ZCg",
+                "data": {
+                  "content": [
+                    [
+                      "First header",
+                      "Second header",
+                      "Third header"
+                    ],
+                    [
+                      "First column of the first row",
+                      "Second column of the first row",
+                      "Third column of the first row"
+                    ],
+                    [
+                      "First column of the second row",
+                      "Second column of the second row",
+                      "Third column of the second row"
+                    ]
+                  ],
+                  "withHeadings": true
+                },
+                "type": "table"
               }
             ]
           },
@@ -834,6 +926,37 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
             "id": "RTJ0lo2VGB",
             "data": [],
             "type": "delimiter"
+          },
+          {
+            "id": "sVDwJq9ZCf",
+            "data": {
+              "code": "npm run dev",
+            },
+            "type": "code"
+          },
+          {
+            "id": "sVDwJq9ZCg",
+            "data": {
+              "content": [
+                [
+                  "First header",
+                  "Second header",
+                  "Third header"
+                ],
+                [
+                  "First column of the first row",
+                  "Second column of the first row",
+                  "Third column of the first row"
+                ],
+                [
+                  "First column of the second row",
+                  "Second column of the second row",
+                  "Third column of the second row"
+                ]
+              ],
+              "withHeadings": true
+            },
+            "type": "table"
           }
         ]
       },

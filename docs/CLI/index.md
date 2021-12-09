@@ -14,6 +14,8 @@ Importing example data is also more straightforward - if you already cloned one 
 
 If you want to migrate any blog from WordPress to Flotiq it's really simple! All you need to do is to use one command and Flotiq CLI will do all the hard work for you. You can read more on that in [wordpress import command](./wordpress-importer.md).
 
+If you need to purge data from your account after testing different imports You can do it using [purge command](./purge.md).
+
 ## Installation
 
 !!! Warning

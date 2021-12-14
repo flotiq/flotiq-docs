@@ -50,7 +50,8 @@ markdown_extensions:
       options:
         custom_icons:
           - theme/.icons
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - footnotes
 
 extra_javascript:

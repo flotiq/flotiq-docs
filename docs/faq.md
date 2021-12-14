@@ -33,7 +33,7 @@ reduce costs by making the work parallel, and help to prototype.
 ## How much does the Flotiq cost?
 
 Primary usage is free, and if that is not enough for your needs, you can check pricing 
-[here](https://flotiq.com#pricing){target="_blank"}.
+[here](https://flotiq.com/pricing){target="_blank"}.
 
 ## What programming language I have to know to use Flotiq?
 
@@ -72,7 +72,7 @@ only to bring the service back to work if something went wrong with deploying th
 ## I'm running out of space; what can I do?
 
 There are two ways to deal with that, removing not used Content Objects and Medias or buying a higher tier of the plan. 
-You can check pricing [here](https://flotiq.com#pricing){target="_blank"}.
+You can check pricing [here](https://flotiq.com/pricing){target="_blank"}.
 
 ## Contact us
 

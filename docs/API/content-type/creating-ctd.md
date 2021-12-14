@@ -1141,4 +1141,4 @@ If you'd rather use our graphical interface to design your Content Types - read 
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}
 
-[^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}
+[^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

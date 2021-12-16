@@ -339,4 +339,4 @@ From this view, you can also switch to older revisions.
 To save older revisions, click on the version tile and click the `Save` button.
 
 [^1]: The number of available Content Objects depends on the chosen subscription plan.
-Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}
+Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

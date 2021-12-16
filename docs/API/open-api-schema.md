@@ -9313,4 +9313,4 @@ You can use the same request parameters for scoped API schemas as for full API s
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
 
 
-[^1]: Unavailable in Free subscription plan. Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}
+[^1]: Unavailable in Free subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

@@ -257,4 +257,4 @@ We've changed the upload process during Flotiq evolution. Below you can see docs
 
 [Register to start storing your files](https://editor.flotiq.com/register.html){: .flotiq-button}
 
-[^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/#pricing){:target="_blank"}
+[^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

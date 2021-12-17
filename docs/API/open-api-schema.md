@@ -4,7 +4,7 @@ description: How to get your open API schema
 # Open API schema
 
 You can generate Full Open API Schema for every Content Type Definition 
-in your account or scope it making User Defined API key as described [here](/API/#user-defined-api-keys).
+in your account or scope it making User Defined API key as described [here](/docs/API/#user-defined-api-keys).
 
 ## Getting your Full Open API Schema
 

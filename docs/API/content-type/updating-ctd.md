@@ -73,12 +73,12 @@ Content Type</abbr> is simply a ``PUT`` call with a payload similar to:
 }
 ```
 
-You can find description of the schema [here](/API/content-type/creating-ctd/#creating-new-content-types-via-api)
+You can find description of the schema [here](/docs/API/content-type/creating-ctd/#creating-new-content-types-via-api)
 
 !!! tip
     After every change in Content Definition Schema Flotiq automatically updates your API documentation and Elastic Search
     index attached to this type. This means your API docs will always stay up to date with your current schema, and so will
-    the results of the [full-text search feature](/API/search/).
+    the results of the [full-text search feature](/docs/API/search/).
 
 ## What happens if you add a new property?
 
@@ -425,7 +425,7 @@ When you change existing property, depending on the type of changes, Flotiq will
 #### Possible validation errors
 
 Possible validation errors are the same as in creating Content Types,
-you can find the list [here](/API/content-type/creating-ctd/#possible-validation-errors).
+you can find the list [here](/docs/API/content-type/creating-ctd/#possible-validation-errors).
 
 ### How are fields converted from one type to another?
 
@@ -566,6 +566,6 @@ you can find the list [here](/API/content-type/creating-ctd/#possible-validation
 
 ## Updating Content Types through the Content modeller
 
-If you'd rather use our graphical interface to update your Content Types - read the [Content modeller documentation](/panel/content-types/)
+If you'd rather use our graphical interface to update your Content Types - read the [Content modeller documentation](/docs/panel/content-types/)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

@@ -186,6 +186,6 @@ You can only delete Content Types that do not have any Content Objects or are no
 
 ## Deleting Content Types through the Content modeller
 
-If you'd rather use our graphical interface to delete your Content Types - read the [Content modeller documentation](/panel/content-types/)
+If you'd rather use our graphical interface to delete your Content Types - read the [Content modeller documentation](/docs/panel/content-types/)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

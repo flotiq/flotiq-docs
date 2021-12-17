@@ -629,7 +629,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
 ??? "Example of an object containing all property types"
 
     This example represents object for Content Type with every type of property,
-    described [here](/API/content-type/creating-ctd/#example-with-every-type-of-field)
+    described [here](/docs/API/content-type/creating-ctd/#example-with-every-type-of-field)
 
     ```
     {

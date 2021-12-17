@@ -1,10 +1,6 @@
 title: How to update Content Type Definitions | Flotiq docs
 description: How to update Content Type Definitions in Flotiq API
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-types/">Content types</a> / <a href="/API/content-type/updating-ctd/">Updating Content Types</a>
-</div>
-
 # Updating Content Types
 
 Existing <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content

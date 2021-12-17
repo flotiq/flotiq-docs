@@ -1,10 +1,6 @@
 title: Flotiq deep dives | Flotiq docs
 description: Browse through the deep dives and learn how to integrate Flotiq in your application.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/Deep-Dives/">Deep Dives</a>
-</div>
-
 # Introduction
 
 This section contains several walk-throughs that will help you get familiar with Flotiq with a specific use case.

@@ -1,10 +1,6 @@
 title: Contact form using Flotiq | Flotiq docs
 description: 
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/Deep-Dives/">Deep Dives</a> / <a href="/Deep-Dives/Headless-CMS-Contact-Forms/">Building a contact form</a>
-</div>
-
 # Contact form using Flotiq
 
 You can easily use headless CMS systems like Flotiq to store data from contact forms or other places where you collect information from your users. With Flotiq it's super easy to create Content Types, push new data to the system and integrate it with other systems through Zapier. Follow along for a complete, working example of how this can be done.

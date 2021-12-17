@@ -1,10 +1,6 @@
 title: Flotiq Media Library | Flotiq docs
 description: Learn more about the powerful Media Library that Flotiq offers.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/media-library/">Media library</a>
-</div>
-
 #Media library
 
 You can interact with the media library via Flotiq Dashboard or REST API. In this section, we show you how to use our REST API to store and retrieve files.

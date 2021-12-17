@@ -1,10 +1,6 @@
 title: Client libraries and SDKs
 description: Flotiq provides SDKs, or client libraries, to access your Content, but if you would like to build your own - you can use the OpenAPI compatible schema to generate clients and servers for multiple languages.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/generate-package/">Generating SDKs</a>
-</div>
-
 # Generating SDKs
 
 ## Download a package for your language

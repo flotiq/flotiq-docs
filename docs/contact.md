@@ -1,10 +1,6 @@
 title: Flotiq documentation  - Contact us
 description: All the ways to reach Flotiq developers
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/contact">Contact</a>
-</div>
-
 # Contact
 
 ## All-purpose email

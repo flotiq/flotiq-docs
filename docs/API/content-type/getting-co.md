@@ -1,10 +1,6 @@
 title: How to list Content Objects | Flotiq docs
 description: How to list Content Objects in Flotiq
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-objects/">Content objects</a> / <a href="/API/content-type/getting-co/">Getting single Content Object</a>
-</div>
-
 # Getting single Content Object
 
 Once a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>

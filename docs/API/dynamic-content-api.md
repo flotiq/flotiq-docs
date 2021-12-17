@@ -1,10 +1,6 @@
 title: Flotiq deep dives | Flotiq docs
 description: Flotiq's Dynamic Content API offers a unique way of interacting with your content, the way you design it. The builtin SDKs and APi docs make it extremely easy to use.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/dynamic-content-api/">Dynamic content API</a>
-</div>
-
 # Dynamic Content API
 
 The Dynamic Content API is how Flotiq provides you with access to your content. For every Content Type you define - Flotiq will provide a set of RESTful endpoints that allow you to interact with your content, all based on the Content Type Definition you provided, either through the UI or through the API.

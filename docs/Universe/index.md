@@ -1,10 +1,6 @@
 title: Flotiq Universe | Flotiq documentation
 description: Explore Flotiq Universe to discover new ways of using your API.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/Universe/">Flotiq Universe</a>
-</div>
-
 # Flotiq Universe
 
 You can jump-start your projects a lot faster thanks to integrations and starters provided by Flotiq.

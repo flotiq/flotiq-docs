@@ -1,10 +1,6 @@
 title: Flotiq Scully starters | Flotiq docs
 description: Jump-start your projects with Angular Scully Starters.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/Universe/">Flotiq Universe</a> / <a href="/Universe/scully/">Scully</a>
-</div>
-
 # Scully starters
 
 Scully is a static page generator using Angular.

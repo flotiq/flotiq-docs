@@ -111,7 +111,7 @@ If no value provided, the default value will be used.
 
 ## How to use Forms
 
-Once your Flotiq Forms are generated, you will see a window with two lines of HTML code. You need to put them inside your HTML page to start immediately collecting data to your Flotiq account.
+Once your Flotiq Forms are generated, you will see a window with three lines of HTML code. You need to put them inside your HTML page to start immediately collecting data to your Flotiq account.
 
 1. Put the first code - `<link rel="stylesheet" href="https://flotiq-form-generator-styles.s3.amazonaws.com/styles.css"/>` in the `<head>` section of your page, if you wish to use our styles:
    ![](images/FormCssExample.png){: .center .border}

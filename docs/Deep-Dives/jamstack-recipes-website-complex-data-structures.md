@@ -1,10 +1,6 @@
 title: Building a stunning recipe website with Flotiq and Gatsby | Flotiq docs
 description: A deep dive tutorial on Flotiq's complex data structures and accidentally building a stunning recipes website with Gatsby.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/Deep-Dives/">Deep Dives</a> / <a href="/Deep-Dives/jamstack-recipes-website-complex-data-structures/">Complex data structures</a>
-</div>
-
 # Building a recipes website using complex data structures
 
 ## Introduction

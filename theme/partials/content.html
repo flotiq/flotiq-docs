@@ -1,3 +1,20 @@
+<div class="breadcrumbs">
+    {% set prefix = nav.homepage.url|url %}
+
+    <a href="{{ prefix }}" alt="Flotiq docs home">Docs</a>
+
+    {% for doc in page.ancestors[::-1] %}
+        {# For non-page parents link to first item, eg Overview #}
+        {% if doc.children[0].url %}
+            / <a href="{{ prefix ~ '/' ~ doc.children[0].url }}">{{ doc.title }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if page.title != 'Overview' %}
+        / <a href="{{ prefix ~ '/' ~ page.url}}">{{ page.title }}</a>
+    {% endif %}
+</div>
+
 {% if not "\x3ch1" in page.content %}
 <h1>{{ page.title | d(config.site_name, true)}}</h1>
 {% endif %}

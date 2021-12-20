@@ -1,6 +1,3 @@
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/API/">API access & scoped keys</a>
-</div>
 
 # API access
 

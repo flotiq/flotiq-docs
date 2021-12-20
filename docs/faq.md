@@ -1,10 +1,6 @@
 title: Flotiq FAQ
 description: Frequently Asked Questions on Flotiq CMS
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/faq">Faq</a>
-</div>
-
 # FAQ
 
 ## What's the difference between Flotiq and traditional CMSes?

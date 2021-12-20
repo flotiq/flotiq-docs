@@ -1,10 +1,6 @@
 title: Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content. | Flotiq Deep dives
 description: Build your own serverless deployment pipeline using Gatsby, Netlify, Zapier and Flotiq, instantly deploy your updated content, for free.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/Deep-Dives/">Deep Dives</a> / <a href="/Deep-Dives/netlify-zapier-gatsby-serverless-deployment-pipeline/">Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content</a>
-</div>
-
 # Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content
 
 ## Overview

@@ -1,10 +1,6 @@
 title: Flotiq Gatsby starters | Flotiq docs
 description: Jump-start your projects with React Gatsby Starters.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/Universe/">Flotiq Universe</a> / <a href="/Universe/gatsby/">Gatsby</a>
-</div>
-
 # Gatsby starters
 
 Gatsby is a static page generator using React.

@@ -1,10 +1,6 @@
 title: How to delete Content Type Definitions | Flotiq docs
 description: How to delete Content Type Definitions in Flotiq API
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-types/">Content types</a> / <a href="/API/content-type/deleting-ctd/">Deleting Content Types</a>
-</div>
-
 # Deleting Content Types
 
 Existing <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content
@@ -190,6 +186,6 @@ You can only delete Content Types that do not have any Content Objects or are no
 
 ## Deleting Content Types through the Content modeller
 
-If you'd rather use our graphical interface to delete your Content Types - read the [Content modeller documentation](/panel/content-types/)
+If you'd rather use our graphical interface to delete your Content Types - read the [Content modeller documentation](/docs/panel/content-types/)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

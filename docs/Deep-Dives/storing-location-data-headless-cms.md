@@ -1,10 +1,6 @@
 title: Building a store locator with Flotiq | Flotiq docs
 description: This tutorial shows how to build a store locator webpage using Flotiq and its geo capabilities.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/Deep-Dives/">Deep Dives</a> / <a href="/Deep-Dives/storing-location-data-headless-cms/">Building a store locator</a>
-</div>
-
 # Storing location data
 
 Flotiq plays really well with location data, especially once you get to use our search capabilities. In this quick tutorial we'll build a very simple web page that displays locations on a map and allows to easily search your location database.

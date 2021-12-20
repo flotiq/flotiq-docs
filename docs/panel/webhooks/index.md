@@ -1,7 +1,6 @@
 title: Webhooks
 description: How to use webhooks in Flotiq
 
-
 # Webhooks
 
 ## What is a Webhook?

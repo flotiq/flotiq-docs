@@ -1,10 +1,6 @@
 title: How to add Content Objects | Flotiq docs
 description: How to add Content Objects in Flotiq
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/API/">API</a> / <a href="/API/content-objects/">Content objects</a> / <a href="/API/content-type/creating-co/">Creating Content Objects</a>
-</div>
-
 # Content Objects :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
 
 Once a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
@@ -633,7 +629,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
 ??? "Example of an object containing all property types"
 
     This example represents object for Content Type with every type of property,
-    described [here](/API/content-type/creating-ctd/#example-with-every-type-of-field)
+    described [here](/docs/API/content-type/creating-ctd/#example-with-every-type-of-field)
 
     ```
     {

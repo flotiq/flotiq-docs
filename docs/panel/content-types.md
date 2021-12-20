@@ -1,7 +1,3 @@
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/panel/">Dashboard</a> / <a href="/panel/content-types/">Content Types</a>
-</div>
-
 # Content Types
 
 This page describes how to create a **Content Type Definition** (**CTD**) using [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 

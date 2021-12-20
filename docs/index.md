@@ -1,10 +1,6 @@
 title: Flotiq documentation
 description: Online documentation for Flotiq - the effortless headless CMS.
 
-<div class="breadcrumbs">
-<a href="/">Docs</a> / <a href="/">Home</a>
-</div>
-
 # Home
 
 Welcome to Flotiq Documentation.

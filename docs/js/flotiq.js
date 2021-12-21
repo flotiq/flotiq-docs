@@ -110,17 +110,6 @@ window.addEventListener('click', function (event) {
     setTimeout(() => {
         if (isNavigationLink(event)) {
             waitForElm('#was-it-helpful').then(() => addHelpfulForm());
-            waitForElm('#disqus_thread').then(() => {
-                DISQUS.reset({
-                    reload: true,
-                    config: function () {
-                        this.page.identifier = window.location.pathname.substr(1);
-                        this.page.url = window.location.href;
-                        this.page.title = document.title;
-                        this.language = 'en';
-                    }
-                });
-            });
         }
     }, 300);
     //fallback if page do not rendered in 200ms

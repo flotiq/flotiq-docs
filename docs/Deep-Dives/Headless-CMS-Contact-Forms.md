@@ -140,7 +140,7 @@ In the "Do this..." field you need to configure email address and content. See o
 That's all. You will now get an email notification about every message left through your Contact Form.
 
 !!! hint
-    * Read more about Flotiq & Zapier integration [here](../../API/zapier/) 
+    * Read more about Flotiq & Zapier integration [here](../../Universe/zapier/) 
     * Set up your own integration with one of 1000+ systems [here](https://zapier.com/apps/flotiq/integrations)
 
 ## Conclusion

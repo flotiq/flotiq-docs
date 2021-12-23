@@ -17,7 +17,7 @@ Content Management Platform.
 ## Creating Content Objects through the API
 
 For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
-defined according to the [create Content Type example](/docs/API/content-type/creating-ctd), a very simple `POST` payload can be sent 
+defined according to the [create Content Type example](/docs/API/content-type/creating-ctd/), a very simple `POST` payload can be sent 
 to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}` 
 (where `name` is the name of the content type definition) to create a new Content Object:
 

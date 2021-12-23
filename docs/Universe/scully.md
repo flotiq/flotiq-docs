@@ -51,7 +51,7 @@ Beautiful recipes website boilerplate project using Scully and Flotiq
 
 ![](images/scully/Scully-Recipes-Starter.png){: .center .width75 .border}
 
-[GitHub](https://github.com/flotiq/scully-recipes-starters){:target="_blank"}
+[GitHub](https://github.com/flotiq/scully-recipes-starter){:target="_blank"}
 
 [Working example](https://vibrant-mclean-8da635.netlify.app/){:target="_blank"}
 

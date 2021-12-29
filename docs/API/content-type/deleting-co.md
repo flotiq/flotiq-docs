@@ -191,7 +191,7 @@ If you need to batch delete items, you need to send `POST` request to `https://a
 
 * `CTD name` is the name of the content type definition
 
-Body of the request must contain the array of object ids to remove, for example: `['blogposts-1', 'blogposts-2]`.
+Body of the request must contain the array of object ids to remove, for example: `['blogposts-1', 'blogposts-2']`.
 
 If the system deleted all objects, the endpoint would return `200 OK` response with:
 ```

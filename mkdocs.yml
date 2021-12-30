@@ -5,7 +5,7 @@ dev_addr: 0.0.0.0:4000
 theme:
      name: material
      logo: API/images/f.png
-     favicon: API/images/favicon.ico
+     favicon: API/images/favicon-32x32.png
      custom_dir: theme
      language: en
      palette:

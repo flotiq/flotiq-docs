@@ -1,5 +1,5 @@
 title: Flotiq Developers Documentation
-description: Headless CMS documentation, tutorials, frameworks, API references, Deep Dives, plugins and integrations
+description: Headless CMS documentation, tutorials, frameworks, API references, Deep Dives, plugins and integrations.
 
 # Home
 

@@ -314,6 +314,12 @@ remove the block (`X` button) and move the block down (`arrow down` button).
 
 * Warning - block for warnings with place for the name and message; this block has only common tune settings.
 * Delimiter - block indicating delimiter; it does not have any content; this block has only common tune settings.
+* Code - block indicating code block; this block has only common tune settings.
+* Table - block for table
+
+    ![](images/BlockControlTableTune.png){: .border}
+
+    The tunes allow adding information whether the table has header or not.
 
 ## Deleting content
 

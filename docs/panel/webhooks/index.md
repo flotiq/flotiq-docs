@@ -164,7 +164,7 @@ The execution of a webhook can have one of the following statuses:
 * done (webhook was executed and received `HTTP 2xx` response code)
 * error (webhook was executed with issues, e.g. target URL was not found, or the response was not in the `HTTP 2xx` range)
 
-![](../images/webhooks/webhooks-log-details.png)
+![](../images/webhooks/webhooks-log-details.png){: .center .width75 .border}
 
 Flotiq will keep 300 last execution logs. Older entries will be removed.
 

@@ -136,7 +136,7 @@ You're set! Click `Turn the Zap On!`. Now you can create a new entry in the [Flo
 ## Useful links
 Learn more about building powerful integrations with Zapier and Flotiq:
 
-1. [More about Zapier Integrations in Flotiq](https://flotiq.com/docs/API/zapier/)
+1. [More about Zapier Integrations in Flotiq](../../Universe/zapier/)
 
 Or try one of the awesome Gatsby starters we've integrated with Flotiq:
 

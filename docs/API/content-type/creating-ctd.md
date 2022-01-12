@@ -5,7 +5,7 @@ description: How to add Content Type Definitions in Flotiq API
 
 A new <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
 can be created either by sending a properly formatted POST request to the ``/api/v1/internal/contenttype`` 
-endpoint or through the [Content Modeler tool](/docs/panel/content-types) provided with the platform.
+endpoint or through the [Content Modeler tool](/docs/panel/content-types/) provided with the platform.
 
 !!! note
     You will need to use your `Application Read and write API KEY` to perform this action. 

@@ -16,7 +16,7 @@ Validation of update request works the same as in saving requests.
 ## Updating Content Objects through the API
 
 For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
-defined according to the [create Content Type example](/docs/API/content-type/creating-ctd), a very simple `PUT` payload can be sent
+defined according to the [create Content Type example](/docs/API/content-type/creating-ctd/), a very simple `PUT` payload can be sent
 to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` to update Content Object:
 
 ```

@@ -11,6 +11,7 @@ Check out our examples and use them in your projects or treat them as a signpost
 3. [Trigger a Netlify build when a `Build site` button was clicked](#3-trigger-a-netlify-build-when-a-build-site-button-was-clicked).
 4. [Send a RocketChat notification when the contact form was submitted](#4-send-a-rocketchat-notification-when-the-contact-form-was-submitted).
 5. [Trigger AWS Lambda serverless function when entry is changed](#5-trigger-aws-lambda-serverless-function-when-entry-is-changed).
+6. [Trigger Microsoft Azure Logic App when an issue is created](#6-trigger-microsoft-azure-logic-app-when-an-issue-is-created)
 
 !!! Note
     If you are new in webhooks, read the [Flotiq Webhooks introduction](/docs/panel/webhooks/) first.
@@ -170,5 +171,62 @@ Now you can use the received payload to implement your own business logic.
     You can add it by yourself or [set up API keys using AWS](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-setup-api-key-with-console.html).
     that allows you to track the API Keys usage, throttle the requests or use a quota for your applications.
 
+
+
+## 6. Trigger Microsoft Azure Logic App when an issue is created
+
+In this example, we update the Issue report object with the result of language detection fired in the Microsoft Azure Logic app.
+
+Prerequisites:
+We assume that you have an `Issue report` Content Type Definition in Flotiq with the `description` and `email` attributes.
+
+In the [Microsoft Azure](https://portal.azure.com) dashboard:
+
+1. [Create Logic App](https://portal.azure.com/#create/Microsoft.LogicApp)
+2. Set up Logic App with `When a HTTP request is received` trigger.
+   ![](../images/webhooks/examples/microsoft/webhook-azure-1.png){: .border .mt5}
+3. If you want to use the request payload in the next steps, fill in the `Request Body JSON Schema`. For more info how the payload looks like, check the [Webhooks](https://flotiq.com/docs/panel/webhooks/#webhooks-payload) docs. 
+   In our example, it is:
+    ```json
+    {
+        "properties": {
+            "payload": {
+                "properties": {
+                    "description": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "type": "object"
+    }
+    ```
+4. Copy the `HTTP POST URL` value visible on the top of the `When a HTTP request is received` block.
+5. To follow our use case, add next blocks - `Detect language` and `Update Content Object` as below:
+   ![](../images/webhooks/examples/microsoft/webhook-azure-1b.png){: .border .mt5}
+
+In the [Flotiq](https://editor.flotiq.com) dashboard:
+
+1. Go to the `Webhooks` page and click `Add new webhook`.
+2. Name the webhook (e.g. `Issue report added`) and paste obtained `HTTP POST URL` as a webhook `URL`.
+3. As a trigger, choose `Create` action on the `Issue report` and save the webhook:
+   ![](../images/webhooks/examples/microsoft/webhook-azure-2.png){: .border .mt5}
+
+### Check the result
+
+After the `Create` action on the `Issue report`, the webhook will trigger the Azure Logic App.
+
+![](../images/webhooks/examples/microsoft/webhook-azure-3a.png){: .border}
+
+Furthermore, the `Language` values below are filled automatically by Azure Logic App:
+
+![](../images/webhooks/examples/microsoft/webhook-azure-3.png){: .border}
 
 [Register to create your first webhook](https://editor.flotiq.com/register.html){: .flotiq-button}

@@ -104,7 +104,7 @@ header.md-header {
 }
 
 .width75 {
-  width:75%;
+  max-width: 75%;
 }
 
 @media (min-width: 768px) {
@@ -158,7 +158,7 @@ pre::before {
 
 
   .md-typeset summary:after {
-    color: #4C9BA6;
+    color: #0083FC;
   }
 
   .md-typeset .admonition.example > .admonition-title,
@@ -519,7 +519,7 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
   }
 
   .width75 {
-    width: 100%;
+    max-width: 100%;
   }
 
   .md-header__button.md-logo img, .md-header__button.md-logo svg {

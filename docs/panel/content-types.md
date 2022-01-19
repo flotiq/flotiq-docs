@@ -79,7 +79,7 @@ You can add more fields by clicking the `Add property` button, which opens the m
 
 After saving your CTD you will be redirected to the CTDs list, where you can click on the tile to list Content Objects or click on the cog to further edit CTD.
 
-![](images/TypeDefinitionsList.png){: .center .width75 .border}
+![](images/TypeDefinitions.png){: .center .width75 .border}
 
 Predefined CTD tiles are no longer visible. You can use the dropdown menu on the top right corner to add more of such types.
 

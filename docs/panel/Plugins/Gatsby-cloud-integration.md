@@ -77,11 +77,11 @@ For example, if you're using the [Gatsby and Snipcart starter](https://github.co
 
 To obtain the Flotiq API key - in your Flotiq account, click your profile icon in the sidebar and go to `API keys`:
 
-![Access Flotiq API keys](https://flotiq.com/docs/API/images/user-profile.png){: .center .width25 .border}
+![Access Flotiq API keys](../../API/images/user-profile.png){: .center .width25 .border}
 
 You can either select the application-wide read-only key:
 
-![Use global read-only](https://flotiq.com/docs/API/images/api-keys_1.png){: .center .width75 .border}
+![Use global read-only](../../API/images/api-keys_1.png){: .center .width75 .border}
 
 Or as a safer option, create a scoped read-only API key that will only be used for the purpose of Gatsby Cloud, read more about [Flotiq API access](https://flotiq.com/docs/API/).
 

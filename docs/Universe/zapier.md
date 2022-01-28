@@ -24,31 +24,31 @@ without writing a single line of code.
 ## How to use Flotiq and Zapier
 
 1. In your Zapier account hit "Create Zap".
-2. In the form field "Choose App" type Flotiq, to be able to select Flotiq events as the trigger for the pipeline
+2. In the form field "Search apps" type Flotiq, to be able to select Flotiq events as the trigger for the pipeline
     ![Select Flotiq as the source for Zapier](images/zapier/zapier-1.png){: .center .width75 .border}
 
 3. Select which event you'd like to trigger on - we'll choose New Content Object event trigger for now.
-    ![Select Content Object Created event](images/zapier/1.2.0/zapier-2.png){: .center .width75 .border}
+    ![Select Content Object Created event](images/zapier/zapier-2.png){: .center .width75 .border}
 
-4. Select your Flotiq account from the list. If you haven't provided one yet, click "Add a New Account" and authorize by your ReadOnly API Key.
-    ![Authorize Zapier to access your ReadOnly Flotiq API](images/zapier/1.2.0/zapier-3.png){: .center .width75 .border}
+4. Select your Flotiq account from the list. If you haven't provided one yet, click "Connect a new account" and authorize by your ReadOnly API Key.
+    ![Authorize Zapier to access your ReadOnly Flotiq API](images/zapier/zapier-3.png){: .center .width75 .border}
 
 5. Choose which Content Type you'd like to watch. Remember you have to create at least one Content Type Definition in Flotiq Editor.
-    ![Choose the Content Type](images/zapier/1.2.0/zapier-4.png){: .center .width75 .border}
+    ![Choose the Content Type](images/zapier/zapier-4.png){: .center .width75 .border}
 
-6. Click "Test and Review". This will get a sample object data of your chosen Content Type Definition. Select one and hit "Done Editing". You can check the chosen object before approving to make sure everything is in place.
-    ![Load data samples and proceed](images/zapier/1.2.0/zapier-5.png){: .center .width75 .border}
+6. Click "Continue", next "Test trigger". This will get a sample object data of your chosen Content Type Definition. You can check the chosen object before approving to make sure everything is in place.
+    ![Load data samples and proceed](images/zapier/zapier-5.png){: .center .width75 .border}
 
 7. Next step is to choose target integration. We will use Gmail for that.
-    ![Select target integration](images/zapier/1.2.0/zapier-6.png){: .center .width75 .border}
+    ![Select target integration](images/zapier/zapier-6.png){: .center .width75 .border}
 
-8. For the tutorial purpose, we will follow with sending a new mail, so in "Choose Action Event" field we selected "Send Email" from the event dropdown list.
+8. For the tutorial purpose, we will follow with sending a new mail, so in "Action event" field we selected "Send Email" from the event dropdown list.
     ![Select the action event](images/zapier/zapier-7.png){: .center .width75 .border}
 
 9. Choose a Gmail account from the list or add one if you haven't authorized it yet.
 
 10. Zapier lets you choose the fields of the content type you defined, with default values from the sample data chosen in the first step. Choose which fields you'd like to be included in the email. Fill the required fields and click "Continue".
-    ![Select which Content Object fields should be passed to the next action](images/zapier/1.2.0/zapier-8.png){: .center .width75 .border}
+    ![Select which Content Object fields should be passed to the next action](images/zapier/zapier-8.png){: .center .width75 .border}
 
 11. You can click "Test & Review" to send a test mail to the given recipient (field "To:"), but it's not necessary. If you don't want to send test mail click "Skip Test".
 

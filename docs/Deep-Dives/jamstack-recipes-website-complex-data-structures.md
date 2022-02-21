@@ -9,7 +9,7 @@ Once you start building data models that are a little more complex you'll find t
 
 In this article we'll discuss a couple of particular problems you might encounter in designing a data model and later - working with it. Accidentally - we'll also build a stunning website with your favorite culinary recipes (scrambled eggs, of course). 
 
-![Recipes website built using Gatsby and Flotiq](https://editor.flotiq.com/images/flotiq-starter-recipes.png)
+![Recipes website built using Gatsby and Flotiq](https://editor.flotiq.com/images/flotiq-starter-recipes.png){: .center .width75 .border}
 
 A simple `Recipe` model you might find useful for a recipe website could look like this:
 
@@ -24,11 +24,11 @@ A simple `Recipe` model you might find useful for a recipe website could look li
 
 For such a model - Flotiq would generate a form looking like this:
 
-![Flotiq form for a simple data model](images/jamstack-recipes-complex-data-structures/upload_5466699a3bcd1bdc5e419f2d17240c37.png)
+![Flotiq form for a simple data model](images/jamstack-recipes-complex-data-structures/upload_5466699a3bcd1bdc5e419f2d17240c37.png){: .center .width75 .border}
 
 and your API docs would describe that model this way:
 
-![Flotiq API docs for a simple data model](images/jamstack-recipes-complex-data-structures/upload_0158c43f8d5cc1154fddd8ae68a15ae9.png)
+![Flotiq API docs for a simple data model](images/jamstack-recipes-complex-data-structures/upload_0158c43f8d5cc1154fddd8ae68a15ae9.png){: .center .width75 .border}
 
 This model might be acceptable for very simple websites, but having the `Ingredients` and `Steps` entered as unstructured text (even if using HTML `<li>`) will soon become an issue. 
 
@@ -69,7 +69,7 @@ The problem of unstructured data can be solved using repeatable content fragment
 
 Here's how you would go about it with Flotiq's `list` data type:
 
-![Flotiq's list data type](images/jamstack-recipes-complex-data-structures/upload_9ecd3721c970774c2735a195ff55643f.png)
+![Flotiq's list data type](images/jamstack-recipes-complex-data-structures/upload_9ecd3721c970774c2735a195ff55643f.png){: .center .width75 .border}
 
 
 Benefits:
@@ -102,21 +102,21 @@ We can now extend the example mentioned above:
 
 Your Content Type definition in Flotiq would then look like this:
 
-![Recipe content type definition using lists](images/jamstack-recipes-complex-data-structures/upload_7d565cfe5f5df4287c3d7e0d7004fc94.png)
+![Recipe content type definition using lists](images/jamstack-recipes-complex-data-structures/upload_7d565cfe5f5df4287c3d7e0d7004fc94.png){: .center .width75 .border}
 
 and you would expect this in the API docs:
 
-![Recipe API docs showing lists](images/jamstack-recipes-complex-data-structures/upload_769871eca6460389041c8c52c381826f.png)
+![Recipe API docs showing lists](images/jamstack-recipes-complex-data-structures/upload_769871eca6460389041c8c52c381826f.png){: .center .width75 .border}
 
 > Yup, we know, we're drooling over Flotiq's API docs every time, too. And you know what? You don't need to write a line of code - the docs, just as your entire RESTful API are generated every time you change your model definitions!
 
 And this is how the form for that Content Type would render:
 
-![Flotiq form for a content object using lists](images/jamstack-recipes-complex-data-structures/upload_a99534a9bf1aee346e58aec39037bfd5.png)
+![Flotiq form for a content object using lists](images/jamstack-recipes-complex-data-structures/upload_a99534a9bf1aee346e58aec39037bfd5.png){: .center .width75 .border}
 
 We used the `list` datatype in this [Gatsby & Flotiq recipes starter](https://github.com/flotiq/gatsby-starter-recipes) and you can see the results [here](https://flotiq-starter-recipes.herokuapp.com/). With this data model it's now really simple for a frontend developer to interpret that content on the website.
 
-![Full example of a recipe using Flotiq lists](images/jamstack-recipes-complex-data-structures/upload_7dd4947f6433fabfaf9c94170b445dc4.png)
+![Full example of a recipe using Flotiq lists](images/jamstack-recipes-complex-data-structures/upload_7dd4947f6433fabfaf9c94170b445dc4.png){: .center .width75 .border}
 
 ## Experiment with the Gatsby starter
 
@@ -127,16 +127,18 @@ If you'd like to dig a little deeper into this recipe website, here's your quick
     npm install -g gatsby
     ```
 
-1. **Start project from the template using Gatsby CLI**
+2. **Start project from the template using Gatsby CLI**
     
     ```bash
     gatsby new gatsby-starter-recipes https://github.com/flotiq/gatsby-starter-recipes.git
     ```
 
-1. **Setup "Recipe" Content Type in Flotiq** 
+3. **Setup "Recipe" Content Type in Flotiq** 
 
     Create your [Flotiq.com](https://flotiq.com) account. Next, create the `Recipe` Content Type:
-    ![Recipe content type in flotiq](https://github.com/flotiq/gatsby-starter-recipes/raw/master/docs/create-definition-recipe.png)
+
+    ![Recipe content type in flotiq](images/create-definition-recipe.png){: .center .width75 .border}
+
     _Note: You can also create `Recipe` using [Flotiq REST API](https://flotiq.com/docs/API/)._ 
     
 4. **Configure application**
@@ -150,7 +152,7 @@ If you'd like to dig a little deeper into this recipe website, here's your quick
     FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
     ```
 
-5.  **Launch the Gatsby project**
+5. **Launch the Gatsby project**
 
     Navigate into your new site’s directory and start it up.
 
@@ -160,7 +162,7 @@ If you'd like to dig a little deeper into this recipe website, here's your quick
     gatsby develop
     ```
    
-6.  **Open the source code and start editing!**
+6. **Open the source code and start editing!**
     
     Your site is now running at `http://localhost:8000`!
 

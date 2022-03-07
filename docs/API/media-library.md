@@ -11,25 +11,21 @@ To upload a file to the Flotiq, you need to send `POST` multipart request to `/a
 
 ### Request parameters
 
-| Parameter | Description |
-| --------- | ----------- |
-| file      | binary data of a file |
+| Parameter | Description                                         |
+| --------- | --------------------------------------------------- |
+| file      | binary data of a file                               |
 | type      | `image` for image types, `file` for everything else |
-| save      | set `1` to upload file to server and create an entity in the media library, `0` is deprecated |
-
-To use the uploaded file in media library remember to set the `save` flag to `1`. Option with `0` is deprecated. 
 
 Below example shows how to do simple file upload in nodeJS application:
 
 !!! example "Example nodeJs image upload"
-    ```js
+    ```
     const fs = require(`fs`)
     const FormData = require(`form-data`)
     ...
     const form = new FormData();
     form.append(`file`, fs.createReadStream(file), file);
     form.append(`type`, `image`);
-    form.append(`save`, 1);
     let json = await fetch(`https://api.flotiq.com/api/media`, {
         method: `POST`,
         body: form,
@@ -43,7 +39,7 @@ Below example shows how to do simple file upload in nodeJS application:
 The response will be a Content Object of type `_media`. 
 
 !!! example "Example response"
-    ```json
+    ```
     {
         "id": "_media-456456",
         "extension": "jpg",
@@ -235,21 +231,6 @@ enter `0`, e.g. `/image/0x0/_media-54723892824.doc`.
     `image/1920x0/_media-5472384.jpg` will choose a photo with a width of 1920px and a proportional height of id `_media-5472384`, the file will be JPG. The extension must match the original extension of the uploaded file.
     
 Flotiq automatically scale images and save them for future, faster use, if the size requested by the user does not yet exist.  
-    
-## Additional notes
-
-We've changed the upload process during Flotiq evolution. Below you can see docs about old, deprecated upload process:
-
-??? "Deprecated, old, "two steps" way"
-
-    The process of uploading files to the media library consists of two steps:
-    
-    1. Upload the file to `/api/media` endpoint (via a `POST` request). The response
-       will be a JSON payload with information about the created entity.
-        
-    2. Next step is to create Content Object passing data from step 1. (id, size, type, etc.) with Content Type Definition of `_media` type to the `/api/v1/content/_media`  endpoint.
-    
-    Saving the `_media` type object can only take place after the file has been saved on the server. At that point, the object identifier is assigned. The `id` property is unique, final and immutable and is used to create the URI of the uploaded object.
 
 [Register to start storing your files](https://editor.flotiq.com/register.html){: .flotiq-button}
 

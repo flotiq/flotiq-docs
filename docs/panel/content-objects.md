@@ -4,7 +4,7 @@ Once a Content Type has been defined in the system - the user can create Content
 This is done either directly through the API or via the convenient Content Entry tools
 provided within the [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}.
 
-## Authoring content :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
+## Authoring content :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
 The Content Entry component consists of two elements - the content browser and the content editor.
 

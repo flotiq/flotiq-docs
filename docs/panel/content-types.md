@@ -20,7 +20,7 @@ You need an activated account to see the CTD page in the Dashboard.
 !!! hint 
     This documentation page does not describe how to create CTDs using API if you want to learn about it head to the [Working with Content Types API](../API/content-types.md)
 
-## Creating Content Type Definitions :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
+## Creating Content Type Definitions :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
 The Content Modeler is a convenient tool for modelling CTDs, which you can access through the ``Type definitions`` menu entry.
 The Modeler interacts with the ``/api/v1/internal/contenttype`` endpoint on behalf of the user and seamlessly integrates into Flotiq's UI.

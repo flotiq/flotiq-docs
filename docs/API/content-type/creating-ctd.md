@@ -1,7 +1,7 @@
 title: How to add Content Type Definitions | Flotiq docs
 description: How to add Content Type Definitions in Flotiq API
 
-# Creating new Content Types :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
+# Creating new Content Types :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
 A new <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
 can be created either by sending a properly formatted POST request to the ``/api/v1/internal/contenttype`` 

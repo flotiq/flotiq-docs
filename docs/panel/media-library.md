@@ -8,7 +8,7 @@ The Media Library has 2 sections:
 * Uploaded files - shows files currently uploaded by the user, as well as those downloaded from Unsplash
 * Stock photos - allows to browse through and download images from Unsplash.
 
-## Uploaded files :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
+## Uploaded files :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
 This section of the Media Library gives you access to all of your files that you're storing in Flotiq. You can upload, search, sort, and remove files from the library in this screen.
 

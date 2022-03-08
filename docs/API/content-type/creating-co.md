@@ -1,7 +1,7 @@
 title: How to add Content Objects | Flotiq docs
 description: How to add Content Objects in Flotiq
 
-# Content Objects :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
+# Content Objects :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
 Once a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
 has been defined in the system - the user can create 

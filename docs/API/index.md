@@ -26,7 +26,7 @@ Only user defined keys can be removed using ![](images/remove_button.png){: styl
 !!! hint
     You can use the QR code of your API keys to authorize your Flotiq Mobile Expo installation to access your data. Head over to the [Flotiq Mobile Expo repository](https://github.com/flotiq/flotiq-mobile-demo) to learn more.
 
-## User Defined API Keys :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
+## User Defined API Keys :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
 ![](images/api-keys_2.png){: .center .width75 .border}
 

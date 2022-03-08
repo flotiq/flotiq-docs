@@ -5,7 +5,7 @@ description: Learn more about the powerful Media Library that Flotiq offers.
 
 You can interact with the media library via Flotiq Dashboard or REST API. In this section, we show you how to use our REST API to store and retrieve files.
 
-##File upload :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Limits apply" }[^1]
+##File upload :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
 To upload a file to the Flotiq, you need to send `POST` multipart request to `/api/media` endpoint with required request parameters.
 

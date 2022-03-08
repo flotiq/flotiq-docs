@@ -8212,7 +8212,7 @@ as not all tools can handle the whole Open API Schema format.
     }
     ```
 
-## Getting your Scoped Open API Schema :fontawesome-solid-exclamation-triangle:{ .pricing-info title="Unavailable in Free subscription plan" }[^1]
+## Getting your Scoped Open API Schema :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Unavailable in Free subscription plan" }[^1]
 
 If you want to get your Scoped Open API Schema from Flotiq, 
 you have to make a call at the following endpoint with the User Defined API key (using a Web browser, Postman or Insomnia):

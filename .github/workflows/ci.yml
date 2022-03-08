@@ -17,13 +17,15 @@ jobs:
         python-version: 3.x
     - run: pip install -r requirements.txt
     - run: mkdocs build
+    - run: mkdir public
+    - run: mv ./site ./public/docs
 
     - name: Cloudflare
       run: |
         npm install -g @cloudflare/wrangler
         wrangler init --site cms-docs
         sed -i 's+account_id = '\'\''+account_id = '"'"$ACCOUNT_ID"'"'+g' wrangler.toml
-        sed -i 's+bucket = ""+bucket = "./site"+g' wrangler.toml
+        sed -i 's+bucket = ""+bucket = "./public"+g' wrangler.toml
         sed -i 's+zone_id = '\'\''+zone_id = '"'"$ZONE_ID"'"'+g' wrangler.toml
         sed -i 's+workers_dev = true++g' wrangler.toml
         echo "[env.production]" >> wrangler.toml

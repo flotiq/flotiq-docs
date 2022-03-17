@@ -35,7 +35,8 @@ async function handleEvent(event) {
   // options.mapRequestToAsset = handlePrefix(/^\/docs/)
   const has_slash_at_the_end = /\/$/.test(url.pathname);
   const has_assets_or_images_in_the_link = /\/(assets|images)\//.test(url.pathname);
-  if(!has_slash_at_the_end && !has_assets_or_images_in_the_link) {
+  const has_cs_or_js_on_the_end = /\/(\.css|\.js)\/$/.test(url.pathname);
+  if(!has_slash_at_the_end && !has_assets_or_images_in_the_link && !has_cs_or_js_on_the_end) {
     return Response.redirect(`${event.request.url}/`, 301);
   }
 

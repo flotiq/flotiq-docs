@@ -23,7 +23,7 @@ jobs:
     - name: Cloudflare
       run: |
         npm install -g @cloudflare/wrangler
-#        wrangler init --site cms-docs
+        # wrangler init --site cms-docs
         sed -i 's+account_id = '\'\''+account_id = '"'"$ACCOUNT_ID"'"'+g' wrangler.toml
         sed -i 's+bucket = ""+bucket = "./public"+g' wrangler.toml
         sed -i 's+zone_id = '\'\''+zone_id = '"'"$ZONE_ID"'"'+g' wrangler.toml

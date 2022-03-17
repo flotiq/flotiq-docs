@@ -22,7 +22,7 @@ extra_css:
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/nord.min.css
   - https://flotiq-form-generator-styles.s3.amazonaws.com/styles.css
-  - '/docs/css/flotiq.css'
+  - '/css/flotiq.css'
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
 google_analytics:
@@ -58,7 +58,7 @@ extra_javascript:
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/highlight.min.js
   - https://unpkg.com/was-it-helpful@latest/dist/build.js
-  - '/docs/js/flotiq.js'
+  - '/js/flotiq.js'
     #- https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.js
     #- https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/javascript/javascript.min.js
 

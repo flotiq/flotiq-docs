@@ -22,9 +22,9 @@ for any user from 8AM to 6PM CET, Monday to Friday.
 ## Issues reporting
 
 If the issue concerns Flotiq dashboard or API, API docs or SDKs, please report it on
-[Discord server](https://discord.com/invite/FwXcHnX).
-If the issue concerns any projects available on [GitHub](https://github.com/flotiq) (starters, docs, mobile app demo, etc.),
-please report it in the respective project issues.
+[Discord server](https://discord.com/invite/FwXcHnX) or leave a ticket on our [Public roadmap](https://flotiq.productlift.dev/).
+If the issue concerns any projects available on GitHub (starters, docs, mobile app demo, etc.), please report it in the respective project issues.
+We also appreciate it if you vote, react to our ideas or add your own on our [Roadmap](https://flotiq.productlift.dev/)
 
 ## Contact form
 

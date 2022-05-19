@@ -124,11 +124,12 @@ nav:
     - 'Purging data from Flotiq account': CLI/purge.md
   - Flotiq Universe:
     - 'Overview': Universe/index.md
-    - 'Postman': Universe/postman.md
-    - 'Zapier': Universe/zapier.md
     - 'Gatsby': Universe/gatsby.md
+    - 'Meta-API': Universe/metaapi.md
+    - 'Postman': Universe/postman.md
     - 'Scully': Universe/scully.md
     - 'WordPress': Universe/wordpress.md
+    - 'Zapier': Universe/zapier.md
 #    - 'Netlify': Universe/netlify.md
 #    - 'Heroku': Universe/heroku.md
   - Deep dives:

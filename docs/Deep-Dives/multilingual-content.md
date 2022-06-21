@@ -37,15 +37,13 @@ That is our final blog post CTD. Now it’s time to add some data.
 Our workflow will be simple. We will create content in the base language (in our case, it is English);
 for example:
 
-![](images/multilingual-content/add-co-1.png)
+![](images/multilingual-content/add-co-1.png){: .border}
 
 Next, we will use the duplicate option on the data grid view to create an alternative language version. 
 Make sure to set proper language. The slug should remain unchanged, as this property matches different
 versions of the same entry.
 
-![](images/multilingual-content/add-co-2.png)
-
-![](images/multilingual-content/add-co-3.png)
+![](images/multilingual-content/add-co-2.png){: .border}
 
 Before going to the next step, we recommend adding a few posts with language versions.
 
@@ -54,7 +52,7 @@ Before going to the next step, we recommend adding a few posts with language ver
 Here we will check what our data looks like via our personalized API.
 
 
-### List all articles:
+### 1. List all articles:
 
 ```bash
 curl --request GET 'https://api.flotiq.com/api/v1/content/blogpost?auth_token=_YOUR_TOKEN_'
@@ -77,24 +75,10 @@ curl --request GET 'https://api.flotiq.com/api/v1/content/blogpost?filters={"slu
     To generate your own package, go to the Flotiq Dashboard. Next, import it to the Postman app.
 
 
-
-
-
-# Importing posts from WordPress
-
-Replacing Wordpress is one of the most common use cases for Headless CMS, and for good reasons. Let's take a look at how easy it's going to be.
-
-!!! hint
-    Instead of coding, you can try our [one-click migration tool](https://flotiq.com/services/migrate-wordpress-to-flotiq-headless-cms/) to move your data from WordPress to Flotiq.
-    All you need is your personal [Flotiq Read And Write API Key](http://flotiq.com/docs/API/#application-api-keys) and your WordPress Site address.
-    Read more in our [blog post](https://flotiq.com/blog/migrate-wordpress-to-flotiq-headless-cms).
-
-
 ## Pros and cons
 
 This is a convenient way of implementing multilingual content in your project. 
 Let's sum up the possible pros and cons of this approach:
-
 
 Pros:
 

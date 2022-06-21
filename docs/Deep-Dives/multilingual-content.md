@@ -19,16 +19,14 @@ but remember that you can use the Flotiq to manage various data.
 At first, we create Content Type Definition (CTD) based on our predefined types. It will be a standard 
 blog post object. Let’s see what the example blogpost CTD looks like:
 
-![Standard attributes of Blogpost type definition](images/multilingual-content/add-ctd-1.png)
+![Standard attributes of Blogpost type definition](images/multilingual-content/add-ctd-1.png){.border}
 
 Next, we want to add minor modifications to this CTD. We need to make two changes:
 
 * Add language attribute (input type select, required, default value ‘en’);
 * Make slug not unique because now our unique identifier will be language + slug.
 
-![Add new property named "Language"](images/multilingual-content/add-ctd-2.png)
-
-![The final shape of our Content Type Definition](images/multilingual-content/add-ctd-3.png)
+![Add new property named "Language"](images/multilingual-content/add-ctd-2.png){.border}
 
 That is our final blog post CTD. Now it’s time to add some data.
 
@@ -44,6 +42,8 @@ Make sure to set proper language. The slug should remain unchanged, as this prop
 versions of the same entry.
 
 ![](images/multilingual-content/add-co-2.png){: .border}
+
+![](images/multilingual-content/add-co-3.png){: .border}
 
 Before going to the next step, we recommend adding a few posts with language versions.
 

@@ -71,7 +71,7 @@ curl --request GET 'https://api.flotiq.com/api/v1/content/blogpost?filters={"slu
 ```
 
 !!! Note
-    You can use a [Postman package](ttps://flotiq.com/docs/API/generate-package/) to play with your API easily. 
+    You can use a [Postman package](https://flotiq.com/docs/API/generate-package/) to play with your API easily. 
     To generate your own package, go to the Flotiq Dashboard. Next, import it to the Postman app.
 
 

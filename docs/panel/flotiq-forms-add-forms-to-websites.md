@@ -65,7 +65,7 @@ You can specify some advanced settings to make the form fit better to your page 
 
 #### ReCaptcha settings
 
-Protect your form against bots using reCAPTCHA.
+Protect your form against bots using reCAPTCHA v3.
 You need a Google account and registered site
 (you can do that [in Google reCaptcha console](https://www.google.com/recaptcha/admin/create)).
 
@@ -74,7 +74,11 @@ You need a Google account and registered site
 | Site key   | We use this key in the HTML code of the form; you can find it in the Google reCAPTCHA settings.    |
 | Secret key | We use this key to verify the request from the form; you can find it in the Google reCAPTCHA settings. |
 
-![](images/reCAPTCHA.png){: .center .width75 .border}
+Create reCAPTCHA v3 [in Google console](https://www.google.com/recaptcha/admin/create):
+![Create reCAPTCHA](images/reCAPTCHA-1.png){: .center .width75 .border}
+
+Get the `site key` and `secret key` and copy them to your stand-alone form configuration in Flotiq.
+![Copy reCAPTCHA keys](images/reCAPTCHA-2.png){: .center .width75 .border}
 
 #### File uploads config
 

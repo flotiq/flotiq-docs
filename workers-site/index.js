@@ -36,6 +36,9 @@ async function handleEvent(event) {
   const has_slash_at_the_end = /\/$/.test(url.pathname);
   const has_assets_or_images_in_the_link = /\/(assets|images)\//.test(url.pathname);
   const has_file_extension = /[^\/]+\.[^\/]+$/.test(url.pathname);
+  console.log('has_slash_at_the_end', has_slash_at_the_end);
+  console.log('has_assets_or_images_in_the_link', has_assets_or_images_in_the_link);
+  console.log('has_file_extension', has_file_extension);
   if(!has_slash_at_the_end && !has_assets_or_images_in_the_link && !has_file_extension) {
     return Response.redirect(`${event.request.url}/`, 301);
   }

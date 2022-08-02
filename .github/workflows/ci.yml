@@ -34,7 +34,6 @@ jobs:
         mkdir -p /home/runner/.wrangler/config/
         echo api_token = '"'"$API_TOKEN"'"' > /home/runner/.wrangler/config/default.toml
         cat wrangler.toml
-        cp worker-index.js workers-site/index.js
         wrangler publish --env=production
       shell: bash
       env:

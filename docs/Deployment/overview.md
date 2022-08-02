@@ -23,19 +23,25 @@ This is how most CMS systems work, where the website is running on a server and 
 ### Advantages of running Live
 
 Using this mode has the following key advantages:
+
 * changes in the content can be immediately reflected on the website,
+
 * it’s conceptually simpler to implement business logic, only code changes require a redeployment.
 
 ### Disadvantages of running Live
 
 Using this mode has the following key advantages:
+
 * changes in the content can be immediately reflected on the website,
+
 * it’s conceptually simpler to implement business logic, only code changes require a redeployment.
 
 ### Disadvantages of running Live
 
 There are some drawbacks of using the live mode:
+
 * requires a server to run your website, which involves cost and maintenance effort
+
 * changes in the content will be immediately reflected on the website ;-) - you may need additional logic to control the publication of content.
 
 ### Technologies that support live mode

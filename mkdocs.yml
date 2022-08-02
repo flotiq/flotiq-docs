@@ -124,6 +124,7 @@ nav:
     - 'Purging data from Flotiq account': CLI/purge.md
   - Flotiq Universe:
     - 'Overview': Universe/index.md
+    - 'Deployment': Universe/deployment.md
     - 'Gatsby': Universe/gatsby.md
     - 'Meta-API': Universe/metaapi.md
     - 'Postman': Universe/postman.md

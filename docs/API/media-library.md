@@ -219,7 +219,7 @@ All the Media Content Object parameters are described also in the `Media` Conten
 
 
 
-##Viewing and resizing photos, returning files
+##Getting files
 
 To fetch resized image use the `/image/{width}x{height}/{key}` endpoint where 
 `width` and `height` are the dimensions of the scaled photo and key is its `id` and `extension`. 
@@ -229,8 +229,30 @@ enter `0`, e.g. `/image/0x0/_media-54723892824.doc`.
 
 !!! example 
     `image/1920x0/_media-5472384.jpg` will choose a photo with a width of 1920px and a proportional height of id `_media-5472384`, the file will be JPG. The extension must match the original extension of the uploaded file.
-    
+
+##Resizing images
+
+You can choose different sizes and depend of them, you get other results.
+
+`Width x Height` for example:
+
+`0x0` This way let you download original pictures size and won't make any differents.
+
+`1920x0` This is gonna force images size to choosen by you, it won't be scaled evenly.
+
+`0x1920` This is gonna to force width defined by you and height will be scaled to a proportionate size.
+
+`1920x1920` This is gonna to force height defined by you and width will be scaled to a proportionate size.
+
+As we can see below weight follows sizes, the smaller the size, the less weight. It's important to choose suitable size for your picture, without making it pixelated but having appropriate weight.
+
+![](images/image_sizes.PNG)
+
 Flotiq automatically scale images and save them for future, faster use, if the size requested by the user does not yet exist.  
+
+!!! note
+    See also: [Media library](/docs/panel/media-library/)
+
 
 [Register to start storing your files](https://editor.flotiq.com/register.html){: .flotiq-button}
 

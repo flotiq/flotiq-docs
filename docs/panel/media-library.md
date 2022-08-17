@@ -27,4 +27,7 @@ In order to use images from Unsplash - you need to download them to your library
 
 Media library is accessible via `/api/v1/media/` endpoints. Visit your API docs to learn more.
 
+!!! note
+    See also: [Working with media](/docs/API/media-library/)
+
 [^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

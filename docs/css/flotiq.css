@@ -462,7 +462,7 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
 }
 
 .breadcrumbs {
-  font-family: Inter, 'sans-serif';
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -474,7 +474,7 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
 }
 
 .breadcrumbs a {
-  font-family: Inter, 'sans-serif';
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

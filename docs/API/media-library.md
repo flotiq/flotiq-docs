@@ -238,20 +238,21 @@ You can choose different sizes and depend of them, you get other results.
 
 `0x0` This way let you download original pictures size and won't make any differents.
 
-`1920x0` This is gonna force images size to choosen by you, it won't be scaled evenly.
+`1920x0` This will force width defined by you and height will be scaled to a proportionate size.
 
-`0x1920` This is gonna to force width defined by you and height will be scaled to a proportionate size.
+`0x1920` This way let you to force height defined by you and width will be scaled to a proportionate size.
 
-`1920x1920` This is gonna to force height defined by you and width will be scaled to a proportionate size.
+`1920x1920` This will force images size to choosen by you, it won't be scaled evenly. When the image is taller or wider, it will crop it. 
+Worth to know is that this endpoint won't upscale images.
 
 As we can see below weight follows sizes, the smaller the size, the less weight. It's important to choose suitable size for your picture, without making it pixelated but having appropriate weight.
 
-![](images/image_sizes.PNG)
+![](images/image_sizes.png)
 
 Flotiq automatically scale images and save them for future, faster use, if the size requested by the user does not yet exist.  
 
 !!! note
-    See also: [Media library](/docs/panel/media-library/)
+    See also: [Manage assets using the Media Library in Dashboard](/docs/panel/media-library/)
 
 
 [Register to start storing your files](https://editor.flotiq.com/register.html){: .flotiq-button}

@@ -234,16 +234,12 @@ enter `0`, e.g. `/image/0x0/_media-54723892824.doc`.
 
 You can choose different sizes and depend of them, you get other results.
 
-`Width x Height` for example:
+Set the appropriate values `width` and `height` in the media url `https://api.flotiq.com/image/[width]x[height]/_media-123.jpg`, for example:
 
-`0x0` This way let you download original pictures size and won't make any differents.
-
-`1920x0` This will force width defined by you and height will be scaled to a proportionate size.
-
-`0x1920` This way let you to force height defined by you and width will be scaled to a proportionate size.
-
-`1920x1920` This will force images size to choosen by you. When the image is taller or wider, it will crop it. 
-Worth to know is that this endpoint won't upscale images.
+* `0x0` This way let you download original pictures size and won't make any differents.
+* `1920x0` This will force width defined by you and height will be scaled to a proportionate size.
+* `0x1920` This way let you to force height defined by you and width will be scaled to a proportionate size.
+* `1920x1920` This will force images size to choosen by you. When the image is taller or wider, it will crop it. Worth to know is that this endpoint won't upscale images.
 
 As we can see below weight follows sizes, the smaller the size, the less weight. It's important to choose suitable size for your picture, without making it pixelated but having appropriate weight.
 

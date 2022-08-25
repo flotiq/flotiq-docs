@@ -242,7 +242,7 @@ You can choose different sizes and depend of them, you get other results.
 
 `0x1920` This way let you to force height defined by you and width will be scaled to a proportionate size.
 
-`1920x1920` This will force images size to choosen by you, it won't be scaled evenly. When the image is taller or wider, it will crop it. 
+`1920x1920` This will force images size to choosen by you. When the image is taller or wider, it will crop it. 
 Worth to know is that this endpoint won't upscale images.
 
 As we can see below weight follows sizes, the smaller the size, the less weight. It's important to choose suitable size for your picture, without making it pixelated but having appropriate weight.

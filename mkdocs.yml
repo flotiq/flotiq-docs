@@ -98,7 +98,9 @@ nav:
       - 'Listing deleted Content Objects': API/content-type/listing-deleted-co.md
     - 'Dynamic Content API': API/dynamic-content-api.md
     - 'GraphQL': API/graph-ql.md
-    - 'Generating SDKs': API/generate-package.md
+    - 'Generating SDKs':
+      - 'Overview': API/generate-package.md
+      - 'SDK NodeJS': API/generate-package/sdk-nodejs.md
     - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
     - 'Working with media': API/media-library.md

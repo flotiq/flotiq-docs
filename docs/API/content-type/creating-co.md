@@ -32,6 +32,9 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
     You can send custom `id` in the object data to assign a particular `id` to the object.
     Random `id` will be assigned when the `id` property is not present in the object.
 
+!!! note
+    Content object's `id` in endpoint `https://api.flotiq.com/api/v1/content/contenttype/{id}` is case insensitive.
+
 !!! Example
 
     === "CURL"

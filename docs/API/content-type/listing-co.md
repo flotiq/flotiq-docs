@@ -495,7 +495,7 @@ There is only 1 level of hydration. The example below shows example response for
                 limit: '20',
                 order_by: 'internal.createdAt',
                 order_direction: 'asc',
-                hydrate: '0',
+                hydrate: '1',
                 filters: '{}'
             },
             headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},

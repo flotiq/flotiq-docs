@@ -4,13 +4,15 @@ description: How to update Content Objects in Flotiq
 # Updating content through the API
 
 There are two ways to update the content of an object:
-PUT:
+
+`PUT`:
 When updating the object (`PUT` requests), all properties must be present in the request body,
 as the object data are replaced with the request body. The id property inside the object is ignored in `PUT` requests.
 Validation of update request works the same as in saving requests.
-PATCH:
+
+`PATCH`:
 When updating an object (a `PATCH` request), it is not necessary to specify all the properties of the object.
-The id property inside the object is ignored in `PACH` requests.
+The id property inside the object is ignored in `PATCH` requests.
 Validating the update request works the same as it does when saving requests.
 
 !!! note

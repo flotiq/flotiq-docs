@@ -413,7 +413,7 @@ Only `contains` and `notContains` type filters can be used with filtering by rel
 If you wish to receive underlying objects attached to objects you are listing, you need to send a request with query parameter `hydrate` set to `1`.
 There is only 1 level of hydration. The example below shows example response for products with a category, product image and product gallery.
 
-**Below we show how you can, while downloading a product, display the name of its category, i.e. product -> category -> name - this is an ideal application for hydration.**
+**Below we show how you can, while fetching a product, display the name of its category, i.e. product -> category -> name - this is an ideal case for hydration.**
 
 !!! Example
 
@@ -610,6 +610,6 @@ There is only 1 level of hydration. The example below shows example response for
         }
         ```
         
-As you can see after adding hydrate instead of {dataUr: ...} we get a full object, so we can immediately show the values ​​without additional requests.
+As you can see after adding hydrate instead of `{dataUrl: ...}` we get a full object, so we can immediately show the values ​​without additional requests.
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

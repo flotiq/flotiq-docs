@@ -254,6 +254,8 @@ Developers friendly content builder.
 You can add texts, headers, lists, media, YouTube videos, quotes, warnings and delimiters.
 The control generates json description of the blocks used.
 
+![](images/BlockControl.gif){: .center .width75 .border}
+
 To add the block different from standard text, click the `+` button and choose the block from the controls.
 
 Block controls:

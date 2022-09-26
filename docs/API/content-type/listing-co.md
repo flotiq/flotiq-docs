@@ -410,8 +410,8 @@ Only `contains` and `notContains` type filters can be used with filtering by rel
 
 ### Hydrating objects
 
-If you wish to receive underlying objects attached to objects you are listing, you need to send a request with query parameter `hydrate` set to `1`.
-There is only 1 level of hydration. The example below shows example response for products with a category, product image and product gallery.
+If you wish to receive underlying objects attached to objects you are listing, you need to send a request with query parameter `hydrate` set to  number of hydration level. The maximum allowed hydration level is 2.
+The example below shows example response for products with a category, product image and product gallery.
 
 **Below we show how you can, while fetching a product, display the name of its category, i.e. product -> category -> name - this is an ideal case for hydration.**
 

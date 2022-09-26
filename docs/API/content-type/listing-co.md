@@ -413,18 +413,20 @@ Only `contains` and `notContains` type filters can be used with filtering by rel
 If you wish to receive underlying objects attached to objects you are listing, you need to send a request with query parameter `hydrate` set to `1`.
 There is only 1 level of hydration. The example below shows example response for products with a category, product image and product gallery.
 
+**Below we show how you can, while fetching a product, display the name of its category, i.e. product -> category -> name - this is an ideal case for hydration.**
+
 !!! Example
 
     === "CURL"
 
         ``` 
-        curl -X GET "https://api.flotiq.com/api/v1/content/product?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=1&filters=%7B%7D" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
+        curl -X GET "https://api.flotiq.com/api/v1/content/product?hydrate=1" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
         ```
 
     === "C# + Restasharp"
 
         ```
-        var client = new RestClient("https://api.flotiq.com/api/v1/content/product?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=1&filters=%7B%7D");
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/product?hydrate=1");
         var request = new RestRequest(Method.GET);
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
@@ -443,7 +445,7 @@ There is only 1 level of hydration. The example below shows example response for
         
         func main() {
         
-            url := "https://api.flotiq.com/api/v1/content/product?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=1&filters=%7B%7D"
+            url := "https://api.flotiq.com/api/v1/content/product?hydrate=1"
         
             req, _ := http.NewRequest("GET", url, nil)
 
@@ -466,7 +468,7 @@ There is only 1 level of hydration. The example below shows example response for
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-            .url("https://api.flotiq.com/api/v1/content/product?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=1&filters=%7B%7D")
+            .url("https://api.flotiq.com/api/v1/content/product?hydrate=1")
             .get()
             .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
             .build();
@@ -477,7 +479,7 @@ There is only 1 level of hydration. The example below shows example response for
     === "Java + Unirest"
       
         ```
-        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/product?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=1&filters=%7B%7D")
+        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/product?hydrate=1")
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
@@ -516,7 +518,7 @@ There is only 1 level of hydration. The example below shows example response for
         $curl = curl_init();
         
         curl_setopt_array($curl, [
-            CURLOPT_URL => "https://api.flotiq.com/api/v1/content/product?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=1&filters=%7B%7D",
+            CURLOPT_URL => "https://api.flotiq.com/api/v1/content/product?hydrate=1",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -540,97 +542,74 @@ There is only 1 level of hydration. The example below shows example response for
         }
         ```
 
-!!! Response
+!!! Response - hydration enabled
 
-    === "200 OK"
+    === "Hydration enabled"
 
         ```
         {
-          "total_count": 1,
-          "total_pages": 1,
-          "current_page": 1,
-          "count": 1,
-          "data": [
-            {
-              "id": "product-1",
-              "name": "Wild fruit",
-              "slug": "wild-fruit",
-              "price": 12,
-              "category": [
-                {
-                  "id": "category-2",
-                  "name": "Black tea",
-                  "slug": "black-tea",
-                  "image": [
-                    {
-                      "type": "internal",
-                      "dataUrl": "/api/v1/content/_media/_media-5eb3b2cb85196"
-                    }
-                  ],
-                  "internal": {
-                    "createdAt": "2020-05-07T07:03:52+00:00",
-                    "deletedAt": "",
-                    "updatedAt": "2020-05-07T08:29:14+00:00",
-                    "contentType": "category",
-                    "workflow_state": "saved"
-                  }
-                }
-              ],
-              "internal": {
-                "createdAt": "2020-05-07T07:03:55+00:00",
-                "deletedAt": "",
-                "updatedAt": "2020-07-10T08:23:49+00:00",
-                "contentType": "product",
-                "workflow_state": "saved"
-              },
-              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum erat vitae aliquet euismod. Curabitur hendrerit, eros sed iaculis aliquam, ante magna placerat ante, at fermentum augue nulla non justo. Curabitur arcu sem, venenatis eget lobortis a, aliquet nec nunc. Nam tristique, est ac dictum iaculis, mauris nunc pellentesque lacus, in pulvinar enim turpis in dolor. Morbi porta, mi vitae euismod volutpat, nisi sem mollis ligula, nec faucibus erat est vitae ante. Maecenas fringilla sodales tortor a varius. Fusce ipsum lorem, pharetra id tempus non, luctus in elit.</p>\n\n<p>Aliquam lectus arcu, accumsan quis libero vel, placerat faucibus orci. Aenean vitae mattis turpis, id egestas arcu. Integer non purus dui.</p>\n\n<ul>\n\t<li>Etiam porttitor massa id velit semper, vitae posuere leo egestas.</li>\n\t<li>Nunc congue, quam vestibulum cursus luctus, turpis sem feugiat odio, eu placerat ex tellus vitae elit.</li>\n\t<li>Phasellus sodales purus sed auctor feugiat. Morbi varius pretium ligula id semper. In ac scelerisque erat.</li>\n\t<li>Quisque a metus ut nibh finibus hendrerit.</li>\n</ul>\n\n<p>Nam in quam et libero mollis venenatis viverra a odio. Aenean in lacus id libero pretium scelerisque ac cursus est. Quisque egestas leo ut ex sollicitudin, at porta nunc tincidunt. Nulla posuere, enim eu commodo gravida, orci erat egestas lorem, sit amet imperdiet lectus massa quis libero. Maecenas a hendrerit nunc. Cras eu quam metus. Etiam volutpat, leo nec faucibus sollicitudin, sapien lacus bibendum lorem, maximus porttitor ligula tortor a orci. Aenean non diam ornare, condimentum nisi sed, viverra justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras commodo efficitur metus, in interdum purus. Cras sed risus eget arcu dapibus consequat. Aenean quis aliquam dia.</p>\n",
-              "productImage": [
-                {
-                  "id": "_media-5eb3b2cb53e21",
-                  "url": "/image/0x0/_media-5eb3b2cb53e21.jpg",
-                  "size": 574633,
-                  "type": "image",
-                  "width": 1920,
-                  "height": 1275,
-                  "source": "disk",
-                  "fileName": "_media-5e8d9bf8e731d.jpg",
-                  "internal": {
-                    "createdAt": "2020-05-07T07:03:40+00:00",
-                    "deletedAt": "",
-                    "updatedAt": "2020-05-07T07:03:40+00:00",
-                    "contentType": "_media",
-                    "workflow_state": "saved"
-                  },
-                  "mimeType": "image/jpeg",
-                  "extension": "jpg",
-                  "externalId": ""
-                }
-              ],
-              "productGallery": [
-                {
-                  "id": "_media-5eb3b2cb53e21",
-                  "url": "/image/0x0/_media-5eb3b2cb53e21.jpg",
-                  "size": 574633,
-                  "type": "image",
-                  "width": 1920,
-                  "height": 1275,
-                  "source": "disk",
-                  "fileName": "_media-5e8d9bf8e731d.jpg",
-                  "internal": {
-                    "createdAt": "2020-05-07T07:03:40+00:00",
-                    "deletedAt": "",
-                    "updatedAt": "2020-05-07T07:03:40+00:00",
-                    "contentType": "_media",
-                    "workflow_state": "saved"
-                  },
-                  "mimeType": "image/jpeg",
-                  "extension": "jpg",
-                  "externalId": ""
-                }
-              ]
-            }
-          ]
+            "data": [{
+                "id": "product-1",
+                "name": "Wild fruit",
+                "slug": "wild-fruit",
+                "price": 12,
+                "internal": {...},
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum erat vitae aliquet euismod. Curabitur hendrerit, eros sed iaculis aliquam, ante magna placerat ante, at fermentum augue nulla non justo. Curabitur arcu sem, venenatis eget lobortis a, aliquet nec nunc. Nam tristique, est ac dictum iaculis, mauris nunc pellentesque lacus, in pulvinar enim turpis in dolor. Morbi porta, mi vitae euismod volutpat, nisi sem mollis ligula, nec faucibus erat est vitae ante. Maecenas fringilla sodales tortor a varius. Fusce ipsum lorem, pharetra id tempus non, luctus in elit.</p>\n\n<p>Aliquam lectus arcu, accumsan quis libero vel, placerat faucibus orci. Aenean vitae mattis turpis, id egestas arcu. Integer non purus dui.</p>\n\n<ul>\n\t<li>Etiam porttitor massa id velit semper, vitae posuere leo egestas.</li>\n\t<li>Nunc congue, quam vestibulum cursus luctus, turpis sem feugiat odio, eu placerat ex tellus vitae elit.</li>\n\t<li>Phasellus sodales purus sed auctor feugiat. Morbi varius pretium ligula id semper. In ac scelerisque erat.</li>\n\t<li>Quisque a metus ut nibh finibus hendrerit.</li>\n</ul>\n\n<p>Nam in quam et libero mollis venenatis viverra a odio. Aenean in lacus id libero pretium scelerisque ac cursus est. Quisque egestas leo ut ex sollicitudin, at porta nunc tincidunt. Nulla posuere, enim eu commodo gravida, orci erat egestas lorem, sit amet imperdiet lectus massa quis libero. Maecenas a hendrerit nunc. Cras eu quam metus. Etiam volutpat, leo nec faucibus sollicitudin, sapien lacus bibendum lorem, maximus porttitor ligula tortor a orci. Aenean non diam ornare, condimentum nisi sed, viverra justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras commodo efficitur metus, in interdum purus. Cras sed risus eget arcu dapibus consequat. Aenean quis aliquam dia.</p>\n",
+                "productImage": [{
+                    "id": "_media-b35676ac-94f5-4200-9e16-eef40b649352",
+                    "url": "/image/0x0/_media-b35676ac-94f5-4200-9e16-eef40b649352.jpg",
+                    "size": 574633,
+                    "type": "image",
+                    "width": 1920,
+                    "height": 1275,
+                    "source": "disk",
+                    "fileName": "_media-5e8d9bf8e731d.jpg",
+                    "internal": {...},
+                    "mimeType": "image/jpeg",
+                    "extension": "jpg",
+                    "externalId": ""
+                }],
+                "productGallery": [{
+                    "id": "_media-b35676ac-94f5-4200-9e16-eef40b649352",
+                    "url": "/image/0x0/_media-b35676ac-94f5-4200-9e16-eef40b649352.jpg",
+                    "size": 574633,
+                    "type": "image",
+                    "width": 1920,
+                    "height": 1275,
+                    "source": "disk",
+                    "fileName": "_media-5e8d9bf8e731d.jpg",
+                    "internal": {...},
+                    "mimeType": "image/jpeg",
+                    "extension": "jpg",
+                    "externalId": ""
+                }]
+            }]
         }
         ```
+
+    === "Hydration disabled"
+
+        ```
+        {
+            "data": [{
+                "id": "product-1",
+                "name": "Wild fruit",
+                "slug": "wild-fruit",
+                "price": 12,
+                "internal": {...},
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum erat vitae aliquet euismod. Curabitur hendrerit, eros sed iaculis aliquam, ante magna placerat ante, at fermentum augue nulla non justo. Curabitur arcu sem, venenatis eget lobortis a, aliquet nec nunc. Nam tristique, est ac dictum iaculis, mauris nunc pellentesque lacus, in pulvinar enim turpis in dolor. Morbi porta, mi vitae euismod volutpat, nisi sem mollis ligula, nec faucibus erat est vitae ante. Maecenas fringilla sodales tortor a varius. Fusce ipsum lorem, pharetra id tempus non, luctus in elit.</p>\n\n<p>Aliquam lectus arcu, accumsan quis libero vel, placerat faucibus orci. Aenean vitae mattis turpis, id egestas arcu. Integer non purus dui.</p>\n\n<ul>\n\t<li>Etiam porttitor massa id velit semper, vitae posuere leo egestas.</li>\n\t<li>Nunc congue, quam vestibulum cursus luctus, turpis sem feugiat odio, eu placerat ex tellus vitae elit.</li>\n\t<li>Phasellus sodales purus sed auctor feugiat. Morbi varius pretium ligula id semper. In ac scelerisque erat.</li>\n\t<li>Quisque a metus ut nibh finibus hendrerit.</li>\n</ul>\n\n<p>Nam in quam et libero mollis venenatis viverra a odio. Aenean in lacus id libero pretium scelerisque ac cursus est. Quisque egestas leo ut ex sollicitudin, at porta nunc tincidunt. Nulla posuere, enim eu commodo gravida, orci erat egestas lorem, sit amet imperdiet lectus massa quis libero. Maecenas a hendrerit nunc. Cras eu quam metus. Etiam volutpat, leo nec faucibus sollicitudin, sapien lacus bibendum lorem, maximus porttitor ligula tortor a orci. Aenean non diam ornare, condimentum nisi sed, viverra justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras commodo efficitur metus, in interdum purus. Cras sed risus eget arcu dapibus consequat. Aenean quis aliquam dia.</p>\n",
+                "productImage": [{
+                    "type": "internal",
+                    "dataUrl": "/api/v1/content/_media/_media-b35676ac-94f5-4200-9e16-eef40b649352"
+                }],
+                "productGallery": [{
+                    "type": "internal",
+                    "dataUrl": "/api/v1/content/_media/_media-b35676ac-94f5-4200-9e16-eef40b649352"
+                }]
+            }]
+        }
+        ```
+        
+As you can see after adding hydrate instead of `{dataUrl: ...}` we get a full object, so we can immediately show the values ​​without additional requests.
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

@@ -158,13 +158,13 @@ To pass this query to the Flotiq, you need to call:
 While listing objects, you can use the optional parameters
 `page`, `limit`, `order_by`, `order_direction`, or `filter`.
 
-| Param name      | Param description                                                                         | Defalut value |
-|-----------------|-------------------------------------------------------------------------------------------|---------------|
-| page            | Number of objects on page                                                                 | 20            |
-| limit           | Number of the requested page                                                              | 1             |
-| order_by        | What field should list be ordered by                                                      |               |
-| order_direction | Order direction, possible values `asc`, `desc`                                            | asc          |
-| filter          | Json encoded object containing conditions on which the list of CO should be filtered  \n Example filter value: {"title":{"type":"equals","filter":"Hello world!"}} |               |
+| Param name      | Param description                                                                                                                                                   | Defalut value |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| page            | Number of objects on page                                                                                                                                           | 20            |
+| limit           | Number of the requested page                                                                                                                                        | 1             |
+| order_by        | What field should list be ordered by                                                                                                                                |               |
+| order_direction | Order direction, possible values `asc`, `desc`                                                                                                                      | asc          |
+| filter          | Json encoded object containing conditions on which the list of CO should be filtered<br/> Example filter value: {"title":{"type":"equals","filter":"Hello world!"}} |               |
 
 The below example shows how to list all products ordered by title, limited to 2 results:
 

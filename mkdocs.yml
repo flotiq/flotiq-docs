@@ -110,6 +110,7 @@ nav:
     - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
+    - 'Users': panel/users.md
     - 'Webhooks':
       - Overview: panel/webhooks/index.md
       - Examples: panel/webhooks/examples.md

@@ -85,4 +85,4 @@ git push heroku main
 ```
 
 After a few minutes, Heroku return URL address for your page.
-![Done deploy](images/heroku/rezult.png)
+![Done deploy](images/heroku/result.png)

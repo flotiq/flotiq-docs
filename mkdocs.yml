@@ -134,7 +134,7 @@ nav:
     - 'WordPress': Universe/wordpress.md
     - 'Zapier': Universe/zapier.md
 #    - 'Netlify': Universe/netlify.md
-#    - 'Heroku': Universe/heroku.md
+    - 'Heroku': Universe/heroku.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md

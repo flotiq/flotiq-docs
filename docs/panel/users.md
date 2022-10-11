@@ -28,7 +28,7 @@ When adding new user you have define its: Email, Name, and Password. After savin
 
 Once new user verifies his email, he will be asked to enter a new password and the process of adding a new team member will be completed.
 
-## Editing users.
+## Editing users
 
 When browsing users list in `Users` tab from the left panel, you can make changes to your user by clicking the pencil icon, which will open the `Edit User` tab. 
 

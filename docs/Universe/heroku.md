@@ -33,11 +33,10 @@ Fork this repository to your GitHub account.
 
 ![Fork starter on GitHub](images/heroku/github-fork.png)
 
-After a fork, you need to clone the starter to your PC.
+After a fork, you need to get the starter to your PC.
+On GitHub, click "Code" and "Download ZIP".
 
-```bash
-git clone git@github.com:ywur-account/flotiq-nextjs-blog-1.git
-```
+![Download starter](images/heroku/github-download.png)
 
 ## Update packages.json
 
@@ -56,11 +55,17 @@ Add `-$PORT` to command `start` in packages.json
 In the project directory, run the command:
 
 ```bash
-heroku git:remote -a flotiq-blog-1
+heroku create -a flotiq-blog-1
 ```
 `flotiq-blog-1` - is application name,
 when command return error about app name  is already taken
 the name should be changed.
+
+Set remote for your blog:
+
+```bash
+heroku git:remote -a flotiq-blog-1
+```
 
 ## Set environment variables
 

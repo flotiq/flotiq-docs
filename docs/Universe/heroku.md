@@ -31,12 +31,12 @@ Select one starter from Flotiq NetJs starter:
 For example, next's steps show deployment starter nextjs blog 1.
 Fork this repository to your GitHub account.
 
-![Fork starter on GitHub](images/heroku/github-fork.png)
+![Fork starter on GitHub](images/heroku/github-fork.png){: .center .border}
 
 After a fork, you need to get the starter to your PC.
 On GitHub, click "Code" and "Download ZIP".
 
-![Download starter](images/heroku/github-download.png)
+![Download starter](images/heroku/github-download.png){: .center .border}
 
 ## Update packages.json
 
@@ -95,5 +95,6 @@ git commit -a -m "Heroku deploy"
 git push heroku main
 ```
 
-After a few minutes, Heroku return URL address for your page.
-![Done deploy](images/heroku/result.png)
+After a few minutes, Heroku return URL address for your page:
+
+![Done deploy](images/heroku/result.png){: .center .border}

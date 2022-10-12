@@ -86,6 +86,8 @@ heroku git:remote -a flotiq-blog-1
 
     `_GOOGLE_ANALYTICS_ID_` - Google Analytics id
 
+    In the case of the Gatsby framework, the environment variable names will be different: [https://github.com/flotiq/flotiq-gatsby-blog-1#configuration](https://github.com/flotiq/flotiq-gatsby-blog-1#configuration)
+
 ## Push your code to Heroku
 
 Now commit your code changes (packages.json) and push it to Heroku:

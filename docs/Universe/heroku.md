@@ -61,6 +61,12 @@ heroku create -a flotiq-blog-1
 when command return error about app name  is already taken
 the name should be changed.
 
+To show list of application, run:
+
+```bash
+heroku apps
+```
+
 Set remote for your blog:
 
 ```bash

@@ -57,9 +57,10 @@ In the project directory, run the command:
 ```bash
 heroku create -a flotiq-blog-1
 ```
-`flotiq-blog-1` - is application name,
-when command return error about app name  is already taken
-the name should be changed.
+!!! note
+    `flotiq-blog-1` - is application name,
+    when command return error about app name  is already taken
+    the name should be changed.
 
 To show list of application, run:
 
@@ -80,11 +81,10 @@ heroku git:remote -a flotiq-blog-1
  heroku config:set FLOTIQ_API_KEY=_FLOTIQ_API_KEY_
  heroku config:set NEXT_PUBLIC_GA_ID=_GOOGLE_ANALITICS_ID_
 ```
-where:
+!!! note
+    `_FLOTIQ_API_KEY_` - Flotiq api key from: [https://editor.flotiq.com/api-keys](https://editor.flotiq.com/api-keys)
 
-`_FLOTIQ_API_KEY_` - Flotiq api key from: [https://editor.flotiq.com/api-keys](https://editor.flotiq.com/api-keys)
-
-`_GOOGLE_ANALYTICS_ID_` - Google Analytics id
+    `_GOOGLE_ANALYTICS_ID_` - Google Analytics id
 
 ## Push your code to Heroku
 
@@ -94,6 +94,9 @@ Now commit your code changes (packages.json) and push it to Heroku:
 git commit -a -m "Heroku deploy"
 git push heroku main
 ```
+
+!!! note
+    `main` is the name of the branch. For other repositories, this name maybe is different.
 
 After a few minutes, Heroku return URL address for your page:
 

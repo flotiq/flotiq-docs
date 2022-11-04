@@ -1,5 +1,5 @@
 title: Flotiq and Meta-API integration | Flotiq docs
-description: Use Flotiq and Meta-API to integrate your data with any API 
+description: This tutorial shows how to use Flotiq and Meta-API to integrate with another API
 
 
 # Flotiq + Meta-API + Google Spreadsheets use case

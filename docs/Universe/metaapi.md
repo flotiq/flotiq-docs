@@ -11,4 +11,6 @@ You can define workflows for data mixing predefined APIs.
 There are over 480 public APIs in Catalog, including popular apps like Gmail, Google Calendar,
 Google Spreadsheet, Twitter, etc.
 
+Integration with Meta-Api allows you to create better workflow with much easier volume of data exchange and implementation of business logic.
+
 ![Meta-API dashboard](images/metaapi/meta-about.png)

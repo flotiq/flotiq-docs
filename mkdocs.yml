@@ -150,6 +150,7 @@ nav:
     - 'Full-text search': Deep-Dives/search-api-deepdive.md
     - 'Multilingual content': Deep-Dives/multilingual-content.md
     - 'Securing JAMstack APIs': Deep-Dives/securing-write-api-access.md
+    - 'Meta-API': Deep-Dives/metaapi.md
     - 'Custom domains in Heroku': Deep-Dives/add-a-custom-domain-to-heroku-for-free.md
     - 'Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content': 'Deep-Dives/netlify-zapier-gatsby-serverless-deployment-pipeline.md'
     - 'Upload media example app': Deep-Dives/upload-media.md

@@ -5,15 +5,17 @@ You can remove all objects from your account with one command. It helps with tes
 The command looks like this:
 
 ```bash
-flotiq purge [flotiqApiKey] [options]
+flotiq purge [flotiqApiKey] [flags]
 ```
 
 After running the command, all your objects should be removed.
 
 ### Parameters
 
-`flotiqApiKey` - API key to your Flotiq account
+* `flotiqApiKey` - read and write API key to your Flotiq account
 
-`options` - additional options for the command:
+**Flags**
 
-* `withInternal=1` - remove also media objects
+* `--withInternal` or `--internal` - purge will also remove internal type objects like (`_media`)
+
+* `--force` or `--f` - purge will remove data even if Content Types relations loop to each other.

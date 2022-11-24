@@ -54,7 +54,7 @@ We use the content of the downloaded file in the next step.
 ### 4. Add your Flotiq API to Meta-API
 
 !!! Note "Why there is no predefined Flotiq API in Meta-API catalog?"
-    The Main concept of Flotiq is that your API Specification represents your set of content definitions literally.
+    The Main concept of Flotiq is that your API Specification literally represents your set of content definitions.
     Your API represents your endpoints, with your models consisting of your properties.
     In short, **Flotiq API contains different endpoints for each user to be more personalized**.
 

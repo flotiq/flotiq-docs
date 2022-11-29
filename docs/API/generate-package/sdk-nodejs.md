@@ -19,7 +19,7 @@ To use SDK in your project follow below steps:
 2. In your `[projectDirectory]/flotiq-javascript-sdk/` run `npm i && npm run build`
 3. In your `[projectDirectory]` run `npm i ./flotiq-javascript-sdk --save`
 
-_Other installation methods are described in [#Additional usage methods](Additional usage methods) section._
+_Other installation methods are described in [Additional usage methods](#additional-usage-methods) section._
 
 ### 2. Configure your SDK
 
@@ -71,7 +71,6 @@ Can be use:
 
 ![](../images/sdk-nodejs.gif)
 
-
 ## Additional usage methods
 
 ### Local development
@@ -101,5 +100,3 @@ Finally, you need to build the module:
 ```
 npm run build
 ```
-
-

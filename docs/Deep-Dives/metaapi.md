@@ -17,8 +17,8 @@ We add two columns (Date, Stock Quantity) and a chart with the default config fo
 
 ![Create an empty sheet to store Flotiq aggregated data](images/metaapi/meta-spr-1.png){: .border}
 
-Notice the `spreadsheet id`. 
-It's located in the URL `https://docs.google.com/spreadsheets/d/[___here___]/edit#gid=0`. 
+Notice the `spreadsheet_id`. 
+It's located in the URL `https://docs.google.com/spreadsheets/d/<spreadsheet_id>/edit#gid=0`. 
 We will use it in the next steps.
 
 
@@ -56,10 +56,11 @@ We use the content of the downloaded file in the next step.
 !!! Note "Why there is no predefined Flotiq API in Meta-API catalog?"
     The Main concept of Flotiq is that your API Specification literally represents your set of content definitions.
     Your API represents your endpoints, with your models consisting of your properties.
-    In short, **Flotiq API contains different endpoints for each user to be more personalized**.
+    In short, **Flotiq API contains personalized endpoints changed in real-time, according to your data**.
 
-We assume that you have an account on Meta-API platform and you are logged in. 
-Go to the Catalog of API and click "Add an API".
+We assume that you have a Meta-API account.
+
+Go to the [Catalog of API](https://dashboard.meta-api.io/connectors) and click "Add an API".
 
 ![Add Flotiq API to Meta-API catalog](images/metaapi/meta-1.png){: .border}
 
@@ -71,6 +72,8 @@ retrieved in step 2. Other fields (except Category) should auto-complete.
 And that's it. We have our private Flotiq API in our private Meta-API Catalog. 
 Now we can use it to create a `Spell`.
 
+!!! Note
+    Every time your flotiq model changes ( and your API with it) you might need to update your meta API connection with new open-api specification
 
 ### 5. Create a Spell that connects Flotiq with any other API
 
@@ -140,7 +143,8 @@ Use the "One-click Auth with Meta Api" wizard to authenticate.
 There are also a few properties that should be updated in Google Spreadsheet Connector settings. 
 
 Please set:
-- `spreadsheetId` value to spreadsheet id obtained in the first step,
+
+- `spreadsheetId` value to spreadsheet id obtained in the [first step](/docs/Deep-Dives/metaapi/#1-create-an-empty-sheet-in-google-spreadsheets),
 - `valueInputOption` to `USER_ENTERED`,
 - `range` to `A2`.
 

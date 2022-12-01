@@ -5,7 +5,7 @@ You can remove all objects from your account with one command. It helps with tes
 The command looks like this:
 
 ```bash
-flotiq purge [flotiqApiKey] [flags]
+flotiq purge [flotiqApiKey]
 ```
 
 After running the command, all your objects should be removed.

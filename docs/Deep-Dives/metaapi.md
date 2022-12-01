@@ -34,7 +34,7 @@ In our example, we use [predefined Product CTD](https://flotiq.com/docs/panel/pr
 ![Product Content Type Definition in Flotiq](images/metaapi/meta-flotiq-1.png){: .border}
 
 Now it's time to add some example data. 
-As we are creative, we added more sophisticated data than "Lorem ipsum" :)
+As we are creative, we will add more sophisticated data than "Lorem ipsum" ;)
 
 ![List of Content Objects in Flotiq](images/metaapi/meta-flotiq-2.png){: .border}
 
@@ -113,13 +113,16 @@ Now you should see the edit Spell view.
 
 ## 6. Authenticate your Connectors
 
+We need to add API keys both from google and from flotiq, so we can fetch the data from the API and push it to the google sheet.
+Here is step by step guide how to do it:
+
 As you can see in the right sidebar, there are a few alerts. 
 To update our configuration, click the "Fix" button next to Flotiq User API.
 
 ![Fix authentication problem](images/metaapi/meta-10.png){: .border}
 
 In the settings panel for Flotiq User API, click "Configure Authentication",
-and paste here your API Key from Flotiq
+and paste here your API Key from Flotiq. In this case, the `Read Only` API Key will suffice.
 
 !!! Note
     If you are new to Flotiq, check how to obtain your [Flotiq API Key](https://flotiq.com/docs/API/)

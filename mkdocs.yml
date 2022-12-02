@@ -112,6 +112,7 @@ nav:
     - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
+    - 'Users': panel/users.md
     - 'Webhooks':
       - Overview: panel/webhooks/index.md
       - Examples: panel/webhooks/examples.md
@@ -134,7 +135,7 @@ nav:
     - 'WordPress': Universe/wordpress.md
     - 'Zapier': Universe/zapier.md
 #    - 'Netlify': Universe/netlify.md
-#    - 'Heroku': Universe/heroku.md
+    - 'Heroku': Universe/heroku.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md

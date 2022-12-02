@@ -243,7 +243,7 @@ Set the appropriate values `width` and `height` in the media url `https://api.fl
 
 As we can see below weight follows sizes, the smaller the size, the less weight. It's important to choose suitable size for your picture, without making it pixelated but having appropriate weight.
 
-![](images/image_sizes.png)
+![](images/image_sizes.png){: .center .border}
 
 Flotiq automatically scale images and save them for future, faster use, if the size requested by the user does not yet exist.  
 

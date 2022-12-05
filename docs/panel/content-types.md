@@ -113,20 +113,20 @@ Here you can find the explanation of property settings and for what types of pro
 
 Property types:
 
-| Type      | Description                                                                                                                                                                                                                                |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Text      | String type, generating Text Input in object form                                                                                                                                                                                          |
-| Textarea  | Long string type accepting new line characters, generating Textarea in object form                                                                                                                                                         |
-| Rich Text | Long string type accepting HTML, generating CKEditor in object form                                                                                                                                                                        |
-| Email     | String type, generating Email Input in object form                                                                                                                                                                                         |
-| Number    | Number type accepting any number, integer, float and doubles, generating Number Input                                                                                                                                                      |
-| Radio     | String type, generating Radio Input in object form                                                                                                                                                                                         |
-| Checkbox  | Boolean type, generating single Checkbox in object form                                                                                                                                                                                    |
-| Select    | String type, generating Select Dropdown in object form                                                                                                                                                                                     |
-| Relation  | Array type accepts only objects specified in `Restrict to type`, items in relation array cannot be duplicated                                                                                                                              |
-| List      | Object type generates subforms in object form; the inside object can have all types of properties except List. Properties of the inside object cannot be required, unique, read-only or hidden, cannot be part of the object title either. |
-| Date time | String type, the correct format is: YYYY-MM-DD or YYYY-MM-DDTHH-mm. Example: 2021-06-17T13:10 or 2021-06-17.                                                                                                                               |
-| Block     | Object type, generates editor.js in object form                                                                                                                                                                                            |
+| Type      | Description                                                                                                                                                                                      |
+| --------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Text      | String type, generating Text Input in object form                                                                                                                                                |
+| Textarea  | Long string type accepting new line characters, generating Textarea in object form                                                                                                               |
+| Rich Text | Long string type accepting HTML, generating CKEditor in object form                                                                                                                              |
+| Email     | String type, generating Email Input in object form                                                                                                                                               |
+| Number    | Number type accepting any number, integer, float and doubles, generating Number Input                                                                                                            |
+| Radio     | String type, generating Radio Input in object form                                                                                                                                               |
+| Checkbox  | Boolean type, generating single Checkbox in object form                                                                                                                                          |
+| Select    | String type, generating Select Dropdown in object form                                                                                                                                           |
+| Relation  | Array type accepts only objects specified in `Restrict to type`, items in relation array cannot be duplicated                                                                                    |
+| List      | Object type generates subforms in object form; the inside object can have all types of properties. If you choose the `list` type property inside the list, then the nested list will be created. |
+| Date time | String type, the correct format is: YYYY-MM-DD or YYYY-MM-DDTHH-mm. Example: 2021-06-17T13:10 or 2021-06-17.                                                                                     |
+| Block     | Object type, generates editor.js in object form                                                                                                                                                  |
 
 
 [^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

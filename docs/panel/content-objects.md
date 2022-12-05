@@ -235,6 +235,8 @@ To add the new object to the list, click the `Add item` button.
 You can change the order of objects in the list using the up and down arrow in the top right corner of object form.
 You can remove the object from the list using the trash icon in the top right corner of the object form.
 
+If the list property contains a `list` child property, the nested form will be displayed.
+
 ### Geo
 
 Control for geolocation points. You can find the address using `Find on map` input or by dragging the marker on the map.

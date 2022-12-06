@@ -605,12 +605,16 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
 .highlight :is(.na,.nv,.vc,.vg,.vi,.o,.ow),
 .highlight .p {
   color: white;
-} 
- 
+}
+
 .highlight .hljs.lua .p {
   color: #3f6ec6;
 }
 
 .highlight .hljs.lua :is(.na,.nv,.vc,.vg,.vi,.o,.ow){
   color: #88c0d0;
+}
+
+.md-nav--primary .md-nav__title{
+  box-shadow: none;
 }

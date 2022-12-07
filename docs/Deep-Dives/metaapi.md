@@ -179,6 +179,8 @@ And in the Google Spreadsheet connector code replace null with our dataRow:
 	]
 ```
 
+We do this to tell the google spreadsheet connector what it should pull from the spreadsheet, in this case, data rows.
+
 ![Modify connector code](images/metaapi/meta-17a.png){: .border}
 
 That's it! It's so simple to code your custom transformations. Ready to test?

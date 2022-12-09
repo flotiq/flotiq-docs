@@ -1,5 +1,5 @@
 title: Flotiq Postman Sandbox Packages | Flotiq docs
-description: Flotiq allows you to check how will your API looks like using Postman Public Workspaces.
+description: Flotiq allows you to check how will your API look like using Postman Public Workspaces.
 
 # Postman Sandbox Packages
 

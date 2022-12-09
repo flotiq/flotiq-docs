@@ -28,13 +28,18 @@ Command logs the following information:
     `Max string length` for all values is set to 30.000 because MS Excel has trouble handling text with length > 30 000 in one cell.
 
 ## Parameters
-* `ctdName` - API name of Content Type Definition you wish to export,
-* `filePath` - the directory to which the xlsx file is to be saved. Type in "." if you want to save the file inside the current directory,
-* `flotiqApiKey` - API key to your Flotiq account with read permission.
+
+`ctdName` - API name of Content Type Definition you wish to export,
+
+`filePath` - the directory to which the xlsx file is to be saved. Type in "." if you want to save the file inside the current directory,
+
+`flotiqApiKey` - API key to your Flotiq account with read permission.
 
 ## Flags
-* `--limit=[number]` or `--l=[number]` - number of Content Objects to export counting from the top row, default: 10.000,
-* `--hideResults` or `--hr` - information about the export process will not appear in the console.
+
+`--limit=[number]` or `--l=[number]` - number of Content Objects to export counting from the top row, default: 10.000,
+
+`--hideResults` or `--hr` - information about the export process will not appear in the console.
 
 ## Result example
 
@@ -66,13 +71,18 @@ For every sheet in the workbook:
 * errors data (object)
 
 ## Parameters
-* `ctdName` - API name of Content Type Definition you wish to import data to,
-* `filePath` - the directory to the xlsx file you wish to import data from,
-* `flotiqApiKey` - API key to your Flotiq account with read and write permissions.
+
+`ctdName` - API name of Content Type Definition you wish to import data to,
+
+`filePath` - the directory to the xlsx file you wish to import data from,
+
+`flotiqApiKey` - API key to your Flotiq account with read and write permissions.
 
 ## Flags
-* `--limit=[number]` or `--l=[number]` - number of Content Objects imported counting from the top row, default: 10 000,
-* `--hideResults` or `--hr` - information about the import process will not appear in the console.
+
+`--limit=[number]` or `--l=[number]` - number of Content Objects imported counting from the top row, default: 10 000,
+
+`--hideResults` or `--hr` - information about the import process will not appear in the console.
 
 ## Notes
 

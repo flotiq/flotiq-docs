@@ -16,6 +16,7 @@ flotiq excel-import [ctdName] [filePath] [flotiqApiKey]
 ```
 
 Command logs the following information:
+
 * FilePath
 * Total number of Content Objects for export
 * Number of Content Objects successfully exported
@@ -66,6 +67,7 @@ flotiq excel-import [ctdName] [filePath] [flotiqApiKey]
 
 Command logs the following information:
 For every sheet in the workbook:
+
 * Number of Content Objects successfully imported
 * Number of errors in Content Object import
 * errors data (object)

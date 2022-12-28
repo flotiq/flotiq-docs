@@ -124,6 +124,7 @@ nav:
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
     - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
     - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
+    - 'Migrate content from Contentful to Flotiq': CLI/contentful-importer.md
     - 'Purging data from Flotiq account': CLI/purge.md
     - 'Migrating Flotiq data to and from MS Excel': CLI/excel-data-migration.md
   - Flotiq Universe:

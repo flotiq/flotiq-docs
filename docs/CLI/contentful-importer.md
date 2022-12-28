@@ -36,5 +36,7 @@ The migrator will export from Contentful the following data from Flotiq:
 ## Result
 
 When the migrator finishes its work, it will log into your console three tables which summarize the migration of Content Types, Media and Content Objects.
+
 Both Content Types and Media tables will show the success count, and error count of the total number of entities migrated. Also, for every error that has occurred, it will present the error code, name, and additional description with a pointer to an entity that caused the problem, for example, Contentful asset ID.
+
 The table for Content Objects will show you separate success and error count for each Content Type you are migrating.

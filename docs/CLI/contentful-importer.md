@@ -8,8 +8,8 @@ To migrate data, you will need the following:
 
 * A Flotiq account (you can [register here](http://editor.flotiq.com/register.html))
 * Flotiq's "Read and write API key" (more about API keys [here](../API/index.md))
-* Contentful Space ID (more on how to find your CF's space id [here](https://www.contentful.com/help/find-space-id/)){:target="_blank"}
-* Contentful Content Management Token (more on how to get your CF's content management token in the section "How to get a Personal Access Token: the Web App" on Contentful's [Personal Access Tokens page](https://www.contentful.com/help/personal-access-tokens/)){:target="_blank"}
+* Contentful Space ID (more on how to find your CF's space id [here](https://www.contentful.com/help/find-space-id/))
+* Contentful Content Management Token (more on how to get your CF's content management token in the section "How to get a Personal Access Token: the Web App" on Contentful's [Personal Access Tokens page](https://www.contentful.com/help/personal-access-tokens/))
 
 ## Usage
 
@@ -20,7 +20,7 @@ Once you are done getting hold of all of the keys, all you need to do is run a s
 flotiq contentful-import [flotiqApiKey] [contentfulSpaceId] [contentfulContentManagementToken] [translation (optional)]
 ```
 
-`translation` - is Contentful's space locale that will be exported to Flotiq. If skipped, the command will export Contentful's default locale - `en-us`. You can find more information on Contentful's locale [here](https://www.contentful.com/help/working-with-translations/){:target="_blank"}
+`translation` - is Contentful's space locale that will be exported to Flotiq. If skipped, the command will export Contentful's default locale - `en-us`. You can find more information on Contentful's locale [here](https://www.contentful.com/help/working-with-translations/)
 
 ## Imported data
 

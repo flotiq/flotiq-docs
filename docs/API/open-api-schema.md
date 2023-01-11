@@ -19,9 +19,9 @@ https://api.flotiq.com/api/v1/open-api-schema.json
 Or run a simple curl request in the terminal:
 
 ```
-curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" 
-     -H 'accept: */*' 
-     -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" \
+     -H 'accept: */*' \
+     -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
      -H 'Content-Type: application/json'
 ```
 
@@ -45,9 +45,9 @@ as not all tools can handle the whole Open API Schema format.
 
     Example curl request
     ```
-    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" 
-         -H 'accept: */*' 
-         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" \ 
+         -H 'accept: */*' \
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
          -H 'Content-Type: application/json'
     ```
 
@@ -3339,9 +3339,9 @@ as not all tools can handle the whole Open API Schema format.
 
     Example curl request
     ```
-    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?user_only=true" 
-         -H 'accept: */*' 
-         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?user_only=true" \
+         -H 'accept: */*' \
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
          -H 'Content-Type: application/json'
     ```
 
@@ -4416,9 +4416,9 @@ as not all tools can handle the whole Open API Schema format.
 
     Example curl request
     ```
-    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?version=2" 
-         -H 'accept: */*' 
-         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?version=2" \
+         -H 'accept: */*' \
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
          -H 'Content-Type: application/json'
     ```
 
@@ -7279,9 +7279,9 @@ as not all tools can handle the whole Open API Schema format.
 
     Example curl request
     ```
-    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?version=2&user_only=true" 
-         -H 'accept: */*' 
-         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?version=2&user_only=true" \
+         -H 'accept: */*' \
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
          -H 'Content-Type: application/json'
     ```
 
@@ -8224,9 +8224,9 @@ https://api.flotiq.com/api/v1/open-api-schema.json
 Or run a simple curl request in the terminal:
 
 ```
-curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" 
-     -H 'accept: */*' 
-     -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" \
+     -H 'accept: */*' \
+     -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
      -H 'Content-Type: application/json'
 ```
 

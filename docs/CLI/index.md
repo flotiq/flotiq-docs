@@ -31,7 +31,7 @@ npm install -g flotiq-cli
 
 ## Usage
 
-![](images/flotiq-start.gif)
+![](images/flotiq-start.gif){: .center .border}
 
 Flotiq CLI currently supports the following commands:
 

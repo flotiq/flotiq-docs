@@ -134,9 +134,9 @@ Form generated for Blog Post:
 
 Gatsby starter for blog post:
 
-[GitHub](https://github.com/flotiq/gatsby-starter-blog){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-blog-1){:target="_blank"}
 
-[Working example](https://flotiq-blog.herokuapp.com/){:target="_blank"}
+[Working example](https://flotiqgatsbyblog1master.gatsbyjs.io){:target="_blank"}
 
 Scully starter for blog post:
 
@@ -279,9 +279,9 @@ Form generated for Event:
 
 Gatsby starter for event calendar:
 
-[GitHub](https://github.com/flotiq/gatsby-starter-event-calendar){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-event-1){:target="_blank"}
 
-[Working example](https://flotiq-starter-for-events-cal.herokuapp.com/){:target="_blank"}
+[Working example](https://flotiqgatsbyevent1.gatsbyjs.io/){:target="_blank"}
 
 Scully starter for event calendar:
 
@@ -429,9 +429,9 @@ Form generated for Product:
 
 Gatsby starter for products:
 
-[GitHub](https://github.com/flotiq/gatsby-starter-products){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-shop-1){:target="_blank"}
 
-[Working example](https://flotiq-starter-products.herokuapp.com/){:target="_blank"}
+[Working example](https://flotiqgatsbyshop1.gatsbyjs.io/){:target="_blank"}
 
 Scully starter for products:
 
@@ -551,9 +551,9 @@ Form generated for Project:
 
 Gatsby starter for projects:
 
-[GitHub](https://github.com/flotiq/gatsby-starter-projects){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-portfolio-1){:target="_blank"}
 
-[Working example](https://flotiq-starter-for-projects.herokuapp.com/){:target="_blank"}
+[Working example](https://flotiqgatsbyportfolio1.gatsbyjs.io/){:target="_blank"}
 
 Scully starter for projects:
 
@@ -828,9 +828,9 @@ Form generated for Recipe:
 
 Gatsby starter for recipes:
 
-[GitHub](https://github.com/flotiq/gatsby-starter-recipes){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-recipe-1){:target="_blank"}
 
-[Working example](https://flotiq-starter-recipes.herokuapp.com/){:target="_blank"}
+[Working example](https://flotiqgatsbyrecipe1.gatsbyjs.io/){:target="_blank"}
 
 Scully starter for recipes:
 

@@ -23,7 +23,7 @@ Gatsby starter for creating a blog with Flotiq
 
 [GitHub](https://github.com/flotiq/flotiq-gatsby-blog-2){:target="_blank"}
 
-[Working example](https://flotiqgatsbyblog1master.gatsbyjs.io/){:target="_blank"}
+[Working example](https://flotiqgatsbyblog2.gatsbyjs.io/){:target="_blank"}
 
 ## Starter for WordPress-like blog
 

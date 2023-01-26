@@ -236,6 +236,7 @@ You can change the order of objects in the list using the up and down arrow in t
 You can remove the object from the list using the trash icon in the top right corner of the object form.
 
 If the list property contains a `list` child property, the nested form will be displayed.
+![](images/nested list.png)
 
 ### Geo
 

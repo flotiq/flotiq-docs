@@ -146,7 +146,7 @@ Request parameters
 
 | Parameter | Description                                                                                                                           |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| hydrate   | If you want to hydrate data sources in the object, you need to set it to `1`; it will hydrate one level of data sources in the object |
+| hydrate   | If you want to hydrate data sources in the object, you need to set it to `1`, it will hydrate one level of data sources in objects, `2` will hydrate deeper objects, and it's the highest level of hydration available in Flotiq API |
 
 !!! Responses
 

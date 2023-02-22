@@ -42,7 +42,7 @@ let opts = {
   limit: "20", // {Number} Page limit
   orderBy: "internal.updatedAt", // {String} Order by field
   orderDirection: "asc", // {String} Order direction
-  hydrate: "0", // {Number} Should hydrate relations of object, for now only one level of hydration is possible
+  hydrate: "0", // {Number} Should hydrate relations of object, for now only two levels of hydration is possible
   filters:
     '{"slug":{"type":"contains","filter":"test"},"title":{"type":"contains","filter":"test"}}', // {String} List filters
   ids: '["null"]', // {[String]} Ids of objects to return.

@@ -415,8 +415,6 @@ If you wish to receive underlying objects attached to the object you are retriev
 !!! Warning
     `hydrate=2` is the highest level of hydration available in Flotiq API.
 
-The example below shows an example response for the product with a category, product image and product gallery.
-
 **Below we show how you can, while fetching a product, display the name of its category, i.e. product -> category -> name - this is an ideal case for hydration.**
 
 !!! Example

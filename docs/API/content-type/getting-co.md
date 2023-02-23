@@ -146,7 +146,7 @@ Request parameters
 
 | Parameter | Description                                                                                                                           |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| hydrate   | If you want to hydrate data sources in the object, you need to set it to `1`; it will hydrate one level of data sources in the object |
+| hydrate   | If you want to hydrate data sources in the object, you need to set it to `1`, it will hydrate one level of data sources in objects, `2` will hydrate deeper objects, and it's the highest level of hydration available in Flotiq API |
 
 !!! Responses
 
@@ -193,8 +193,12 @@ Request parameters
 
 ### Hydrating object
 
-If you wish to receive underlying objects attached to the object you are retrieving, you need to send a request with query parameter `hydrate` set to `1`.
-There is only 1 level of hydration. The example below shows an example response for the product with a category, product image and product gallery.
+If you wish to receive underlying objects attached to the object you are retrieving, you need to send a request with query parameter `hydrate` set to `1`, if hydrated objects have other objects attached that you want to get access to, you can set `hydrate` to `2`.
+
+!!! Note
+    `hydrate=2` is the highest level of hydration available in Flotiq API.
+
+The example below shows an example response for the product with a category, product image and product gallery.
 
 !!! Example
 

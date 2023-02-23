@@ -412,7 +412,7 @@ Only `contains` and `notContains` type filters can be used with filtering by rel
 
 If you wish to receive underlying objects attached to the object you are retrieving, you need to send a request with query parameter `hydrate` set to `1`, if hydrated objects have other objects attached that you want to get access to, you can set `hydrate` to `2`.
 
-!!! Warning
+!!! Note
     `hydrate=2` is the highest level of hydration available in Flotiq API.
 
 **Below we show how you can, while fetching a product, display the name of its category, i.e. product -> category -> name - this is an ideal case for hydration.**

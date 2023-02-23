@@ -195,7 +195,7 @@ Request parameters
 
 If you wish to receive underlying objects attached to the object you are retrieving, you need to send a request with query parameter `hydrate` set to `1`, if hydrated objects have other objects attached that you want to get access to, you can set `hydrate` to `2`.
 
-!!! Warning
+!!! Note
     `hydrate=2` is the highest level of hydration available in Flotiq API.
 
 The example below shows an example response for the product with a category, product image and product gallery.

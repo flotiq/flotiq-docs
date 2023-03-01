@@ -246,8 +246,12 @@ you can find the list [here](/docs/API/content-type/creating-co/#possible-valida
 
 ## Batch update Content Objects through API
 
-Updating up to 100 objects at once is described
+Updating up to 100 objects with single POST request at once is described
 [here](/docs/API/content-type/creating-co/#batch-create-content-objects-through-api),
 as batch creating and updating are done on the same API endpoint.
+
+It is also possible to update objects using the PATCH method.
+In the case of PATH, it is not required to provide all object fields, only those that are to be changed.
+When an object doesn't exist, the batch patch returns a 404 error response. The PATCH endpoint doesn't create new objects.
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

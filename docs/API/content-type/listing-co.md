@@ -166,7 +166,7 @@ Filter types
 | Type               | Description                                                                                                                                                   |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | equals             | Object parameter must be equal to `filter`, can be used with string type parameters                                                                           |
-| notEquals          | Object parameter must not be equal to `filter`, can be used with string type parameters                                                                       |
+| notEqual          | Object parameter must not be equal to `filter`, can be used with string type parameters                                                                       |
 | contains           | Object parameter must contain `filter`, can be used with every type parameters                                                                                |
 | notContains        | Object parameter must not contain `filter`, can be used with every type parameters                                                                            |
 | startsWith         | Object parameter must start with `filter`, can be used with string type parameters                                                                            |

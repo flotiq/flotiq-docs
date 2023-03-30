@@ -84,6 +84,10 @@ For every sheet in the workbook:
 
 `--limit=[number]` or `--l=[number]` - number of Content Objects imported counting from the top row, default: 10 000,
 
+`--batchLimit` or `--bl` - limit the number of Content Objects imported per batch call, default: 100.
+
+`--updateExisting` or `--ue` - If content objects with a given id already exist in the Flotiq account, they will be updated.
+
 `--hideResults` or `--hr` - information about the import process will not appear in the console.
 
 ## Notes

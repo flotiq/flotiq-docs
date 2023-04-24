@@ -1,6 +1,12 @@
 title: Start selling online - Node.js e-commerce tutorial using Snipcart, Flotiq and Gatsby | Flotiq deep dives
 description: Start selling products online instantly. Use our step-by-step tutorial on Snipcart, Gatsby and Flotiq and put your e-commerce live in 5 minutes.
 
+!!! caution
+    This tutorial is based on a deprecated starter. We strongly advise you to look at our new blog starters - 
+    [Gatsby eCommerce 1 – Green Shop](https://flotiq.com/starters/gatsby-ecommerce-1-green-shop) and 
+    [Gatsby eCommerce 2 – Merch Store](https://flotiq.com/starters/gatsby-ecommerce-2-merch-store). Look at our other 
+    [starters](https://flotiq.com/starters/) if Gatsby recipe website don't match your need.
+
 # Start selling online with Snipcart, Flotiq, Gatsby and Heroku
 
 This time, we'll dive deep into building e-commerce with Snipcart, Flotiq and Gatsby. We'll start with a fresh Flotiq account, build a Content Type Definition, hook it up with a Gatsby starter and finally - deploy it live using Heroku.

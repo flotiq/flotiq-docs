@@ -28,9 +28,10 @@ curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" \
 Possible request parameters:
 
 | Parameter | Description                                                                                          |
-| --------- | ---------------------------------------------------------------------------------------------------- |
+|-----------|------------------------------------------------------------------------------------------------------|
 | version   | version of API Schema, possible values: `3` - default for Open API Schema 3.0, `2` - for Swagger 2.0 |
 | user_only | should the schema be rendered without system endpoints, default `false`                              |
+| hydration | if relations to CTD should be expanded, default `0`, `1` - expand schema definition                  | 
 
 Version 3 is compatible with Open API tools
 ([SDK generator](https://github.com/OpenAPITools/openapi-generator), [swagger editor](https://editor.swagger.io/))
@@ -8211,7 +8212,60 @@ as not all tools can handle the whole Open API Schema format.
       }
     }
     ```
+## Hydration Open API Schema
 
+If a content type has relations to another content type, the generated schema looks like this:
+```json
+"product": {
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+    },
+    {
+      "type": "object",
+      "properties": {
+        ...
+      "categories": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DataSource"
+        },
+        "minItems": 0,
+        "description": ""
+      }
+    }
+  }
+],
+...
+```
+The category field relates to the definition of the 'categories' type. But the definition of the category is a definition of the DataSource type.
+When we set hydrate to 1, we will get a change in the definition of the 'categories' field:
+
+```json
+"product": {
+  "type": "object",
+   "allOf": [
+      {
+        "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+      },
+      {
+        "type": "object",
+         "properties": {
+            ...
+            "categories": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/category"
+              },
+            "minItems": 0,
+            "description": ""
+          },
+        }
+      }
+   ],
+...
+```
 ## Getting your Scoped Open API Schema :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Unavailable in Free subscription plan" }[^1]
 
 If you want to get your Scoped Open API Schema from Flotiq, 

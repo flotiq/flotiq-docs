@@ -1,5 +1,7 @@
 site_name: Flotiq Developer Documentation
 site_url: https://flotiq.com/docs/
+repo_url: https://github.com/flotiq/flotiq-docs/
+edit_uri: edit/master/docs/
 copyright: Copyright &copy; 2019 onwards <a target="_blank" href="https://www.flotiq.com/">Flotiq<a>
 dev_addr: 0.0.0.0:4000
 theme:
@@ -10,9 +12,17 @@ theme:
      language: en
      palette:
          primary: '#0083FC'
+#     icon:
+#       edit: material/pencil 
+#       view: material/eye
      features:
        - navigation.instant
        - navigation.top
+       - content.action.edit
+       - content.action.view
+       - search.suggest
+       - search.highlight
+
 plugins:
   - search
   - awesome-pages
@@ -36,6 +46,7 @@ markdown_extensions:
   - meta
   - toc:
       permalink: true
+      title: On this page
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.details

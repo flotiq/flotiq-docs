@@ -12,9 +12,6 @@ theme:
      language: en
      palette:
          primary: '#0083FC'
-#     icon:
-#       edit: material/pencil 
-#       view: material/eye
      features:
        - navigation.instant
        - navigation.top

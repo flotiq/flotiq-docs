@@ -118,13 +118,11 @@
         </div>
         <div class="md-header__inner">
             <!-- Button to open search modal -->
-            {% if "search" in config["plugins"] %}
-            <label class="md-header__button md-icon" for="__search">
+            {% if "material/search" in config.plugins %}
+              <label class="md-header__button md-icon" for="__search">
                 {% include ".icons/material/magnify.svg" %}
-            </label>
-
-            <!-- Search interface -->
-            {% include "partials/search.html" %}
+              </label>
+              {% include "partials/search.html" %}
             {% endif %}
 
             <!-- Repository information -->

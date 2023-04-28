@@ -31,7 +31,7 @@ Possible request parameters:
 |-----------|------------------------------------------------------------------------------------------------------|
 | version   | version of API Schema, possible values: `3` - default for Open API Schema 3.0, `2` - for Swagger 2.0 |
 | user_only | should the schema be rendered without system endpoints, default `false`                              |
-| hydration | if relations to CTD should be expanded, default `0`, `1` - expand schema definition                  | 
+| hydrate   | if relations to other CTDs should be expanded, default `0`, `1` - expand schema definition           | 
 
 Version 3 is compatible with Open API tools
 ([SDK generator](https://github.com/OpenAPITools/openapi-generator), [swagger editor](https://editor.swagger.io/))
@@ -8212,9 +8212,10 @@ as not all tools can handle the whole Open API Schema format.
       }
     }
     ```
-## Hydration Open API Schema
+## Hydration in Open API Schema
 
 If a content type has relations to another content type, the generated schema looks like this:
+
 ```json
 "product": {
   "type": "object",
@@ -8237,10 +8238,19 @@ If a content type has relations to another content type, the generated schema lo
     }
   }
 ],
+
 ...
+
 ```
-The category field relates to the definition of the 'categories' type. But the definition of the category is a definition of the DataSource type.
-When we set hydrate to 1, we will get a change in the definition of the 'categories' field:
+
+!!! notice 
+    The `DataSource` schemas are a way we use to create relations (links)
+    between objects across different Content Type Definitions.
+
+
+In the schema above - the `categories` field requires objects of `category` type, but it's not 
+clear looking at the definition. When add the `hydrate=1` parameter when generating the OpenAPI 
+schema, we will get a schema properly reflecting the link to `category`:
 
 ```json
 "product": {
@@ -8266,6 +8276,10 @@ When we set hydrate to 1, we will get a change in the definition of the 'categor
    ],
 ...
 ```
+
+!!! tip
+    You can use the `hydrate=1` parameter along with the [OpenAPI generator](https://flotiq.com/docs/API/generate-package/#generate-server-libraries-or-clients-for-other-languages) to generate SDK packages that will support object hydration.
+
 ## Getting your Scoped Open API Schema :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Unavailable in Free subscription plan" }[^1]
 
 If you want to get your Scoped Open API Schema from Flotiq, 

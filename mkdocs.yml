@@ -32,10 +32,6 @@ extra_css:
   - 'css/flotiq.css'
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
-google_analytics:
-  - 'UA-10126793-18'
-  - 'auto'
-
 markdown_extensions:
   - admonition
   - attr_list
@@ -71,6 +67,9 @@ extra_javascript:
     #- https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/javascript/javascript.min.js
 
 extra:
+  analytics:
+    provider: google
+    property: G-155L75RSLX
   disqus: 'flotiq'
   social:
     - icon: fontawesome/brands/discord

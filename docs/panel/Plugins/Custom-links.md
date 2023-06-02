@@ -12,11 +12,11 @@ Open up your profile menu and select `Plugins`.
 
 On the next screen, click on the `Add to your plugins` button next to `Custom Links`.
 
-![Adding Netlify Build plugin to Flotiq](images/plugins-custom-links-1.png){: .center .width75 .border}
+![Adding Netlify Build plugin to Flotiq](images/plugins-custom-links-1.png){: .center .width50 .border}
 
 Next - fill in the details and click `Save changes` to finish your plugin setup.
 
-![Setting up Netlify Build in Flotiq](images/plugins-custom-links-2.png){: .center .width75 .border}
+![Setting up Netlify Build in Flotiq](images/plugins-custom-links-2.png){: .center .width50 .border}
 
 * URL Template - It's a place to enter the link template, e.g. `https://my-blog/post/{slug}`, where `slug` is the name of the content field of the type selected below. Instead of `{slug}`, you can use any field of a given content type, it is also possible to use nesting, e.g. `{internal.createdAt}`. However, the use of list type fields is not supported.
 
@@ -24,10 +24,27 @@ Next - fill in the details and click `Save changes` to finish your plugin setup.
 
 * Content Type Definition - Select the content type to display the button only for the specified content type. If the content type is not selected, the button will be shown when editing each content object.
 
+You're done. Now you will see `Link to current post` in Content Objects forms, the button  `https://my-blog/post/first-post`.
+
+![Netlify build button in Flotiq editor](images/plugins-custom-links-3.png){: .center .width50 .border}
 
 
-## That's it!
+## Examples
 
-You're done. Now you will see `Link to current post` in Content Objects forms, the button leads to `https://my-blog/post/first-post`.
+### Using Custom Links plugin for preview links
 
-![Netlify build button in Flotiq editor](images/plugins-custom-links-3.png){: .center .width75 .border}
+One of the most common use cases for using this plugin is to add a direct link to a preview/staging environment  directly from the editor. Here's how you could set that up:
+
+![Custom links plugin configuration for linking to a preview environment](images/plugins-custom-links-4.png){: .center .width50 .border}
+
+### Creating links to pages using complex routing
+
+Here's a bit more complex example, where the page routing requires to provide a URL with the name of a category *and* a slug of the current page:
+
+![Custom links plugin with a more complex routing](images/plugins-custom-links-5.png){: .center .width50 .border}
+
+if you use this configuration with an object similar to this
+
+![Content object with category and slug](images/plugins-custom-links-6.png){: .center .width50 .border}
+
+you will see a preview link that will lead you to `https://staging.site.com/office/best-office-chair`.

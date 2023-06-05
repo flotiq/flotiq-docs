@@ -26,7 +26,7 @@ Next - fill in the details and click `Save changes` to finish your plugin setup.
 
 You're done. Now you will see `Link to current post` in Content Objects forms, the button  `https://my-blog/post/first-post`.
 
-![Netlify build button in Flotiq editor](images/plugins-custom-links-3.png){: .center .width50 .border}
+![Custom links button in Flotiq editor](images/plugins-custom-links-3.png){: .center .width50 .border}
 
 
 ## Examples

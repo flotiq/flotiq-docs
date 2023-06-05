@@ -124,6 +124,7 @@ nav:
       - Overview: panel/webhooks/index.md
       - Examples: panel/webhooks/examples.md
     - Plugins:
+      - 'Custom Links': panel/Plugins/Custom-links.md
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
       - 'Netlify': panel/Plugins/Netlify-integration.md
   - CLI:

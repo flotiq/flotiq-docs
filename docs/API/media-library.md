@@ -224,7 +224,7 @@ All the Media Content Object parameters are described also in the `Media` Conten
 To fetch resized image use the `/image/{width}x{height}/{id}.{extension}` endpoint where
 `width` and `height` are the dimensions of the scaled photo.
 Is it possible to use the file name in URL `/image/{width}x{height}/{id}/{fileName}.{extension}`,
-`fileName` is any name; it does not check whether a file with that name exists.
+`fileName` is any name; it does not have to be the file's original name; you can choose whatever suits your need in particular usage.
 Using filenames improves SEO.
 
 To download the original photo, or download a non-photo file as width and height, 

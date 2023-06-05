@@ -12,11 +12,11 @@ Open up your profile menu and select `Plugins`.
 
 On the next screen, click on the `Add to your plugins` button next to `Custom Links`.
 
-![Adding Netlify Build plugin to Flotiq](images/plugins-custom-links-1.png){: .center .width75 .border}
+![Adding Custom Links plugin to Flotiq](images/plugins-custom-links-1.png){: .center .width75 .border}
 
 Next - fill in the details and click `Save changes` to finish your plugin setup.
 
-![Setting up Netlify Build in Flotiq](images/plugins-custom-links-2.png){: .center .width75 .border}
+![Setting up Custom Links in Flotiq](images/plugins-custom-links-2.png){: .center .width75 .border}
 
 * URL Template - It's a place to enter the link template, e.g. `https://my-blog/post/{slug}`, where `slug` is the name of the content field of the type selected below. Instead of `{slug}`, you can use any field of a given content type, it is also possible to use nesting, e.g. `{internal.createdAt}`. However, the use of list type fields is not supported.
 
@@ -30,4 +30,4 @@ Next - fill in the details and click `Save changes` to finish your plugin setup.
 
 You're done. Now you will see `Link to current post` in Content Objects forms, the button leads to `https://my-blog/post/first-post`.
 
-![Netlify build button in Flotiq editor](images/plugins-custom-links-3.png){: .center .width75 .border}
+![Custom Links button in Flotiq editor](images/plugins-custom-links-3.png){: .center .width75 .border}

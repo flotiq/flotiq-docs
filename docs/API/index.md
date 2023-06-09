@@ -50,6 +50,10 @@ And here you can see how it looks all in the User Interface:
 
 You can authenticate your requests by `X-AUTH-TOKEN` header, or by the query part of the request url: `?auth_token=YOUR_API_TOKEN`.
 
+An example query request with endpoint:
+
+`https://api.flotiq.com/api/v1/content/your_content_name?auth_token=YOUR_AUTH_TOKEN`:
+
 
 ## Frequently Asked Questions
 

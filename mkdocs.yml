@@ -87,6 +87,7 @@ extra:
 nav:
   - 'Home': index.md
   - API:
+    - 'Get started': API/get-started.md
     - 'API access & scoped keys': API/index.md
     - 'Working with Content Types':
       - 'Overview': API/content-types.md

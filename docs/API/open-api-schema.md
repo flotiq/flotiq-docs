@@ -8283,7 +8283,7 @@ schema, we will get a schema properly reflecting the link to `category`:
 ## Getting your Scoped Open API Schema :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Unavailable in Free subscription plan" }[^1]
 
 If you want to get your Scoped Open API Schema from Flotiq, 
-you have to make a call at the following endpoint with the User Defined API key (using a Web browser, Postman or Insomnia):
+you have to make a call at the following endpoint with the [User Defined API key](/docs/API/#user-defined-api-keys) (using a Web browser, Postman or Insomnia):
 
 `
 https://api.flotiq.com/api/v1/open-api-schema.json
@@ -8298,7 +8298,7 @@ curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" \
      -H 'Content-Type: application/json'
 ```
 
-You can use the same request parameters for scoped API schemas as for full API schema.
+You can use the same request parameters for [scoped API](/docs/API/#user-defined-api-keys) schemas as for [full API](/docs/API/#application-api-keys) schema.
 
 ??? "Response for scoped key, create of blogposts only"
 

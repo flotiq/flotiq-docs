@@ -54,6 +54,128 @@ An example query request with endpoint:
 
 `https://api.flotiq.com/api/v1/content/your_content_name?auth_token=YOUR_AUTH_TOKEN`:
 
+Or an example queries with `X-AUTH-TOKEN` header:
+
+!!! Example
+
+    === "CURL"
+
+        ``` 
+        curl --location --request GET "https://api.flotiq.com/api/v1/internal/contenttype/blogposts" \
+        --header 'accept: */*' \
+        --header 'X-AUTH-TOKEN: YOUR_API_KEY'
+        ```
+
+    === "C# + Restasharp"
+
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/v1/internal/contenttype/blogposts");
+        var request = new RestRequest(Method.GET);
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
+        IRestResponse response = client.Execute(request);
+        ```
+    
+    === "Go + Native"
+
+        ```
+        package main
+
+        import (
+            "fmt"
+            "net/http"
+            "io/ioutil"
+        )
+        
+        func main() {
+        
+            url := "https://api.flotiq.com/api/v1/internal/contenttype/blogposts"
+        
+            req, _ := http.NewRequest("GET", url, nil)
+
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_KEY")
+        
+            res, _ := http.DefaultClient.Do(req)
+        
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+        
+            fmt.Println(res)
+            fmt.Println(string(body))
+        
+        }
+        ```
+    
+    === "Java + Okhttp"
+        
+        ```
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+            .url("https://api.flotiq.com/api/v1/internal/contenttype/blogposts")
+            .get()
+            .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .build();
+        
+        Response response = client.newCall(request).execute();
+        ```
+
+    === "Java + Unirest"
+      
+        ```
+        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/internal/contenttype/blogposts")
+            .header("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .asString();
+        ```
+
+    === "Node + Request"
+      
+        ```
+        const request = require('request');
+
+        const options = {
+            method: 'DELETE',
+            url: 'https://api.flotiq.com/api/v1/internal/contenttype/blogposts',
+            headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
+        };
+        
+        request(options, function (error, response, body) {
+            if (error) throw new Error(error);
+            
+            console.log(body);
+        });
+        ```
+
+    === "PHP + CURL"
+    
+        ```
+        <?php
+
+        $curl = curl_init();
+        
+        curl_setopt_array($curl, [
+            CURLOPT_URL => "https://api.flotiq.com/api/v1/internal/contenttype/blogposts",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_HTTPHEADER => [
+                    "X-AUTH-TOKEN: YOUR_API_KEY",
+                ],
+        ]);
+        
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        
+        curl_close($curl);
+        
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
 
 ## Frequently Asked Questions
 

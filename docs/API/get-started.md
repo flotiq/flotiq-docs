@@ -4,9 +4,10 @@ Description: Get started with integrating Flotiq API into your application.
 
 !!! note "Before you begin, make sure you have the following:"
     * Flotiq Account: Sign up for an account on [Flotiq website](https://www.flotiq.com/){target="_blank"} if you haven't already.
+    * Content Types: Make sure you have already created the necessary [Content Type Definitions](https://editor.flotiq.com/content-type-definitions){target="_blank"} in your Flotiq account. It should contain at least one Content Object.
     * API Key: Obtain your Application Read and Write API Key from the [Flotiq dashboard](https://editor.flotiq.com/api-keys){target="_blank"}. You'll need it to perform API operations.
     * Basic understanding of RESTful APIs: Familiarize yourself with the concepts of [RESTful APIs](https://restfulapi.net/){target="_blank"} if you're new to this.
-    * Content Type Definitions: Make sure you have already created the necessary [Content Type Definitions](https://editor.flotiq.com/content-type-definitions){target="_blank"} in your Flotiq account. 
+    
 
 #### Step 1: Implementing API Integration
 Once you have your Content Type Definitions ready, you can proceed with integrating Flotiq API into your application. Here's a high-level overview of the steps involved:
@@ -20,22 +21,22 @@ Once you have your Content Type Definitions ready, you can proceed with integrat
 Flotiq provides two options for retrieving data: REST API and GraphQL. Here's an overview of the steps involved:
 
 #### For REST API:
-Retrieve the schema of a specific Content Type by sending a `GET` request to the `/api/v1/internal/contenttype/{name}` endpoint. [Check the documentation](content-type/getting-ctd.md) for more details.
+Retrieve the schema of a specific Content Object by sending a `GET` request to the `https://api.flotiq.com/api/v1/content/{name}/{id}` endpoint. [Check the documentation](content-type/getting-co.md) for more details.
 
 !!! Example
 
     === "CURL"
 
         ``` 
-        curl --location --request GET "https://api.flotiq.com/api/v1/internal/contenttype/blogposts" \
-        --header 'accept: */*' \
-        --header 'X-AUTH-TOKEN: YOUR_API_KEY'
+        curl --location --request GET "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712" \
+        --header "accept: application/json" \
+        --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ```
 
     === "C# + Restasharp"
 
         ```
-        var client = new RestClient("https://api.flotiq.com/api/v1/internal/contenttype/blogposts");
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712");
         var request = new RestRequest(Method.GET);
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
@@ -54,7 +55,7 @@ Retrieve the schema of a specific Content Type by sending a `GET` request to the
         
         func main() {
         
-            url := "https://api.flotiq.com/api/v1/internal/contenttype/blogposts"
+            url := "https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712"
         
             req, _ := http.NewRequest("GET", url, nil)
 
@@ -77,7 +78,7 @@ Retrieve the schema of a specific Content Type by sending a `GET` request to the
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-            .url("https://api.flotiq.com/api/v1/internal/contenttype/blogposts")
+            .url("https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712")
             .get()
             .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
             .build();
@@ -88,7 +89,7 @@ Retrieve the schema of a specific Content Type by sending a `GET` request to the
     === "Java + Unirest"
       
         ```
-        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/internal/contenttype/blogposts")
+        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712")
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
@@ -100,7 +101,7 @@ Retrieve the schema of a specific Content Type by sending a `GET` request to the
 
         const options = {
             method: 'DELETE',
-            url: 'https://api.flotiq.com/api/v1/internal/contenttype/blogposts',
+            url: 'https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712',
             headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
         };
         
@@ -119,7 +120,7 @@ Retrieve the schema of a specific Content Type by sending a `GET` request to the
         $curl = curl_init();
         
         curl_setopt_array($curl, [
-            CURLOPT_URL => "https://api.flotiq.com/api/v1/internal/contenttype/blogposts",
+            CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -142,6 +143,50 @@ Retrieve the schema of a specific Content Type by sending a `GET` request to the
             echo $response;
         }
         ```
+!!! Responses
+
+    === "200 OK"
+
+        Returned when the object was found
+
+        ```
+        {
+          "id": "blogposts-456712",
+            "internal": {
+                "contentType": "blogposts",
+                "createdAt": "2021-04-09T13:30:48+00:00",
+                "updatedAt": "2021-04-09T13:30:48+00:00",
+                "deletedAt": ""
+            },
+            "title": "New object",
+            "postContent": "This will be the new <b>content</b>"
+          }
+        }
+        ```
+
+    === "401 Unauthorized"
+
+        Returned when API key was missing or incorrect
+  
+        ```
+        {
+            "code": 401,
+            "massage": "Unauthorized"
+        }
+        ```
+
+    === "404 Not found"
+
+        Returned when content type definition wasn't found
+
+        ```
+        {
+            "code": 404,
+            "massage": "Not found"
+        }
+        ```
+
+
 #### For GraphQL:
 
 Flotiq supports [GraphQL queries](graph-ql.md) for Content Objects. You can use the following endpoints to interact with the system using GraphQL:
@@ -149,10 +194,42 @@ Flotiq supports [GraphQL queries](graph-ql.md) for Content Objects. You can use 
 * `GET /api/graphql/schema` - Retrieve the GraphQL schema that describes your data.
 * `POST /api/graphql` - Execute GraphQL queries to retrieve specific data.
 
+To a get single object, you need to pass the object identifier and fields you want to receive in the response. 
+Example Query in GraphQL language to get `id` and `title` for the product with id `product-1` looks like:
+
+!!! GraphQL query
+
+    ```graphql
+    query {
+        products(id:"product-1") {
+            id
+            title
+        }
+    }
+    ```
+
+To pass this query to the Flotiq, you need to call:
+
 !!! Request
-     ```
-     curl -X GET 'https://api.flotiq.com/api/graphql/schema' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
-     ```
+    ```
+    curl -X POST 'https://api.flotiq.com/api/graphql' \
+        --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
+        --header 'Content-Type: application/json' \
+        --data-raw '{"query":"query{products(id:\"product-1\"){id,title,}}"}'
+    ```
+
+!!! Response
+    === "200 OK"
+        ```json
+        {
+            "data": {
+                "products": {
+                    "id": "product-1",
+                    "title": "Green Tea"
+                }
+            }
+        }
+        ```
 
 #### Step 2: Exploring Advanced Features
 Flotiq API offers various advanced features and functionalities to enhance your application. Here are a few examples:

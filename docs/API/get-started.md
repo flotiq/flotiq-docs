@@ -20,7 +20,7 @@ Once you have your Content Type Definitions ready, you can proceed with integrat
 
 Flotiq provides two options for retrieving data: REST API and GraphQL. Here's an overview of the steps involved:
 
-#### For REST API:
+##### For REST API:
 Retrieve the schema of a specific Content Object by sending a `GET` request to the `https://api.flotiq.com/api/v1/content/{name}/{id}` endpoint. [Check the documentation](content-type/getting-co.md) for more details.
 
 !!! Example
@@ -187,7 +187,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         ```
 
 
-#### For GraphQL:
+##### For GraphQL:
 
 Flotiq supports [GraphQL queries](graph-ql.md) for Content Objects. You can use the following endpoints to interact with the system using GraphQL:
 
@@ -195,13 +195,13 @@ Flotiq supports [GraphQL queries](graph-ql.md) for Content Objects. You can use 
 * `POST /api/graphql` - Execute GraphQL queries to retrieve specific data.
 
 To a get single object, you need to pass the object identifier and fields you want to receive in the response. 
-Example Query in GraphQL language to get `id` and `title` for the product with id `product-1` looks like:
+Example Query in GraphQL language to get `id` and `title` for the product with id `blogposts-456712` looks like:
 
 !!! GraphQL query
 
     ```graphql
     query {
-        products(id:"product-1") {
+        blogposts(id:"blogposts-456712") {
             id
             title
         }
@@ -210,26 +210,120 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
 
 To pass this query to the Flotiq, you need to call:
 
-!!! Request
-    ```
+!!! Example
+
+=== "CURL"
+
+    ``` 
     curl -X POST 'https://api.flotiq.com/api/graphql' \
-        --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
-        --header 'Content-Type: application/json' \
-        --data-raw '{"query":"query{products(id:\"product-1\"){id,title,}}"}'
+    --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{"query":"query { blogposts(id: \"blogposts-456712\") { id title } }"}'
     ```
 
+=== "JavaScript + Fetch"
+
+    ```
+    fetch('https://api.flotiq.com/api/graphql', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
+        },
+        body: JSON.stringify({
+            query: 'query { blogposts(id: "blogposts-456712") { id title } }'
+        })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data));
+    ```
+
+=== "Node + Axios"
+
+    ```
+    const axios = require('axios');
+
+    axios.post('https://api.flotiq.com/api/graphql', {
+        query: 'query { blogposts(id: "blogposts-456712") { id title } }'
+    }, {
+        headers: {
+            'Content-Type': 'application/json',
+            'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
+        }
+    })
+    .then(response => console.log(response.data))
+    .catch(error => console.log(error));
+    ```
+
+=== "Python + Requests"
+
+    ```
+    import requests
+
+    url = 'https://api.flotiq.com/api/graphql'
+    headers = {
+        'Content-Type': 'application/json',
+        'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
+    }
+    data = {
+        'query': 'query { blogposts(id: "blogposts-456712") { id title } }'
+    }
+
+    response = requests.post(url, headers=headers, json=data)
+    print(response.json())
+    ```
+
+
 !!! Response
-    === "200 OK"
-        ```json
-        {
-            "data": {
-                "products": {
-                    "id": "product-1",
-                    "title": "Green Tea"
-                }
+=== "200 OK"
+
+    Returned when the object was found
+
+    ```json
+    {
+        "data": {
+            "blogposts": {
+                "id": "blogposts-456712",
+                "title": "New object"
             }
         }
-        ```
+    }
+    ```
+
+=== "401 Unauthorized"
+
+    Returned when the API key was missing or incorrect
+
+    ```json
+    {
+        "errors": [
+            {
+                "message": "Unauthorized",
+                "extensions": {
+                    "code": "UNAUTHORIZED"
+                }
+            }
+        ]
+    }
+    ```
+
+=== "404 Not found"
+
+    Returned when the content type definition wasn't found
+
+    ```json
+    {
+        "errors": [
+            {
+                "message": "Not found",
+                "extensions": {
+                    "code": "NOT_FOUND"
+                }
+            }
+        ]
+    }
+    ```
+
 
 #### Step 2: Exploring Advanced Features
 Flotiq API offers various advanced features and functionalities to enhance your application. Here are a few examples:

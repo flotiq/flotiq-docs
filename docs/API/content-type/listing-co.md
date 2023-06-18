@@ -177,6 +177,10 @@ Filter types
 | greaterThan        | Object parameter must be greater than `filter`, can be used with number type parameters                                                                       |
 | inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object, can be used with number type parameters |
 
+!!! Note
+    The equals filter allows passing multiple elements so that the results are equal to any of them, for example:<br>
+    `{"name":{"type":"equals", "filter":["product-1", "product-2"]}}`
+
 !!! Example
 
     ```

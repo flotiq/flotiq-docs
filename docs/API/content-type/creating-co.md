@@ -244,6 +244,18 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         }
         ```
 
+    === "413 Request Entity Too Large"
+
+        Returned when the size of the object exceeds the limit allowed in Flotiq (1MB, except Enterprise)
+
+        ```
+        {
+            "code": 413,
+            "massage": "Content Object size limit exceeded by an object with ID: 185. Requested size 1.01 MB, limit: 1 MB)"
+        }
+        ```
+        
+
 #### Possible validation errors
 
 | Error                                                                                    | Description                                                                                                 |

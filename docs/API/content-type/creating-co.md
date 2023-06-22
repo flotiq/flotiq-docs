@@ -27,6 +27,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
   "postContent": "This will be the new <b>content</b>"
 }
 ```
+!!! note
+    The maximum size of a single CO in the system is 1MB. If your project requires a larger CO size, please contact Flotiq support.
 
 !!! note
     You can send custom `id` in the object data to assign a particular `id` to the object.

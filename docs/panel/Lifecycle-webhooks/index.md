@@ -80,7 +80,7 @@ Pola:
 * type - typ, stała "respones"
 * subject - content object, kopia z requestu
 * event - event który wywołał respons, kopia z responsu
-* sequenceNumber - liczba przetworzeń payloudu, jeśli ten sam obiekt będzie ptrzetwarzany wielokrotnie liczba ta będzie zwiększana
+* sequenceNumber - liczba przetworzeń payloadu, liczba ta jest zwiększana z każdą podmianą payloadu w obiekcie
 * response - kopia wysłanego nie przetworzonego payloadu
 * payload - przetworzony payload którym zostanie zastąpiony content object
 

@@ -127,6 +127,7 @@ nav:
       - Examples: panel/webhooks/examples.md
     - 'Lifecycle webhooks':
       - 'Overview':  panel/Lifecycle-webhooks/index.md
+      - Examples: panel/Lifecycle-webhooks/examples.md
     - Plugins:
       - 'Custom Links': panel/Plugins/Custom-links.md
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md

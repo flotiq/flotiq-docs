@@ -424,8 +424,32 @@ When you change existing property, depending on the type of changes, Flotiq will
 
 #### Possible validation errors
 
-Possible validation errors are the same as in creating Content Types,
-you can find the list [here](/docs/API/content-type/creating-ctd/#possible-validation-errors).
+Possible validation errors resemble those encountered when creating Content Types.
+You can find the list [here](/docs/API/content-type/creating-ctd/#possible-validation-errors).
+
+Validation can also fail when updating the schema by modifying required fields or changing field types.
+
+### Updating Schema and Modifying Required Fields
+
+When you modify a schema, any associated objects undergo a transformation process. This process ensures that the objects conform to the new schema's structure. However, there are certain considerations to keep in mind:
+
+1. Required Fields: If a field is marked as "required" in the schema, the system expects all existing objects to have a value for that field. The transformation will fail during the conversion process if an existing object lacks a value for a newly marked required field.
+2. Changing Field Types: If you change the data type of a field, particularly from one type to another, that cannot be automatically transformed (e.g., from "Text" to "Relationship"), updating existing objects automatically becomes challenging.
+
+When encountering issues during schema conversion, you might receive error messages like the following:
+
+!!! Responses
+
+    === "400 Validation error"
+
+        Returned when the schema has not been correct and wasn't saved
+
+        ```
+        {
+            "fieldName":["The property fieldName is required"],
+            "name":["Existing objects do not conform to the new schema, and updating them automatically is impossible (e.g., Text -> Relationship). Ensure you're not changing a field type that is also required - if so, disable required for the field you're changing."]
+        }
+        ```
 
 ### How are fields converted from one type to another?
 

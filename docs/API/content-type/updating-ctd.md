@@ -427,14 +427,14 @@ When you change existing property, depending on the type of changes, Flotiq will
 Possible validation errors resemble those encountered when creating Content Types.
 You can find the list [here](/docs/API/content-type/creating-ctd/#possible-validation-errors).
 
-Validation may fail however when you update the schema and modify required fields or change field types.
+Validation can also fail when updating the schema by modifying required fields or changing field types.
 
 ### Updating Schema and Modifying Required Fields
 
 When you modify a schema, any associated objects undergo a transformation process. This process ensures that the objects conform to the new schema's structure. However, there are certain considerations to keep in mind:
 
-1. Required Fields: If a field is marked as "required" in the schema, the system expects all existing objects to have a value for that field. During the conversion process, if an existing object lacks a value for a newly marked required field, the transformation will fail.
-2. Changing Field Types: If you change the data type of a field, particularly from one type to another that cannot be automatically transformed (e.g., from "Text" to "Relationship"), updating existing objects automatically becomes challenging.
+1. Required Fields: If a field is marked as "required" in the schema, the system expects all existing objects to have a value for that field. The transformation will fail during the conversion process if an existing object lacks a value for a newly marked required field.
+2. Changing Field Types: If you change the data type of a field, particularly from one type to another, that cannot be automatically transformed (e.g., from "Text" to "Relationship"), updating existing objects automatically becomes challenging.
 
 When encountering issues during schema conversion, you might receive error messages like the following:
 

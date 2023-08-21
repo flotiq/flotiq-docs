@@ -30,6 +30,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
 !!! note
     You can send custom `id` in the object data to assign a particular `id` to the object.
+    Id must match a regular expression `^[a-zA-Z0-9-_.,:=!#$%&(\`\’\{\}\" ]*$`.
     Random `id` will be assigned when the `id` property is not present in the object.
 
 !!! note

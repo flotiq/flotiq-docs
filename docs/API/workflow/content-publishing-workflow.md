@@ -98,6 +98,42 @@ If you'd like to verify what are the possible transitions of an object, given it
     ]
 }
 ```
+### Intenal fields workflowPublishedAt and workflowPublicVersion  
+Every content object have `workflowPublishedAt` and `workflowPublicVersion`, field under the `internal` section. 
+These fields contains informations (`updatedAt` and `latestVersion`) about, last content-object version in `public` state.
+
+!!! note 
+    If there is non content-object version in `public` state, its `workflowPublishedAt` and `workflowPublicVersion` fields be set to `null`
+
+!!! note 
+    If the object itself is latest `public` version, its `workflowPublishedAt` and `workflowPublicVersion` fields will point on the current object version `updatedAt` and `latestVersion` fields. See example below.      
+```
+{
+    "id": "snipcart-584874",
+    "name": "Gunpowder Temple Of Heaven",
+    "image": [
+        {
+            "type": "internal",
+            "dataUrl": "/api/v1/content/_media/_media-5e17192889e87"
+        }
+    ],
+    "price": 22,
+    "internal": {
+        "createdAt": "2020-01-08T13:29:28+00:00",
+        "deletedAt": "",
+        "updatedAt": "2020-01-09T12:30:38+00:00",
+        "contentType": "snipcart",
+        "workflowState": "public",
+        "latestVersion": 2,
+        "workflowPublicVersion" : 2, 
+        "workflowPublishedAt" : "2020-01-09T12:30:38+00:00",
+    }
+}
+```
+!!! note 
+    When content-object is unpublished, all  `workflowPublishedAt` and `workflowPublicVersion` fields pointing on this version, will be set to null   
+
+
 
 ### Published content
 

@@ -9,7 +9,7 @@ description: Flotiq support for custom workflows helps teams collaborate and pro
 
 Workflows are a powerful feature that helps teams collaborate and produce quality content. 
 Flotiq implements workflows for all content types defined in the system, however the default 
-workflow supports only a single state - `saved`. Every content object in the system carries a `workflow_state` field under the `internal` section, see last line of the snippet below:
+workflow supports only a single state - `saved`. Every content object in the system carries a `workflowState` field under the `internal` section, see last line of the snippet below:
 
 ```
 {
@@ -27,7 +27,7 @@ workflow supports only a single state - `saved`. Every content object in the sys
         "deletedAt": "",
         "updatedAt": "2020-01-09T12:30:38+00:00",
         "contentType": "snipcart",
-        "workflow_state": "saved"
+        "workflowState": "saved"
     }
 }
 ```

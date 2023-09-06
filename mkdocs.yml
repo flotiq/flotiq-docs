@@ -76,7 +76,7 @@ extra:
       link: https://discord.com/invite/FwXcHnX
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UC4wpV-D9mIt1JjN_g_iyXXw
-    - icon: fontawesome/brands/twitter
+    - icon: custom/twitter
       link: https://twitter.com/flotiq
     - icon: fontawesome/brands/github-alt
       link: https://github.com/flotiq

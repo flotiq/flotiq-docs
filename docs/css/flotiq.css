@@ -461,6 +461,12 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
   background-color: white;
 }
 
+.md-typeset pre>code {
+  max-height: 250px;
+  overflow-y: auto;
+  position: relative;
+}
+
 .breadcrumbs {
   font-family: "Inter", sans-serif;
   font-style: normal;

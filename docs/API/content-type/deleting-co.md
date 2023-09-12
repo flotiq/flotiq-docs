@@ -186,7 +186,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
 
 ## Batch deleting
 
-Batch deleting can remove up to 100 objects at a time.
+Batch deleting can remove up to 100[^1] objects at a time.
 If you need to batch delete items, you need to send `POST` request to `https://api.flotiq.com/api/v1/content/{CTD name}/batch-delete`, where:
 
 * `CTD name` is the name of the content type definition
@@ -239,3 +239,5 @@ curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-delete" -H "
 ```
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+
+[^1]: Limit can be changed in [enterprise plan](https://flotiq.com/pricing){:target="_blank"}

@@ -999,7 +999,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
 
 ## Batch create Content Objects through API
 
-There is a way to add up to 100 Content Objects at once. 
+There is a way to add up to 100[^2] Content Objects at once. 
 It is possible by using the `/batch` endpoint 
 (in our example, the URL would be `https://api.flotiq.com/api/v1/content/blogposts/batch`). 
 It can be only `insert` or `insert or update` operation. To use `insert or update` 
@@ -1080,10 +1080,12 @@ Response parameters:
 | batch_total_count   | number of elements sent in the request, present when there are no duplications in data                                                                 |
 | batch_success_count | number of correct elements sent in the request, present when there are no duplications in data                                                         |
 | batch_error_count   | number of incorrect elements sent in the request, present when there are no duplications in data                                                       |
+| batch_limit         | max number of elements sent in a single request, present when the limit is exceeded                                                                    |
 | errors              | array of errors in the elements, errors are objects containing the id of the object and list of errors, present when there are no duplications in data |
-| data                | present only when there are duplications in data, listing keys containing duplications (see example above)                                             |
+| data                | listing keys containing duplications (see example above), present only when there are duplications in data or batch_limit exceeded                     |
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
 
 
 [^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+[^2]: Limit can be changed in [enterprise plan](https://flotiq.com/pricing){:target="_blank"}

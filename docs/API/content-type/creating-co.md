@@ -1088,4 +1088,4 @@ Response parameters:
 
 
 [^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
-[^2]: Limit can be changed in [enterprise plan](https://flotiq.com/pricing){:target="_blank"}
+[^2]: Limit can be changed in the [enterprise plan](https://flotiq.com/pricing){:target="_blank"}

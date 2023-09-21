@@ -309,7 +309,7 @@ Filter types
 | Type               | Description                                                                                                                                                   |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | equals             | Object parameter must be equal to `filter`, can be used with string type parameters                                                                           |
-| notEqual          | Object parameter must not be equal to `filter`, can be used with string type parameters                                                                       |
+| notEqual           | Object parameter must not be equal to `filter`, can be used with string type parameters                                                                       |
 | contains           | Object parameter must contain `filter`, can be used with every type parameters                                                                                |
 | notContains        | Object parameter must not contain `filter`, can be used with every type parameters                                                                            |
 | startsWith         | Object parameter must start with `filter`, can be used with string type parameters                                                                            |
@@ -319,6 +319,8 @@ Filter types
 | greaterThanOrEqual | Object parameter must be greater or equal than `filter`, can be used with number type parameters                                                              |
 | greaterThan        | Object parameter must be greater than `filter`, can be used with number type parameters                                                                       |
 | inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object, can be used with number type parameters |
+| empty              | Object parameter does not exist or is an empty string or array; the `filter` parameter is ignored                                                             |
+| notEmpty           | Object parameter exists and is not an empty string or array; the `filter` parameter is ignored.                                                               |
 
 !!! Note
     The equals filter allows passing multiple elements so that the results are equal to any of them, for example:<br>

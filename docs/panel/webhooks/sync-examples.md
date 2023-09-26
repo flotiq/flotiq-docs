@@ -1,42 +1,46 @@
-title: Lifecycle Webhooks - examples
-description: How to use lifecycle webhooks in Flotiq - examples
+title: Synchronous webhooks examples
+description: How to use sync webhooks in Flotiq - examples
 
-# Lifecycle Webhook examples
+# Sync Webhook examples
 
 ## Example with payload modification
-Przykład ten pokazuje jak uzupełnić dane content obiektu przy pomocy zewnętrznego serwisu.
-Po każdej aktualizacji obiektu BlogPost nastąpi zwiększenie licznika `edit_counter`.
+In this example we will see how to modify one of the fields of a content object in an external system. 
+On each update of a `BlogPost` object we will increment the field `edit_counter`.
 
-1. Dodaj dodatkowe pole do CTD BlogPost o nazwie `edit_counter` typu number z domyślną wartością 0.
+1. Add the `edit_counter` field to `BlogPost` CTD, set the field type to `number` and default value to 0.
+  ![](../images/webhooks-lifecycle/AddFieldToBlogPost.png){: .center .border}
+  
+2. Let's take the following simple app as an example of an external system:  
+  ```js
+  const express = require('express')
+  const app = express();
+  app.use(express.json());
 
-![](../images/webhooks-lifecycle/AddFieldToBlogPost.png){: .center .border}
+  const port = 8000;
 
-2. Jakio `external system` możemy wykorzystać prostą aplikację napisaną za pomocą express. 
+  app.post('/increment-edit-counter', (req, res) => {
+    const payload = req.body.payload;
+    payload.edit_counter + 1;  
+    const response = {
+      type: "response",
+      subject: "content-object",
+      event: "pre-create",
+      response: {},
+      payload: {payload}
+    };
 
-```js
-const express = require('express')
-const app = express();
-app.use(express.json());
+    res.send(response);
+  })
+  ```
+  
+3. Add a [webhook](https://editor.flotiq.com/webhooks/edit):
+    - give it a name (e.g. Edit counter)
+    - set the type to `Synchronous (block and wait for response)`
+    - provide the URL where your processing app is available
+    - check the `Enabled` field
+    - select the `Update` action to trigger the webhook
+    - pick the `BlogPost` Content Type Definition as a source for thie webhook.
+  ![](../images/webhooks-lifecycle/Example1.png){: .center .border}
+4. Once the webhook is added - each update on a `BlogPost` object will call the service above and the `edit_counter` field will be incremented!
+  
 
-const port = 8000;
-
-app.post('/increment-edit-counter', (req, res) => {
-  const payload = req.body.payload;
-  payload.edit_counter + 1;  
-  const response = {
-    type: "response",
-    subject: "content-object",
-    event: "pre-create",
-    response: {},
-    payload: {payload}
-  };
-
-  res.send(response);
-})
-```
-3. Dodaj [webhooka](https://editor.flotiq.com/webhooks/edit), wprowadź jego nazwę (e.g. Edit counter), wybierz typ `Synchronous (block and wait for response)`, oraz podaj adres do uruchomionej aplikacji w pole `URL`, zaznacz pole `Enabled`, oraz akcje `Update`. Następnie wybierz Content Type Definitions: `BlogPost`.
-4. Teraz za każdym razem jak ktoś zaktualizuje jakiś obiekt typu BlogPost automatycznie zostanie zwiększony licznik `edit_counter`.
-
-![](../images/webhooks-lifecycle/Example1.png){: .center .border}
-
-## Example with custom validation

@@ -119,3 +119,21 @@ In order to create a sync webhook you can follow the same process as for async o
 ![](../images/webhooks-lifecycle/WebhooksLifecycle.png){: .center .border}
 
 Once this is configured - the payload will be sent to an external system and the sync webhook process will be triggered.
+
+## How errors are handled
+
+In case the remote system fails to respond according to one of the formats described above - Flotiq will stop processing the request and respond with an HTTP `400` error like the following:
+
+```
+{
+    "__webhook": [
+        "Error processing Content Validation Demo webhook: Could not decode JSON, syntax error - malformed JSON."
+ 
+    ]
+}
+```
+
+in such case please check the following:
+
+1. Make sure the remote system is returning a proper `200` or `400` response, as described above.
+2. Check remote system's logs to verify the cause of misbehaviour.

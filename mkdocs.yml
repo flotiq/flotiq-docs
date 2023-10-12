@@ -1,7 +1,7 @@
 site_name: Flotiq Developer Documentation
 site_url: https://flotiq.com/docs/
-repo_url: https://github.com/flotiq/flotiq-docs/
-edit_uri: edit/master/docs/
+#repo_url: https://github.com/flotiq/flotiq-docs/
+edit_uri:  https://github.com/flotiq/flotiq-docs/edit/master/docs/
 copyright: Copyright &copy; 2019 onwards <a target="_blank" href="https://www.flotiq.com/">Flotiq<a>
 dev_addr: 0.0.0.0:4000
 theme:
@@ -23,7 +23,8 @@ theme:
 plugins:
   - search
   - awesome-pages
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      fallback_to_build_date: true
 
 extra_css:
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
@@ -123,11 +124,15 @@ nav:
     - 'Users': panel/users.md
     - 'Webhooks':
       - Overview: panel/webhooks/index.md
-      - Examples: panel/webhooks/examples.md
+      - 'Async webhooks': panel/webhooks/async.md
+      - 'Async examples': panel/webhooks/examples.md
+      - 'Sync webhooks':  panel/webhooks/sync.md
+      - 'Sync examples': panel/webhooks/sync-examples.md
     - Plugins:
       - 'Custom Links': panel/Plugins/Custom-links.md
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
       - 'Netlify': panel/Plugins/Netlify-integration.md
+      - 'Custom Links': panel/Plugins/Custom-links.md
   - CLI:
     - 'Overview': CLI/index.md
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md

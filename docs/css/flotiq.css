@@ -136,6 +136,18 @@ pre::before {
 [data-md-color-scheme="slate"] {
   --md-accent-fg-color: #8597fe;
   --md-primary-fg-color: #6070c7;
+  .md-typeset h1,
+  .md-typeset h2,
+  .md-typeset h3,
+  .md-typeset h4,
+  .md-typeset h5 {  
+    color: white;
+  }
+
+  #disqus_thread .thread__container .thread__wrapper {
+    background-color: black;
+    color: white;
+  }
 }
   /*
   /////////////////
@@ -391,6 +403,19 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
   font-size: 18px !important;
   font-weight: normal !important;
   color: #141046;
+}
+
+[data-md-color-scheme="slate"] {
+  .was-it-helpful-wrapper .give__title {
+    color: white;
+  }
+  .was-it-helpful-wrapper .give-answers a {
+    color: white;
+  }
+
+  /* .disqus_thread {
+    background-color: black;
+  } */
 }
 
 .was-it-helpful-wrapper .give-answers a {

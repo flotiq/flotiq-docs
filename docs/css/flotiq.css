@@ -141,12 +141,12 @@ pre::before {
   .md-typeset h3,
   .md-typeset h4,
   .md-typeset h5 {  
-    color: white;
+    color: #e9ebfc;
   }
 
-  #disqus_thread .thread__container .thread__wrapper {
+  #disqus_thread {
     background-color: black;
-    color: white;
+    color: #e9ebfc;
   }
 }
   /*

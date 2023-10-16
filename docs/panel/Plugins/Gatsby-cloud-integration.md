@@ -14,15 +14,15 @@ This article will walk you through the process of connecting your Flotiq account
 !!! note 
     You might want to try one of our starters, which already come with predefined content:
     
-    - [Recipe website Gatsby starter](https://github.com/flotiq/gatsby-starter-recipes){:target="_blank"}
-    - [Event calendar Gatsby starter](https://github.com/flotiq/gatsby-starter-event-calendar){:target="_blank"}
-    - [Project portfolio Gatsby starter](https://github.com/flotiq/gatsby-starter-projects){:target="_blank"}
-    - [Simple blog Gatsby starter](https://github.com/flotiq/gatsby-starter-blog){:target="_blank"}
-    - [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/gatsby-starter-products){:target="_blank"}
-    - [Gatsby and Snipcart, e-commerce with products and categories from Flotiq](https://github.com/flotiq/gatsby-starter-products-with-categories){:target="_blank"}
+    - [Recipe website Gatsby starter](https://github.com/flotiq/flotiq-gatsby-recipe-1){:target="_blank"}
+    - [Event calendar Gatsby starter](https://github.com/flotiq/flotiq-gatsby-event-1){:target="_blank"}
+    - [Project portfolio Gatsby starter](https://github.com/flotiq/flotiq-gatsby-portfolio-1){:target="_blank"}
+    - [Simple blog Gatsby starter](https://github.com/flotiq/flotiq-gatsby-blog-1){:target="_blank"}
+    - [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/flotiq-gatsby-shop-1){:target="_blank"}
     - [Snipcart and Next.js, sourcing products from Flotiq](https://github.com/flotiq/snipcart-nextjs){:target="_blank"}
     
     These starters all come with detailed READMEs and a one-line content import command, be sure to check those!
+    You can find even more starters here: [Starting new Gatsby project with Flotiq](https://flotiq.com/docs/CLI/starting-new-project/){:target="_blank"}
 
 ## Signing in to Gatsby Cloud
 Select `Sign in with GitHub`. You'll be asked to authorize the Gatsby Cloud app with your GitHub account. If you need to request access to one or more repositories, you can click "request access" here or later, when creating an instance.

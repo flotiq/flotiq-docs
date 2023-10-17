@@ -147,6 +147,13 @@ pre::before {
     background-color: #313131 !important;
   }
 
+  .md-clipboard:after {
+    color: #c2c2c2;
+  }
+
+  .md-dialog__inner.md-typeset {
+    color:#c2c2c2;
+  }
 
   /*
   scroll bar size

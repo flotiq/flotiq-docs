@@ -559,6 +559,7 @@ Only `contains` and `notContains` type filters can be used with filtering by rel
 
 !!! Note
     Even if you list your content objects with hydration enabled, you cannot filter them by the hydrated data. 
+    
     For example if a Content Type "Blog Post" has relation to another type "Author", and you want to filter by `Author.name`, and use `hydrate=1` param to get authors data embedded in blog posts data, you still have to use filtering by dataUrl method described above.
 
 ### Hydrating objects

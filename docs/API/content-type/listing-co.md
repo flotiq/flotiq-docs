@@ -557,6 +557,11 @@ You have to care about encoding url params. For example:
 
 Only `contains` and `notContains` type filters can be used with filtering by relation.
 
+!!! Note
+    Even if you list your content objects with hydration enabled, you cannot filter them by the hydrated data.
+
+    For example if a Content Type "Blog Post" has relation to another type "Author", and you want to filter by `Author.name`, and use `hydrate=1` param to get authors data embedded in blog posts data, you still have to use filtering by dataUrl method described above.
+
 ### Hydrating objects
 
 If you wish to receive underlying objects attached to the object you are retrieving, you need to send a request with query parameter `hydrate` set to `1`, if hydrated objects have other objects attached that you want to get access to, you can set `hydrate` to `2`.

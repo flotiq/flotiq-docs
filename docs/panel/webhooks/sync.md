@@ -35,7 +35,7 @@ All sync webhooks generate a payload according to the following schema:
     "subject":"content-object",
     "event": "pre-create",
     "sequenceNumber": 0,
-    "contentTypeName" : "ContetnTypeName"
+    "contentTypeName" : "ContentTypeName",
     "payload": {
         ... <-- this is the object that was originally sent to Flotiq
     }

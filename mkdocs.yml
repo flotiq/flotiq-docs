@@ -1,7 +1,7 @@
 site_name: Flotiq Developer Documentation
 site_url: https://flotiq.com/docs/
 #repo_url: https://github.com/flotiq/flotiq-docs/
-edit_uri:  https://github.com/flotiq/flotiq-docs/edit/master/docs/
+edit_uri: https://github.com/flotiq/flotiq-docs/edit/master/docs/
 copyright: Copyright &copy; 2019 onwards <a target="_blank" href="https://www.flotiq.com/">Flotiq<a>
 dev_addr: 0.0.0.0:4000
 theme:
@@ -11,7 +11,23 @@ theme:
      custom_dir: theme
      language: en
      palette:
-         primary: '#0083FC'
+
+         # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: '#0083FC'
+          toggle:
+            icon: material/brightness-7
+            name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: custom
+          accent: custom
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
      features:
        - navigation.instant
        - navigation.top

@@ -33,7 +33,7 @@ Once signed in, configuring Gatsby Cloud with Flotiq requires several steps that
 
 Once you've authenticated with Cloud and GitHub, you can create an instance from the ["Create a new Gatsby Cloud site"](https://gatsbyjs.com/dashboard/sites) page and add a site.
 
-![Add my own site](https://www.gatsbyjs.com/static/960632c23c3d621c964171fa76770455/9c507/add-site.png){: .center .width75 .border}
+![Add my own site](images/gatsby-cloud-add-site.png){: .center .width75 .border}
 
 Pick your Gatsby site repo and branch from the list of GitHub repositories. You can use the search input to narrow down the list.
 

@@ -145,8 +145,10 @@ pre::before {
   }
 
   #disqus_thread {
-    background-color: black;
     color: #e9ebfc;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
   }
 }
   /*

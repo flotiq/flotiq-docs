@@ -130,7 +130,21 @@ pre::before {
     background: white;
     border-radius: 15px;
   }
+
+  .md-search-result__link:focus,
+  .md-search-result__link:hover,
+  .md-search-result__more summary:focus,
+  .md-search-result__more summary:hover,
+  .md-search-result__meta {
+    background-color: hsl(232, 15%, 26%);
+  }
+
+  .md-search__input {
+    background-color: hsl(232, 15%, 36%);
+    color: #e9ebfc;
+  }
 }
+
   /*
   /////////////////
   // Code Blocks //

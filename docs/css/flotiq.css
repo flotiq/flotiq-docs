@@ -113,26 +113,6 @@ pre::before {
     */padding: 10px;
 }
 
-/* :root {
-  --md-primary-fg-color: #4051b5;
-  --md-primary-fg-color--light: #5d6cc0;
-  --md-primary-fg-color--dark: #303fa1;
-  --md-primary-bg-color: #fff;
-  --md-primary-bg-color--light: #ffffffb3;
-  --md-accent-fg-color: #526cfe;
-  --md-accent-fg-color--transparent: #526cfe1a;
-  --md-accent-bg-color: #fff;
-  --md-accent-bg-color--light: #ffffffb3;
-  --md-primary-fg-color: #4051b5;
-  --md-primary-fg-color--light: #5d6cc0;
-  --md-primary-fg-color--dark: #303fa1;
-  --md-primary-bg-color: #fff;
-  --md-primary-bg-color--light: #ffffffb3;
-  --md-accent-fg-color: #526cfe;
-  --md-accent-bg-color: #fff;
-  --md-accent-bg-color--light: #ffffffb3;
-} */
-
 [data-md-color-scheme="slate"] {
   --md-accent-fg-color: #8597fe;
   --md-primary-fg-color: #6070c7;
@@ -421,10 +401,6 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
   .was-it-helpful-wrapper .give-answers a {
     color: white;
   }
-
-  /* .disqus_thread {
-    background-color: black;
-  } */
 }
 
 .was-it-helpful-wrapper .give-answers a {

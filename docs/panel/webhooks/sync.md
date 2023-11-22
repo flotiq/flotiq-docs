@@ -36,6 +36,12 @@ All sync webhooks generate a payload according to the following schema:
     "event": "pre-create",
     "sequenceNumber": 0,
     "contentTypeName" : "ContentTypeName",
+    "userInfo": {
+        "id": "user's ID",
+        "firstName": "user's first name",
+        "lastName": "user's last name",
+        "apiKeyName": "name of the API key that triggered webhook (if there is one)"
+    },
     "payload": {
         ... <-- this is the object that was originally sent to Flotiq
     }

@@ -4,7 +4,7 @@ description: How to use synchronous webhooks in Flotiq
 # Synchronous webhooks
 
 !!! note
-    Flotiq synchronous webhooks can be customized in enterprise version only.
+    Flotiq synchronous webhooks can be customized in the enterprise version only.
     Reach out to us to discuss possible implementation.
 
 ## What is a synchronous webhook?
@@ -15,7 +15,7 @@ Sync webhooks are executed in-band during Flotiq request processing on the follo
 - PRE-UPDATE - before updating existing objects
 - PRE-DELETE - before deleting existing objects.
 
-When a sync webhook is registered - Flotiq backend will call out to an external service when you make an API call that would normally trigger a create, update or delete operation on your content. This external service can do one of 2 things:
+When a sync webhook is registered - the Flotiq backend will call out to an external service when you make an API call that would normally trigger a create, update or delete operation on your content. This external service can do one of 2 things:
 
 - modify the payload that was originally sent to Flotiq and pass it for further processing,
 - stop the request from processing further.
@@ -23,7 +23,7 @@ When a sync webhook is registered - Flotiq backend will call out to an external 
 We will call these 2 types of webhooks *mutating webhooks* and *validating webhooks* (after the [admission controller webhooks](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/) in K8s which inspired this feature).
 
 !!! Tip
-    From setup perspective both mutating and validating webhooks are handled exactly the same way. The only difference is in the response they return and the effect it has on further processing of the payload.
+    From a setup perspective both mutating and validating webhooks are handled exactly the same way. The only difference is in the response they return and the effect it has on further processing of the payload.
 
 ## Sync webhook payload
 
@@ -47,7 +47,7 @@ Flotiq backend will make sure to send this payload to the system you registered 
 
 There are many cases when the ability to modify data being received by Flotiq comes in handy, for example:
 
-- generating slugs for webpages
+- generating slugs for web pages
 - calculating field values based on other fields
 - populating object's fields with data from external sources
 
@@ -69,10 +69,10 @@ HTTP 200:
 
 ## Validating webhooks
 
-Second use case for sync webhooks is external validation. In a similar way as with the mutating webhook - an external system receives payload from Flotiq. Once the system processes the object it can respond in 2 way:
+The second use case for sync webhooks is external validation. In a similar way as with the mutating webhook - an external system receives payload from Flotiq. Once the system processes the object it can respond in 2 ways:
 
-- with a `HTTP 200` response, without making changes to the object - this will result in processing the payload further in Flotiq,
-- with a `HTTP 400` response, raising validation errors - this will stop processing in Flotiq.
+- with an `HTTP 200` response, without making changes to the object - this will result in processing the payload further in Flotiq,
+- with an `HTTP 400` response, raising validation errors - this will stop processing in Flotiq.
 
 Example of a passed validation:
 
@@ -109,7 +109,7 @@ HTTP 400:
 ```
 
 !!! Note
-    In case you register multiple webhooks for a single CTD - they will be process sequentially. There is no guarantee on the order of processing. All webhooks have to respond successfully in order for the object to be processed.
+    In case you register multiple webhooks for a single CTD - they will be processed sequentially. There is no guarantee on the order of processing. All webhooks have to respond successfully in order for the object to be processed.
     
 ![](../images/webhooks-lifecycle/WebhooksLifecycleDiagram.png){: .center .border}
 
@@ -137,4 +137,4 @@ In case the remote system fails to respond according to one of the formats descr
 in such case please check the following:
 
 1. Make sure the remote system is returning a proper `200` or `400` response, as described above.
-2. Check remote system's logs to verify the cause of misbehaviour.
+2. Check the remote system's logs to verify the cause of misbehavior.

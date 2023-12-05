@@ -14,14 +14,15 @@ It returns a paginated list of Content Types defined for your account. It can be
 
 Possible request parameters:
 
-| Parameter       | Description                                                                                                                               |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| limit           | Number of objects on page, default `20`                                                                                                   |
-| page            | Number of the requested page, 1-based, default `1`                                                                                        |
-| order_by        | What field should list be ordered by, possible values: `name`, `id`, `createdAt`, `updatedAt`, default `name`                             |
-| order_direction | Order direction, possible values: `asc`, `desc`, default `asc`                                                                            |
-| name            | Used for filtering Content Types by name, filtering is case insensitive and returns everything containing parameter value, default empty  |
-| label           | Used for filtering Content Types by label, filtering is case insensitive and returns everything containing parameter value, default empty |
+| Parameter       | Description                                                                                                                                           |
+| --------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| limit           | Number of objects on page, default `20`                                                                                                               |
+| page            | Number of the requested page, 1-based, default `1`                                                                                                    |
+| order_by        | What field should list be ordered by, possible values: `name`, `id`, `createdAt`, `updatedAt`, default `name`                                         |
+| order_direction | Order direction, possible values: `asc`, `desc`, default `asc`                                                                                        |
+| name            | Used for filtering Content Types by name, filtering is case insensitive and returns everything containing parameter value, default empty              |
+ | names          | Used for filtering Content Types by names, filtering is case insensitive and returns everything what is equal to values from parameter, default empty |
+| label           | Used for filtering Content Types by label, filtering is case insensitive and returns everything containing parameter value, default empty             |
 
 !!! Example
 

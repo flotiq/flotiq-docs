@@ -21,7 +21,7 @@ Possible request parameters:
 | order_by        | What field should list be ordered by, possible values: `name`, `id`, `createdAt`, `updatedAt`, default `name`                                         |
 | order_direction | Order direction, possible values: `asc`, `desc`, default `asc`                                                                                        |
 | name            | Used for filtering Content Types by name, filtering is case insensitive and returns everything containing parameter value, default empty              |
- | names          | Used for filtering Content Types by names, filtering is case insensitive and returns everything what is equal to values from parameter, default empty |
+| names          | Used for filtering Content Types by names, filtering is case insensitive and returns everything what is equal to values from parameter, default empty |
 | label           | Used for filtering Content Types by label, filtering is case insensitive and returns everything containing parameter value, default empty             |
 
 !!! Example

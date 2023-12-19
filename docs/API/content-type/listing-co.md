@@ -555,7 +555,7 @@ You have to care about encoding url params. For example:
 1. Using JsonPath, product category path is `categories[*].dataUrl`
 1. Expected value is `/api/v1/content/categories/category-1`
 1. Raw query: `GET /api/v1/content/products?filters={"categories[*].dataUrl":{"type":"contains","filter":"/api/v1/content/categories/category-1"}}`
-1. Encoded query: `GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcategory-1%22%7D%7D`
+1. Encoded query: `GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcategory-1%22%7D%7D`
 
 Only `contains` and `notContains` type filters can be used with filtering by relation.
 

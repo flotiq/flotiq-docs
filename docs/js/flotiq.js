@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // scroll the window to the top of the page after switching documents
+    var currentHash = window.location.hash;
+    window.scrollTo(0, 0);
+
+    if (currentHash) {
+        window.location.hash = currentHash;
+    }
+
     load_navpane();
 });
 

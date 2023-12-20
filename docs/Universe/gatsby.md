@@ -1,7 +1,7 @@
-title: Flotiq Gatsby starters | Flotiq docs
-description: Jump-start your projects with React Gatsby Starters.
+title: Flotiq Gatsby and NextJS starters | Flotiq docs
+description: Jump-start your projects with React Gatsby or NextJS Starters.
 
-# Gatsby starters
+# Gatsby and NextJS starters
 
 ![](images/gatsby/gatsby-starters.png){: .center .width75 .border}
 
@@ -9,9 +9,10 @@ We have a variety of [starters](https://flotiq.com/starters/){:target="_blank"} 
 
 Each starter is available for preview on our [GitHub](https://github.com/flotiq){:target="_blank"} and you can see how the built version works. You can also build it locally by following our step-by-step instructions.
 
-This should save you some time in creating your own website and help you create a visually appealing page. Additionally, we have created two versions of starters using Gatsby and Nextjs - depending on which framework you prefer.
+This should save you some time in creating your website and help you create a visually appealing page. Additionally, we have created two versions of starters using Gatsby and NextJS - depending on which framework you prefer.
 
 You can see all of our starters [here](https://flotiq.com/starters/){:target="_blank"}.
+
 ## Starter for the blog 1
 
 Gatsby/Next.js starter for creating a blog with Flotiq
@@ -132,7 +133,7 @@ A starter to build your own recipes page with Flotiq and Gatsby/Next.js.
 
 [Working example](https://flotiq-gatsby-recipe-2.netlify.app){:target="_blank"}
 
-## Boilerplate for you 
+## Boilerplate for you
 
 If you want to start from scratch with a prepared boilerplate, we have also created it for you.
 
@@ -143,4 +144,3 @@ If you want to start from scratch with a prepared boilerplate, we have also crea
 [Working example](https://gatsby-starter-boilerplate.netlify.app){:target="_blank"}
 
 [Register to start your project today](https://editor.flotiq.com/register.html){: .flotiq-button}
-

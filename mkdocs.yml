@@ -161,7 +161,7 @@ nav:
   - Flotiq Universe:
     - 'Overview': Universe/index.md
     - 'Deployment': Universe/deployment.md
-    - 'Gatsby': Universe/gatsby.md
+    - 'Gatsby & NextJS': Universe/gatsby.md
     - 'Meta-API': Universe/metaapi.md
     - 'Postman': Universe/postman.md
     - 'Scully': Universe/scully.md

@@ -541,13 +541,13 @@ Filter types
         }
         ```
 
-#### Possible validation errors
+### Possible validation errors
 
 | Error                                 | Description                                      |
 | ------------------------------------- | ------------------------------------------------ |
 | Malformed filters json - Syntax error | Send when filters are not correctly json encoded |
 
-#### Filtering by relation
+### Filtering by relation
 
 For example, "Show products in category category-1" is possible using [JsonPath](https://github.com/json-path/JsonPath) standard.
 You have to care about encoding url params. For example:
@@ -767,7 +767,7 @@ If you wish to receive underlying objects attached to the object you are retriev
             }]
         }
         ```
-        
+
 As you can see after adding hydrate instead of `{dataUrl: ...}` we get a full object, so we can immediately show the values ​​without additional requests.
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

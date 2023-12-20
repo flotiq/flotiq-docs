@@ -7,7 +7,7 @@ You can migrate your data between Flotiq and MS Excel with Flotiq CLI. To migrat
 
 If you wish to use our Flotiq - Excel migrator directly, you can use our [flotiq-excel-migrator](https://www.npmjs.com/package/flotiq-excel-migrator){:target="_blank"} npm package.
 
-# Export Flotiq data to MS Excel
+## Export Flotiq data to MS Excel
 
 `flotiq excel-export` command will export Content Objects from the given Content Type to an MS Excel file in .xlsx format.
 
@@ -30,7 +30,7 @@ Command logs the following information:
 !!! note
     `Max string length` for all values is set to 30.000 because MS Excel has trouble handling text with length > 30 000 in one cell.
 
-## Export parameters
+### Export parameters
 
 `ctdName` - API name of Content Type Definition you wish to export,
 
@@ -38,13 +38,13 @@ Command logs the following information:
 
 `flotiqApiKey` - API key to your Flotiq account with read permission.
 
-## Export flags
+### Export flags
 
 `--limit=[number]` or `--l=[number]` - number of Content Objects to export counting from the top row, default: 10.000,
 
 `--hideResults` or `--hr` - information about the export process will not appear in the console.
 
-# Import data from MS Excel to Flotiq
+## Import data from MS Excel to Flotiq
 
 `flotiq excel-import` command will import Content Objects from an MS Excel file to the given Content Type.
 
@@ -61,7 +61,7 @@ For every sheet in the workbook:
 * Number of errors in Content Object import
 * errors data (object)
 
-## Import Parameters
+### Import Parameters
 
 `ctdName` - API name of Content Type Definition you wish to import data to,
 
@@ -69,7 +69,7 @@ For every sheet in the workbook:
 
 `flotiqApiKey` - API key to your Flotiq account with read and write permissions.
 
-## Import Flags
+### Import Flags
 
 `--limit=[number]` or `--l=[number]` - number of Content Objects imported counting from the top row, default: 10 000,
 
@@ -79,7 +79,7 @@ For every sheet in the workbook:
 
 `--hideResults` or `--hr` - information about the import process will not appear in the console.
 
-## Notes
+### Notes
 
 * valid XLSX file looks just like the one that exportXlsx saves. The first row on the sheet (header) should have the names of CTD's properties. Every following row is a separate Content Object, for example:
 
@@ -91,7 +91,7 @@ For every sheet in the workbook:
 * importXlsx allows you to import many sheets from the same workbook. However, these sheets must be dedicated to the same CTD and have this CTD's properties in the header.
 * Parameter LIMIT limits the number of Content Objects you will import from XLSX works individually for every sheet in the workbook.
 
-# Data mapping
+## Data mapping
 
 The form in which Flotiq data is exported to / imported from xlsx varies on property type:
 

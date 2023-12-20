@@ -178,4 +178,4 @@ for item in items:
 Please mind that we only cared to import the basic fields, like slug, title, content, etc. Feel free to amend this code and import anything else you might need.
 
 !!! success
-    Hopefully, you now have a bunch of blog posts imported from Wordpress. Go ahead and fork our [example Gatsby starter](https://github.com/flotiq/gatsby-starter-blog) and deploy it to Heroku - if you followed our naming closely - you will only need to provide your Read Only API key to have a fully working blog page in a couple of minutes!
+    Hopefully, you now have a bunch of blog posts imported from Wordpress. Go ahead and fork our [example Gatsby starter](https://github.com/flotiq/flotiq-gatsby-blog-1) and deploy it to Heroku - if you followed our naming closely - you will only need to provide your Read Only API key to have a fully working blog page in a couple of minutes!

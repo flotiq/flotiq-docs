@@ -1,13 +1,15 @@
 title: Flotiq - MSExcel Migration | Flotiq docs
 description: How to migrate Flotiq data to/from MS Excel file
 
-`flotiq excel-export` and `flotiq excel-import` are Flotiq CLI commands for migrating data to and from MS Excel file. If you wish to use our Flotiq - Excel migrator directly, you can use our [flotiq-excel-migrator](https://www.npmjs.com/package/flotiq-excel-migrator){:target="_blank"} npm package.
+`flotiq excel-export` and `flotiq excel-import` are Flotiq CLI commands for migrating data to and from MS Excel files. If you wish to use our Flotiq - Excel migrator directly, you can use our [flotiq-excel-migrator](https://www.npmjs.com/package/flotiq-excel-migrator){:target="_blank"} npm package.
 
-# Export
+# Migrating data between Flotiq and MS Excel
+
+You can migrate your data between Flotiq and MS Excel with Flotiq CLI. To migrate your data you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)) and your "Read Only API Key" or "Read and write API key", depending on whether you want to import or export your data (more about API keys [here](../API/index.md)).
+
+# Export Flotiq data to MS Excel
 
 `flotiq excel-export` command will export Content Objects from the given Content Type to an MS Excel file in .xlsx format.
-
-## Usage
 
 The command looks like this:
 
@@ -28,36 +30,23 @@ Command logs the following information:
 !!! note
     `Max string length` for all values is set to 30.000 because MS Excel has trouble handling text with length > 30 000 in one cell.
 
-## Parameters
+## Export parameters
 
 `ctdName` - API name of Content Type Definition you wish to export,
 
-`filePath` - the directory to which the xlsx file is to be saved. Type in "." if you want to save the file inside the current directory,
+`filePath` - the directory to which the .xlsx file is to be saved. Type in "." if you want to save the file inside the current directory,
 
 `flotiqApiKey` - API key to your Flotiq account with read permission.
 
-## Flags
+## Export flags
 
 `--limit=[number]` or `--l=[number]` - number of Content Objects to export counting from the top row, default: 10.000,
 
 `--hideResults` or `--hr` - information about the export process will not appear in the console.
 
-## Result example
-
-```
-{
-  directoryPath: '[_dirname]//test.xlsx',
-  errors: null,
-  coTotal: 3,
-  co_success: 3
-}
-```
-
-# Import
+# Import data from MS Excel to Flotiq
 
 `flotiq excel-import` command will import Content Objects from an MS Excel file to the given Content Type.
-
-## Usage
 
 The command looks like this:
 
@@ -72,15 +61,15 @@ For every sheet in the workbook:
 * Number of errors in Content Object import
 * errors data (object)
 
-## Parameters
+## Import Parameters
 
 `ctdName` - API name of Content Type Definition you wish to import data to,
 
-`filePath` - the directory to the xlsx file you wish to import data from,
+`filePath` - the directory to the .xlsx file you wish to import data from,
 
 `flotiqApiKey` - API key to your Flotiq account with read and write permissions.
 
-## Flags
+## Import Flags
 
 `--limit=[number]` or `--l=[number]` - number of Content Objects imported counting from the top row, default: 10 000,
 
@@ -101,23 +90,6 @@ For every sheet in the workbook:
 
 * importXlsx allows you to import many sheets from the same workbook. However, these sheets must be dedicated to the same CTD and have this CTD's properties in the header.
 * Parameter LIMIT limits the number of Content Objects you will import from XLSX works individually for every sheet in the workbook.
-
-## Result example
-
-```
-{
-  Sheet1: {
-    sheetImportedCoCount: 98,
-    sheetErrorsCount: 2,
-    sheetErrors: [ [Object] ]
-  }
-  Sheet2: {
-    sheetImportedCoCount: 100,
-    sheetErrorsCount: 0,
-    sheetErrors: []
-    }
-}
-```
 
 # Data mapping
 

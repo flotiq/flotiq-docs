@@ -1,11 +1,11 @@
 title: Flotiq - MSExcel Migration | Flotiq docs
 description: How to migrate Flotiq data to/from MS Excel file
 
-`flotiq excel-export` and `flotiq excel-import` are Flotiq CLI commands for migrating data to and from MS Excel files. If you wish to use our Flotiq - Excel migrator directly, you can use our [flotiq-excel-migrator](https://www.npmjs.com/package/flotiq-excel-migrator){:target="_blank"} npm package.
-
 # Migrating data between Flotiq and MS Excel
 
 You can migrate your data between Flotiq and MS Excel with Flotiq CLI. To migrate your data you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)) and your "Read Only API Key" or "Read and write API key", depending on whether you want to import or export your data (more about API keys [here](../API/index.md)).
+
+If you wish to use our Flotiq - Excel migrator directly, you can use our [flotiq-excel-migrator](https://www.npmjs.com/package/flotiq-excel-migrator){:target="_blank"} npm package.
 
 # Export Flotiq data to MS Excel
 

@@ -44,6 +44,17 @@ Command logs the following information:
 
 `--hideResults` or `--hr` - information about the export process will not appear in the console.
 
+!!! Responses
+    When successful:
+    ```
+    {
+        directoryPath: '[_dirname]//test.xlsx',
+        errors: null,
+        coTotal: 3,
+        co_success: 3
+    }
+    ```
+
 ## Import data from MS Excel to Flotiq
 
 `flotiq excel-import` command will import Content Objects from an MS Excel file to the given Content Type.
@@ -78,6 +89,23 @@ For every sheet in the workbook:
 `--updateExisting` or `--ue` - If content objects with a given id already exist in the Flotiq account, they will be updated.
 
 `--hideResults` or `--hr` - information about the import process will not appear in the console.
+
+!!! Responses
+    When successful:
+    ```
+    {
+        Sheet1: {
+            sheetImportedCoCount: 98,
+            sheetErrorsCount: 2,
+            sheetErrors: [ [Object] ]
+        }
+        Sheet2: {
+            sheetImportedCoCount: 100,
+            sheetErrorsCount: 0,
+            sheetErrors: []
+            }
+    }
+    ```
 
 ### Notes
 

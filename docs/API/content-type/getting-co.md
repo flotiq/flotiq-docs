@@ -319,150 +319,71 @@ The example below shows an example response for the product with a category, pro
         }
         ```
 
-!!! Response
+!!! Response - hydration enabled
 
-    === "200 OK"
+    === "Hydration enabled"
 
         ```
         {
-          "id": "product-1",
-          "name": "Wild fruit",
-          "slug": "wild-fruit",
-          "price": 12,
-          "category": [
-            {
-              "id": "category-2",
-              "name": "Black tea",
-              "slug": "black-tea",
-              "image": [
-                {
-                  "type": "internal",
-                  "dataUrl": "/api/v1/content/_media/_media-5eb3b2cb85196"
-                }
-              ],
-              "internal": {
-                "createdAt": "2020-05-07T07:03:52+00:00",
-                "deletedAt": "",
-                "updatedAt": "2020-05-07T08:29:14+00:00",
-                "contentType": "category",
-                "workflow_state": "saved"
-              }
-            }
-          ],
-          "internal": {
-            "createdAt": "2020-05-07T07:03:55+00:00",
-            "deletedAt": "",
-            "updatedAt": "2020-07-10T08:23:49+00:00",
-            "contentType": "product",
-            "workflow_state": "saved"
-          },
-          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum erat vitae aliquet euismod. Curabitur hendrerit, eros sed iaculis aliquam, ante magna placerat ante, at fermentum augue nulla non justo. Curabitur arcu sem, venenatis eget lobortis a, aliquet nec nunc. Nam tristique, est ac dictum iaculis, mauris nunc pellentesque lacus, in pulvinar enim turpis in dolor. Morbi porta, mi vitae euismod volutpat, nisi sem mollis ligula, nec faucibus erat est vitae ante. Maecenas fringilla sodales tortor a varius. Fusce ipsum lorem, pharetra id tempus non, luctus in elit.</p>\n\n<p>Aliquam lectus arcu, accumsan quis libero vel, placerat faucibus orci. Aenean vitae mattis turpis, id egestas arcu. Integer non purus dui.</p>\n\n<ul>\n\t<li>Etiam porttitor massa id velit semper, vitae posuere leo egestas.</li>\n\t<li>Nunc congue, quam vestibulum cursus luctus, turpis sem feugiat odio, eu placerat ex tellus vitae elit.</li>\n\t<li>Phasellus sodales purus sed auctor feugiat. Morbi varius pretium ligula id semper. In ac scelerisque erat.</li>\n\t<li>Quisque a metus ut nibh finibus hendrerit.</li>\n</ul>\n\n<p>Nam in quam et libero mollis venenatis viverra a odio. Aenean in lacus id libero pretium scelerisque ac cursus est. Quisque egestas leo ut ex sollicitudin, at porta nunc tincidunt. Nulla posuere, enim eu commodo gravida, orci erat egestas lorem, sit amet imperdiet lectus massa quis libero. Maecenas a hendrerit nunc. Cras eu quam metus. Etiam volutpat, leo nec faucibus sollicitudin, sapien lacus bibendum lorem, maximus porttitor ligula tortor a orci. Aenean non diam ornare, condimentum nisi sed, viverra justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras commodo efficitur metus, in interdum purus. Cras sed risus eget arcu dapibus consequat. Aenean quis aliquam dia.</p>\n",
-          "productImage": [
-            {
-              "id": "_media-5eb3b2cb53e21",
-              "url": "/image/0x0/_media-5eb3b2cb53e21.jpg",
-              "size": 574633,
-              "type": "image",
-              "width": 1920,
-              "height": 1275,
-              "source": "disk",
-              "fileName": "_media-5e8d9bf8e731d.jpg",
-              "internal": {
-                "createdAt": "2020-05-07T07:03:40+00:00",
-                "deletedAt": "",
-                "updatedAt": "2020-05-07T07:03:40+00:00",
-                "contentType": "_media",
-                "workflow_state": "saved"
-              },
-              "mimeType": "image/jpeg",
-              "extension": "jpg",
-              "externalId": ""
-            }
-          ],
-          "productGallery": [
-            {
-              "id": "_media-5eb3b2cb53e21",
-              "url": "/image/0x0/_media-5eb3b2cb53e21.jpg",
-              "size": 574633,
-              "type": "image",
-              "width": 1920,
-              "height": 1275,
-              "source": "disk",
-              "fileName": "_media-5e8d9bf8e731d.jpg",
-              "internal": {
-                "createdAt": "2020-05-07T07:03:40+00:00",
-                "deletedAt": "",
-                "updatedAt": "2020-05-07T07:03:40+00:00",
-                "contentType": "_media",
-                "workflow_state": "saved"
-              },
-              "mimeType": "image/jpeg",
-              "extension": "jpg",
-              "externalId": ""
-            },
-            {
-              "id": "_media-5eb3b2cb94093",
-              "url": "/image/0x0/_media-5eb3b2cb94093.jpg",
-              "size": 415013,
-              "type": "image",
-              "width": 1920,
-              "height": 1259,
-              "source": "disk",
-              "fileName": "_media-5e8d9c642c913.jpg",
-              "internal": {
-                "createdAt": "2020-05-07T07:03:40+00:00",
-                "deletedAt": "",
-                "updatedAt": "2020-05-07T07:03:40+00:00",
-                "contentType": "_media",
-                "workflow_state": "saved"
-              },
-              "mimeType": "image/jpeg",
-              "extension": "jpg",
-              "externalId": ""
-            },
-            {
-              "id": "_media-5eb3b2cbd798a",
-              "url": "/image/0x0/_media-5eb3b2cbd798a.jpg",
-              "size": 384246,
-              "type": "image",
-              "width": 1920,
-              "height": 1280,
-              "source": "disk",
-              "fileName": "_media-5e8d9c6589de6.jpg",
-              "internal": {
-                "createdAt": "2020-05-07T07:03:40+00:00",
-                "deletedAt": "",
-                "updatedAt": "2020-05-07T07:03:40+00:00",
-                "contentType": "_media",
-                "workflow_state": "saved"
-              },
-              "mimeType": "image/jpeg",
-              "extension": "jpg",
-              "externalId": ""
-            }
-          ]
+            "data": [{
+                "id": "product-1",
+                "name": "Wild fruit",
+                "slug": "wild-fruit",
+                "price": 12,
+                "internal": {...},
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum erat vitae aliquet euismod. Curabitur hendrerit, eros sed iaculis aliquam, ante magna placerat ante, at fermentum augue nulla non justo. Curabitur arcu sem, venenatis eget lobortis a, aliquet nec nunc. Nam tristique, est ac dictum iaculis, mauris nunc pellentesque lacus, in pulvinar enim turpis in dolor. Morbi porta, mi vitae euismod volutpat, nisi sem mollis ligula, nec faucibus erat est vitae ante. Maecenas fringilla sodales tortor a varius. Fusce ipsum lorem, pharetra id tempus non, luctus in elit.</p>\n\n<p>Aliquam lectus arcu, accumsan quis libero vel, placerat faucibus orci. Aenean vitae mattis turpis, id egestas arcu. Integer non purus dui.</p>\n\n<ul>\n\t<li>Etiam porttitor massa id velit semper, vitae posuere leo egestas.</li>\n\t<li>Nunc congue, quam vestibulum cursus luctus, turpis sem feugiat odio, eu placerat ex tellus vitae elit.</li>\n\t<li>Phasellus sodales purus sed auctor feugiat. Morbi varius pretium ligula id semper. In ac scelerisque erat.</li>\n\t<li>Quisque a metus ut nibh finibus hendrerit.</li>\n</ul>\n\n<p>Nam in quam et libero mollis venenatis viverra a odio. Aenean in lacus id libero pretium scelerisque ac cursus est. Quisque egestas leo ut ex sollicitudin, at porta nunc tincidunt. Nulla posuere, enim eu commodo gravida, orci erat egestas lorem, sit amet imperdiet lectus massa quis libero. Maecenas a hendrerit nunc. Cras eu quam metus. Etiam volutpat, leo nec faucibus sollicitudin, sapien lacus bibendum lorem, maximus porttitor ligula tortor a orci. Aenean non diam ornare, condimentum nisi sed, viverra justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras commodo efficitur metus, in interdum purus. Cras sed risus eget arcu dapibus consequat. Aenean quis aliquam dia.</p>\n",
+                "productImage": [{
+                    "id": "_media-b35676ac-94f5-4200-9e16-eef40b649352",
+                    "url": "/image/0x0/_media-b35676ac-94f5-4200-9e16-eef40b649352.jpg",
+                    "size": 574633,
+                    "type": "image",
+                    "width": 1920,
+                    "height": 1275,
+                    "source": "disk",
+                    "fileName": "_media-5e8d9bf8e731d.jpg",
+                    "internal": {...},
+                    "mimeType": "image/jpeg",
+                    "extension": "jpg",
+                    "externalId": ""
+                }],
+                "productGallery": [{
+                    "id": "_media-b35676ac-94f5-4200-9e16-eef40b649352",
+                    "url": "/image/0x0/_media-b35676ac-94f5-4200-9e16-eef40b649352.jpg",
+                    "size": 574633,
+                    "type": "image",
+                    "width": 1920,
+                    "height": 1275,
+                    "source": "disk",
+                    "fileName": "_media-5e8d9bf8e731d.jpg",
+                    "internal": {...},
+                    "mimeType": "image/jpeg",
+                    "extension": "jpg",
+                    "externalId": ""
+                }]
+            }]
         }
         ```
 
-    === "401 Unauthorized"
-
-        Returned when API key was missing or incorrect
-  
-        ```
-        {
-            "code": 401,
-            "massage": "Unauthorized"
-        }
-        ```
-
-    === "404 Not found"
-
-        Returned when the content object wasn't found
+    === "Hydration disabled"
 
         ```
         {
-            "code": 404,
-            "massage": "Not found"
+            "data": [{
+                "id": "product-1",
+                "name": "Wild fruit",
+                "slug": "wild-fruit",
+                "price": 12,
+                "internal": {...},
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum erat vitae aliquet euismod. Curabitur hendrerit, eros sed iaculis aliquam, ante magna placerat ante, at fermentum augue nulla non justo. Curabitur arcu sem, venenatis eget lobortis a, aliquet nec nunc. Nam tristique, est ac dictum iaculis, mauris nunc pellentesque lacus, in pulvinar enim turpis in dolor. Morbi porta, mi vitae euismod volutpat, nisi sem mollis ligula, nec faucibus erat est vitae ante. Maecenas fringilla sodales tortor a varius. Fusce ipsum lorem, pharetra id tempus non, luctus in elit.</p>\n\n<p>Aliquam lectus arcu, accumsan quis libero vel, placerat faucibus orci. Aenean vitae mattis turpis, id egestas arcu. Integer non purus dui.</p>\n\n<ul>\n\t<li>Etiam porttitor massa id velit semper, vitae posuere leo egestas.</li>\n\t<li>Nunc congue, quam vestibulum cursus luctus, turpis sem feugiat odio, eu placerat ex tellus vitae elit.</li>\n\t<li>Phasellus sodales purus sed auctor feugiat. Morbi varius pretium ligula id semper. In ac scelerisque erat.</li>\n\t<li>Quisque a metus ut nibh finibus hendrerit.</li>\n</ul>\n\n<p>Nam in quam et libero mollis venenatis viverra a odio. Aenean in lacus id libero pretium scelerisque ac cursus est. Quisque egestas leo ut ex sollicitudin, at porta nunc tincidunt. Nulla posuere, enim eu commodo gravida, orci erat egestas lorem, sit amet imperdiet lectus massa quis libero. Maecenas a hendrerit nunc. Cras eu quam metus. Etiam volutpat, leo nec faucibus sollicitudin, sapien lacus bibendum lorem, maximus porttitor ligula tortor a orci. Aenean non diam ornare, condimentum nisi sed, viverra justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras commodo efficitur metus, in interdum purus. Cras sed risus eget arcu dapibus consequat. Aenean quis aliquam dia.</p>\n",
+                "productImage": [{
+                    "type": "internal",
+                    "dataUrl": "/api/v1/content/_media/_media-b35676ac-94f5-4200-9e16-eef40b649352"
+                }],
+                "productGallery": [{
+                    "type": "internal",
+                    "dataUrl": "/api/v1/content/_media/_media-b35676ac-94f5-4200-9e16-eef40b649352"
+                }]
+            }]
         }
         ```
 

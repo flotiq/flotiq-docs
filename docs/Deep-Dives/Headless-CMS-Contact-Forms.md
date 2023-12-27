@@ -1,5 +1,5 @@
 title: Contact form using Flotiq | Flotiq docs
-description: 
+description:
 
 # Contact form using Flotiq
 
@@ -9,7 +9,7 @@ You can easily use headless CMS systems like Flotiq to store data from contact f
 
 Create a contact form with notifications, without backend code, in 10 minutes.
 
-Steps: 
+Steps:
 
 1. Create a model in Flotiq
 2. Create a simple form on your website
@@ -115,21 +115,20 @@ We need also a few lines of javascript to pass data from our form to the Flotiq 
 </script>
 ```
 !!! caution
-    To protect your API Key you should use custom backend proxy or, for example, a serverless function like Cloudflare Workers, we have an extensive Flotiq Developer Documentation article about it here: [How to secure a JAMstack app with Cloudflare workers](https://flotiq.com/docs/Deep-Dives/securing-write-api-access/)
+    To protect your API Key you should use a custom backend proxy or, for example, a serverless function like Cloudflare Workers, we have an extensive Flotiq Developer Documentation article about it here: [How to secure a JAMstack app with Cloudflare workers](https://flotiq.com/docs/Deep-Dives/securing-write-api-access/)
 
 Now you can test if this form is sending data to your Contact Form type in Flotiq app.
 
 
+## Hooking up Zapier e-mail notifications
 
-## Hooking-up Zapier e-mail notifications
 
-
-If you want to receive emails when the form is submitted you can use Flotiq and Zapier integration. You can also adapt this step to push your contacts to other sources, e.g. CRM systems, Mailchimp, Google Sheets, whatever you like. 
+If you want to receive emails when the form is submitted you can use Flotiq and Zapier integration. You can also adapt this step to push your contacts to other sources, e.g. CRM systems, Mailchimp, Google Sheets, whatever you like.
 
 1. Log in or register in [Zapier](https://zapier.com)
 1. Create a zap - select connection between Flotiq and Gmail (you can use other integrations if you want). It should look like:
 ![Zapier configuration for Flotiq-based Contact Forms](images/contact-form-zapier-1.png)
-1. Next you need to pass your Flotiq API Key in Choose Account section (it should be your global read-only API KEY), 
+1. Next you need to pass your Flotiq API Key in Choose Account section (it should be your global read-only API KEY),
 1. In Customize content object section select "contact_form".
 
 In the "Do this..." field you need to configure email address and content. See our example config:
@@ -140,7 +139,7 @@ In the "Do this..." field you need to configure email address and content. See o
 That's all. You will now get an email notification about every message left through your Contact Form.
 
 !!! hint
-    * Read more about Flotiq & Zapier integration [here](../../Universe/zapier/) 
+    * Read more about Flotiq & Zapier integration [here](../../Universe/zapier/)
     * Set up your own integration with one of 1000+ systems [here](https://zapier.com/apps/flotiq/integrations)
 
 ## Conclusion
@@ -149,4 +148,3 @@ That's all. You will now get an email notification about every message left thro
 * It's super easy to create forms without any backend code.
 * Flotiq's Integration with Zapier allows you to use your data with many applications, check more ways to [integrate with Flotiq](https://zapier.com/apps/flotiq/integrations)
 * Contact form data will be available in your Flotiq account.
-

@@ -25,6 +25,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
         --header "accept: application/json" \
         --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ``` 
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -34,7 +35,8 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
-    
+        { data-search-exclude }
+
     === "Go + Native"
 
         ```
@@ -64,6 +66,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -78,6 +81,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -86,6 +90,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -104,6 +109,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -136,6 +142,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 
 !!! Responses
@@ -155,6 +162,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -166,6 +174,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -177,6 +186,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
 #### Possible validation errors
 

@@ -52,6 +52,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "postContent": "This will be the new <b>content</b>"
         }'
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -63,7 +64,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         request.AddParameter("application/json", "{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}", ParameterType.RequestBody);
         IRestResponse response = client.Execute(request);
         ```
-    
+        { data-search-exclude }
+
     === "Go + Native"
 
         ```
@@ -97,7 +99,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             
         }
         ```
-    
+        { data-search-exclude }
+
     === "Java + Okhttp"
         
         ```
@@ -114,6 +117,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -124,6 +128,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             .body("{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -137,13 +142,14 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             body: {title: 'New object', postContent: 'This will be the new <b>content</b>'},
             json: true
         };
-        
+              
         request(options, function (error, response, body) {
         if (error) throw new Error(error);
         
         console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -178,7 +184,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             echo $response;
         }
         ```
-
+        { data-search-exclude }
 
 !!! Responses
 
@@ -199,6 +205,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "postContent": "This will be the new <b>content</b>"
         }
         ```
+        { data-search-exclude }
 
     === "400 Validation error"
 
@@ -222,6 +229,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -233,6 +241,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -244,6 +253,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
     === "413 Request Entity Too Large"
 
@@ -255,7 +265,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "massage": "Content Object size limit exceeded by an object with ID: 185. Requested size 1.01 MB, limit: 1 MB)"
         }
         ```
-        
+        { data-search-exclude }
+
 
 #### Possible validation errors
 
@@ -640,6 +651,7 @@ Blocks:
             "type": "table"
         }
         ```
+        { data-search-exclude }
 
 If we are missing a block type or tune that you require for your project,
 please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@flotiq.com).
@@ -996,6 +1008,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
       "rich_text": "rich_text"
     }
     ```
+    { data-search-exclude }
 
 
 ## Batch create Content Objects through API

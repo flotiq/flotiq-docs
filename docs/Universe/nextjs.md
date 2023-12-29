@@ -21,7 +21,7 @@ NextJS starter for creating a blog with Flotiq
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-blog-1){:target="_blank"}
 
-[Working example](https://flotiq-gatsby-blog-1.netlify.app){:target="_blank"}
+[Working example](https://flotiq-nextjs-blog.netlify.app){:target="_blank"}
 
 ## Starter for event calendar 2
 
@@ -31,7 +31,7 @@ NextJS Starter to display information about events from Flotiq Events with Calen
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-event-2){:target="_blank"}
 
-[Working example](https://flotiq-gatsby-event-2.netlify.app){:target="_blank"}
+[Working example](https://flotiq-nextjs-event-2.netlify.app){:target="_blank"}
 
 ## Starter for shop 2
 
@@ -41,7 +41,7 @@ A boilerplate repository to jumpstart your next e-commerce project, using Snipca
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-shop-2){:target="_blank"}
 
-[Working example](https://flotiq-gatsby-shop-2.netlify.app){:target="_blank"}
+[Working example](https://flotiq-nextjs-shop-2.netlify.app){:target="_blank"}
 
 ## Starter for portfolio 2
 
@@ -51,7 +51,7 @@ A free, open-source, image-concentric starter for NextJS.
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-portfolio-2){:target="_blank"}
 
-[Working example](https://flotiq-gatsby-portfolio-2.netlify.app){:target="_blank"}
+[Working example](https://flotiq-nextjs-portfolio-2.netlify.app){:target="_blank"}
 
 ## Starter for recipe 2
 
@@ -61,7 +61,7 @@ A starter to build your own recipes page with Flotiq and NextJS.
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-recipe-2){:target="_blank"}
 
-[Working example](https://flotiq-gatsby-recipe-2.netlify.app){:target="_blank"}
+[Working example](https://flotiq-nextjs-recipe-2.netlify.app/){:target="_blank"}
 
 ## Boilerplate for you
 

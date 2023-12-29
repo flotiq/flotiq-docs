@@ -32,6 +32,7 @@ If you need more directions go to the [docs](https://flotiq.com/docs/API/).
 const FlotiqUserApi = require("flotiq_user_api");
 FlotiqUserApi.ApiClient.init("API_KEY");
 ```
+{ data-search-exclude }
 
 ### 3. Make requests to the Flotiq
 
@@ -56,6 +57,7 @@ api.listFlotiqblogauthor(opts).then(
   }
 );
 ```
+{ data-search-exclude }
 
 ### 4. SDK NodeJS common use cases
 

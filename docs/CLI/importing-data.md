@@ -7,6 +7,7 @@ The command looks like this:
 ```bash
 flotiq import [projectName] [flotiqApiKey]
 ```
+{ data-search-exclude }
 
 After running the command, you should have data imported to your Flotiq account.
 

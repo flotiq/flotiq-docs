@@ -7,6 +7,7 @@ The command looks like this:
 ```bash
 flotiq wordpress-import [wordpressUrl] [flotiqApiKey]
 ```
+{ data-search-exclude }
 
 After running the command, you should have new content types added to your Flotiq account that was imported from Wordpress site.
 

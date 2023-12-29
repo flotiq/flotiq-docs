@@ -302,6 +302,7 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
             }
         ]
         ```
+        { data-search-exclude }
 
     === "Multiple relation to media objects"
         
@@ -317,6 +318,7 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
             }
         ]
         ```        
+        { data-search-exclude }
 
 ### Creating Content Objects with the editor.js blocks
 
@@ -375,6 +377,7 @@ Blocks:
             }
         }
         ```
+        { data-search-exclude }
 
 ??? Header
 
@@ -419,6 +422,7 @@ Blocks:
             }
         }
         ```
+        { data-search-exclude }
 
 ??? List
 
@@ -461,6 +465,7 @@ Blocks:
             "type": "list"
         }
         ```
+        { data-search-exclude }
 
 ??? Image
 
@@ -499,6 +504,7 @@ Blocks:
             "type": "image"
         }
         ```
+        { data-search-exclude }
 
 ??? YouTube embed
 
@@ -521,6 +527,7 @@ Blocks:
             "type": "youtubeEmbed"
         }
         ```
+        { data-search-exclude }
 
 ??? "Quote"
 
@@ -548,6 +555,7 @@ Blocks:
             "type": "quote"
         }
         ```
+        { data-search-exclude }
 
 ??? "Warning"
 
@@ -572,6 +580,7 @@ Blocks:
             "type": "warning"
         }
         ```
+        { data-search-exclude }
 
 ??? Delimiter
 
@@ -589,6 +598,7 @@ Blocks:
             "type": "delimiter"
         }
         ```
+        { data-search-exclude }
 
 ??? "Code"
 
@@ -611,6 +621,7 @@ Blocks:
             "type": "code"
         }
         ```
+        { data-search-exclude }
 
 ??? "Table"
 
@@ -1032,7 +1043,8 @@ Updating one blog post and adding one new:
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"existing-id-1","title":"Updated object","postContent":"This will be the updated <b>content</b>"},{"id":"new-object-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
-    
+    { data-search-exclude }
+
     response (code: 200):
     ```
     {
@@ -1042,6 +1054,7 @@ Updating one blog post and adding one new:
         "errors": []
     }
     ```
+    { data-search-exclude }
 
 Trying updating one blog post and adding one new with wrong data:
 
@@ -1050,7 +1063,8 @@ Trying updating one blog post and adding one new with wrong data:
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"existing-id-1","title":"Updated object"},{"id":"new-object-2","title":"New object 3","postContent":"This will be the brand new <b>content</b>"}]'
     ```
-    
+    { data-search-exclude }
+
     response (code: 400):
     ```
     {
@@ -1069,6 +1083,7 @@ Trying updating one blog post and adding one new with wrong data:
         ]
     }
     ```
+    { data-search-exclude }
 
 Trying updating one blog post and adding one new with duplicated id:
 
@@ -1077,7 +1092,8 @@ Trying updating one blog post and adding one new with duplicated id:
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"example-id-1","title":"New object","content": "This will be the new <b>content</b>"},{"id":"example-id-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
-    
+    { data-search-exclude }
+
     response (code: 400):
     ```
     {
@@ -1086,6 +1102,7 @@ Trying updating one blog post and adding one new with duplicated id:
       ]
     }
     ```
+    { data-search-exclude }
 
 Response parameters:
 

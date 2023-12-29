@@ -207,6 +207,7 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
         }
     }
     ```
+    { data-search-exclude }
 
 To pass this query to the Flotiq, you need to call:
 
@@ -220,6 +221,7 @@ To pass this query to the Flotiq, you need to call:
     --header 'Content-Type: application/json' \
     --data-raw '{"query":"query { blogposts(id: \"blogposts-456712\") { id title } }"}'
     ```
+    { data-search-exclude }
 
 === "JavaScript + Fetch"
 
@@ -237,6 +239,7 @@ To pass this query to the Flotiq, you need to call:
     .then(response => response.json())
     .then(data => console.log(data));
     ```
+    { data-search-exclude }
 
 === "Node + Axios"
 
@@ -254,6 +257,7 @@ To pass this query to the Flotiq, you need to call:
     .then(response => console.log(response.data))
     .catch(error => console.log(error));
     ```
+    { data-search-exclude }
 
 === "Python + Requests"
 
@@ -272,6 +276,7 @@ To pass this query to the Flotiq, you need to call:
     response = requests.post(url, headers=headers, json=data)
     print(response.json())
     ```
+    { data-search-exclude }
 
 
 !!! Response
@@ -289,6 +294,7 @@ To pass this query to the Flotiq, you need to call:
         }
     }
     ```
+    { data-search-exclude }
 
 === "401 Unauthorized"
 
@@ -306,6 +312,7 @@ To pass this query to the Flotiq, you need to call:
         ]
     }
     ```
+    { data-search-exclude }
 
 === "404 Not found"
 
@@ -323,6 +330,7 @@ To pass this query to the Flotiq, you need to call:
         ]
     }
     ```
+    { data-search-exclude }
 
 
 #### Step 2: Exploring Advanced Features

@@ -104,6 +104,7 @@ also should have information about the connection with `AbstractContentTypeSchem
     }
 ],
 ```
+{ data-search-exclude }
 
 All property names should have only `a-z`, `A-Z`, `0-9` and `_` characters. `id` and `objectType` property names are restricted.
 

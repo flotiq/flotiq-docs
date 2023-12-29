@@ -115,9 +115,10 @@ We need also a few lines of javascript to pass data from our form to the Flotiq 
 
 </script>
 ```
+{ data-search-exclude }
+
 !!! caution
     To protect your API Key you should use custom backend proxy or, for example, a serverless function like Cloudflare Workers, we have an extensive Flotiq Developer Documentation article about it here: [How to secure a JAMstack app with Cloudflare workers](https://flotiq.com/docs/Deep-Dives/securing-write-api-access/)
-{ data-search-exclude }
 
 Now you can test if this form is sending data to your Contact Form type in Flotiq app.
 

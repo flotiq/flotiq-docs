@@ -1,13 +1,6 @@
 title: Building a stunning recipe website with Flotiq and Gatsby | Flotiq docs
 description: A deep dive tutorial on Flotiq's complex data structures and accidentally building a stunning recipes website with Gatsby.
 
-!!! caution
-    This tutorial is based on a deprecated starter. We strongly advise you to look at our new blog starters - 
-    [Gatsby Recipe 1 – Black and White Classic](https://flotiq.com/starters/gatsby-recipe-1-black-and-white-classic) and 
-    [Gatsby Recipe 2 – All you can eat](https://flotiq.com/starters/gatsby-recipe-2-all-you-can-eat) - described in 
-    [our blog post](https://flotiq.com/blog/recipe-website-using-complex-data-structure-and-gatsby-starter). Look at our other 
-    [starters](https://flotiq.com/starters/) if Gatsby recipe website don't match your need.
-
 # Building a recipes website using complex data structures
 
 ## Introduction
@@ -16,7 +9,7 @@ Once you start building data models that are a little more complex you'll find t
 
 In this article we'll discuss a couple of particular problems you might encounter in designing a data model and later - working with it. Accidentally - we'll also build a stunning website with your favorite culinary recipes (scrambled eggs, of course). 
 
-![Recipes website built using Gatsby and Flotiq](https://editor.flotiq.com/images/flotiq-starter-recipes.png){: .center .width75 .border}
+![Recipes website built using Gatsby and Flotiq](images/jamstack-recipes-complex-data-structures/flotiq-starter-gatsby-recipe-1.png){: .center .width75 .border}
 
 A simple `Recipe` model you might find useful for a recipe website could look like this:
 

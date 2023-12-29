@@ -3335,6 +3335,7 @@ as not all tools can handle the whole Open API Schema format.
     }
 
     ```
+    { data-search-exclude }
 
 ??? "Response for user only version 3"
 
@@ -4412,6 +4413,7 @@ as not all tools can handle the whole Open API Schema format.
       }
     }
     ```
+    { data-search-exclude }
 
 ??? "Response for full version 2"
 
@@ -7275,7 +7277,7 @@ as not all tools can handle the whole Open API Schema format.
       }
     }
     ```
-
+    { data-search-exclude }
 ??? "Response for user only version 2"
 
     Example curl request
@@ -8212,6 +8214,8 @@ as not all tools can handle the whole Open API Schema format.
       }
     }
     ```
+    { data-search-exclude }
+
 ## Hydration in Open API Schema
 
 If a content type has relations to another content type, the generated schema looks like this:
@@ -9370,7 +9374,7 @@ You can use the same request parameters for [scoped API](/docs/API/#user-defined
       }
     }
     ```
-
+    { data-search-exclude }
 !!! note
     Read more about [API keys and scoped API keys](/docs/API/)
 

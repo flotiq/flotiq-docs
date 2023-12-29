@@ -280,7 +280,7 @@ The GraphQL query for listing objects including categories will look like:
             }
         }
         ```
-
+        { data-search-exclude }
 
 As you can see, the related element, `category`, was fetched, including its properties.
 

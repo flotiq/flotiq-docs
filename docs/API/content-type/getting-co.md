@@ -30,6 +30,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
         --header "accept: application/json" \
         --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -39,7 +40,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
-    
+        { data-search-exclude }
+
     === "Go + Native"
 
         ```
@@ -69,6 +71,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -83,6 +86,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -91,6 +95,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -109,6 +114,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -141,6 +147,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 Request parameters
 
@@ -168,6 +175,7 @@ Request parameters
           }
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -179,6 +187,7 @@ Request parameters
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -190,6 +199,7 @@ Request parameters
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
 ### Hydrating object
 
@@ -207,6 +217,7 @@ The example below shows an example response for the product with a category, pro
         ``` 
         curl -X GET "https://api.flotiq.com/api/v1/content/product/product-1" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -216,6 +227,7 @@ The example below shows an example response for the product with a category, pro
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -246,6 +258,7 @@ The example below shows an example response for the product with a category, pro
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -260,6 +273,7 @@ The example below shows an example response for the product with a category, pro
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -268,6 +282,7 @@ The example below shows an example response for the product with a category, pro
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -286,6 +301,7 @@ The example below shows an example response for the product with a category, pro
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -318,6 +334,7 @@ The example below shows an example response for the product with a category, pro
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 !!! Response - hydration enabled
 
@@ -363,6 +380,7 @@ The example below shows an example response for the product with a category, pro
             }]
         }
         ```
+        { data-search-exclude }
 
     === "Hydration disabled"
 
@@ -386,5 +404,6 @@ The example below shows an example response for the product with a category, pro
             }]
         }
         ```
+        { data-search-exclude }
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

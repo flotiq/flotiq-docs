@@ -52,6 +52,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "postContent": "This will be the new <b>content</b>"
         }'
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -63,7 +64,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         request.AddParameter("application/json", "{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}", ParameterType.RequestBody);
         IRestResponse response = client.Execute(request);
         ```
-    
+        { data-search-exclude }
+
     === "Go + Native"
 
         ```
@@ -97,7 +99,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             
         }
         ```
-    
+        { data-search-exclude }
+
     === "Java + Okhttp"
         
         ```
@@ -114,6 +117,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -124,6 +128,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             .body("{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -137,13 +142,14 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             body: {title: 'New object', postContent: 'This will be the new <b>content</b>'},
             json: true
         };
-        
+              
         request(options, function (error, response, body) {
         if (error) throw new Error(error);
         
         console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -178,7 +184,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             echo $response;
         }
         ```
-
+        { data-search-exclude }
 
 !!! Responses
 
@@ -199,6 +205,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "postContent": "This will be the new <b>content</b>"
         }
         ```
+        { data-search-exclude }
 
     === "400 Validation error"
 
@@ -222,6 +229,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -233,6 +241,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -244,6 +253,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
     === "413 Request Entity Too Large"
 
@@ -255,7 +265,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "massage": "Content Object size limit exceeded by an object with ID: 185. Requested size 1.01 MB, limit: 1 MB)"
         }
         ```
-        
+        { data-search-exclude }
+
 
 #### Possible validation errors
 
@@ -291,6 +302,7 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
             }
         ]
         ```
+        { data-search-exclude }
 
     === "Multiple relation to media objects"
         
@@ -306,6 +318,7 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
             }
         ]
         ```        
+        { data-search-exclude }
 
 ### Creating Content Objects with the editor.js blocks
 
@@ -364,6 +377,7 @@ Blocks:
             }
         }
         ```
+        { data-search-exclude }
 
 ??? Header
 
@@ -408,6 +422,7 @@ Blocks:
             }
         }
         ```
+        { data-search-exclude }
 
 ??? List
 
@@ -450,6 +465,7 @@ Blocks:
             "type": "list"
         }
         ```
+        { data-search-exclude }
 
 ??? Image
 
@@ -488,6 +504,7 @@ Blocks:
             "type": "image"
         }
         ```
+        { data-search-exclude }
 
 ??? YouTube embed
 
@@ -510,6 +527,7 @@ Blocks:
             "type": "youtubeEmbed"
         }
         ```
+        { data-search-exclude }
 
 ??? "Quote"
 
@@ -537,6 +555,7 @@ Blocks:
             "type": "quote"
         }
         ```
+        { data-search-exclude }
 
 ??? "Warning"
 
@@ -561,6 +580,7 @@ Blocks:
             "type": "warning"
         }
         ```
+        { data-search-exclude }
 
 ??? Delimiter
 
@@ -578,6 +598,7 @@ Blocks:
             "type": "delimiter"
         }
         ```
+        { data-search-exclude }
 
 ??? "Code"
 
@@ -600,6 +621,7 @@ Blocks:
             "type": "code"
         }
         ```
+        { data-search-exclude }
 
 ??? "Table"
 
@@ -640,6 +662,7 @@ Blocks:
             "type": "table"
         }
         ```
+        { data-search-exclude }
 
 If we are missing a block type or tune that you require for your project,
 please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@flotiq.com).
@@ -996,6 +1019,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
       "rich_text": "rich_text"
     }
     ```
+    { data-search-exclude }
 
 
 ## Batch create Content Objects through API
@@ -1019,7 +1043,8 @@ Updating one blog post and adding one new:
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"existing-id-1","title":"Updated object","postContent":"This will be the updated <b>content</b>"},{"id":"new-object-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
-    
+    { data-search-exclude }
+
     response (code: 200):
     ```
     {
@@ -1029,6 +1054,7 @@ Updating one blog post and adding one new:
         "errors": []
     }
     ```
+    { data-search-exclude }
 
 Trying updating one blog post and adding one new with wrong data:
 
@@ -1037,7 +1063,8 @@ Trying updating one blog post and adding one new with wrong data:
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"existing-id-1","title":"Updated object"},{"id":"new-object-2","title":"New object 3","postContent":"This will be the brand new <b>content</b>"}]'
     ```
-    
+    { data-search-exclude }
+
     response (code: 400):
     ```
     {
@@ -1056,6 +1083,7 @@ Trying updating one blog post and adding one new with wrong data:
         ]
     }
     ```
+    { data-search-exclude }
 
 Trying updating one blog post and adding one new with duplicated id:
 
@@ -1064,7 +1092,8 @@ Trying updating one blog post and adding one new with duplicated id:
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"example-id-1","title":"New object","content": "This will be the new <b>content</b>"},{"id":"example-id-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
-    
+    { data-search-exclude }
+
     response (code: 400):
     ```
     {
@@ -1073,6 +1102,7 @@ Trying updating one blog post and adding one new with duplicated id:
       ]
     }
     ```
+    { data-search-exclude }
 
 Response parameters:
 

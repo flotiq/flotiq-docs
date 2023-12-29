@@ -127,6 +127,7 @@ Full schema for the Blog Post type:
         }
     }
     ```
+    { data-search-exclude }
 
 Form generated for Blog Post:
 
@@ -271,6 +272,7 @@ Full schema for the Event type:
         }
     }
     ```
+    { data-search-exclude }
 
 Form generated for Event:
 
@@ -421,6 +423,7 @@ Full schema for the Product type:
         }
     }
     ```
+    { data-search-exclude }
 
 Form generated for Product:
 
@@ -544,6 +547,7 @@ Full schema for the Project type:
         }
     }
     ```
+    { data-search-exclude }
 
 Form generated for Project:
 
@@ -820,6 +824,7 @@ Full schema for the Recipe type:
         }
     }
     ```
+    { data-search-exclude }
 
 Form generated for Recipe:
 

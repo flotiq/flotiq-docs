@@ -50,6 +50,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             "postContent": "This will be the new <b>content</b>"
         }'
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -61,6 +62,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         request.AddParameter("application/json", "{\"title\":\"Object with changed title\",\"postContent\":\"This will be the new <b>content</b>\"}", ParameterType.RequestBody);
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -95,6 +97,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -112,6 +115,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -122,6 +126,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             .body("{\"title\":\"Object with changed title\",\"postContent\":\"This will be the new <b>content</b>\"}")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -142,6 +147,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -176,6 +182,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 
 !!! Responses
@@ -197,6 +204,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             "postContent": "This will be the new <b>content</b>"
         }
         ```
+        { data-search-exclude }
 
     === "400 Validation error"
 
@@ -216,6 +224,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -227,6 +236,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -238,6 +248,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
         
     === "413 Request Entity Too Large"
 
@@ -249,6 +260,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             "massage": "Content Object size limit exceeded by an object with ID: 185. Requested size 1.01 MB, limit: 1 MB)"
         }
         ```
+        { data-search-exclude }
 
 
 #### Possible validation errors

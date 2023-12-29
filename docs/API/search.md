@@ -69,6 +69,7 @@ Response:
     ]
 }
 ```
+{ data-search-exclude }
 
 ## Limit the search to a specific Content Type
 

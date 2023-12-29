@@ -63,6 +63,7 @@ We will use a simple HTML form. The code below code is a complete, working solut
     </form>
 </div>
 ```
+{ data-search-exclude }
 
 We need also a few lines of javascript to pass data from our form to the Flotiq API:
 
@@ -114,6 +115,8 @@ We need also a few lines of javascript to pass data from our form to the Flotiq 
 
 </script>
 ```
+{ data-search-exclude }
+
 !!! caution
     To protect your API Key you should use a custom backend proxy or, for example, a serverless function like Cloudflare Workers, we have an extensive Flotiq Developer Documentation article about it here: [How to secure a JAMstack app with Cloudflare workers](https://flotiq.com/docs/Deep-Dives/securing-write-api-access/)
 

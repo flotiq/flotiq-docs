@@ -84,6 +84,7 @@ Start by cloning the repository:
 ```
 git clone https://github.com/flotiq/gatsby-starter-products
 ```
+{ data-search-exclude }
 
 ### Configure Flotiq
 
@@ -93,6 +94,7 @@ Then, in the root folder of the repository create a file called `.env`. This fil
 GATSBY_FLOTIQ_BASE_URL="https://api.flotiq.com"
 FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
 ```
+{ data-search-exclude }
 
 You can find your Flotiq API keys in the user profile section of the interface:
 
@@ -109,6 +111,7 @@ It's as simple as that. You should be good to go. Install the NPM dependencies a
 npm install
 gatsby develop
 ```
+{ data-search-exclude }
 
 You should now see your store at `http://localhost:8000`.
 
@@ -131,6 +134,7 @@ GATSBY_FLOTIQ_BASE_URL="https://api.flotiq.com"
 FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
 SNIPCART_API_KEY="YOUR SNIPCART KEY"
 ```
+{ data-search-exclude }
 
 and restart gatsby with `gatsby develop`.
 

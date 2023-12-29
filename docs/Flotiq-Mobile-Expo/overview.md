@@ -61,11 +61,13 @@ Follow these three steps to develop Flotiq based application:
 ```shell
 npm install --global expo-cli
 ```
+{ data-search-exclude }
 
 2. Clone [GitHub](https://github.com/flotiq/flotiq-mobile-demo) project
 ```shell
 git clone https://github.com/flotiq/flotiq-mobile-demo
 ```
+{ data-search-exclude }
 
 3. Start developing
 ```shell
@@ -73,6 +75,7 @@ cd flotiq-mobile-demo/
 npm install
 npm start
 ```
+{ data-search-exclude }
 
 This will start Metro server [http://localhost:19002](http://localhost:19002/) where you can start the app on Android and iOS simulator or the real device.
 

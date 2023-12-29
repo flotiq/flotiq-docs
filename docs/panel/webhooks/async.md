@@ -130,6 +130,7 @@ the action name (`Create`, `Update`, `Delete`, `Custom`) and the content object 
   }
 }
 ```
+{ data-search-exclude }
 
 Note: When executing the `Delete` action, only the object's id is sent in the payload:
 
@@ -144,6 +145,7 @@ Note: When executing the `Delete` action, only the object's id is sent in the pa
   }
 }
 ```
+{ data-search-exclude }
 
 ## Webhook execution logs
 

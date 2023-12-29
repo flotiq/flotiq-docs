@@ -32,6 +32,7 @@ Possible request parameters:
         --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "accept: application/json"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -41,6 +42,7 @@ Possible request parameters:
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -71,6 +73,7 @@ Possible request parameters:
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -85,6 +88,7 @@ Possible request parameters:
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -93,6 +97,7 @@ Possible request parameters:
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -118,6 +123,7 @@ Possible request parameters:
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -149,6 +155,7 @@ Possible request parameters:
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 !!! Responses
 
@@ -359,6 +366,7 @@ Possible request parameters:
           ]
         }
         ```
+        { data-search-exclude }
 
         `total_count` is the number of Content Types in the database (if any filters are present, it's a number of filtered Content Types).
         
@@ -380,5 +388,6 @@ Possible request parameters:
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

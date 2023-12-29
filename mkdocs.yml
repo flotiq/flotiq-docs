@@ -190,4 +190,4 @@ nav:
     - 'Upload media example app': Deep-Dives/upload-media.md
   - Flotiq Mobile Expo: Flotiq-Mobile-Expo/overview.md
   - FAQ: faq.md
-  - 'Contact us': contact.md
+  - 'Contact us': '../contact'

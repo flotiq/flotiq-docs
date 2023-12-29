@@ -32,6 +32,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         --header "accept: application/json" \
         --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -41,7 +42,8 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
-    
+        { data-search-exclude }
+
     === "Go + Native"
 
         ```
@@ -71,7 +73,8 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         
         }
         ```
-    
+        { data-search-exclude }
+
     === "Java + Okhttp"
         
         ```
@@ -85,6 +88,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -93,6 +97,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -111,6 +116,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -143,6 +149,8 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             echo $response;
         }
         ```
+        { data-search-exclude }
+
 !!! Responses
 
     === "200 OK"
@@ -163,6 +171,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
           }
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -174,6 +183,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -185,6 +195,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
 
 ##### For GraphQL:

@@ -8246,6 +8246,7 @@ If a content type has relations to another content type, the generated schema lo
 ...
 
 ```
+{ data-search-exclude }
 
 !!! notice 
     The `DataSource` schemas are a way we use to create relations (links)
@@ -8280,6 +8281,7 @@ schema, we will get a schema properly reflecting the link to `category`:
    ],
 ...
 ```
+{ data-search-exclude }
 
 !!! tip
     You can use the `hydrate=1` parameter along with the [OpenAPI generator](https://flotiq.com/docs/API/generate-package/#generate-server-libraries-or-clients-for-other-languages) to generate SDK packages that will support object hydration.
@@ -8301,6 +8303,7 @@ curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" \
      -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
      -H 'Content-Type: application/json'
 ```
+{ data-search-exclude }
 
 You can use the same request parameters for [scoped API](/docs/API/#user-defined-api-keys) schemas as for [full API](/docs/API/#application-api-keys) schema.
 
@@ -9375,6 +9378,7 @@ You can use the same request parameters for [scoped API](/docs/API/#user-defined
     }
     ```
     { data-search-exclude }
+
 !!! note
     Read more about [API keys and scoped API keys](/docs/API/)
 

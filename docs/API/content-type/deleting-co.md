@@ -209,6 +209,8 @@ If the system deleted all objects, the endpoint would return `200 OK` response w
     "deletedCount": numOfDeletedObjects
 }
 ```
+{ data-search-exclude }
+
 where:
 
 * `numOfDeletedObjects` is number of deleted objects as integer
@@ -219,6 +221,7 @@ For example:
     "deletedCount": 2
 }
 ```
+{ data-search-exclude }
 
 If any of the objects could not be removed (as being used in the relation or as not existing), the system will remove all items that exist and are not in the relation within another object; for the rest of objects, the endpoint will return `400 Validation error` response with:
 ```
@@ -228,6 +231,8 @@ If any of the objects could not be removed (as being used in the relation or as 
     ]
 }
 ```
+{ data-search-exclude }
+
 where:
 
 * `listOfErrors` is the list of errors; each line have information about the id
@@ -241,12 +246,14 @@ For example:
     ]
 }
 ```
+{ data-search-exclude }
 
 Request example:
 
 ```
 curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-delete" -H "accept: schema" -H "X-AUTH-TOKEN: YOUR_API_TOKEN" -H "Content-Type: application/json" -d "[\"blogposts-1\",\"blogposts-2\"]"
 ```
+{ data-search-exclude }
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
 

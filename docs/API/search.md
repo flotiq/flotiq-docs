@@ -29,7 +29,7 @@ Request:
 ```
 GET https://api.flotiq.com/api/v1/search?q=Flotiq&content_type[]=post
 ```
-
+{ data-search-exclude }
     
 Response:
 ```json

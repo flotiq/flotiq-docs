@@ -5,7 +5,6 @@ pattern='```'
 
 for file in $filelist
 do
-    echo $file
     for line in $(grep -Fn $pattern $file | sed -e's/:.*//' | sed -n 'n;p')
     do
         if  ! [[ $(awk "NR==$line+1" $file) == *"{ data-search-exclude }"* ]]; then

@@ -3349,7 +3349,7 @@ as not all tools can handle the whole Open API Schema format.
          -H 'Content-Type: application/json'
     ```
     { data-search-exclude }
-    
+
     Response
     
     ```
@@ -4427,6 +4427,7 @@ as not all tools can handle the whole Open API Schema format.
          -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
          -H 'Content-Type: application/json'
     ```
+    { data-search-exclude }
 
     Response
     ```
@@ -7290,7 +7291,8 @@ as not all tools can handle the whole Open API Schema format.
          -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
          -H 'Content-Type: application/json'
     ```
-
+    { data-search-exclude }
+    
     Response
     ```
     {

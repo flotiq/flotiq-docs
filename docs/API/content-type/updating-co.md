@@ -32,6 +32,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
   "postContent": "This will be the new <b>content</b>"
 }
 ```
+{ data-search-exclude }
+
 
 * `name` is the name of the content type definition
 * `id` is the ID of the object to update

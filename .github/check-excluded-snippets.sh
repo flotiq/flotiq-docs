@@ -17,5 +17,7 @@ done
 if [ -s "status.txt" ]  || [ -f "status.txt" ] ;then
     cat status.txt
     exit 7
+else
+    echo "Every snippet has been excluded from search results"
 fi
 

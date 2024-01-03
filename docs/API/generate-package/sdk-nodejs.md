@@ -84,21 +84,25 @@ by changing into the directory containing package.json (and this README). Let's 
 ```shell
 npm install
 ```
+{ data-search-exclude }
 
 Next, link it globally in npm with the following, also from JAVASCRIPT_CLIENT_DIR:
 
 ```shell
 npm link
 ```
+{ data-search-exclude }
 
 To use the link you just defined in your project, switch to the directory you want to use your flotiq_user_api from, and run:
 
 ```shell
 npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
 ```
+{ data-search-exclude }
 
 Finally, you need to build the module:
 
 ```
 npm run build
 ```
+{ data-search-exclude }

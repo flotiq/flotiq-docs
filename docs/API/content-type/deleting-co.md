@@ -246,7 +246,6 @@ For example:
     ]
 }
 ```
-{ data-search-exclude }
 
 Request example:
 

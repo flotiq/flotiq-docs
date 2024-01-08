@@ -5,7 +5,7 @@ description: A deep dive tutorial on Flotiq's complex data structures and accide
     This tutorial is based on a deprecated starter. We strongly advise you to look at our new blog starters - 
     [Gatsby Recipe 1 – Black and White Classic](https://flotiq.com/starters/gatsby-recipe-1-black-and-white-classic) and 
     [Gatsby Recipe 2 – All you can eat](https://flotiq.com/starters/gatsby-recipe-2-all-you-can-eat) - described in 
-    [our blog post](https://flotiq.com/blog/recipe-website-using-complex-data-structure-and-gatsby-starter). Look at our other 
+    [our blog post](https://blog.flotiq.com/recipe-website-using-complex-data-structure-and-gatsby-starter). Look at our other 
     [starters](https://flotiq.com/starters/) if Gatsby recipe website don't match your need.
 
 # Building a recipes website using complex data structures

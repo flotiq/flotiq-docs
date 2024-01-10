@@ -40,11 +40,14 @@ Webhooks are useful if you want to **extend the system functionality** or **inte
 
 ## Define Webhooks with Flotiq
 
-### Creating a webhook
+### Creating a Content Object changes webhook
 
 To create a Webhook, click on the main menu `Webhooks` -> `Add new Webhook`.
 
-![](../images/webhooks/webhooks-product-added-notification.png){: .border}
+![](../images/webhooks/co-webhook-create.png){: .border}
+
+!!! Note
+    `Async Content Object Changes` webhook `type` is default option, you don't have to worry about setting proper type    
 
 !!! Note
     The above configuration means: Send a POST request to `https://my-example-app.com/notify` with an `AUTH` header of `secret_token` when the new `product` in Flotiq was `created`.

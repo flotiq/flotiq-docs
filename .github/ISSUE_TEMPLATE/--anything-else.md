@@ -12,5 +12,5 @@ Alternatively, check out these resources below. Thanks!
 
 - [Discord](https://discord.gg/FwXcHnX)
 - [Content API Docs](https://flotiq.com/docs/)
-- [Flotiq blog](https://flotiq.com/blog/)
+- [Flotiq blog](https://blog.flotiq.com/)
 - [Flotiq website](https://flotiq.com)

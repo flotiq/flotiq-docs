@@ -57,18 +57,21 @@ Here we will check what our data looks like via our personalized API.
 ```bash
 curl --request GET 'https://api.flotiq.com/api/v1/content/blogpost?auth_token=_YOUR_TOKEN_'
 ```
+{ data-search-exclude }
 
 ### 2. List all articles in the Polish language
 
 ```bash
 curl --request GET 'https://api.flotiq.com/api/v1/content/blogpost?filters={"language":{"type":"equals","filter":"pl"}}&auth_token=_YOUR_TOKEN_'
 ```
+{ data-search-exclude }
 
 ### 3. List all language versions of a single article
 
 ```bash
 curl --request GET 'https://api.flotiq.com/api/v1/content/blogpost?filters={"slug":{"type":"equals","filter":"hello-my-blog"}}&auth_token=_YOUR_TOKEN_'
 ```
+{ data-search-exclude }
 
 !!! Note
     You can use a [Postman package](https://flotiq.com/docs/API/generate-package/) to play with your API easily. 

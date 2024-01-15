@@ -29,7 +29,6 @@ theme:
             icon: material/brightness-4
             name: Switch to light mode
      features:
-       - navigation.instant
        - navigation.top
        - content.action.edit
        - content.action.view
@@ -152,7 +151,6 @@ nav:
   - CLI:
     - 'Overview': CLI/index.md
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
-    - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
     - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
     - 'Migrate content from Contentful to Flotiq': CLI/contentful-importer.md
     - 'Purging data from Flotiq account': CLI/purge.md
@@ -161,6 +159,7 @@ nav:
     - 'Overview': Universe/index.md
     - 'Deployment': Universe/deployment.md
     - 'Gatsby': Universe/gatsby.md
+    - 'NextJS': Universe/nextjs.md
     - 'Meta-API': Universe/metaapi.md
     - 'Postman': Universe/postman.md
     - 'Scully': Universe/scully.md
@@ -189,4 +188,4 @@ nav:
     - 'Upload media example app': Deep-Dives/upload-media.md
   - Flotiq Mobile Expo: Flotiq-Mobile-Expo/overview.md
   - FAQ: faq.md
-  - 'Contact us': contact.md
+  - 'Contact us': '../contact'

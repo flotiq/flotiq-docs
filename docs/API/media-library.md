@@ -33,6 +33,7 @@ Below example shows how to do simple file upload in nodeJS application:
     }).then(res => res.json());
     console.log(json); //logs example object return shown below
     ```
+    { data-search-exclude }
 
 ### Response parameters
 
@@ -54,7 +55,8 @@ The response will be a Content Object of type `_media`.
         "width": 150
     }
     ```
-    
+    { data-search-exclude }
+
 Now you can see uploaded images in the media library. Your files are accessible also via REST API like other Content Objects. 
 To get list of images with metadata use `GET /api/v1/content/_media` endpoint.
 
@@ -215,7 +217,7 @@ All the Media Content Object parameters are described also in the `Media` Conten
         }
     }
     ```
-
+    { data-search-exclude }
 
 
 

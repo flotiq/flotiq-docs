@@ -7,6 +7,7 @@ The command looks like this:
 ```bash
 flotiq purge [flotiqApiKey]
 ```
+{ data-search-exclude }
 
 After running the command, all your objects should be removed.
 

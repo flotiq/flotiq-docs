@@ -5,7 +5,7 @@ description: A deep dive tutorial on Flotiq's complex data structures and accide
     This tutorial is based on a deprecated starter. We strongly advise you to look at our new blog starters - 
     [Gatsby Recipe 1 – Black and White Classic](https://flotiq.com/starters/gatsby-recipe-1-black-and-white-classic) and 
     [Gatsby Recipe 2 – All you can eat](https://flotiq.com/starters/gatsby-recipe-2-all-you-can-eat) - described in 
-    [our blog post](https://flotiq.com/blog/recipe-website-using-complex-data-structure-and-gatsby-starter). Look at our other 
+    [our blog post](https://blog.flotiq.com/recipe-website-using-complex-data-structure-and-gatsby-starter). Look at our other 
     [starters](https://flotiq.com/starters/) if Gatsby recipe website don't match your need.
 
 # Building a recipes website using complex data structures
@@ -50,12 +50,14 @@ Here's why:
     1 pinch of salt
     1 tbsp of butter
 ```
+{ data-search-exclude }
 
 ```
 - Eggs: 2
 - Salt: 1 pinch
 - Butter: 1 tbsp
 ```
+{ data-search-exclude }
 
 ```
 <ul>
@@ -64,6 +66,7 @@ Here's why:
     <li>1 tablespoon of butter</li>
 </ul>
 ```
+{ data-search-exclude }
 
 and so on.
 
@@ -133,12 +136,14 @@ If you'd like to dig a little deeper into this recipe website, here's your quick
     ```bash
     npm install -g gatsby
     ```
+    { data-search-exclude }
 
 2. **Start project from the template using Gatsby CLI**
     
     ```bash
     gatsby new gatsby-starter-recipes https://github.com/flotiq/gatsby-starter-recipes.git
     ```
+    { data-search-exclude }
 
 3. **Setup "Recipe" Content Type in Flotiq** 
 
@@ -158,6 +163,7 @@ If you'd like to dig a little deeper into this recipe website, here's your quick
     GATSBY_FLOTIQ_BASE_URL="https://api.flotiq.com"
     FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
     ```
+    { data-search-exclude }
 
 5. **Launch the Gatsby project**
 
@@ -168,7 +174,8 @@ If you'd like to dig a little deeper into this recipe website, here's your quick
     npm install
     gatsby develop
     ```
-   
+    { data-search-exclude }
+
 6. **Open the source code and start editing!**
     
     Your site is now running at `http://localhost:8000`!

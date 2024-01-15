@@ -21,6 +21,7 @@ After installation is required login to Heroku via CLI:
 ```bash
 heroku login
 ```
+{ data-search-exclude }
 
 When we log in, the CLI tool is ready to go.
 ## Select and fork starter
@@ -50,6 +51,7 @@ Add `-$PORT` to command `start` in packages.json
     "lint": "next lint"
   },
 ```
+{ data-search-exclude }
 ## Create a Heroku app
 
 In the project directory, run the command:
@@ -57,6 +59,8 @@ In the project directory, run the command:
 ```bash
 heroku create -a flotiq-blog-1
 ```
+{ data-search-exclude }
+
 !!! note
     `flotiq-blog-1` - is application name,
     when command return error about app name  is already taken
@@ -67,12 +71,14 @@ To show list of application, run:
 ```bash
 heroku apps
 ```
+{ data-search-exclude }
 
 Set remote for your blog:
 
 ```bash
 heroku git:remote -a flotiq-blog-1
 ```
+{ data-search-exclude }
 
 ## Set environment variables
 
@@ -81,6 +87,8 @@ heroku git:remote -a flotiq-blog-1
  heroku config:set FLOTIQ_API_KEY=_FLOTIQ_API_KEY_
  heroku config:set NEXT_PUBLIC_GA_ID=_GOOGLE_ANALITICS_ID_
 ```
+{ data-search-exclude }
+
 !!! note
     `_FLOTIQ_API_KEY_` - Flotiq api key from: [https://editor.flotiq.com/api-keys](https://editor.flotiq.com/api-keys)
 
@@ -96,6 +104,7 @@ Now commit your code changes (packages.json) and push it to Heroku:
 git commit -a -m "Heroku deploy"
 git push heroku main
 ```
+{ data-search-exclude }
 
 !!! note
     `main` is the name of the branch. For other repositories, this name maybe is different.

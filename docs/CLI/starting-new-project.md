@@ -7,6 +7,7 @@ The command looks like this:
 ```bash
 flotiq start [projectName] [flotiqStarterUrl] [flotiqApiKey]
 ```
+{ data-search-exclude }
 
 After running the command, you should have a new project cloned with installed dependencies, data imported to your Flotiq account and started server with the project.
 

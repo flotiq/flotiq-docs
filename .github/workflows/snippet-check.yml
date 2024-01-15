@@ -1,0 +1,15 @@
+name: Snippet check script
+# Controls when the action will run. Triggers the workflow on push
+# events but only for the master branch
+on:
+  pull_request
+
+
+jobs:
+  check_snippets:
+    runs-on: ubuntu-latest # The type of runner that the job will run on
+    steps: # Steps represent a sequence of tasks that will be executed as part of the job
+    - name: Check out the repository
+      uses: actions/checkout@v2
+    - name: Run the script
+      run: .github/check-excluded-snippets.sh

@@ -1,7 +1,16 @@
 title: Building a blog in 3 minutes with Flotiq, Gatsby and Netlify | Flotiq docs
 description: A deep dive tutorial on how to build your first blog using a headless CMS system like Flotiq, GatsbyJS and Netlify.
 
+<<<<<<< HEAD
 # Building a blog in 3 minutes with Flotiq, Gatsby and Netlify
+=======
+!!! caution
+    This tutorial is based on a deprecated starter. We strongly advise you to look at our new blog starters - 
+    [Gatsby Blog 1 – Gradient](https://flotiq.com/starters/gatsby-blog-1-gradient) and 
+    [Gatsby Blog 2 – Modern](https://flotiq.com/starters/gatsby-blog-2-modern) - described in 
+    [our blog post](https://blog.flotiq.com/flotiq-starter-gatsby-blog). Look at our other 
+    [starters](https://flotiq.com/starters/) if Gatsby blogs don't match your need.
+>>>>>>> 91f404143c2faef0976567c8141452039dddde98
 
 In this deep dive you will learn how easy it is to build and deploy a blog with Flotiq, Gatsby and Netlify. Follow along and you should end up with a working blog page in no more than 3 minutes!
 

@@ -50,6 +50,7 @@ Now that we know how to upload files to the media library, we can prepare a simp
     <button type="submit">Save</button>
 </form>
 ```
+{ data-search-exclude }
 
 !!! Caution
     Remember that this is only an example - in open applications, you should:
@@ -140,6 +141,7 @@ You can find the entire working example with comments below. You only have to re
 </html>
 ```
 An example is also available here: [https://plnkr.co/edit/8kUJo8UZzWSi1c6s](https://plnkr.co/edit/8kUJo8UZzWSi1c6s)
+{ data-search-exclude }
 
 Remember that in production solutions, the API key should not be included in the frontend code of the application. You can hide it using the backend part or use a proxy.
 

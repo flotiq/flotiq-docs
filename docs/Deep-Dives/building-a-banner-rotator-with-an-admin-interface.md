@@ -61,6 +61,7 @@ The HTML container can look like this:
      data-rotator-key="__FLOTIQ_SCOPED_READ_ONLY_KEY__">
 </div>
 ```
+{ data-search-exclude }
 
 and here's a very simple JavaScript that downloads the banner and shows it in the target container:
 
@@ -107,6 +108,7 @@ document.querySelectorAll('[data-rotator-id]').forEach((element) => {
 })
 </script>
 ```
+{ data-search-exclude }
 
 Who! That's not even 40 lines of code and we have a working ad rotator!
 
@@ -128,6 +130,7 @@ With that - we don't need to put the entire script on our website, it's enough t
 </div>
 <script src="https://cdn.jsdelivr.net/gh/trzcina/flotiq-rotator@1/src/script.min.js" defer></script>
 ```
+{ data-search-exclude }
 
 This code can be pasted in any CMS. Here's how it looks in BoltCMS 
 

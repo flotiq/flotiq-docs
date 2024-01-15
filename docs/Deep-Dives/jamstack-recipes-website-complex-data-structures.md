@@ -43,12 +43,14 @@ Here's why:
     1 pinch of salt
     1 tbsp of butter
 ```
+{ data-search-exclude }
 
 ```
 - Eggs: 2
 - Salt: 1 pinch
 - Butter: 1 tbsp
 ```
+{ data-search-exclude }
 
 ```
 <ul>
@@ -57,6 +59,7 @@ Here's why:
     <li>1 tablespoon of butter</li>
 </ul>
 ```
+{ data-search-exclude }
 
 and so on.
 
@@ -126,12 +129,14 @@ If you'd like to dig a little deeper into this recipe website, here's your quick
     ```bash
     npm install -g gatsby
     ```
+    { data-search-exclude }
 
 2. **Start project from the template using Gatsby CLI**
     
     ```bash
     gatsby new gatsby-starter-recipes https://github.com/flotiq/gatsby-starter-recipes.git
     ```
+    { data-search-exclude }
 
 3. **Setup "Recipe" Content Type in Flotiq** 
 
@@ -151,6 +156,7 @@ If you'd like to dig a little deeper into this recipe website, here's your quick
     GATSBY_FLOTIQ_BASE_URL="https://api.flotiq.com"
     FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
     ```
+    { data-search-exclude }
 
 5. **Launch the Gatsby project**
 
@@ -161,7 +167,8 @@ If you'd like to dig a little deeper into this recipe website, here's your quick
     npm install
     gatsby develop
     ```
-   
+    { data-search-exclude }
+
 6. **Open the source code and start editing!**
     
     Your site is now running at `http://localhost:8000`!

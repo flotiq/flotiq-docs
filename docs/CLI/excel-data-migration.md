@@ -16,6 +16,7 @@ The command looks like this:
 ```bash
 flotiq excel-import [ctdName] [filePath] [flotiqApiKey]
 ```
+{ data-search-exclude }
 
 Command logs the following information:
 
@@ -54,6 +55,7 @@ Command logs the following information:
         co_success: 3
     }
     ```
+    { data-search-exclude }
 
 ## Import data from MS Excel to Flotiq
 
@@ -64,6 +66,7 @@ The command looks like this:
 ```bash
 flotiq excel-import [ctdName] [filePath] [flotiqApiKey]
 ```
+{ data-search-exclude }
 
 Command logs the following information:
 For every sheet in the workbook:
@@ -106,6 +109,7 @@ For every sheet in the workbook:
             }
     }
     ```
+    { data-search-exclude }
 
 ### Notes
 

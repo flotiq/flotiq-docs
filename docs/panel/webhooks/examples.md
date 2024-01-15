@@ -126,6 +126,7 @@ In the RocketChat dashboard:
       }
     }
     ```
+    { data-search-exclude }
 
 5. Save webhook and copy your `Webhook URL`.
 

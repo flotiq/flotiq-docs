@@ -67,6 +67,7 @@ Content Type</abbr> is simply a ``POST`` call with a payload similar to:
     }
 }
 ```
+{ data-search-exclude }
 
 Let's quickly look at the properties of this object. On the top level, there are the following properties:
 
@@ -103,6 +104,7 @@ also should have information about the connection with `AbstractContentTypeSchem
     }
 ],
 ```
+{ data-search-exclude }
 
 All property names should have only `a-z`, `A-Z`, `0-9` and `_` characters. `id` and `objectType` property names are restricted.
 
@@ -157,6 +159,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
                 "order":["title","postContent"]}
         }'
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -168,7 +171,8 @@ The first input in the form in the CMS panel will be `title` input, and the seco
         request.AddParameter("application/json", "{\"name\":\"blogposts\",\"label\":\"Blog Posts\",\"schemaDefinition\":{\"type\":\"object\",\"allOf\":[{\"$ref\":\"#/components/schemas/AbstractContentTypeSchemaDefinition\"},{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"postContent\":{\"type\":\"string\"}}}],\"required\":[\"title\",\"postContent\"],\"additionalProperties\":false},\"metaDefinition\":{\"propertiesConfig\":{\"title\":{\"label\":\"Title\",\"inputType\":\"text\",\"unique\":true},\"postContent\":{\"label\":\"Post content\",\"inputType\":\"richtext\",\"unique\":false}},\"order\":[\"title\",\"postContent\"]}}", ParameterType.RequestBody);
         IRestResponse response = client.Execute(request);
         ```
-    
+        { data-search-exclude }
+
     === "Go + Native"
 
         ```
@@ -202,7 +206,8 @@ The first input in the form in the CMS panel will be `title` input, and the seco
         
         }
         ```
-    
+        { data-search-exclude }
+
     === "Java + Okhttp"
         
         ```
@@ -219,6 +224,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -229,6 +235,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
             .body("{\"name\":\"blogposts\",\"label\":\"Blog Posts\",\"schemaDefinition\":{\"type\":\"object\",\"allOf\":[{\"$ref\":\"#/components/schemas/AbstractContentTypeSchemaDefinition\"},{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"postContent\":{\"type\":\"string\"}}}],\"required\":[\"title\",\"postContent\"],\"additionalProperties\":false},\"metaDefinition\":{\"propertiesConfig\":{\"title\":{\"label\":\"Title\",\"inputType\":\"text\",\"unique\":true},\"postContent\":{\"label\":\"Post content\",\"inputType\":\"richtext\",\"unique\":false}},\"order\":[\"title\",\"postContent\"]}}")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -296,6 +303,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -330,6 +338,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 !!! Responses
 
@@ -387,6 +396,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
             }
         }
         ```
+        { data-search-exclude }
 
     === "400 Validation error"
 
@@ -411,6 +421,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -422,6 +433,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
 ### Possible validation errors
 
@@ -508,6 +520,7 @@ All Content Types have automatically added properties from `AbstractContentTypeS
     ]
 },
 ```
+{ data-search-exclude }
 
 ### Property types
 
@@ -1130,6 +1143,7 @@ Input types of properties in `metaDefinition`:
         }
     }
     ```
+    { data-search-exclude }
 
 ## Creating Content Types through the Content modeller
 

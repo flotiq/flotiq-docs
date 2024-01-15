@@ -59,6 +59,7 @@ addEventListener('fetch', event => {
 })
 
 ```
+{ data-search-exclude }
 
 which is adapted from [Cloudflare template gallery](https://developers.cloudflare.com/workers/templates/pages/alter_headers/).
 

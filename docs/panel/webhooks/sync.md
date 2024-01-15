@@ -48,6 +48,7 @@ All sync webhooks generate a payload according to the following schema:
 }
 ```
 Flotiq backend will make sure to send this payload to the system you registered as the sync webhook target.
+{ data-search-exclude }
 
 ## Mutating webhooks
 
@@ -72,6 +73,7 @@ HTTP 200:
     }
 }
 ```
+{ data-search-exclude }
 
 ## Validating webhooks
 
@@ -95,6 +97,7 @@ HTTP 200:
     }
 }
 ```
+{ data-search-exclude }
 
 and in case of failed validation:
 
@@ -113,6 +116,7 @@ HTTP 400:
     }
 }
 ```
+{ data-search-exclude }
 
 !!! Note
     In case you register multiple webhooks for a single CTD - they will be processed sequentially. There is no guarantee on the order of processing. All webhooks have to respond successfully in order for the object to be processed.
@@ -139,6 +143,7 @@ In case the remote system fails to respond according to one of the formats descr
     ]
 }
 ```
+{ data-search-exclude }
 
 in such case please check the following:
 

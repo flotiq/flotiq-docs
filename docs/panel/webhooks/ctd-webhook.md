@@ -17,10 +17,13 @@ To create your new `Content Type Definitions` Webhook, click on the main menu `W
     `Action` input will disappear, because `Content Definition Changes` webhooks are fired on every `Content Definition's` action  (`Create`, `Update`, `Delete`).
 
 !!! Note
-    `Content Type Definitions` input will disappear as well, since `Content Definition Changes` webhooks are listening on actions performed on any of yours `Content Definition's`.    
+    `Content Type Definitions` input will disappear as well, since `Content Definition Changes` webhooks are listening on actions performed on any of yours `Content Definition's`.
 
 ## Content Definition Changes webhooks payload
 When a `Content Definition Changes` Webhook is executed, a payload containing information about the webhook, the action name (`Create`, `Update`, `Delete`) and the `Content Definition's` data is sent to the target URL.
+
+!!! Note
+    `Content Definition Changes` Webhooks are fired asynchronously
 
 ```json
 {

@@ -3,25 +3,24 @@ description: Async Content Definition webhooks in Flotiq
 
 # Content Definition webhooks
 
-## What is a Content Definition async webhook?
+## What is a Content Definition webhook?
 
-`Content Definition Changes` webhooks type is very similar to `Async Content Object Changes` one, with minor differences, that kid of webhooks are executed on each action i.e. `Create`, `Update`, `Delete`. Preformed on every `Content Definition`.
+`Content Definition Changes` webhook type is very similar to `Async Content Object Changes`, but with minor differences. First of all that kid of webhook is executed on each action (`Create`, `Update`, `Delete`), preformed on yours `Content Definition's`.
 
-## Define Content Definition Webhooks with Flotiq
+## Creating a Content Definition changes webhook
 
-### Creating a Content Definition changes webhook
+To create your new `Content Type Definitions` Webhook, click on the main menu `Webhooks` -> `Add new Webhook`. Then select `Type` as `Content Type Definition Changes`
 
-To create a Webhook, click on the main menu `Webhooks` -> `Add new Webhook`. Then select `Type` as `Content Type Definition Changes`
-
-![](../images/webhooks/ctd-webhook-create.png){: .border}
+![](../images/webhooks/webhooks-create-ctd-webhook.png){: .border}
 
 !!! Note
-    `Action` input will disappear, because Content Definition webhooks are fired be default on every possible `Content Definition's` action:  (`Create`, `Update`, `Delete`).
+    `Action` input will disappear, because `Content Definition Changes` webhooks are fired on every `Content Definition's` action  (`Create`, `Update`, `Delete`).
 
 !!! Note
-    `Content Type Definitions` input will disappear ass well, since `Content Definition` webhooks are listening on actions performed on any of yours `Content Definition's`.    
+    `Content Type Definitions` input will disappear as well, since `Content Definition Changes` webhooks are listening on actions performed on any of yours `Content Definition's`.    
 
 ## Content Definition Changes webhooks payload
+When a `Content Definition Changes` Webhook is executed, a payload containing information about the webhook, the action name (`Create`, `Update`, `Delete`) and the `Content Definition's` data is sent to the target URL.
 
 ```json
 {

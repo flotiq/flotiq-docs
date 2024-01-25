@@ -1,29 +1,23 @@
 title: Start selling online - Node.js e-commerce tutorial using Snipcart, Flotiq and Gatsby | Flotiq deep dives
 description: Start selling products online instantly. Use our step-by-step tutorial on Snipcart, Gatsby and Flotiq and put your e-commerce live in 5 minutes.
 
-!!! caution
-    This tutorial is based on a deprecated starter. We strongly advise you to look at our new blog starters - 
-    [Gatsby eCommerce 1 – Green Shop](https://flotiq.com/starters/gatsby-ecommerce-1-green-shop) and 
-    [Gatsby eCommerce 2 – Merch Store](https://flotiq.com/starters/gatsby-ecommerce-2-merch-store). Look at our other 
-    [starters](https://flotiq.com/starters/) if Gatsby recipe website don't match your need.
+# Start selling online with Snipcart, Flotiq, Gatsby and Netlify
 
-# Start selling online with Snipcart, Flotiq, Gatsby and Heroku
-
-This time, we'll dive deep into building e-commerce with Snipcart, Flotiq and Gatsby. We'll start with a fresh Flotiq account, build a Content Type Definition, hook it up with a Gatsby starter and finally - deploy it live using Heroku.
+This time, we'll dive deep into building e-commerce with Snipcart, Flotiq and Gatsby. We'll start with a fresh Flotiq account, build a Content Type Definition, hook it up with a Gatsby starter and finally - deploy it live using Netlify.
 
 What you'll get:
 
 1. A simple, but beautiful, functional e-commerce website with your own products, running live on the Internet.
 
-![Live e-commerce website, built and released in 5 minutes](images/snipcart-gatsby-demo/live-website.png)
+![Live e-commerce website, built and released in 5 minutes](images/snipcart-gatsby-demo/live-website.png){: .center .border}
 
 What you'll need:
 
 1. Flotiq account (free),
 2. Snipcart account (free for testing), register [here](https://snipcart.com)
 3. Node.js & NPM installed
-4. [This repository](https://github.com/flotiq/gatsby-starter-products)
-5. Heroku account (free) if you'd like to put it live.
+4. [This repository](https://github.com/flotiq/flotiq-gatsby-shop-2)
+5. Netlify account (free) if you'd like to put it live.
 
 Let's get started!
 
@@ -41,28 +35,28 @@ The most crucial step - you have to tell Flotiq what kind of data you want to st
 
 When you first log in - it's going to be pretty empty. No content, nothing. Head over to the `Type definitions` screen.
 
-![Predefined Content Type Definitions](images/snipcart-gatsby-demo/upload_eb0f862f52d89aa0558842509818938a.png)
+![Predefined Content Type Definitions](images/snipcart-gatsby-demo/predefined-content-type-definitions.png){: .center .border}
 
 
 Here you find a list of simple boilerplate content types, which are a great start if you're in a hurry. 
 
 Click on `Product` and then `Save`. You don't need to make any changes to get up and running with this project!
 
-![Product content type body](images/snipcart-gatsby-demo/upload_2b69829cba0a8ad8d76416fb0bf7a6b0.png)
+![Product content type body](images/snipcart-gatsby-demo/product-content-type-body.png){: .center .border}
 
 ### Create your content, 2 minutes
 
 For this project to work - you have to create a couple of products. In the left sidebar click on `Content` → `Products` and click the `Add new Product object` button.
 
-![Adding new Content Object of type Product](images/snipcart-gatsby-demo/upload_999f5372a47637004f06bc1a00cc007e.png)
+![Adding new Content Object of type Product](images/snipcart-gatsby-demo/adding-new-content-object-of-type-product.png){: .center .border}
 
 Enter the product detail.
 
-![Product details in Flotiq](images/snipcart-gatsby-demo/upload_9832c93c03f6862b07fcb13f848962fe.png)
+![Product details in Flotiq](images/snipcart-gatsby-demo/product-details-in-flotiq.png){: .center .border}
 
 You can upload your images or use our awesome Unsplash integration - head over to the `Stock photos` tab in the Media Library and browse through thousands of beautiful images.
 
-![Stock photos media library](images/snipcart-gatsby-demo/upload_a1a461706f319a31ce3f4ba1b58756dc.png)
+![Stock photos media library](images/snipcart-gatsby-demo/stock-photos-media-library.png){: .center .border}
 
 Finally - click the `Save button`. 
 
@@ -82,7 +76,7 @@ To make this extremely simple, we have prepared a Gatsby starter, that integrate
 Start by cloning the repository:
 
 ```
-git clone https://github.com/flotiq/gatsby-starter-products
+git clone https://github.com/flotiq/flotiq-gatsby-shop-2
 ```
 { data-search-exclude }
 
@@ -91,14 +85,14 @@ git clone https://github.com/flotiq/gatsby-starter-products
 Then, in the root folder of the repository create a file called `.env`. This file store the configuration for Flotiq and Snipcart. Put the following contents in the `.env` file:
 
 ```
-GATSBY_FLOTIQ_BASE_URL="https://api.flotiq.com"
-FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
+GATSBY_FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
+SNIPCART_API_KEY="YOUR SNIPCART API KEY"
 ```
 { data-search-exclude }
 
-You can find your Flotiq API keys in the user profile section of the interface:
+You can find your Flotiq API keys in `API Keys` section:
 
-![Flotiq user API key](images/snipcart-gatsby-demo/upload_61473eb050d5e4992b8c88eac716e52b.png)
+![Flotiq user API key](images/snipcart-gatsby-demo/flotiq-user-api-key.png){: .border}
 
 !!! caution
     We strongly recommend that you create a scoped API key (read more about [API access](../API/index.md)), but for development, you can use the default Read Only key provided in the interface. 
@@ -108,14 +102,14 @@ You can find your Flotiq API keys in the user profile section of the interface:
 It's as simple as that. You should be good to go. Install the NPM dependencies and start your gatsby project:
 
 ```
-npm install
-gatsby develop
+yarn install
+yarn run develop
 ```
 { data-search-exclude }
 
 You should now see your store at `http://localhost:8000`.
 
-![Your store](images/snipcart-gatsby-demo/upload_18388a1968458357ff2eea62bb563adc.png)
+![Your store](images/snipcart-gatsby-demo/your-store.png){: .border}
 
 ## Start selling online
 
@@ -130,46 +124,38 @@ Head over to [Snipcart](https://snipcart.com) and in your account - retrieve you
 Put that key in the `.env` file, so the file now looks like this:
 
 ```
-GATSBY_FLOTIQ_BASE_URL="https://api.flotiq.com"
-FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
-SNIPCART_API_KEY="YOUR SNIPCART KEY"
+GATSBY_FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
+SNIPCART_API_KEY="YOUR SNIPCART API KEY"
 ```
 { data-search-exclude }
 
-and restart gatsby with `gatsby develop`.
+and restart gatsby with `yarn run develop`.
 
 Here's what you should now see, once you put an item in the cart:
 
-![Your cart](images/snipcart-gatsby-demo/upload_82b4d268d923659550753caa762f02c2.png)
+![Your cart](images/snipcart-gatsby-demo/your-cart.png)
 
 Once you complete the checkout steps, you'll see the final screen:
 
-![Confirm order](images/snipcart-gatsby-demo/upload_632049a8ac4b39a5d39233d1e8414720.png)
-
-But if you try to place the order from your local machine - it will end up looking like this:
-
-![Your order cart content](images/snipcart-gatsby-demo/upload_0b4afe702b39d742e65fe8bf652a517f.png)
+![Confirm order](images/snipcart-gatsby-demo/confirm-order.png)
 
 So - if you want to test the integration entirely - it's time to put this site live!
 
-## Putting the website live using Heroku, 2 minutes
+## Putting the website live using Netlify, 2 minutes
 
 To make it super simple - we've prepared a button, that immediately put your project live on the Internet. 
 
 Press the button!
-  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/gatsby-starter-products)
+  [![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/flotiq-gatsby-shop-2)
   
-Once you log in to Heroku (you can use a free account for that) - you have to pick a domain name for your project. We used `snipcart-flotiq`.
-![Name and Region settings in Heroku](images/snipcart-gatsby-demo/upload_f7b021894467811e477eae8c3a3190f9.png)
+Once you log in to Netlify (you can use a free account for that) - you have to pick a domain name for your project. 
+We used `snipcart-flotiq` and copy the details from your `.env` file in the input fields.
 
-and then copy the details from your `.env` file in the input fields 
-![Application Configuration in Heroku](images/snipcart-gatsby-demo/upload_e88ab376e585bfdf413351b01898f9f7.png)
+![Application Configuration in Netlify](images/snipcart-gatsby-demo/netlify-deploy.png) 
 
-and hit `Deploy app`. In a minute (or two) - your app is live!
-![Deploy App to Heroku button](images/snipcart-gatsby-demo/upload_0e11e37662064ad43e0fc994f4cf7401.png)
+and hit `Save & Deploy`. In a minute (or two) - your app is live!
 
-!!! hint
-    If you'd like to host this project under your own domain name, you can use the wonderful **and free** service provided by Cloudflare and [this hack](../add-a-custom-domain-to-heroku-for-free/) to add a custom domain to a free Heroku account. Normally - you would have to pay for that in Heroku, but hey - times are difficult.
+![Deploy App to Netlify result](images/snipcart-gatsby-demo/netlify-deploy-preview.png)
 
 
 ### Provide the domain name in Snipcart
@@ -180,14 +166,14 @@ While you're waiting for the deployment to finish - go to your Snipcart profile 
 
 ### Verify the result
 
-Result? You've successfully placed an order!
+Result? You've successfully placed an order! 
 
-![Order Result](images/snipcart-gatsby-demo/upload_5c0836387a79f4dc5e187d30fef345c9.png)
+![Order Result](images/snipcart-gatsby-demo/ordered.png)
 
 
 And you immediately see it in Snipcart, too.
 
-![Snipcart Order](images/snipcart-gatsby-demo/upload_1a5a590dd6e2fa214c221305e11f8b13.png)
+![Snipcart Order](images/snipcart-gatsby-demo/snip-ordered.png)
 
 
 ## Conclusions

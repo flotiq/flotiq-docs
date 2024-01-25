@@ -9,7 +9,7 @@ Webhooks are a form of contacint external systems when an event occurs in Flotiq
 
 We support 2 types of webhooks:
 
-- [asynchronous](async) - this is the type you are probably most familiar with, you can think of those as notifications sent to external systems *after* an event happens in Flotiq, without altering the processing flow on Flotiq side,
+- [asynchronous](async-co-webhook) - this is the type you are probably most familiar with, you can think of those as notifications sent to external systems *after* an event happens in Flotiq, without altering the processing flow on Flotiq side,
 - [synchronous](sync) - these webhooks are synchronous calls that are made to an external system *during* the processing of data in Flotiq, for example to perform data validation.
 
 Follow the links above to read more about each type of webhooks and example use cases.

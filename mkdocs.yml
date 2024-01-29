@@ -139,7 +139,8 @@ nav:
     - 'Users': panel/users.md
     - 'Webhooks':
       - Overview: panel/webhooks/index.md
-      - 'Async webhooks': panel/webhooks/async.md
+      - 'Async CO webhooks': panel/webhooks/async-co-webhook.md
+      - 'CTD webhooks': panel/webhooks/ctd-webhook.md
       - 'Async examples': panel/webhooks/examples.md
       - 'Sync webhooks':  panel/webhooks/sync.md
       - 'Sync examples': panel/webhooks/sync-examples.md

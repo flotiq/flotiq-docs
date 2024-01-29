@@ -1,5 +1,6 @@
 title: Hooking-up React TodoMVC with Flotiq headless CMS  | Flotiq docs
-description: 
+description: Discover how to seamlessly connect a headless CMS to your React applications with our step-by-step guide. Learn to use Flotiq with the classic TodoMVC app for efficient data storage and management, making your frontend development smoother and more scalable.
+keywords: React, headless CMS, TodoMVC, Flotiq, frontend development, web application, data storage, API integration, JavaScript, React hooks, content management system
 
 
 # Hooking-up a headless CMS to React apps
@@ -140,77 +141,72 @@ The simplest way to achieve that, without breaking the reducer, is to add an API
 
 
 1. Install `node-fetch`
-
    ```bash
    npm install --save node-fetch@2
    ```
+   { data-search-exclude }
 2. Add the `useCallback` import in the first line of `app.jsx`:
-
    ```bash
    import { useReducer, useCallback } from "react";
    ```
+   { data-search-exclude }
 3. Import `node-fetch`
-
    ```bash
    import fetch from "node-fetch";
    ```
-4. Add the `FLOTIQ_API_KEY` const right after the imports:
-
+   { data-search-exclude }
+4. Add the `FLOTIQ_API_KEY` const right after the imports (Check this documentation on [how to obtain a Flotiq API key](https://flotiq.com/docs/API/?h=api+key#application-api-keys)).
    ```bash
-   const FLOTIQ_API_KEY = 'PUT YOUR READ-WRITE KEY HERE';
+    const FLOTIQ_API_KEY = 'PUT YOUR READ-WRITE KEY HERE';
    ```
+   { data-search-exclude }
+5. Finally, add the `preDispatch` function in `app.jsx`
+    ```bash
+    // Find this in app.jsx:
 
-   Check this documentation on [how to obtain a Flotiq API key](https://flotiq.com/docs/API/?h=api+key#application-api-keys).
-5. Add the `preDispatch` function in `app.jsx`
+    export function App() {
+    const [todos, dispatch] = useReducer(todoReducer, []);
 
-```bash
-// Find this in app.jsx:
+    // Add this:
+    const preDispatch = useCallback( async (action) => {
+            
+            if(action.type == 'ADD_ITEM'){
 
-export function App() {
-  const [todos, dispatch] = useReducer(todoReducer, []);
+                const options = {
+                    method: 'POST',
+                    headers: {'content-type': 'application/json', 'X-AUTH-TOKEN': FLOTIQ_API_KEY},
+                    body: JSON.stringify({title: action.payload.title, completed: false}),
+                };
 
-  // Add this:
-  const preDispatch = useCallback( async (action) => {
-        
-        if(action.type == 'ADD_ITEM'){
+                // Create the object in Flotiq
+                const res = await fetch('https://api.flotiq.com/api/v1/content/item', options);
+                // Retrieve the response to get the object ID
+                const data = await res.json();
+                // Add the ID as part of payload for the reducer            
+                action.payload.id = data.id;           
 
-            const options = {
-                method: 'POST',
-                headers: {'content-type': 'application/json', 'X-AUTH-TOKEN': FLOTIQ_API_KEY},
-                body: JSON.stringify({title: action.payload.title, completed: false}),
-            };
+            }
+            
+            dispatch(action);
+            
+        }, []);
+    ```
+    { data-search-exclude }
 
-            // Create the object in Flotiq
-            const res = await fetch('https://api.flotiq.com/api/v1/content/item', options);
-            // Retrieve the response to get the object ID
-            const data = await res.json();
-            // Add the ID as part of payload for the reducer            
-            action.payload.id = data.id;           
+    !!! success
+        Did you know that Flotiq automatically publishes a set of OpenAPI-compliant endpoints for the content model you define? On top of that there is more - Postman collection, SDKs and API docs, where you can find code snippets that you can simply copy from Flotiq directly into your project!
 
-        }
-        
-        dispatch(action);
-        
-    }, []);
-```
+        Click on the `API Docs` Link in your Flotiq dashboard: 
+        ![](images/todomvc-react-headless-cms/47208a1b-008c-454d-a89e-1594f3fa108a.png){: .center .width75 .border}
 
+        Find the endpoint that you need and copy the code. That’s what I did to build this tutorial :-)
 
-
-!!! success
-    Did you know that Flotiq automatically publishes a set of OpenAPI-compliant endpoints for the content model you define? On top of that there is more - Postman collection, SDKs and API docs, where you can find code snippets that you can simply copy from Flotiq directly into your project!
-
-    Click on the `API Docs` Link in your Flotiq dashboard: 
-    ![](images/todomvc-react-headless-cms/47208a1b-008c-454d-a89e-1594f3fa108a.png){: .center .width75 .border}
-
-    Find the endpoint that you need and copy the code. That’s what I did to build this tutorial :-)
-
-    ![](images/todomvc-react-headless-cms/d5870a70-fcc9-4ddd-a9c5-1208a7a22faf.png " =323x465"){: .center .width50 .border}
+        ![](images/todomvc-react-headless-cms/d5870a70-fcc9-4ddd-a9c5-1208a7a22faf.png " =323x465"){: .center .width50 .border}
 
 
 
 
 3. Pass `preDispatch` instead of `dispatch` to the `Header` and `Main` components:
-
    ```bash
       return (
            <>
@@ -220,13 +216,15 @@ export function App() {
            </>
        );
    ```
-4. Last thing - we need to update the existing reducer to support IDs that are generated outside of the reducer itself:
+   { data-search-exclude }
 
+4. Last thing - we need to update the existing reducer to support IDs that are generated outside of the reducer itself:
    ```bash
        switch (action.type) {
            case ADD_ITEM:
                return state.concat({ id: action.payload.id === undefined ? nanoid() : action.payload.id, title: action.payload.title, completed: false });
    ```
+   { data-search-exclude }
 
 
 With this, you should now see new items appear in Flotiq while you add them in your TodoMVC!
@@ -277,7 +275,7 @@ We will need to add a couple more changes to synchronise the completion state. T
 
     }, [todos]);
 ```
-
+{ data-search-exclude }
 
 That’s it! You will now see the state of the `completed` checkbox change in the CMS every time you make an update in your app:
 

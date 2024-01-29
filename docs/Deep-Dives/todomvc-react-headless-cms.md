@@ -33,25 +33,28 @@ Let’s start with getting this up and running, and it’s straightforward.
 
 
 1. Clone the repo
-
    ```bash
    git clone --depth=1 https://github.com/tastejs/todomvc.git
    ```
-2. Navigate to the React example
+   { data-search-exclude }
 
+2. Navigate to the React example
    ```bash
    cd todomvc/examples/react
    ```
-3. Install the dependencies
+   { data-search-exclude }
 
+3. Install the dependencies
    ```bash
    yarn
    ```
-4. Start the project!
+   { data-search-exclude }
 
+4. Start the project!
    ```bash
    yarn run dev
    ```
+   { data-search-exclude }
 
 
 Your browser should now open and display the TodoMVC app, and you can start adding tasks:

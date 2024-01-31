@@ -3,7 +3,7 @@ description: Flotiq's search API provides an easy way to query all your content 
 
 # Search API
 
-The Flotiq API provides a powerful search engine, which is a wrapper for ElasticSearch queries. We tried to balance between resembling the ES API (for those, who already know it) and keeping it simple and cohesive with Flotiq API. 
+The Flotiq API provides a powerful search engine, which is a wrapper for ElasticSearch queries. We tried to balance between resembling the ES API (for those, who already know it) and keeping it simple and cohesive with Flotiq API.
 
 You can use the search engine via the `GET /api/v1/search` endpoint to search through all Content Objects.
 
@@ -22,10 +22,11 @@ You can use the search engine via the `GET /api/v1/search` endpoint to search th
     | fields[]               | array  | List of content fields to be searched. The expected format: `fields[]=field1&fields[]=field2`                                                                                                                                                                                                                                                       |
     | order_by               | string | Name of the field to sort results by (they are always primarily sorted by `_score`)                                                                                                                                                                                                                                                                 |
     | order_direction        | string | Direction of sorting (`asc` for ascending or `desc` for descending, default `asc`)                                                                                                                                                                                                                                                                  |
+    | random_seed        | number | Seed for random sorting order (overrides `order_by`)                                                                                                                                                                                                                                                                  |
 
 ## Example: Search for "Flotiq" in posts
 
-Request: 
+Request:
 ```
 GET https://api.flotiq.com/api/v1/search?q=Flotiq&content_type[]=post
 ```
@@ -81,8 +82,15 @@ You can restrict querying to a specific field by passing the `fields[]` argument
 
 ## Increase scoring for specific fields
 
-If you'd like to search in several fields, but give better score to results which match the query in a specific field - you can use [ElasticSearch's field boosting](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/query-dsl-query-string-query.html#query-string-multi-field) to promote fields. In order to do that - psas the fields and their weights through the `fields[]` argument, for example `fields[]=title^3&fields[]=content^1` would assign a weight of 3 to the `title` field and a weight of 1 to `content` field.
+If you'd like to search in several fields but give better score to results that match the query in a specific field - you can use [ElasticSearch's field boosting](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/query-dsl-query-string-query.html#query-string-multi-field) to promote fields. In order to do that - pass the fields and their weights through the `fields[]` argument, for example `fields[]=title^3&fields[]=content^1` would assign a weight of 3 to the `title` field and a weight of 1 to `content` field.
 
 ## Aggregate results by field
 
 If you'd like to display faceted results of your searches you can use the `aggregate_by[]` param. Add `aggregate_by[]=category` to aggregate by the `category` field. This works best with fields that have discreet values (like status, category, etc), and only works with string fields, if you wish to aggregate with numeric fields, use `aggregate_by_numeric[]` param.
+
+## Get random content objects
+
+You can use the `random_seed` parameter to retrieve random content objects. The `random_seed` parameter accepts a number value for a random number generator. This will sort data in random order, so if you want for example to retrieve two random content objects, you can pass any number to `random_seed` and set `limit` parameter value to 2.
+
+!!! Note
+    Since random_seed is changing the order of retrieved content objects, it will override the value of your `order_by` parameter.

@@ -188,6 +188,7 @@ nav:
     - 'Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content': 'Deep-Dives/netlify-zapier-gatsby-serverless-deployment-pipeline.md'
     - 'Use Next.js, Typescript and OpenAPI with Flotiq content': 'Deep-Dives/nextjs-react-typescript-openapi.md'
     - 'Upload media example app': Deep-Dives/upload-media.md
+    - 'Build headless no-code website Divhunt': Deep-Dives/divhunt.md
   - Flotiq Mobile Expo: Flotiq-Mobile-Expo/overview.md
   - FAQ: faq.md
   - 'Contact us': '../contact'

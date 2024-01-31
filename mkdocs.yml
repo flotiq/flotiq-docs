@@ -170,6 +170,7 @@ nav:
     - 'Heroku': Universe/heroku.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
+    - 'Hooking React TodoMVC with Flotiq': Deep-Dives/todomvc-react-headless-cms.md
     - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md
     - 'Mobile product showcase application': Deep-Dives/mobile-expo-product-showcase.md # TO UPDATE
     - 'Building a blog': Deep-Dives/Building-a-blog-in-3-minutes.md

@@ -338,7 +338,7 @@ Filter types
 | notEmpty           | Object parameter exists and is not an empty string or array; the `filter` parameter is ignored.                                                               |
 
 !!! Note
-    The equals and notEquals filters allows passing multiple elements so that the results are equal to any of them, for examples:<br>
+    The equals and notEquals filters allow passing multiple elements so that the results are equal to any of them, for examples:<br>
         `{"name":{"type":"equals", "filter":["product-1", "product-2"]}}` <br>
     or: <br>
         `{"name":{"type":"notEquals", "filter":["product-1", "product-2"]}}`

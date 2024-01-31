@@ -7,14 +7,14 @@ description: Frequently Asked Questions on Flotiq CMS
 
 In traditional CMSes, data, content and presentation is one monolith; in Flotiq, content is separated from presentation.
 Because of that, you can enable content reuse and an omnichannel experience.
-Learn more in our [blog post](https://flotiq.com/blog/advantages-of-headless-cms).
+Learn more in our [blog post](https://blog.flotiq.com/advantages-of-headless-cms).
 
 ## What's the difference between Flotiq and WordPress?
 
 WordPress at its core is traditional CMS with data entangled with the presentation,
 it introduced the headless version some time ago, but it still is not based on Open API, 
 so using it is more challenging than using Flotiq API.
-Learn more in our [blog post](https://flotiq.com/blog/why-you-should-consider-flotiq-headless-cms-over-wordpress).
+Learn more in our [blog post](https://blog.flotiq.com/why-you-should-consider-flotiq-headless-cms-over-wordpress).
 
 ## What's the difference between Flotiq and other headless CMSes?
 
@@ -42,7 +42,7 @@ fit the starters more to your needs or when our starters would not be close enou
 
 The answer varies based on what service you have.
 We have out of the box migration for projects based on WordPress -
-[Move WordPress to Flotiq](https://flotiq.com/blog/how-to-move-from-wordpress-to-jamstack-using-our-gatsby-wordpress-starter).
+[Move WordPress to Flotiq](https://blog.flotiq.com/how-to-move-from-wordpress-to-jamstack-using-our-gatsby-wordpress-starter).
 We are working on writing migrations tips and importers for other types of projects source.
 Please contact us to tell us what kind of service you wish to migrate to receive a more fitting solution.
 

@@ -47,6 +47,8 @@ required fields and relations.
      ```
      curl -X GET 'https://api.flotiq.com/api/graphql/schema' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
      ```
+     { data-search-exclude }
+
 !!! Responses
 
     === "200 OK"
@@ -97,6 +99,7 @@ required fields and relations.
             productGallery: [_media]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -108,6 +111,7 @@ required fields and relations.
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
 ### Execute GraphQL Query
 
@@ -129,6 +133,7 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
         }
     }
     ```
+    { data-search-exclude }
 
 To pass this query to the Flotiq, you need to call:
 
@@ -139,6 +144,7 @@ To pass this query to the Flotiq, you need to call:
         --header 'Content-Type: application/json' \
         --data-raw '{"query":"query{products(id:\"product-1\"){id,title,}}"}'
     ```
+    { data-search-exclude }
 
 !!! Response
     === "200 OK"
@@ -152,6 +158,7 @@ To pass this query to the Flotiq, you need to call:
             }
         }
         ```
+        { data-search-exclude }
 
 #### List objects
 
@@ -177,6 +184,7 @@ The below example shows how to list all products ordered by title, limited to 2 
         }
     }
     ```
+    { data-search-exclude }
 
 To pass this query to the Flotiq, you need to call:
 
@@ -187,6 +195,7 @@ To pass this query to the Flotiq, you need to call:
         --header 'Content-Type: application/json' \
         --data-raw '{"query":"query {productsList(limit: 2, order_by: \"title\", order_direction: \"desc\") {id, title}}"}'
     ```
+    { data-search-exclude }
 
 !!! Response
 
@@ -207,6 +216,7 @@ To pass this query to the Flotiq, you need to call:
           }
         }
         ```
+        { data-search-exclude }
 
 ### Relation resolving (hydration)
 
@@ -225,6 +235,7 @@ For example, when we have a product object:
    ]
 }
 ```
+{ data-search-exclude }
 
 and category: 
 ```json
@@ -233,6 +244,7 @@ and category:
    "name": "Tea"
 }
 ```
+{ data-search-exclude }
 
 The GraphQL query for listing objects including categories will look like:
 
@@ -249,6 +261,7 @@ The GraphQL query for listing objects including categories will look like:
         }	
     }
     ```
+    { data-search-exclude }
 
 !!! Request
     ```
@@ -257,6 +270,7 @@ The GraphQL query for listing objects including categories will look like:
         --header 'content-type: application/json' \
         --data '{"query":"query{productsList(limit:1){id,title,categories{id,name}}}"}'
     ```
+    { data-search-exclude }
 
 !!! Response
 
@@ -280,7 +294,7 @@ The GraphQL query for listing objects including categories will look like:
             }
         }
         ```
-
+        { data-search-exclude }
 
 As you can see, the related element, `category`, was fetched, including its properties.
 

@@ -65,7 +65,7 @@ async function handleEvent(event) {
     // if an error is thrown try to serve the asset at 404.html
     if (!DEBUG) {
       try {
-        let response = fetch(`https://flotiq.com/blog/404.html`);
+        let response = fetch(`https://blog.flotiq.com/404.html`);
         response.status = 404;
         return response;
       } catch (e) {}

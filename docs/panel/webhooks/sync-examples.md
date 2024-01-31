@@ -32,7 +32,8 @@ On each update of a `BlogPost` object we will increment the field `edit_counter`
     res.send(response);
   })
   ```
-  
+  { data-search-exclude }
+
 3. Add a [webhook](https://editor.flotiq.com/webhooks/edit):
     - give it a name (e.g. Edit counter)
     - set the type to `Synchronous (block and wait for response)`

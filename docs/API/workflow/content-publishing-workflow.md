@@ -31,6 +31,7 @@ workflow supports only a single state - `saved`. Every content object in the sys
     }
 }
 ```
+{ data-search-exclude }
 
 ## Custom workflows
 
@@ -67,6 +68,7 @@ Workflows are defined at the Content Type Definition level, in order to change t
 
 }
 ```
+{ data-search-exclude }
 
 ### Transitioning objects in the workflow
 
@@ -77,6 +79,7 @@ Every content object created in the system will automatically be assigned the fi
     "action":"_draft_review"
 }
 ```
+{ data-search-exclude }
 
 ### Verifying possible transitions of an object
 
@@ -98,6 +101,7 @@ If you'd like to verify what are the possible transitions of an object, given it
     ]
 }
 ```
+{ data-search-exclude }
 
 ### Published content
 

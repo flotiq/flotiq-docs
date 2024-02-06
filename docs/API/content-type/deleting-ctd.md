@@ -29,6 +29,7 @@ You can only delete Content Types that do not have any Content Objects or are no
         --header 'accept: */*' \
         --header 'X-AUTH-TOKEN: YOUR_API_KEY'
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -38,6 +39,7 @@ You can only delete Content Types that do not have any Content Objects or are no
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -68,6 +70,7 @@ You can only delete Content Types that do not have any Content Objects or are no
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -82,6 +85,7 @@ You can only delete Content Types that do not have any Content Objects or are no
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -90,6 +94,7 @@ You can only delete Content Types that do not have any Content Objects or are no
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -108,6 +113,7 @@ You can only delete Content Types that do not have any Content Objects or are no
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -140,6 +146,7 @@ You can only delete Content Types that do not have any Content Objects or are no
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 !!! Responses
 
@@ -160,6 +167,7 @@ You can only delete Content Types that do not have any Content Objects or are no
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -171,6 +179,7 @@ You can only delete Content Types that do not have any Content Objects or are no
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -182,6 +191,7 @@ You can only delete Content Types that do not have any Content Objects or are no
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
 
 ## Deleting Content Types through the Content modeller

@@ -29,7 +29,6 @@ theme:
             icon: material/brightness-4
             name: Switch to light mode
      features:
-       - navigation.instant
        - navigation.top
        - content.action.edit
        - content.action.view
@@ -88,7 +87,6 @@ extra:
   analytics:
     provider: google
     property: G-155L75RSLX
-  disqus: 'flotiq'
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/FwXcHnX
@@ -141,7 +139,8 @@ nav:
     - 'Users': panel/users.md
     - 'Webhooks':
       - Overview: panel/webhooks/index.md
-      - 'Async webhooks': panel/webhooks/async.md
+      - 'Async CO webhooks': panel/webhooks/async-co-webhook.md
+      - 'CTD webhooks': panel/webhooks/ctd-webhook.md
       - 'Async examples': panel/webhooks/examples.md
       - 'Sync webhooks':  panel/webhooks/sync.md
       - 'Sync examples': panel/webhooks/sync-examples.md
@@ -153,7 +152,6 @@ nav:
   - CLI:
     - 'Overview': CLI/index.md
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
-    - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
     - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
     - 'Migrate content from Contentful to Flotiq': CLI/contentful-importer.md
     - 'Purging data from Flotiq account': CLI/purge.md
@@ -162,6 +160,7 @@ nav:
     - 'Overview': Universe/index.md
     - 'Deployment': Universe/deployment.md
     - 'Gatsby': Universe/gatsby.md
+    - 'NextJS': Universe/nextjs.md
     - 'Meta-API': Universe/metaapi.md
     - 'Postman': Universe/postman.md
     - 'Scully': Universe/scully.md
@@ -171,6 +170,7 @@ nav:
     - 'Heroku': Universe/heroku.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
+    - 'Hooking React TodoMVC with Flotiq': Deep-Dives/todomvc-react-headless-cms.md
     - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md
     - 'Mobile product showcase application': Deep-Dives/mobile-expo-product-showcase.md # TO UPDATE
     - 'Building a blog': Deep-Dives/Building-a-blog-in-3-minutes.md
@@ -188,6 +188,7 @@ nav:
     - 'Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content': 'Deep-Dives/netlify-zapier-gatsby-serverless-deployment-pipeline.md'
     - 'Use Next.js, Typescript and OpenAPI with Flotiq content': 'Deep-Dives/nextjs-react-typescript-openapi.md'
     - 'Upload media example app': Deep-Dives/upload-media.md
+    - 'Build headless no-code website Divhunt': Deep-Dives/divhunt.md
   - Flotiq Mobile Expo: Flotiq-Mobile-Expo/overview.md
   - FAQ: faq.md
-  - 'Contact us': contact.md
+  - 'Contact us': '../contact'

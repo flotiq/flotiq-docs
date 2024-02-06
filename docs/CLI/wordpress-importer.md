@@ -7,6 +7,7 @@ The command looks like this:
 ```bash
 flotiq wordpress-import [wordpressUrl] [flotiqApiKey]
 ```
+{ data-search-exclude }
 
 After running the command, you should have new content types added to your Flotiq account that was imported from Wordpress site.
 
@@ -26,5 +27,5 @@ The importer will make all the required Content Type Definitions and will pull a
 !!! hint
     Instead of coding, you can try our [one-click migration tool](https://flotiq.com/services/migrate-wordpress-to-flotiq-headless-cms/) to move your data from WordPress to Flotiq.
     All you need is your personal [Flotiq Read And Write API Key](http://flotiq.com/docs/API/#application-api-keys) and your WordPress Site address.
-    Read more in our [blog post](https://flotiq.com/blog/migrate-wordpress-to-flotiq-headless-cms).
+    Read more in our [blog post](https://blog.flotiq.com/migrate-wordpress-to-flotiq-headless-cms).
 

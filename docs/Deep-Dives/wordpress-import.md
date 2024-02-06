@@ -8,7 +8,7 @@ Replacing Wordpress is one of the most common use cases for Headless CMS, and fo
 !!! hint
     Instead of coding, you can try our [one-click migration tool](https://flotiq.com/services/migrate-wordpress-to-flotiq-headless-cms/) to move your data from WordPress to Flotiq.
     All you need is your personal [Flotiq Read And Write API Key](http://flotiq.com/docs/API/#application-api-keys) and your WordPress Site address.
-    Read more in our [blog post](https://flotiq.com/blog/migrate-wordpress-to-flotiq-headless-cms).
+    Read more in our [blog post](https://blog.flotiq.com/migrate-wordpress-to-flotiq-headless-cms).
 
 ## Export Wordpress data
 
@@ -36,6 +36,7 @@ You can download the SDK from Flotiq dashboard, once it's built and downloaded -
 ``` bash
 pip install -r requirements.txt
 ```
+{ data-search-exclude }
 
  and then create a new file, called `import.py` in the extracted folder.
 
@@ -58,6 +59,7 @@ api_instance = flotiq.ContentBlogPostsApi(flotiq.ApiClient(configuration))
 entries = api_instance.entries_list()
 print(entries)
 ```
+{ data-search-exclude }
 
 !!!hint
     For the next steps you will need your API key, go to your user profile view and copy the Read/Write key from there.
@@ -68,6 +70,7 @@ Now let's try to execute this script and see if the connection is up and running
 python import.py YOUR_API_KEY
 {'data': []}
 ```
+{ data-search-exclude }
 
 unless you already added a blog entry - you will see an empty response. That was easy, right?
 
@@ -87,6 +90,7 @@ Make sure you have the `lxml` python package, it's the one we're going to use to
 ``` bash
 pip install lxml
 ```
+{ data-search-exclude }
 
 add this to your `import.py` file 
 
@@ -98,6 +102,7 @@ namespaces = {'wp':'wp', 'content':'content', 'excerpt':'excerpt'}
 items = root.findall(".//wp:post_type",namespaces)
 print("Loaded XML, number of posts:" + str(len(items)))
 ```
+{ data-search-exclude }
 
 and verify if it correctly reads the XML (remember to point to the correct location of the WP dump file):
 
@@ -106,6 +111,7 @@ python import.py YOUR_API_KEY wordpress-export.xml
 Loaded XML, number of posts:20172
 ...
 ```
+{ data-search-exclude }
 
 Now, for each post - create an appropriate blog entry and save it into Flotiq:
 
@@ -132,6 +138,7 @@ for item in items:
         print(e)
     
 ```
+{ data-search-exclude }
 
 this is the final listing of your program
 
@@ -174,8 +181,9 @@ for item in items:
     
     
 ```
+{ data-search-exclude }
 
 Please mind that we only cared to import the basic fields, like slug, title, content, etc. Feel free to amend this code and import anything else you might need.
 
 !!! success
-    Hopefully, you now have a bunch of blog posts imported from Wordpress. Go ahead and fork our [example Gatsby starter](https://github.com/flotiq/gatsby-starter-blog) and deploy it to Heroku - if you followed our naming closely - you will only need to provide your Read Only API key to have a fully working blog page in a couple of minutes!
+    Hopefully, you now have a bunch of blog posts imported from Wordpress. Go ahead and fork our [example Gatsby starter](https://github.com/flotiq/flotiq-gatsby-blog-1) and deploy it to Heroku - if you followed our naming closely - you will only need to provide your Read Only API key to have a fully working blog page in a couple of minutes!

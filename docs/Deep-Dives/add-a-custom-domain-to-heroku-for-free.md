@@ -80,6 +80,7 @@ addEventListener("fetch", event => {
 
 
 ```
+{ data-search-exclude }
 
 which is adapted from [this Cloudflare article](https://blog.cloudflare.com/subdomains-vs-subdirectories-improved-seo-part-2/).
 

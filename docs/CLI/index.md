@@ -19,6 +19,7 @@ To install Flotiq CLI globally use the following command in the terminal of your
 ```bash
 npm install -g flotiq-cli
 ```
+{ data-search-exclude }
 
 ## Usage
 

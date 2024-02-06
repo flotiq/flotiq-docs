@@ -33,6 +33,7 @@ Next, use the `create-next-app` to setup a fresh Next.js project
 npx create-next-app@latest flotiq-component-demo --typescript --eslint
 cd flotiq-component-demo
 ```
+{ data-search-exclude }
 
 Read more about [create-next-app here](https://nextjs.org/docs/api-reference/create-next-app).
 
@@ -44,6 +45,7 @@ When the Next.js project is already up and running you will now connect it to yo
 export FLOTIQ_RO_API_KEY=<YOUR_RO_API_KEY_HERE>
 curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?hydrate=1" -H "X-Auth-Token: ${FLOTIQ_RO_API_KEY}" > oas.json
 ```
+{ data-search-exclude }
 
 This command will save your OpenAPI definition into a file called `oas.json` in your current directory. Next - you will process that file with `openapi-generator` to build the API client:
 
@@ -53,12 +55,14 @@ docker run --rm -it -v "${PWD}:/tmp" \
        generate -i /tmp/oas.json -g typescript-node -o /tmp/flotiq-api \
        --additional-properties=modelPropertyNaming=original,paramNaming=original,withNodeImports=true,supportsES6=true,npmName=component-api,npmVersion=0.1.0
 ```
+{ data-search-exclude }
 
 This will save the API in `flotiq-api` directory, so you now have to move the built API into its proper location (note that the target path will change if you are not using NextJS `src` and `app` directories):
 
 ```bash
 mv flotiq-api ./src/app/flotiq
 ```
+{ data-search-exclude }
 
 
 ## Use the API
@@ -89,6 +93,7 @@ async function getData() : HeroList {
 
 }
 ```
+{ data-search-exclude }
 
 next, let’s update the `Home()` component to display all the sections found:
 
@@ -108,6 +113,7 @@ export default async function Home() {
   )
 }
 ```
+{ data-search-exclude }
 
 now, let’s create that HeroComponent in the `src/app/components/hero.tsx` file:
 
@@ -129,6 +135,7 @@ export default function HeroComponent({hero} : HeroProps){
     );
 }
 ```
+{ data-search-exclude }
 
 
 That’s it! Start using TypeScript with Flotiq data. By now you probably noticed how convenient it is to have explicit typing and code completion in your editor:

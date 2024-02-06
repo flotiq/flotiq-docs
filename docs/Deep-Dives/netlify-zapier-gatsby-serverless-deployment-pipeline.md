@@ -44,12 +44,14 @@ Head out to our [Github repository](https://github.com/flotiq) and pick one of G
 gatsby new gatsby-starter-recipes https://github.com/flotiq/gatsby-starter-recipes.git
 cd gatsby-starter-recipes
 ```
+{ data-search-exclude }
 
 You can either build the Content Types yourself or use our predefined content
 
 ```
 node ./example/importExample.js
 ```
+{ data-search-exclude }
 
 This handy command will add 4 images and 2 recipes to your Flotiq account.
 

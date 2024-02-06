@@ -32,6 +32,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         --header "accept: application/json" \
         --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -41,7 +42,8 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
-    
+        { data-search-exclude }
+
     === "Go + Native"
 
         ```
@@ -71,7 +73,8 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         
         }
         ```
-    
+        { data-search-exclude }
+
     === "Java + Okhttp"
         
         ```
@@ -85,6 +88,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -93,6 +97,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -111,6 +116,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -143,6 +149,8 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             echo $response;
         }
         ```
+        { data-search-exclude }
+
 !!! Responses
 
     === "200 OK"
@@ -163,6 +171,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
           }
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -174,6 +183,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -185,6 +195,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
 
 ##### For GraphQL:
@@ -207,6 +218,7 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
         }
     }
     ```
+    { data-search-exclude }
 
 To pass this query to the Flotiq, you need to call:
 
@@ -220,6 +232,7 @@ To pass this query to the Flotiq, you need to call:
     --header 'Content-Type: application/json' \
     --data-raw '{"query":"query { blogposts(id: \"blogposts-456712\") { id title } }"}'
     ```
+    { data-search-exclude }
 
 === "JavaScript + Fetch"
 
@@ -237,6 +250,7 @@ To pass this query to the Flotiq, you need to call:
     .then(response => response.json())
     .then(data => console.log(data));
     ```
+    { data-search-exclude }
 
 === "Node + Axios"
 
@@ -254,6 +268,7 @@ To pass this query to the Flotiq, you need to call:
     .then(response => console.log(response.data))
     .catch(error => console.log(error));
     ```
+    { data-search-exclude }
 
 === "Python + Requests"
 
@@ -272,6 +287,7 @@ To pass this query to the Flotiq, you need to call:
     response = requests.post(url, headers=headers, json=data)
     print(response.json())
     ```
+    { data-search-exclude }
 
 
 !!! Response
@@ -289,6 +305,7 @@ To pass this query to the Flotiq, you need to call:
         }
     }
     ```
+    { data-search-exclude }
 
 === "401 Unauthorized"
 
@@ -306,6 +323,7 @@ To pass this query to the Flotiq, you need to call:
         ]
     }
     ```
+    { data-search-exclude }
 
 === "404 Not found"
 
@@ -323,6 +341,7 @@ To pass this query to the Flotiq, you need to call:
         ]
     }
     ```
+    { data-search-exclude }
 
 
 #### Step 2: Exploring Advanced Features

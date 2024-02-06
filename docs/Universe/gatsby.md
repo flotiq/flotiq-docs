@@ -9,18 +9,17 @@ We have a variety of [starters](https://flotiq.com/starters/){:target="_blank"} 
 
 Each starter is available for preview on our [GitHub](https://github.com/flotiq){:target="_blank"} and you can see how the built version works. You can also build it locally by following our step-by-step instructions.
 
-This should save you some time in creating your own website and help you create a visually appealing page. Additionally, we have created two versions of starters using Gatsby and Nextjs - depending on which framework you prefer.
+This should save you some time in creating your website and help you create a visually appealing page. Additionally, we have created two versions of starters using Gatsby and NextJS - depending on which framework you prefer. This page is dedicated to Gatsby starters. You can check out our NextJS starters [here](../nextjs/).
 
 You can see all of our starters [here](https://flotiq.com/starters/){:target="_blank"}.
+
 ## Starter for the blog 1
 
-Gatsby/Next.js starter for creating a blog with Flotiq
+Gatsby starter for creating a blog with Flotiq
 
 ![](images/gatsby/flotiq-starter-blog-1.png){: .center .width75 .border}
 
-[GitHub for Gatsby](https://github.com/flotiq/flotiq-gatsby-blog-1){:target="_blank"}
-
-[GitHub for Next.js](https://github.com/flotiq/flotiq-nextjs-blog-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-blog-1){:target="_blank"}
 
 [Working example](https://flotiq-gatsby-blog-1.netlify.app){:target="_blank"}
 
@@ -30,7 +29,7 @@ Gatsby starter for creating a blog with Flotiq
 
 ![](images/gatsby/flotiq-starter-blog-2.png){: .center .width75 .border}
 
-[GitHub for Gatsby](https://github.com/flotiq/flotiq-gatsby-blog-2){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-blog-2){:target="_blank"}
 
 [Working example](https://flotiq-gatsby-blog-2.netlify.app){:target="_blank"}
 
@@ -50,19 +49,17 @@ Gatsby Starter to display information about events from Flotiq Events with Calen
 
 ![](images/gatsby/flotiq-starter-event-1.png){: .center .width75 .border}
 
-[GitHub for Gatsby](https://github.com/flotiq/flotiq-gatsby-event-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-event-1){:target="_blank"}
 
 [Working example](https://flotiq-gatsby-event-1.netlify.app){:target="_blank"}
 
 ## Starter for event calendar 2
 
-Gatsby and Next.js Starter to display information about events from Flotiq Events with Calendars
+Gatsby Starter to display information about events from Flotiq Events with Calendars
 
 ![](images/gatsby/flotiq-starter-event-2.png){: .center .width75 .border}
 
-[GitHub for Gatsby](https://github.com/flotiq/flotiq-gatsby-event-2){:target="_blank"}
-
-[GitHub for Next.js](https://github.com/flotiq/flotiq-nextjs-event-2){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-event-2){:target="_blank"}
 
 [Working example](https://flotiq-gatsby-event-2.netlify.app){:target="_blank"}
 
@@ -72,41 +69,37 @@ A boilerplate repository to jumpstart your next e-commerce project, using Snipca
 
 ![](images/gatsby/flotiq-starter-shop-1.png){: .center .width75 .border}
 
-[GitHub for Gatsby](https://github.com/flotiq/flotiq-gatsby-shop-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-shop-1){:target="_blank"}
 
 [Working example](https://flotiq-gatsby-shop-1.netlify.app){:target="_blank"}
 
 ## Starter for shop 2
 
-A boilerplate repository to jumpstart your next e-commerce project, using Snipcart, Flotiq and Gatsby/Next.js.
+A boilerplate repository to jumpstart your next e-commerce project, using Snipcart, Flotiq and Gatsby.
 
 ![](images/gatsby/flotiq-starter-shop-2.png){: .center .width75 .border}
 
-[GitHub for Gatsby](https://github.com/flotiq/flotiq-gatsby-shop-2){:target="_blank"}
-
-[GitHub for Next.js](https://github.com/flotiq/flotiq-nextjs-shop-2){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-shop-2){:target="_blank"}
 
 [Working example](https://flotiq-gatsby-shop-2.netlify.app){:target="_blank"}
 
 ## Starter for portfolio 1
 
-A free, open-source, image-concentric starter for GatsbyJS.
+A free, open-source, image-concentric starter for Gatsby.
 
 ![](images/gatsby/flotiq-starter-portfolio-1.png){: .center .width75 .border}
 
-[GitHub for Gatsby](https://github.com/flotiq/flotiq-gatsby-portfolio-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-portfolio-1){:target="_blank"}
 
 [Working example](https://flotiq-gatsby-portfolio-1.netlify.app){:target="_blank"}
 
 ## Starter for portfolio 2
 
-A free, open-source, image-concentric starter for GatsbyJS/Next.js.
+A free, open-source, image-concentric starter for Gatsby.
 
 ![](images/gatsby/flotiq-starter-portfolio-2.png){: .center .width75 .border}
 
-[GitHub for Gatsby](https://github.com/flotiq/flotiq-gatsby-portfolio-2){:target="_blank"}
-
-[GitHub for Next.js](https://github.com/flotiq/flotiq-nextjs-portfolio-2){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-portfolio-2){:target="_blank"}
 
 [Working example](https://flotiq-gatsby-portfolio-2.netlify.app){:target="_blank"}
 
@@ -116,31 +109,28 @@ A Gatsby starter to build your own recipes page with Flotiq and Gatsby.
 
 ![](images/gatsby/flotiq-starter-recipe-1.png){: .center .width75 .border}
 
-[GitHub for Gatsby](https://github.com/flotiq/flotiq-gatsby-recipe-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-recipe-1){:target="_blank"}
 
 [Working example](https://flotiq-gatsby-recipe-1.netlify.app){:target="_blank"}
 
 ## Starter for recipe 2
 
-A starter to build your own recipes page with Flotiq and Gatsby/Next.js.
+A starter to build your own recipes page with Flotiq and Gatsby.
 
 ![](images/gatsby/flotiq-starter-recipe-2.png){: .center .width75 .border}
 
-[GitHub for Gatsby](https://github.com/flotiq/flotiq-gatsby-recipe-2){:target="_blank"}
-
-[GitHub for Next.js](https://github.com/flotiq/flotiq-nextjs-recipe-2){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-recipe-2){:target="_blank"}
 
 [Working example](https://flotiq-gatsby-recipe-2.netlify.app){:target="_blank"}
 
-## Boilerplate for you 
+## Boilerplate for you
 
 If you want to start from scratch with a prepared boilerplate, we have also created it for you.
 
 ![](images/gatsby/flotiq-starter-boilerplate.png){: .center .width75 .border}
 
-[GitHub](https://github.com/flotiq/flotiq-starter-boilerplate){:target="_blank"}
+[GitHub](https://github.com/flotiq/gatsby-starter-boilerplate){:target="_blank"}
 
 [Working example](https://gatsby-starter-boilerplate.netlify.app){:target="_blank"}
 
 [Register to start your project today](https://editor.flotiq.com/register.html){: .flotiq-button}
-

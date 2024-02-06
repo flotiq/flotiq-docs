@@ -19,6 +19,7 @@ Once you are done getting hold of all of the keys, all you need to do is run a s
 
 flotiq contentful-import [flotiqApiKey] [contentfulSpaceId] [contentfulContentManagementToken] [translation (optional)]
 ```
+{ data-search-exclude }
 
 `translation` - is Contentful's space locale that will be exported to Flotiq. If skipped, the command will export Contentful's default locale - `en-us`. You can find more information on Contentful's locale [here](https://www.contentful.com/help/working-with-translations/)
 

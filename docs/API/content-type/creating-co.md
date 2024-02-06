@@ -1075,7 +1075,10 @@ Trying updating one blog post and adding one new with wrong data:
         "batch_error_count": 1,
         "errors": [
           {
-            "id": "existing-id-1",
+            "data": {
+              "id": "existing-id-1",
+              "title": "Updated object"
+            },
             "errors": {
               "postContent": [
                 "The property postContent is required"
@@ -1099,9 +1102,23 @@ Trying updating one blog post and adding one new with duplicated id:
     response (code: 400):
     ```
     {
-      "data": [
-        "There are duplications in object data, key: id"
-      ]
+        "batch_total_count": 2,
+        "batch_success_count": 1,
+        "batch_error_count": 2,
+        "errors": [
+          {
+            "data": {
+               "id": "example-id-1",
+               "title": "New object",
+               "content": "This will be the new <b>content</b>"
+            },
+            "errors": {
+              "id": [
+                "There are duplications in object data, key: id"
+              ]
+            }
+          }
+        ]
     }
     ```
     { data-search-exclude }

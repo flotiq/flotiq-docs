@@ -85,8 +85,7 @@ extra_javascript:
 
 extra:
   analytics:
-    provider: google
-    property: G-EFYLWPDWJP
+    provider: custom
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/FwXcHnX

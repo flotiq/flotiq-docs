@@ -26,3 +26,22 @@ After running the command, you should have a new project cloned with installed d
 * [Project portfolio NextJs starter-2](https://github.com/flotiq/flotiq-nextjs-portfolio-2) - to use this starter use: `https://github.com/flotiq/flotiq-nextjs-portfolio-2` as the `flotiqStarterUrl`
 * [Simple blog NextJs starter-1](https://github.com/flotiq/flotiq-nextjs-blog-1) - to use this starter use: `https://github.com/flotiq/flotiq-nextjs-blog-1` as the `flotiqStarterUrl`
 * [NextJs and Snipcart boilerplate, sourcing products from Flotiq-2](https://github.com/flotiq/flotiq-nextjs-shop-2) - to use this starter use: `https://github.com/flotiq/flotiq-nextjs-shop-2` as the `flotiqStarterUrl`
+
+## Import example data
+
+If you have cloned one of Next.js starters, you can import example data.
+
+The command looks like this:
+
+```bash
+flotiq import [projectName] [flotiqApiKey]
+```
+{ data-search-exclude }
+
+After running the command, you should have data imported to your Flotiq account.
+
+### Parameters
+
+`projectName` - project name or project path (if you wish to start or import data from the directory you are in, use `.`)
+
+`flotiqApiKey` - API key to your Flotiq account

@@ -99,14 +99,13 @@ If you'd like to verify what are the possible transitions of an object, given it
 }
 ```
 ### Intenal fields workflowPublishedAt and workflowPublicVersion  
-Every content object have `workflowPublishedAt` and `workflowPublicVersion`, field under the `internal` section. 
-These fields contains informations (`updatedAt` and `latestVersion`) about, last content-object version in `public` state.
+Every content object has `workflowPublishedAt` and `workflowPublicVersion` fields under the `internal` section. These fields contain information (such as `updatedAt` and `latestVersion`) about the last content object version in the public state.
 
 !!! note 
-    If there is non content-object version in `public` state, its `workflowPublishedAt` and `workflowPublicVersion` fields be set to `null`
+    If there are no content object versions in the `public` state, the `workflowPublishedAt` field will be set to `-1`, and the `workflowPublicVersion` field will be set to an empty string (`""`).
 
 !!! note 
-    If the object itself is latest `public` version, its `workflowPublishedAt` and `workflowPublicVersion` fields will point on the current object version `updatedAt` and `latestVersion` fields. See example below.      
+    If the object itself is the latest `public` version, its `workflowPublishedAt` and `workflowPublicVersion` fields will point to the current object version's `updatedAt` and `latestVersion` fields. See the example below.     
 ```
 {
     "id": "snipcart-584874",
@@ -131,7 +130,7 @@ These fields contains informations (`updatedAt` and `latestVersion`) about, last
 }
 ```
 !!! note 
-    When content-object is unpublished, all  `workflowPublishedAt` and `workflowPublicVersion` fields pointing on this version, will be set to null   
+    When a content object is unpublished, all `workflowPublishedAt` and `workflowPublicVersion` fields pointing to this version will be set to `-1` and an empty string (`""`).
 
 
 

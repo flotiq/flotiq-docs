@@ -72,6 +72,7 @@ Content Type</abbr> is simply a ``PUT`` call with a payload similar to:
     }
 }
 ```
+{ data-search-exclude }
 
 You can find description of the schema [here](/docs/API/content-type/creating-ctd/#creating-new-content-types-via-api)
 
@@ -143,6 +144,7 @@ When you change existing property, depending on the type of changes, Flotiq will
                 "order":["title","postContent"]}
         }'
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -154,6 +156,7 @@ When you change existing property, depending on the type of changes, Flotiq will
         request.AddParameter("application/json", "{\"name\":\"blogposts\",\"label\":\"Blog Posts\",\"schemaDefinition\":{\"type\":\"object\",\"allOf\":[{\"$ref\":\"#/components/schemas/AbstractContentTypeSchemaDefinition\"},{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"postContent\":{\"type\":\"string\"}}}],\"required\":[\"title\",\"postContent\"],\"additionalProperties\":false},\"metaDefinition\":{\"propertiesConfig\":{\"title\":{\"label\":\"Title\",\"inputType\":\"text\",\"unique\":true},\"postContent\":{\"label\":\"Post content\",\"inputType\":\"richtext\",\"unique\":false}},\"order\":[\"title\",\"postContent\"]}}", ParameterType.RequestBody);
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -188,6 +191,7 @@ When you change existing property, depending on the type of changes, Flotiq will
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -205,6 +209,7 @@ When you change existing property, depending on the type of changes, Flotiq will
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -215,6 +220,7 @@ When you change existing property, depending on the type of changes, Flotiq will
             .body("{\"name\":\"blogposts\",\"label\":\"Blog Posts\",\"schemaDefinition\":{\"type\":\"object\",\"allOf\":[{\"$ref\":\"#/components/schemas/AbstractContentTypeSchemaDefinition\"},{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"postContent\":{\"type\":\"string\"}}}],\"required\":[\"title\",\"postContent\"],\"additionalProperties\":false},\"metaDefinition\":{\"propertiesConfig\":{\"title\":{\"label\":\"Title\",\"inputType\":\"text\",\"unique\":true},\"postContent\":{\"label\":\"Post content\",\"inputType\":\"richtext\",\"unique\":false}},\"order\":[\"title\",\"postContent\"]}}")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -282,6 +288,7 @@ When you change existing property, depending on the type of changes, Flotiq will
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -316,6 +323,7 @@ When you change existing property, depending on the type of changes, Flotiq will
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 !!! Responses
 
@@ -373,6 +381,7 @@ When you change existing property, depending on the type of changes, Flotiq will
             }
         }
         ```
+        { data-search-exclude }
 
     === "400 Validation error"
 
@@ -399,6 +408,7 @@ When you change existing property, depending on the type of changes, Flotiq will
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -410,6 +420,7 @@ When you change existing property, depending on the type of changes, Flotiq will
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -421,6 +432,7 @@ When you change existing property, depending on the type of changes, Flotiq will
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
 #### Possible validation errors
 
@@ -450,6 +462,7 @@ When encountering issues during schema conversion, you might receive error messa
             "name":["Existing objects do not conform to the new schema, and updating them automatically is impossible (e.g., Text -> Relationship). Ensure you're not changing a field type that is also required - if so, disable required for the field you're changing."]
         }
         ```
+        { data-search-exclude }
 
 ### How are fields converted from one type to another?
 

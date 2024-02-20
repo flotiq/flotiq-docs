@@ -32,6 +32,7 @@ This is a basic request for listing content, without any additional parameters:
         --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "accept: application/json"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -41,6 +42,7 @@ This is a basic request for listing content, without any additional parameters:
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -71,6 +73,7 @@ This is a basic request for listing content, without any additional parameters:
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -85,6 +88,7 @@ This is a basic request for listing content, without any additional parameters:
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -93,6 +97,7 @@ This is a basic request for listing content, without any additional parameters:
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -111,6 +116,7 @@ This is a basic request for listing content, without any additional parameters:
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -143,6 +149,7 @@ This is a basic request for listing content, without any additional parameters:
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 The example below shows the use of multiple parameters in one complex API query.
 In the order of the parameters, we first specify the `page` of results,
@@ -164,6 +171,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "accept: application/json"
         ```
+        { data-search-exclude }
 
         Inline version (notice urlencoded `filters` parameter)
         ``` 
@@ -171,6 +179,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "accept: application/json"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -180,6 +189,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -210,7 +220,8 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         
         }
         ```
-    
+        { data-search-exclude }
+   
     === "Java + Okhttp"
         
         ```
@@ -224,6 +235,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -232,6 +244,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -258,6 +271,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -290,6 +304,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 
 
@@ -309,7 +324,7 @@ Filter types
 | Type               | Description                                                                                                                                                   |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | equals             | Object parameter must be equal to `filter`, can be used with string type parameters                                                                           |
-| notEqual          | Object parameter must not be equal to `filter`, can be used with string type parameters                                                                       |
+| notEqual           | Object parameter must not be equal to `filter`, can be used with string type parameters                                                                       |
 | contains           | Object parameter must contain `filter`, can be used with every type parameters                                                                                |
 | notContains        | Object parameter must not contain `filter`, can be used with every type parameters                                                                            |
 | startsWith         | Object parameter must start with `filter`, can be used with string type parameters                                                                            |
@@ -319,10 +334,14 @@ Filter types
 | greaterThanOrEqual | Object parameter must be greater or equal than `filter`, can be used with number type parameters                                                              |
 | greaterThan        | Object parameter must be greater than `filter`, can be used with number type parameters                                                                       |
 | inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object, can be used with number type parameters |
+| empty              | Object parameter does not exist or is an empty string or array; the `filter` parameter is ignored                                                             |
+| notEmpty           | Object parameter exists and is not an empty string or array; the `filter` parameter is ignored.                                                               |
 
 !!! Note
-    The equals filter allows passing multiple elements so that the results are equal to any of them, for example:<br>
-    `{"name":{"type":"equals", "filter":["product-1", "product-2"]}}`
+    The equals and notEquals filters allow passing multiple elements so that the results are equal to any of them, for examples:<br>
+        `{"name":{"type":"equals", "filter":["product-1", "product-2"]}}` <br>
+    or: <br>
+        `{"name":{"type":"notEquals", "filter":["product-1", "product-2"]}}`
 
 !!! Example
 
@@ -338,13 +357,15 @@ Filter types
         }
     }
     ```
+    { data-search-exclude }
 
     === "CURL"
     
         ```
         curl -X GET "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%22title%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22New%20object%22%7D%2C%22postContent%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22content%22%7D%7D" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
         ```
-
+        { data-search-exclude }
+        
     === "C# + Restasharp"
 
         ```
@@ -353,6 +374,7 @@ Filter types
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -383,7 +405,8 @@ Filter types
         
         }
         ```
-    
+        { data-search-exclude }
+   
     === "Java + Okhttp"
         
         ```
@@ -397,6 +420,7 @@ Filter types
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -405,6 +429,7 @@ Filter types
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -431,6 +456,7 @@ Filter types
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -462,6 +488,7 @@ Filter types
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 
 !!! Responses
@@ -492,6 +519,7 @@ Filter types
           ]
         }
         ```
+        { data-search-exclude }
 
         `total_count` is the number of Content Objects in the database (if any filters are present, it's a number of filtered Content Objects).
         
@@ -514,6 +542,7 @@ Filter types
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -525,6 +554,7 @@ Filter types
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -536,14 +566,15 @@ Filter types
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
-#### Possible validation errors
+### Possible validation errors
 
 | Error                                 | Description                                      |
 | ------------------------------------- | ------------------------------------------------ |
 | Malformed filters json - Syntax error | Send when filters are not correctly json encoded |
 
-#### Filtering by relation
+### Filtering by relation
 
 For example, "Show products in category category-1" is possible using [JsonPath](https://github.com/json-path/JsonPath) standard.
 You have to care about encoding url params. For example:
@@ -551,9 +582,14 @@ You have to care about encoding url params. For example:
 1. Using JsonPath, product category path is `categories[*].dataUrl`
 1. Expected value is `/api/v1/content/categories/category-1`
 1. Raw query: `GET /api/v1/content/products?filters={"categories[*].dataUrl":{"type":"contains","filter":"/api/v1/content/categories/category-1"}}`
-1. Encoded query: `GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcategory-1%22%7D%7D`
+1. Encoded query: `GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcategory-1%22%7D%7D`
 
 Only `contains` and `notContains` type filters can be used with filtering by relation.
+
+!!! Note
+    Even if you list your content objects with hydration enabled, you cannot filter them by the hydrated data.
+
+    For example if a Content Type "Blog Post" has relation to another type "Author", and you want to filter by `Author.name`, and use `hydrate=1` param to get authors data embedded in blog posts data, you still have to use filtering by dataUrl method described above.
 
 ### Hydrating objects
 
@@ -571,6 +607,7 @@ If you wish to receive underlying objects attached to the object you are retriev
         ``` 
         curl -X GET "https://api.flotiq.com/api/v1/content/product?hydrate=1" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -580,6 +617,7 @@ If you wish to receive underlying objects attached to the object you are retriev
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -610,6 +648,7 @@ If you wish to receive underlying objects attached to the object you are retriev
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -624,6 +663,7 @@ If you wish to receive underlying objects attached to the object you are retriev
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -632,6 +672,7 @@ If you wish to receive underlying objects attached to the object you are retriev
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -658,6 +699,7 @@ If you wish to receive underlying objects attached to the object you are retriev
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -690,6 +732,7 @@ If you wish to receive underlying objects attached to the object you are retriev
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 !!! Response - hydration enabled
 
@@ -735,6 +778,7 @@ If you wish to receive underlying objects attached to the object you are retriev
             }]
         }
         ```
+        { data-search-exclude }
 
     === "Hydration disabled"
 
@@ -758,7 +802,8 @@ If you wish to receive underlying objects attached to the object you are retriev
             }]
         }
         ```
-        
+        { data-search-exclude }
+
 As you can see after adding hydrate instead of `{dataUrl: ...}` we get a full object, so we can immediately show the values ​​without additional requests.
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

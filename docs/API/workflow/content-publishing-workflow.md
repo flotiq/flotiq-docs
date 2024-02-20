@@ -31,6 +31,7 @@ workflow supports only a single state - `saved`. Every content object in the sys
     }
 }
 ```
+{ data-search-exclude }
 
 ## Custom workflows
 
@@ -67,6 +68,7 @@ Workflows are defined at the Content Type Definition level, in order to change t
 
 }
 ```
+{ data-search-exclude }
 
 ### Transitioning objects in the workflow
 
@@ -77,6 +79,7 @@ Every content object created in the system will automatically be assigned the fi
     "action":"_draft_review"
 }
 ```
+{ data-search-exclude }
 
 ### Verifying possible transitions of an object
 
@@ -98,6 +101,8 @@ If you'd like to verify what are the possible transitions of an object, given it
     ]
 }
 ```
+{ data-search-exclude }
+
 ### Intenal fields workflowPublishedAt and workflowPublicVersion  
 Every content object has `workflowPublishedAt` and `workflowPublicVersion` fields under the `internal` section. These fields contain information (such as `updatedAt` and `latestVersion`) about the last content object version in the public state.
 
@@ -129,10 +134,9 @@ Every content object has `workflowPublishedAt` and `workflowPublicVersion` field
     }
 }
 ```
+{ data-search-exclude }
 !!! note 
     When a content object is unpublished, all `workflowPublishedAt` and `workflowPublicVersion` fields pointing to this version will be set to `-1` and an empty string (`""`).
-
-
 
 ### Published content
 

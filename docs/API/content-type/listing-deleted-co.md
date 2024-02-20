@@ -30,6 +30,7 @@ containing the date after which the Content Objects were deleted; the date must 
         --header "accept: application/json" \
         --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ``` 
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -39,6 +40,7 @@ containing the date after which the Content Objects were deleted; the date must 
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -69,6 +71,7 @@ containing the date after which the Content Objects were deleted; the date must 
             
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -83,6 +86,7 @@ containing the date after which the Content Objects were deleted; the date must 
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -91,6 +95,7 @@ containing the date after which the Content Objects were deleted; the date must 
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -109,6 +114,7 @@ containing the date after which the Content Objects were deleted; the date must 
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -141,6 +147,7 @@ containing the date after which the Content Objects were deleted; the date must 
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 !!! Response
 
@@ -151,6 +158,7 @@ containing the date after which the Content Objects were deleted; the date must 
         ```
         ["blogposts-1","blogposts-2"]
         ```
+        { data-search-exclude }
 
     === "400 Validation error"
 
@@ -163,6 +171,7 @@ containing the date after which the Content Objects were deleted; the date must 
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -174,6 +183,7 @@ containing the date after which the Content Objects were deleted; the date must 
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
 #### Possible validation errors
 

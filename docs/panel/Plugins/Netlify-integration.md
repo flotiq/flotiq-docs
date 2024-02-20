@@ -11,17 +11,16 @@ You will also be able to quickly navigate to your Netlify pages from the Flotiq 
 
 1. Flotiq account
 2. Netlify account
-3. Website, sourcing content from Flotiq. 
+3. Website, sourcing content from Flotiq.
 
-!!! note 
+!!! note
     You might want to try one of our starters, which already come with predefined content:
-    
-    - [Recipe website Gatsby starter](https://github.com/flotiq/gatsby-starter-recipes){:target="_blank"}
-    - [Event calendar Gatsby starter](https://github.com/flotiq/gatsby-starter-event-calendar){:target="_blank"}
-    - [Project portfolio Gatsby starter](https://github.com/flotiq/gatsby-starter-projects){:target="_blank"}
-    - [Simple blog Gatsby starter](https://github.com/flotiq/gatsby-starter-blog){:target="_blank"}
-    - [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/gatsby-starter-products){:target="_blank"}
-    - [Gatsby and Snipcart, e-commerce with products and categories from Flotiq](https://github.com/flotiq/gatsby-starter-products-with-categories){:target="_blank"}
+
+    - [Recipe website Gatsby starter](https://github.com/flotiq/flotiq-gatsby-recipe-1){:target="_blank"}
+    - [Event calendar Gatsby starter](https://github.com/flotiq/flotiq-gatsby-event-1){:target="_blank"}
+    - [Project portfolio Gatsby starter](https://github.com/flotiq/flotiq-gatsby-portfolio-1){:target="_blank"}
+    - [Simple blog Gatsby starter](https://github.com/flotiq/flotiq-gatsby-blog-1){:target="_blank"}
+    - [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/flotiq-gatsby-shop-1){:target="_blank"}
     - [Snipcart and Next.js, sourcing products from Flotiq](https://github.com/flotiq/snipcart-nextjs){:target="_blank"}
     - [Snipcart and Angular with Scully, sourcing products from Flotiq](https://github.com/flotiq/scully-products-starter){:target="_blank"}
     - [Simple blog using Angular with Scully](https://github.com/flotiq/scully-blog-starter){:target="_blank"}

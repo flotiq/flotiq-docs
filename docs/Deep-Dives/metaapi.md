@@ -171,6 +171,7 @@ const dataRow = [
     flotiqUserApiResult.data.reduce((sum, prod) => (sum + prod.stock_quantity), 0) // quantity
 ];
 ```
+{ data-search-exclude }
 
 And in the Google Spreadsheet connector code replace null with our dataRow:
 ```javascript
@@ -178,6 +179,7 @@ And in the Google Spreadsheet connector code replace null with our dataRow:
 		dataRow
 	]
 ```
+{ data-search-exclude }
 
 We do this to tell the google spreadsheet connector what it should pull from the spreadsheet, in this case, data rows.
 

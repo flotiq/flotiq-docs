@@ -97,6 +97,7 @@ Search score for text found in title
     "score": 5.0425596
 }
 ```
+{ data-search-exclude }
 
 Search score for text found in content
 ```json
@@ -105,6 +106,8 @@ Search score for text found in content
     "score": 2.0425596
 }
 ```
+{ data-search-exclude }
+
 ## Conclusion
 
 Flotiq is built to be extremely easy to use, yet very powerful. Our search feature is trivial to use, but at the same time offers features that make us stand out from out competitors (see Headless CMS Full-text search comparison article). Using Flotiq's search you can now build a complex search engine into your apps without the need to worry about integrating with external solutions.

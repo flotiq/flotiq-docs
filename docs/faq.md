@@ -28,8 +28,7 @@ reduce costs by making the work parallel, and help to prototype.
 
 ## How much does the Flotiq cost?
 
-Primary usage is free, and if that is not enough for your needs, you can check pricing 
-[here](https://flotiq.com/pricing){target="_blank"}.
+Primary usage is free, and if that is not enough for your needs, you can check [pricing page](https://flotiq.com/pricing){target="_blank"}.
 
 ## What programming language I have to know to use Flotiq?
 
@@ -50,8 +49,8 @@ Please contact us to tell us what kind of service you wish to migrate to receive
 
 Yes. You can use Flotiq to store your products, but we do not provide customer accounts or payment methods. 
 Our shop starters use [Snipcart](https://snipcart.com/) to manage purchase process.
-You can find shop starters [here](https://github.com/flotiq?q=gatsby-starter-products) 
-and [here](https://github.com/flotiq?q=scully-products).
+You can find shop starters in our repository for [Gatsby products](https://github.com/flotiq?q=gatsby-starter-products) 
+and [Scully products](https://github.com/flotiq?q=scully-products).
 
 ## Can I integrate Flotiq with other tools like Mailchimp or Gmail?
 
@@ -68,7 +67,7 @@ only to bring the service back to work if something went wrong with deploying th
 ## I'm running out of space; what can I do?
 
 There are two ways to deal with that, removing not used Content Objects and Medias or buying a higher tier of the plan. 
-You can check pricing [here](https://flotiq.com/pricing){target="_blank"}.
+You can check [Flotiq pricing page](https://flotiq.com/pricing){target="_blank"}.
 
 ## Contact us
 

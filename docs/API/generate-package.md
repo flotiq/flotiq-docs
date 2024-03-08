@@ -34,7 +34,7 @@ npm install @openapitools/openapi-generator-cli@cli-4.2.3 -g
 { data-search-exclude }
 
 
-This will instal the OpenAPI generator that will allow you to generate more packages. List of supported generators is mentioned [here](https://openapi-generator.tech/docs/generators)
+This will install the OpenAPI generator that will allow you to generate more packages. List of supported generators is mentioned [OpenAPI generator page](https://openapi-generator.tech/docs/generators).
 
 ```
 openapi-generator generate -g <name> -i <path_to_open_api_schema_json> --skip-validate-spec -o <output_path>

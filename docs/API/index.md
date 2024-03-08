@@ -201,4 +201,4 @@ API request limits are assigned to your account, so all your keys' usage will ad
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}
 
 
-[^1]: Number of available User API keys depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+[^1]: Number of available User API keys depends on the chosen subscription plan. [Check pricing and limits](https://flotiq.com/pricing){:target="_blank"}

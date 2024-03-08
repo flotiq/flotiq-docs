@@ -1137,5 +1137,5 @@ Response parameters:
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
 
 
-[^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+[^1]: Number of available Content Objects depends on the chosen subscription plan. [Check pricing and limits](https://flotiq.com/pricing){:target="_blank"}
 [^2]: Limit can be changed in the [enterprise plan](https://flotiq.com/pricing){:target="_blank"}

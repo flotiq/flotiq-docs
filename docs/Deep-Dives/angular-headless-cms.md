@@ -227,6 +227,6 @@ Generated package based on your OpenApiSchema is a powerful tool, that can speed
 !!!hint
     Helpful links:
 
-    1. Learn how to get your own OpenApiSchema [here](https://flotiq.com/docs/API/open-api-schema/).
-    2. Didn't find a package in a langauage or framework you love? No problem check this [link](https://flotiq.com/docs/API/generate-package/) to learn how to generate your own!
+    1. Learn how to get your own [OpenApiSchema](https://flotiq.com/docs/API/open-api-schema/).
+    2. Didn't find a package in a langauage or framework you love? No problem check this [article](https://flotiq.com/docs/API/generate-package/) to learn how to generate your own!
 

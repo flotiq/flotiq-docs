@@ -32,7 +32,7 @@ Click `Type definitions` in the menu on the left to get to CTDs list:
 If you don't have any Content Types defined yet, you will see a list of tiles which will help you to quickly create . Select your first one or create such from scratch by choosing `Custom`. It is also possible to create additional CTD by clicking `Add definition` button in the top right corner of the page. 
 
 !!! hint 
-    To learn more about our predefined CTDs and how to use them in your projects - head [here](./predefined-content-types.md)
+    To learn more about our predefined CTDs and how to use them in your projects - head to [the next article](./predefined-content-types.md)
 
 ![](images/TypeDefinitionsTiles.png){: .center .width75 .border}
 
@@ -129,4 +129,4 @@ Property types:
 | Block     | Object type, generates editor.js in object form                                                                                                                                                  |
 
 
-[^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+[^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}

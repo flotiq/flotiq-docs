@@ -30,4 +30,4 @@ Media library is accessible via `/api/v1/media/` endpoints. Visit your API docs 
 !!! note
     See also: [Working with media using API](/docs/API/media-library/)
 
-[^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+[^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}

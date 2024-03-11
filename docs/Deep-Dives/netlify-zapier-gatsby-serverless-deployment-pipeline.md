@@ -80,7 +80,7 @@ In the next view, you will be prompted to enter 3 parameters:
 * Flotiq API url - enter: `https://api.flotiq.com`
 * Your Flotiq read-only API Key.
 
-> We advise that you always create a scoped API key. Its disposable nature makes it a safer choice. More about Flotiq API Keys [here](https://flotiq.com/docs/API/)
+> We advise that you always create a scoped API key. Its disposable nature makes it a safer choice. Learn more about [Flotiq API Keys](https://flotiq.com/docs/API/)
 
 ![Configure your build](images/serverless-deployment-pipeline/netlify-2.png){: .center .width75 .border}
 

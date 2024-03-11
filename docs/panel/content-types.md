@@ -129,4 +129,4 @@ Property types:
 | Block     | Object type, generates editor.js in object form                                                                                                                                                  |
 
 
-[^1]: Number of available Content Type Definitions depends on the chosen subscription plan. [Check pricing and limits](https://flotiq.com/pricing){:target="_blank"}
+[^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}

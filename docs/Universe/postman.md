@@ -32,11 +32,9 @@ Now you should have our Sandbox Package available to send requests from Postman 
     If you experience CORS errors while using Postman page, you need to install Postman agent as described in [this Postman article](https://blog.postman.com/introducing-the-postman-agent-send-api-requests-from-your-browser-without-limits/).
     Shortcuts:
 
-    * [Download](https://dl.pstmn.io/download/channel/agent_stable/osx) the Postman agent for macOS.
-    * [Download](https://dl.pstmn.io/download/channel/agent_stable/linux) the Postman agent for Linux.
-    * [Download](https://dl.pstmn.io/download/channel/agent_stable/win64) the Postman agent for Windows 64-bit.
-    * [Download](https://dl.pstmn.io/download/channel/agent_stable/win32) the Postman agent for Windows 32-bit.
-
+* [Download](https://dl-agent.pstmn.io/download/latest/osx_arm64) the Postman agent for macOS.
+* [Download](https://dl-agent.pstmn.io/download/latest/linux) the Postman agent for Linux.
+* [Download](https://dl-agent.pstmn.io/download/latest/win64) the Postman agent for Windows 
 
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

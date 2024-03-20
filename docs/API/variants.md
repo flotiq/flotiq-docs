@@ -65,24 +65,24 @@ Note that the `variants` key above is an optional key inside of the object of ty
 Currently, the only acceptable type of transformation is `trim`. The transformations follow Cloudflare's transformation standards.
 <!-- https://developers.cloudflare.com/images/transform-images/transform-via-workers -->
 
-Trimming accepts 4 required properties, top,right,bottom,left. Keep in mind, that right and bottom values define how many pixels should be trimmed from right/bottom side, not the coordinates for bottom right corner of crop.
-Trim also accepts width and height properties, which work the same as resize width/height value in Flotiq. They can be, however replaced with width and height parameters when using GET request to download variant image (which means, that `trim.width` and `trim.height` will only affect result image if it's downloaded with `0x0` `widthxheight` property in the request).
+Trimming accepts 4 required properties, top,right,bottom,left. Keep in mind, that right and bottom values define how many pixels should be trimmed from the right/bottom side, not the coordinates for the bottom right corner of crop.
+Trim also accepts width and height properties, which work the same as resize width/height value in Flotiq. They can be, however, replaced with width and height parameters when using GET request to download transformed image (which means, that `trim.width` and `trim.height` will only affect the result image if it's downloaded with `0x0` `widthxheight` property in the request).
 
 ## Handling Variants
 
-Creating, removing and updating variants can be done via two ways, either by updating the media content object itself using standard endpoints for editing content object's data, or by using designated endpoints for operations on variants.
+Creating, removing and updating variants can be done in two ways, either by updating the media content object itself using standard endpoints for editing the content object's data or by using designated endpoints for operations on variants.
 
-Handling variants through editing media content object direcly may be faster and more flexible, considering you can provide any value for the `variants` key, like adding multiple variants at once etc., as long as the schema for those variants gets properly validated with variants schema presented above.
+Handling variants through editing media content object directly may be faster and more flexible, considering you can provide any value for the `variants` key, like adding multiple variants at once etc., as long as the schema for those variants gets properly validated with the variants schema presented above.
 
-Using designated endpoints for variants is more straightforward and faster if you are not planning on creating significantly complexed operations on objects.
+Using designated endpoints for variants is more straightforward and faster if you are not planning on creating significantly complex operations on objects.
 
 !!! Note
     Endpoints for creating and removing variants require **update** permissions on objects of `_media` content type.
 
 ### Create a New Variant
 
-Endpoint for creating variants accepts a single variant object and adds it into the `variants` array key of `_media` content object.
-In order to use the endpoint, send PUT request to `https://api.flotiq.com/api/media/{your-image-id}/variant` where `{your-image-id}` is the id of image that you are creating variant for.
+The endpoint for creating variants accepts a single variant object and adds it into the `variants` array key of `_media` content object.
+In order to use the endpoint, send a PUT request to `https://api.flotiq.com/api/media/{your-image-id}/variant` where `{your-image-id}` is the id of the image that you are creating variant for.
 
 !!! Example
 
@@ -298,7 +298,7 @@ In order to use the endpoint, send PUT request to `https://api.flotiq.com/api/me
 
     === "403 Forbidden"
 
-        Returned API key does not have permissions to update _media objects
+        Returned API key does not have permission to update _media objects
   
         ```
         {
@@ -322,12 +322,12 @@ In order to use the endpoint, send PUT request to `https://api.flotiq.com/api/me
 
 ### Remove Variant
 
-Endpoint for creating variants accepts a single variant object and adds it into the `variants` array key of `_media` content object.
-In order to use the endpoint, send PUT request to `https://api.flotiq.com/api/media/{your-image-id}/variant` where `{your-image-id}` is the id of image that you are creating variant for.
+The endpoint for creating variants accepts a single variant object and adds it into the `variants` array key of `_media` content object.
+In order to use the endpoint, send a PUT request to `https://api.flotiq.com/api/media/{your-image-id}/variant` where `{your-image-id}` is the id of the image that you are creating variant for.
 
-In order to remove variant from your content object, send DELETE request to `https://api.flotiq.com/api/media/{your-image-id}/variant/{variant-name}` where:
+In order to remove a variant from your content object, send a DELETE request to `https://api.flotiq.com/api/media/{your-image-id}/variant/{variant-name}` where:
 
-- `{your-image-id}` - is the id of image that you want to remove a variant from
+- `{your-image-id}` - is the id of an image that you want to remove a variant from
 - `{variant-name}` - is the name of the variant you want removed
 
 !!! Example
@@ -478,24 +478,24 @@ In order to remove variant from your content object, send DELETE request to `htt
 
 ### Get Variant
 
-For fetching images transformed with properties defined in variants use GET `https://api.flotiq.com/image/{width}x{height}/{id}/{fileName}.{extension}/variant/{variant-name}` endpoint, which functions exactly the same like regular [endpoint for retrieving media](https://flotiq.com/docs/API/media-library/#getting-files), but additionally accepts variant name, which should contain the name of the variant that you have defined for this media object.
+For fetching images transformed with properties defined in variants use GET `https://api.flotiq.com/image/{width}x{height}/{id}/{fileName}.{extension}/variant/{variant-name}` endpoint, which functions the same as a regular [endpoint for retrieving media](https://flotiq.com/docs/API/media-library/#getting-files), but additionally accepts variant name, which should contain the name of the variant that you have defined for this media object.
 
-The resulting image will be formated accordingly to the variant's properties you have defined.
+The resulting image will be formatted according to the variant's properties you have defined.
 
 # Transforming images without creating variants
 
-There are two options for fetching transformed image from your media library without the need for defining variants for it's coresponding object of `_media` content type definition.
+There are two options for fetching transformed images from your media library without the need for defining variants for corresponding objects of `_media` content type definition.
 
 The first one is to use the standard endpoint for fetching images and adding `?transform` query parameter to it that contains the same object for transformation a variant would, excluding the `name` key, for example:
 
 GET `https://api.flotiq.com/image/0x0/id/fileName.ext?transform={"trim":{"top":0,"right":50,"bottom":50,"left":50,"width":200,"height":200}}`
 
-Another way of retrieving transformed asset from media library without creating a variant is to use a designated endpoint for such transformations. In order to use this endpoint, send GET request to `https://api.flotiq.com/image/{width}x{height}/{id}/{fileName}.{extension}/transform/{transformation-type}/{parameters}`
+Another way of retrieving transformed assets from the media library without creating a variant is to use a designated endpoint for such transformations. To use this endpoint, send the GET request to `https://api.flotiq.com/image/{width}x{height}/{id}/{fileName}.{extension}/transform/{transformation-type}/{parameters}`
 
-For trimming image, you have to provide `trim` value for `transformation-type` path parameter, and the following parameters: top,right,width,height; separated with commas, for example:
+For trimming the image, you have to provide `trim` value for `transformation-type` path parameter, and the following parameters: top,right,width,height; separated with commas, for example:
 
 GET `https://api.flotiq.com/image/0x0/id/fileName.ext/transform/trim/50,50,200,200`
 
 # Conclusion
 
-Flotiq allows for creation, management, and retrieval of variants, offering practical examples and response handling. By following these guidelines, users can efficiently optimize and customize media assets for various use cases, enhancing application performance and flexibility. Overall, this documentation serves as a valuable resource for developers looking to leverage Flotiq's capabilities for media transformation.
+Flotiq allows for the creation, management, and retrieval of variants, offering practical examples and response handling. By following these guidelines, users can efficiently optimize and customize media assets for various use cases, enhancing application performance and flexibility. Overall, this documentation serves as a valuable resource for developers looking to leverage Flotiq's capabilities for media transformation.

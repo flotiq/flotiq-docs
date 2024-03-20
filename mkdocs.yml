@@ -126,7 +126,9 @@ nav:
       - 'SDK NodeJS': API/generate-package/sdk-nodejs.md
     - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
-    - 'Working with media': API/media-library.md
+    - 'Working with media':
+      - 'Overview': API/media-library.md
+      - 'Transformations': API/variants.md
     - 'Workflows': 'API/workflow/content-publishing-workflow.md'
   - Dashboard:
     - 'Overview': panel/index.md

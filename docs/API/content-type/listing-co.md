@@ -443,6 +443,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -460,6 +461,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "notEqual"
     
@@ -487,6 +489,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -498,6 +501,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "contains"
     
@@ -519,6 +523,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -536,6 +541,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "notContains"
     
@@ -563,6 +569,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -574,6 +581,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "startsWith"
     
@@ -595,6 +603,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -612,6 +621,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "endsWith"
     
@@ -633,6 +643,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -650,6 +661,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "lessThanOrEqual"
     
@@ -677,6 +689,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -688,6 +701,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "lessThan"
     
@@ -709,6 +723,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -726,6 +741,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "greaterThanOrEqual"
     
@@ -753,6 +769,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -764,6 +781,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "greaterThan"
     
@@ -785,6 +803,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -802,6 +821,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "inRange"
     
@@ -824,6 +844,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -841,6 +862,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "empty"
     
@@ -860,6 +882,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -877,6 +900,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
     
     === "notEmpty"
     
@@ -902,6 +926,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         Will not return:
 
@@ -913,6 +938,7 @@ Below, you check see example for each filter usage:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
 !!! Note
     The equals and notEquals filters allow passing multiple elements so that the results are equal to any of them, for examples:<br>

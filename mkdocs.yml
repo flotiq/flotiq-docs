@@ -127,7 +127,7 @@ nav:
     - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
     - 'Working with media':
-      - 'Overview': API/media-library.md
+      - 'Media library': API/media-library.md
       - 'Transformations': API/variants.md
     - 'Workflows': 'API/workflow/content-publishing-workflow.md'
   - Dashboard:

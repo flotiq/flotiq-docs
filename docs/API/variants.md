@@ -46,8 +46,6 @@ Note that the `variants` key above is an optional key inside of the object of ty
         "trim": {
             "top": 10,
             "right": 10,
-            "bottom": 10,
-            "left": 10,
             "width":200,
             "height":200
         }
@@ -62,11 +60,54 @@ Note that the `variants` key above is an optional key inside of the object of ty
 
 ## Transformation Types
 
-Currently, the only acceptable type of transformation is `trim`. The transformations follow Cloudflare's transformation standards.
+Currently, the only acceptable type of transformation is `trim`.
+<!-- The transformations follow Cloudflare's transformation standards. -->
 <!-- https://developers.cloudflare.com/images/transform-images/transform-via-workers -->
 
-Trimming accepts 4 required properties, top,right,bottom,left. Keep in mind, that right and bottom values define how many pixels should be trimmed from the right/bottom side, not the coordinates for the bottom right corner of crop.
-Trim also accepts width and height properties, which work the same as resize width/height value in Flotiq. They can be, however, replaced with width and height parameters when using GET request to download transformed image (which means, that `trim.width` and `trim.height` will only affect the result image if it's downloaded with `0x0` `widthxheight` property in the request).
+Trim accepts 4 properties in two possible combinations:
+
+- `top,right,bottom,left` - defines how many pixels should be trimmed from each side of the image.
+
+!!! Example
+    For variant:
+
+    ```
+    {
+        "name":"thumbnail",
+        "trim": {
+            "top":10,
+            "right":10,
+            "bottom":10,
+            "left":10
+        }
+    }
+    ```
+    { data-search-exclude }
+
+    If the original image is 400/400, it will be cropped to 380/380, cutting 10 pixels from each side.
+
+- `top,left,width,height` - defines the top left point of the crop, and number of pixels that will be cropped into the resulting image.
+
+!!! Example
+    For variant:
+
+    ```
+    {
+        "name":"thumbnail",
+        "trim": {
+            "top":10,
+            "left":10,
+            "width":50,
+            "height":50
+        }
+    }
+    ```
+    { data-search-exclude }
+
+    If the original image is 400/400, it will result in cropping a 50/50 square in the top left corner, 10 pixels away from the top/left side.
+
+!!! Note
+    Transforming works together with resizing (width/height properties used in every GET image endpoint). Note that images are transformed before they are resized.
 
 ## Handling Variants
 

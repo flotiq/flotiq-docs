@@ -419,7 +419,7 @@ Filters can accept the following filter types:
 - empty
 - notEmpty
 
-Below, you check see example for each filter usage:
+You can chech the example for each filter usage below:
 
 !!! Example
 
@@ -667,7 +667,7 @@ Below, you check see example for each filter usage:
     
         Object parameter must be less or equal to `filter`
 
-        Can be used with number type parameters
+        Can be used with number and date type parameters
 
         Example:
         
@@ -707,7 +707,7 @@ Below, you check see example for each filter usage:
     
         Object parameter must be less than a filter
 
-        Can be used with number type parameters
+        Can be used with number and date type parameters
 
         Example:
         
@@ -747,7 +747,7 @@ Below, you check see example for each filter usage:
     
         Object parameter must be greater or equal than `filter`
 
-        Can be used with number type parameters
+        Can be used with number and date type parameters
 
         Example:
         
@@ -787,7 +787,7 @@ Below, you check see example for each filter usage:
     
         Object parameter must be greater than `filter`
 
-        Can be used with number type parameters
+        Can be used with number and date type parameters
 
         Example:
         
@@ -827,7 +827,7 @@ Below, you check see example for each filter usage:
     
         Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object
 
-        Can be used with number type parameters
+        Can be used with number and date type parameters
 
         Example:
         
@@ -868,6 +868,8 @@ Below, you check see example for each filter usage:
     
         Object parameter does not exist or is an empty string or array; the `filter` parameter is ignored
 
+        Can be used with every type.
+
         Example:
         
         `filters={"title":{"type":"empty"}}`
@@ -906,6 +908,8 @@ Below, you check see example for each filter usage:
     
         Object parameter exists and is not an empty string or array; the `filter` parameter is ignored.
 
+        Can be used with every type.
+
         Example:
         
         `filters={"title":{"type":"notEmpty"}}`
@@ -941,7 +945,7 @@ Below, you check see example for each filter usage:
         { data-search-exclude }
 
 !!! Note
-    The equals and notEquals filters allow passing multiple elements so that the results are equal to any of them, for examples:<br>
+    The equals and notEquals filters allow passing multiple elements so that the results are equal to any of them, for example:<br>
         `{"name":{"type":"equals", "filter":["product-1", "product-2"]}}` <br>
     or: <br>
         `{"name":{"type":"notEquals", "filter":["product-1", "product-2"]}}`

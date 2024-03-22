@@ -459,7 +459,10 @@ When encountering issues during schema conversion, you might receive error messa
         ```
         {
             "fieldName":["The property fieldName is required"],
-            "name":["Existing objects do not conform to the new schema, and updating them automatically is impossible (e.g., Text -> Relationship). Ensure you're not changing a field type that is also required - if so, disable required for the field you're changing."]
+            "co":{
+                "coFieldName":["Object: /api/v1/content/_media/media doesn't exists "]
+            }
+            "ctd":["Existing objects do not conform to the new schema, and updating them automatically is impossible (e.g., Text -> Relationship). Ensure you're not changing a field type that is also required - if so, disable required for the field you're changing."]
         }
         ```
         { data-search-exclude }

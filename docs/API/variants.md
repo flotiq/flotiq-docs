@@ -111,6 +111,163 @@ Trim accepts 4 properties in two possible combinations:
 
 Operations on variants via API are done by updating the content object of `_media` content type, which contains the URL to the media asset you wish to create a variant for. You can simply use an [endpoint for content update](https://flotiq.com/docs/API/content-type/updating-co/) for your media, and edit the `variants` array, adding new variant objects as its keys. Keep in mind, that the key `variants` in media object is optional, so you may have to add it first.
 
+!!! Example
+
+    === "CURL"
+
+        ```
+        curl --location --request PATCH 'https://api.flotiq.com/api/v1/content/_media/_media-ae09b475-2389-411a-8012-615d5ac85edb' \
+        --header 'X-AUTH-TOKEN: YOUR_API_KEY' \
+        --header 'Content-Type: application/json' \
+        --header 'Accept: */*' \
+        --data-raw '{
+            "variants": [
+                {
+                    "name": "thumbnail_crop",
+                    "trim": {
+                        "top": 747,
+                        "left": 316,
+                        "width": 3944,
+                        "height": 2958
+                    }
+                }
+            ]
+        }'
+        ```
+        { data-search-exclude }
+
+    === "C# + Restasharp"
+
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/_media/_media-ae09b475-2389-411a-8012-615d5ac85edb");
+        var request = new RestRequest(Method.PATCH);
+        request.AddHeader("content-type", "application/json");
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
+        request.AddParameter("application/json", "{\"variants\":[{\"name\":\"thumbnail_crop\",\"trim\":{\"top\":747,\"left\":316,\"width\":3944,\"height\":2958}}]}", ParameterType.RequestBody);
+        IRestResponse response = client.Execute(request);
+        ```
+        { data-search-exclude }
+    
+    === "Go + Native"
+
+        ```
+        package main
+
+        import (
+            "fmt"
+            "strings"
+            "net/http"
+            "io/ioutil"
+        )
+        
+        func main() {
+        
+            url := "https://api.flotiq.com/api/v1/content/_media/_media-ae09b475-2389-411a-8012-615d5ac85edb"
+        
+            payload := strings.NewReader("{\"variants\":[{\"name\":\"thumbnail_crop\",\"trim\":{\"top\":747,\"left\":316,\"width\":3944,\"height\":2958}}]}")
+        
+            req, _ := http.NewRequest("PATCH", url, payload)
+        
+            req.Header.Add("content-type", "application/json")
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_KEY")
+        
+            res, _ := http.DefaultClient.Do(req)
+        
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+        
+            fmt.Println(res)
+            fmt.Println(string(body))
+            
+        }
+        ```
+        { data-search-exclude }
+    
+    === "Java + Okhttp"
+        
+        ```
+        OkHttpClient client = new OkHttpClient();
+
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, "{\"variants\":[{\"name\":\"thumbnail_crop\",\"trim\":{\"top\":747,\"left\":316,\"width\":3944,\"height\":2958}}]}");
+        Request request = new Request.Builder()
+        .url("https://api.flotiq.com/api/v1/content/_media/_media-ae09b475-2389-411a-8012-615d5ac85edb")
+        .patch(body)
+        .addHeader("content-type", "application/json")
+        .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
+        .build();
+        
+        Response response = client.newCall(request).execute();
+        ```
+        { data-search-exclude }
+
+    === "Java + Unirest"
+      
+        ```
+        HttpResponse<String> response = Unirest.patch("https://api.flotiq.com/api/v1/content/_media/_media-ae09b475-2389-411a-8012-615d5ac85edb")
+            .header("content-type", "application/json")
+            .header("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .body("{\"variants\":[{\"name\":\"thumbnail_crop\",\"trim\":{\"top\":747,\"left\":316,\"width\":3944,\"height\":2958}}]}")
+            .asString();
+        ```
+        { data-search-exclude }
+
+    === "Node + Request"
+      
+        ```
+        const request = require('request');
+
+        const options = {
+            method: 'PATCH',
+            url: 'https://api.flotiq.com/api/v1/content/_media/_media-ae09b475-2389-411a-8012-615d5ac85edb',
+            headers: {'content-type': 'application/json', 'X-AUTH-TOKEN': 'YOUR_API_KEY'},
+            body: {variants: [{name: 'thumbnail_crop', trim: {top: 747, left: 316, width: 3944, height: 2958}}]},
+            json: true
+        };
+        
+        request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+        
+        console.log(body);
+        });
+        ```
+        { data-search-exclude }
+
+    === "PHP + CURL"
+    
+        ```
+        <?php
+
+        $curl = curl_init();
+        
+        curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.flotiq.com/api/v1/content/_media/_media-ae09b475-2389-411a-8012-615d5ac85edb",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "PATCH",
+        CURLOPT_POSTFIELDS => "{\"variants\":[{\"name\":\"thumbnail_crop\",\"trim\":{\"top\":747,\"left\":316,\"width\":3944,\"height\":2958}}]}",
+        CURLOPT_HTTPHEADER => [
+                "X-AUTH-TOKEN: YOUR_API_KEY",
+                "content-type: application/json"
+            ],
+        ]);
+        
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        
+        curl_close($curl);
+        
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
+        { data-search-exclude }
+
 !!! Note
     All operations on variants require update permissions on objects of `_media` content type.
 

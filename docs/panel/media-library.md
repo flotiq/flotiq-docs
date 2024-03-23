@@ -34,7 +34,10 @@ A window will pop up with a WYSIWYG editor, that will allow you to easily modify
 
 ![Editing media](./images/Create-variant.png)
 
-After you are done with modifying the image, press `Save changes` button and a variant for this set of transformations will be saved in your media data.
+After you are done with modifying the image, press `Save changes` button and a variant with this set of transformations will be added to your media data.
+
+!!! Note
+    After adding variants, remember that you also have to save the media edit, for saving variants in the media object data.
 
 ## API Endpoints
 

@@ -419,7 +419,7 @@ Filters can accept the following filter types:
 - empty
 - notEmpty
 
-You can chech the example for each filter usage below:
+You can check the example for each filter usage below:
 
 !!! Example
 

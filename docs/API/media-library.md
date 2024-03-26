@@ -1,13 +1,13 @@
 title: Flotiq Media Library | Flotiq docs
 description: Learn more about the powerful Media Library that Flotiq offers.
 
-#Media library
+# Media library
 
 You can interact with the media library via Flotiq Dashboard or REST API. In this section, we show you how to use our REST API to store and retrieve files.
 
-##File upload :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
+## File upload :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
-To upload a file to the Flotiq, you need to send `POST` multipart request to `/api/media` endpoint with required request parameters.
+To upload a file to the Flotiq, you need to send `POST` multipart request to the `/api/media` endpoint with the required request parameters.
 
 ### Request parameters
 
@@ -16,7 +16,7 @@ To upload a file to the Flotiq, you need to send `POST` multipart request to `/a
 | file      | binary data of a file                               |
 | type      | `image` for image types, `file` for everything else |
 
-Below example shows how to do simple file upload in nodeJS application:
+The example below shows how to do a simple file upload in nodeJS application:
 
 !!! example "Example nodeJs image upload"
     ```
@@ -57,8 +57,8 @@ The response will be a Content Object of type `_media`.
     ```
     { data-search-exclude }
 
-Now you can see uploaded images in the media library. Your files are accessible also via REST API like other Content Objects. 
-To get list of images with metadata use `GET /api/v1/content/_media` endpoint.
+Now you can see uploaded images in the media library. Your files are accessible also via REST API like other Content Objects.
+To get the list of images with metadata use `GET /api/v1/content/_media` endpoint.
 
 Fetching original or resized files directly is described in the next sections.
 
@@ -66,7 +66,7 @@ Fetching original or resized files directly is described in the next sections.
 ## Media Content Object
 
 As we see in the response uploaded media has its own representation as Content Object. You can use all the content 
-api methods to get, list, remove Content objects. Be aware, that changing the `_media` metadata can lead to unexpected behaviour.
+API methods to get, list and remove Content objects. Be aware, that changing the `_media` metadata can lead to unexpected behavior.
 
 Below we listed all parameters describing the `Media` object.
 
@@ -220,8 +220,7 @@ All the Media Content Object parameters are described also in the `Media` Conten
     { data-search-exclude }
 
 
-
-##Getting files
+## Getting files
 
 To fetch resized image use the `/image/{width}x{height}/{id}.{extension}` endpoint where
 `width` and `height` are the dimensions of the scaled photo.
@@ -235,18 +234,18 @@ enter `0`, e.g. `/image/0x0/_media-54723892824.doc`.
 !!! example 
     `image/1920x0/_media-5472384.jpg` will choose a photo with a width of 1920px and a proportional height of id `_media-5472384`, the file will be JPG. The extension must match the original extension of the uploaded file.
 
-##Resizing images
+## Resizing images
 
-You can choose different sizes and depend of them, you get other results.
+You can choose different sizes and depending on them, you get other results.
 
 Set the appropriate values `width` and `height` in the media url `https://api.flotiq.com/image/[width]x[height]/_media-123.jpg`, for example:
 
-* `0x0` This way let you download original pictures size and won't make any differents.
+* `0x0` This way lets you download original pictures size and won't make any differents.
 * `1920x0` This will force width defined by you and height will be scaled to a proportionate size.
-* `0x1920` This way let you to force height defined by you and width will be scaled to a proportionate size.
-* `1920x1920` This will force images size to choosen by you. When the image is taller or wider, it will crop it. Worth to know is that this endpoint won't upscale images.
+* `0x1920` This way lets you to force height defined by you and width will be scaled to a proportionate size.
+* `1920x1920` This will force images size to choosen by you. When the image is taller or wider, it will crop it. Worth knowing that this endpoint won't upscale images.
 
-As we can see below weight follows sizes, the smaller the size, the less weight. It's important to choose suitable size for your picture, without making it pixelated but having appropriate weight.
+As we can see below weight follows size, the smaller the size, the less weight. It's important to choose a suitable size for your picture, without making it pixelated but having appropriate weight.
 
 ![](images/image_sizes.png){: .center .border}
 

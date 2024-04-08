@@ -61,6 +61,7 @@ api.listFlotiqblogauthor(opts).then(
   }
 );
 ```
+{ data-search-exclude }
 
 Code above is just an example - you should copy code from `docs` folder in your sdk.
 
@@ -71,7 +72,6 @@ To call the code lets just use:
 node app.js
 
 ```
-
 { data-search-exclude }
 
 

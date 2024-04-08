@@ -27,9 +27,9 @@ npm install -g flotiq-cli
 
 Flotiq CLI currently supports the following commands:
 
-* `flotiq start` quickly launches one of our NextJs or Gatsby starters. (more on `flotiq start` [here](./starting-new-project.md))
+* `flotiq start` quickly launches one of our NextJs or Gatsby starters. (more on `flotiq start` for [Gatsby](./starting-new-project-gatsby.md) and [Next.js](./starting-new-project-nextjs.md))
 
-* `flotiq import` imports example data for your NextJs or Gatsby starter. (more on `flotiq import` [here](./importing-data.md))
+* `flotiq import` imports example data for your NextJs or Gatsby starter. (more on `flotiq import` for [Gatsby](./starting-new-project-gatsby.md/#import-example-data) and [Next.js](./starting-new-project-nextjs.md/#import-example-data))
 
 * `flotiq export` exports data from the Flotiq account to local JSON files. If the key is limited to selected Content Types, then the data available for this key will be exported.
 

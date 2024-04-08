@@ -317,28 +317,635 @@ Request parameters
 | order_by        | What field should the list be ordered by, possible values are based on content type schema                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | order_direction | Order direction, possible values: `asc`, `desc`, default `asc`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | hydrate         | If you want to hydrate data sources in the object, you need to set it to `1`, it will hydrate one level of data sources in objects, `2` will hydrate deeper objects, and it's the highest level of hydration available in Flotiq API. You can also use this parameter when requesting a single object                                                                                                                                                                                                                                                                                                                                                              |
-| filters         | Json encoded object containing conditions on which the list of CO should be filtered. The object keys are the name of the parameter (e.g. `title`). The object value is a filter object with two keys, `type` describing how the list should be filtered and `filter` with filter query. Both parameters should be a string; you can filter on every subset of object parameters, including `internal` parameters (e.g. `internal.created_at`). Filters must be url encoded. <br><br>Example filter value: `{"title":{"type":"equals","filter":"Hello world!"}}` |
+| filters         | Json encoded object containing conditions on which the list of CO should be filtered. |
 
-Filter types
+!!! Responses
 
-| Type               | Description                                                                                                                                                   |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| equals             | Object parameter must be equal to `filter`, can be used with string type parameters                                                                           |
-| notEqual           | Object parameter must not be equal to `filter`, can be used with string type parameters                                                                       |
-| contains           | Object parameter must contain `filter`, can be used with every type parameters                                                                                |
-| notContains        | Object parameter must not contain `filter`, can be used with every type parameters                                                                            |
-| startsWith         | Object parameter must start with `filter`, can be used with string type parameters                                                                            |
-| endsWith           | Object parameter must end with `filter`, can be used with string type parameters                                                                              |
-| lessThanOrEqual    | Object parameter must be less or equal to `filter`, can be used with number type parameters                                                                   |
-| lessThan           | Object parameter must be less than a filter, can be used with number type parameters                                                                          |
-| greaterThanOrEqual | Object parameter must be greater or equal than `filter`, can be used with number type parameters                                                              |
-| greaterThan        | Object parameter must be greater than `filter`, can be used with number type parameters                                                                       |
-| inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object, can be used with number type parameters |
-| empty              | Object parameter does not exist or is an empty string or array; the `filter` parameter is ignored                                                             |
-| notEmpty           | Object parameter exists and is not an empty string or array; the `filter` parameter is ignored.                                                               |
+    === "200 OK"
+
+        Returned when the request was correctly formatted
+
+        ```
+        {
+          "total_count": 1,
+          "total_pages": 1,
+          "current_page": 1,
+          "count": 1,
+          "data": [
+            {
+              "id": "blogposts-456712",
+                "internal": {
+                    "contentType": "blogposts",
+                    "createdAt": "2021-04-09T13:30:48+00:00",
+                    "updatedAt": "2021-04-09T13:30:48+00:00",
+                    "deletedAt": ""
+                },
+                "title": "New object",
+                "postContent": "This will be the new <b>content</b>"
+            }
+          ]
+        }
+        ```
+        { data-search-exclude }
+
+        `total_count` is the number of Content Objects in the database (if any filters are present, it's a number of filtered Content Objects).
+        
+        `total_pages` is the number of pages available to the user.
+        
+        `current_page` is the currently returned page.
+        
+        `count` number of elements in `data` key; can't be more than limit set in request (default 20).
+        
+        `data` list of Content Objects, every object contains all data.
+
+    === "400 Validation error"
+
+        Returned when data has not been correct, and the object was not saved
+
+        ```
+        {
+            "filters": [
+                "Malformed filters json - Syntax error"
+            ]
+        }
+        ```
+        { data-search-exclude }
+
+    === "401 Unauthorized"
+
+        Returned when API key was missing or incorrect
+  
+        ```
+        {
+            "code": 401,
+            "massage": "Unauthorized"
+        }
+        ```
+        { data-search-exclude }
+
+    === "404 Not found"
+
+        Returned when content type definition wasn't found
+
+        ```
+        {
+            "code": 404,
+            "massage": "Not found"
+        }
+        ```
+        { data-search-exclude }
+
+### Filtering data
+
+In order to filter the listed data, you can specify the `filters` parameter, which accepts JSON-encoded object specifying filtering conditions for the list of CO.
+
+The object keys are the name of the parameter (e.g. title). The object value is a filter object with two keys, type describing how the list should be filtered and filter with filter query. Both parameters should be a string; you can filter on every subset of object parameters, including internal parameters (e.g. internal.created_at). Filters must be url encoded.
+
+Example filter value: `{"title":{"type":"equals","filter":"Hello world!"}}`
+
+Filters can accept the following filter types:
+
+- equals
+- notEqual
+- contains
+- notContains
+- startsWith
+- endsWith
+- lessThanOrEqual
+- lessThan
+- greaterThanOrEqual
+- greaterThan
+- inRange
+- empty
+- notEmpty
+
+You can check the example for each filter usage below:
+
+!!! Example
+
+    === "equals"
+    
+        Object parameter must be equal to `filter`
+
+        Can be used with every type
+        
+        Example:
+        
+        `filters={"price":{"type":"equals","filter":50}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "notEqual"
+    
+        Object parameter must not be equal to `filter`
+
+        Can be used with every type
+
+        Example:
+        
+        `filters={"price":{"type":"notEqual","filter":50}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "contains"
+    
+        Object parameter must contain `filter`
+
+        Can be used with every type
+
+        Example:
+        
+        `filters={"title":{"type":"contains","filter":"-1"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "notContains"
+    
+        Object parameter must not contain `filter`
+
+        Can be used with every type
+
+        Example:
+        
+        `filters={"title":{"type":"notContains","filter":"-1"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "startsWith"
+    
+        Object parameter must start with `filter`
+
+        Can be used with string type parameters
+
+        Example:
+        
+        `filters={"id":{"type":"startsWith","filter":"1-"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "endsWith"
+    
+        Object parameter must end with `filter`
+
+        Can be used with string type parameters
+
+        Example:
+        
+        `filters={"title":{"type":"endsWith","filter":"-1"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "lessThanOrEqual"
+    
+        Object parameter must be less or equal to `filter`
+
+        Can be used with number and date type parameters
+
+        Example:
+        
+        `filters={"price":{"type":"lessThanOrEqual","filter":100}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        },
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "lessThan"
+    
+        Object parameter must be less than a filter
+
+        Can be used with number and date type parameters
+
+        Example:
+        
+        `filters={"price":{"type":"lessThan","filter":100}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "greaterThanOrEqual"
+    
+        Object parameter must be greater or equal than `filter`
+
+        Can be used with number and date type parameters
+
+        Example:
+        
+        `filters={"price":{"type":"greaterThanOrEqual","filter":100}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "greaterThan"
+    
+        Object parameter must be greater than `filter`
+
+        Can be used with number and date type parameters
+
+        Example:
+        
+        `filters={"price":{"type":"greaterThan","filter":100}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        },
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "inRange"
+    
+        Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object
+
+        Can be used with number and date type parameters
+
+        Example:
+        
+        `filters={"price":{"type":"inRange","filter":75, "filter2":125}}`
+
+        Will return:
+
+        
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "empty"
+    
+        Object parameter does not exist or is an empty string or array; the `filter` parameter is ignored
+
+        Can be used with every type.
+
+        Example:
+        
+        `filters={"title":{"type":"empty"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "notEmpty"
+    
+        Object parameter exists and is not an empty string or array; the `filter` parameter is ignored.
+
+        Can be used with every type.
+
+        Example:
+        
+        `filters={"title":{"type":"notEmpty"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
 
 !!! Note
-    The equals and notEquals filters allow passing multiple elements so that the results are equal to any of them, for examples:<br>
+    The equals and notEquals filters allow passing multiple elements so that the results are equal to any of them, for example:<br>
         `{"name":{"type":"equals", "filter":["product-1", "product-2"]}}` <br>
     or: <br>
         `{"name":{"type":"notEquals", "filter":["product-1", "product-2"]}}`
@@ -486,84 +1093,6 @@ Filter types
             echo "cURL Error #:" . $err;
         } else {
             echo $response;
-        }
-        ```
-        { data-search-exclude }
-
-
-!!! Responses
-
-    === "200 OK"
-
-        Returned when the request was correctly formatted
-
-        ```
-        {
-          "total_count": 1,
-          "total_pages": 1,
-          "current_page": 1,
-          "count": 1,
-          "data": [
-            {
-              "id": "blogposts-456712",
-                "internal": {
-                    "contentType": "blogposts",
-                    "createdAt": "2021-04-09T13:30:48+00:00",
-                    "updatedAt": "2021-04-09T13:30:48+00:00",
-                    "deletedAt": ""
-                },
-                "title": "New object",
-                "postContent": "This will be the new <b>content</b>"
-              }
-            }
-          ]
-        }
-        ```
-        { data-search-exclude }
-
-        `total_count` is the number of Content Objects in the database (if any filters are present, it's a number of filtered Content Objects).
-        
-        `total_pages` is the number of pages available to the user.
-        
-        `current_page` is the currently returned page.
-        
-        `count` number of elements in `data` key; can't be more than limit set in request (default 20).
-        
-        `data` list of Content Objects, every object contains all data.
-
-    === "400 Validation error"
-
-        Returned when data has not been correct, and the object was not saved
-
-        ```
-        {
-            "filters": [
-                "Malformed filters json - Syntax error"
-            ]
-        }
-        ```
-        { data-search-exclude }
-
-    === "401 Unauthorized"
-
-        Returned when API key was missing or incorrect
-  
-        ```
-        {
-            "code": 401,
-            "massage": "Unauthorized"
-        }
-        ```
-        { data-search-exclude }
-
-    === "404 Not found"
-
-        Returned when content type definition wasn't found
-
-        ```
-        {
-            "code": 404,
-            "massage": "Not found"
         }
         ```
         { data-search-exclude }

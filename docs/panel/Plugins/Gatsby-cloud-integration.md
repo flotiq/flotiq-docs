@@ -22,7 +22,7 @@ This article will walk you through the process of connecting your Flotiq account
     - [Snipcart and Next.js, sourcing products from Flotiq](https://github.com/flotiq/snipcart-nextjs){:target="_blank"}
     
     These starters all come with detailed READMEs and a one-line content import command, be sure to check those!
-    You can find even more starters here: [Starting new Gatsby project with Flotiq](https://flotiq.com/docs/CLI/starting-new-project/){:target="_blank"}
+    You can find even more starters here: [Starting new Gatsby project with Flotiq](../../../CLI/starting-new-project-gatsby/){:target="_blank"}
 
 ## Signing in to Gatsby Cloud
 Select `Sign in with GitHub`. You'll be asked to authorize the Gatsby Cloud app with your GitHub account. If you need to request access to one or more repositories, you can click "request access" here or later, when creating an instance.

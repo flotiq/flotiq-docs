@@ -27,11 +27,14 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
   "postContent": "This will be the new <b>content</b>"
 }
 ```
+{ data-search-exclude }
+
 !!! note
     The maximum size of a single CO in the system is 1MB. If your project requires a larger CO size, please contact Flotiq support.
 
 !!! note
     You can send custom `id` in the object data to assign a particular `id` to the object.
+    Id must match a regular expression `^[a-zA-Z0-9-_.,:=!#$%&(\`\’\{\}\" ]*$`.
     Random `id` will be assigned when the `id` property is not present in the object.
 
 !!! note
@@ -51,6 +54,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "postContent": "This will be the new <b>content</b>"
         }'
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -62,7 +66,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         request.AddParameter("application/json", "{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}", ParameterType.RequestBody);
         IRestResponse response = client.Execute(request);
         ```
-    
+        { data-search-exclude }
+
     === "Go + Native"
 
         ```
@@ -96,7 +101,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             
         }
         ```
-    
+        { data-search-exclude }
+
     === "Java + Okhttp"
         
         ```
@@ -113,6 +119,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -123,6 +130,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             .body("{\"title\":\"New object\",\"postContent\":\"This will be the new <b>content</b>\"}")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -136,13 +144,14 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             body: {title: 'New object', postContent: 'This will be the new <b>content</b>'},
             json: true
         };
-        
+              
         request(options, function (error, response, body) {
         if (error) throw new Error(error);
         
         console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -177,7 +186,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             echo $response;
         }
         ```
-
+        { data-search-exclude }
 
 !!! Responses
 
@@ -198,6 +207,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "postContent": "This will be the new <b>content</b>"
         }
         ```
+        { data-search-exclude }
 
     === "400 Validation error"
 
@@ -221,6 +231,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -232,6 +243,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -243,6 +255,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
     === "413 Request Entity Too Large"
 
@@ -254,7 +267,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
             "massage": "Content Object size limit exceeded by an object with ID: 185. Requested size 1.01 MB, limit: 1 MB)"
         }
         ```
-        
+        { data-search-exclude }
+
 
 #### Possible validation errors
 
@@ -290,6 +304,7 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
             }
         ]
         ```
+        { data-search-exclude }
 
     === "Multiple relation to media objects"
         
@@ -305,6 +320,7 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
             }
         ]
         ```        
+        { data-search-exclude }
 
 ### Creating Content Objects with the editor.js blocks
 
@@ -363,6 +379,7 @@ Blocks:
             }
         }
         ```
+        { data-search-exclude }
 
 ??? Header
 
@@ -407,6 +424,7 @@ Blocks:
             }
         }
         ```
+        { data-search-exclude }
 
 ??? List
 
@@ -449,6 +467,7 @@ Blocks:
             "type": "list"
         }
         ```
+        { data-search-exclude }
 
 ??? Image
 
@@ -487,6 +506,7 @@ Blocks:
             "type": "image"
         }
         ```
+        { data-search-exclude }
 
 ??? YouTube embed
 
@@ -509,6 +529,7 @@ Blocks:
             "type": "youtubeEmbed"
         }
         ```
+        { data-search-exclude }
 
 ??? "Quote"
 
@@ -536,6 +557,7 @@ Blocks:
             "type": "quote"
         }
         ```
+        { data-search-exclude }
 
 ??? "Warning"
 
@@ -560,6 +582,7 @@ Blocks:
             "type": "warning"
         }
         ```
+        { data-search-exclude }
 
 ??? Delimiter
 
@@ -577,6 +600,7 @@ Blocks:
             "type": "delimiter"
         }
         ```
+        { data-search-exclude }
 
 ??? "Code"
 
@@ -599,6 +623,7 @@ Blocks:
             "type": "code"
         }
         ```
+        { data-search-exclude }
 
 ??? "Table"
 
@@ -639,6 +664,7 @@ Blocks:
             "type": "table"
         }
         ```
+        { data-search-exclude }
 
 If we are missing a block type or tune that you require for your project,
 please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@flotiq.com).
@@ -995,11 +1021,12 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
       "rich_text": "rich_text"
     }
     ```
+    { data-search-exclude }
 
 
 ## Batch create Content Objects through API
 
-There is a way to add up to 100 Content Objects at once. 
+There is a way to add up to 100[^2] Content Objects at once. 
 It is possible by using the `/batch` endpoint 
 (in our example, the URL would be `https://api.flotiq.com/api/v1/content/blogposts/batch`). 
 It can be only `insert` or `insert or update` operation. To use `insert or update` 
@@ -1018,7 +1045,8 @@ Updating one blog post and adding one new:
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"existing-id-1","title":"Updated object","postContent":"This will be the updated <b>content</b>"},{"id":"new-object-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
-    
+    { data-search-exclude }
+
     response (code: 200):
     ```
     {
@@ -1028,6 +1056,7 @@ Updating one blog post and adding one new:
         "errors": []
     }
     ```
+    { data-search-exclude }
 
 Trying updating one blog post and adding one new with wrong data:
 
@@ -1036,7 +1065,8 @@ Trying updating one blog post and adding one new with wrong data:
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"existing-id-1","title":"Updated object"},{"id":"new-object-2","title":"New object 3","postContent":"This will be the brand new <b>content</b>"}]'
     ```
-    
+    { data-search-exclude }
+
     response (code: 400):
     ```
     {
@@ -1045,7 +1075,10 @@ Trying updating one blog post and adding one new with wrong data:
         "batch_error_count": 1,
         "errors": [
           {
-            "id": "existing-id-1",
+            "data": {
+              "id": "existing-id-1",
+              "title": "Updated object"
+            },
             "errors": {
               "postContent": [
                 "The property postContent is required"
@@ -1055,6 +1088,7 @@ Trying updating one blog post and adding one new with wrong data:
         ]
     }
     ```
+    { data-search-exclude }
 
 Trying updating one blog post and adding one new with duplicated id:
 
@@ -1063,15 +1097,31 @@ Trying updating one blog post and adding one new with duplicated id:
     ```
     curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' -H 'accept: application/json' -H 'X-AUTH-TOKEN: YOUR_API_TOKEN' -H 'Content-Type: application/json' --data-binary '[{"id":"example-id-1","title":"New object","content": "This will be the new <b>content</b>"},{"id":"example-id-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
     ```
-    
+    { data-search-exclude }
+
     response (code: 400):
     ```
     {
-      "data": [
-        "There are duplications in object data, key: id"
-      ]
+        "batch_total_count": 2,
+        "batch_success_count": 1,
+        "batch_error_count": 2,
+        "errors": [
+          {
+            "data": {
+               "id": "example-id-1",
+               "title": "New object",
+               "content": "This will be the new <b>content</b>"
+            },
+            "errors": {
+              "id": [
+                "There are duplications in object data, key: id"
+              ]
+            }
+          }
+        ]
     }
     ```
+    { data-search-exclude }
 
 Response parameters:
 
@@ -1080,10 +1130,12 @@ Response parameters:
 | batch_total_count   | number of elements sent in the request, present when there are no duplications in data                                                                 |
 | batch_success_count | number of correct elements sent in the request, present when there are no duplications in data                                                         |
 | batch_error_count   | number of incorrect elements sent in the request, present when there are no duplications in data                                                       |
+| batch_limit         | max number of elements sent in a single request, present when the limit is exceeded                                                                    |
 | errors              | array of errors in the elements, errors are objects containing the id of the object and list of errors, present when there are no duplications in data |
-| data                | present only when there are duplications in data, listing keys containing duplications (see example above)                                             |
+| data                | listing keys containing duplications (see example above), present only when there are duplications in data or batch_limit exceeded                     |
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
 
 
-[^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+[^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
+[^2]: Limit can be changed in the [enterprise plan](https://flotiq.com/pricing){:target="_blank"}

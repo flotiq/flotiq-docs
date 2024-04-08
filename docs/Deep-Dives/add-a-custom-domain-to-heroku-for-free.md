@@ -21,10 +21,10 @@ Cloudflare is a global CDN (Contend Delivery Network), which provides websites a
 
 ![](images/cloudflare-workers-edge.png)
 
-Cloudflare provides a pretty handy CLI tool to work with your Workers code, you can read more about how to get started [here](https://developers.cloudflare.com/workers/quickstart/). In this tutorial, however, we will use the Cloudflare GUI to build the solution.
+Cloudflare provides a pretty handy CLI tool to work with your Workers code, you can read more about how to get started from the [Cloudflare source directly](https://developers.cloudflare.com/workers/quickstart/). In this tutorial, however, we will use the Cloudflare GUI to build the solution.
 
 ### Creating the worker
-Once you login to your Cloudflare account go to Menu / Workers. From the Workers dashboard select Create Worker.
+Once you log in to your Cloudflare account go to Menu / Workers. From the Workers dashboard select Create Worker.
 
 ![](images/cloudflare-workers-dashboard-create.png)
 
@@ -80,6 +80,7 @@ addEventListener("fetch", event => {
 
 
 ```
+{ data-search-exclude }
 
 which is adapted from [this Cloudflare article](https://blog.cloudflare.com/subdomains-vs-subdirectories-improved-seo-part-2/).
 

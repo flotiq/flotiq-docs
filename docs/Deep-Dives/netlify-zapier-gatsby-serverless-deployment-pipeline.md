@@ -44,12 +44,14 @@ Head out to our [Github repository](https://github.com/flotiq) and pick one of G
 gatsby new gatsby-starter-recipes https://github.com/flotiq/gatsby-starter-recipes.git
 cd gatsby-starter-recipes
 ```
+{ data-search-exclude }
 
 You can either build the Content Types yourself or use our predefined content
 
 ```
 node ./example/importExample.js
 ```
+{ data-search-exclude }
 
 This handy command will add 4 images and 2 recipes to your Flotiq account.
 
@@ -78,7 +80,7 @@ In the next view, you will be prompted to enter 3 parameters:
 * Flotiq API url - enter: `https://api.flotiq.com`
 * Your Flotiq read-only API Key.
 
-> We advise that you always create a scoped API key. Its disposable nature makes it a safer choice. More about Flotiq API Keys [here](https://flotiq.com/docs/API/)
+> We advise that you always create a scoped API key. Its disposable nature makes it a safer choice. Learn more about [Flotiq API Keys](https://flotiq.com/docs/API/)
 
 ![Configure your build](images/serverless-deployment-pipeline/netlify-2.png){: .center .width75 .border}
 

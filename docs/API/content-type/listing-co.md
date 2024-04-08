@@ -32,6 +32,7 @@ This is a basic request for listing content, without any additional parameters:
         --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "accept: application/json"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -41,6 +42,7 @@ This is a basic request for listing content, without any additional parameters:
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -71,6 +73,7 @@ This is a basic request for listing content, without any additional parameters:
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -85,6 +88,7 @@ This is a basic request for listing content, without any additional parameters:
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -93,6 +97,7 @@ This is a basic request for listing content, without any additional parameters:
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -111,6 +116,7 @@ This is a basic request for listing content, without any additional parameters:
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -143,6 +149,7 @@ This is a basic request for listing content, without any additional parameters:
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 The example below shows the use of multiple parameters in one complex API query.
 In the order of the parameters, we first specify the `page` of results,
@@ -164,6 +171,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "accept: application/json"
         ```
+        { data-search-exclude }
 
         Inline version (notice urlencoded `filters` parameter)
         ``` 
@@ -171,6 +179,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "accept: application/json"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -180,6 +189,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -210,7 +220,8 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         
         }
         ```
-    
+        { data-search-exclude }
+   
     === "Java + Okhttp"
         
         ```
@@ -224,6 +235,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -232,6 +244,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -258,6 +271,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -290,6 +304,7 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 
 
@@ -302,27 +317,638 @@ Request parameters
 | order_by        | What field should the list be ordered by, possible values are based on content type schema                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | order_direction | Order direction, possible values: `asc`, `desc`, default `asc`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | hydrate         | If you want to hydrate data sources in the object, you need to set it to `1`, it will hydrate one level of data sources in objects, `2` will hydrate deeper objects, and it's the highest level of hydration available in Flotiq API. You can also use this parameter when requesting a single object                                                                                                                                                                                                                                                                                                                                                              |
-| filters         | Json encoded object containing conditions on which the list of CO should be filtered. The object keys are the name of the parameter (e.g. `title`). The object value is a filter object with two keys, `type` describing how the list should be filtered and `filter` with filter query. Both parameters should be a string; you can filter on every subset of object parameters, including `internal` parameters (e.g. `internal.created_at`). Filters must be url encoded. <br><br>Example filter value: `{"title":{"type":"equals","filter":"Hello world!"}}` |
+| filters         | Json encoded object containing conditions on which the list of CO should be filtered. |
 
-Filter types
+!!! Responses
 
-| Type               | Description                                                                                                                                                   |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| equals             | Object parameter must be equal to `filter`, can be used with string type parameters                                                                           |
-| notEqual          | Object parameter must not be equal to `filter`, can be used with string type parameters                                                                       |
-| contains           | Object parameter must contain `filter`, can be used with every type parameters                                                                                |
-| notContains        | Object parameter must not contain `filter`, can be used with every type parameters                                                                            |
-| startsWith         | Object parameter must start with `filter`, can be used with string type parameters                                                                            |
-| endsWith           | Object parameter must end with `filter`, can be used with string type parameters                                                                              |
-| lessThanOrEqual    | Object parameter must be less or equal to `filter`, can be used with number type parameters                                                                   |
-| lessThan           | Object parameter must be less than a filter, can be used with number type parameters                                                                          |
-| greaterThanOrEqual | Object parameter must be greater or equal than `filter`, can be used with number type parameters                                                              |
-| greaterThan        | Object parameter must be greater than `filter`, can be used with number type parameters                                                                       |
-| inRange            | Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object, can be used with number type parameters |
+    === "200 OK"
+
+        Returned when the request was correctly formatted
+
+        ```
+        {
+          "total_count": 1,
+          "total_pages": 1,
+          "current_page": 1,
+          "count": 1,
+          "data": [
+            {
+              "id": "blogposts-456712",
+                "internal": {
+                    "contentType": "blogposts",
+                    "createdAt": "2021-04-09T13:30:48+00:00",
+                    "updatedAt": "2021-04-09T13:30:48+00:00",
+                    "deletedAt": ""
+                },
+                "title": "New object",
+                "postContent": "This will be the new <b>content</b>"
+            }
+          ]
+        }
+        ```
+        { data-search-exclude }
+
+        `total_count` is the number of Content Objects in the database (if any filters are present, it's a number of filtered Content Objects).
+        
+        `total_pages` is the number of pages available to the user.
+        
+        `current_page` is the currently returned page.
+        
+        `count` number of elements in `data` key; can't be more than limit set in request (default 20).
+        
+        `data` list of Content Objects, every object contains all data.
+
+    === "400 Validation error"
+
+        Returned when data has not been correct, and the object was not saved
+
+        ```
+        {
+            "filters": [
+                "Malformed filters json - Syntax error"
+            ]
+        }
+        ```
+        { data-search-exclude }
+
+    === "401 Unauthorized"
+
+        Returned when API key was missing or incorrect
+  
+        ```
+        {
+            "code": 401,
+            "massage": "Unauthorized"
+        }
+        ```
+        { data-search-exclude }
+
+    === "404 Not found"
+
+        Returned when content type definition wasn't found
+
+        ```
+        {
+            "code": 404,
+            "massage": "Not found"
+        }
+        ```
+        { data-search-exclude }
+
+### Filtering data
+
+In order to filter the listed data, you can specify the `filters` parameter, which accepts JSON-encoded object specifying filtering conditions for the list of CO.
+
+The object keys are the name of the parameter (e.g. title). The object value is a filter object with two keys, type describing how the list should be filtered and filter with filter query. Both parameters should be a string; you can filter on every subset of object parameters, including internal parameters (e.g. internal.created_at). Filters must be url encoded.
+
+Example filter value: `{"title":{"type":"equals","filter":"Hello world!"}}`
+
+Filters can accept the following filter types:
+
+- equals
+- notEqual
+- contains
+- notContains
+- startsWith
+- endsWith
+- lessThanOrEqual
+- lessThan
+- greaterThanOrEqual
+- greaterThan
+- inRange
+- empty
+- notEmpty
+
+You can check the example for each filter usage below:
+
+!!! Example
+
+    === "equals"
+    
+        Object parameter must be equal to `filter`
+
+        Can be used with every type
+        
+        Example:
+        
+        `filters={"price":{"type":"equals","filter":50}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "notEqual"
+    
+        Object parameter must not be equal to `filter`
+
+        Can be used with every type
+
+        Example:
+        
+        `filters={"price":{"type":"notEqual","filter":50}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "contains"
+    
+        Object parameter must contain `filter`
+
+        Can be used with every type
+
+        Example:
+        
+        `filters={"title":{"type":"contains","filter":"-1"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "notContains"
+    
+        Object parameter must not contain `filter`
+
+        Can be used with every type
+
+        Example:
+        
+        `filters={"title":{"type":"notContains","filter":"-1"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "startsWith"
+    
+        Object parameter must start with `filter`
+
+        Can be used with string type parameters
+
+        Example:
+        
+        `filters={"id":{"type":"startsWith","filter":"1-"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "endsWith"
+    
+        Object parameter must end with `filter`
+
+        Can be used with string type parameters
+
+        Example:
+        
+        `filters={"title":{"type":"endsWith","filter":"-1"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "lessThanOrEqual"
+    
+        Object parameter must be less or equal to `filter`
+
+        Can be used with number and date type parameters
+
+        Example:
+        
+        `filters={"price":{"type":"lessThanOrEqual","filter":100}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        },
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "lessThan"
+    
+        Object parameter must be less than a filter
+
+        Can be used with number and date type parameters
+
+        Example:
+        
+        `filters={"price":{"type":"lessThan","filter":100}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "greaterThanOrEqual"
+    
+        Object parameter must be greater or equal than `filter`
+
+        Can be used with number and date type parameters
+
+        Example:
+        
+        `filters={"price":{"type":"greaterThanOrEqual","filter":100}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "greaterThan"
+    
+        Object parameter must be greater than `filter`
+
+        Can be used with number and date type parameters
+
+        Example:
+        
+        `filters={"price":{"type":"greaterThan","filter":100}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        },
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "inRange"
+    
+        Object parameter must be between `filter` and `filter2`, it is only filter type that has three keys in filter object
+
+        Can be used with number and date type parameters
+
+        Example:
+        
+        `filters={"price":{"type":"inRange","filter":75, "filter2":125}}`
+
+        Will return:
+
+        
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "product-1",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "empty"
+    
+        Object parameter does not exist or is an empty string or array; the `filter` parameter is ignored
+
+        Can be used with every type.
+
+        Example:
+        
+        `filters={"title":{"type":"empty"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+    
+    === "notEmpty"
+    
+        Object parameter exists and is not an empty string or array; the `filter` parameter is ignored.
+
+        Can be used with every type.
+
+        Example:
+        
+        `filters={"title":{"type":"notEmpty"}}`
+
+        Will return:
+
+        ```
+        {
+            "id": "2-id",
+            "price": 100,
+            "title": "product-2",
+            "internal": {...}
+        },
+        {
+            "id": "3-id",
+            "price": 150,
+            "title": "product-3",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```
+        {
+            "id": "1-id",
+            "price": 50,
+            "title": "",
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
 
 !!! Note
-    The equals filter allows passing multiple elements so that the results are equal to any of them, for example:<br>
-    `{"name":{"type":"equals", "filter":["product-1", "product-2"]}}`
+    The equals and notEquals filters allow passing multiple elements so that the results are equal to any of them, for example:<br>
+        `{"name":{"type":"equals", "filter":["product-1", "product-2"]}}` <br>
+    or: <br>
+        `{"name":{"type":"notEquals", "filter":["product-1", "product-2"]}}`
 
 !!! Example
 
@@ -338,13 +964,15 @@ Filter types
         }
     }
     ```
+    { data-search-exclude }
 
     === "CURL"
     
         ```
         curl -X GET "https://api.flotiq.com/api/v1/content/blogposts?page=1&limit=20&order_by=internal.createdAt&order_direction=asc&hydrate=0&filters=%7B%22title%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22New%20object%22%7D%2C%22postContent%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22content%22%7D%7D" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
         ```
-
+        { data-search-exclude }
+        
     === "C# + Restasharp"
 
         ```
@@ -353,6 +981,7 @@ Filter types
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -383,7 +1012,8 @@ Filter types
         
         }
         ```
-    
+        { data-search-exclude }
+   
     === "Java + Okhttp"
         
         ```
@@ -397,6 +1027,7 @@ Filter types
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -405,6 +1036,7 @@ Filter types
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -431,6 +1063,7 @@ Filter types
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -462,88 +1095,15 @@ Filter types
             echo $response;
         }
         ```
+        { data-search-exclude }
 
-
-!!! Responses
-
-    === "200 OK"
-
-        Returned when the request was correctly formatted
-
-        ```
-        {
-          "total_count": 1,
-          "total_pages": 1,
-          "current_page": 1,
-          "count": 1,
-          "data": [
-            {
-              "id": "blogposts-456712",
-                "internal": {
-                    "contentType": "blogposts",
-                    "createdAt": "2021-04-09T13:30:48+00:00",
-                    "updatedAt": "2021-04-09T13:30:48+00:00",
-                    "deletedAt": ""
-                },
-                "title": "New object",
-                "postContent": "This will be the new <b>content</b>"
-              }
-            }
-          ]
-        }
-        ```
-
-        `total_count` is the number of Content Objects in the database (if any filters are present, it's a number of filtered Content Objects).
-        
-        `total_pages` is the number of pages available to the user.
-        
-        `current_page` is the currently returned page.
-        
-        `count` number of elements in `data` key; can't be more than limit set in request (default 20).
-        
-        `data` list of Content Objects, every object contains all data.
-
-    === "400 Validation error"
-
-        Returned when data has not been correct, and the object was not saved
-
-        ```
-        {
-            "filters": [
-                "Malformed filters json - Syntax error"
-            ]
-        }
-        ```
-
-    === "401 Unauthorized"
-
-        Returned when API key was missing or incorrect
-  
-        ```
-        {
-            "code": 401,
-            "massage": "Unauthorized"
-        }
-        ```
-
-    === "404 Not found"
-
-        Returned when content type definition wasn't found
-
-        ```
-        {
-            "code": 404,
-            "massage": "Not found"
-        }
-        ```
-
-#### Possible validation errors
+### Possible validation errors
 
 | Error                                 | Description                                      |
 | ------------------------------------- | ------------------------------------------------ |
 | Malformed filters json - Syntax error | Send when filters are not correctly json encoded |
 
-#### Filtering by relation
+### Filtering by relation
 
 For example, "Show products in category category-1" is possible using [JsonPath](https://github.com/json-path/JsonPath) standard.
 You have to care about encoding url params. For example:
@@ -551,9 +1111,14 @@ You have to care about encoding url params. For example:
 1. Using JsonPath, product category path is `categories[*].dataUrl`
 1. Expected value is `/api/v1/content/categories/category-1`
 1. Raw query: `GET /api/v1/content/products?filters={"categories[*].dataUrl":{"type":"contains","filter":"/api/v1/content/categories/category-1"}}`
-1. Encoded query: `GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22equals%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcategory-1%22%7D%7D`
+1. Encoded query: `GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcategory-1%22%7D%7D`
 
 Only `contains` and `notContains` type filters can be used with filtering by relation.
+
+!!! Note
+    Even if you list your content objects with hydration enabled, you cannot filter them by the hydrated data.
+
+    For example if a Content Type "Blog Post" has relation to another type "Author", and you want to filter by `Author.name`, and use `hydrate=1` param to get authors data embedded in blog posts data, you still have to use filtering by dataUrl method described above.
 
 ### Hydrating objects
 
@@ -571,6 +1136,7 @@ If you wish to receive underlying objects attached to the object you are retriev
         ``` 
         curl -X GET "https://api.flotiq.com/api/v1/content/product?hydrate=1" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -580,6 +1146,7 @@ If you wish to receive underlying objects attached to the object you are retriev
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -610,6 +1177,7 @@ If you wish to receive underlying objects attached to the object you are retriev
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -624,6 +1192,7 @@ If you wish to receive underlying objects attached to the object you are retriev
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -632,6 +1201,7 @@ If you wish to receive underlying objects attached to the object you are retriev
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -658,6 +1228,7 @@ If you wish to receive underlying objects attached to the object you are retriev
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -690,6 +1261,7 @@ If you wish to receive underlying objects attached to the object you are retriev
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 !!! Response - hydration enabled
 
@@ -735,6 +1307,7 @@ If you wish to receive underlying objects attached to the object you are retriev
             }]
         }
         ```
+        { data-search-exclude }
 
     === "Hydration disabled"
 
@@ -758,7 +1331,8 @@ If you wish to receive underlying objects attached to the object you are retriev
             }]
         }
         ```
-        
+        { data-search-exclude }
+
 As you can see after adding hydrate instead of `{dataUrl: ...}` we get a full object, so we can immediately show the values ​​without additional requests.
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

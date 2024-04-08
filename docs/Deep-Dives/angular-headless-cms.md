@@ -42,6 +42,7 @@ export interface Blogpost {
     headerImage?: Array<DataSource>;
 }
 ```
+{ data-search-exclude }
 
 
 ## Package installation
@@ -57,6 +58,7 @@ export interface Blogpost {
 npm install
 npm run build
 ```
+{ data-search-exclude }
 
 This will create a `dist` directory, which will be used for installing your package in project.
 
@@ -65,6 +67,7 @@ This will create a `dist` directory, which will be used for installing your pack
 ```
 npm install <path_to_your_package>/dist
 ```
+{ data-search-exclude }
 
 alternatively: `npm link` in package `dist` folder and then `npm link flotiq` in application directory.
 
@@ -80,6 +83,7 @@ In your project `app.module.ts` file import following classes:
 ```typescript
 import { ApiModule, Configuration, ConfigurationParameters } from 'flotiq';
 ```
+{ data-search-exclude }
 
 
 In `environments` directory are two `env` files. Add your `API_KEY` as a key-value pair in your `environtment.ts` file, so it should look like this:
@@ -90,7 +94,7 @@ export const environment = {
   flotiqApiKey: 'YOUR_API_KEY'
 };
 ```
-
+{ data-search-exclude }
 
 If you plan to deploy your application, remember to fill out `environment.prod.ts` file too!
 
@@ -107,12 +111,14 @@ export function apiConfigFactory(): Configuration {
   return new Configuration(params);
 }
 ```
+{ data-search-exclude }
 
 For the final step add Flotiq `ApiModule` into imports array in your application `AppModule`. You must call `fotRoot()` function on `ApiModule` providing required configuration that you set step before:
 
 ```typescript
 ApiModule.forRoot(apiConfigFactory);
 ```
+{ data-search-exclude }
 
 It's important to also import `HttpClientModule` from `@angular/common/http`. Otherwise you won't be able to make API calls to Flotiq.
 
@@ -134,6 +140,7 @@ Your `@NgModule` decorator should look like that after whole setup process:
   bootstrap: [AppComponent]
 })
 ```
+{ data-search-exclude }
 
 
 
@@ -155,6 +162,7 @@ import { Injectable } from '@angular/core';
 })
 export class BlogpostService {}
 ```
+{ data-search-exclude }
 
 
 Next, import your Blogpost model and ContentService provided by installed package. 
@@ -162,12 +170,14 @@ Next, import your Blogpost model and ContentService provided by installed packag
 ```typescript
 import { ContentBlogpostService, Blogpost } from 'flotiq';
 ```
+{ data-search-exclude }
 
 Next, create a constructor and add your ContentService
 
 ```typescript
 constructor(private blogpostApiService: ContentBlogpostService) {}
 ```
+{ data-search-exclude }
 
 `blogpostApiService` is just example variable name, you can change it if you like.
 
@@ -177,6 +187,7 @@ Add a simple method (for example `addBlogpost`) which will take any value as an 
 ```typescript
 addBlogpost(blogpost: Blogpost) {}
 ```
+{ data-search-exclude }
 
 In the body return a result of ContentService function, so you can `subscribe` to it later and handle response and errors.
 
@@ -185,6 +196,7 @@ addBlogpost(blogpost: Blogpost) {
     return this.blogpostApiService.createblogpost(blogpost);
 }
 ```
+{ data-search-exclude }
 
 It's important here to pass an object of type `Blogpost` here, because in other cases types will mismatch and Typescript will throw an error.
 
@@ -193,6 +205,7 @@ As the last step, modify your `tsconfig.app.json` by adding the following line i
 ```json
 "paths": { "@angular/*": [ "./node_modules/@angular/*" ] }
 ```
+{ data-search-exclude }
 
 That's all! Implement the rest of methods and use your custom service in other parts of your application.
 
@@ -214,6 +227,6 @@ Generated package based on your OpenApiSchema is a powerful tool, that can speed
 !!!hint
     Helpful links:
 
-    1. Learn how to get your own OpenApiSchema [here](https://flotiq.com/docs/API/open-api-schema/).
-    2. Didn't find a package in a langauage or framework you love? No problem check this [link](https://flotiq.com/docs/API/generate-package/) to learn how to generate your own!
+    1. Learn how to get your own [OpenApiSchema](https://flotiq.com/docs/API/open-api-schema/).
+    2. Didn't find a package in a langauage or framework you love? No problem check this [article](https://flotiq.com/docs/API/generate-package/) to learn how to generate your own!
 

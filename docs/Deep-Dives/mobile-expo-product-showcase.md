@@ -46,6 +46,7 @@ Install Expo CLI
 ```
 npm install -g expo-cli
 ```
+{ data-search-exclude }
 
 ### Start developing
 
@@ -56,6 +57,7 @@ cd flotiq-mobile-demo/
 npm install
 npm start
 ```
+{ data-search-exclude }
 
 The above commands will start Metro server [http://localhost:19002](http://localhost:19002/) where you can start the app on Android and iOS simulator or the real device.
 
@@ -113,6 +115,7 @@ The code in the repository uses a login screen to authenticate with your API key
 
     enableScreens();
     ```
+    { data-search-exclude }
 
 Once you save the file, the application should automatically reload in the emulator and skip the login screen. You should now see the application's home screen:
 
@@ -141,6 +144,7 @@ const partOfTitleProps = ['name'];
 const withReachTextProps = ['description'];
 const refetchData = true;
 ```
+{ data-search-exclude }
 
 ### Cleanup list view
 
@@ -152,6 +156,7 @@ Open the `ContentTypeObjectsScreen.js` file and change those lines:
   ```
   import { Text } from 'react-native-elements';
   ```
+  { data-search-exclude }
 
 - Comment `NoData` component and use simple text for empty data placeholder
   ```
@@ -162,6 +167,7 @@ Open the `ContentTypeObjectsScreen.js` file and change those lines:
   // />
   <Text>No products to display</Text>
   ```
+  { data-search-exclude }
 
 - Remove the `FloatButton` component, as we don't want to allow users to add the products
   ```
@@ -169,16 +175,19 @@ Open the `ContentTypeObjectsScreen.js` file and change those lines:
       onPressFloatBtn={() => setFormModalVisibility(!formModalVisibility)}
   />
   ```
+  { data-search-exclude }
 
 - Comment the swipeable behaviour on the list to disable the edit and delete button when swiping an item
   ```
   // isSwipeable
   ```
+  { data-search-exclude }
 
 - In the `contentTypeObjectsScreenOptions` method - replace the `screenTitle` const with a static one:
   ```
   const screenTitle = "Products";
   ```
+  { data-search-exclude }
 
 ### Cleanup single product view
 
@@ -190,6 +199,7 @@ In the `ObjectScreen.js` file, we want to remove additional menu options (edit, 
 //     />
 // ),
 ```
+{ data-search-exclude }
 
 Here's the [complete list of changes](https://github.com/netboxsoft/flotiq-mobile-demo/pull/1/files) that have been made in this tutorial to simplify the original app in case you missed something.
 

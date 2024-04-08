@@ -1,7 +1,7 @@
 site_name: Flotiq Developer Documentation
 site_url: https://flotiq.com/docs/
-repo_url: https://github.com/flotiq/flotiq-docs/
-edit_uri: edit/master/docs/
+#repo_url: https://github.com/flotiq/flotiq-docs/
+edit_uri: https://github.com/flotiq/flotiq-docs/edit/master/docs/
 copyright: Copyright &copy; 2019 onwards <a target="_blank" href="https://www.flotiq.com/">Flotiq<a>
 dev_addr: 0.0.0.0:4000
 theme:
@@ -11,19 +11,36 @@ theme:
      custom_dir: theme
      language: en
      palette:
-         primary: '#0083FC'
+
+         # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: '#0083FC'
+          toggle:
+            icon: material/brightness-7
+            name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: custom
+          accent: custom
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
      features:
-       - navigation.instant
        - navigation.top
        - content.action.edit
        - content.action.view
        - search.suggest
        - search.highlight
+       - content.code.copy
 
 plugins:
   - search
   - awesome-pages
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      fallback_to_build_date: true
 
 extra_css:
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
@@ -68,15 +85,13 @@ extra_javascript:
 
 extra:
   analytics:
-    provider: google
-    property: G-155L75RSLX
-  disqus: 'flotiq'
+    provider: custom
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/FwXcHnX
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UC4wpV-D9mIt1JjN_g_iyXXw
-    - icon: fontawesome/brands/twitter
+    - icon: custom/twitter
       link: https://twitter.com/flotiq
     - icon: fontawesome/brands/github-alt
       link: https://github.com/flotiq
@@ -111,7 +126,9 @@ nav:
       - 'SDK NodeJS': API/generate-package/sdk-nodejs.md
     - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
-    - 'Working with media': API/media-library.md
+    - 'Working with media':
+      - 'Media library': API/media-library.md
+      - 'Transformations': API/variants.md
     - 'Workflows': 'API/workflow/content-publishing-workflow.md'
   - Dashboard:
     - 'Overview': panel/index.md
@@ -123,15 +140,20 @@ nav:
     - 'Users': panel/users.md
     - 'Webhooks':
       - Overview: panel/webhooks/index.md
-      - Examples: panel/webhooks/examples.md
+      - 'Async CO webhooks': panel/webhooks/async-co-webhook.md
+      - 'CTD webhooks': panel/webhooks/ctd-webhook.md
+      - 'Async examples': panel/webhooks/examples.md
+      - 'Sync webhooks':  panel/webhooks/sync.md
+      - 'Sync examples': panel/webhooks/sync-examples.md
     - Plugins:
       - 'Custom Links': panel/Plugins/Custom-links.md
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
       - 'Netlify': panel/Plugins/Netlify-integration.md
+      - 'Custom Links': panel/Plugins/Custom-links.md
   - CLI:
     - 'Overview': CLI/index.md
-    - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project.md
-    - 'Importing data from Gatsby starter to Flotiq': CLI/importing-data.md
+    - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project-gatsby.md
+    - 'Starting new project with Next.js and Flotiq': CLI/starting-new-project-nextjs.md
     - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
     - 'Migrate content from Contentful to Flotiq': CLI/contentful-importer.md
     - 'Purging data from Flotiq account': CLI/purge.md
@@ -140,6 +162,7 @@ nav:
     - 'Overview': Universe/index.md
     - 'Deployment': Universe/deployment.md
     - 'Gatsby': Universe/gatsby.md
+    - 'NextJS': Universe/nextjs.md
     - 'Meta-API': Universe/metaapi.md
     - 'Postman': Universe/postman.md
     - 'Scully': Universe/scully.md
@@ -149,6 +172,7 @@ nav:
     - 'Heroku': Universe/heroku.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
+    - 'Hooking React TodoMVC with Flotiq': Deep-Dives/todomvc-react-headless-cms.md
     - 'Angular 9 with Flotiq SDK': Deep-Dives/angular-headless-cms.md
     - 'Mobile product showcase application': Deep-Dives/mobile-expo-product-showcase.md # TO UPDATE
     - 'Building a blog': Deep-Dives/Building-a-blog-in-3-minutes.md
@@ -166,6 +190,7 @@ nav:
     - 'Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content': 'Deep-Dives/netlify-zapier-gatsby-serverless-deployment-pipeline.md'
     - 'Use Next.js, Typescript and OpenAPI with Flotiq content': 'Deep-Dives/nextjs-react-typescript-openapi.md'
     - 'Upload media example app': Deep-Dives/upload-media.md
+    - 'Build headless no-code website Divhunt': Deep-Dives/divhunt.md
   - Flotiq Mobile Expo: Flotiq-Mobile-Expo/overview.md
   - FAQ: faq.md
-  - 'Contact us': contact.md
+  - 'Contact us': '../contact'

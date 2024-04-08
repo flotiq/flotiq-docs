@@ -39,10 +39,9 @@ This will install the OpenAPI generator that will allow you to generate more pac
 ```
 openapi-generator generate -g <name> -i <path_to_open_api_schema_json> --skip-validate-spec -o <output_path>
 ```
+{ data-search-exclude }
 
 _Worth to know is that you should have installed Java to run successfully command above._
-
-{ data-search-exclude }
 
 
 Parameters description:

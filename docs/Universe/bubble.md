@@ -1,7 +1,9 @@
 title: Flotiq Bubble integration | Flotiq docs
 description: Flotiq allows you to integrate your content with any system easily.
 
-# Introduction
+# Flotiq and bubble integration
+
+## Introduction
 
 In Bubble.io, there's significant potential for various integrations with [Flotiq](https://editor.flotiq.com/). The
 platform offers many
@@ -13,7 +15,7 @@ application. Specifically, we aim to
 display our blog posts on the homepage as tiles. Upon clicking on any of these tiles, users should be redirected to
 a dedicated page for that particular post.
 
-# First step
+## First step
 
 To start working on connecting Flotiq with Bubble.io, we need to have some data in Flotiq to display. I
 used the "flotiq-cli" to import a "CTD" (Content Type Definition) along with several "CO" (Content
@@ -34,7 +36,7 @@ plugins that we can install. In our case, it will be the API Connector.
 
 Upon successfully creating our application, we will be presented with the editor view.
 
-# Connection with Flotiq API
+## Connection with Flotiq API
 
 To retrieve information about our posts from Flotiq, we need to go to the plugins tab, select "API Connector," and then
 press "Add another API."
@@ -48,7 +50,7 @@ Then press “Add another API” button
 We select the name of our API, which in our case will be "Flotiq," and then click the "add a shared header" button. In
 the key field, we enter "X-AUTH-TOKEN," and in the value field, we input our API key for Flotiq. Then, we click "expand"
 in the "API Call" section. You can read more about Flotiq API keys
-in [our documentation](https://flotiq.com/docs/API/?h=api+keys#application-api-keys)
+in [our documentation](https://flotiq.com/docs/API/?h=api+keys##application-api-keys)
 
 ![](images/bubble/bubble-configure-api-headers.png){: .center .width75 .border}
 
@@ -59,15 +61,15 @@ URL: [Docs](https://flotiq.com/docs/API/content-type/listing-co/)).
 ![](images/bubble/bubble-configure-api-request.png){: .center .width75 .border}
 
 Next, we click on "Add parameter" to set the parameter "hydrate" to 1, which enables us to retrieve data from
-relationships such as tags or the author of our post. (more about hydrate parameter: Docs) And finally, we click on "
+relationships such as tags or the author of our post. (more about hydrate
+parameter: [Docs](https://flotiq.com/docs/API/content-type/listing-co/##hydrating-objects)) And finally, we click on "
 Initialize call."
 
 ![](images/bubble/bubble-configure-api-request-headers.png){: .center .width75 .border}
 
-Next, we click on "Add parameter" to set the parameter "hydrate" to 1, which enables us to retrieve data from
-relationships such as tags or the author of our post. (more about hydrate
-parameter: [Docs](https://flotiq.com/docs/API/content-type/listing-co/#hydrating-objects)) And finally, we click on "
-Initialize call."
+If everything went according to plan, we should see a modal with the data returned by our API along with the data types
+deduced by Bubble. If needed, we can always modify them or hide data fields if they are not necessary. If the data and
+their types match those from our Flotiq CTD (FlotiqBlogPost), we click "SAVE."
 
 ![](images/bubble/bubble-configure-api-response.png){: .center .width75 .border}
 
@@ -75,7 +77,7 @@ Next, we move to the design tab where we will design our application. We can use
 In this presentation, I will replicate a section of the page [https://blog.flotiq.com/](https://blog.flotiq.com/), which
 includes tiles presenting posts on the homepage, as well as a dedicated page for reading a specific post.
 
-# Designing
+## Designing
 
 Let's start by adding a "Repeating Group" element, which will allow us to display a dynamic number of tiles depending on
 the number of posts.
@@ -100,11 +102,11 @@ Moving further in the "data source" section, you should select the option "Get d
 Next, we need to select the provider as "Flotiq - Get all posts." If you named your API connection or request
 differently, this field will appear as "[your API name] – [your request name]."
 
-![](images/bubble/bubble-config-reapeating-group-4.png){: .center .width75 .border}
+![](images/bubble/bubble-configure-reapeating-group-4.png){: .center .width75 .border}
 
 And select the option " 's data."
 
-![](images/bubble/bubble-config-reapeating-group-5.png){: .center .width75 .border}
+![](images/bubble/bubble-configure-reapeating-group-5.png){: .center .width75 .border}
 
 Next, we add a "Group" element to our "Repeating Group." We set it in the element tree as a child of the "Repeating
 Group," adjust its width and height to match a single cell of the "Repeating Group," and set the "type of content" to "
@@ -120,7 +122,7 @@ Group" and arrange them one below the other, with the image element on top and t
 Next, we proceed to configure the image. In the "Dynamic Image" field, from the list, we select the element "Arbitrary
 text" and enter "https://api.flotiq.com".
 
-![](images/bubble/bubble-config-image.png){: .center .width75 .border}
+![](images/bubble/bubble-configure-image.png){: .center .width75 .border}
 
 Next, let's dynamically add the rest of the URL that will point us to the specific image associated with the post. To do
 this, we select the option "Parent group's Get all posts data."
@@ -162,7 +164,7 @@ tweaks, our post tiles look like this:
 
 ![](images/bubble/bubble-app-preview-3.png){: .center .width75 .border}
 
-# Dedicated page for a specific post
+## Dedicated page for a specific post
 
 We'll create a dedicated page to display a selected post. To do this, we navigate to the configuration of the group that
 is the parent for the two text fields and the image field, and then click on "Add workflow."
@@ -205,7 +207,7 @@ about a specific post and pass the data to the "post" page depending on the "pos
 
 ![](images/bubble/bubble-new-page-url.png){: .center .width75 .border}
 
-# Creating a request with a specific post ID
+## Creating a request for single post
 
 We go to the API connector tab and click on "Add another call."
 
@@ -220,7 +222,7 @@ so that we can modify this parameter.
 
 Next, similarly to before, we click on "initialize call" and ensure that all data types have been assigned correctly.
 
-# Configuration of the "post" page.
+## Configuration of the "post" page.
 
 In the editor view, navigate to edit the "post" page.
 
@@ -253,6 +255,8 @@ Parent group's Get post" and then " 's title."
 
 Now, if we go to the project and click on a tile of one of the posts, it should redirect us to the sub-page with the
 title of our post displayed in the center.
+
+## Conclusion
 
 Now you can customize your page to display all post information, comments, links to social media, or implement post
 filtering by any field, and much more, according to your preferences.

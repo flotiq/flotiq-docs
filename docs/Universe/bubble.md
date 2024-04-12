@@ -146,3 +146,113 @@ We proceed to configure the field displaying the tag name. Similarly to configur
 Parent group's Get all posts Data's," then "tags," ":first item," and finally choose " 's tag."
 
 ![](images/bubble/bubble-configure-tag-element.png){: .center .width75 .border}
+
+If we have successfully configured everything, there should be a notification on the top bar of our editor indicating
+that there are 0 issues. If this is the case, we can proceed to "preview."
+
+![](images/bubble/bubble-app-preview-1.png){: .center .width75 .border}
+
+A new browser tab will open with a preview of our project. If everything went according to plan, you should see
+something like this:
+
+![](images/bubble/bubble-app-preview-2.png){: .center .width75 .border}
+
+Now you can take a moment to adjust the styles of these elements according to your preference. After some minor visual
+tweaks, our post tiles look like this:
+
+![](images/bubble/bubble-app-preview-3.png){: .center .width75 .border}
+
+# Dedicated page for a specific post
+
+We'll create a dedicated page to display a selected post. To do this, we navigate to the configuration of the group that
+is the parent for the two text fields and the image field, and then click on "Add workflow."
+
+![](images/bubble/bubble-add-workflow-on-group-1.png){: .center .width75 .border}
+
+Next, we click on "Click here to add an action."
+
+![](images/bubble/bubble-add-workflow-2.png){: .center .width75 .border}
+
+And then we select the "Navigation" element followed by "Go to page..."
+
+![](images/bubble/bubble-configure-workflow-1.png){: .center .width75 .border}
+
+A window will pop up with the action configuration. In the "Destination" section, we choose "Create a new page..."
+
+![](images/bubble/bubble-create-new-page-1.png){: .center .width75 .border}
+
+We choose a name for our page. In our case, it will be "post."
+
+![](images/bubble/bubble-create-new-page-2.png){: .center .width75 .border}
+
+Next, in the "Destination" section, we select the page "post", check the option "Send more parameters to the page," and
+set the key to "post_id."
+
+![](images/bubble/bubble-create-new-page-3.png){: .center .width75 .border}
+
+Then, we set a dynamic value for this key to the ID of the post whose tile was clicked. To do this, we select "Current
+cell's get all posts data."
+
+![](images/bubble/bubble-create-new-page-4.png){: .center .width75 .border}
+
+And then we're selecting " 's id".
+
+![](images/bubble/bubble-create-new-page-5.png){: .center .width75 .border}
+
+Now, after navigating to "preview" and clicking on a tile, it should redirect us to a new page, and in the URL, "
+?post_id=[your post id]" should appear. Now, let's proceed with adding a new request to the API that will retrieve data
+about a specific post and pass the data to the "post" page depending on the "post_id" passed in the URL.
+
+![](images/bubble/bubble-new-page-url.png){: .center .width75 .border}
+
+# Creating a request with a specific post ID
+
+We go to the API connector tab and click on "Add another call."
+
+![](images/bubble/bubble-add-get-single-post-request-1.png){: .center .width75 .border}
+
+Next, we configure the new request similarly to the previous one. We give it a name, set the "parameters" section, and
+ensure that it is of type "GET." Then, we add "/[id]" to the URL. Now, our "id" will be recognized as a dynamic
+parameter. Let's set some default value for it, for example, the id of the first post, and check the "private" checkbox
+so that we can modify this parameter.
+
+![](images/bubble/bubble-add-get-single-post-request-2.png){: .center .width75 .border}
+
+Next, similarly to before, we click on "initialize call" and ensure that all data types have been assigned correctly.
+
+# Configuration of the "post" page.
+
+In the editor view, navigate to edit the "post" page.
+
+![](images/bubble/bubble-configure-post-page-1.png){: .center .width75 .border}
+
+We add a group element and stretch it to fill the entire page.
+
+![](images/bubble/bubble-configure-post-page-2.png){: .center .width75 .border}
+
+Next, in the group configuration, we set the "type of content" to "Get post."
+
+![](images/bubble/bubble-configure-post-page-group-1.png){: .center .width75 .border}
+
+In the "data source" section, we set "Get data from an external API."
+
+![](images/bubble/bubble-configure-post-page-group-2.png){: .center .width75 .border}
+
+Next, we set the "provider" to "Flotiq - Get post" and "(patch) id" to "Get data from page URL."
+
+![](images/bubble/bubble-configure-post-page-group-3.png){: .center .width75 .border}
+
+The "Parameter name" field should be set to "post_id."
+
+![](images/bubble/bubble-configure-post-page-group-4.png){: .center .width75 .border}
+
+Now, we can create a text element, place it in the center of the page, and in its configuration, set "dynamic data" to "
+Parent group's Get post" and then " 's title."
+
+![](images/bubble/bubble-add-text-to-post-page-1.png){: .center .width75 .border}
+
+Now, if we go to the project and click on a tile of one of the posts, it should redirect us to the sub-page with the
+title of our post displayed in the center.
+
+Now you can customize your page to display all post information, comments, links to social media, or implement post
+filtering by any field, and much more, according to your preferences.

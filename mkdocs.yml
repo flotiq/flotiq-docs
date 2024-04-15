@@ -162,10 +162,10 @@ nav:
     - 'Overview': Universe/index.md
     - Deployment:
       - 'Overview': Universe/deployment/overview.md
-      - 'NextJS app to Vercel': Universe/deployment/vercel-nextjs.md
-      - 'Gatsby app to Vercel': Universe/deployment/vercel-gatsby.md
-      - 'NextJS app to Netlify': Universe/deployment/netlify-nextjs.md
-      - 'Gatsby app to Netlify': Universe/deployment/netlify-gatsby.md
+      - 'NextJS project to Vercel': Universe/deployment/vercel-nextjs.md
+      - 'Gatsby project to Vercel': Universe/deployment/vercel-gatsby.md
+      - 'NextJS project to Netlify': Universe/deployment/netlify-nextjs.md
+      - 'Gatsby project to Netlify': Universe/deployment/netlify-gatsby.md
     - 'Gatsby': Universe/gatsby.md
     - 'NextJS': Universe/nextjs.md
     - 'Meta-API': Universe/metaapi.md

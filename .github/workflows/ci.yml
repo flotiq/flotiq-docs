@@ -43,3 +43,4 @@ jobs:
         API_TOKEN: ${{ secrets.API_TOKEN }}
         ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
         ZONE_ID: ${{ secrets.ZONE_ID }}
+        CLOUDFLARE_API_TOKEN: ${{ secrets.API_TOKEN }}

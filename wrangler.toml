@@ -3,4 +3,4 @@ compatibility_flags = []
 workers_dev = true
 site = {bucket = "./public"}
 main = "workers-site/index.js"
-compatibility_date = "2024-04-29"
+compatibility_date = "2024-04-03"

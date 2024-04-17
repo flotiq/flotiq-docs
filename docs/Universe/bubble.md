@@ -5,21 +5,23 @@ description: Flotiq allows you to integrate your content with any system easily.
 
 ## Introduction
 
-In Bubble.io, there's significant potential for various integrations with [Flotiq](https://editor.flotiq.com/). The
-platform offers many
-communication possibilities with APIs, not limited to just GET requests, thanks to its "API Connector" plugin.
-On their [YouTube channel](https://www.youtube.com/watch?v=nO8PSqeJaWk), Bubble.io has a video showcasing the
-capabilities of this plugin. As part of a sample
-integration, let's consider replicating a section of [Flotiq blog](https://blog.flotiq.com/) within a Bubble.io
-application. Specifically, we aim to
-display our blog posts on the homepage as tiles. Upon clicking on any of these tiles, users should be redirected to
-a dedicated page for that particular post.
+In Bubble.io, there's significant potential for various integrations with [Flotiq](https://editor.flotiq.com/){target="_
+blank"}. The platform offers many communication possibilities with APIs, not limited to just GET requests, thanks to
+its "API Connector" plugin. On their [YouTube channel](https://www.youtube.com/watch?v=nO8PSqeJaWk){target="_blank"},
+Bubble.io has a video showcasing the capabilities of this plugin. As part of a sample integration, let's consider
+replicating a section of [Flotiq blog](https://blog.flotiq.com/){target="_blank"} within a Bubble.io application.
+Specifically, we aim to display our blog posts on the homepage as tiles. Upon clicking on any of these tiles, users
+should be redirected to a dedicated page for that particular post.
 
 ## First step
 
 To start working on connecting Flotiq with Bubble.io, we need to have some data in Flotiq to display. I
-used the "flotiq-cli" to import a "CTD" (Content Type Definition) along with several "CO" (Content
-Objects) necessary for the blog's functionality. Then, we need to create our application in Bubble.io.
+used the ["flotiq-cli"](https://flotiq.com/docs/CLI/contentful-importer/?h=flotiq+import#imported-data){target="_blank"}
+to import a "CTD" (Content Type Definition) along with several "CO" (Content Objects) necessary for the blog's
+functionality, The `.json` files with `CTD` and `CO` that will be used during this integration can be
+found [here](https://github.com/flotiq/flotiq-blog){target="_blank"} in the `./flotiq` folder. Then, we need to create
+our application in Bubble.io.
+
 To do this, on the account management panel, we click on "create an app."
 
 ![](images/bubble/bubble-create-app.png){: .center .width75 .border}
@@ -38,9 +40,7 @@ Upon successfully creating our application, we will be presented with the editor
 
 ## Connection with Flotiq API
 
-To retrieve information about our posts from Flotiq, we need to go to the plugins tab, select "API Connector," and then
-press "Add another API."
-
+To retrieve information about our posts from Flotiq, we need to go to the plugins tab, select "API Connector"
 ![](images/bubble/bubble-configure-api-connector-1.png){: .center .width75 .border}
 
 Then press “Add another API” button
@@ -50,19 +50,20 @@ Then press “Add another API” button
 We select the name of our API, which in our case will be "Flotiq," and then click the "add a shared header" button. In
 the key field, we enter "X-AUTH-TOKEN," and in the value field, we input our API key for Flotiq. Then, we click "expand"
 in the "API Call" section. You can read more about Flotiq API keys
-in [our documentation](https://flotiq.com/docs/API/?h=api+keys##application-api-keys)
+in [our documentation](https://flotiq.com/docs/API/?h=api+keys##application-api-keys){target="_blank"}
 
 ![](images/bubble/bubble-configure-api-headers.png){: .center .width75 .border}
 
 Next, we choose a name for our request, for example, "Get all posts." We make sure it's a GET request and enter the URL
 to the Flotiq API pointing to our CTD with posts (how to create such a
-URL: [Docs](https://flotiq.com/docs/API/content-type/listing-co/)).
+URL: [Docs](https://flotiq.com/docs/API/content-type/listing-co/){target="_blank"}).
 
 ![](images/bubble/bubble-configure-api-request.png){: .center .width75 .border}
 
 Next, we click on "Add parameter" to set the parameter "hydrate" to 1, which enables us to retrieve data from
 relationships such as tags or the author of our post. (more about hydrate
-parameter: [Docs](https://flotiq.com/docs/API/content-type/listing-co/##hydrating-objects)) And finally, we click on "
+parameter: [Docs](https://flotiq.com/docs/API/content-type/listing-co/##hydrating-objects){target="_blank"}) And
+finally, we click on "
 Initialize call."
 
 ![](images/bubble/bubble-configure-api-request-headers.png){: .center .width75 .border}
@@ -74,8 +75,10 @@ their types match those from our Flotiq CTD (FlotiqBlogPost), we click "SAVE."
 ![](images/bubble/bubble-configure-api-response.png){: .center .width75 .border}
 
 Next, we move to the design tab where we will design our application. We can use a pre-made template or design our own.
-In this presentation, I will replicate a section of the page [https://blog.flotiq.com/](https://blog.flotiq.com/), which
-includes tiles presenting posts on the homepage, as well as a dedicated page for reading a specific post.
+In this presentation, I will replicate a section of the page
+[https://blog.flotiq.com/](https://blog.flotiq.com/){target="_blank"}, which includes tiles presenting posts on the
+homepage, as well as a dedicated page for reading a
+specific post.
 
 ## Designing
 

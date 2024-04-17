@@ -1,5 +1,4 @@
 name = "cms-docs"
-usage_model = ''
 compatibility_flags = []
 workers_dev = true
 site = {bucket = "./public"}

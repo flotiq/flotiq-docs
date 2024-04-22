@@ -1,6 +1,5 @@
 # Gatsby Vercel Deployment
 
-
 This article will walk you through the process of deploying your Gatsby project to Vercel.
 We use one of our starters as an example, so you might want to check them out, check the links below.
 

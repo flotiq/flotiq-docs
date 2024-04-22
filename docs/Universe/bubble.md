@@ -18,7 +18,7 @@ should be redirected to a dedicated page for that particular post.
 
 To start working on connecting Flotiq with Bubble.io, we need to have some data in Flotiq to display. We are going to
 use the
-["flotiq-cli"](https://flotiq.com/docs/CLI/contentful-importer/?h=flotiq+import#imported-data){target="_blank"}
+[flotiq-cli](https://flotiq.com/docs/CLI/contentful-importer/?h=flotiq+import#imported-data){target="_blank"}
 to import prepared by us "CTD" (Content Type Definition) along with several "CO" (Content Objects) necessary
 for the blog's functionality.
 

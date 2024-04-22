@@ -5,24 +5,49 @@ description: Flotiq allows you to integrate your content with any system easily.
 
 ## Introduction
 
-In Bubble.io, there's significant potential for various integrations with [Flotiq](https://editor.flotiq.com/){target="_
-blank"}. The platform offers many communication possibilities with APIs, not limited to just GET requests, thanks to
+In Bubble.io, there's significant potential for various integrations with
+[Flotiq](https://editor.flotiq.com/){target="_blank"}.
+The platform offers many communication possibilities with APIs, not limited to just GET requests, thanks to
 its "API Connector" plugin. On their [YouTube channel](https://www.youtube.com/watch?v=nO8PSqeJaWk){target="_blank"},
 Bubble.io has a video showcasing the capabilities of this plugin. As part of a sample integration, let's consider
 replicating a section of [Flotiq blog](https://blog.flotiq.com/){target="_blank"} within a Bubble.io application.
 Specifically, we aim to display our blog posts on the homepage as tiles. Upon clicking on any of these tiles, users
 should be redirected to a dedicated page for that particular post.
 
+## Preparation
+
+To start working on connecting Flotiq with Bubble.io, we need to have some data in Flotiq to display. We are gona use
+the
+["flotiq-cli"](https://flotiq.com/docs/CLI/contentful-importer/?h=flotiq+import#imported-data){target="_blank"}
+to import prepared by us "CTD" (Content Type Definition) along with several "CO" (Content Objects) necessary
+for the blog's functionality.
+
+All you need is an installed [flotiq-cli](https://github.com/flotiq/flotiq-cli){target="_blank"} and a copied
+floder `./flotiq` from [this repository](https://github.com/flotiq/flotiq-blog){target="_blank"} in this folder there
+are several subfolders containing `.json` files with definitions for `Content type Definition` and `Content Objects`.
+
+### Usage
+
+To use `flotiq cli` to import data in command line go to `.flotiq` floder
+and type
+
+```shell
+flotiq-cli import . YOUR-FLOTIQ-READ-AND-WRITE-KEY
+
+```
+
+!!! note
+    You can read more about api keys [here](https://flotiq.com/docs/API/){target="_blank"}
+
+!!! note
+    Successful execution of this command will add `4 images`, `1 tag`, `1 author` and `3 posts` to your `Flotiq account`. 
+    Importing this data will make it easier for you to follow the guide because this data will be used more than once 
+    later
+
 ## First step
 
-To start working on connecting Flotiq with Bubble.io, we need to have some data in Flotiq to display. I
-used the ["flotiq-cli"](https://flotiq.com/docs/CLI/contentful-importer/?h=flotiq+import#imported-data){target="_blank"}
-to import a "CTD" (Content Type Definition) along with several "CO" (Content Objects) necessary for the blog's
-functionality, The `.json` files with `CTD` and `CO` that will be used during this integration can be
-found [here](https://github.com/flotiq/flotiq-blog){target="_blank"} in the `./flotiq` folder. Then, we need to create
-our application in Bubble.io.
-
-To do this, on the account management panel, we click on "create an app."
+Now we need to create our application in Bubble.io. To do this, on the account management panel, we click on "create an
+app."
 
 ![](images/bubble/bubble-create-app.png){: .center .width75 .border}
 

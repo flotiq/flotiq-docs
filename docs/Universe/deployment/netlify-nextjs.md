@@ -1,7 +1,6 @@
-# NextJS Netlify deployment doc (WIP)
+# NextJS Netlify deployment
 
 This article will walk you through the process of deploying your NextJS project to Netlify.
-
 We use one of our starters as an example, so you might want to check them out, check the links below.
 
 

@@ -16,19 +16,19 @@ should be redirected to a dedicated page for that particular post.
 
 ## Preparation
 
-To start working on connecting Flotiq with Bubble.io, we need to have some data in Flotiq to display. We are gona use
-the
+To start working on connecting Flotiq with Bubble.io, we need to have some data in Flotiq to display. We are going to
+use the
 ["flotiq-cli"](https://flotiq.com/docs/CLI/contentful-importer/?h=flotiq+import#imported-data){target="_blank"}
 to import prepared by us "CTD" (Content Type Definition) along with several "CO" (Content Objects) necessary
 for the blog's functionality.
 
 All you need is an installed [flotiq-cli](https://github.com/flotiq/flotiq-cli){target="_blank"} and a copied
 floder `./flotiq` from [this repository](https://github.com/flotiq/flotiq-blog){target="_blank"} in this folder there
-are several subfolders containing `.json` files with definitions for `Content type Definition` and `Content Objects`.
+are several sub-folders containing `.json` files with definitions for `Content type Definition` and `Content Objects`.
 
 ### Usage
 
-To use `flotiq cli` to import data in command line go to `.flotiq` floder
+To use `flotiq cli` to import data in command line go to `.flotiq` folder
 and type
 
 ```shell

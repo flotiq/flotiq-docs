@@ -35,6 +35,7 @@ and type
 flotiq-cli import . YOUR-FLOTIQ-READ-AND-WRITE-KEY
 
 ```
+{ data-search-exclude }
 
 !!! note
     You can read more about api keys [here](https://flotiq.com/docs/API/){target="_blank"}

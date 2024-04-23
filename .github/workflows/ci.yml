@@ -22,19 +22,20 @@ jobs:
 
     - name: Cloudflare
       run: |
-        npm install -g @cloudflare/wrangler
+        npm install -g wrangler
         # wrangler init --site cms-docs
         sed -i 's+account_id = '\'\''+account_id = '"'"$ACCOUNT_ID"'"'+g' wrangler.toml
         sed -i 's+bucket = ""+bucket = "./public"+g' wrangler.toml
-        sed -i 's+zone_id = '\'\''+zone_id = '"'"$ZONE_ID"'"'+g' wrangler.toml
         sed -i 's+workers_dev = true++g' wrangler.toml
         echo "[env.production]" >> wrangler.toml
         echo "route = 'flotiq.com/docs/*'" >> wrangler.toml
-        echo 'zone_id = '"'"$ZONE_ID"'" >> wrangler.toml
         mkdir -p /home/runner/.wrangler/config/
         echo api_token = '"'"$API_TOKEN"'"' > /home/runner/.wrangler/config/default.toml
         cat wrangler.toml
-        wrangler publish --env=production
+        cd workers-site
+        npm install
+        cd ../
+        wrangler deploy --env=production
         # Refresh sitemap in Google and Bing
         curl "https://www.google.com/webmasters/sitemaps/ping?sitemap=https://flotiq.com/docs/sitemap.xml"
         curl "https://www.bing.com/webmaster/ping.aspx?siteMap=https://flotiq.com/docs/sitemap.xml"
@@ -42,4 +43,4 @@ jobs:
       env:
         API_TOKEN: ${{ secrets.API_TOKEN }}
         ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
-        ZONE_ID: ${{ secrets.ZONE_ID }}
+        CLOUDFLARE_API_TOKEN: ${{ secrets.API_TOKEN }}

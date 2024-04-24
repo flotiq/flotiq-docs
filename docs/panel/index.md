@@ -8,6 +8,13 @@ After logging in you will see Flotiq's dashboard, by default it will show a welc
 
 ![Flotiq dashboard](images/Dashboard.png)
 
+The Dashboard you see contains information about the Space within which you are working. If you have access to multiple Spaces, you can switch contexts by clicking on the desired Space.
+
+![Flotiq dashboard - spaces](images/DashboardSpaces.png)
+
+!!! note
+    Read more about Spaces in [Spaces and Organization section](/docs/panel/spaces/).
+
 ## Content Type Definitions
 
 This part of Flotiq's interface will be your starting point whenever you begin working with new kind of data. In here you will find your existing Content Type Definitions, presented in a tile grid

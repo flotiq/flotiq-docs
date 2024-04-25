@@ -4,20 +4,20 @@ description: How to manage Spaces in Flotiq.
 ## What is a Space?
 
 A Space is a workspace that groups data in terms of a single, separate project.
-Content does not overlap between Spaces. 
+Content does not overlap between Spaces.
 This means that a user assigned to a particular Space will only see content from that Space.
 
 Key Characteristics of a Space:
 
 * **Content Isolation:** Content within a Space does not overlap with other Spaces, ensuring distinct boundaries.
-* **Individual Usage Limits:** Each Space maintains its own separate usage limits, ensuring
+* **Individual Usage Limits:** Each Space maintains its own separate usage limits.
 * **Visibility Restrictions:** Users assigned to a particular Space will only have access to content within that Space, enhancing security and relevance of information.
 
 Space groups content of the Organization such as: `Content Objects`, `Content Type Definitions`, `Media`, `API keys`, `Plugins`, `Webhooks`, and `Users`.
 
 !!! Example
     This is what the content of an example Space for the "News Site" project might look like. Notice which elements belong to this specific Space:
-    
+
     - **Name**: News Site Space
     - **Plan**: PRO
     - **Content Type Definitions**: Media, News, Category, Author, Comments
@@ -58,7 +58,7 @@ To manage your Spaces, navigate to the `Organization Settings` section of the ap
 
 ![Go to organization Settings, Flotiq Dashboard](images/spaces/SpaceOrgSettings.png)
 
-### List spaces 
+### List spaces
 
 The `Spaces and Usage` list provides essential details about your Spaces within the Organization. 
 
@@ -70,7 +70,6 @@ This overview allows you to:
 * Access the subscription dashboard where you can review billing documents (Manage subscription panel).
 
 ![Spaces and Usage view in Flotiq Dashboard](images/spaces/SpacesAndUsage.png)
-
 
 ### Add Space
 
@@ -99,11 +98,11 @@ When the administrator changes the plan:
 
 ## Manage Users in Organization
 
-Administrators can manage users outside the Space context. 
+Administrators can manage users outside the Space context.
 This allows Administrators to have an overview of all users within the Organization.
 
 Users can be added independently of Spaces, without being assigned to a specific Space.
 
 To display the user list, navigate to the `Users` tab in the Organization management view.
 
-![Users in Organization](images/spaces/SpaceUsers.png) 
+![Users in Organization](images/spaces/SpaceUsers.png)

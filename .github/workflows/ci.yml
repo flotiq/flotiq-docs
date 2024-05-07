@@ -3,10 +3,11 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
   workflow_dispatch:
 
-
+env:
+  SITE_URL: https://flotiq-frontend-965-feature-24617-res-j1km42.dev.cdwv.pl
+  
 jobs:
   build:
     runs-on: ubuntu-latest # The type of runner that the job will run on
@@ -15,15 +16,21 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: 3.x
+    - run: bash ./.github/scripts/get-plugins-docs.sh
     - run: pip install -r requirements.txt
     - run: mkdocs build
     - run: mkdir public
     - run: mv ./site ./public/docs
+      
 
+  deploy_cloudflare:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' # Run only for the master branch
+    steps:
     - name: Cloudflare
       run: |
         npm install -g wrangler
-        # wrangler init --site cms-docs
         sed -i 's+account_id = '\'\''+account_id = '"'"$ACCOUNT_ID"'"'+g' wrangler.toml
         sed -i 's+bucket = ""+bucket = "./public"+g' wrangler.toml
         sed -i 's+workers_dev = true++g' wrangler.toml
@@ -36,7 +43,6 @@ jobs:
         npm install
         cd ../
         wrangler deploy --env=production
-        # Refresh sitemap in Google and Bing
         curl "https://www.google.com/webmasters/sitemaps/ping?sitemap=https://flotiq.com/docs/sitemap.xml"
         curl "https://www.bing.com/webmaster/ping.aspx?siteMap=https://flotiq.com/docs/sitemap.xml"
       shell: bash

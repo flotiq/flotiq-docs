@@ -159,6 +159,12 @@ nav:
     - 'Migrate content from Contentful to Flotiq': CLI/contentful-importer.md
     - 'Purging data from Flotiq account': CLI/purge.md
     - 'Migrating Flotiq data to and from MS Excel': CLI/excel-data-migration.md
+  - Plugins:
+    - 'Getting started': plugins/plugins.md
+    - 'Examples': plugins/plugin-examples.md
+    - Plugins API Reference:
+      - 'plugins-section-placeholder': '#'
+    - 'Faq & Troubleshooting': plugins/plugin-faq-and-troubleshooting.md
   - Flotiq Universe:
     - 'Overview': Universe/index.md
     - Deployment:

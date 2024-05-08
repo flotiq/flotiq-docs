@@ -14,7 +14,7 @@ FlotiqPlugins.add(
     // Listen for sidebar-panel::add events to intercept sidebar rendering
     handler.on('flotiq.form.sidebar-panel::add', ({ contentType }) => {
       // Make sure we're adding the info only for Blog Posts
-      if (contentType?.name !== 'blogposts') return null;
+      if (contentType?.name !== 'blogpost') return null;
 
       // Return string message
       return `Dear editor, please use a unique slug for the post. 
@@ -44,7 +44,7 @@ FlotiqPlugins.add(
     handler.on(
       'flotiq.form.sidebar-panel::add',
       ({ contentType, contentObject }) => {
-        if (contentType?.name !== 'blogposts') return null;
+        if (contentType?.name !== 'blogpost') return null;
 
         // Create div HTML element
         const div = document.createElement('div');
@@ -93,10 +93,11 @@ FlotiqPlugins.add(
       'flotiq.grid.cell::render',
       ({ contentType, accessor, data }) => {
         // Don't do anything if we're not rendering blogpost -> media field
-        if (contentType?.name !== 'blogposts') return null;
-        if (accessor != 'media') return null;
+        if (contentType?.name !== 'blogpost') return null;
+        if (accessor != 'headerImage') return null;
 
         const imageRelation = data[0];
+        if (!imageRelation)  return null;
 
         // Create HTML image element
         const img = document.createElement('img');
@@ -138,7 +139,7 @@ FlotiqPlugins.add(
   },
   function (handler) {
     handler.on(`flotiq.form.field::config`, ({ config, contentType, name }) => {
-      if (contentType.name !== 'blogposts') return;
+      if (contentType.name !== 'blogpost') return;
       
       if (name === 'title') {
         config.style = {
@@ -180,7 +181,7 @@ FlotiqPlugins.add(
     handler.on(
       `flotiq.grid.cell::render`,
       ({ data, contentType, accessor }) => {
-        if (contentType.name !== 'blogposts') return;
+        if (contentType.name !== 'blogpost') return;
         if (accessor === 'title') {
           const titleSpan = document.createElement('span');
           titleSpan.textContent = data;

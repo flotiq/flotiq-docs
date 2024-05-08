@@ -1,6 +1,16 @@
 # Flotiq UI Plugins development
 
-If you find the generic UI not enough, you can write your own extensions to our UI, that will suit your specific needs.
+If you find Flotiq UI not enough, you can write your own extensions, that will suit your specific needs.
+
+Flotiq UI plugins can be used to enhance our UI experience within your account, including (but not limited to):
+
+* Changing styles of the form
+* Replacing existing inputs in forms with dedicated widgets (e.g. star rating radio instead of radio buttons, a tool to visually place items on 2d canvas with coordinates saved to a list)
+* Modifying preview of certain properties in table-view
+* Integrating with tools like ChatGPT to generate text descriptions
+* Adding status panels that integrate with your analytics tool
+* Expanding the functionality of existing inputs by adding a visual preview of the results
+* Introducing custom validation rules before objects can be saved
 
 ## Basics
 
@@ -64,7 +74,7 @@ FlotiqPlugins.add({
     version: `<semver version>`,
     permissions: [
       {type: 'CO', canRead: true, ctdName: '*'},
-      {type: 'CO', canWrite: true, canCreate: true, canDelete: true, canRead: true, ctdName: 'blogposts'},
+      {type: 'CO', canWrite: true, canCreate: true, canDelete: true, canRead: true, ctdName: 'blogpost'},
       {type: 'CTD', canRead: true, ctdName: '_media'},
       {type: 'CTD', canRead: true, ctdName: '_tag'},
     ]
@@ -74,7 +84,7 @@ FlotiqPlugins.add({
 In the example above, we are requesting the following access:
 
 - an ability to read all content objects
-- an ability to read, modify, delete and create objects of type `blogposts`
+- an ability to read, modify, delete and create objects of type `blogpost`
 - an ability to read the schema of `_media` (we can read `_media` objects already due to the first access rule. )
 - an ability to read the schema of `_tags`
 
@@ -187,10 +197,10 @@ Let's consider the example below:
 
 ```javascript
 const elementCache = {};
-handler.on('flotiq.grid.cell::render', ({ contentType, accessor, data }) => {
+handler.on('flotiq.grid.cell::render', ({ contentType, accessor, data, contentObject }) => {
   // Don't do anything if we're not rendering blogpost -> media field
-  if (contentType?.name !== 'blogposts') return null;
-  if (accessor != 'media') return null;
+  if (contentType?.name !== 'blogpost') return null;
+  if (accessor != 'headerImage') return null;
   const elementCacheKey = `${contentType.name}-${contentObject.id}-${accessor}`;
 
   const imageRelation = data[0];
@@ -222,10 +232,10 @@ Now let's take a look at an improved example:
 ```javascript
 const elementCache = {};
 const mediaPromiseCache = {};
-handler.on('flotiq.grid.cell::render', ({ contentType, accessor, data }) => {
+handler.on('flotiq.grid.cell::render', ({ contentType, accessor, data, contentObject }) => {
   // Don't do anything if we're not rendering blogpost -> media field
-  if (contentType?.name !== 'blogposts') return null;
-  if (accessor != 'media') return null;
+  if (contentType?.name !== 'blogpost') return null;
+  if (accessor != 'headerImage') return null;
   const elementCacheKey = `${contentType.name}-${contentObject.id}-${accessor}`;
 
   const imageRelation = data[0];
@@ -309,7 +319,32 @@ Once you have your plugin written, you have several options to install it into F
 
 **Prerequisites**: Your plugin script needs to be accessible via the http(s) URL from the browser of any user in your organization. In this case, `localhost` serving may not be enough unless you know for sure you are the only user of the plugin! 
 
-Your plugin also must contain all required information in the `plugin-manifest.json` file. Manifest file has the same structure as the object provided when plugin registers its event handlers, however, some fields are no longer optional when manifest is provided. For more details on the required fields, see [PluginInfo](PluginDocs/PluginInfo.md).
+Your plugin also must contain all required information in the `plugin-manifest.json` file. Manifest file has the same structure as the object provided when plugin registers its event handlers, however, some fields are no longer optional when manifest is provided. 
+
+<details>
+<summary>See an example of `plugin-maniest.json` that can be used to register new plugin</summary>
+
+```json
+{
+  "id": "my-organization.example-plugin",
+  "name": "An Example plugin",
+  "description": "This is plugin created by My Organization to handle an example workflow for all data types",
+  "version": "1.0.0",
+  "repository": "https://github.com/my-organization/flotiq-example-plugin",
+  "url": "https://example.com/index.js",
+  "permissions": [
+    {
+      "ctdName": "*",
+      "canRead": true,
+      "type": "CO"
+    }
+  ]
+}
+```
+
+</details>
+
+For more details on the required fields, see [PluginInfo](PluginDocs/PluginInfo.md).
 
 If your plugin is ready for wider use within your organization:
 

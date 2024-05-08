@@ -3,7 +3,6 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
   workflow_dispatch:
 
 
@@ -15,11 +14,18 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: 3.x
+    - run: bash ./.github/scripts/get-plugins-docs.sh
     - run: pip install -r requirements.txt
     - run: mkdocs build
     - run: mkdir public
     - run: mv ./site ./public/docs
+      
 
+  deploy_cloudflare:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' # Run only for the master branch
+    steps:
     - name: Cloudflare
       run: |
         npm install -g wrangler

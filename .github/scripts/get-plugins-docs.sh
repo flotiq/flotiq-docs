@@ -6,7 +6,7 @@ FILES_LIST_URL="$SITE_URL/markdown-docs/files.txt"
 PROJECT_DIR="."
 echo "URL: $FILES_LIST_URL"
 # Destination directory where files will be saved
-DESTINATION_DIR="$PROJECT_DIR/docs/plugins"
+DESTINATION_DIR="$PROJECT_DIR/docs/panel/PluginsDevelopment"
 
 # Fetch the list of files
 FILES=$(curl -s "$FILES_LIST_URL" $FILES_LIST_URL| grep 'PluginDocs')

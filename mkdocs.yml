@@ -154,10 +154,10 @@ nav:
       - 'Netlify': panel/Plugins/Netlify-integration.md
       - 'Custom Links': panel/Plugins/Custom-links.md
     - UI Plugins Development:
-      - 'Getting started': plugins/plugins.md
-      - 'Examples': plugins/plugin-examples.md
-      - 'Faq & Troubleshooting': plugins/plugin-faq-and-troubleshooting.md
-      - Plugins API Reference: plugins/PluginDocs/
+      - 'Getting started': panel/PluginsDevelopment/plugins.md
+      - 'Examples': panel/PluginsDevelopment/plugin-examples.md
+      - 'Faq & Troubleshooting': panel/PluginsDevelopment/plugin-faq-and-troubleshooting.md
+      - Plugins API Reference: panel/PluginsDevelopment/
   - CLI:
     - 'Overview': CLI/index.md
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project-gatsby.md

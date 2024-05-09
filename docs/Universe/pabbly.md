@@ -6,7 +6,7 @@ description: Flotiq allows you to integrate your content with any system easily.
 ## Introduction
 
 For the purposes of this tutorial, we will create a pipeline that sends an email with the invitation for new event, when
-new event is created. We are going store the email list and the list of events in Flotiq cms.
+new event is created. We will store the email list and the list of events in Flotiq cms.
 Unfortunately there is no dedicated Pabbly Connect trigger for Flotiq yet, so in this tutorial we will use Pabbly
 webhook trigger with [Flotiq custom webhooks](https://flotiq.com/docs/panel/webhooks/){target="_blank"}.
 
@@ -30,7 +30,7 @@ invitations.
 
 ![](images/pabbly/pabbly-add-ctd-in-flotiq-3.png){: .center .width75 .border}
 
-We will store email, first name, last name and date of birth in our mailing list. After creating all the fields, click "
+We will store the email, first name, last name, and date of birth on our mailing list. After creating all the fields, click "
 Save".
 
 ![](images/pabbly/pabbly-add-ctd-in-flotiq-4.png){: .center .width75 .border}
@@ -73,7 +73,7 @@ Webhooks are a way to notify external systems when a specific event happens in F
 with a wide range of other systems by triggering actions based on defined events.
 
 !!! note
-    You can read more about Flotiq webhook’s [there](https://flotiq.com/docs/panel/webhooks/){target="_blank"}
+    Read more about webhook in [Flotiq documentation](https://flotiq.com/docs/panel/webhooks/){target="_blank"}
 
 The purpose of this tutorial is to prepare a workflow in Pabbly Connect that will send emails to the mailing list every
 time a new event is created in Flotiq. The ideal choice to inform Pabbly about the creation of a new CO will be

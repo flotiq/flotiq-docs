@@ -666,9 +666,7 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
   width: 100%;
   display: table !important;
 }
-.fq-docs-property-block td {
-  word-break: break-all;
-}
+
 .fq-docs-property-block table th:nth-child(1),
 .fq-docs-property-block table td:nth-child(1) {
   width: 25%;

@@ -38,12 +38,13 @@ sed -i.bak 's/^\s*#/#/' "$INDEX_FILE"
 
 # Extract the file names in reverse order
 FILES=$(grep -o '\(.*\)' "$INDEX_FILE" | awk -F '[()]' '{print $2}' | sed 's/\.\/\([^\/]*\)/\1/' | tr ' ' '\n' | xargs)
-# Loop through each file name and process them
-INDENT=`grep -E '\s*- Plugins API Reference' $PROJECT_DIR/mkdocs.yml | grep -Eo '^\s*'`
 
-START_PLUGINS_NAV_PATTERN="# START_PLUGINS_FILES"
-END_PLUGINS_NAV_PATTERN="# END_PLUGINS_FILES"
-sed -i.bak "/$START_PLUGINS_NAV_PATTERN/,/$END_PLUGINS_NAV_PATTERN/{/$START_PLUGINS_NAV_PATTERN/n;/$END_PLUGINS_NAV_PATTERN/!d;}" $PROJECT_DIR/mkdocs.yml
+# Clean the Events file to reduce the number of items in the navigation
+find $MD_FILES_DIRECTORY -type f -iname '*Events.md' | xargs sed -Ei.bak 's/## event `"(.*)"`/## `\1`/g'
+find $MD_FILES_DIRECTORY -type f -iname '*Events.md' | xargs sed -Ei.bak "s|#### (Supported results)|<div markdown=1 style='font-weight: bold;font-size: 1.2em'>\1</div>|g"
+find $MD_FILES_DIRECTORY -type f -iname '*Events.md' | xargs sed -Ei.bak "s|#### (Event class: .*)|<div markdown=1 style='font-weight: bold;font-size: 1.2em'>\1</div>|g"
+
+# Loop through each file name and process them
 ITER=0
 for FILE in $FILES; do
     ORIGINAL_FILE="$FILE"

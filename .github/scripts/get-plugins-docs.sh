@@ -37,24 +37,23 @@ INDEX_FILE="$MD_FILES_DIRECTORY/index.md"
 sed -i 's/^\s*#/#/' "$INDEX_FILE"
 
 # Extract the file names in reverse order
-FILES=$(grep -o '\(.*\)' "$INDEX_FILE" | awk -F '[()]' '{print $2}' | sed 's/\.\/\([^\/]*\)/\1/' | tr ' ' '\n' | tac | xargs)
+FILES=$(grep -o '\(.*\)' "$INDEX_FILE" | awk -F '[()]' '{print $2}' | sed 's/\.\/\([^\/]*\)/\1/' | tr ' ' '\n' | xargs)
 # Loop through each file name and process them
 INDENT=`grep -E '\s*- Plugins API Reference' $PROJECT_DIR/mkdocs.yml | grep -Eo '^\s*'`
 
 START_PLUGINS_NAV_PATTERN="# START_PLUGINS_FILES"
 END_PLUGINS_NAV_PATTERN="# END_PLUGINS_FILES"
 sed -i "/$START_PLUGINS_NAV_PATTERN/,/$END_PLUGINS_NAV_PATTERN/{/$START_PLUGINS_NAV_PATTERN/n;/$END_PLUGINS_NAV_PATTERN/!d;}" $PROJECT_DIR/mkdocs.yml
+ITER=0
 for FILE in $FILES; do
+    mv $MD_FILES_DIRECTORY/$FILE $MD_FILES_DIRECTORY/${ITER}_$FILE
+    FILE="${ITER}_$FILE"
+    echo "$FILE"
     # Delete divs and TOCs
+    sed -i 's/^# Flotiq UI Plugins Reference: /# /g' "$MD_FILES_DIRECTORY/$FILE"
     sed -i 's/<div /<div markdown="1"/g' "$MD_FILES_DIRECTORY/$FILE"
     sed -i 's#.docs/public/#../#g' "$MD_FILES_DIRECTORY/$FILE"
     sed -i '/\[\[_TOC_\]\]/d' "$MD_FILES_DIRECTORY/$FILE"
-    HEADER=$(grep -m 1 '^# ' "$MD_FILES_DIRECTORY/$FILE" | awk -F 'Reference:' '{print $2}' | awk '{$1=$1};1')
-    if [ -z "$HEADER" ]; then
-        echo "Header is empty."
-    else
-        # New content to insert
-        LINE="${INDENT}  - '$HEADER': plugins/PluginDocs/$FILE"
-        sed -i '/# START_PLUGINS_FILES/a\'"$LINE" $PROJECT_DIR/mkdocs.yml
-    fi
+    
+    ITER=$(expr $ITER + 1)
 done

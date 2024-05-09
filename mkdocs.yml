@@ -157,7 +157,7 @@ nav:
       - 'Getting started': panel/PluginsDevelopment/plugins.md
       - 'Examples': panel/PluginsDevelopment/plugin-examples.md
       - 'Faq & Troubleshooting': panel/PluginsDevelopment/plugin-faq-and-troubleshooting.md
-      - Plugins API Reference: panel/PluginsDevelopment/
+      - Plugins API Reference: panel/PluginsDevelopment/PluginDocs/
   - CLI:
     - 'Overview': CLI/index.md
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project-gatsby.md

@@ -46,9 +46,11 @@ END_PLUGINS_NAV_PATTERN="# END_PLUGINS_FILES"
 sed -i "/$START_PLUGINS_NAV_PATTERN/,/$END_PLUGINS_NAV_PATTERN/{/$START_PLUGINS_NAV_PATTERN/n;/$END_PLUGINS_NAV_PATTERN/!d;}" $PROJECT_DIR/mkdocs.yml
 ITER=0
 for FILE in $FILES; do
-    mv $MD_FILES_DIRECTORY/$FILE $MD_FILES_DIRECTORY/${ITER}_$FILE
-    FILE="${ITER}_$FILE"
-    echo "$FILE"
+    ORIGINAL_FILE="$FILE"
+    FILE="${ITER}_${ORIGINAL_FILE}"
+    mv $MD_FILES_DIRECTORY/$ORIGINAL_FILE $MD_FILES_DIRECTORY/$FILE
+    echo "renaming $ORIGINAL_FILE to $FILE"
+    find $MD_FILES_DIRECTORY -type f | xargs sed -i  "s/${ORIGINAL_FILE}/${FILE}/g"
     # Delete divs and TOCs
     sed -i 's/^# Flotiq UI Plugins Reference: /# /g' "$MD_FILES_DIRECTORY/$FILE"
     sed -i 's/<div /<div markdown="1"/g' "$MD_FILES_DIRECTORY/$FILE"

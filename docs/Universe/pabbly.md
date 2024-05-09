@@ -6,7 +6,7 @@ description: Flotiq allows you to integrate your content with any system easily.
 ## Introduction
 
 For the purposes of this tutorial, we will create a pipeline that sends an email with the invitation for new event, when
-new event is created. We will store the email list and the list of events in Flotiq cms.
+a new event is created. We will store the email list and the list of events in Flotiq cms.
 Unfortunately there is no dedicated Pabbly Connect trigger for Flotiq yet, so in this tutorial we will use Pabbly
 webhook trigger with [Flotiq custom webhooks](https://flotiq.com/docs/panel/webhooks/){target="_blank"}.
 

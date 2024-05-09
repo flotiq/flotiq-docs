@@ -39,6 +39,8 @@ theme:
 plugins:
   - search
   - awesome-pages
+  - include_dir_to_nav:
+      file_pattern: '\d.*\.md$'
   - git-revision-date-localized:
       fallback_to_build_date: true
 
@@ -155,10 +157,7 @@ nav:
       - 'Getting started': plugins/plugins.md
       - 'Examples': plugins/plugin-examples.md
       - 'Faq & Troubleshooting': plugins/plugin-faq-and-troubleshooting.md
-      - Plugins API Reference:
-        # START_PLUGINS_FILES
-        - 'plugins-section-placeholder': '#'
-        # END_PLUGINS_FILES
+      - Plugins API Reference: plugins/PluginDocs/
   - CLI:
     - 'Overview': CLI/index.md
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project-gatsby.md

@@ -40,6 +40,10 @@ sed -i 's/^\s*#/#/' "$INDEX_FILE"
 FILES=$(grep -o '\(.*\)' "$INDEX_FILE" | awk -F '[()]' '{print $2}' | sed 's/\.\/\([^\/]*\)/\1/' | tr ' ' '\n' | tac | xargs)
 # Loop through each file name and process them
 INDENT=`grep -E '\s*- Plugins API Reference' $PROJECT_DIR/mkdocs.yml | grep -Eo '^\s*'`
+
+START_PLUGINS_NAV_PATTERN="# START_PLUGINS_FILES"
+END_PLUGINS_NAV_PATTERN="# END_PLUGINS_FILES"
+sed -i "/$START_PLUGINS_NAV_PATTERN/,/$END_PLUGINS_NAV_PATTERN/{/$START_PLUGINS_NAV_PATTERN/n;/$END_PLUGINS_NAV_PATTERN/!d;}" $PROJECT_DIR/mkdocs.yml
 for FILE in $FILES; do
     # Delete divs and TOCs
     sed -i 's/<div /<div markdown="1"/g' "$MD_FILES_DIRECTORY/$FILE"
@@ -51,8 +55,6 @@ for FILE in $FILES; do
     else
         # New content to insert
         LINE="${INDENT}  - '$HEADER': plugins/PluginDocs/$FILE"
-        sed -i '/- Plugins API Reference/a\'"$LINE" $PROJECT_DIR/mkdocs.yml
-        sed -i '/- '\''plugins-section-placeholder'\'': '\''#'\''/d' "$PROJECT_DIR/mkdocs.yml"
-
+        sed -i '/# START_PLUGINS_FILES/a\'"$LINE" $PROJECT_DIR/mkdocs.yml
     fi
 done

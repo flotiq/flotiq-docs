@@ -50,7 +50,7 @@ for FILE in $FILES; do
     FILE="${ITER}_${ORIGINAL_FILE}"
     mv $MD_FILES_DIRECTORY/$ORIGINAL_FILE $MD_FILES_DIRECTORY/$FILE
     echo "renaming $ORIGINAL_FILE to $FILE"
-    find $MD_FILES_DIRECTORY -type f | xargs sed -i.bak "s/${ORIGINAL_FILE}/${FILE}/g"
+    find $MD_FILES_DIRECTORY -type f -iname '*.md' | xargs sed -i.bak "s/${ORIGINAL_FILE}/${FILE}/g"
     # Delete divs and TOCs
     sed -i.bak 's/^# Flotiq UI Plugins Reference: /# /g' "$MD_FILES_DIRECTORY/$FILE"
     sed -i.bak 's/<div /<div markdown="1"/g' "$MD_FILES_DIRECTORY/$FILE"
@@ -59,3 +59,5 @@ for FILE in $FILES; do
     
     ITER=$(expr $ITER + 1)
 done
+
+find $PROJECT_DIR -type f -iname '*.bak' -exec rm {} \;

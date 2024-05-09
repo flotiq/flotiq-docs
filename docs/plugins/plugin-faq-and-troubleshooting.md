@@ -5,6 +5,7 @@
 ```
 Error while loading plugin script SyntaxError: Unexpected token '<'
 ```
+{ data-search-exclude }
 
 The most likely cause is that your plugin script is not loading properly and the remote server returns a 404 page. Check your plugin URL and make sure it returns a js file.
 

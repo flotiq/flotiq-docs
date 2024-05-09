@@ -38,6 +38,7 @@ FlotiqPlugins.add({                                     // 1. Registration
     })
 })
 ```
+{ data-search-exclude }
 
 What happens here?
 
@@ -80,6 +81,7 @@ FlotiqPlugins.add({
     ]
 }, /*...*/)
 ```
+{ data-search-exclude }
 
 In the example above, we are requesting the following access:
 
@@ -127,6 +129,7 @@ FlotiqPlugins.add(
   },
 );
 ```
+{ data-search-exclude }
 
 ### Examples
 
@@ -155,6 +158,7 @@ handler.on('flotiq.grid.cell::render', ({ contentType, accessor, data }) => {
 });
 //...
 ```
+{ data-search-exclude }
 
 In this example, each time the grid cell is rendered we are creating a new HTML element and populating it with data. While this operation does not take long, we are doing it for all grid cells, which may sum up to lower performance and many unnecessary UI re-renders.
 
@@ -184,6 +188,7 @@ handler.on(
 );
 //...
 ```
+{ data-search-exclude }
 
 Here we added an in-memory cache for created div elements. Each element in the cache is indexed by content type, id of the object and the name of the property. If the div element for the particular cell already exists, it will be returned instead of creating a new one. This will not only save us some memory and CPU but also avoid unnecessary re-renders of the UI!
 
@@ -222,6 +227,7 @@ handler.on('flotiq.grid.cell::render', ({ contentType, accessor, data, contentOb
   return img;
 });
 ```
+{ data-search-exclude }
 
 Here, our code creates an `img` element. Then we extract `mediaId` from `dataUrl` and download info about the media file. Finally, we populate the `src` attribute with an image URL based on the `_media` content object.
 
@@ -263,6 +269,7 @@ handler.on('flotiq.grid.cell::render', ({ contentType, accessor, data, contentOb
   return img;
 });
 ```
+{ data-search-exclude }
 
 We added a similar cache object to the element cache. Each cache element is a promise that is returned from the API client. We create this promise only once for each media `id`. Not only we will avoid pulling the same image data in parallel, but we will also re-use this data if such an image is used on other grid pages.
 
@@ -280,6 +287,7 @@ element.addEventListener('flotiq.attached', () => {
 });
 return element;
 ```
+{ data-search-exclude }
 
 ## Plugin Installation
 
@@ -307,6 +315,7 @@ Once you have your plugin written, you have several options to install it into F
    ```javascript
    FlotiqPlugins.loadPlugin('<unique script id>', '<url to file>');
    ```
+   { data-search-exclude }
    For example:
    ```javascript
    FlotiqPlugins.loadPlugin(
@@ -314,6 +323,7 @@ Once you have your plugin written, you have several options to install it into F
      'http://localhost:3000/index.js',
    );
    ```
+{ data-search-exclude }
 
 ### Permanent installation for the organization
 
@@ -341,6 +351,7 @@ Your plugin also must contain all required information in the `plugin-manifest.j
   ]
 }
 ```
+{ data-search-exclude }
 
 </details>
 

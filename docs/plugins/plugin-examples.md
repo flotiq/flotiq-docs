@@ -24,6 +24,7 @@ FlotiqPlugins.add(
   },
 );
 ```
+{ data-search-exclude }
 
 Result:
 
@@ -67,6 +68,7 @@ FlotiqPlugins.add(
   },
 );
 ```
+{ data-search-exclude }
 
 Result:
 
@@ -120,6 +122,7 @@ FlotiqPlugins.add(
   },
 );
 ```
+{ data-search-exclude }
 
 Result:
 
@@ -159,6 +162,7 @@ FlotiqPlugins.add(
   },
 );
 ```
+{ data-search-exclude }
 
 Result:
 
@@ -201,6 +205,8 @@ FlotiqPlugins.add(
   },
 );
 ```
+{ data-search-exclude }
+
 Result:
 
 ![Title width added to the object data table](img/title-width-plugin.png)
@@ -261,6 +267,7 @@ FlotiqPlugins.add(
   },
 );
 ```
+{ data-search-exclude }
 
 Result:
 
@@ -340,6 +347,7 @@ FlotiqPlugins.add(
   },
 );
 ```
+{ data-search-exclude }
 
 Result:
 <video src="../img/custom-modal-ctd-schema.mp4" controls=""><a href="../img/custom-modal-ctd-schema.mp4">Form defined with a schema that
@@ -432,6 +440,7 @@ FlotiqPlugins.add(
   },
 );
 ```
+{ data-search-exclude }
 
 Result:
 

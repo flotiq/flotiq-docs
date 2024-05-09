@@ -31,7 +31,11 @@ pip install -r requirements.txt
 ```
 
 To start server use:
-`mkdocs serve`
+
+```bash
+bash .github/scripts/get-plugins-docs.sh # Pull dynamically generated plugin docs
+mkdocs serve # Start devlopment server
+```
 
 After that, the documentation should be available on http://localhost:4000.
 

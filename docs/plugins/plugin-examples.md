@@ -46,6 +46,7 @@ FlotiqPlugins.add(
       'flotiq.form.sidebar-panel::add',
       ({ contentType, contentObject }) => {
         if (contentType?.name !== 'blogpost') return null;
+        if (!contentObject) return null; // Skip link creation on Add Blog Post object page
 
         // Create div HTML element
         const div = document.createElement('div');

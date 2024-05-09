@@ -176,6 +176,7 @@ nav:
 #    - 'Netlify': Universe/netlify.md
     - 'Heroku': Universe/heroku.md
     - 'Bubble': Universe/bubble.md
+    - 'Pabbly': Universe/pabbly.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Hooking React TodoMVC with Flotiq': Deep-Dives/todomvc-react-headless-cms.md

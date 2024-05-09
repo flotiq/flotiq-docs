@@ -156,7 +156,9 @@ nav:
       - 'Examples': plugins/plugin-examples.md
       - 'Faq & Troubleshooting': plugins/plugin-faq-and-troubleshooting.md
       - Plugins API Reference:
+        # START_PLUGINS_FILES
         - 'plugins-section-placeholder': '#'
+        # END_PLUGINS_FILES
   - CLI:
     - 'Overview': CLI/index.md
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project-gatsby.md

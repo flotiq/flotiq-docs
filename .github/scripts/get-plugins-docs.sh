@@ -34,7 +34,7 @@ MD_FILES_DIRECTORY="$DESTINATION_DIR/PluginDocs"
 # File with section ordered list
 INDEX_FILE="$MD_FILES_DIRECTORY/index.md"
 # Delete spaces before markdown code
-sed -i 's/^\s*#/#/' "$INDEX_FILE"
+sed -i.bak 's/^\s*#/#/' "$INDEX_FILE"
 
 # Extract the file names in reverse order
 FILES=$(grep -o '\(.*\)' "$INDEX_FILE" | awk -F '[()]' '{print $2}' | sed 's/\.\/\([^\/]*\)/\1/' | tr ' ' '\n' | xargs)
@@ -43,19 +43,19 @@ INDENT=`grep -E '\s*- Plugins API Reference' $PROJECT_DIR/mkdocs.yml | grep -Eo 
 
 START_PLUGINS_NAV_PATTERN="# START_PLUGINS_FILES"
 END_PLUGINS_NAV_PATTERN="# END_PLUGINS_FILES"
-sed -i "/$START_PLUGINS_NAV_PATTERN/,/$END_PLUGINS_NAV_PATTERN/{/$START_PLUGINS_NAV_PATTERN/n;/$END_PLUGINS_NAV_PATTERN/!d;}" $PROJECT_DIR/mkdocs.yml
+sed -i.bak "/$START_PLUGINS_NAV_PATTERN/,/$END_PLUGINS_NAV_PATTERN/{/$START_PLUGINS_NAV_PATTERN/n;/$END_PLUGINS_NAV_PATTERN/!d;}" $PROJECT_DIR/mkdocs.yml
 ITER=0
 for FILE in $FILES; do
     ORIGINAL_FILE="$FILE"
     FILE="${ITER}_${ORIGINAL_FILE}"
     mv $MD_FILES_DIRECTORY/$ORIGINAL_FILE $MD_FILES_DIRECTORY/$FILE
     echo "renaming $ORIGINAL_FILE to $FILE"
-    find $MD_FILES_DIRECTORY -type f | xargs sed -i  "s/${ORIGINAL_FILE}/${FILE}/g"
+    find $MD_FILES_DIRECTORY -type f | xargs sed -i.bak "s/${ORIGINAL_FILE}/${FILE}/g"
     # Delete divs and TOCs
-    sed -i 's/^# Flotiq UI Plugins Reference: /# /g' "$MD_FILES_DIRECTORY/$FILE"
-    sed -i 's/<div /<div markdown="1"/g' "$MD_FILES_DIRECTORY/$FILE"
-    sed -i 's#.docs/public/#../#g' "$MD_FILES_DIRECTORY/$FILE"
-    sed -i '/\[\[_TOC_\]\]/d' "$MD_FILES_DIRECTORY/$FILE"
+    sed -i.bak 's/^# Flotiq UI Plugins Reference: /# /g' "$MD_FILES_DIRECTORY/$FILE"
+    sed -i.bak 's/<div /<div markdown="1"/g' "$MD_FILES_DIRECTORY/$FILE"
+    sed -i.bak 's#.docs/public/#../#g' "$MD_FILES_DIRECTORY/$FILE"
+    sed -i.bak '/\[\[_TOC_\]\]/d' "$MD_FILES_DIRECTORY/$FILE"
     
     ITER=$(expr $ITER + 1)
 done

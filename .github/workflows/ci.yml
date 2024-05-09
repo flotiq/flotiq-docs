@@ -19,14 +19,8 @@ jobs:
     - run: mkdocs build
     - run: mkdir public
     - run: mv ./site ./public/docs
-      
-
-  deploy_cloudflare:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' # Run only for the master branch
-    steps:
     - name: Cloudflare
+      if: github.ref == 'refs/heads/master' # Run only for the master branch
       run: |
         npm install -g wrangler
         # wrangler init --site cms-docs

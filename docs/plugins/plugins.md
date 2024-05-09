@@ -29,8 +29,8 @@ Here's a general structure of the plugin code:
 ```javascript
 FlotiqPlugins.add({                                     // 1. Registration
     id: '<unique plugin id>',
-    name: `<Human readable name for the plugin>`,
-    version: `<semver version>`,
+    name: '<human readable name for the plugin>',
+    version: '<semver version>',
     permissions: [/* list of permissions, see below */],
 }, function (handler, apiClient, globals) {             // 2. Initialization
     handler.on('flotiq::event1', (eventParams) => {     // 3. Event handling
@@ -43,19 +43,21 @@ FlotiqPlugins.add({                                     // 1. Registration
 What happens here?
 
 1. **Registration** - First, the plugin needs to introduce itself to Flotiq. Most of the information here is for end-users, so that they can review what kind of plugins they are running. There are several pieces of info that are more important to the plugin API:
-   - `id` - this must be a unique string for all plugins. Only one plugin with a given `id` can be registered. If subsequent registration is executed with the same `id`, the previous plugin instance will be removed.
-     We recommend prefixing each plugin `id` with your company name to avoid `id` conflicts.
-   - `name`* - A user friendly name of the plugin. It will be shown in plugin management page
-   - `url`* - Full URL to the js file that contains the plugin.
-   - `version`* - Current version of the plugin. It is required for Flotiq to determine if the version used by the user is still up to date.
-   - `permissions` - if the plugin requires access to user data via Flotiq API, it must present a set of required permissions. This is the only way, to get an `apiClient` object that will allow you to access user content or schema.
+    - `id` - this must be a unique string for all plugins. Only one plugin with a given `id` can be registered. If subsequent registration is executed with the same `id`, the previous plugin instance will be removed.
+      We recommend prefixing each plugin `id` with your company name to avoid `id` conflicts.
+    - `name`* - A user friendly name of the plugin. It will be shown in plugin management page
+    - `url`* - Full URL to the js file that contains the plugin.
+    - `version`* - Current version of the plugin. It is required for Flotiq to determine if the version used by the user is still up to date.
+    - `permissions` - if the plugin requires access to user data via Flotiq API, it must present a set of required permissions. This is the only way, to get an `apiClient` object that will allow you to access user content or schema.
    
-   *\* These fields are not required during plugin development, but must be present in plugin manifest when plugin is published and loaded via manifest entry*
+    *\* These fields are not required during plugin development, but must be present in plugin manifest when plugin is published and loaded via manifest entry*
+
 2. **Initialization** - After registration, your plugin will be initialized with a provided callback. This callback receives two arguments:
-   - `handler` - an event handler for your plugin. It will allow you to attach to multiple UI events.
-   - `apiClient` - an API client with a set of properties that allow you to access user data.
+    - `handler` - an event handler for your plugin. It will allow you to attach to multiple UI events.
+    - `apiClient` - an API client with a set of properties that allow you to access user data.
   
-   This is the best place to perform initialization work. E.g. inject `<style>` elements with your CSS classes.
+    This is the best place to perform initialization work. E.g. inject `<style>` elements with your CSS classes.
+
 3. **Event handling** - After all initialization code is executed, your plugin will wait for events from Flotiq UI. Each time the event occurs in Flotiq, your event callback will be executed. Each event has a different set of parameters and expects different results. For example `::render` events will expect HTML content as a result, while `::config` events will not take any result and expect you to modify existing config. For details, please refer to [Flotiq Event Types](PluginDocs/Events.md).
 
 ### API permissions
@@ -71,8 +73,8 @@ To be able to do it, a plugin needs to request API access with [`permissions`](P
 ```javascript
 FlotiqPlugins.add({
     id: '<unique plugin id>',
-    name: `<Human readable name for the plugin>`,
-    version: `<semver version>`,
+    name: '<human readable name for the plugin>',
+    version: '<semver version>',
     permissions: [
       {type: 'CO', canRead: true, ctdName: '*'},
       {type: 'CO', canWrite: true, canCreate: true, canDelete: true, canRead: true, ctdName: 'blogpost'},
@@ -202,6 +204,7 @@ Let's consider the example below:
 
 ```javascript
 const elementCache = {};
+
 handler.on('flotiq.grid.cell::render', ({ contentType, accessor, data, contentObject }) => {
   // Don't do anything if we're not rendering blogpost -> media field
   if (contentType?.name !== 'blogpost') return null;
@@ -238,6 +241,7 @@ Now let's take a look at an improved example:
 ```javascript
 const elementCache = {};
 const mediaPromiseCache = {};
+
 handler.on('flotiq.grid.cell::render', ({ contentType, accessor, data, contentObject }) => {
   // Don't do anything if we're not rendering blogpost -> media field
   if (contentType?.name !== 'blogpost') return null;

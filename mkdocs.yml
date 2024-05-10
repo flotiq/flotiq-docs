@@ -53,6 +53,7 @@ extra_css:
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
 markdown_extensions:
+  - markdown.extensions.extra
   - admonition
   - attr_list
   - codehilite
@@ -77,7 +78,6 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - footnotes
-  - markdown.extensions.extra
 
 extra_javascript:
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js

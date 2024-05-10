@@ -39,6 +39,7 @@ theme:
 plugins:
   - search
   - awesome-pages
+  - glightbox
   - include_dir_to_nav:
       file_pattern: '\d.*\.md$'
   - git-revision-date-localized:

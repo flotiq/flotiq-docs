@@ -50,6 +50,7 @@ extra_css:
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
 markdown_extensions:
+  - markdown.extensions.extra
   - admonition
   - attr_list
   - codehilite

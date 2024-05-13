@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest # The type of runner that the job will run on
     env:
-      SITE_URL: https://flotiq-frontend-965-feature-24617-res-j1km42.dev.cdwv.pl
+      SOURCE_EDITOR_URL: ${{ secrets.SOURCE_EDITOR_URL }}
     steps: # Steps represent a sequence of tasks that will be executed as part of the job
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2

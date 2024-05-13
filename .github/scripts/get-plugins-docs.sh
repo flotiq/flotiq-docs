@@ -1,14 +1,12 @@
 #!/bin/bash
-
-if [ -z "$SITE_URL" ]; then
-    # URL that returns the list of files
-    SITE_URL="https://editor.flotiq.com"
-    echo "Setting default value for SITE_URL: $SITE_URL"
+if [ -z "$SOURCE_EDITOR_URL" ]; then
+    echo "Variable SOURCE_EDITOR_URL not found"
+    exit 1
 else
-    echo "Found env SITE_URL with value: $SITE_URL"
+    echo "Found env with source editor url!"
 fi
 
-FILES_LIST_URL="$SITE_URL/markdown-docs/files.txt"
+FILES_LIST_URL="$SOURCE_EDITOR_URL/markdown-docs/files.txt"
 PROJECT_DIR="."
 echo "URL: $FILES_LIST_URL"
 # Destination directory where files will be saved
@@ -31,7 +29,7 @@ while IFS= read -r FILE; do
 
     # Download the file
     echo "Downloading $FILE..."
-    curl -s -o "$DESTINATION_DIR/$FILE" "$SITE_URL/markdown-docs/$FILE"
+    curl -s -o "$DESTINATION_DIR/$FILE" "$SOURCE_EDITOR_URL/markdown-docs/$FILE"
 done <<<"$FILES"
 
 # Directory with Plugins API Reference .md files

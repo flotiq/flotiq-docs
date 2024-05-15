@@ -178,6 +178,7 @@ nav:
     - 'Heroku': Universe/heroku.md
     - 'Bubble': Universe/bubble.md
     - 'Pabbly': Universe/pabbly.md
+    - 'n8n': Universe/n8n.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Hooking React TodoMVC with Flotiq': Deep-Dives/todomvc-react-headless-cms.md

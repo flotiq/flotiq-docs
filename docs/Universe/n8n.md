@@ -5,7 +5,7 @@ description: Jump-start your workflow automation tool with n8n.
 
 ## Introduction
 
-In [n8n](https://n8n.io/){target="_blank"}, there are practical integrations available with [Flotiq](https://editor.flotiq.com/){target="_blank"}, which is used for workflow automation. Let’s explore two use cases:
+[n8n](https://n8n.io/){target="_blank"} is an open-source workflow automation tool that allows you to connect various applications and services to automate repetitive tasks. It provides a visual interface where you can create workflows by connecting nodes, making it easy to design complex automation processes without the need for extensive coding. n8n supports a wide range of integrations, enabling seamless data transfer and process automation across different platforms. Let’s explore two use cases of integrations with [Flotiq](https://editor.flotiq.com/){target="_blank"}:
 
 * Send an email when a new content object is created.
 * Record data in Flotiq upon receiving an email.
@@ -13,6 +13,15 @@ In [n8n](https://n8n.io/){target="_blank"}, there are practical integrations ava
 Additionally, we will use an n8n HTTP request node credentials for [header authentication](https://docs.n8n.io/integrations/builtin/credentials/httprequest/?_gl=1*ufu4gh*_ga*MTY5ODcxNjE2MC4xNzE0MDM4Njcy*_ga_0SC4FF2FH9*MTcxNTI0OTgzMi41LjEuMTcxNTI1MDYwNi4zLjAuMA..#using-header-auth) with the [Flotiq API key](../API/index.md?h=api+keys#application-api-keys){target="_blank"}.
 
 ## Preparation Steps
+
+For the specified integration use cases, we will:
+
+1.  **Setup Content Type Definition**: Establish a Content Type Definition in Flotiq for data storage, which includes fields for email addresses, subject, and message.
+2.  **Create Flotiq API Key**: Generate a dedicated API key for the new Content Type, enabling the 'create' action for email content.
+3.  **Setup n8n Credentials**: Create header credentials to authenticate Flotiq requests.
+
+!!! note
+    Please note that these steps are part of a specific example of integrating Flotiq with n8n and may vary based on different use cases. For instance, you might want to use your own Content Type Definition or an API key with access to multiple Content Type Definitions.
 
 ### Setting up Flotiq
 
@@ -102,7 +111,7 @@ This Content Type Definition can be set up either through the [Flotiq Dashbord](
     ```
     { data-search-exclude }
 
-To store received emails, it’s advisable to use a dedicated API key for the specific Content Type. Navigate to the `API keys` page and create a new API key. Assign a descriptive name to the new key, choose the email content type, enable the `create` action, and submit the form.
+To store received emails, it’s advisable to use a dedicated API key for the specific Content Type. Navigate to the `API keys` page and create a new API key. Assign a descriptive name to the new key, choose the email content type, enable the `create` action, and submit the form. If you cannot or prefer not to add a defined API key, you can use the read-write API key.
 
 ![](images/n8n/defined_key.png){: .center .width75 .border}
 
@@ -122,6 +131,9 @@ Then, add `Header Auth` credentials with the following details:
 You have the option to rename the credentials to something more descriptive by clicking on the credential modal header.
 
 ![](images/n8n/credential_modal_header.png){: .center .width75 .border}
+
+!!! note 
+    You can add multiple header authentication credentials for different Content Objects or use a global read-write API key and apply a single header authentication credential for every request.
 
 ## Integration
 
@@ -172,7 +184,8 @@ For saving received emails add an `HTTP Request` node. Fill the form with follow
 
 Include body parameters: from, subject, message. Map these from the Content Object fields.
 
-!!! note "For the `from` field, we used the fixed value `{{ $json.metadata.sender || $json.from}}` to accommodate various sender formats"
+!!! note 
+    For the `from` field, we used the fixed value `{{ $json.metadata.sender || $json.from}}` to accommodate various sender formats
 
 <div markdown=1 class="grid-cols-2">
 <div markdown=1>![](images/n8n/http_node_1.png)</div>

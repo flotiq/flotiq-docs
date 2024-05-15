@@ -39,6 +39,9 @@ theme:
 plugins:
   - search
   - awesome-pages
+  - glightbox
+  - include_dir_to_nav:
+      file_pattern: '\d.*\.md$'
   - git-revision-date-localized:
       fallback_to_build_date: true
 
@@ -147,10 +150,15 @@ nav:
       - 'Async examples': panel/webhooks/examples.md
       - 'Sync webhooks':  panel/webhooks/sync.md
       - 'Sync examples': panel/webhooks/sync-examples.md
-    - Plugins:
+    - Available Plugins:
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
       - 'Netlify': panel/Plugins/Netlify-integration.md
       - 'Custom Links': panel/Plugins/Custom-links.md
+    - UI Plugins Development:
+      - 'Getting started': panel/PluginsDevelopment/plugins.md
+      - 'Examples': panel/PluginsDevelopment/plugin-examples.md
+      - 'Faq & Troubleshooting': panel/PluginsDevelopment/plugin-faq-and-troubleshooting.md
+      - Plugins API Reference: panel/PluginsDevelopment/PluginDocs/
   - CLI:
     - 'Overview': CLI/index.md
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project-gatsby.md

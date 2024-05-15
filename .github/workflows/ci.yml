@@ -3,24 +3,26 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
   workflow_dispatch:
 
 
 jobs:
   build:
     runs-on: ubuntu-latest # The type of runner that the job will run on
+    env:
+      SOURCE_EDITOR_URL: ${{ secrets.SOURCE_EDITOR_URL }}
     steps: # Steps represent a sequence of tasks that will be executed as part of the job
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
       with:
         python-version: 3.x
+    - run: bash ./.github/scripts/get-plugins-docs.sh
     - run: pip install -r requirements.txt
     - run: mkdocs build
     - run: mkdir public
     - run: mv ./site ./public/docs
-
     - name: Cloudflare
+      if: github.ref == 'refs/heads/master' # Run only for the master branch
       run: |
         npm install -g wrangler
         # wrangler init --site cms-docs

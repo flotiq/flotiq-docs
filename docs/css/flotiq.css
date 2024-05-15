@@ -2,9 +2,6 @@
   max-width: 70rem;
 }
 
-
-
-
 @media screen and (min-width: 76.25em) {
   .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner,
   [dir=ltr] .md-sidebar--primary:not([hidden])~.md-content>.md-content__inner {
@@ -152,6 +149,10 @@ pre::before {
     background-color: hsl(232, 15%, 36%);
     color: #e9ebfc;
   }
+
+  .md-typeset table:not([class]) th {
+    background-color: #2f3c4b;
+  }
 }
 
   /*
@@ -290,6 +291,10 @@ pre::before {
 
 .nav-badge {
   display: none;
+}
+
+a.md-nav__link--active {
+  scroll-margin: 50vh;
 }
 
 .md-header__logo {
@@ -662,4 +667,26 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
 
 .md-nav--primary .md-nav__title{
   box-shadow: none;
+}
+
+.fq-docs-property-block .md-typeset__table {
+  display: block;
+}
+
+.fq-docs-property-block table {
+  width: 100%;
+  display: table !important;
+}
+
+.fq-docs-property-block table th:nth-child(1),
+.fq-docs-property-block table td:nth-child(1) {
+  width: 25%;
+}
+.fq-docs-property-block table th:nth-child(2),
+.fq-docs-property-block table td:nth-child(2) {
+  width: 25%;
+}
+.fq-docs-property-block table th:nth-child(3),
+.fq-docs-property-block table td:nth-child(3) {
+  width: 50%;
 }

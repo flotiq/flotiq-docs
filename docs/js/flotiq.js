@@ -24,6 +24,10 @@ function load_navpane() {
     for (var i = 0; i < nav.length; i++) {
         nav.item(i).checked = true;
     }
+
+    setTimeout(() => {
+        document.querySelector('a.md-nav__link--active')?.scrollIntoView({block: "nearest", inline: "nearest"});
+    }, 300);
 }
 
 function addHelpfulForm() {

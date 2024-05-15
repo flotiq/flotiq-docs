@@ -26,7 +26,7 @@ function load_navpane() {
     }
 
     setTimeout(() => {
-        document.querySelector('a.md-nav__link--active')?.scrollIntoView({block: "nearest", inline: "nearest", offset: {top: 100, left: 0}});
+        document.querySelector('a.md-nav__link--active')?.scrollIntoView({block: "nearest", inline: "nearest"});
     }, 300);
 }
 

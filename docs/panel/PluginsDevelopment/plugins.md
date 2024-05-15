@@ -58,7 +58,7 @@ What happens here?
   
     This is the best place to perform initialization work. E.g. inject `<style>` elements with your CSS classes.
 
-3. **Event handling** - After all initialization code is executed, your plugin will wait for events from Flotiq UI. Each time the event occurs in Flotiq, your event callback will be executed. Each event has a different set of parameters and expects different results. For example `::render` events will expect HTML content as a result, while `::config` events will not take any result and expect you to modify existing config. For details, please refer to [Flotiq Event Types](PluginDocs/Events.md).
+3. **Event handling** - After all initialization code is executed, your plugin will wait for events from Flotiq UI. Each time the event occurs in Flotiq, your event callback will be executed. Each event has a different set of parameters and expects different results. For example `::render` events will expect HTML content as a result, while `::config` events will not take any result and expect you to modify existing config. For details, please refer to [[Events.md|Flotiq Event Types]].
 
 ### API permissions
 
@@ -68,7 +68,7 @@ Flotiq UI plugins are allowed to access API only with pre-prepared API client, a
 
 **Important**: plugins are not using own API Keys, nor there are direct `fetch` calls from plugin code to API. Instead, plugins **must** use the provided API client. All of the write actions will be registered as if a user made the change.
 
-To be able to do it, a plugin needs to request API access with [`permissions`](PluginDocs/PluginInfo.md#class-pluginpermission) field during registration:
+To be able to do it, a plugin needs to request API access with [[PluginInfo.md#class-pluginpermission|`permissions`]] field during registration:
 
 ```javascript
 FlotiqPlugins.add({
@@ -359,7 +359,7 @@ Your plugin also must contain all required information in the `plugin-manifest.j
 
 </details>
 
-For more details on the required fields, see [PluginInfo](PluginDocs/PluginInfo.md).
+For more details on the required fields, see [[PluginInfo.md]].
 
 If your plugin is ready for wider use within your organization:
 

@@ -33,7 +33,8 @@ pip install -r requirements.txt
 To start server use:
 
 ```bash
-bash .github/scripts/get-plugins-docs.sh # Pull dynamically generated plugin docs
+# Use SOURCE_EDITOR_URL variable to point to speciffic dashboard url. By default, SOURCE_EDITOR_URL=https://editor.flotiq.com is used.
+bash .github/scripts/get-plugins-docs.sh # Pull dynamically generated plugin docs. 
 mkdocs serve # Start devlopment server
 ```
 
@@ -53,3 +54,27 @@ If you wish to talk with us about this project, feel free to hop on [![Discord C
 If you found a bug, please report it in [issues](https://github.com/flotiq/flotiq-docs/issues).
 
 We also welcome any PR with documentation improvements (or typo fixes ;) ).
+
+## Aliasing
+Some files are dynamically generated (e.g. all pages describing events and classes for plugin API). Those pages can be referred with an alias:
+
+```md
+<!-- Refer to PluginInfo page -->
+[[PluginInfo.md]] 
+
+<!-- Refer to PluginInfo page with an alternative name -->
+[[PluginInfo.md|Page about PluginInfo class]] 
+
+<!-- Refer to header on PluginInfo page with an alternative name -->
+[[PluginInfo.md#example-header|Example section on the page]]
+```
+
+You can also add an alias to any existing page by dyfining it in the meta section of the markdown file:
+
+```md
+<!-- Start of the markdown file -->
+alias: some-example-alias
+
+# Example page
+...
+```

@@ -50,6 +50,7 @@ extra_css:
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
 markdown_extensions:
+  - markdown.extensions.extra
   - admonition
   - attr_list
   - codehilite
@@ -177,6 +178,7 @@ nav:
     - 'Heroku': Universe/heroku.md
     - 'Bubble': Universe/bubble.md
     - 'Pabbly': Universe/pabbly.md
+    - 'n8n': Universe/n8n.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Hooking React TodoMVC with Flotiq': Deep-Dives/todomvc-react-headless-cms.md

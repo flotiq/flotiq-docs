@@ -87,6 +87,12 @@ header.md-header {
   max-width: 75%;
 }
 
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem
+}
+
 @media (min-width: 768px) {
 .width25 {
     width:25%;

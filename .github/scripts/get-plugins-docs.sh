@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ -z "$SOURCE_EDITOR_URL" ]; then
-    echo "Variable SOURCE_EDITOR_URL not found"
-    exit 1
+    SOURCE_EDITOR_URL="https://editor.flotiq.com"
+    echo "Variable SOURCE_EDITOR_URL not found. Assuming SOURCE_EDITOR_URL=$SOURCE_EDITOR_URL"
 else
     echo "Found env with source editor url!"
 fi
@@ -14,6 +14,11 @@ DESTINATION_DIR="$PROJECT_DIR/docs/panel/PluginsDevelopment"
 
 # Fetch the list of files
 FILES=$(curl -s "$FILES_LIST_URL" $FILES_LIST_URL| grep 'PluginDocs')
+
+if [ -z "$FILES" ]; then
+    echo "No file list found in $FILES_LIST_URL"
+    exit 1
+fi
 
 # Create destination directory if it doesn't exist
 mkdir -p "$DESTINATION_DIR"
@@ -56,11 +61,21 @@ for FILE in $FILES; do
     mv $MD_FILES_DIRECTORY/$ORIGINAL_FILE $MD_FILES_DIRECTORY/$FILE
     echo "renaming $ORIGINAL_FILE to $FILE"
     find $MD_FILES_DIRECTORY -type f -iname '*.md' | xargs sed -i.bak "s/${ORIGINAL_FILE}/${FILE}/g"
-    # Delete divs and TOCs
+
+    # Remove header prefix    
     sed -i.bak 's/^# Flotiq UI Plugins Reference: /# /g' "$MD_FILES_DIRECTORY/$FILE"
+
+    # Add markdown attribute to divs to enable markdown inside
     sed -i.bak 's/<div /<div markdown="1"/g' "$MD_FILES_DIRECTORY/$FILE"
+
+    # change .docs/public links to relatives `..`
     sed -i.bak 's#.docs/public/#../#g' "$MD_FILES_DIRECTORY/$FILE"
+
+    # Remove TOC
     sed -i.bak '/\[\[_TOC_\]\]/d' "$MD_FILES_DIRECTORY/$FILE"
+
+    # Add alias to the file since we changed the name
+    sed -i.bak "1s#^#alias: ${ORIGINAL_FILE}\n#" "$MD_FILES_DIRECTORY/$FILE"
     
     ITER=$(expr $ITER + 1)
 done

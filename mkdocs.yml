@@ -37,6 +37,9 @@ theme:
        - content.code.copy
 
 plugins:
+  - alias:
+      verbose: true
+      use_anchor_titles: true
   - search
   - awesome-pages
   - glightbox

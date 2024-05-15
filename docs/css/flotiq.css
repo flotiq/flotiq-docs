@@ -287,6 +287,10 @@ pre::before {
   display: none;
 }
 
+a.md-nav__link--active {
+  scroll-margin: 50vh;
+}
+
 .md-header__logo {
   margin: .2rem;
   padding: .4rem;

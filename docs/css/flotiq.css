@@ -25,7 +25,7 @@
 .md-typeset h3,
 .md-typeset h4,
 .md-typeset h5 {
-  
+
   font-weight: bold;
 }
 .video-wrapper {
@@ -53,7 +53,7 @@ header.md-header {
 }
 
 .md-tabs{
-  
+
 }
 
 .md-sidebar__scrollwrap, .md-content {
@@ -126,7 +126,7 @@ pre::before {
   .md-typeset h2,
   .md-typeset h3,
   .md-typeset h4,
-  .md-typeset h5 {  
+  .md-typeset h5 {
     color: #e9ebfc;
   }
 
@@ -689,4 +689,9 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
 .fq-docs-property-block table th:nth-child(3),
 .fq-docs-property-block table td:nth-child(3) {
   width: 50%;
+}
+
+/* Section header scroll offset overrides */
+.md-typeset h1:target, .md-typeset h2:target, .md-typeset h3:target {
+  --md-scroll-offset: -1rem;
 }

@@ -1,14 +1,14 @@
-title: Code webhooks
-description: How to use code webhooks in Flotiq
+title: Hosted webhooks
+description: How to use hosted webhooks in Flotiq
 
-# Code Webhooks
+# Hosted Webhooks
 
 !!! Note
-    Code Sync Webhooks are available starting from the Basic plan and above. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
+    Hosted Sync Webhooks are available starting from the Basic plan and above. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
 
-## What are Code Webhook?
+## What are Hosted Webhooks?
 
-Code Synchronous Webhooks allow you to execute custom code in response to specific events in your Flotiq system. These webhooks provide powerful capabilities to manipulate data, perform validations, and more, by embedding custom logic directly within your workflow.
+Hosted Synchronous Webhooks allow you to execute custom code in response to specific events in your Flotiq system. These webhooks provide powerful capabilities to manipulate data, perform validations, and more, by embedding custom logic directly within your workflow.
 
 Example Use Cases:
 
@@ -16,13 +16,13 @@ Example Use Cases:
 * Field Validation: Ensure that the value of one field is not less than the value of another field before allowing the operation to proceed.
 * Incrementing a Counter: Automatically increase a counter value each time a specific event occurs.
 
-## Setting Up Code Sync Webhooks
+## Setting Up Hosted Sync Webhooks
 
-To create a Code Sync Webhook, follow similar process as for sync webhooks. Once you select the type of your webhook to "Synchronous", you will be presented with radio option, to choose between standard URL type webhook, or code webhook.
+Creating a Hosted Sync Webhook follows a similar process as for sync webhooks. Once you select the type of your webhook to "synchronous", you will be presented with radio option, to choose between a standard URL webhook or hosted webhook.
 
-Once you choose the "Code" option, embedded code editor will show up, allowing you to easily write code for your code webhook without the need for use of any IDE. The editor will contain example, commented code snippets; one of which allows you to validate the target content object, and the second example that will mutate the content object, automatically creating slug from the title property.
+Once you choose the "Code" option, an embedded code editor will show up, allowing you to easily write code for your hosted webhook without the need for the use of any IDE. The editor will contain example code snippets; one of which allows you to validate the target content object, and the second example that will mutate the content object, automatically creating a slug from the title property.
 
-![](../images/webhooks/AddCodeWebhook.png){: .center .border}
+![](../images/webhooks/AddHostedWebhook.png){: .center .border}
 
 While the code supports most of the ES2023 syntax, it still has some limitations/requirements:
 
@@ -34,11 +34,11 @@ While the code supports most of the ES2023 syntax, it still has some limitations
 
 ## Example Functions
 
-Below are some example functions demonstrating common uses of synchronous code webhooks in Flotiq.
+Below are some example functions demonstrating common uses of synchronous hosted webhooks in Flotiq.
 
 ### Incrementing a Counter
 
-The following code webhook takes 'counter' property from content object and raises it by 1.
+The following hosted webhook takes the 'counter' property from a content object and raises it by 1.
 
 ```
 function _webhook(ctx) {
@@ -52,11 +52,11 @@ function _webhook(ctx) {
 ```
 { data-search-exclude }
 
-This code webhok could be used to easily increment the number of the post, when duplicating existing objects, or counting the number of edits on an event.
+This hosted webhok could be used to easily increment the number of the posts, when duplicating existing objects, or counting the number of edits on an event.
 
 ### Generating a Slug
 
-This example for code webhook generates 'slug' value for content object using the value provided in 'title' property.
+This example for hosted webhook generates a 'slug' value for the content object using the value provided in the 'title' property.
 
 ```
 function _webhook(ctx) {
@@ -93,4 +93,4 @@ function _webhook(ctx) {
 ```
 { data-search-exclude }
 
-Validating webhooks are an easy tool to make sure that your content will not contain any mistakes, like setting promotional price higher than the regular price of the product.
+Using validating hosted webhook is an easy tool to make sure that your content will not contain any mistakes, like setting a promotional price higher than the regular price of the product.

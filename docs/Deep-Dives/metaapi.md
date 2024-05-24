@@ -1,6 +1,12 @@
 title: Flotiq and Meta-API integration | Flotiq docs
 description: This tutorial shows how to use Flotiq and Meta-API to integrate with another API
 
+!!! caution
+    Please note that the information and documentation provided on this page regarding the integration with Meta API is no longer valid.
+    Meta API has shut down their company, and as a result, the integration mentioned in this article is no longer supported or available.
+
+    We apologize for any inconvenience this may cause. We highly recommend seeking alternative solutions or contacting us at [hello@flotiq.com](mailto:hello@flotiq.com) for information on integrations with Flotiq.
+
 
 # Flotiq + Meta-API + Google Spreadsheets use case
 

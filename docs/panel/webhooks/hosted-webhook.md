@@ -18,7 +18,7 @@ Example Use Cases:
 
 ## Setting Up Hosted Sync Webhooks
 
-Creating a Hosted Sync Webhook follows a similar process as for sync webhooks. Once you select the type of your webhook to "synchronous", you will be presented with radio option, to choose between a standard URL webhook or hosted webhook.
+Creating a Hosted Sync Webhook follows a similar process as for sync webhooks. Once you select the type of your webhook to "synchronous", you will be presented with radio option, allowing you to choose between a standard URL webhook or hosted webhook.
 
 Once you choose the "Code" option, an embedded code editor will show up, allowing you to easily write code for your hosted webhook without the need for the use of any IDE. The editor will contain example code snippets; one of which allows you to validate the target content object, and the second example that will mutate the content object, automatically creating a slug from the title property.
 

@@ -1,6 +1,16 @@
 title: Integrate Gatsby Cloud and Flotiq | Flotiq documentation
 description: Enable seamless Gatsby content preview using Flotiq Gatsby plugin.
 
+!!! Caution
+    **Due to the [ending availability of Gatsby Cloud](https://www.netlify.com/blog/gatsby-cloud-evolution/),
+    the Gatsby Cloud plugin is now deprecated.**
+
+    We recommend transitioning to the [Netlify Build plugin](https://flotiq.com/docs/panel/Plugins/Netlify-integration/),
+    using the [Custom Links plugin](https://flotiq.com/docs/panel/Plugins/Custom-links/),
+    or implementing a [webhook](https://flotiq.com/docs/panel/webhooks/async-co-webhook/). 
+    Please make the necessary changes to ensure uninterrupted service. For questions, contact us on Discord or email [hello@flotiq.com](mailto:hello@flotiq.com).
+
+
 # Connecting your Flotiq account to Gatsby Cloud
 
 This article will walk you through the process of connecting your Flotiq account and your Gatsby Cloud account. By doing so, your content will be automatically synchronized with your Gatsby Cloud preview instance. You will also be able to easily navigate to your Gatsby Preview pages from the Flotiq content editor.

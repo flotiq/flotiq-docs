@@ -146,13 +146,14 @@ nav:
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
     - 'Users': panel/users.md
-    - 'Webhooks':
-      - Overview: panel/webhooks/index.md
+    - Webhooks:
+      - 'Overview': panel/webhooks/index.md
       - 'Async CO webhooks': panel/webhooks/async-co-webhook.md
       - 'CTD webhooks': panel/webhooks/ctd-webhook.md
       - 'Async examples': panel/webhooks/examples.md
       - 'Sync webhooks':  panel/webhooks/sync.md
       - 'Sync examples': panel/webhooks/sync-examples.md
+      - 'Hosted webhooks': panel/webhooks/hosted-webhook.md
     - Available Plugins:
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
       - 'Netlify': panel/Plugins/Netlify-integration.md

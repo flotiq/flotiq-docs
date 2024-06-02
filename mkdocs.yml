@@ -140,6 +140,7 @@ nav:
   - Dashboard:
     - 'Overview': panel/index.md
     - 'Spaces and Organization': panel/spaces.md
+    - 'Space Roles': panel/user-roles.md
     - 'Content types': panel/content-types.md
     - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md
     - 'Predefined Content Types': panel/predefined-content-types.md

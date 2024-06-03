@@ -140,13 +140,13 @@ nav:
   - Dashboard:
     - 'Overview': panel/index.md
     - 'Spaces and Organization': panel/spaces.md
-    - 'Space Roles': panel/user-roles.md
     - 'Content types': panel/content-types.md
     - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md
     - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
     - 'Users': panel/users.md
+    - 'User Roles': panel/user-roles.md
     - Webhooks:
       - 'Overview': panel/webhooks/index.md
       - 'Async CO webhooks': panel/webhooks/async-co-webhook.md

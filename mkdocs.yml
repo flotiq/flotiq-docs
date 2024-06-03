@@ -146,6 +146,7 @@ nav:
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
     - 'Users': panel/users.md
+    - 'User Roles': panel/user-roles.md
     - Webhooks:
       - 'Overview': panel/webhooks/index.md
       - 'Async CO webhooks': panel/webhooks/async-co-webhook.md

@@ -127,3 +127,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 addHelpfulForm();
+
+// Scroll to top Button always visible
+document.querySelector(".md-top").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+document.addEventListener('scroll', function() {
+    var topButton = document.querySelector(".md-top");
+    if(window.scrollY === 0){
+        topButton.setAttribute("hidden", true);
+    } else {
+        topButton.removeAttribute('hidden');
+    }
+});

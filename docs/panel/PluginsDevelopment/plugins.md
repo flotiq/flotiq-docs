@@ -293,6 +293,21 @@ return element;
 ```
 { data-search-exclude }
 
+### Acting when an element is detached from the DOM tree
+
+If you want to do something after detaching an element from the DOM tree (e.g. clear the element cache), you can use `flotiq.detached` DOM event.
+
+**Important**: This event is only fired on the root element returned by the plugin. Elements inside will not receive this event.
+
+```javascript
+const element = document.createElement('span');
+element.addEventListener('flotiq.detached', () => { 
+  console.log('element removed'); // will be fired after element is detached
+});
+return element;
+```
+{ data-search-exclude }
+
 ## Plugin Installation
 
 Once you have your plugin written, you have several options to install it into Flotiq UI. Multiple instances of the plugin with the same `id` will override each other, so you can easily update your plugin as needed.

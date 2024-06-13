@@ -37,8 +37,14 @@ theme:
        - content.code.copy
 
 plugins:
+  - alias:
+      verbose: true
+      use_anchor_titles: true
   - search
   - awesome-pages
+  - glightbox
+  - include_dir_to_nav:
+      file_pattern: '\d.*\.md$'
   - git-revision-date-localized:
       fallback_to_build_date: true
 
@@ -50,6 +56,7 @@ extra_css:
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
 markdown_extensions:
+  - markdown.extensions.extra
   - admonition
   - attr_list
   - codehilite
@@ -126,27 +133,37 @@ nav:
       - 'SDK NodeJS': API/generate-package/sdk-nodejs.md
     - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
-    - 'Working with media': API/media-library.md
+    - 'Working with media':
+      - 'Media library': API/media-library.md
+      - 'Transformations': API/variants.md
     - 'Workflows': 'API/workflow/content-publishing-workflow.md'
   - Dashboard:
     - 'Overview': panel/index.md
+    - 'Spaces and Organization': panel/spaces.md
     - 'Content types': panel/content-types.md
     - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md
     - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
     - 'Users': panel/users.md
-    - 'Webhooks':
-      - Overview: panel/webhooks/index.md
+    - 'User Roles': panel/user-roles.md
+    - Webhooks:
+      - 'Overview': panel/webhooks/index.md
       - 'Async CO webhooks': panel/webhooks/async-co-webhook.md
       - 'CTD webhooks': panel/webhooks/ctd-webhook.md
       - 'Async examples': panel/webhooks/examples.md
       - 'Sync webhooks':  panel/webhooks/sync.md
       - 'Sync examples': panel/webhooks/sync-examples.md
-    - Plugins:
+      - 'Hosted webhooks': panel/webhooks/hosted-webhook.md
+    - Available Plugins:
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
       - 'Netlify': panel/Plugins/Netlify-integration.md
       - 'Custom Links': panel/Plugins/Custom-links.md
+    - UI Plugins Development:
+      - 'Getting started': panel/PluginsDevelopment/plugins.md
+      - 'Examples': panel/PluginsDevelopment/plugin-examples.md
+      - 'Faq & Troubleshooting': panel/PluginsDevelopment/plugin-faq-and-troubleshooting.md
+      - Plugins API Reference: panel/PluginsDevelopment/PluginDocs/
   - CLI:
     - 'Overview': CLI/index.md
     - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project-gatsby.md
@@ -157,7 +174,12 @@ nav:
     - 'Migrating Flotiq data to and from MS Excel': CLI/excel-data-migration.md
   - Flotiq Universe:
     - 'Overview': Universe/index.md
-    - 'Deployment': Universe/deployment.md
+    - Deployment:
+      - 'Overview': Universe/deployment/overview.md
+      - 'NextJS project to Vercel': Universe/deployment/vercel-nextjs.md
+      - 'Gatsby project to Vercel': Universe/deployment/vercel-gatsby.md
+      - 'NextJS project to Netlify': Universe/deployment/netlify-nextjs.md
+      - 'Gatsby project to Netlify': Universe/deployment/netlify-gatsby.md
     - 'Gatsby': Universe/gatsby.md
     - 'NextJS': Universe/nextjs.md
     - 'Meta-API': Universe/metaapi.md
@@ -167,6 +189,9 @@ nav:
     - 'Zapier': Universe/zapier.md
 #    - 'Netlify': Universe/netlify.md
     - 'Heroku': Universe/heroku.md
+    - 'Bubble': Universe/bubble.md
+    - 'Pabbly': Universe/pabbly.md
+    - 'n8n': Universe/n8n.md
   - Deep dives:
     - 'Overview': Deep-Dives/index.md
     - 'Hooking React TodoMVC with Flotiq': Deep-Dives/todomvc-react-headless-cms.md

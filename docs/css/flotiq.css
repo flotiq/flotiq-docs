@@ -1,9 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .md-grid {
   max-width: 70rem;
 }
-
-
-
 
 @media screen and (min-width: 76.25em) {
   .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner,
@@ -28,7 +29,7 @@
 .md-typeset h3,
 .md-typeset h4,
 .md-typeset h5 {
-  
+
   font-weight: bold;
 }
 .video-wrapper {
@@ -56,7 +57,7 @@ header.md-header {
 }
 
 .md-tabs{
-  
+
 }
 
 .md-sidebar__scrollwrap, .md-content {
@@ -85,6 +86,12 @@ header.md-header {
 
 .width75 {
   max-width: 75%;
+}
+
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem
 }
 
 @media (min-width: 768px) {
@@ -123,7 +130,7 @@ pre::before {
   .md-typeset h2,
   .md-typeset h3,
   .md-typeset h4,
-  .md-typeset h5 {  
+  .md-typeset h5 {
     color: #e9ebfc;
   }
 
@@ -145,6 +152,10 @@ pre::before {
   .md-search__input {
     background-color: hsl(232, 15%, 36%);
     color: #e9ebfc;
+  }
+
+  .md-typeset table:not([class]) th {
+    background-color: #2f3c4b;
   }
 }
 
@@ -284,6 +295,10 @@ pre::before {
 
 .nav-badge {
   display: none;
+}
+
+a.md-nav__link--active {
+  scroll-margin: 50vh;
 }
 
 .md-header__logo {
@@ -657,3 +672,38 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
 .md-nav--primary .md-nav__title{
   box-shadow: none;
 }
+
+.fq-docs-property-block .md-typeset__table {
+  display: block;
+}
+
+.fq-docs-property-block table {
+  width: 100%;
+  display: table !important;
+}
+
+.fq-docs-property-block table th:nth-child(1),
+.fq-docs-property-block table td:nth-child(1) {
+  width: 25%;
+}
+.fq-docs-property-block table th:nth-child(2),
+.fq-docs-property-block table td:nth-child(2) {
+  width: 25%;
+}
+.fq-docs-property-block table th:nth-child(3),
+.fq-docs-property-block table td:nth-child(3) {
+  width: 50%;
+}
+
+/* Section header scroll offset overrides */
+.md-typeset h1:target, .md-typeset h2:target, .md-typeset h3:target {
+  --md-scroll-offset: -1rem;
+}
+
+/*
+!* Scroll to top button visibility improvements *!
+
+body:not(.md--top) .md-icon--top {
+  opacity: 1 !important;
+}
+*/

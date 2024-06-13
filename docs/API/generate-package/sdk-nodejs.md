@@ -19,6 +19,8 @@ To use SDK in your project follow below steps:
 2. In your `[projectDirectory]/flotiq-javascript-sdk/` run `npm i && npm run build`
 3. In your `[projectDirectory]` run `npm i ./flotiq-javascript-sdk --save`
 
+Possibly you would have to add `--legacy-peer-deps` to your commands, if you get plugin versions error.
+
 _Other installation methods are described in [Additional usage methods](#additional-usage-methods) section._
 
 ### 2. Configure your SDK
@@ -27,6 +29,8 @@ To initialize SDK we will use `FlotiqUserApi.ApiClient.init` method, which requi
 
 Your Flotiq API_KEY is located in the [Flotiq Dashboard](https://editor.flotiq.com).
 If you need more directions go to the [docs](https://flotiq.com/docs/API/).
+
+You can create empty file, where you put code with your configuration and requests, such as `app.js`
 
 ```javascript
 const FlotiqUserApi = require("flotiq_user_api");
@@ -50,7 +54,7 @@ let opts = {
 };
 api.listFlotiqblogauthor(opts).then(
   function (data) {
-    console.log("API called successfully. Returned data: " + data);
+    console.log("API called successfully. Returned data: ", data);
   },
   function (error) {
     console.error(error);
@@ -58,6 +62,18 @@ api.listFlotiqblogauthor(opts).then(
 );
 ```
 { data-search-exclude }
+
+Code above is just an example - you should copy code from `docs` folder in your sdk.
+
+To call the code lets just use: 
+
+
+```
+node app.js
+
+```
+{ data-search-exclude }
+
 
 ### 4. SDK NodeJS common use cases
 

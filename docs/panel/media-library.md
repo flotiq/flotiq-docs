@@ -16,12 +16,28 @@ This section of the Media Library gives you access to all of your files that you
 
 ## Stock photos
 
-This section gives you access to the Unsplash library of images. 
+This section gives you access to the Unsplash library of images.
 All Unsplash images are available to use for free and Flotiq takes care of the necessary attributions.
 In order to use images from Unsplash - you need to download them to your library first. This is a very simple operation - once you select an image you like, simply click the download icon on that image and it will momentarily appear in you `Uploaded files`.
 
 ![Downloading from Unsplash](./images/Unsplash-to-library.gif)
 
+## Variants
+
+Variants allow you to create transformed versions of images. A variant consists of a name and a number of modifications offered by Flotiq.
+
+In order to create a variant through dashboard, simply press the edit button on any of your images in media library, and select `Add new variant` option.
+
+![Editing media](./images/Edit-Media.png)
+
+A window will pop up with a WYSIWYG editor, that will allow you to easily modify the image according to your needs.
+
+![Editing media](./images/Create-variant.png)
+
+After you are done with modifying the image, press `Save changes` button and a variant with this set of transformations will be added to your media data.
+
+!!! Note
+    After adding variants, remember that you also have to save the media edit, for saving variants in the media object data.
 
 ## API Endpoints
 

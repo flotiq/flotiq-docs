@@ -25,7 +25,7 @@ jobs:
       run: |
         npm install -g wrangler
         # wrangler init --site cms-docs
-        sed -i '1i name = cms-docs-mr-${{ github.event.pull_request.number }}' wrangler.toml
+        sed -i '1i name = "cms-docs-mr-${{ github.event.pull_request.number }}"' wrangler.toml
         sed -i 's+account_id = '\'\''+account_id = '"'"$ACCOUNT_ID"'"'+g' wrangler.toml
         sed -i 's+bucket = ""+bucket = "./public"+g' wrangler.toml
         sed -i 's+workers_dev = true++g' wrangler.toml

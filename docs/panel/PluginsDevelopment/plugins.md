@@ -308,6 +308,9 @@ return element;
 ```
 { data-search-exclude }
 
+!!! note On multiple attaches/detaches
+    Your HTML element may be attached and detached multiple times, depending on the view and place being rendered. Be prepared to handle those situations accordingly. E.g. if you keep your elements in a cache across multiple renders, consider waiting at least 50ms before the element is removed from the cache.
+
 ## Plugin Installation
 
 Once you have your plugin written, you have several options to install it into Flotiq UI. Multiple instances of the plugin with the same `id` will override each other, so you can easily update your plugin as needed.

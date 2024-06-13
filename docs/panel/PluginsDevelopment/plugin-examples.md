@@ -186,21 +186,19 @@ FlotiqPlugins.add(
     handler.on(
       `flotiq.grid.cell::render`,
       ({ data, contentType, accessor }) => {
-        if (contentType.name !== 'blogpost') return;
-        if (accessor === 'title') {
-          const titleSpan = document.createElement('span');
-          titleSpan.textContent = data;
+        if (contentType.name !== 'blogpost' || accessor !== 'title') return;
 
-          titleSpan.addEventListener('flotiq.attached', () => {
-            const parentWidth = Math.round(
-              titleSpan.parentElement.getBoundingClientRect().width,
-            );
+        const titleSpan = document.createElement('span');
+        titleSpan.textContent = data;
 
-            titleSpan.innerHTML = `${data} <span style="font-size: 0.9em; color: gray;">(${parentWidth} px)</span>`;
-          });
-          return titleSpan;
-        }
-        return null;
+        titleSpan.addEventListener('flotiq.attached', () => {
+          const parentWidth = Math.round(
+            titleSpan.parentElement.getBoundingClientRect().width,
+          );
+
+          titleSpan.innerHTML = `${data} <span style="font-size: 0.9em; color: gray;">(${parentWidth} px)</span>`;
+        });
+        return titleSpan;
       },
     );
   },
@@ -211,6 +209,47 @@ FlotiqPlugins.add(
 Result:
 
 ![Title width added to the object data table](img/title-width-plugin.png)
+
+## Clear global counter after element is detached
+
+In some cases, you may need to know when element is detached from the DOM tree. To be able to act immediately after the element is detached, you can use `flotiq.detached` html event. 
+
+Here we clear the global counter after element is detached:
+
+```javascript
+let counter = 0;
+
+FlotiqPlugins.add(
+  {
+    id: 'mycompany.click-counter',
+    name: `Count clicks on the blog post titles`,
+    version: `1.0.0`,
+  },
+  function (handler) {
+    handler.on(
+      `flotiq.grid.cell::render`,
+      ({ data, contentType, accessor }) => {
+        if (contentType.name !== 'blogpost' || accessor !== 'title') return;
+
+        const button = document.createElement('button');
+        button.textContent = `${data} (${counter})`;
+
+        button.addEventListener('click', () => {
+          counter++;
+          button.textContent = `${data} (${counter})`;
+        });
+
+        button.addEventListener('flotiq.detached', () => {
+          counter = 0;
+        });
+
+        return button;
+      },
+    );
+  },
+);
+```
+{ data-search-exclude }
 
 ## Open custom modal 
  

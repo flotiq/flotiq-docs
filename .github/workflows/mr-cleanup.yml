@@ -1,0 +1,28 @@
+name: Cleanup
+
+on:
+    pull_request:
+        types: [ closed ]
+
+jobs:
+    cleanup:
+        runs-on: ubuntu-latest
+        steps: # Steps represent a sequence of tasks that will be executed as part of the job
+          - uses: actions/checkout@v2
+          - name: Cloudflare
+            run: |
+              npm install -g wrangler
+              sed -i '1i name = cms-docs-mr-${{ github.event.pull_request.number }}' wrangler.toml
+              sed -i 's+account_id = '\'\''+account_id = '"'"$ACCOUNT_ID"'"'+g' wrangler.toml
+              sed -i 's+bucket = ""+bucket = "./public"+g' wrangler.toml
+              sed -i 's+workers_dev = true++g' wrangler.toml
+              echo "[env.production]" >> wrangler.toml
+              mkdir -p /home/runner/.wrangler/config/
+              echo api_token = '"'"$API_TOKEN"'"' > /home/runner/.wrangler/config/default.toml
+              cat wrangler.toml
+              wrangler delete --env=production --force
+            shell: bash
+            env:
+                API_TOKEN: ${{ secrets.API_TOKEN }}
+                ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
+                CLOUDFLARE_API_TOKEN: ${{ secrets.API_TOKEN }}

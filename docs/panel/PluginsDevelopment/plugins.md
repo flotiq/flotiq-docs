@@ -308,7 +308,7 @@ return element;
 ```
 { data-search-exclude }
 
-!!! note On multiple attaches/detaches
+!!! note "Multiple attaches/detaches"
     Your HTML element may be attached and detached multiple times, depending on the view and place being rendered. Be prepared to handle those situations accordingly. E.g. if you keep your elements in a cache across multiple renders, consider waiting at least 50ms before the element is removed from the cache.
 
 ## Plugin Installation

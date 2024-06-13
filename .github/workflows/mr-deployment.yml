@@ -20,7 +20,7 @@ jobs:
     - run: pip install -r requirements.txt
     - run: mkdocs build
     - run: mkdir public
-    - run: mv ./site ./public/docs
+    - run: mv ./site ./public
     - name: Cloudflare
       run: |
         npm install -g wrangler

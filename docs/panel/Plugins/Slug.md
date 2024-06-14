@@ -1,6 +1,8 @@
 title: Slug | Flotiq documentation
 description: This plugin simplifies the process of creating slugs for your Content Object.
 
+# Slug generation plugin
+
 This plugin simplifies the process of creating slugs for your Content Object. It’s particularly useful when you want to generate slugs automatically based on existing data within a Content Object (e.g. the title of a blog post).
 
 ## Installing the Slug plugin

@@ -96,7 +96,7 @@ Find in the right sidebar panel `Plugins` and select
 
 ![Flotiq plugins](images/sidebar-plugins.png){: .center .width25 .border}
 
-On the next screen, click on the plus next to `Netlify Build` for adding plugin.
+On the next screen, click the plus next to `Netlify Build` to add a plugin.
 
 ![Adding Netlify Build plugin to Flotiq](images/netlify/plugins-screen-netlify.png){: .center .width75 .border}
 

@@ -108,6 +108,17 @@ After the modal is opened, click `Add new`. Next - fill in the details from your
 
 ![Setting up Netlify Build in Flotiq](images/netlify/settings.png){: .center .width75 .border}
 
+!!! Note
+    With the `Build automatically on save` option user can switch between direct update on save or only when manually clicking on `Build site` button in Content Objects forms.
+
+Inside `Site url` , `Build Webhook URL` or `Display name` inputs there can pass some placeholder keys from Content Object form.
+
+![Setting up Netlify Build in Flotiq with placeholder key](images/netlify/settings-url-key.png){: .center .width75 .border}
+
+You will see the `Build site` with the `Go to page` link that includes the parsed placeholder key from the Content Objects form.
+
+![Netlify build button in Flotiq editor with Go to page link](images/netlify/netlify-build-in-editor-key.png){: .center .width75 .border}
+
 ### Configuring Netlify Build plugin
 
 The two elements you will need to copy from Netlify is the Build instance URL:

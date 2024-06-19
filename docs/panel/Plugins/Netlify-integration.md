@@ -100,7 +100,7 @@ On the next screen, click on the plus next to `Netlify Build` for adding plugin.
 
 ![Adding Netlify Build plugin to Flotiq](images/netlify/plugins-screen-netlify.png){: .center .width75 .border}
 
-Once plugin is enabled, click `Mange` to open modal with the form.
+Once the plugin is enabled, click `Manage` to open the modal with the form.
 
 ![Manage Netlify](images/netlify/manage.png){: .center .width75 .border}
 

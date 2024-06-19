@@ -101,7 +101,9 @@ When the administrator changes the plan:
 Administrators can manage users outside the Space context.
 This allows Administrators to have an overview of all users within the Organization.
 
-Users can be added independently of Spaces, without being assigned to a specific Space.
+Users can be added independently of Spaces, without being assigned to a specific Space. 
+
+If a user is assigned to a Space, there are ways to manage their access to space content. If you wish to restrict user actions, consider adding a [Space Role](./user-roles.md) for the user. Users without any assigned role will have unrestricted access to all resources.
 
 To display the user list, navigate to the `Users` tab in the Organization management view.
 

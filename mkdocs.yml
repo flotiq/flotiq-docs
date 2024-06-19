@@ -146,6 +146,7 @@ nav:
     - 'Content objects': panel/content-objects.md
     - 'Media library': panel/media-library.md
     - 'Users': panel/users.md
+    - 'User Roles': panel/user-roles.md
     - Webhooks:
       - 'Overview': panel/webhooks/index.md
       - 'Async CO webhooks': panel/webhooks/async-co-webhook.md
@@ -158,6 +159,7 @@ nav:
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
       - 'Netlify': panel/Plugins/Netlify-integration.md
       - 'Custom Links': panel/Plugins/Custom-links.md
+      - 'Slug': panel/Plugins/Slug.md
     - UI Plugins Development:
       - 'Getting started': panel/PluginsDevelopment/plugins.md
       - 'Examples': panel/PluginsDevelopment/plugin-examples.md

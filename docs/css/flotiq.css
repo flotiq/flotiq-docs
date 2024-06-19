@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .md-grid {
   max-width: 70rem;
 }
@@ -695,3 +699,11 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
 .md-typeset h1:target, .md-typeset h2:target, .md-typeset h3:target {
   --md-scroll-offset: -1rem;
 }
+
+/*
+!* Scroll to top button visibility improvements *!
+
+body:not(.md--top) .md-icon--top {
+  opacity: 1 !important;
+}
+*/

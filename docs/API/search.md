@@ -74,7 +74,19 @@ Response:
 
 ## Limit the search to a specific Content Type
 
-You can easily limit the search to a specific Content Type by providing its name in `content_type[]` argument.
+You can easily limit the search to a specific Content Type by providing its name in the `content_type[]` argument.
+
+## Order by content field
+
+You can sort the results from the search endpoint by Content Type's field using an "order_by" parameter:
+
+!!! Example
+    GET https://api.flotiq.com/api/v1/search?q=Flotiq&content_type[]=post&**order_by=date**
+
+Keep in mind that ordering by a field that is nested in the `object` input type (list) is not possible.
+
+!!! Note
+    You may also use the `.keyword` suffix for other data than text fields, for example, if you are using an `id` field that uses a `number` type in Flotiq, you may still want to consider using the `.keyword` suffix when ordering by such field. This will result in slightly faster searching and will sort objects by id alphabetically, not from the highest number to the lowest.
 
 ## Limit the search to a specific field
 

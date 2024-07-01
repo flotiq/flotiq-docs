@@ -3,7 +3,7 @@ description: This tutorial shows how to build a store locator webpage using Flot
 
 # Storing location data
 
-Flotiq plays really well with location data, especially once you get to use our search capabilities. In this quick tutorial we'll build a very simple web page that displays locations on a map and allows to easily search your location database.
+Flotiq plays really well with location data, especially once you get to use our search capabilities. In this quick tutorial, we'll build a very simple web page that displays locations on a map and allows you to easily search your location database.
 
 What we'll need:
 
@@ -13,14 +13,14 @@ What we'll need:
 - A scoped API key
 - Some HTML, CSS and plain Javascript (to keep things simple).
 
-And here's a sneak peak at what we'll build.
+And here's a sneak peek at what we'll build.
 
 ![Flotiq-based store locator](images/store-locator-1.png){: .center .border .width75}
 
 
 ## Setting up Flotiq
 
-Once you [registered a Flotiq account](https://editor.flotiq.com/register.html) and logged in, you'll have to create a new Content Type Definition. This is how you tell Flotiq what kind of data you will be dealing with. Mine looks like this:
+Once you [register a Flotiq account](https://editor.flotiq.com/register.html) and log in, you'll have to create a new Content Type Definition. This is how you tell Flotiq what kind of data you will be dealing with. Mine looks like this:
 
 ![Store Content Type Definition](images/store-locator-2.png){: .center .border .width75}
 
@@ -30,7 +30,7 @@ Next - create several Content Objects under the `Store` type. I added 3 shops in
 
 ![Store entries in grid](images/store-locator-3.png){: .center .border .width75}
 
-Finally - setup a scoped API key - you'll need it in a moment.
+Finally - set up a scoped API key - you'll need it in a moment.
 
 ## Building the page
 
@@ -180,7 +180,7 @@ You will need to populate the `TOKEN` constant with your API key, copied from Fl
 { data-search-exclude }
 
 !!! warning
-    We strongly recommend to create a dedicated key for every application you build and explicitly define the access scope to cover only the least amount of privileges required for a given app. Read more about [Flotiq's scoped API keys](https://flotiq.com/docs/API/#user-defined-api-keys) in our docs.
+    We strongly recommend creating a dedicated key for every application you build and explicitly defining the access scope to cover only the least amount of privileges required for a given app. Read more about [Flotiq's scoped API keys](https://flotiq.com/docs/API/#user-defined-api-keys) in our docs.
 
 Now, define the `loadMarkers()` function, like this:
 
@@ -449,7 +449,7 @@ A neat, yellow box with a positioning icon should appear in your browser:
 
 ![Browser location can be used to navigate the map](images/store-locator-6.png){: .center .border .width75}
 
-Let's now add an input field and connect the geocodeing service to translate location names to coordinates.
+Let's now add an input field and connect the geocoding service to translate location names to coordinates.
 
 Add a text input to the yellow overlay:
 ```
@@ -502,7 +502,7 @@ Now, let's add an event handler on the form's submit event. Once a user submits 
 ```
 { data-search-exclude }
 
-You can now put cities or full addresses in the text input. When  you submit the form - your map should automatically move to the address you entered and the nearby stores should load.
+You can now put cities or full addresses in the text input. When you submit the form - your map should automatically move to the address you entered and the nearby stores should load.
 
 ## Final touches
 
@@ -539,7 +539,7 @@ with
 ```
 { data-search-exclude }
 
-This should provide standard maps popovers, if you'd like to give them some extra style - add this to the CSS file and adjust to your needs:
+This should provide standard maps popovers if you'd like to give them some extra style - add this to the CSS file and adjust to your needs:
 
 ```
 .leaflet-popup-content-wrapper {
@@ -637,6 +637,6 @@ and finally - drop this at the end of the `onMarkersLoaded()` function:
 ```
 { data-search-exclude }
 
-That's it! You should  now have a fully working webpage, which will display the list of stores you store in Flotiq and will place the store's on a map. Look into our [Git repository](https://github.com/flotiq/flotiq-demo-storing-location-data) for some extra style and let us know in the comments when you build something!
+That's it! You should now have a fully working webpage, which will display the list of stores you store in Flotiq and will place the stores on a map. Look into our [Git repository](https://github.com/flotiq/flotiq-demo-storing-location-data) for some extra style and let us know in the comments when you build something!
 
 ![The final result - store locator webpage with data dynamically pulled from Flotiq](images/store-locator-7.png){: .center .border .width75}

@@ -36,36 +36,36 @@ Once signed in, configuring Netlify with Flotiq requires several steps. We will 
 
 Once you've authenticated with Netlify and GitHub, you have two ways of creating the site in Netlify. The first and faster way is to use the `Deploy to netlify` button on the bottom of Readme in every starter repository provided by Flotiq team:
 
-![](images/netlify-instance-1.png){: .center .width75 .border}
+![](images/netlify/netlify-instance-1.png){: .center .width75 .border}
 
 then click `Connect to GitHub` button:
 
-![](images/netlify-instance-6.png){: .center .width75 .border}
+![](images/netlify/netlify-instance-6.png){: .center .width75 .border}
 
 insert environment variables (more [below](#setting-up-environment-variables)) and click `Save and Deploy`, after few minutes, your page should be live:
 
-![](images/netlify-instance-7.png){: .center .width75 .border}
+![](images/netlify/netlify-instance-7.png){: .center .width75 .border}
 
 The second way is to click the `New site from Git` button in Netlify dashboard:
 
-![](images/netlify-instance-2.png){: .center .width75 .border}
+![](images/netlify/netlify-instance-2.png){: .center .width75 .border}
 
 then choosing the source of code:
 
-![](images/netlify-instance-3.png){: .center .width75 .border}
+![](images/netlify/netlify-instance-3.png){: .center .width75 .border}
 
 and the desired repository:
 
-![](images/netlify-instance-4.png){: .center .width75 .border}
+![](images/netlify/netlify-instance-4.png){: .center .width75 .border}
 
 next step is to manually put environment variables required by project, first click `Show advanced` and then `New variable` for every variable (more [below](#setting-up-environment-variables)):
 
-![](images/netlify-instance-8.png){: .center .width75 .border}
-![](images/netlify-instance-9.png){: .center .width75 .border}
+![](images/netlify/netlify-instance-8.png){: .center .width75 .border}
+![](images/netlify/netlify-instance-9.png){: .center .width75 .border}
 
 and last but not least click `Deploy site` button, after few minutes, your page should be live:
 
-![](images/netlify-instance-5.png){: .center .width75 .border}
+![](images/netlify/netlify-instance-5.png){: .center .width75 .border}
 
 ### Setting up Environment Variables
 
@@ -75,13 +75,13 @@ The essential two environment variables needed for every Gatsby project are `GAT
 
 For example, if you're using the [Gatsby and Snipcart starter](https://github.com/flotiq/gatsby-starter-products){:target="_blank"} you will also provide the Snipcart API key. The project Readme always described the needed variables.
 
-To obtain the Flotiq API key - in your Flotiq account, click your profile icon in the sidebar and go to `API keys`:
+To obtain the Flotiq API key - in your Flotiq account, Find in the right sidebar panel `Api keys` and select:
 
-![Access Flotiq API keys](../../API/images/user-profile.png){: .center .width25 .border}
+![Access Flotiq API keys](images/netlify/api-keys-1.png){: .center .width25 .border}
 
 You can either select the application-wide read-only key:
 
-![Use global read-only](../../API/images/api-keys_1.png){: .center .width75 .border}
+![Use global read-only](images/netlify/api-keys-2.png){: .center .width75 .border}
 
 Or as a safer option, create a scoped read-only API key that will only be used for the purpose of Netlify build, read more about [Flotiq API access](https://flotiq.com/docs/API/).
 
@@ -92,42 +92,56 @@ Copy the Read-Only key and paste it in Netlify settings as `GATSBY_FLOTIQ_API_KE
 
 ## Installing the Netlify plugin
 
-Open up your profile menu and select `Plugins`.
+Find in the right sidebar panel `Plugins` and select
 
-![Flotiq plugins](images/profile-plugins.png){: .center .width25 .border}
+![Flotiq plugins](images/sidebar-plugins.png){: .center .width25 .border}
 
-On the next screen, click on the `Add to your plugins` button next to `Netlify Build`.
+On the next screen, click the plus next to `Netlify Build` to add a plugin.
 
-![Adding Netlify Build plugin to Flotiq](images/plugins-screen_2.png){: .center .width75 .border}
+![Adding Netlify Build plugin to Flotiq](images/netlify/plugins-screen-netlify.png){: .center .width75 .border}
 
-Next - fill in the details from your Netlify account and click `Save changes` to finish your Netlify Build setup.
+Once the plugin is enabled, click `Manage` to open the modal with the form.
 
-![Setting up Netlify Build in Flotiq](images/netlify-plugin-settings.png){: .center .width75 .border}
+![Manage Netlify](images/netlify/manage.png){: .center .width75 .border}
 
+After the modal is opened, click `Add new`. Next - fill in the details from your Netlify account and click `Save changes` to finish your Netlify Build setup.
+
+![Setting up Netlify Build in Flotiq](images/netlify/settings.png){: .center .width75 .border}
+
+!!! Note
+    With the `Build automatically on save` option user can switch between direct update on save or only when manually clicking on `Build site` button in Content Objects forms.
+
+Inside `Site url` , `Build Webhook URL` or `Display name` inputs there can pass some placeholder keys from Content Object form.
+
+![Setting up Netlify Build in Flotiq with placeholder key](images/netlify/settings-url-key.png){: .center .width75 .border}
+
+You will see the `Build site` with the `Go to page` link that includes the parsed placeholder key from the Content Objects form.
+
+![Netlify build button in Flotiq editor with Go to page link](images/netlify/netlify-build-in-editor-key.png){: .center .width75 .border}
 
 ### Configuring Netlify Build plugin
 
 The two elements you will need to copy from Netlify is the Build instance URL:
 
-![Netlify Build Instance URL](images/netlify-build-url.png){: .center .width75 .border}
+![Netlify Build Instance URL](images/netlify/netlify-build-url.png){: .center .width75 .border}
 
 and the Builds Webhook URL from Settings:
 
 First, navigate to Settings -> Build & deploy
 
-![Netlify Build and Builds Webhook URLs](images/netlify-webhooks-1.png){: .center .width75 .border}
+![Netlify Build and Builds Webhook URLs](images/netlify/netlify-webhooks-1.png){: .center .width75 .border}
 
 Then scroll to `Build hooks` section, and click `Add build hook` button:
 
-![Netlify Build and Builds Webhook URLs](images/netlify-webhooks-2.png){: .center .width75 .border}
+![Netlify Build and Builds Webhook URLs](images/netlify/netlify-webhooks-2.png){: .center .width75 .border}
 
 Put the name of your webhook (`Flotiq build` on this screen), choose branch (`master` here) and click the `Save` button:
 
-![Netlify Build and Builds Webhook URLs](images/netlify-webhooks-3.png){: .center .width75 .border}
+![Netlify Build and Builds Webhook URLs](images/netlify/netlify-webhooks-3.png){: .center .width75 .border}
 
 Copy webhook URL:
 
-![Netlify Build and Builds Webhook URLs](images/netlify-webhooks-4.png){: .center .width75 .border}
+![Netlify Build and Builds Webhook URLs](images/netlify/netlify-webhooks-4.png){: .center .width75 .border}
 
 
 You will paste both of them in Flotiq Netlify Build plugin settings, don't forget to click the `Save changes` button.
@@ -137,4 +151,4 @@ You will paste both of them in Flotiq Netlify Build plugin settings, don't forge
 
 You're done. Now you will see `Build site` in Content Objects forms, and you will be able to build site after you made changes to the content.
 
-![Netlify build button in Flotiq editor](images/netlify-build-in-editor.png){: .center .width75 .border}
+![Netlify build button in Flotiq editor](images/netlify/netlify-build-in-editor.png){: .center .width75 .border}

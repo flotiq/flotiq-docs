@@ -14,7 +14,7 @@ Click tile on the Type Definitions to go to the content browser page:
 
 or entry in the left menu:
 
-![](images/ContentMenu.png){: .center .border}
+![](images/ContentMenu.png){: .center .width25 .border}
 
 The content browser provides a convenient grid interface to browse and search through large amounts of data quickly.
 Users can customize the grid according to their preferences:
@@ -48,7 +48,7 @@ You can save Content Object only when you insert values in all required fields.
 
 Interaction buttons of Content Objects are in the top right corner of the edit screen:
 
-![](images/EditButtons.png){: .center .border}
+![](images/EditButtons.png){: .center .width50 .border}
 
 To save and stay on the form, click the `Save` button.
 
@@ -236,7 +236,7 @@ You can change the order of objects in the list using the up and down arrow in t
 You can remove the object from the list using the trash icon in the top right corner of the object form.
 
 If the list property contains a `list` child property, the nested form will be displayed.
-![](images/nested list.png)
+![](images/nested list.png){: .center .width75 .border}
 
 ### Geo
 
@@ -330,11 +330,11 @@ remove the block (`X` button) and move the block down (`arrow down` button).
 
 You can delete the object either by clicking the `Delete` button on the edit object page (in the top right corner):
 
-![](images/EditButtons.png){: .center .border}
+![](images/EditButtons.png){: .center .width50 .border}
 
 Or by selecting it on the content browser and clicking the `Remove selected` button:
 
-![](images/ListRemove.png){: .center .border}
+![](images/ListRemove.png){: .center .width50 .border}
 
 !!! warning
     You can only remove objects that are not linked to any other object in the system.

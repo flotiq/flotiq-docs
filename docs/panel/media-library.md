@@ -32,7 +32,7 @@ In order to create a variant through dashboard, simply press the edit button on 
 
 A window will pop up with a WYSIWYG editor, that will allow you to easily modify the image according to your needs.
 
-![Editing media](./images/Create-variant.png)
+![Editing media](./images/Create-variant.png){.center .width75 .border}
 
 After you are done with modifying the image, press `Save changes` button and a variant with this set of transformations will be added to your media data.
 

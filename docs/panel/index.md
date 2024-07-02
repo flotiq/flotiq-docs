@@ -25,7 +25,7 @@ This part of Flotiq's interface will be your starting point whenever you begin w
 
 From the main screen showing all Content Type Definitions you can either create a new CTD or edit an existing one. Both actions will take you to the Content Type editor, which is a convenient UI to define your data model.
 
-![Flotiq Content Type Editor](images/EditContentTypeDefinitions.png)
+![Flotiq Content Type Editor](images/EditContentTypeDefinitions.png){: .center .width75 .border}
 
 ## Content Object grid
 

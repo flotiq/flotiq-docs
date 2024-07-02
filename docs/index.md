@@ -36,7 +36,7 @@ There are 2 primary ways to interact with Flotiq: 1. through the [user interface
 
 Data model in Flotiq is created by adding one or more Content Type Definitions (we often refer to them as CTDs). CTDs are a key part of the system, where you - the user - describe the content (data model) you will be storing in Flotiq. The [Content Type builder](panel/content-types.md) is the tool we provide for you to easily define your Content Types, using a graphical User Interface. Type Definitions are like classes in object-oriented programming, they describe object properties. 
 
-![](panel/images/EditContentTypeDefinitions.png)
+![](panel/images/EditContentTypeDefinitions.png){.center .width50 .border}
 
 Read more about how to use the Content Type editor in the [Panel docs](panel/content-types.md)
 

@@ -11,8 +11,8 @@ Example:
     * id – string, unique, required, Flotiq Dashboard adds this automatically
     * title – string, required, part of the object title
     * slug – string, unique, required 
+    * excerpt - string, required
     * content – string, required
-    * thumbnail - relation to Media type
     * headerImage - relation to Media type
 
 You need an activated account to see the CTD page in the Dashboard. 
@@ -27,7 +27,7 @@ The Modeler interacts with the ``/api/v1/internal/contenttype`` endpoint on beha
 
 Click `Type definitions` in the menu on the left to get to CTDs list:
 
-![](images/TypeDefinitionsMenu.png){: .center .border}
+![](images/TypeDefinitionsMenu.png){: .center .width25 .border}
 
 If you don't have any Content Types defined yet, you will see a list of tiles which will help you to quickly create . Select your first one or create such from scratch by choosing `Custom`. It is also possible to create additional CTD by clicking `Add definition` button in the top right corner of the page. 
 
@@ -44,8 +44,8 @@ It has five properties:
 
 1. title
 2. slug
-3. content
-4. thumbnail
+3. excerpt
+4. content
 5. headerImage
     
 
@@ -63,15 +63,15 @@ The `slug` property is also required, but also must be unique across all your bl
 
 ![](images/AddContentTypeDefinitionsSlug.png){: .center .width75 .border}
 
+The `excerpt` property is defined as a simple text area field.
+
+![](images/AddContentTypeDefinitionsExcerpt.png){: .center .width75 .border}
+
 The `content` property is set to generate Rich Text input (we use CKEditor in Flotiq):
 
 ![](images/AddContentTypeDefinitionsContent.png){: .center .width75 .border}
 
-The `thumbnail` property is defined as a relation to Media CTD - a system type definition that anyone can use but sees only their entries. It can only have one element added.
-
-![](images/AddContentTypeDefinitionsThumbnail.png){: .center .width75 .border}
-
-The `headerImage` is set up exactly like the thumbnail; the only difference is the property name.
+The `headerImage` is is defined as a relation to Media CTD - a system type definition that anyone can use but sees only their entries. It can only have one element added.
 
 ![](images/AddContentTypeDefinitionsHeaderImage.png){: .center .width75 .border}
 
@@ -83,7 +83,7 @@ After saving your CTD you will be redirected to the CTDs list, where you can cli
 
 Predefined CTD tiles are no longer visible. You can use the dropdown menu on the top right corner to add more of such types.
 
-![](images/TypeDefinitionsAddButton.png){: .center .border}
+![](images/TypeDefinitionsAddButton.png){: .center .width25 .border}
 
 ## Updating Content Type Definitions
 

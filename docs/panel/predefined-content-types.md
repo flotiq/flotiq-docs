@@ -8,7 +8,7 @@ Custom tile opens empty CTD.
 
 If you already have at least one CTD, you can use the dropdown menu on the top right corner to add more predefined CTDs.
 
-![](images/TypeDefinitionsAddButton.png){: .center .border}
+![](images/TypeDefinitionsAddButton.png){: .center .width25 .border}
 
 ## Blog Post
 

@@ -19,7 +19,7 @@ Part of the Content API are the beautiful API docs, along with code samples to s
 
 There are 3 important parts of the API documentation that Flotiq provides for you:
 
-![](images/dynamic-content-api-docs.png)
+![](images/dynamic-content-api-docs-annotated.png)
 
 1. Every time you create a Content Type Definition - your API is extended with endpoints that support this new Content Type.
 2. The descriptions of these endpoints contain all the information regarding the structure and constraints of the Content Type you defined.

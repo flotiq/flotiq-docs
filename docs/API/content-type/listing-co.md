@@ -943,6 +943,86 @@ You can check the example for each filter usage below:
         }
         ```
         { data-search-exclude }
+    
+    === "overlaps"
+        
+        Returns all objects whose Object parameter has an overlap with the filter.
+
+        Example:
+
+        `filters={"gelery[*].dataUrl":{"type":"overlaps","filter":["/api/v1/content/_media/_media-4a8d1dea-bcb4-4862-a2b8-53ff3d13ce6d","/api/v1/content/_media/_media-ca82f862-75f4-4e3d-a504-d0db7d05b1ba"]}}`
+
+        Will return:
+
+        ```
+        [
+            {
+                "id":"1-id"
+                "gelery":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-4a8d1dea-bcb4-4862-a2b8-53ff3d13ce6d"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4e3d-a504-d0db7d05b1ba"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4e3d-a504-f0ebff3bacd1"
+                    },
+                ]
+            },
+            {
+                "id":"2-id"
+                "gelery":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-4a8d1dea-bcb4-4862-a2b8-53ff3d13ce6d"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4dd2-a504-d0db7d05b1ba"
+                    },
+                ]
+            },
+            {
+                "id":"3-id"
+                "gelery":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-4a8d1dea-bcb4-4862-a2b8-53ff3d13ce6d"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4e3d-a504-d0db7d05b1ba"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4ffd-a504-cc0dff3bacd1"
+                    },
+                ]
+            },
+        ]
+        ```
+        { data-search-exclude }
+
+        Will not return:
+        
+        ```
+        [
+            {
+                "id":"4-id"
+                "gelery":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4e3d-a504-f0ebff3bacd1"
+                    },
+                ]
+            },
+        ]
+        ```
+        { data-search-exclude }
 
 !!! Note
     The equals and notEquals filters allow passing multiple elements so that the results are equal to any of them, for example:<br>

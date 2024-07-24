@@ -418,6 +418,7 @@ Filters can accept the following filter types:
 - inRange
 - empty
 - notEmpty
+- overlaps
 
 You can check the example for each filter usage below:
 

@@ -22,7 +22,7 @@ Creating a Hosted Sync Webhook follows a similar process as for sync webhooks. O
 
 Once you choose the "Code" option, an embedded code editor will show up, allowing you to easily write code for your hosted webhook without the need for the use of any IDE. The editor will contain example code snippets; one of which allows you to validate the target content object, and the second example that will mutate the content object, automatically creating a slug from the title property.
 
-![](../images/webhooks/AddHostedWebhook.png){: .center .border}
+![](../images/webhooks/AddHostedWebhook.png){: .center .border .width75}
 
 While the code supports most of the ES2023 syntax, it still has some limitations/requirements:
 

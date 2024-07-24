@@ -11,7 +11,7 @@ description: Async Content Definition webhooks in Flotiq
 
 To create your new `Content Type Definitions` Webhook, click on the main menu `Webhooks` -> `Add new Webhook`. Then select `Type` as `Content Type Definition Changes`
 
-![](../images/webhooks/webhooks-create-ctd-webhook.png){: .border}
+![](../images/webhooks/webhooks-create-ctd-webhook.png){: .border .width75 .center}
 
 !!! Note
     `Action` input will disappear, because `Content Definition Changes` webhooks are fired on every `Content Definition's` action  (`Create`, `Update`, `Delete`).

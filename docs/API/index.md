@@ -3,7 +3,7 @@
 
 All API endpoints that are published in Flotiq are currently using an API-key authorization method. 
 
-There are two types of API keys - [Application Keys](#application-api-keys) and [User Defined Keys](#user-defined-api-keys). Both types of keys can be retrieved from the API Keys page in the Flotiq Panel (click on your avatar to open the menu):
+There are two types of API keys - [Application Keys](#application-api-keys) and [User Defined Keys](#user-defined-api-keys). Both types of keys can be retrieved from the API Keys page in the Flotiq Panel:
 
 ![](images/user-profile.png){: .center .width25 .border}
 

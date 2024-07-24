@@ -45,7 +45,7 @@ Roles within an Organization:
 
 Every user with access to one or more Spaces will see a Spaces selector above the main application menu.
 
-![Spaces Selector in Flotiq Dashboard](images/spaces/SpacesSelector.png)
+![Spaces Selector in Flotiq Dashboard](images/DashboardSpaces.png){: .border}
 
 Depending on the selected Space, the context of the application changes - the contents displayed by the Dashboard are relevant to the chosen Space.
 
@@ -56,7 +56,7 @@ Depending on the selected Space, the context of the application changes - the co
 
 To manage your Spaces, navigate to the `Organization Settings` section of the application.
 
-![Go to organization Settings, Flotiq Dashboard](images/spaces/SpaceOrgSettings.png)
+![Go to organization Settings, Flotiq Dashboard](images/OrganizationSettings.png){: .width25 .border .center}
 
 ### List spaces
 
@@ -107,4 +107,4 @@ If a user is assigned to a Space, there are ways to manage their access to space
 
 To display the user list, navigate to the `Users` tab in the Organization management view.
 
-![Users in Organization](images/spaces/SpaceUsers.png)
+![Users in Organization](images/UserList.png)

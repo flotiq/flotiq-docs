@@ -142,7 +142,7 @@ If you'd like to dig a little deeper into this recipe website, here's your quick
 
     Create your [Flotiq.com](https://flotiq.com) account. Next, create the `Recipe` Content Type:
 
-    ![Recipe content type in flotiq](images/jamstack-recipes-complex-data-structures/add-definition-type-recipe.png){: .center .width75 .border}
+    ![Recipe content type in flotiq](../panel/images/definition-builder-create-recipe.png){: .center .width75 .border}
 
     _Note: You can also create `Recipe` using [Flotiq REST API](https://flotiq.com/docs/API/)._ 
     

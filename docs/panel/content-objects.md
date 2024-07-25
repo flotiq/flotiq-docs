@@ -48,7 +48,7 @@ You can save Content Object only when you insert values in all required fields.
 
 Interaction buttons of Content Objects are in the top right corner of the edit screen:
 
-![](images/EditButtons.png){: .center .width50 .border}
+![](images/co-form/EditButtons.png){: .center .width50 .border}
 
 To save and stay on the form, click the `Save` button.
 
@@ -193,7 +193,7 @@ Standard select control. You can choose only one option.
 
 Flotiq has two types of relations in the dashboard (they are managed in the same way in the json object):
 
-![](images/Relations.png){: .center .width75 .border}
+![](images/co-form/datasource/Relations.png){: .center .width75 .border}
 
 If you want to remove the linked object, click the `trash` icon on the object's right side.
 You can change the order of objects in relation using arrow buttons in the top right corner.
@@ -203,13 +203,13 @@ If it is not a Media object, you can edit it by clicking the `pencil` button in 
 
 You can either open the form for object creation using the `Add new object and link` button:
 
-![](images/BlogPostFormModal.png){: .center .width75 .border}
+![](images/co-form/datasource/RelationAddModal.png){: .center .width75 .border}
 
 After saving the object, the system automatically links it to the object you are editing/creating right now.
 
 Or you can also click the `Link existing object` button and link the object created earlier:
 
-![](images/LinkExistingObject.png){: .center .border}
+![](images/co-form/datasource/LinkExistingObject.png){: .center .border}
 
 To add the object, click on the desired object and then the `Add` button.
 You can search and sort objects using the controls on top of the modal.
@@ -221,7 +221,7 @@ You can search and sort objects using the controls on top of the modal.
 
 The `Open Media Library` button opens Media Library, where you can add new files or select the ones already added.
 
-![](images/MediaLibraryModal.png){: .center .width75 .border}
+![](images/co-form/datasource/MediaLibraryModal.png){: .center .width75 .border}
 
 To add the media object, click on the desired file and the `Save changes` button.
 Newly uploaded files are automatically selected; you only need to click the `Save changes` button.
@@ -230,27 +230,27 @@ Newly uploaded files are automatically selected; you only need to click the `Sav
 
 If the object has a list property, Flotiq generates series of sub-forms with properties described in such list:
 
-![](images/Lists.png){: .center .width75 .border}
+![](images/co-form/list/List.png){: .center .width75 .border}
 
 To add the new object to the list, click the `Add item` button.
 You can change the order of objects in the list using the up and down arrow in the top right corner of object form.
 You can remove the object from the list using the trash icon in the top right corner of the object form.
 
 If the list property contains a `list` child property, the nested form will be displayed.
-![](images/nested list.png){: .center .width75 .border}
+![](images/co-form/list/NestedList.png){: .center .width75 .border}
 
 ### Geo
 
 Control for geolocation points. You can find the address using `Find on map` input or by dragging the marker on the map.
 You can put the coordinates in `Latitude` and `Longitude` inputs below the map if you know the coordinates without searching.
 
-![](images/GeoControl.png){: .center .width75 .border}
+![](images/co-form/geo/GeoControl.png){: .center .width75 .border}
 
 ### Date
 
 Date control. You can write the date and time or choose them from the popups.
 
-![](images/DateControl.png){: .center .width75 .border}
+![](images/co-form/date/DateControl.png){: .center .width75 .border}
 
 ### Block
 
@@ -331,11 +331,11 @@ remove the block (`X` button) and move the block down (`arrow down` button).
 
 You can delete the object either by clicking the `Delete` button on the edit object page (in the top right corner):
 
-![](images/EditButtons.png){: .center .width50 .border}
+![](images/co-form/EditButtons.png){: .center .width50 .border}
 
 Or by selecting it on the content browser and clicking the `Remove selected` button:
 
-![](images/ListRemove.png){: .center .width50 .border}
+![](images/GridBatchDelete.png){: .center .width50 .border}
 
 !!! warning
     You can only remove objects that are not linked to any other object in the system.

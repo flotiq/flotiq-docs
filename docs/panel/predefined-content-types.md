@@ -22,7 +22,7 @@ Type for storing simple blog posts. It contains properties storing title, slug, 
 | thumbnail   | Relation   | Restrict to type: Media        | Thumbnail image                    |
 | headerImage | Relation   | Restrict to type: Media        | Main image of the post             |
 
-![](images/AddContentTypeDefinitions.png)
+![](images/AddContentTypeDefinitions.png){: .border}
 
 Full schema for the Blog Post type:
 

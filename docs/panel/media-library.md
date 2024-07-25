@@ -12,7 +12,7 @@ The Media Library has 2 sections:
 
 This section of the Media Library gives you access to all of your files that you're storing in Flotiq. You can upload, search, sort, and remove files from the library in this screen.
 
-![Flotiq Media Library](./images/MediaLibrary-home.png)
+![Flotiq Media Library](./images/MediaLibrary-home.png){: .border}
 
 ## Stock photos
 
@@ -29,7 +29,7 @@ Variants allow you to create transformed versions of images. A variant consists 
 
 In order to create a variant through dashboard, simply press the edit button on any of your images in media library, and select `Add new variant` option.
 
-![Editing media](./images/Edit-Media.png)
+![Editing media](./images/Edit-Media.png){: .border .width50 .center}
 
 A window will pop up with a WYSIWYG editor, that will allow you to easily modify the image according to your needs.
 

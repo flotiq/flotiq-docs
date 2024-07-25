@@ -69,26 +69,26 @@ This overview allows you to:
 * Change the payment plan associated with a Space (Upgrade Space).
 * Access the subscription dashboard where you can review billing documents (Manage subscription panel).
 
-![Spaces and Usage view in Flotiq Dashboard](images/spaces/SpacesAndUsage.png)
+![Spaces and Usage view in Flotiq Dashboard](images/spaces/SpacesAndUsage.png){: .border}
 
 ### Add Space
 
 In the Space addition view, an Organization Administrator can assign a name to the Space and select the usage limits that will be available for the Space. 
 If a paid option is selected, the Administrator will be redirected to the payment view.
 
-![Add a new Space to your Flotiq account](images/spaces/SpaceAdd.png)
+![Add a new Space to your Flotiq account](images/spaces/SpaceAdd.png){: .border}
 
 ### Edit Space
 
 In the Space editing view, an Organization Administrator can change the name of the Space, manage users within the Space, and view the limits for the given Space.
 
-![Edit Space settings](images/spaces/SpaceEdit.png)
+![Edit Space settings](images/spaces/SpaceEdit.png){: .border}
 
 ### Upgrade Space
 
 To change the plan for a Space, the Administrator can select the “Upgrade Space” option from the Spaces list.
 
-![Upgrading Space](images/spaces/SpaceUpgrade.png)
+![Upgrading Space](images/spaces/SpaceUpgrade.png){: .border}
 
 When the administrator changes the plan:
 
@@ -107,4 +107,4 @@ If a user is assigned to a Space, there are ways to manage their access to space
 
 To display the user list, navigate to the `Users` tab in the Organization management view.
 
-![Users in Organization](images/UserList.png)
+![Users in Organization](images/UserList.png){: .border}

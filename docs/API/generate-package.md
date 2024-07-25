@@ -7,7 +7,7 @@ description: Flotiq provides SDKs, or client libraries, to access your Content, 
 
 On your Flotiq dashboard, you can find links to download client libraries (SDK packages) for several frameworks and languages.
 
-![Available frameworks and languages](images/frameworkslogos.png){: .width25}
+![Available frameworks and languages](images/frameworkslogos.png){: .width25 .center .border}
 
 Currently supported generators are:
 

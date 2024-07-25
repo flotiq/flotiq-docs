@@ -75,9 +75,10 @@ When you choose this, the webhook can be manually triggered, at any time, in the
 Multiple actions can be selected.
 
 #### Content type definitions
-What type of objects in Flotiq the webhook applies to.
-The list includes all user types on the system.
+What types of objects in Flotiq the webhook applies to.
+The list includes all user types in the system.
 Multiple types can be selected.
+If no type is selected, all types will be listened for.
 
 #### Headers
 The headers to add to the HTTP request made by Flotiq.

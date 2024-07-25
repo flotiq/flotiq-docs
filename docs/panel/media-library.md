@@ -37,7 +37,10 @@ A window will pop up with a WYSIWYG editor, that will allow you to easily modify
 After you are done with modifying the image, press `Save changes` button and a variant with this set of transformations will be added to your media data.
 
 !!! Note
-    After adding variants, remember that you also have to save the media edit, for saving variants in the media object data.
+    After adding variants, remember that you also have to save the media edit for saving variants in the media object data.
+
+!!! Note
+    Flotiq variants currently do not support creating transformations for animated GIF files.
 
 ## API Endpoints
 

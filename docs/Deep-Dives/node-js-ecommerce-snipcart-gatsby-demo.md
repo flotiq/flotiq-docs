@@ -92,7 +92,7 @@ SNIPCART_API_KEY="YOUR SNIPCART API KEY"
 
 You can find your Flotiq API keys in `API Keys` section:
 
-![Flotiq user API key](../API/images/user-profile.png){: .border .width25 .center}
+![Flotiq user API key](../API/images/api-keys-menu.png){: .border .width25 .center}
 
 !!! caution
     We strongly recommend that you create a scoped API key (read more about [API access](../API/index.md)), but for development, you can use the default Read Only key provided in the interface. 

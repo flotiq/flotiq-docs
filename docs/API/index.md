@@ -5,7 +5,7 @@ All API endpoints that are published in Flotiq are currently using an API-key au
 
 There are two types of API keys - [Application Keys](#application-api-keys) and [User Defined Keys](#user-defined-api-keys). Both types of keys can be retrieved from the API Keys page in the Flotiq Panel:
 
-![](images/user-profile.png){: .center .width25 .border}
+![](images/api-keys-menu.png){: .center .width25 .border}
 
 All keys restrict access to not only CRUD of the Content Objects, but also to their hydration and search; the same restrictions apply to GraphQL endpoint.
 

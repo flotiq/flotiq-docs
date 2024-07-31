@@ -42,15 +42,11 @@ Here you find a list of simple boilerplate content types, which are a great star
 
 Click on `Product` and then `Save`. You don't need to make any changes to get up and running with this project!
 
-![Product content type body](images/snipcart-gatsby-demo/product-content-type-body.png){: .center .border}
+![Product content type body](../panel/images/PredefinedCTDProductSavedAnnotation.png){: .center .border .width75}
 
 ### Create your content, 2 minutes
 
-For this project to work - you have to create a couple of products. In the left sidebar click on `Content` → `Products` and click the `Add new Product object` button.
-
-![Adding new Content Object of type Product](images/snipcart-gatsby-demo/adding-new-content-object-of-type-product.png){: .center .border}
-
-Enter the product detail.
+For this project to work - you have to create a couple of products. In the left sidebar click on `Content` → `Products` and click the `Add new Product object` button and enter the product detail.
 
 ![Product details in Flotiq](images/snipcart-gatsby-demo/product-details-in-flotiq.png){: .center .border .width50}
 

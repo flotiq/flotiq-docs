@@ -7,7 +7,9 @@ In this deep dive you will learn how easy it is to build and deploy a blog with 
 
 ## Define a Content Type
 
-First off - you will need to define how your content will be structured in Flotiq. Go to the `Content Type definitions` tab and choose [`Blog Post`](../panel/predefined-content-types.md/#blog-post).
+First off - you will need to define how your content will be structured in Flotiq. Go to the `Content Type definitions` tab and choose `Blog Post` ([read more about predefined types](../panel/predefined-content-types.md/#blog-post)).
+
+![](../panel/images/TypeDefinitionsAddButton.png){:.border .width25 .center}
 
 !!! caution
     This tutorial assumes you will follow along and use the same naming as we did. You're free to adapt this to your needs, but please mind that the code repository we provide will make use of the specific field names we defined. If you make any changes in the Content Type - you will also need to apply them later on - in the code.
@@ -16,7 +18,7 @@ This is how the Content Type Editor should look like in the end:
 
 ![](../panel/images/AddContentTypeDefinitions.png)
 
-If you're happy with the result - click the `Save` button and navigate to `Content` → `Blog Posts` in the side menu. 
+If you're happy with the result - click the `Save` button and navigate to `Content` → `Blog Post` in the side menu. 
 
 !!! hint
     At this point you can also verify the result of your work in the [Dynamic Content API](../API/dynamic-content-api.md) - head to you API docs and see how the API has automatically expanded to support your new Content Type:

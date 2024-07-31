@@ -113,10 +113,6 @@ Before we connect the React application with our backend - we need to set up the
 
       ![](images/todomvc-react-headless-cms/f9373293-8b64-4e0b-8ccd-1c72fdd40810.png){: .center .width75 .border}
 
-The end result should look like this:
-
- ![](images/todomvc-react-headless-cms/e18902f8-d6c2-460d-809d-9726811b4af4.png " =538x219"){: .center .width75 .border}
-
 Good job! At this point, your Flotiq account is ready to accept data from the application! 
 
 
@@ -200,7 +196,7 @@ The simplest way to achieve that, without breaking the reducer, is to add an API
         Did you know that Flotiq automatically publishes a set of OpenAPI-compliant endpoints for the content model you define? On top of that there is more - Postman collection, SDKs and API docs, where you can find code snippets that you can simply copy from Flotiq directly into your project!
 
         Click on the `API Docs` Link in your Flotiq dashboard: 
-        ![](images/todomvc-react-headless-cms/47208a1b-008c-454d-a89e-1594f3fa108a.png){: .center .width75 .border}
+        ![](../panel/images/ApiDocMenu.png){: .center .width25 .border}
 
         Find the endpoint that you need and copy the code. That’s what I did to build this tutorial :-)
 

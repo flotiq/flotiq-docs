@@ -24,11 +24,11 @@ A simple `Recipe` model you might find useful for a recipe website could look li
 
 For such a model - Flotiq would generate a form looking like this:
 
-![Flotiq form for a simple data model](images/jamstack-recipes-complex-data-structures/flotiq-form-simple-data-model.png){: .center .width75 .border}
+![Flotiq form for a simple data model](images/jamstack-recipes-complex-data-structures/flotiq-form-simple-data-model.png){: .center .width50 .border}
 
 and your API docs would describe that model this way:
 
-![Flotiq API docs for a simple data model](images/jamstack-recipes-complex-data-structures/flotiq-api-docs-simple-model.png){: .center .width75 .border}
+![Flotiq API docs for a simple data model](images/jamstack-recipes-complex-data-structures/flotiq-api-docs-simple-model.png){: .center .border}
 
 This model might be acceptable for very simple websites, but having the `Ingredients` and `Steps` entered as unstructured text (even if using HTML `<li>`) will soon become an issue. 
 
@@ -72,7 +72,7 @@ The problem of unstructured data can be solved using repeatable content fragment
 
 Here's how you would go about it with Flotiq's `list` data type:
 
-![Flotiq's list data type](images/jamstack-recipes-complex-data-structures/flotiq-list-data-type.png){: .center .width75 .border}
+![Flotiq's list data type](images/jamstack-recipes-complex-data-structures/flotiq-list-data-type.png){: .center .width50 .border}
 
 
 Benefits:
@@ -105,17 +105,17 @@ We can now extend the example mentioned above:
 
 Your Content Type definition in Flotiq would then look like this:
 
-![Recipe content type definition using lists](images/jamstack-recipes-complex-data-structures/recipe-content-type-definition-list.png){: .center .width75 .border}
+![Recipe content type definition using lists](images/jamstack-recipes-complex-data-structures/recipe-content-type-definition-list.png){: .center .width50 .border}
 
 and you would expect this in the API docs:
 
-![Recipe API docs showing lists](images/jamstack-recipes-complex-data-structures/recipe-api-doc-showing-lists.png){: .center .width75 .border}
+![Recipe API docs showing lists](images/jamstack-recipes-complex-data-structures/recipe-api-doc-showing-lists.png){: .center .border}
 
 > Yup, we know, we're drooling over Flotiq's API docs every time, too. And you know what? You don't need to write a line of code - the docs, just as your entire RESTful API are generated every time you change your model definitions!
 
 And this is how the form for that Content Type would render:
 
-![Flotiq form for a content object using lists](images/jamstack-recipes-complex-data-structures/recipe-object-scrambled-eggs-list.png){: .center .width75 }
+![Flotiq form for a content object using lists](images/jamstack-recipes-complex-data-structures/recipe-object-scrambled-eggs-list.png){: .center .width50 }
 
 We used the `list` datatype in this [Gatsby & Flotiq recipes starter](https://github.com/flotiq/gatsby-starter-recipes) and you can see the results [here](https://flotiq-starter-recipes.herokuapp.com/). With this data model it's now really simple for a frontend developer to interpret that content on the website.
 

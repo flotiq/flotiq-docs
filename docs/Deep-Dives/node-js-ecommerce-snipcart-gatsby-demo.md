@@ -52,7 +52,7 @@ For this project to work - you have to create a couple of products. In the left 
 
 Enter the product detail.
 
-![Product details in Flotiq](images/snipcart-gatsby-demo/product-details-in-flotiq.png){: .center .border}
+![Product details in Flotiq](images/snipcart-gatsby-demo/product-details-in-flotiq.png){: .center .border .width50}
 
 You can upload your images or use our awesome Unsplash integration - head over to the `Stock photos` tab in the Media Library and browse through thousands of beautiful images.
 

@@ -7,27 +7,12 @@ In this deep dive you will learn how easy it is to build and deploy a blog with 
 
 ## Define a Content Type
 
-First off - you will need to define how your content will be structured in Flotiq. Open the `Type definitions` menu and click on `Add Definition`.
+First off - you will need to define how your content will be structured in Flotiq. Go to the `Content Type definitions` tab and choose [`Blog Post`](../panel/predefined-content-types.md/#blog-post).
 
 !!! caution
     This tutorial assumes you will follow along and use the same naming as we did. You're free to adapt this to your needs, but please mind that the code repository we provide will make use of the specific field names we defined. If you make any changes in the Content Type - you will also need to apply them later on - in the code.
 
-We labeled the new Content Type `Blog Post` and gave it an API name `blogpost`. Once you do that - you'll have to add the properties that will be defined for each of the entries. The `Add property` button will open a form, where you will define the characteristics of each of the fields (like if it's required, what kind of a field it is, etc.):
-
-![](../panel/images/AddContentTypeDefinitionsTitle.png)
-
-
-Here are the details of the fields we added for this tutorial:
-
-| Field name | Field type | Additional attributes | Comments |
-|------------|------------|-----------------------|----------|
-| title | Text | Required, Part of object title | Title of your post |
-| slug | Text | Required, Unique | URL of the post |
-| content | Richtext | Required | The post itself |
-| excerpt | Text area | Required | Short post description |
-| headerImage | Relation | Restrict to type: Media | Main image of the post |
-
-and this is how the Content Type Editor should look like in the end:
+This is how the Content Type Editor should look like in the end:
 
 ![](../panel/images/AddContentTypeDefinitions.png)
 
@@ -52,7 +37,7 @@ If you're happy with the result - click the `Save` button and navigate to `Conte
 
 It's now time to write your first post! The first time you go to the `Blog Posts` item in the `Content` menu you will be prompted with a screen encouraging to create your first Content Object, go ahead and click the `Add new Blog Post object` button. You will see an empty form that is automatically generated based on the Content Type Definition you provided in the previous step. Fill it in, however you like!
 
-![](../panel/images/AddBlogPost.png){: .border }
+![](images/building-a-blog-in-3-minutes/3-minute-blog-example-data.png){: .border .width50 .center}
 
 That's it. Now make sure you have your [read-only API key](../API/index.md) in your clipboard!
 

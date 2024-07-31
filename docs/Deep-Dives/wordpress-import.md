@@ -18,7 +18,7 @@ Go to Tools → Export in the main Wordpress menu
 
 in the Export view - accept the defaults and press the `Download Export File` button
 
-![](images/wordpress-export.png)
+![](images/wordpress-export.png){: .center}
 
 save the file and remember the path.
 
@@ -26,7 +26,7 @@ save the file and remember the path.
 
 You now have to create a Content Type Definition in Flotiq, and this is how you describe the kind of content you will be storing in the system. For a simple blog, you can use the template that we prepared, or go to the Content Type Editor and create a Content Type like the following:
 
-![](images/blogpost-content-type.png)
+![](images/blogpost-content-type.png){: .center .width50 .border}
 
 ## Download the SDK
 

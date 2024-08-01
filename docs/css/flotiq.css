@@ -94,6 +94,12 @@ header.md-header {
   gap: 0.5rem
 }
 
+.inline-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 768px) {
 .width25 {
     width:25%;

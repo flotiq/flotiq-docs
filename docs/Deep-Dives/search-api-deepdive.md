@@ -70,6 +70,7 @@ Simply add `aggregate_by[]=value` parameter to populate the `summary` object in 
 ![](images/searchapi/aggregate.gif)
 
 The part of response that is interesting us in this case looks like in image below:
+
 ![](images/searchapi/summaryres.png)
 
 

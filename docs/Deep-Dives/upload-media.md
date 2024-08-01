@@ -4,7 +4,7 @@ Media streaming support is an essential part of many applications. Regardless of
 
 In addition to the theory and simple examples, you will see how to upload media from the camera to Flotiq in several lines of simple code.
 
-![Upload media with Flotiq - example app](images/upload-media/example-app.jpg){: .center .border .width75}
+![Upload media with Flotiq - example app](images/upload-media/example-app.png){: .center .border .width75}
 
 ## File upload - Flotiq API assumptions
 

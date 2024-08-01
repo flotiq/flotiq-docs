@@ -48,10 +48,7 @@ Hit Save and you can start adding new Rotators!
 
 It's always recommended to use a scoped API key - that way access to content is restricted to specific Content Types and even if you add new data models in the future - your data will be safe.In our case - we will need access to 2 Content Types - `Rotator` and `Media`, so let's add a key for that purpose.
 
-<div markdown=1 class="inline-flex width75 center">
-<div markdown=1>![](../API/images/api-keys-menu.png)</div>
-<div markdown=1>![](images/building-a-banner-rotator/flotiq-api-keys.png)</div>
-</div>
+![](images/building-a-banner-rotator/flotiq-api-keys.png){: .border}
 
 ## 3. Build the rotator script
 

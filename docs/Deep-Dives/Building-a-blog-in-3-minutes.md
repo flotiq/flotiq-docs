@@ -7,7 +7,7 @@ In this deep dive you will learn how easy it is to build and deploy a blog with 
 
 ## Define a Content Type
 
-First off - you will need to define how your content will be structured in Flotiq. Go to the `Content Type definitions` tab and choose `Blog Post` ([read more about predefined types](../panel/predefined-content-types.md/#blog-post)).
+First off - you will need to define how your content will be structured in Flotiq. For this particular project you will need our predefined `Blog Post` type ([read more about predefined types](../panel/predefined-content-types.md/#blog-post)). Go to the `Content Type definitions` tab and choose `Blog Post` .
 
 ![](../panel/images/TypeDefinitionsAddButton.png){:.border .width25 .center}
 

@@ -4,7 +4,8 @@ description: How to manage User Roles in Flotiq.
 # User Roles
 
 !!! note
-    Flotiq user roles can be customized in the enterprise version only.
+    Predefined user roles are available starting from the Basic plan and above.
+    Custom Flotiq user roles can be customized in the enterprise version only.
     Reach out to us to discuss possible implementation.
 
 ## What is a User Role?
@@ -17,10 +18,45 @@ The actions that can you determine are:
 3. Update: Grants permission for users to make changes to existing content.
 4. Delete: Provides authority for removing content.
 
-User role allows you to resctrit the actions for specific Content Type Definition or Content Type Objects.
+User role allows you to restrict the actions for specific Content Type Definition or Content Type Objects.
 
 !!! note
     Managing user roles is available only for `Organization Admin`. It’s important to note that a user without any assigned role has unrestricted access to all resources.
+
+## Predefined User Roles
+
+In Flotiq, predefined user roles streamline the management of user permissions, ensuring that users can perform only the actions their roles permit. These roles cover typical organizational needs, and customization is available in the enterprise version.
+
+!!! warning
+    Users without any assigned role have unrestricted access.
+
+!!! note
+    Predefined roles can be modified in the enterprise version.
+
+### Available Predefined Roles
+
+#### **Admin**
+
+- **Description**: Full access to all resources.
+- **Permissions**:
+    - **CO**: Read, create, update, delete.
+    - **CTD**: Read, create, update, delete.
+
+#### **Content Editor**
+
+- **Description**: Manages and edits content.
+- **Permissions**:
+    - **CO**: Read, create, update, delete.
+    - **CTD**: Read.
+
+#### **Viewer**
+
+- **Description**: Limited to viewing content.
+- **Permissions**:
+    - **CO**: Read.
+    - **CTD**: Read.
+
+These predefined roles help control user actions and maintain system security. For custom permissions, please contact our support team.
 
 ## List User Roles
 
@@ -85,4 +121,3 @@ We grant users permission to perform any action with any Content Type Definition
 Outcome for the user with the assigned role:
 
 ![](images/user-roles/ctds_role_effect.png)
-

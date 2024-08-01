@@ -127,7 +127,7 @@ HTTP 400:
 
 In order to create a sync webhook you can follow the same process as for async ones, just pick the "Synchronous" type. Other options can be selected just as for async.
 
-![](../images/webhooks-lifecycle/WebhooksLifecycle.png){: .center .border}
+![](../images/webhooks-lifecycle/WebhooksLifecycle.png){: .center .width75 .center .border}
 
 Once this is configured - the payload will be sent to an external system and the sync webhook process will be triggered.
 

@@ -44,7 +44,7 @@ Custom workflows can be defined in Flotiq, for example a simple editorial workfl
 
 with the following possible transitions
 
-![](./images/publishing-workflow.svg)
+![](./images/publishing-workflow.svg){: .center}
 
 can be used to help teams curate content, manage publication and archiving of content.
 

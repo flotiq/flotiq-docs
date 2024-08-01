@@ -102,15 +102,14 @@ The essential environment variable needed for every Gatsby project is **GATSBY_F
 
 For example, if you're using the [Gatsby and Snipcart starter](https://github.com/flotiq/gatsby-starter-products) you will also provide the Snipcart API key. The project Readme always describes the needed variables.
 
-To obtain the Flotiq API key - go to your Flotiq account and click your profile icon in the sidebar and go to [API keys](https://editor.flotiq.com/api-keys):
+To obtain the Flotiq API key - in your Flotiq account, click `API keys` in the sidebar:
 
-
- ![](images/flotiq-api-keys-button.png){: .center .width25 .border}
+ ![](../../API/images/api-keys-menu.png){: .center .width25 .border}
 
 
 You can either select the application-wide read-only key:
 
- ![](images/flotiq-api-keys-gui.png){: .center .width75 .border}
+ ![](../../API/images/api-keys_1.png){: .center .width75 .border}
 
 
 Or, as a safer option, create a scoped read-only API key that will only be used for the Vercel build. Read more about [Flotiq API access](https://flotiq.com/docs/API/).

@@ -31,7 +31,7 @@ In the [Flotiq](https://editor.flotiq.com) dashboard:
 1. Go to the `Webhooks` page and click `Add new webhook`.
 2. Name the webhook (e.g. `Gatsby Preview`) and paste obtained `Preview` URL as a webhook `URL`.
 3. As a trigger, choose `Create`, `Update` and `Delete` actions on the `Product` and save the webhook:
-   ![](../images/webhooks/examples/gatsby/gatsby-cloud-2.png){: .border .mt5}
+   ![](../images/webhooks/examples/gatsby/gatsby-cloud-2.png){: .border .width75 .center .mt5}
 
 ### Check the result
 
@@ -42,7 +42,7 @@ After the `Create`, `Update`, `Delete` action on the `Product`, Gatsby Cloud Pre
 ## 2. Trigger a Gatsby production build when a Build production button was clicked
 
 Prerequisites:
-We assume, that you have `Product` Content Type Definition in Flotiq.
+We assume, that you have `Blog Post` Content Type Definition in Flotiq.
 
 In the [Gatsby Cloud](https://www.gatsbyjs.com/dashboard) dashboard:
 
@@ -54,12 +54,12 @@ In the [Flotiq](https://editor.flotiq.com) dashboard:
 
 1. Go to the `Webhooks` page and click `Add new webhook`.
 2. Name the webhook (e.g. `Gatsby Build Production`) and paste obtained `Builds` URL as a webhook `URL`.
-3. As a trigger, choose `Custom` action on the `Product` and save the webhook:
-   ![](../images/webhooks/examples/gatsby/gatsby-cloud-3.png){: .border .mt5}
+3. As a trigger, choose `Custom` action on the `Blog Post` and save the webhook:
+   ![](../images/webhooks/examples/gatsby/gatsby-cloud-3.png){: .border .width75 .center .mt5}
 
 ### Check the result
 
-Now, the `Gatsby Build Production` webhook button will be available in the Edit `Product` form.
+Now, the `Gatsby Build Production` webhook button will be available in the Edit `Blog Post` form.
 
 ![](../images/webhooks/examples/gatsby/gatsby-cloud-4.png){: .border}
 
@@ -70,7 +70,7 @@ After clicking the `Gatsby Build Production` button in Flotiq, the Gatsby Produc
 ## 3. Trigger a Netlify build when a Build site button was clicked
 
 Prerequisites:
-We assume, that you have `Product` Content Type Definition in Flotiq.
+We assume, that you have `Blog Post` Content Type Definition in Flotiq.
 
 In the [Netlify](https://app.netlify.com/) dashboard:
 
@@ -84,23 +84,23 @@ In the [Netlify](https://app.netlify.com/) dashboard:
 In the [Flotiq](https://editor.flotiq.com) dashboard:
 
 1. Go to the `Webhooks` page and click `Add new webhook`.
-2. Name the webhook (e.g. `Build Site`) and paste obtained URL as a webhook `URL`.
-3. As a trigger, choose `Custom` action on the `Product` and save the webhook:
+2. Name the webhook (e.g. `Netlify Build`) and paste obtained URL as a webhook `URL`.
+3. As a trigger, choose `Custom` action on the `Blog Post` and save the webhook:
 
-   ![](../images/webhooks/examples/netlify/netlify-hook-3.png){: .border}
+   ![](../images/webhooks/examples/netlify/netlify-hook-3.png){: .border .width75 .center}
 
 ### Check the result
 
-Now, the `Build Site` webhook button will be available in the Edit `Product` form:
+Now, the `Netlify Build` webhook button will be available in the Edit `Blog Post` form:
 
 ![](../images/webhooks/examples/netlify/netlify-hook-4.png){: .border}
 
-After clicking the `Build Site` button in Flotiq, the Netlify build will be triggered:
+After clicking the `Netlify Build` button in Flotiq, the Netlify build will be triggered:
 
 ![](../images/webhooks/examples/netlify/netlify-hook-5.png){: .border}
 
 !!! Note
-    Choosing actions `Create`, `Update`, `Delete`, the build will be triggered automatically. The button `Build Site` is visible only when you choose a `Custom` trigger.
+    Choosing actions `Create`, `Update`, `Delete`, the build will be triggered automatically. The button `Netlify Build` is visible only when you choose a `Custom` trigger.
 
 ## 4. Send a RocketChat notification when the contact form was submitted.
 
@@ -133,16 +133,16 @@ In the RocketChat dashboard:
 In the [Flotiq](https://editor.flotiq.com) dashboard:
 
 1. Go to the `Webhooks` page and click `Add new webhook`.
-2. Name the webhook (e.g. `Chat Notification`) and paste obtained `Webhook URL` as a webhook `URL`.
-3. As a trigger, choose `Create` action on the `Contact form` and save the webhook:
-   ![](../images/webhooks/examples/rocket/rocket-2.png){: .border .mt5}
+2. Name the webhook (e.g. `Chat notification`) and paste obtained `Webhook URL` as a webhook `URL`.
+3. As a trigger, choose `Create` action on the `Contact Form` and save the webhook:
+   ![](../images/webhooks/examples/rocket/rocket-2.png){: .border .width75 .center .mt5}
 
 !!! Note
     As the next step, we recommend creating the Contact Form with [Flotiq Forms](https://flotiq.com/docs/panel/flotiq-forms-add-forms-to-websites/). It is an easy-to-use form generator, that adds customer input directly to your Content Objects.
 
 ### Check the result
 
-After the `Create` action on the `Contact form` (or submitting Contact Form based on [Flotiq Forms](https://flotiq.com/docs/panel/flotiq-forms-add-forms-to-websites/)) the RocketChat notification will be triggered:
+After the `Create` action on the `Contact Form` (or submitting Contact Form based on [Flotiq Forms](https://flotiq.com/docs/panel/flotiq-forms-add-forms-to-websites/)) the RocketChat notification will be triggered:
 
 ![](../images/webhooks/examples/rocket/rocket-3.png){: .border}
 
@@ -157,7 +157,7 @@ To integrate Flotiq Webhooks and AWS Lambda follow the steps below:
 3. In the [Flotiq](https://editor.flotiq.com) dashboard go to the `Webhooks` page and click `Add new webhook`
 4. Name the webhook (e.g. `Notify AWS Lambda`) and paste obtained `endpoint` URL as a webhook `URL`. 
 5. As a trigger, choose `Create`, `Update` and `Delete` action on the multiple Content Types:
-   ![](../images/webhooks/examples/aws-lambda/webhook-aws-2.png){: .border .mt5}
+   ![](../images/webhooks/examples/aws-lambda/webhook-aws-2.png){: .border .width75 .center .mt5}
 
 ### Check the result
 

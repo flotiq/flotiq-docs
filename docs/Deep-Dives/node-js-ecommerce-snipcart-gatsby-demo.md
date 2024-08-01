@@ -35,7 +35,7 @@ The most crucial step - you have to tell Flotiq what kind of data you want to st
 
 When you first log in - it's going to be pretty empty. No content, nothing. Head over to the `Type definitions` screen.
 
-![Predefined Content Type Definitions](images/snipcart-gatsby-demo/predefined-content-type-definitions.png){: .center .border}
+![Predefined Content Type Definitions](../panel/images/TypeDefinitionsTiles.png){: .center .width75 .border}
 
 
 Here you find a list of simple boilerplate content types, which are a great start if you're in a hurry. 
@@ -92,7 +92,7 @@ SNIPCART_API_KEY="YOUR SNIPCART API KEY"
 
 You can find your Flotiq API keys in `API Keys` section:
 
-![Flotiq user API key](images/snipcart-gatsby-demo/flotiq-user-api-key.png){: .border}
+![Flotiq user API key](../API/images/api-keys-menu.png){: .border .width25 .center}
 
 !!! caution
     We strongly recommend that you create a scoped API key (read more about [API access](../API/index.md)), but for development, you can use the default Read Only key provided in the interface. 

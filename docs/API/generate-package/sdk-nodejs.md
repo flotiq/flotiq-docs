@@ -7,7 +7,7 @@ description: Flotiq provides SDK NodeJS to access your Content.
 
 On your Flotiq dashboard, you can find link to download client library SDK NodeJS.
 
-![Available frameworks and languages](../images/frameworkslogos-nodejs.png)
+![Available frameworks and languages](../images/frameworkslogos-nodejs.png){: .width25 .center .border}
 
 These package is automatically generated every time you modify your Content Type definitions, just like your API documentation.
 

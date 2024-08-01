@@ -44,10 +44,10 @@ Webhooks are useful if you want to **extend the system functionality** or **inte
 
 To create a Webhook, click on the main menu `Webhooks` -> `Add new Webhook`.
 
-![](../images/webhooks/co-webhook-create.png){: .border}
+![](../images/webhooks/co-webhook-create.png){: .border .width75 .center}
 
 !!! Note
-    `Async Content Object Changes` webhook `type` is default option, you don't have to worry about setting proper type    
+    `Content Object Changes Asynchronous (non blocking)` webhook `type` is default option, you don't have to worry about setting proper type    
 
 !!! Note
     The above configuration means: Send a POST request to `https://my-example-app.com/notify` with an `AUTH` header of `secret_token` when the new `product` in Flotiq was `created`.
@@ -106,7 +106,7 @@ Webhooks with a `Custom` action assigned can be launched manually, at any time, 
 Additionally, if the object is not saved, the execute webhook button will save the object.
 The custom action is not possible to be performed from the API level.
 
-![](../images/webhooks/webhooks-custom-hook.png){: .border }
+![](../images/webhooks/examples/gatsby/gatsby-cloud-4.png){: .border }
 
 
 ### Webhooks payload

@@ -8,7 +8,7 @@ Custom tile opens empty CTD.
 
 If you already have at least one CTD, you can use the dropdown menu on the top right corner to add more predefined CTDs.
 
-![](images/TypeDefinitionsAddButton.png){: .center .border}
+![](images/TypeDefinitionsAddButton.png){: .center .width25 .border}
 
 ## Blog Post
 
@@ -22,7 +22,7 @@ Type for storing simple blog posts. It contains properties storing title, slug, 
 | thumbnail   | Relation   | Restrict to type: Media        | Thumbnail image                    |
 | headerImage | Relation   | Restrict to type: Media        | Main image of the post             |
 
-![](../Deep-Dives/images/3-minute-blog-content-type-all-fields.png){: .center .width75 .border}
+![](images/AddContentTypeDefinitions.png){: .border}
 
 Full schema for the Blog Post type:
 

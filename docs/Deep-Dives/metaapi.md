@@ -37,7 +37,7 @@ In our example, we use [predefined Product CTD](https://flotiq.com/docs/panel/pr
     If you are new to Flotiq, check the [Dashboard > Content Types](https://flotiq.com/docs/panel/content-types/)
     section in the docs
 
-![Product Content Type Definition in Flotiq](images/metaapi/meta-flotiq-1.png){: .border}
+![Product Content Type Definition in Flotiq](images/metaapi/meta-flotiq-1.png){: .border .width50 .center}
 
 Now it's time to add some example data. 
 As we are creative, we will add more sophisticated data than "Lorem ipsum" ;)
@@ -50,7 +50,7 @@ As we are creative, we will add more sophisticated data than "Lorem ipsum" ;)
 This is a crucial step in Flotiq. 
 Let's open your `API Doc` and download `OpenAPI Specification`.
 
-![Link to your personal API Doc](images/metaapi/meta-flotiq-3.png){: .border}
+![Link to your personal API Doc](../panel/images/ApiDocMenu.png){: .border .width25 .center}
 
 ![Download OpenAPI Specification button](images/metaapi/meta-flotiq-4.png){: .border}
 

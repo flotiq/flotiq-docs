@@ -21,7 +21,7 @@ In this short article we will show how to setup a Flotiq content type and use yo
 
 Start with a simple content type, for example one that represents a Hero section in your website.
 
- ![Content type definition for a Hero section component](images/nextjs-react-typescript-openapi/ctd-preview.png){: .center .border}
+ ![Content type definition for a Hero section component](images/nextjs-react-typescript-openapi/ctd-preview.png){: .center .border .width75}
 
 once you create the content type definition - go ahead and add some objects too.
 

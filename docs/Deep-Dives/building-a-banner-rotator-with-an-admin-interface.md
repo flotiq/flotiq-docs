@@ -40,7 +40,7 @@ Here are the properties we will require:
 
 after adding that into a new Flotiq Content Type you should see the following:
 
-![The Rotator Content Type Definition in Flotiq](images/building-a-banner-rotator/rotator-content-type-definition-flotiq.png){: .center .border .width75}
+![The Rotator Content Type Definition in Flotiq](images/building-a-banner-rotator/rotator-content-type-definition-flotiq.png){: .center .border .width50}
 
 Hit Save and you can start adding new Rotators!
 
@@ -48,7 +48,7 @@ Hit Save and you can start adding new Rotators!
 
 It's always recommended to use a scoped API key - that way access to content is restricted to specific Content Types and even if you add new data models in the future - your data will be safe.In our case - we will need access to 2 Content Types - `Rotator` and `Media`, so let's add a key for that purpose.
 
-![Flotiq scoped API Keys](images/building-a-banner-rotator/flotiq-api-keys.png){: .center .border .width75}
+![](images/building-a-banner-rotator/flotiq-api-keys.png){: .border}
 
 ## 3. Build the rotator script
 

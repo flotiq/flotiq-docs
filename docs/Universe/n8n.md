@@ -34,6 +34,8 @@ For the integration, it’s necessary to establish a Content Type Definition for
 
 This Content Type Definition can be set up either through the [Flotiq Dashbord](https://flotiq.com/docs/panel/content-types/){target="_blank"} or by utilizing the [API](https://flotiq.com/docs/API/content-type/creating-ctd/){target="_blank"}.
 
+![](images/n8n/add-email-ctd.png){: .border .width50 .center}
+
 ??? "To use the API, you can make a POST request with the following schema:"
     ```json
     {
@@ -113,7 +115,7 @@ This Content Type Definition can be set up either through the [Flotiq Dashbord](
 
 To store received emails, it’s advisable to use a dedicated API key for the specific Content Type. Navigate to the `API keys` page and create a new API key. Assign a descriptive name to the new key, choose the email content type, enable the `create` action, and submit the form. If you cannot or prefer not to add a defined API key, you can use the read-write API key.
 
-![](images/n8n/defined_key.png){: .center .width75 .border}
+![](images/n8n/defined_key.png){: .border}
 
 ### Setting up n8n
 
@@ -213,6 +215,8 @@ Here are the final steps to complete the integration:
     * Click on the webhook node in n8n.
     * Copy the `Production URL` provided by n8n.
     * Replace the existing URL in the defined webhook for email creation in Flotiq with this new `Production URL`.
+
+    ![](images/n8n/flotiq_prod_webhook.png){: .border .width50 .center}
 
 2. Activate Workflow:
 

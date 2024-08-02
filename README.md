@@ -74,7 +74,3 @@ You can also add an alias to any existing page by dyfining it in the meta sectio
 ```md
 <!-- Start of the markdown file -->
 alias: some-example-alias
-
-# Example page
-...
-```

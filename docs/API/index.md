@@ -189,7 +189,7 @@ Or an example queries with `X-AUTH-TOKEN` header:
 
 ### What can I do if my API key got compromised?
 
-If you accidentally committed your `.env` file to a public repository or in any other way shared your key publicly - you can regenerate the key using the ![](images/regenerate_button.png){: style="margin-bottom: -7px;"} button.
+If you accidentally committed your `.env` file to a public repository or in any other way shared your key publicly - you can regenerate the key using the ![](images/regenerate_button.png){: style="margin-bottom: -7px; height:1.5em"} button.
 
 ### How can I provide read-only access to a single kind of data?
 

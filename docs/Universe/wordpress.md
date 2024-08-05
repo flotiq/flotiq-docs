@@ -25,13 +25,13 @@ Your data will remain private. The plugin does not affect your data stored in Wo
 
 Now your existing data will be synchronized to your Flotiq account.
 
-![](images/wordpress/screenshot-3.png){: .center .width75 .border}
+![](../CLI/images/wordpress-posts.png){: .center .width75 .border}
 
 ## Which data will be synchronized?
 
 We support the following types of content: posts, pages, media, tags, categories, authors.
 
-![](images/wordpress/screenshot-2.png){: .center .width75 .border}
+![](../CLI/images/wordpress-content-types.png){: .center .width75 .border}
 
 ## Plugin details
 

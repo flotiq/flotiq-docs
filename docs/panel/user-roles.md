@@ -4,8 +4,8 @@ description: How to manage User Roles in Flotiq.
 # User Roles
 
 !!! note
-    Predefined user roles are available starting from the Basic plan and above.
-    Custom Flotiq user roles can be customized in the Growth plan and above.
+    Predefined user roles are available starting from the << plan_names.paid_1 >> plan and above.
+    Custom Flotiq user roles can be customized in the << plan_names.paid_2 >> plan and above.
 
 ## What is a User Role?
 
@@ -30,7 +30,7 @@ In Flotiq, predefined user roles streamline the management of user permissions, 
     Users without any assigned role have unrestricted access.
 
 !!! note
-    Predefined roles can be modified in the Growth plan and above
+    Predefined roles can be modified in the << plan_names.paid_2 >> plan and above
 
 ### Available Predefined Roles
 
@@ -74,7 +74,7 @@ To manage user roles, navigate to the dedicated **User Roles** section within th
 ## Custom User Roles
 
 !!! note
-    Custom Flotiq user roles are available starting from the Growth plan and above.
+    Custom Flotiq user roles are available starting from the << plan_names.paid_2 >> plan and above.
 
 ### Add User Role
 

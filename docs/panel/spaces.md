@@ -19,7 +19,7 @@ Space groups content of the Organization such as: `Content Objects`, `Content Ty
     This is what the content of an example Space for the "News Site" project might look like. Notice which elements belong to this specific Space:
 
     - **Name**: News Site Space
-    - **Plan**: PRO
+    - **Plan**: << plan_names.paid_2 >>
     - **Content Type Definitions**: Media, News, Category, Author, Comments
     - **API Keys**: ReadOnly, ReadWrite, ReadNews, PostComment
     - **Enabled Plugins**: Netlify Build

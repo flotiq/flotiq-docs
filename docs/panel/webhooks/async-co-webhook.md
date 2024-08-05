@@ -179,8 +179,8 @@ There are no limits in the webhooks execution count. In this situation, you shou
 ### Are there any additional costs for making webhook requests?
 No, there are no additional costs for executing the webhook.
 
-### How many webhooks I can create in the Free plan?
-In the Free plan, you can add 5 webhook definitions.
+### How many webhooks I can create in the << plan_names.free >> plan?
+In the << plan_names.free >> plan, you can add 5 webhook definitions.
 
 ### What is the IP range of webhook calls?
 The webhooks will be executed from the `us-east-1` region of AWS. For the actual IP ranges check [AWS docs](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) or the [JSON file](https://ip-ranges.amazonaws.com/ip-ranges.json).

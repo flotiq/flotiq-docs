@@ -4,7 +4,7 @@ description: How to use hosted webhooks in Flotiq
 # Hosted Webhooks
 
 !!! Note
-    Hosted Sync Webhooks are available starting from the Basic plan and above. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
+    Hosted Sync Webhooks are available starting from the << plan_names.paid_1 >> plan and above. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
 
 ## What are Hosted Webhooks?
 

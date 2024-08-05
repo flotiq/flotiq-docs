@@ -72,7 +72,7 @@ This list is quite a bit shorter as not all solutions have out-of-the-box suppor
 
 Depending on what you’re trying to achieve - one type might work better than the other. 
 
-If you’re trying to optimize the cost - it’s still possible to keep a website running for free using a static site generator like Gatsby and a free tier of Flotiq, but you will have to use 3rd party solutions for any non-static behavior (for example - handling payments through Snipcart, processing forms with Flotiq Forms, etc.). With a statically generated site your content is uploaded to a cloud-based file hosting service of your choice during the deployment and that is the only time when you use your Flotiq quotas.
+If you’re trying to optimize the cost - it’s still possible to keep a website running for free using a static site generator like Gatsby and a << plan_names.free >> tier of Flotiq, but you will have to use 3rd party solutions for any non-static behavior (for example - handling payments through Snipcart, processing forms with Flotiq Forms, etc.). With a statically generated site your content is uploaded to a cloud-based file hosting service of your choice during the deployment and that is the only time when you use your Flotiq quotas.
 
 If you’re looking for greater flexibility and you can accept the additional cost and complexity related to hosting your web application - you can choose one of the technologies supporting this, like Next.JS or Symfony. In this case - your website traffic will be proportional to the usage of your Flotiq quotas.
 

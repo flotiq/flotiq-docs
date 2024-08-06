@@ -21,7 +21,7 @@ When we’re building web applications, we always hit the problem of storing dat
 
 1. Basic JavaScript knowledge
 2. Interest in React :)
-3. Headless CMS account, we will use [Flotiq headless CMS for React](https://flotiq.com) (a free account will be just fine)
+3. Headless CMS account, we will use [Flotiq headless CMS for React](https://flotiq.com) (a << plan_names.free >> subscription will be just fine)
 
 ## TodoMVC
 

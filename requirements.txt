@@ -5,3 +5,4 @@ mkdocs-git-revision-date-localized-plugin
 mkdocs-include-dir-to-nav
 mkdocs-glightbox
 mkdocs-alias-plugin
+mkdocs-markdownextradata-plugin

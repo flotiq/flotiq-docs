@@ -259,7 +259,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
     === "413 Request Entity Too Large"
 
-        Returned when the size of the object exceeds the limit allowed in Flotiq (1MB, except Enterprise)
+        Returned when the size of the object exceeds the limit allowed in Flotiq (1MB, except << plan_names.paid_3 >> plan)
 
         ```
         {
@@ -1138,4 +1138,4 @@ Response parameters:
 
 
 [^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
-[^2]: Limit can be changed in the [enterprise plan](https://flotiq.com/pricing){:target="_blank"}
+[^2]: Limit can be changed in the [<< plan_names.paid_3 >> plan](https://flotiq.com/pricing){:target="_blank"}

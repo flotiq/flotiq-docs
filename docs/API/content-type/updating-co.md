@@ -254,7 +254,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         
     === "413 Request Entity Too Large"
 
-        Returned when the size of the object exceeds the limit allowed in Flotiq (1MB, except Enterprise)
+        Returned when the size of the object exceeds the limit allowed in Flotiq (1MB, except << plan_names.paid_3 >> plan)
 
         ```
         {

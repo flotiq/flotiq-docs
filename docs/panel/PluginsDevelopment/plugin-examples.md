@@ -59,7 +59,6 @@ FlotiqPlugins.add(
         // Style panel to look a bit better.
         div.style.background = `white`;
         div.style.padding = `1rem`;
-        div.style.margin = '0 0 2rem 0';
         div.style.borderRadius = '1rem';
         div.style.textAlign = 'center';
 

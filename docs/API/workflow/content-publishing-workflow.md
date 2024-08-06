@@ -4,7 +4,7 @@ description: Flotiq support for custom workflows helps teams collaborate and pro
 # Flotiq workflows
 
 !!! note
-    Flotiq workflows can be customized in enterprise version only.
+    Flotiq workflows can be customized only in the << plan_names.paid_3 >> plan.
     Reach out to us to discuss possible implementation.
 
 Workflows are a powerful feature that helps teams collaborate and produce quality content.

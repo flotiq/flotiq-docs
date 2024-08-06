@@ -47,6 +47,10 @@ plugins:
       file_pattern: '\d.*\.md$'
   - git-revision-date-localized:
       fallback_to_build_date: true
+  - markdownextradata:
+      jinja_options:
+        variable_start_string: "<<"
+        variable_end_string: ">>"
 
 extra_css:
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
@@ -104,6 +108,11 @@ extra:
       link: https://github.com/flotiq
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/flotiq/
+  plan_names: 
+    free: 'Free'
+    paid_1: 'Basic'
+    paid_2: 'Growth'
+    paid_3: 'Custom'
 
 
 nav:

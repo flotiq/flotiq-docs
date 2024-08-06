@@ -111,7 +111,7 @@ The code in the repository uses a login screen to authenticate with your API key
     import authReducer from './app/store/reducers/auth';
 
     // Add this line after imports:
-    AsyncStorage.setItem('flotiqApiKey', '<< YOUR FLOTIQ READ-ONLY API KEY HERE >>');
+    AsyncStorage.setItem('flotiqApiKey', '< YOUR FLOTIQ READ-ONLY API KEY HERE >');
 
     enableScreens();
     ```

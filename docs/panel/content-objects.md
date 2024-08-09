@@ -346,5 +346,23 @@ The form view also displays information about previous versions of a particular 
 From this view, you can also switch to older revisions.
 To save older revisions, click on the version tile and click the `Save` button.
 
+## Mass edit
+
+You can edit multiple object at the same time. To do that you need to select needed objects in grid and then click
+`Mass edit selected` button that appears at the bottom of the grid.
+
+![](images/blogpost-grid-mass-edit.png){: .center .width50 .border}
+
+You can change fields that are not read only and are not unique (unless you edit only one object using mass edit).
+
+To edit particular field you need to turn on `Edit field` switch on the left of that field,
+the field will become enabled. If you insert data in the field, but turn off the switch, the data will not be saved.
+
+![](images/blogpost-mass-edit.png){: .center .width75 .border}
+
+To accept the changes click `Save changes` button in the modal.
+If all the data are correct the modal will disappear and toast with number of updated object will appear.
+If something was wrong the errors will appear in modal nest to fields that are incorrect.
+
 [^1]: The number of available Content Objects depends on the chosen subscription plan.
 Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

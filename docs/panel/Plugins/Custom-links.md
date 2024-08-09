@@ -34,7 +34,7 @@ Next, fill in the details and click `Save changes` to complete your plugin setup
 
 You're done. Now you will see `Example page` in Content Objects forms with `http://example.com/` link.
 
-![Custom links button in Flotiq editor](images/custom-links/simple-link-co-form.png){: .center .width100 .border}
+![Custom links button in Flotiq editor](images/custom-links/simple-link-co-form.png){: .center .width75 .border}
 
 
 ## Examples
@@ -47,9 +47,9 @@ One of the most common use cases for using this plugin is to add a direct link t
 
 if you use this configuration with an object similar to this
 
-![Content object with category and slug](images/custom-links/simple-routing-co-form.png){: .center .width100 .border}
+![Content object with category and slug](images/custom-links/simple-routing-co-form.png){: .center .width75 .border}
 
-you will see the `first-page` link that will lead you to `https://my-blog/post/first-page`.
+you will see the `green-plant` link that will lead you to `https://my-product.com/product/green-plant`.
 
 ### Creating links to pages using complex routing
 
@@ -59,6 +59,6 @@ Here's a bit more complex example, where the page routing requires to provide a 
 
 if you use this configuration with an object similar to this
 
-![Content object with category and slug](images/custom-links/complex-routing-co-form.png){: .center .width100 .border}
+![Content object with category and slug](images/custom-links/complex-routing-co-form.png){: .center .width75 .border}
 
-you will see a preview link that will lead you to `https://my-site.com/office/best-office-chair`.
+you will see a preview link that will lead you to `https://my-site.com/green-plant/15`.

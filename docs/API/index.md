@@ -53,7 +53,11 @@ You can authenticate your requests by `X-AUTH-TOKEN` header, or by the query par
 
 An example query request with endpoint:
 
-`https://api.flotiq.com/api/v1/content/your_content_name?auth_token=YOUR_AUTH_TOKEN`:
+!!! Example
+    <pre class="h-3em">
+    <code class="hljs plaintext">https://api.flotiq.com/api/v1/content/your_content_name?auth_token=YOUR_AUTH_TOKEN
+    </code>
+    </pre>
 
 Or an example queries with `X-AUTH-TOKEN` header:
 

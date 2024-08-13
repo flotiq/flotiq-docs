@@ -256,6 +256,10 @@ pre::before {
   border: 0;
 }
 
+.h-3em {
+  height: 3em;
+}
+
 .flotiq-form .mat-fab.mat-primary, .flotiq-form .mat-flat-button.mat-primary, .flotiq-form .mat-mini-fab.mat-primary, .flotiq-form .mat-raised-button.mat-primary[type="submit"] {
   background-color: #0083FC;
 }

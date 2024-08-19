@@ -37,33 +37,23 @@ cd flotiq-component-demo
 
 Read more about [create-next-app here](https://nextjs.org/docs/api-reference/create-next-app).
 
-## Export Flotiq API and build the API package
-
-When the Next.js project is already up and running you will now connect it to your Flotiq API. Start by exporting the API definition into a file. You will need your read-only API key to do this - [here’s how to get it](https://flotiq.com/docs/API/?h=api+key#application-api-keys).
+## Flotiq Codegen TS 
+This package simplifies Typescript Fetch API integration for your Flotiq project, tailored to your Flotiq account data.
+To build your customized API package, just run this command:
 
 ```bash
-export FLOTIQ_RO_API_KEY=<YOUR_RO_API_KEY_HERE>
-curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?hydrate=1" -H "X-Auth-Token: ${FLOTIQ_RO_API_KEY}" > oas.json
+npx flotiq-codegen-ts generate 
 ```
 { data-search-exclude }
 
-This command will save your OpenAPI definition into a file called `oas.json` in your current directory. Next - you will process that file with `openapi-generator` to build the API client:
+!!! note 
+    If you make any changes (additions or deletions) to the content type definitions in your Flotiq account,
+    you will need to rerun npx `flotiq-codegen-ts generate` command
 
-```bash
-docker run --rm -it -v "${PWD}:/tmp" \
-       --workdir /tmp openapitools/openapi-generator-cli \
-       generate -i /tmp/oas.json -g typescript-node -o /tmp/flotiq-api \
-       --additional-properties=modelPropertyNaming=original,paramNaming=original,withNodeImports=true,supportsES6=true,npmName=component-api,npmVersion=0.1.0
-```
-{ data-search-exclude }
-
-This will save the API in `flotiq-api` directory, so you now have to move the built API into its proper location (note that the target path will change if you are not using NextJS `src` and `app` directories):
-
-```bash
-mv flotiq-api ./src/app/flotiq
-```
-{ data-search-exclude }
-
+!!! note 
+    You can use the `flotiq-codegen-ts generate --watch` to enable automatic detection of changes to your 
+    `Content definitions` by `Flotiq Codegen TS`. This will automatically regenerate the SDK to reflect the current 
+    state of your `Content definitons`.
 
 ## Use the API
 
@@ -71,26 +61,32 @@ We’re almost done! Now you have to edit 2 files in the NextJS repo: 1. `src/ap
 
 Let’s start with `page.tsx`. First, we need to connect to Flotiq API, add the following lines to your file
 
-```bash
+```javascript
 // add this at the beginning of the file, with other imports
-import { ContentHeroApi, ContentHeroApiApiKeys, HeroList } from './flotiq/api'
+import { FlotiqApi } from '../flotiqApi/index'
 
+const apiKey = process.env.FLOTIQ_API_KEY
 
-const FLOTIQ_API_URL = "https://api.flotiq.com";
-const FLOTIQ_API_KEY = "<YOUR_RO_API_KEY_HERE>"; // RO
-
-
-
-async function getData() : HeroList {
-
-  const heroApi = new ContentHeroApi(FLOTIQ_API_URL);
+async function getData(
+    page = 1,
+    limit = 10,
+    filters = undefined,
+    direction = 'asc',
+    orderBy = 'date'
+) : HeroList {
+  const api = new FlotiqApi(apiKey);
   heroApi.setApiKey(ContentHeroApiApiKeys.HeaderApiKeyAuth, FLOTIQ_API_KEY);
 
   // let's fetch all sections and make sure we hydrate them 
-  const {body: list} = await heroApi.listHero(undefined, undefined, undefined, undefined, 1)
-  
-  return list;
-
+  return await api.hero.list({
+      page,
+      limit,
+      filters,
+      order_by: orderBy,
+      order_direction: direction,
+      hydrate:1
+  })
+    
 }
 ```
 { data-search-exclude }
@@ -103,10 +99,9 @@ export default async function Home() {
   return (
     <main>
       <div className="bg-white py-24 sm:py-32">
-          {list.data?.map(function(section, index){
-  
+          {list.data?.map((section, index)=>{
               return <HeroComponent hero={section}></HeroComponent>
-            })
+            });
           }
           </div>
     </main>
@@ -118,7 +113,7 @@ export default async function Home() {
 now, let’s create that HeroComponent in the `src/app/components/hero.tsx` file:
 
 ```bash
-import { Hero } from "../flotiq/api";
+import { Hero } from "../../../flotiqApi/src";
 
 interface HeroProps {
   hero: Hero
@@ -141,4 +136,3 @@ export default function HeroComponent({hero} : HeroProps){
 That’s it! Start using TypeScript with Flotiq data. By now you probably noticed how convenient it is to have explicit typing and code completion in your editor:
 
  ![IDE autocompleting property names of your objects](images/nextjs-react-typescript-openapi/ide-code-completion.png){: .center .border}
-

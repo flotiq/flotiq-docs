@@ -21,13 +21,13 @@ When we’re building web applications, we always hit the problem of storing dat
 
 1. Basic JavaScript knowledge
 2. Interest in React :)
-3. Headless CMS account, we will use [Flotiq headless CMS for React](https://flotiq.com) (a free account will be just fine)
+3. Headless CMS account, we will use [Flotiq headless CMS for React](https://flotiq.com) (a << plan_names.free >> subscription will be just fine)
 
 ## TodoMVC
 
 TodoMVC is one of the most popular projects on GitHub and has been used by thousands of developers as an introduction to different frontend frameworks.
 
- ![](images/todomvc-react-headless-cms/ad7ca7a5-eeaf-4784-8ec1-3ab038cb0ede.png " =627x136"){: .center .width75 .border}
+ ![](images/todomvc-react-headless-cms/todo-github.png " =627x136"){: .center .width75 .border}
 
 Let’s start with getting this up and running, and it’s straightforward.
 
@@ -59,14 +59,14 @@ Let’s start with getting this up and running, and it’s straightforward.
 
 Your browser should now open and display the TodoMVC app, and you can start adding tasks:
 
- ![](images/todomvc-react-headless-cms/76d9cf1e-32cc-49b9-9075-7deac43dd266.png " =538x445"){: .center .width75 .border}
+ ![](images/todomvc-react-headless-cms/todo-app.png " =538x445"){: .center .width75 .border}
 
 
 ## Code
 
 Let’s now have a look at the files of this project. It’s really simple, and you can start by looking at the `app.jsx` file, which will help you understand what’s going on in the application:
 
- ![](images/todomvc-react-headless-cms/571c3fbe-c165-4f49-acfa-bc29d4a8b268.png " =448x347"){: .center .width75 .border}
+ ![](images/todomvc-react-headless-cms/code-app.png " =448x347"){: .center .width75 .border}
 
 The app uses the `useReducer` hook to manage the state. It’s a simple yet elegant way of dealing with an application state through events. It forces us to structure our code in a cleaner way without directly accessing the state with each user interaction. All state-handling logic is centralised and stored in a component called the `reducer`.
 
@@ -77,7 +77,7 @@ If you check the `reducer.js` file, you will see that it follows the [best pract
 * it replaces the state instead of mutating it
 * it uses a switch over the `action.type` field
 
- ![](images/todomvc-react-headless-cms/ab9a459f-89f4-4302-9b35-1517096d50a0.png){: .center .width75 .border}
+ ![](images/todomvc-react-headless-cms/code-todo-reducer.png){: .center .width75 .border}
 
 
 We will keep that in mind when connecting to the CMS.
@@ -106,16 +106,12 @@ Before we connect the React application with our backend - we need to set up the
    1. Set the Label to `Item`
    2. Make sure the API Name is set to `item`
    3. Add a new text property `title`
-      ![](images/todomvc-react-headless-cms/a14b634d-7d44-4ee2-8e81-04030a8e728d.png " =627x475"){: .center .width75 .border}
+      ![](images/todomvc-react-headless-cms/title-property.png " =627x475"){: .center .width75 .border}
    4. Add a checkbox called `completed` 
-      ![](images/todomvc-react-headless-cms/9dc89923-5852-45a8-a2b3-dea7f2a09979.png " =627x415"){: .center .width75 .border}
+      ![](images/todomvc-react-headless-cms/completed-property.png " =627x415"){: .center .width75 .border}
    5. Click on the `Save` button in the top right corner to add the Content Type to the system.
 
-      ![](images/todomvc-react-headless-cms/f9373293-8b64-4e0b-8ccd-1c72fdd40810.png){: .center .width75 .border}
-
-The end result should look like this:
-
- ![](images/todomvc-react-headless-cms/e18902f8-d6c2-460d-809d-9726811b4af4.png " =538x219"){: .center .width75 .border}
+      ![](images/todomvc-react-headless-cms/todo-ctd.png){: .center .width75 .border}
 
 Good job! At this point, your Flotiq account is ready to accept data from the application! 
 
@@ -200,11 +196,11 @@ The simplest way to achieve that, without breaking the reducer, is to add an API
         Did you know that Flotiq automatically publishes a set of OpenAPI-compliant endpoints for the content model you define? On top of that there is more - Postman collection, SDKs and API docs, where you can find code snippets that you can simply copy from Flotiq directly into your project!
 
         Click on the `API Docs` Link in your Flotiq dashboard: 
-        ![](images/todomvc-react-headless-cms/47208a1b-008c-454d-a89e-1594f3fa108a.png){: .center .width75 .border}
+        ![](../panel/images/ApiDocMenu.png){: .center .width25 .border}
 
         Find the endpoint that you need and copy the code. That’s what I did to build this tutorial :-)
 
-        ![](images/todomvc-react-headless-cms/d5870a70-fcc9-4ddd-a9c5-1208a7a22faf.png " =323x465"){: .center .width50 .border}
+        ![](images/todomvc-react-headless-cms/api-doc-fetch.png " =323x465"){: .center .width50 .border}
 
 
 
@@ -233,7 +229,7 @@ The simplest way to achieve that, without breaking the reducer, is to add an API
 With this, you should now see new items appear in Flotiq while you add them in your TodoMVC!
 
 
- ![](images/todomvc-react-headless-cms/b86277ad-72aa-43d0-9df0-236dc00286f0.png){: .center .width75 .border}
+ ![](images/todomvc-react-headless-cms/todo-grid-not-completed.png){: .center .width75 .border}
 
 ### Toggling item state
 
@@ -282,7 +278,7 @@ We will need to add a couple more changes to synchronise the completion state. T
 
 That’s it! You will now see the state of the `completed` checkbox change in the CMS every time you make an update in your app:
 
- ![](images/todomvc-react-headless-cms/25bb2df5-3a98-47c0-9c71-39f045209927.png " =627x375"){: .center .width75 .border}
+ ![](images/todomvc-react-headless-cms/todo-grid-with-completed.png " =627x375"){: .center .width75 .border}
 
 
 ## Summary

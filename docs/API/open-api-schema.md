@@ -8291,7 +8291,7 @@ schema, we will get a schema properly reflecting the link to `category`:
 !!! tip
     You can use the `hydrate=1` parameter along with the [OpenAPI generator](https://flotiq.com/docs/API/generate-package/#generate-server-libraries-or-clients-for-other-languages) to generate SDK packages that will support object hydration.
 
-## Getting your Scoped Open API Schema :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Unavailable in Free subscription plan" }[^1]
+## Getting your Scoped Open API Schema :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Unavailable in << plan_names.free >> subscription plan" }[^1]
 
 If you want to get your Scoped Open API Schema from Flotiq, 
 you have to make a call at the following endpoint with the [User Defined API key](/docs/API/#user-defined-api-keys) (using a Web browser, Postman or Insomnia):
@@ -9390,4 +9390,4 @@ You can use the same request parameters for [scoped API](/docs/API/#user-defined
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
 
 
-[^1]: Unavailable in Free subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+[^1]: Unavailable in << plan_names.free >> subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

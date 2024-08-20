@@ -77,11 +77,11 @@ For example, if you're using the [Gatsby and Snipcart starter](https://github.co
 
 To obtain the Flotiq API key - in your Flotiq account, Find in the right sidebar panel `Api keys` and select:
 
-![Access Flotiq API keys](images/netlify/api-keys-1.png){: .center .width25 .border}
+![Access Flotiq API keys](../../API/images/api-keys-menu.png){: .center .width25 .border}
 
 You can either select the application-wide read-only key:
 
-![Use global read-only](images/netlify/api-keys-2.png){: .center .width75 .border}
+![Use global read-only](../../API/images/api-keys_1.png){: .center .width75 .border}
 
 Or as a safer option, create a scoped read-only API key that will only be used for the purpose of Netlify build, read more about [Flotiq API access](https://flotiq.com/docs/API/).
 
@@ -96,7 +96,7 @@ Find in the right sidebar panel `Plugins` and select
 
 ![Flotiq plugins](images/sidebar-plugins.png){: .center .width25 .border}
 
-On the next screen, click the plus next to `Netlify Build` to add a plugin.
+On the next screen, click the plus next to `Netlify Build` to install the plugin.
 
 ![Adding Netlify Build plugin to Flotiq](images/netlify/plugins-screen-netlify.png){: .center .width75 .border}
 
@@ -104,7 +104,7 @@ Once the plugin is enabled, click `Manage` to open the modal with the form.
 
 ![Manage Netlify](images/netlify/manage.png){: .center .width75 .border}
 
-After the modal is opened, click `Add new`. Next - fill in the details from your Netlify account and click `Save changes` to finish your Netlify Build setup.
+After the modal is opened, click `Add item`. Next - fill in the details from your Netlify account and click `Save changes` to finish your Netlify Build setup.
 
 ![Setting up Netlify Build in Flotiq](images/netlify/settings.png){: .center .width75 .border}
 

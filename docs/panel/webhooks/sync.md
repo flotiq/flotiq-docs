@@ -3,10 +3,6 @@ description: How to use synchronous webhooks in Flotiq
 
 # Synchronous webhooks
 
-!!! note
-    Flotiq synchronous webhooks can be customized in the enterprise version only.
-    Reach out to us to discuss possible implementation.
-
 ## What is a synchronous webhook?
 
 Sync webhooks are executed in-band during Flotiq request processing on the following events:
@@ -127,7 +123,7 @@ HTTP 400:
 
 In order to create a sync webhook you can follow the same process as for async ones, just pick the "Synchronous" type. Other options can be selected just as for async.
 
-![](../images/webhooks-lifecycle/WebhooksLifecycle.png){: .center .border}
+![](../images/webhooks-lifecycle/WebhooksLifecycle.png){: .center .width75 .center .border}
 
 Once this is configured - the payload will be sent to an external system and the sync webhook process will be triggered.
 

@@ -55,7 +55,7 @@ The supporting endpoints of a given
 <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
 allow the user to perform basic REST operations
 
-![](images/endpoints.png){: .center .width75 .border}
+![](images/endpoints.png){: .border}
 
 * [Create](content-type/creating-co.md)
     * [Batch create](/docs/API/content-type/creating-co/#batch-create-content-objects-through-api)

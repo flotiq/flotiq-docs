@@ -3,9 +3,9 @@
 
 All API endpoints that are published in Flotiq are currently using an API-key authorization method. 
 
-There are two types of API keys - [Application Keys](#application-api-keys) and [User Defined Keys](#user-defined-api-keys). Both types of keys can be retrieved from the API Keys page in the Flotiq Panel (click on your avatar to open the menu):
+There are two types of API keys - [Application Keys](#application-api-keys) and [User Defined Keys](#user-defined-api-keys). Both types of keys can be retrieved from the API Keys page in the Flotiq Panel:
 
-![](images/user-profile.png){: .center .border}
+![](images/api-keys-menu.png){: .center .width25 .border}
 
 All keys restrict access to not only CRUD of the Content Objects, but also to their hydration and search; the same restrictions apply to GraphQL endpoint.
 
@@ -18,10 +18,11 @@ Every Flotiq account has 2 Application API keys - read-write and read-only. Appl
 
 ![](images/api-keys_1.png){: .center .width75 .border}
 
-All keys can be copied using ![](images/copy_icon.png){: style="margin-bottom: -7px;"} button. 
-You can open QR code with the key using ![](images/qr_button.png){: style="margin-bottom: -7px;"} button, 
-and you can regenerate keys using ![](images/regenerate_button.png){: style="margin-bottom: -7px;"} button. 
-Only user defined keys can be removed using ![](images/remove_button.png){: style="margin-bottom: -7px;"} button.
+All keys can be copied using ![](images/copy_icon.png){: style="margin-bottom: -7px; height:1.5em"} button. 
+You can open QR code with the key using ![](images/qr_button.png){: style="margin-bottom: -7px; height:1.5em"} button, 
+you can regenerate keys using ![](images/regenerate_button.png){: style="margin-bottom: -7px; height:1.5em"} button, and
+you can generate API docs for key using ![](images/api_doc_icon.png){: style="margin-bottom: -7px; height:1.5em"} button. 
+Only user defined keys can be removed using ![](images/remove_button.png){: style="margin-bottom: -7px; height:1.5em"} button.
 
 !!! hint
     You can use the QR code of your API keys to authorize your Flotiq Mobile Expo installation to access your data. Head over to the [Flotiq Mobile Expo repository](https://github.com/flotiq/flotiq-mobile-demo) to learn more.
@@ -52,7 +53,11 @@ You can authenticate your requests by `X-AUTH-TOKEN` header, or by the query par
 
 An example query request with endpoint:
 
-`https://api.flotiq.com/api/v1/content/your_content_name?auth_token=YOUR_AUTH_TOKEN`:
+!!! Example
+    <pre class="h-3em">
+    <code class="hljs plaintext">https://api.flotiq.com/api/v1/content/your_content_name?auth_token=YOUR_AUTH_TOKEN
+    </code>
+    </pre>
 
 Or an example queries with `X-AUTH-TOKEN` header:
 
@@ -188,7 +193,7 @@ Or an example queries with `X-AUTH-TOKEN` header:
 
 ### What can I do if my API key got compromised?
 
-If you accidentally committed your `.env` file to a public repository or in any other way shared your key publicly - you can regenerate the key using the ![](images/regenerate_button.png){: style="margin-bottom: -7px;"} button.
+If you accidentally committed your `.env` file to a public repository or in any other way shared your key publicly - you can regenerate the key using the ![](images/regenerate_button.png){: style="margin-bottom: -7px; height:1.5em"} button.
 
 ### How can I provide read-only access to a single kind of data?
 

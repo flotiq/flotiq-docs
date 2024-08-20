@@ -89,10 +89,10 @@ The screen you will see allows you to connect with your Flotiq account, but we w
 Now it's time to create the Content Type definition in the Flotiq. You can use our predefined
 types to speed up the modelling process. You can update the Content Type definition in further development.
 
-Go to the Content Type definitions tab and choose `Products`.
+Go to the Content Type definitions tab and choose `Product`.
 Save your Content Type definition. Now you can add your products to the Flotiq.
 
-![](images/mobile-expo-product-showcase/create-product-ctd.png){: .border}
+![](../panel/images/definition-builder-create-product.png){: .border}
 
 ## Code updates
 
@@ -111,7 +111,7 @@ The code in the repository uses a login screen to authenticate with your API key
     import authReducer from './app/store/reducers/auth';
 
     // Add this line after imports:
-    AsyncStorage.setItem('flotiqApiKey', '<< YOUR FLOTIQ READ-ONLY API KEY HERE >>');
+    AsyncStorage.setItem('flotiqApiKey', '< YOUR FLOTIQ READ-ONLY API KEY HERE >');
 
     enableScreens();
     ```

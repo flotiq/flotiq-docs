@@ -5,7 +5,7 @@ description: How to use sync webhooks in Flotiq - examples
 
 ## Example with payload modification
 In this example we will see how to modify one of the fields of a content object in an external system. 
-On each update of a `BlogPost` object we will increment the field `edit_counter`.
+On each update of a `Blog Post` object we will increment the field `edit_counter`.
 
 1. Add the `edit_counter` field to `BlogPost` CTD, set the field type to `number` and default value to 0.
   ![](../images/webhooks-lifecycle/AddFieldToBlogPost.png){: .center .border}
@@ -40,8 +40,8 @@ On each update of a `BlogPost` object we will increment the field `edit_counter`
     - provide the URL where your processing app is available
     - check the `Enabled` field
     - select the `Update` action to trigger the webhook
-    - pick the `BlogPost` Content Type Definition as a source for thie webhook.
-  ![](../images/webhooks-lifecycle/Example1.png){: .center .border}
-4. Once the webhook is added - each update on a `BlogPost` object will call the service above and the `edit_counter` field will be incremented!
+    - pick the `Blog Post` Content Type Definition as a source for thie webhook.
+  ![](../images/webhooks-lifecycle/Example1.png){: .center .border .width75}
+4. Once the webhook is added - each update on a `Blog Post` object will call the service above and the `edit_counter` field will be incremented!
   
 

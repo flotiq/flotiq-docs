@@ -19,7 +19,7 @@ Space groups content of the Organization such as: `Content Objects`, `Content Ty
     This is what the content of an example Space for the "News Site" project might look like. Notice which elements belong to this specific Space:
 
     - **Name**: News Site Space
-    - **Plan**: PRO
+    - **Plan**: << plan_names.paid_2 >>
     - **Content Type Definitions**: Media, News, Category, Author, Comments
     - **API Keys**: ReadOnly, ReadWrite, ReadNews, PostComment
     - **Enabled Plugins**: Netlify Build
@@ -45,7 +45,7 @@ Roles within an Organization:
 
 Every user with access to one or more Spaces will see a Spaces selector above the main application menu.
 
-![Spaces Selector in Flotiq Dashboard](images/spaces/SpacesSelector.png)
+![Spaces Selector in Flotiq Dashboard](images/DashboardSpaces.png){: .border}
 
 Depending on the selected Space, the context of the application changes - the contents displayed by the Dashboard are relevant to the chosen Space.
 
@@ -56,7 +56,7 @@ Depending on the selected Space, the context of the application changes - the co
 
 To manage your Spaces, navigate to the `Organization Settings` section of the application.
 
-![Go to organization Settings, Flotiq Dashboard](images/spaces/SpaceOrgSettings.png)
+![Go to organization Settings, Flotiq Dashboard](images/OrganizationSettings.png){: .width25 .border .center}
 
 ### List spaces
 
@@ -69,26 +69,26 @@ This overview allows you to:
 * Change the payment plan associated with a Space (Upgrade Space).
 * Access the subscription dashboard where you can review billing documents (Manage subscription panel).
 
-![Spaces and Usage view in Flotiq Dashboard](images/spaces/SpacesAndUsage.png)
+![Spaces and Usage view in Flotiq Dashboard](images/spaces/SpacesAndUsage.png){: .border}
 
 ### Add Space
 
 In the Space addition view, an Organization Administrator can assign a name to the Space and select the usage limits that will be available for the Space. 
 If a paid option is selected, the Administrator will be redirected to the payment view.
 
-![Add a new Space to your Flotiq account](images/spaces/SpaceAdd.png)
+![Add a new Space to your Flotiq account](images/spaces/SpaceAdd.png){: .border}
 
 ### Edit Space
 
 In the Space editing view, an Organization Administrator can change the name of the Space, manage users within the Space, and view the limits for the given Space.
 
-![Edit Space settings](images/spaces/SpaceEdit.png)
+![Edit Space settings](images/spaces/SpaceEdit.png){: .border}
 
 ### Upgrade Space
 
 To change the plan for a Space, the Administrator can select the “Upgrade Space” option from the Spaces list.
 
-![Upgrading Space](images/spaces/SpaceUpgrade.png)
+![Upgrading Space](images/spaces/SpaceUpgrade.png){: .border}
 
 When the administrator changes the plan:
 
@@ -107,4 +107,4 @@ If a user is assigned to a Space, there are ways to manage their access to space
 
 To display the user list, navigate to the `Users` tab in the Organization management view.
 
-![Users in Organization](images/spaces/SpaceUsers.png)
+![Users in Organization](images/UserList.png){: .border}

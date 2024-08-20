@@ -28,7 +28,7 @@ FlotiqPlugins.add(
 
 Result:
 
-![img](img/sidebar-info-text.png)
+![img](img/sidebar-info-text.png){: .border}
 
 ## Add preview link to edit form
 
@@ -59,7 +59,6 @@ FlotiqPlugins.add(
         // Style panel to look a bit better.
         div.style.background = `white`;
         div.style.padding = `1rem`;
-        div.style.margin = '0 0 2rem 0';
         div.style.borderRadius = '1rem';
         div.style.textAlign = 'center';
 
@@ -73,7 +72,7 @@ FlotiqPlugins.add(
 
 Result:
 
-![Sidebar preview button](img/sidebar-preview-button.png)
+![Sidebar preview button](img/sidebar-preview-button.png){: .border}
 
 ## Preview image in the grid
 
@@ -127,7 +126,7 @@ FlotiqPlugins.add(
 
 Result:
 
-![Grid media preview](img/grid-media-preview.png)
+![Grid media preview](img/grid-media-preview.png){: .border}
 
 
 ## Modify input config
@@ -167,7 +166,7 @@ FlotiqPlugins.add(
 
 Result:
 
-![Modified input styles in object form](img/input-styles.png)
+![Modified input styles in object form](img/input-styles.png){: .border}
 
 ## Access parent HTML element
 
@@ -208,7 +207,7 @@ FlotiqPlugins.add(
 
 Result:
 
-![Title width added to the object data table](img/title-width-plugin.png)
+![Title width added to the object data table](img/title-width-plugin.png){: .border}
 
 ## Clear global counter after element is detached
 
@@ -311,7 +310,7 @@ FlotiqPlugins.add(
 
 Result:
 
-<video src="../img/custom-modal-html.mp4" controls=""><a href="../img/custom-modal-html.mp4">Open custom modal</a></video>
+<video class="border" src="../img/custom-modal-html.mp4" controls=""><a href="../img/custom-modal-html.mp4">Open custom modal</a></video>
 
 ## Open modal with form 
 
@@ -390,7 +389,7 @@ FlotiqPlugins.add(
 { data-search-exclude }
 
 Result:
-<video src="../img/custom-modal-ctd-schema.mp4" controls=""><a href="../img/custom-modal-ctd-schema.mp4">Form defined with a schema that
+<video class="border" src="../img/custom-modal-ctd-schema.mp4" controls=""><a href="../img/custom-modal-ctd-schema.mp4">Form defined with a schema that
 returns data</a></video>
 
 ### Form with custom submit and button labels
@@ -484,5 +483,5 @@ FlotiqPlugins.add(
 
 Result:
 
-<video src="../img/custom-modal-ctd-schema-async-return.mp4" controls=""><a href="../img/custom-modal-ctd-schema-async-return.mp4">Form
+<video class="border" src="../img/custom-modal-ctd-schema-async-return.mp4" controls=""><a href="../img/custom-modal-ctd-schema-async-return.mp4">Form
 with custom submit and button labels</a></video>

@@ -18,22 +18,22 @@ type definitions) and some sample COs (content objects)
 Let's start by preparing the CTD `Event`. This CTD is one of the blueprints we have predefined, so all you have to do is
 select it from the list and the CTD will be created automatically
 
-![](images/pabbly/pabbly-add-ctd-in-flotiq-1.png){: .center .width75 .border}
+![](../panel/images/definition-builder-create-event.png){: .center .width75 .border}
 
 There is nothing left to do but save our CTD for the event and move on to the next step. Don’t forget to Save your
 changes.
 
-![](images/pabbly/pabbly-add-ctd-in-flotiq-2.png){: .center .width75 .border}
+![](../panel/images/PredefinedCTDEventSavedAnnotation.png){: .center .width75 .border}
 
 Now we will create a CTD for the mailing list from which we will take the email addresses to which we will send our
 invitations.
 
-![](images/pabbly/pabbly-add-ctd-in-flotiq-3.png){: .center .width75 .border}
+![](../panel/images/definition-builder-add-ctd-annotation.png){: .center .width75 .border}
 
 We will store the email, first name, last name, and date of birth on our mailing list. After creating all the fields, click "
 Save".
 
-![](images/pabbly/pabbly-add-ctd-in-flotiq-4.png){: .center .width75 .border}
+![](images/pabbly/pabbly-add-ctd-mailing-list.png){: .center .width75 .border}
 
 Now, let's add some test COs to our mailing list. We've also included a line with the data to facilitate testing whether
 the correct invitation emails will arrive in the inbox.

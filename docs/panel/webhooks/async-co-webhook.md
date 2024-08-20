@@ -44,10 +44,10 @@ Webhooks are useful if you want to **extend the system functionality** or **inte
 
 To create a Webhook, click on the main menu `Webhooks` -> `Add new Webhook`.
 
-![](../images/webhooks/co-webhook-create.png){: .border}
+![](../images/webhooks/co-webhook-create.png){: .border .width75 .center}
 
 !!! Note
-    `Async Content Object Changes` webhook `type` is default option, you don't have to worry about setting proper type    
+    `Content Object Changes Asynchronous (non blocking)` webhook `type` is default option, you don't have to worry about setting proper type    
 
 !!! Note
     The above configuration means: Send a POST request to `https://my-example-app.com/notify` with an `AUTH` header of `secret_token` when the new `product` in Flotiq was `created`.
@@ -75,9 +75,10 @@ When you choose this, the webhook can be manually triggered, at any time, in the
 Multiple actions can be selected.
 
 #### Content type definitions
-What type of objects in Flotiq the webhook applies to.
-The list includes all user types on the system.
+What types of objects in Flotiq the webhook applies to.
+The list includes all user types in the system.
 Multiple types can be selected.
+If no type is selected, all types will be listened for.
 
 #### Headers
 The headers to add to the HTTP request made by Flotiq.
@@ -105,7 +106,7 @@ Webhooks with a `Custom` action assigned can be launched manually, at any time, 
 Additionally, if the object is not saved, the execute webhook button will save the object.
 The custom action is not possible to be performed from the API level.
 
-![](../images/webhooks/webhooks-custom-hook.png){: .border }
+![](../images/webhooks/examples/gatsby/gatsby-cloud-4.png){: .border }
 
 
 ### Webhooks payload
@@ -178,8 +179,8 @@ There are no limits in the webhooks execution count. In this situation, you shou
 ### Are there any additional costs for making webhook requests?
 No, there are no additional costs for executing the webhook.
 
-### How many webhooks I can create in the Free plan?
-In the Free plan, you can add 5 webhook definitions.
+### How many webhooks I can create in the << plan_names.free >> plan?
+In the << plan_names.free >> plan, you can add 5 webhook definitions.
 
 ### What is the IP range of webhook calls?
 The webhooks will be executed from the `us-east-1` region of AWS. For the actual IP ranges check [AWS docs](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) or the [JSON file](https://ip-ranges.amazonaws.com/ip-ranges.json).

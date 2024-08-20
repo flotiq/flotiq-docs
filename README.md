@@ -35,7 +35,7 @@ To start server use:
 ```bash
 # Use SOURCE_EDITOR_URL variable to point to speciffic dashboard url. By default, SOURCE_EDITOR_URL=https://editor.flotiq.com is used.
 bash .github/scripts/get-plugins-docs.sh # Pull dynamically generated plugin docs. 
-mkdocs serve # Start devlopment server
+mkdocs serve # Start devlopment server. Use --dirtyreload option to speed up reloading, but be aware, that this might break navigation on the preview.
 ```
 
 After that, the documentation should be available on http://localhost:4000.
@@ -74,7 +74,3 @@ You can also add an alias to any existing page by dyfining it in the meta sectio
 ```md
 <!-- Start of the markdown file -->
 alias: some-example-alias
-
-# Example page
-...
-```

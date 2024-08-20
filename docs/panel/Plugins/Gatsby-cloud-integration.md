@@ -85,7 +85,7 @@ For example, if you're using the [Gatsby and Snipcart starter](https://github.co
 
 To obtain the Flotiq API key - in your Flotiq account, click your profile icon in the sidebar and go to `API keys`:
 
-![Access Flotiq API keys](../../API/images/user-profile.png){: .center .width25 .border}
+![Access Flotiq API keys](../../API/images/api-keys-menu.png){: .center .width25 .border}
 
 You can either select the application-wide read-only key:
 

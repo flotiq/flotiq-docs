@@ -75,7 +75,6 @@ async function getData(
     orderBy = 'date'
 ) : HeroList {
   const api = new FlotiqApi(apiKey);
-  heroApi.setApiKey(ContentHeroApiApiKeys.HeaderApiKeyAuth, FLOTIQ_API_KEY);
 
   // let's fetch all sections and make sure we hydrate them 
   return await api.hero.list({

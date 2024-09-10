@@ -3,16 +3,20 @@ description: How to manage users in Flotiq.
 
 This page describes how to manage **Users**, including your own settings, using [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 
 
-!!! hint 
+!!! hint
     Only a user Role headless admin can manage other users in Flotiq project. If you do not have the required role, you will not be able too see the `Users` tab.
+
+To manage users, navigate to `Manage Spaces` or `Organization Settings`.
+
+![](images/ManageSpaces.png){: .center .width75 .border}
 
 ## Listing users
 
 Click `Users` in the menu on the left to get to users list:
 
-![](images/UsersMenu.png){: .center .width25 .border}
+![](images/UsersMenu.png){: .center .width75 .border}
 
-If you don't have any new user added, you will see only your own user on the list. 
+If you don't have any new user added, you will see only your own user on the list.
 
 ![](images/UserList.png){: .center .border}
 
@@ -30,11 +34,10 @@ Once new user verifies his email, he will be asked to enter a new password and t
 
 ## Editing users
 
-When browsing users list in `Users` tab from the left panel, you can make changes to your user by clicking the pencil icon, which will open the `Edit User` tab. 
+When browsing users list in `Users` tab from the left panel, you can make changes to your user by clicking the pencil icon, which will open the `Edit User` tab.
 
 ![](images/EditUser.png){: .center .width75 .border}
 
 Here you can change your settings, like your name and password, but also edit your email subscription preferences, or the user.
-
 
 [^1]: Number of available Team Members depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

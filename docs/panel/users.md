@@ -22,11 +22,11 @@ If you don't have any new user added, you will see only your own user on the lis
 
 ## Adding new User :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
-You can add more team members to your Flotiq project by clicking the `Add User` button in the Users tab, which opens user editor.
+You can add more team members to your Flotiq project by clicking the `Invite User` button in the Users tab, which opens user editor.
 
 ![](images/AddUserMenu.png){: .center .border}
 
-When adding new user you have define its: Email, Name, and Password. After saving, there will be registration veryfication email sent to the email you entered.
+When adding new user you have to define its: Email, Name, and Password. After saving, there will be registration verification email sent to the email you entered.
 
 ![](images/NewUserVerificationEmail.png){: .center .border}
 

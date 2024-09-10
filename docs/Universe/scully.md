@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Flotiq Scully starters | Flotiq docs
 description: Jump-start your projects with Angular Scully Starters.
 

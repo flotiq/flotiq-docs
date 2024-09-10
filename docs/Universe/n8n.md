@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Flotiq n8n integration | Flotiq docs
 description: Jump-start your workflow automation tool with n8n.
 

@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to list deleted Content Objects | Flotiq docs
 description: How to list deleted Content Objects in Flotiq
 

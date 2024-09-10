@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 # Purging data from Flotiq account
 
 You can remove all objects from your account with one command. It helps with testing different imports. Command needs additional confirmation. Content type definitions stay in place.

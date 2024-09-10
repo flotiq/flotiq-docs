@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 title: How to update Content Objects | Flotiq docs
 description: How to update Content Objects in Flotiq
 

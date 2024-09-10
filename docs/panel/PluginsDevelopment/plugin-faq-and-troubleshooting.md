@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 # Flotiq UI Plugins Troubleshooting
 
 ## I get an error message when running `FlotiqPlugins.loadPlugin(id, url)`

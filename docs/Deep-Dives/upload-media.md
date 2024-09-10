@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 # Upload media using the Flotiq API. Save photos from disk and webcam.
 
 Media streaming support is an essential part of many applications. Regardless of whether you are building a blog, store or an advanced mobile app, it is worth using ready-made solutions. Flotiq as Headless CMS allows you to manage media not only from the user interface but also through a convenient REST API.

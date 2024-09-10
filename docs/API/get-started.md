@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 Title: Get Started with Flotiq API Integration
 
 Description: Get started with integrating Flotiq API into your application.

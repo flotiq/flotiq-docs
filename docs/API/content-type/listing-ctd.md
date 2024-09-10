@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to list Content Type Definitions | Flotiq docs
 description: How to list Content Type Definitions in Flotiq
 

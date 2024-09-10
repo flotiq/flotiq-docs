@@ -1,3 +1,9 @@
+---
+tags:
+  - Administrator
+  - Developer
+---
+
 title: How to secure a JAMstack app with Cloudflare workers | Flotiq docs
 description: Read this tutorial to learn how you can use Cloudflare workers to secure the API access to a headless CMS system like Flotiq.
 

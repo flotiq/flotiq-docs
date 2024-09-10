@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Flotiq Media Library | Flotiq docs
 description: Learn more about the powerful Media Library that Flotiq offers.
 

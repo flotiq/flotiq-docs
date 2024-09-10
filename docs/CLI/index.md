@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Flotiq CLI Overview | Flotiq docs
 description: Overview of Flotiq CLI tool
 

@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 title: How to handle Content Objects | Flotiq docs
 description: How to handle Content Objects in Flotiq
 

@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Synchronous webhooks
 description: How to use synchronous webhooks in Flotiq
 

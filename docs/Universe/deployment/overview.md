@@ -1,3 +1,9 @@
+---
+tags:
+  - Administrator
+  - Developer
+---
+
 title: Flotiq deplyment modes | Flotiq docs
 description: Live and static modes for deploying your content.
 
@@ -7,7 +13,6 @@ Headless CMS systems are commonly used with JAMstack projects, which have 2 basi
 
 * live - traditional, where the content is pulled from the CMS on demand, for example every time a user opens a website, this usually involves a tool that has SSR (server-side rendering) capabilities,
 * static - using a static site generator (or SSG), where a full website is generated as HTML, content is pulled from CMS only during the build process.
-
 
 ## Live
 

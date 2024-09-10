@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Integrate Netlify and Flotiq | Flotiq documentation
 description: Enable content build using Flotiq Netlify plugin.
 

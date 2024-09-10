@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 title: Flotiq deep dives | Flotiq docs
 description: Flotiq's Dynamic Content API offers a unique way of interacting with your content, the way you design it. The builtin SDKs and APi docs make it extremely easy to use.
 

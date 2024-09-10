@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 title: Flotiq workflows - content publishing | Flotiq documentation
 description: Flotiq support for custom workflows helps teams collaborate and produce quality content.
 

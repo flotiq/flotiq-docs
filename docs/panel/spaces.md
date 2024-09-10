@@ -1,3 +1,9 @@
+---
+tags:
+  - Administrator
+  - Developer
+---
+
 title: Spaces and Organization
 description: How to manage Spaces in Flotiq.
 

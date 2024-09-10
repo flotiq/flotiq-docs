@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Integrate Gatsby Cloud and Flotiq | Flotiq documentation
 description: Enable seamless Gatsby content preview using Flotiq Gatsby plugin.
 

@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 title: Flotiq Postman Sandbox Packages | Flotiq docs
 description: Flotiq allows you to check how will your API look like using Postman Public Workspaces.
 

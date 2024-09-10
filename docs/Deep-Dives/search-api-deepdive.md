@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 # Search API in Flotiq
 
 ## Overview
@@ -12,7 +17,6 @@ In this article we will focus on search operations like:
 * Limited Search using filters (objects with specific attributes)
 * Results aggregation (a.k.a. faceted search)
 * Results ranking / scoring (using ES field boosting).
-
 
 > Remember to check our [Flotiq Search API Documentation](https://flotiq.com/docs/API/search/) for more details and examples.
 
@@ -60,7 +64,6 @@ If you want to have more filters then add more parameters using syntax above by 
 ![](images/searchapi/filters.gif)
 
 
-
 ## Results aggregation
 
 This is, by far, one of the coolest features described in this article. Using this technique you'll be able to immediately build faceted search results that look like this
@@ -72,8 +75,6 @@ Simply add `aggregate_by[]=value` parameter to populate the `summary` object in 
 The part of response that is interesting us in this case looks like in image below:
 
 ![](images/searchapi/summaryres.png)
-
-
 
 
 ## Increase search score by using ElasticSearch field boosting

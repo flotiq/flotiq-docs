@@ -1,3 +1,8 @@
+---
+tags:
+  - Administrator
+---
+
 title: Users
 description: How to manage users in Flotiq.
 

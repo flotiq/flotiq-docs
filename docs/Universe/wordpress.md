@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Flotiq WordPress sync plugin | Flotiq docs
 description: Move your WordPress content pain-free to Flotiq
 

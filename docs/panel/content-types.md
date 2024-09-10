@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 # Content Types
 
 This page describes how to create a **Content Type Definition** (**CTD**) using [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 

@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 title: How to add Content Objects | Flotiq docs
 description: How to add Content Objects in Flotiq
 

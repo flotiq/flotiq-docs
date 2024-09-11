@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 title: Media Library & Unsplash
 description: How to use Flotiq Media Library and Unsplash integration.
 

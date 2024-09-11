@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 # Starting new Gatsby project with Flotiq CLI
 
 To start a new Gatsby project with [Flotiq CLI](./index.md) you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)) and your "Read and write API key" (more about API keys [here](../API/index.md)).

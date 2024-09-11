@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Media transformations | Flotiq docs
 description: How to transform an image in Flotiq
 

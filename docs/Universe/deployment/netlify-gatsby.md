@@ -1,17 +1,18 @@
+---
+tags:
+  - Developer
+---
+
 # Gatsby Netlify deployment
 
 This article will walk you through the process of deploying your Gatsby project to Netlify.
 We use one of our starters as an example, so you might want to check them out, check the links below.
 
-
 ## Prerequisites
-
 
 1. **Flotiq account**
 2. **Netlify account**
 3. **Website, sourcing content from Flotiq.**
-
-
 
 !!! info
 You might want to try one of our starters, which already comes with predefined content:
@@ -27,14 +28,12 @@ You might want to try one of our starters, which already comes with predefined c
 
 These starters all come with detailed READMEs and a one-line content import command, be sure to check those!
 
-
 ## Signing in to Netlify
 
 If you do not have the Netlify account, the easiest way to create the account and use it in this tutorial will be to use `GitHub` on the Netlify sign-up page. Netlify will ask you to authorize with your GitHub account. If you need to request access to one or more repositories, you can click "**request access** here or later, when creating an instance.
 
  ![](images/netlify-signup.png)  
  ![](images/netlify-authorize.png)
-
 
 ## Deployment
 
@@ -47,7 +46,6 @@ Then select the repository that contains your project.
 
  ![](images/netlify-gatsby-select-repository.png)
 
-
 After selecting the repository, you can specify a name for your site, base directory, build command, and environmental variables.\nAs our project is in the repository’s root, the base directory remains empty.
 
  ![](images/netlify-gatsby-configure-project.png)
@@ -58,20 +56,15 @@ If you need to add some more, just click on **New variable**.
 
 For more information about environment variables, check [this section.](#setting-up-environment-variables)
 
-
  ![](images/netlify-gatsby-environment-variables.png)
 
-
 If everything looks fine, click the Deploy button and wait for Netlify to deploy your project.
-
 
 Go to your Sites section and select your new project.
 At the top you will see a thumbnail of your site, click on it to visit your new site.
   ![](images/netlify-gatsby-deployment-publish.png)
 
-
 Congratulations, you’ve successfully deployed your Flotiq-based site on Netlify!
-
 
 ### Setting up Environment Variables
 
@@ -91,9 +84,9 @@ You can either select the application-wide read-only key:
 
 Or, as a safer option, create a scoped read-only API key that will only be used for the Netlify build. Read more about [Flotiq API access](https://flotiq.com/docs/API/).
 
-Copy the Read-Only key and paste it into Netlify settings as **GATSBY_FLOTIQ_API_KEY**. 
+Copy the Read-Only key and paste it into Netlify settings as **GATSBY_FLOTIQ_API_KEY**.
 
-!!! Note 
+!!! Note
 
     Flotiq doesn't enforce any particular way of selecting drafts or non-public versions of your pages. The Read-Only key you copied will give you access to all your content. If you'd like to set up draft and public versions of your pages - you can do so by adding an extra field to your content types and querying for it in your GraphQL queries.
 

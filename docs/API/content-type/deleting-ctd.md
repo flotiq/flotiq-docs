@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to delete Content Type Definitions | Flotiq docs
 description: How to delete Content Type Definitions in Flotiq API
 

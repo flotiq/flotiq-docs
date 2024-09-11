@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Generate Package - SDK NodeJS
 description: Flotiq provides SDK NodeJS to access your Content.
 

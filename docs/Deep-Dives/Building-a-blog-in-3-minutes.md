@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Building a blog in 3 minutes with Flotiq, Gatsby and Netlify | Flotiq docs
 description: A deep dive tutorial on how to build your first blog using a headless CMS system like Flotiq, GatsbyJS and Netlify.
 

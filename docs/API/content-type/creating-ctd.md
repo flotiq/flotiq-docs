@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to add Content Type Definitions | Flotiq docs
 description: How to add Content Type Definitions in Flotiq API
 

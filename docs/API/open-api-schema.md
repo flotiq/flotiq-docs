@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Get your own Open Api Schema | Flotiq docs
 description: How to get your open API schema
 

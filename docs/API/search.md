@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Flotiq Search API | Flotiq docs
 description: Flotiq's search API provides an easy way to query all your content through one endpoint.
 

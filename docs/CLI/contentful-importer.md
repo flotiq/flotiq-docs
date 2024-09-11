@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Contentful - Flotiq data migration | Flotiq docs
 description: How to migrate Flotiq data from Contentful account
 

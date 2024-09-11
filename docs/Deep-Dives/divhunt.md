@@ -1,3 +1,9 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 title: Flotiq Divhunt integration | Flotiq docs
 description: Integrate Flotiq with Divhunt to jump-start your project code-free
 

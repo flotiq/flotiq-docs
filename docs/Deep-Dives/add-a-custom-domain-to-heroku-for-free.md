@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to add a custom domain to your Heroku-hosted blog with Cloudflare workers | Flotiq docs
 description: Read this tutorial to learn how you can use Cloudflare workers to add a free custom domain to a Heroku-hosted blog.
 
@@ -6,7 +11,6 @@ description: Read this tutorial to learn how you can use Cloudflare workers to a
 Heroku is pretty great for hosting websites and their `Deploy to Heroku` buttons are so awesome, especially with how they can be integrated with static website generators, like Gatsby. Heroku's free account is also quite capable, you are allowed to deploy up to 5 applications, hosted in their `*.herokuapp.com` domain. But, as soon as you'd like to move this app to a custom domain - you have to pay. If you've already built and deployed your blog, for example using [this tutorial](../Building-a-blog-in-3-minutes/) your next step will probably be adding a custom domain for your blog.
 
 Here's a quick tutorial how to get around this, with Cloudflare Workers.
-
 
 !!! caution
     **Prerequisites:**

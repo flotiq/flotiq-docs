@@ -1,18 +1,21 @@
+---
+tags:
+  - Content Creator
+  - Developer
+---
+
 title: Multilingual content in Flotiq Headless CMS. Example model, API Calls & Demo | Flotiq docs
 description: Nowadays, the multilingual site is quite a common thing. This article will show you how you can manage multilingual data in Flotiq.
-
 
 # Multilingual content in Flotiq Headless CMS. Example model, API Calls & Demo
 
 ![](images/multilingual-content/header.jpg)
-
 
 Nowadays, the multilingual site is quite a common thing. It is appreciated for the company to speak to
 the client in their language.
 
 This article will show you how to manage multilingual content in Flotiq. We use blog posts as an example,
 but remember that you can use the Flotiq to manage various data.
-
 
 ## Step 1: Create a model for your data
 

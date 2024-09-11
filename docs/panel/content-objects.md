@@ -1,3 +1,8 @@
+---
+tags:
+  - Content Creator
+---
+
 # Content Objects
 
 Once a Content Type has been defined in the system - the user can create Content Objects of that Content Type.

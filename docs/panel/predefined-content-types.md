@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 # Predefined Content Types
 
 If you don't have any Content Type Definitions (CTD) yet, you see tiles with predefined CTDs from which you can choose your first one by clicking on the tile representing your chosen CTD.

@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Building a store locator with Flotiq | Flotiq docs
 description: This tutorial shows how to build a store locator webpage using Flotiq and its geo capabilities.
 
@@ -16,7 +21,6 @@ What we'll need:
 And here's a sneak peek at what we'll build.
 
 ![Flotiq-based store locator](images/store-locator-1.png){: .center .border .width75}
-
 
 ## Setting up Flotiq
 

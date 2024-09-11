@@ -51,6 +51,8 @@ plugins:
       jinja_options:
         variable_start_string: "<<"
         variable_end_string: ">>"
+  - tags:
+      tags_file: tags.md
 
 extra_css:
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
@@ -225,4 +227,5 @@ nav:
     - 'Build headless no-code website Divhunt': Deep-Dives/divhunt.md
   - Flotiq Mobile Expo: Flotiq-Mobile-Expo/overview.md
   - FAQ: faq.md
+  - Tags: tags.md
   - 'Contact us': '../contact'

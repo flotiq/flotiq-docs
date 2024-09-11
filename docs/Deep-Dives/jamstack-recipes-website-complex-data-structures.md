@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Building a stunning recipe website with Flotiq and Gatsby | Flotiq docs
 description: A deep dive tutorial on Flotiq's complex data structures and accidentally building a stunning recipes website with Gatsby.
 

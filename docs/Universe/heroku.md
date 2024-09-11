@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Deploy Next.js starter to Heroku | Flotiq docs
 description: Deploy Next.js starter to Heroku
 

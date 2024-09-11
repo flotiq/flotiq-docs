@@ -1,5 +1,9 @@
-# GraphQL
+---
+tags:
+  - Developer
+---
 
+# GraphQL
 
 The Flotiq API supports a GraphQL queries. 
 It is an alternative way to REST API to get your data. We provide the complete, **always up-to-date** GraphQL description of your data and the endpoint

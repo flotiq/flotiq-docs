@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Hosted webhooks
 description: How to use hosted webhooks in Flotiq
 

@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 # Flotiq UI Example Plugins
 
 ## Add instructions for your editors

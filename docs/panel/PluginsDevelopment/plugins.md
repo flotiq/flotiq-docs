@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 # Flotiq UI Plugins development
 
 If you find Flotiq UI not enough, you can write your own extensions, that will suit your specific needs.

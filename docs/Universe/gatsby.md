@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Flotiq Gatsby starters | Flotiq docs
 description: Jump-start your projects with React Gatsby Starters.
 

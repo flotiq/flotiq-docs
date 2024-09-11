@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to get single Content Type Definitions | Flotiq docs
 description: How to get single Content Type Definitions in Flotiq
 

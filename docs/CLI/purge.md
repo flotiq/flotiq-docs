@@ -1,6 +1,5 @@
 ---
 tags:
-  - Content Creator
   - Developer
 ---
 

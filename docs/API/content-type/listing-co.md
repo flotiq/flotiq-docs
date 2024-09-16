@@ -1014,6 +1014,67 @@ You can check the example for each filter usage below:
         ```
         { data-search-exclude }
 
+    === "includes"
+        
+        Object parameter must fully match a list item from the filter array. This filter is optimized for list-based searching and is significantly faster than `contains`, which performs a more general full-text search with `%term%`.
+
+        Can only be used with array parameters.
+
+        Example:
+
+        `filters={"products[*].dataUrl":{"type":"includes","filter":"/api/v1/content/_media/_media-1"}}`
+
+        Will return:
+
+        ```
+        [
+            {
+                "id":"1-id"
+                "gallery":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-1"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-2"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-3"
+                    },
+                ]
+            },
+            {
+                "id":"2-id"
+                "gallery":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-1"
+                    }
+                ]
+            },
+        ]
+        ```
+        { data-search-exclude }
+
+        Will not return:
+        
+        ```
+        [
+            {
+                "id":"3-id"
+                "gallery":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-2"
+                    },
+                ]
+            },
+        ]
+        ```
+        { data-search-exclude }
+
 !!! Note
     The equals and notEquals filters allow passing multiple elements so that the results are equal to any of them, for example:<br>
         `{"name":{"type":"equals", "filter":["product-1", "product-2"]}}` <br>

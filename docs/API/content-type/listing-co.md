@@ -32,7 +32,7 @@ This is a basic request for listing content, without any additional parameters:
 
     === "CURL"
 
-        ``` 
+        ```
         curl GET "https://api.flotiq.com/api/v1/content/blogposts" \
         --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "accept: application/json"
@@ -310,8 +310,6 @@ in what `order_direction`, whether to use `hydration`, and what `filters` to nar
         }
         ```
         { data-search-exclude }
-
-
 
 Request parameters
 

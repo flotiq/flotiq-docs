@@ -6,7 +6,7 @@ tags:
 title: Migrating Flotiq data between Spaces | Flotiq docs
 description: How to migrate data using CLI export&import through JSON features
 
-# Flotiq CLI: Export and Import Data
+# Migrating Flotiq data between Spaces
 
 Flotiq CLI provides a convenient way to export and import data from your Flotiq account, including Content Types, Content Objects, and media files. This process allows for backup, migration, or sharing of data across environments.
 

@@ -556,6 +556,15 @@ li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
   width: unset;
 }
 
+.md-header__button.md-logo.docs-badge {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.md-header__button.md-logo.docs-badge img{
+  width: 50px;
+}
+
 @media screen and (min-width: 76.25em) {
   .md-nav__item--nested .md-nav__toggle:checked ~ .md-nav__link .md-nav__icon, .md-nav__item--nested .md-nav__toggle:indeterminate ~ .md-nav__link .md-nav__icon {
     color: #0083FC;

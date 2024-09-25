@@ -102,15 +102,27 @@ When the administrator changes the plan:
 * **From paid to another paid plan** - a confirmation will be displayed, and the details of the billing will be available in the `Manage Subscription` section on the Spaces list. Billing adjustment will occur at the end of the billing period.
 * **From paid to free** - the subscription cancellation will be scheduled to coincide with the end of the current billing period.
 
+### Migrating spaces
+
+In Flotiq you can migrate your data between spaces using [Flotiq CLI import and export commands](../CLI/migrating-data-between-spaces.md). Using data migration between spaces allows you for easily setting up testing and production environments for your project, with one space being dedicated to testing and the second for running production.
+
 ## Manage Users in Organization
 
 Administrators can manage users outside the Space context.
 This allows Administrators to have an overview of all users within the Organization.
 
-Users can be added independently of Spaces, without being assigned to a specific Space. 
+Users can be added independently of Spaces, without being assigned to a specific Space.
 
 If a user is assigned to a Space, there are ways to manage their access to space content. If you wish to restrict user actions, consider adding a [Space Role](./user-roles.md) for the user. Users without any assigned role will have unrestricted access to all resources.
 
 To display the user list, navigate to the `Users` tab in the Organization management view.
 
 ![Users in Organization](images/UserList.png){: .border}
+
+## Managing subscriptions
+
+After each billing cycle an invoice is generated and available for download for Administrators.
+
+To manage subscriptions or download invoices go to organization settings and open `Billing info` page.
+
+![Billing info](images/BillingInfo.png){: .border}

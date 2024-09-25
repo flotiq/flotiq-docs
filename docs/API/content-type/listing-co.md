@@ -422,6 +422,7 @@ Filters can accept the following filter types:
 - empty
 - notEmpty
 - overlaps
+- includes
 
 You can check the example for each filter usage below:
 
@@ -954,7 +955,7 @@ You can check the example for each filter usage below:
 
         Example:
 
-        `filters={"gelery[*].dataUrl":{"type":"overlaps","filter":["/api/v1/content/_media/_media-4a8d1dea-bcb4-4862-a2b8-53ff3d13ce6d","/api/v1/content/_media/_media-ca82f862-75f4-4e3d-a504-d0db7d05b1ba"]}}`
+        `filters={"gallery[*].dataUrl":{"type":"overlaps","filter":["/api/v1/content/_media/_media-1","/api/v1/content/_media/_media-2"]}}`
 
         Will return:
 
@@ -962,49 +963,93 @@ You can check the example for each filter usage below:
         [
             {
                 "id":"1-id"
-                "gelery":[
+                "gallery":[
                     {
                         "type": "internal",
-                        "dataUrl":"/api/v1/content/_media/_media-4a8d1dea-bcb4-4862-a2b8-53ff3d13ce6d"
+                        "dataUrl":"/api/v1/content/_media/_media-1"
                     },
                     {
                         "type": "internal",
-                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4e3d-a504-d0db7d05b1ba"
+                        "dataUrl":"/api/v1/content/_media/_media-2"
                     },
                     {
                         "type": "internal",
-                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4e3d-a504-f0ebff3bacd1"
+                        "dataUrl":"/api/v1/content/_media/_media-3"
                     },
                 ]
             },
             {
                 "id":"2-id"
-                "gelery":[
+                "gallery":[
                     {
                         "type": "internal",
-                        "dataUrl":"/api/v1/content/_media/_media-4a8d1dea-bcb4-4862-a2b8-53ff3d13ce6d"
+                        "dataUrl":"/api/v1/content/_media/_media-1"
                     },
                     {
                         "type": "internal",
-                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4dd2-a504-d0db7d05b1ba"
+                        "dataUrl":"/api/v1/content/_media/_media-4"
+                    },
+                ]
+            }
+        ]
+        ```
+        { data-search-exclude }
+
+        Will not return:
+        
+        ```
+        [
+            {
+                "id":"4-id"
+                "gallery":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-3"
+                    },
+                ]
+            },
+        ]
+        ```
+        { data-search-exclude }
+
+    === "includes"
+        
+        Object parameter must fully match a list item from the filter array. This filter is optimized for list-based searching and is significantly faster than `contains`, which performs a more general full-text search with `%term%`.
+
+        Can only be used with array parameters.
+
+        Example:
+
+        `filters={"products[*].dataUrl":{"type":"includes","filter":"/api/v1/content/_media/_media-1"}}`
+
+        Will return:
+
+        ```
+        [
+            {
+                "id":"1-id"
+                "gallery":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-1"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-2"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/_media/_media-3"
                     },
                 ]
             },
             {
-                "id":"3-id"
-                "gelery":[
+                "id":"2-id"
+                "gallery":[
                     {
                         "type": "internal",
-                        "dataUrl":"/api/v1/content/_media/_media-4a8d1dea-bcb4-4862-a2b8-53ff3d13ce6d"
-                    },
-                    {
-                        "type": "internal",
-                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4e3d-a504-d0db7d05b1ba"
-                    },
-                    {
-                        "type": "internal",
-                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4ffd-a504-cc0dff3bacd1"
-                    },
+                        "dataUrl":"/api/v1/content/_media/_media-1"
+                    }
                 ]
             },
         ]
@@ -1016,11 +1061,11 @@ You can check the example for each filter usage below:
         ```
         [
             {
-                "id":"4-id"
-                "gelery":[
+                "id":"3-id"
+                "gallery":[
                     {
                         "type": "internal",
-                        "dataUrl":"/api/v1/content/_media/_media-ca82f862-75f4-4e3d-a504-f0ebff3bacd1"
+                        "dataUrl":"/api/v1/content/_media/_media-2"
                     },
                 ]
             },

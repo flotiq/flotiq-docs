@@ -30,25 +30,46 @@
             aria-label="{{ lang.t('header.title') }}"
     >
         <div style="display: flex; align-content: center;">
-            <!-- Link to home -->
-            <a
-                    href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
-                    title="{{ config.site_name | e }}"
-                    class="md-header__button md-logo desktop"
-                    aria-label="{{ config.site_name }}"
-                    data-md-component="logo"
-            >
-                <img src="{{ 'API/images/full_logo.svg' | url }}" alt="Flotiq">
-            </a>
-            <a
-                    href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
-                    title="{{ config.site_name | e }}"
-                    class="md-header__button md-logo mobile"
-                    aria-label="{{ config.site_name }}"
-                    data-md-component="logo"
-            >
-                <img src="{{ 'API/images/small_logo.svg' | url }}" alt="Flotiq">
-            </a>
+            <div style="display: flex; align-items: center;">
+                <a
+                        href="http://flotiq.com/"
+                        title="{{ config.site_name | e }}"
+                        class="md-header__button md-logo desktop"
+                        aria-label="{{ config.site_name }}"
+                        data-md-component="logo"
+                >
+                    <img src="{{ 'API/images/flotiq-logo-wt.svg' | url }}" alt="Flotiq">
+                </a>
+                <a
+                        href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
+                        title="{{ config.site_name | e }}"
+                        class="md-header__button md-logo docs-badge desktop"
+                        aria-label="{{ config.site_name }}"
+                        data-md-component="logo"
+                >
+                    <img src="{{ 'API/images/docs-badge.svg' | url }}" alt="Flotiq">
+                </a>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <a
+                        href="http://flotiq.com/"
+                        title="{{ config.site_name | e }}"
+                        class="md-header__button md-logo mobile"
+                        aria-label="{{ config.site_name }}"
+                        data-md-component="logo"
+                >
+                    <img src="{{ 'API/images/flotiq-badge-logo.svg' | url }}" alt="Flotiq">
+                </a>
+                <a
+                        href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
+                        title="{{ config.site_name | e }}"
+                        class="md-header__button md-logo docs-badge mobile"
+                        aria-label="{{ config.site_name }}"
+                        data-md-component="logo"
+                >
+                    <img src="{{ 'API/images/docs-badge.svg' | url }}" alt="Flotiq">
+                </a>
+            </div>
         </div>
         <div>
             <!-- Color palette -->

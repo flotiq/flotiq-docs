@@ -118,3 +118,11 @@ If a user is assigned to a Space, there are ways to manage their access to space
 To display the user list, navigate to the `Users` tab in the Organization management view.
 
 ![Users in Organization](images/UserList.png){: .border}
+
+## Managing subscriptions
+
+After each billing cycle an invoice is generated and available for download for Administrators.
+
+To manage subscriptions or download invoices go to organization settings and open `Billing info` page.
+
+![Billing info](images/BillingInfo.png){: .border}

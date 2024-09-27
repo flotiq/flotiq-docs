@@ -20,6 +20,10 @@ This section of the Media Library gives you access to all of your files that you
 
 ![Flotiq Media Library](./images/MediaLibrary-home.png){: .border}
 
+### ALT property for images
+
+When editing an image, you can now add an optional `alt` text field, which you can later use to provide the value for `alt` tags for images in your project. You can modify the `alt` text in the media editing screen for each uploaded image.
+
 ## Stock photos
 
 This section gives you access to the Unsplash library of images.

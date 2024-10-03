@@ -248,7 +248,7 @@ The `loadMarkers()` function will be used to pass the results pulled from Flotiq
                     "deletedAt": "",
                     "updatedAt": "2020-09-27T11:44:14+00:00",
                     "contentType": "Store",
-                    "workflow_state": "saved"
+                    "workflow_state": "public"
                 },
                 "StoreName": "M & S Newsagents",
                 "created_at": "2020-09-27T11:43:11+00:00",

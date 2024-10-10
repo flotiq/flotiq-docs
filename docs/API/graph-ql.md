@@ -175,7 +175,7 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
         To do so, your content type definition has to have a text field with [unique property](../panel/content-types.md?h=unique#property-settings).
         This will allow you to query objects of that type using arguments:
 
-        - field: `<your unique field name>`,
+        - field: `<your unique text field name>`,
         - value: `<the value you want to query by>`
 
         !!! GraphQL query

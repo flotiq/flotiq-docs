@@ -152,7 +152,7 @@ Possible request parameters:
         ```
         { data-search-exclude }
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 

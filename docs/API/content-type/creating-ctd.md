@@ -345,7 +345,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
         ```
         { data-search-exclude }
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 

@@ -322,7 +322,7 @@ Request parameters
 | hydrate         | If you want to hydrate data sources in the object, you need to set it to `1`, it will hydrate one level of data sources in objects, `2` will hydrate deeper objects, and it's the highest level of hydration available in Flotiq API. You can also use this parameter when requesting a single object                                                                                                                                                                                                                                                                                                                                                              |
 | filters         | Json encoded object containing conditions on which the list of CO should be filtered. |
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 

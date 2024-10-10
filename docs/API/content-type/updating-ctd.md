@@ -330,7 +330,7 @@ When you change existing property, depending on the type of changes, Flotiq will
         ```
         { data-search-exclude }
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 
@@ -455,7 +455,7 @@ When you modify a schema, any associated objects undergo a transformation proces
 
 When encountering issues during schema conversion, you might receive error messages like the following:
 
-!!! Responses
+!!! Response
 
     === "400 Validation error"
 

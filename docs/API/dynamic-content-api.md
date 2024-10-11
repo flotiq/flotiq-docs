@@ -20,6 +20,10 @@ The Dynamic Content API is how Flotiq provides you with access to your content. 
 
 ## API docs
 
+To access your API documentation, please navigate to the `API Docs` section in the sidebar, as shown in the screenshot below.
+
+![](../panel/images/ApiDocMenu.png){: .border style="height:50em"}
+
 Part of the Content API are the beautiful API docs, along with code samples to simplify your work. You can explore your Content API or share with other teams to jumpstart integration.
 
 There are 3 important parts of the API documentation that Flotiq provides for you:
@@ -29,6 +33,9 @@ There are 3 important parts of the API documentation that Flotiq provides for yo
 1. Every time you create a Content Type Definition - your API is extended with endpoints that support this new Content Type.
 2. The descriptions of these endpoints contain all the information regarding the structure and constraints of the Content Type you defined.
 3. The API docs are enriched with code samples in several popular languages, which make it extremely easy to integrate your content into any external application.
+
+!!! note
+    The generated API documentation from the application provides your read-only key. If you wish to perform write actions, please enter your own API key.
 
 ## SDKs
 

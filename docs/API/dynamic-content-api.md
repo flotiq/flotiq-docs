@@ -20,7 +20,7 @@ The Dynamic Content API is how Flotiq provides you with access to your content. 
 
 ## API docs
 
-To access your API documentation, please navigate to the `API Docs` section in the sidebar, as shown in the screenshot below.
+To access your API documentation from the editor, please navigate to the `API Docs` section in the sidebar, as shown in the screenshot below.
 
 ![](../panel/images/ApiDocMenu.png){: .border style="height:50em"}
 

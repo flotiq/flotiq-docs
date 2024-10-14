@@ -35,7 +35,7 @@ There are 3 important parts of the API documentation that Flotiq provides for yo
 3. The API docs are enriched with code samples in several popular languages, which make it extremely easy to integrate your content into any external application.
 
 !!! note
-    The generated API documentation from the application provides your read-only key. If you wish to perform write actions, please enter your own API key.
+    The generated API documentation uses your read-only key to keep your account secure. If you wish to perform write actions, please enter your read-write API key.
 
 ## SDKs
 

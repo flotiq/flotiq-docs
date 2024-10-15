@@ -43,6 +43,30 @@ After you are done with modifying the image, press `Save changes` button and a v
 !!! Note
     Flotiq variants currently do not support creating transformations for animated GIF files.
 
+## Media tags
+
+You can add tags to your media files to help categorize and find them.
+
+To add tag to the file, use the `add tags` button on the media listing:
+
+![Add tags](./images/AddTags.png){: .border .width50 .center}
+
+It will open a modal where you can choose existing tags or create new ones.
+
+![Add tags modal](./images/AddTagsModal.png){: .border .width50 .center}
+
+When you finish editing, click the `Save` button.
+
+You can manage your tags on the Tags page:
+
+![Listing tags](./images/ListingTags.png){: .border .width50 .center}
+
+The tag contains only name field.
+
+Tag editing is compatible with standard content object editing. See more in the [editing content object description](/docs/panel/content-objects/).
+
+Mass edit is not enabled for tags, as it has only unique fields.
+
 ## API Endpoints
 
 Media library is accessible via `/api/v1/media/` endpoints. Visit your API docs to learn more.

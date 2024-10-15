@@ -78,6 +78,8 @@ Your bucket policy should look like this, remember to change the bucket name in 
     ]
 }
 ```
+{ data-search-exclude }
+
 
 ![](images/aws-s3-permissions.png){: .center .width75 .border}
 

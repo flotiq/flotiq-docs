@@ -153,7 +153,7 @@ You can only delete Content Types that do not have any Content Objects or are no
         ```
         { data-search-exclude }
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 

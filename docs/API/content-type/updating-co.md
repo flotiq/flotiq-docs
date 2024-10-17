@@ -191,7 +191,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         { data-search-exclude }
 
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 

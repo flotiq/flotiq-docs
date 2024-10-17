@@ -50,7 +50,7 @@ Command logs the following information:
 
 `--hideResults` or `--hr` - information about the export process will not appear in the console.
 
-!!! Responses
+!!! Response
     When successful:
     ```
     {
@@ -98,7 +98,7 @@ For every sheet in the workbook:
 
 `--hideResults` or `--hr` - information about the import process will not appear in the console.
 
-!!! Responses
+!!! Response
     When successful:
     ```
     {

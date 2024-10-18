@@ -39,11 +39,9 @@ If you want to send a test request, press the 'send test request' as shown in th
 ![](images/send-test-request.png){: .border}
 
 !!! note
-    The generated API documentation from the application provides your read-only key. If you wish to perform write actions, please enter your own API key in the field highlighted in the image below.
+    The generated API documentation uses your read-only key to keep your account secure. If you wish to perform write actions, please enter your read-write API key in the field highlighted in the image below.
 
 ![](images/set-api-key-for-test-request.png){: .border}
-
-
 
 ## SDKs
 

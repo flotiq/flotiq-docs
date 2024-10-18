@@ -34,8 +34,16 @@ There are 3 important parts of the API documentation that Flotiq provides for yo
 2. The descriptions of these endpoints contain all the information regarding the structure and constraints of the Content Type you defined.
 3. The API docs are enriched with code samples in several popular languages, which make it extremely easy to integrate your content into any external application.
 
+If you want to send a test request, press the 'send test request' as shown in the image below.
+
+![](images/send-test-request.png){: .border}
+
 !!! note
-    The generated API documentation from the application provides your read-only key. If you wish to perform write actions, please enter your own API key.
+    The generated API documentation from the application provides your read-only key. If you wish to perform write actions, please enter your own API key in the field highlighted in the image below.
+
+![](images/set-api-key-for-test-request.png){: .border}
+
+
 
 ## SDKs
 

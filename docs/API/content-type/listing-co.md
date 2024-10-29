@@ -1235,7 +1235,7 @@ You can check the example for each filter usage below:
 ### Filtering by relation
 
 Assume we have two Content Type Definitions: `Product` and `Category`. 
-There is an relation where a `Product` can belong to multiple `Categories`.
+There is a relation where a `Product` can belong to multiple `Categories`.
 
 !!! Example Product
 
@@ -1254,6 +1254,7 @@ There is an relation where a `Product` can belong to multiple `Categories`.
         ]
     }
     ```
+    { data-search-exclude }
 
 Filtering by the inverse side of the relation is done using the `dataUrl` field, which identifies the relationship. 
 According to [JsonPath](https://github.com/json-path/JsonPath), in the above example, filtering will be based on the `categories[*].dataUrl` field.
@@ -1270,6 +1271,8 @@ The value used for filtering must be the full `dataUrl` of the object, e.g., `/a
             "filter": "/api/v1/content/category/cat-1"
     }
     ```
+    { data-search-exclude }
+
     To display products in either the `cat-1` or `cat-2` categories, you can use a filter of type `overlaps`, allowing you to send a list of categories:
     ```json
     {
@@ -1281,6 +1284,7 @@ The value used for filtering must be the full `dataUrl` of the object, e.g., `/a
         ]
     }
     ```
+    { data-search-exclude }
 
 Only `contains`, `notContains`, `includes` and `overlaps` type filters can be used with filtering by relation.
 
@@ -1294,10 +1298,12 @@ In your requests, you need to ensure URL parameter encoding. For example:
    ```
    /api/v1/content/products?filters={"categories[*].dataUrl":{"type":"includes","filter":"/api/v1/content/categories/cat-1"}}
    ```
+   { data-search-exclude }
 1. Encoded CURL query:
    ```bash
    GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22includes%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcat-1%22%7D%7D
    ```
+   { data-search-exclude }
 
 #### Filter by hydrated data
 

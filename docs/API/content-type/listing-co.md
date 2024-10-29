@@ -1234,8 +1234,8 @@ You can check the example for each filter usage below:
 
 ### Filtering by relation
 
-Assume we have two types of data: `Product` and `Category`. 
-There is an association where a `Product` can belong to multiple `Categories`.
+Assume we have two Content Type Definitions: `Product` and `Category`. 
+There is an relation where a `Product` can belong to multiple `Categories`.
 
 !!! Example Product
 

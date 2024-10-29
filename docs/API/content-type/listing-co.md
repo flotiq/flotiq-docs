@@ -1234,20 +1234,76 @@ You can check the example for each filter usage below:
 
 ### Filtering by relation
 
-For example, "Show products in category category-1" is possible using [JsonPath](https://github.com/json-path/JsonPath) standard.
-You have to care about encoding url params. For example:
+Assume we have two types of data: `Product` and `Category`. 
+There is an association where a `Product` can belong to multiple `Categories`.
 
-1. Using JsonPath, product category path is `categories[*].dataUrl`
-1. Expected value is `/api/v1/content/categories/category-1`
-1. Raw query: `GET /api/v1/content/products?filters={"categories[*].dataUrl":{"type":"contains","filter":"/api/v1/content/categories/category-1"}}`
-1. Encoded query: `GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22contains%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcategory-1%22%7D%7D`
+!!! Example Product
 
-Only `contains` and `notContains` type filters can be used with filtering by relation.
+    Here is an example of a `Product` object:
 
-!!! Note
-    Even if you list your content objects with hydration enabled, you cannot filter them by the hydrated data.
+    ```json
+    {
+        "id": "2-id",
+        "price": 100,
+        "title": "product-2",
+        "categories": [
+            {
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/cat-1"
+            }
+        ]
+    }
+    ```
 
-    For example if a Content Type "Blog Post" has relation to another type "Author", and you want to filter by `Author.name`, and use `hydrate=1` param to get authors data embedded in blog posts data, you still have to use filtering by dataUrl method described above.
+Filtering by the inverse side of the relation is done using the `dataUrl` field, which identifies the relationship. 
+According to [JsonPath](https://github.com/json-path/JsonPath), in the above example, filtering will be based on the `categories[*].dataUrl` field.
+
+The value used for filtering must be the full `dataUrl` of the object, e.g., `/api/v1/content/category/cat-1`.
+
+!!! Example
+    
+    To display products in the `cat-1` category, you can use a filter of type `includes`:
+    ```json
+    {
+        "categories[*].dataUrl": {
+            "type": "includes",
+            "filter": "/api/v1/content/category/cat-1"
+    }
+    ```
+    To display products in either the `cat-1` or `cat-2` categories, you can use a filter of type `overlaps`, allowing you to send a list of categories:
+    ```json
+    {
+        "categories[*].dataUrl": {
+            "type": "overlaps",
+            "filter": [
+                "/api/v1/content/category/cat-1",
+                "/api/v1/content/category/cat-2",
+        ]
+    }
+    ```
+
+Only `contains`, `notContains`, `includes` and `overlaps` type filters can be used with filtering by relation.
+
+#### Filter by relation - encoding 
+
+In your requests, you need to ensure URL parameter encoding. For example:
+
+1. Using [JsonPath](https://github.com/json-path/JsonPath), the path to the product category is `categories[*].dataUrl`
+1. The expected field value is `/api/v1/content/categories/cat-1`
+1. Raw query:
+   ```
+   /api/v1/content/products?filters={"categories[*].dataUrl":{"type":"includes","filter":"/api/v1/content/categories/cat-1"}}
+   ```
+1. Encoded CURL query:
+   ```bash
+   GET /api/v1/content/products?filters=%7B%22categories%5B%2A%5D.dataUrl%22%3A%7B%22type%22%3A%22includes%22%2C%22filter%22%3A%22%2Fapi%2Fv1%2Fcontent%2Fcategories%2Fcat-1%22%7D%7D
+   ```
+
+#### Filter by hydrated data
+
+Even if you list your content objects with hydration enabled, you cannot filter them by the hydrated data.
+
+For example if a Content Type "Blog Post" has relation to another type "Author", and you want to filter by `Author.name`, and use `hydrate=1` param to get authors data embedded in blog posts data, you still have to use filtering by dataUrl method described above.
 
 ### Hydrating objects
 

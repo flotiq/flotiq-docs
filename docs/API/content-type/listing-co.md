@@ -1288,7 +1288,7 @@ The value used for filtering must be the full `dataUrl` of the object, e.g., `/a
 
 Only `contains`, `notContains`, `includes` and `overlaps` type filters can be used with filtering by relation.
 
-#### Filter by relation - encoding 
+#### Filter by relation - encoding
 
 In your requests, you need to ensure URL parameter encoding. For example:
 

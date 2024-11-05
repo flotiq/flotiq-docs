@@ -1261,32 +1261,281 @@ According to [JsonPath](https://github.com/json-path/JsonPath), in the above exa
 
 The value used for filtering must be the full `dataUrl` of the object, e.g., `/api/v1/content/category/cat-1`.
 
+Filtering by relation can be done using the following filters: `includes`,`overlaps`, `contains` and `notContains`.
+See examples below:
+
 !!! Example
-    
-    To display products in the `cat-1` category, you can use a filter of type `includes`:
-    ```json
-    {
-        "categories[*].dataUrl": {
-            "type": "includes",
-            "filter": "/api/v1/content/category/cat-1"
-    }
-    ```
-    { data-search-exclude }
 
-    To display products in either the `cat-1` or `cat-2` categories, you can use a filter of type `overlaps`, allowing you to send a list of categories:
-    ```json
-    {
-        "categories[*].dataUrl": {
-            "type": "overlaps",
-            "filter": [
-                "/api/v1/content/category/cat-1",
-                "/api/v1/content/category/cat-2",
+    === "includes"
+
+        To display products in the `cat-1` category, you can use a filter of type `includes`:
+
+        ```json
+        {
+            "categories[*].dataUrl": {
+                "type": "includes",
+                "filter": "/api/v1/content/category/cat-1"
+            }
+        }
+        ```
+
+        Will return:
+
+        ```json
+        {
+            "id": "1-id",
+            "title": "product-1",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/cat-1"
+            }],
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```json
+        {
+            "id": "2-id",
+            "title": "product-2",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/cat-2"
+            }],
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        ```json
+        {
+            "id": "3-id",
+            "title": "product-3",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/cat-3"
+            }],
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+    === "overlaps"
+
+        To display products in either the `cat-1` or `cat-2` categories, you can use a filter of type `overlaps`, allowing you to send a list of categories:
+
+        ```json
+        {
+            "categories[*].dataUrl": {
+                "type": "overlaps",
+                "filter": [
+                    "/api/v1/content/category/cat-1",
+                    "/api/v1/content/category/cat-2",
+                ]
+            },
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will return:
+
+        ```json
+        [
+            {
+                "id":"4-id",
+                "title": "product-4",
+                "categories":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/category/cat-1"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/category/cat-2"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/category/cat-3"
+                    },
+                ],
+                "internal": {...}
+            },
+            {
+                "id":"5-id",
+                "title": "product-5",
+                "categories":[
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/category/cat-1"
+                    },
+                    {
+                        "type": "internal",
+                        "dataUrl":"/api/v1/content/category/cat-4"
+                    },
+                ],
+                "internal": {...}
+            }
         ]
-    }
-    ```
-    { data-search-exclude }
+        ```
+        { data-search-exclude }
 
-Only `contains`, `notContains`, `includes` and `overlaps` type filters can be used with filtering by relation.
+        Will not return:
+
+        ```json
+        {
+            "id": "3-id",
+            "title": "product-3",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/cat-3"
+            }],
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+    === "contains"
+
+        To display products that belong to a category containing specific ID part, you can use a filter of type `contains`:
+
+        ```json
+        {
+            "categories[*].dataUrl": {
+                "type": "contains",
+                "filter": "/content/category/group-a"
+            },
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will return:
+
+        ```json
+        {
+            "id": "7-id",
+            "title": "product-7",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/group-a-cat-1"
+            }],
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        ```json
+        {
+            "id": "8-id",
+            "title": "product-8",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/group-a-cat-2"
+            }],
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```json
+        {
+            "id": "1-id",
+            "title": "product-1",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/cat-1"
+            }],
+            "internal": {...}
+        }
+        ```
+
+        ```json
+        {
+            "id": "9-id",
+            "title": "product-9",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/group-b-cat-1"
+            }],
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+    === "notContains"
+
+        To display products that belong to a categories that do not contain specific ID part, you can use a filter of type `notContains`:
+
+        ```json
+        {
+            "categories[*].dataUrl": {
+                "type": "notContains",
+                "filter": "/content/category/group-a"
+            },
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will return:
+
+        ```json
+        {
+            "id": "1-id",
+            "title": "product-1",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/cat-1"
+            }],
+            "internal": {...}
+        }
+        ```
+
+        ```json
+        {
+            "id": "9-id",
+            "title": "product-9",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/group-b-cat-1"
+            }],
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        Will not return:
+
+        ```json
+        {
+            "id": "7-id",
+            "title": "product-7",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/group-a-cat-1"
+            }],
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
+
+        ```json
+        {
+            "id": "8-id",
+            "title": "product-8",
+            "categories": [{
+                "type": "internal",
+                "dataUrl": "/api/v1/content/category/group-a-cat-2"
+            }],
+            "internal": {...}
+        }
+        ```
+        { data-search-exclude }
 
 #### Filter by relation - encoding
 

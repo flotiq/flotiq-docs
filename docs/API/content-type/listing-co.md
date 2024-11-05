@@ -1278,6 +1278,7 @@ See examples below:
             }
         }
         ```
+        { data-search-exclude }
 
         Will return:
 
@@ -1453,6 +1454,7 @@ See examples below:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         ```json
         {
@@ -1495,6 +1497,7 @@ See examples below:
             "internal": {...}
         }
         ```
+        { data-search-exclude }
 
         ```json
         {

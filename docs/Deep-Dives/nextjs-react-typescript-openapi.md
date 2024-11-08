@@ -27,7 +27,7 @@ Start with a simple content type, for example one that represents a Hero section
 
  ![Content type definition for a Hero section component](images/nextjs-react-typescript-openapi/ctd-preview.png){: .center .border .width75}
 
-once you create the content type definition - go ahead and add some objects too.
+Once you create the content type definition - go ahead and add some objects too.
 
 ## Create NextJS project
 
@@ -40,6 +40,39 @@ cd flotiq-component-demo
 { data-search-exclude }
 
 Read more about [create-next-app here](https://nextjs.org/docs/api-reference/create-next-app).
+
+## Get Flotiq API Key
+To access your Flotiq data in your app, you need to obtain your Flotiq API key.
+There are two ways of doing that:
+
+### Flotiq Setup
+We can use `flotiq-setup` to import API keys to variable files like `.env`.
+
+Simply run `npx flotiq-setup` to automatically import your API keys to variable files.
+After running the `flotiq-setup` script, your browser will pop-up with a prompt to select which space the app will be able to access.
+ ![](images/nextjs-react-typescript-openapi/flotiq-setup-prompt.png)
+
+
+### Flotiq Dashboard
+
+If you want to manually get your API key for your application, you can do so by visiting Flotiq Dashboard.
+API Keys can be accessed via the API Keys page in the Flotiq Panel.
+For our purpose, the Read-only key is sufficient.
+![](/docs/API/images/api-keys-menu.png){: .center .width25 .border}
+![](/docs/API/images/api-keys_1.png){: .center .border}
+
+
+After you obtain your API key, you need to provide it to Codegen and your app.
+To do so, just create `.env` file in the app folder with following content:
+```
+FLOTIQ_API_KEY=<YOUR_API_KEY>
+```
+{ data-search-exclude }
+
+Now that you added the API key, you can proceed with next steps.
+
+!!! note
+    You can read more about [API Keys here.](/docs/API/)
 
 ## Flotiq Codegen TS 
 This package simplifies Typescript Fetch API integration for your Flotiq project, tailored to your Flotiq account data.

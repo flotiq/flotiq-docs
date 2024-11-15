@@ -226,6 +226,7 @@ nav:
     - 'Use Next.js, Typescript and OpenAPI with Flotiq content': 'Deep-Dives/nextjs-react-typescript-openapi.md'
     - 'Upload media example app': Deep-Dives/upload-media.md
     - 'Build headless no-code website Divhunt': Deep-Dives/divhunt.md
+    - 'Build headless no-code website WebStudio': Deep-Dives/webstudio.md
   - Flotiq Mobile Expo: Flotiq-Mobile-Expo/overview.md
   - FAQ: faq.md
   - Tags: tags.md

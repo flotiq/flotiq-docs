@@ -35,6 +35,10 @@ After creating the content type, add a few example posts and proceed to WebStudi
 
 ## WebStudio Setup
 
+### Creating a project
+
+Start by going to [WebStudio dashboard](https://apps.webstudio.is/dashboard){:target="_blank"} and edit your project or create a new one. You can use either an existing template, or create an empty project. Then select your newly created project and proceed to either [creating dynamic content on your page](#embed-data-from-flotiq-to-webstudio-page) or [creating dynamic pages](#defining-a-dynamic-page).
+
 ### Defining a dynamic page
 
 With Flotiq and WebStudio you can automate the process of creating pages, which is ideal in uses like blog or portfolio.
@@ -57,6 +61,7 @@ Assign a value from one of the objects you added in Flotiq.
 
 After you've defined the dynamic page, you have to create a data variable, that WebStudio will use to get the content from Flotiq.
 Data variables are a tool that allow you to fetch external content and save it in your project.
+In order to add a data variable select your page settings; there you will find a section called `Data Variables` with an option to add new data variable.
 
  ![Add data variable in WebStudio](images/webstudio/webstudio-adding-data-variable.png){: .center .border}
 
@@ -67,7 +72,7 @@ In the data variable configuration, you have to define the following properties:
 * URL - if you are using GraphQL type, it should always be `https://api.flotiq.com/api/graphql`. For resource type this value will differ, depending on your contenttype name,
 * Headers - the headers for the request to Flotiq. Here, you have to add a header with `X-Auth-Token` in the title [Flotiq API Key](https://flotiq.com/docs/API/){:target="_blank"} as a value,
 * Query - here you have to define a Query for fetching data from Flotiq in GraphQL. It should fetch the custom field, that you've selected as your dynamic page identifier earlier,
-  using the [content object GraphQL fetch with custom field](http://localhost:4000/docs/API/graph-ql/#__tabbed_2_2), so in this case we use `slug`. Whole query for fetching the content of blogpost from Flotiq BlogPost template is presented below:
+  using the [content object GraphQL fetch with custom field](https://flotiq.com/docs/API/graph-ql/#__tabbed_2_2), so in this case we use `slug`. Whole query for fetching the content of blogpost from Flotiq BlogPost template is presented below:
 
 ```graphql
 query Post($slug: String = "") {

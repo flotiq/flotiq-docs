@@ -153,7 +153,7 @@ You may edit it by giving it a custom name of your choice.
 
  ![Editing variable for collection items](images/webstudio/webstudio-config-collection-item-variable.png){: .center .border}
 
-Once you have a collection item with items from our Flotiq's content list, you can edit the collection by adding new components to the collection items. Mind that editing one item will automatically edit all of them. Now you can create the custom card using the data from your content object, similarly to [embedding data to dynamic page](#embed-data-from-flotiq-to-webstudio-page) but now you are gonna use the `Collection Item` variable.
+Once you have a collection item with items from our Flotiq's content list, you can edit the collection by adding new components to the collection items. Mind that editing one item will automatically edit all of them. Now you can create the custom card using the data from your content object, similarly to [embedding data to dynamic page](#embed-data-from-flotiq-to-webstudio-page) but now you are going to use the `Collection Item` variable.
 
  ![Editing variable for collection items](images/webstudio/webstudio-creating-overview.gif){: .center .border .width90}
 

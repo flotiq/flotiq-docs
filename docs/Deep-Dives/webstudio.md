@@ -114,7 +114,7 @@ type in the data variable name that you defined earlier, and select the values f
  ![Binding text in WebStudio](images/webstudio/webstudio-binding-text.gif){: .center .border}
 
 Different content fields may require embedding them in different components. For example in order to insert an image from Flotiq, you should add `image` component to your page,
-open expression editor for `Source` property, and provide the URL value from the media link from your content object, with Flotiq's base url at the start of the expression,like so:
+open expression editor for `Source` property, and provide the URL value from the media link from your content object, with Flotiq's base url at the start of the expression, like so:
 
   `"https://api.flotiq.com/" + VariableName.data.data.blogpost.headerImage[0].url`.
 

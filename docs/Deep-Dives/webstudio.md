@@ -72,32 +72,30 @@ In the data variable configuration, you have to define the following properties:
 * URL - if you are using GraphQL type, it should always be `https://api.flotiq.com/api/graphql`. For resource type this value will differ, depending on your contenttype name,
 * Headers - the headers for the request to Flotiq. Here, you have to add a header with `X-Auth-Token` in the title [Flotiq API Key](https://flotiq.com/docs/API/){:target="_blank"} as a value,
 * Query - here you have to define a Query for fetching data from Flotiq in GraphQL. It should fetch the custom field, that you've selected as your dynamic page identifier earlier,
-  using the [content object GraphQL fetch with custom field](https://flotiq.com/docs/API/graph-ql/#__tabbed_2_2), so in this case we use `slug`. Whole query for fetching the content of blogpost from Flotiq BlogPost template is presented below:
-
-```graphql
-query Post($slug: String = "") {
-  blogpost(field: "slug", value: $slug) {
-    id
-    title
-    slug
-    excerpt
-    headerImage {
-        alt
-        url
+        using the [content object GraphQL fetch with custom field](https://flotiq.com/docs/API/graph-ql/#__tabbed_2_2), so in this case we use `slug`. Whole query for fetching the content of blogpost from Flotiq BlogPost template is presented below:
+  ```graphql
+  query Post($slug: String = "") {
+    blogpost(field: "slug", value: $slug) {
+      id
+      title
+      slug
+      excerpt
+      headerImage {
+          alt
+          url
+      }
     }
   }
-}
-```
-{ data-search-exclude }
+  ```
+  { data-search-exclude }
 
 * GraphQL Variables - here you have to bind the value of your dynamic path (the one you defined in the dynamic page configuration) to the field that you query your Flotiq data by. The expression will look like this:
-
-```json
-{
-  "<your graphql query value variable>": system.params.<webstudio dynamic path variable>
-}
-```
-{ data-search-exclude }
+  ```json
+  {
+    "<your graphql query value variable>": system.params.<webstudio dynamic path variable>
+  }
+  ```
+  { data-search-exclude }
 
  ![Adding GraphQL Variables to data variable in WebStudio](images/webstudio/webstudio-graphql-variables.png){: .center .border}
 

@@ -189,6 +189,7 @@ nav:
     - 'Overview': Universe/index.md
     - Deployment:
       - 'Overview': Universe/deployment/overview.md
+      - 'Gatsby project to Amazon S3': Universe/deployment/amazon-s3.md
       - 'NextJS project to Vercel': Universe/deployment/vercel-nextjs.md
       - 'Gatsby project to Vercel': Universe/deployment/vercel-gatsby.md
       - 'NextJS project to Netlify': Universe/deployment/netlify-nextjs.md

@@ -76,6 +76,10 @@ To manage user roles, navigate to the dedicated **User Roles** section within th
 
 ![](images/user-roles/assign_role.png){: .border}
 
+!!! warning
+    User roles will also restrict the API keys owned by that user (both global and scoped) to ensure that users have only access to the types and objects they should have access to.
+    If the user has generated the scoped API key before the admin assigned the role, the key will lose access to types not included in the role.
+
 ## Custom User Roles
 
 !!! note

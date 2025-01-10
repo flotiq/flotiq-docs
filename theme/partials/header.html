@@ -37,6 +37,7 @@
                         class="md-header__button md-logo desktop"
                         aria-label="{{ config.site_name }}"
                         data-md-component="logo"
+                        data-event-location="docs_nav_top_logo_home"
                 >
                     <img src="{{ 'API/images/flotiq-logo-wt.svg' | url }}" alt="Flotiq">
                 </a>
@@ -46,6 +47,7 @@
                         class="md-header__button md-logo docs-badge desktop"
                         aria-label="{{ config.site_name }}"
                         data-md-component="logo"
+                        data-event-location="docs_nav_top_logo_docs"
                 >
                     <img src="{{ 'API/images/docs-badge.svg' | url }}" alt="Flotiq">
                 </a>
@@ -57,6 +59,7 @@
                         class="md-header__button md-logo mobile"
                         aria-label="{{ config.site_name }}"
                         data-md-component="logo"
+                        data-event-location="docs_nav_top_logo_home"
                 >
                     <img src="{{ 'API/images/flotiq-badge-logo.svg' | url }}" alt="Flotiq">
                 </a>
@@ -66,6 +69,7 @@
                         class="md-header__button md-logo docs-badge mobile"
                         aria-label="{{ config.site_name }}"
                         data-md-component="logo"
+                        data-event-location="docs_nav_top_logo_docs"
                 >
                     <img src="{{ 'API/images/docs-badge.svg' | url }}" alt="Flotiq">
                 </a>
@@ -98,6 +102,7 @@
                         class="md-header__button md-icon"
                         title="{{ option.toggle.name }}"
                         for="__palette_{{ loop.index0 or loop.length }}"
+                        data-event-location="docs_nav_top_dark_mode"
                         hidden
                 >
                     {% include ".icons/" ~ option.toggle.icon ~ ".svg" %}
@@ -157,9 +162,9 @@
             <label class="md-header__button md-icon" for="__drawer">
                 {% include ".icons/material/menu" ~ ".svg" %}
             </label>
-            <a href="https://flotiq.com/request-a-demo/" target="_blank" class="nav-additional-element">Request a demo</a>
-            <a href="https://editor.flotiq.com/login" target="_blank" class="nav-additional-element">Log in</a>
-            <a href="https://editor.flotiq.com/register" target="_blank" class="nav-additional-element nav-button">Try Flotiq for free</a>
+            <a href="https://flotiq.com/request-a-demo/" target="_blank" class="nav-additional-element" data-event-location="docs_nav_top_demo">Request a demo</a>
+            <a href="https://editor.flotiq.com/login" target="_blank" class="nav-additional-element" data-event-location="docs_nav_top_login">Log in</a>
+            <a href="https://editor.flotiq.com/register" target="_blank" class="nav-additional-element nav-button" data-event-location="docs_nav_top_signup">Try Flotiq for free</a>
         </div>
     </nav>
 

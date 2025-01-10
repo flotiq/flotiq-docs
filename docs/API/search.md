@@ -28,6 +28,8 @@ You can use the search engine via the `GET /api/v1/search` endpoint to search th
     | order_by               | string | Name of the field to sort results by (they are always primarily sorted by `_score`)                                                                                                                                                                                                                                                                 |
     | order_direction        | string | Direction of sorting (`asc` for ascending or `desc` for descending, default `asc`)                                                                                                                                                                                                                                                                  |
     | random_seed            | number | Seed for random sorting order (overrides `order_by`)                                                                                                                                                                                                                                                                                                |
+!!! Note
+    The Flotiq search endpoint supports querying up to a maximum of 10,000 results.
 
 ## Example: Search for "Flotiq" in posts
 

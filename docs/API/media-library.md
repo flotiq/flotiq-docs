@@ -88,6 +88,8 @@ Below we listed all parameters describing the `Media` object.
 | url        | Url to original image without API host (e.g. /image/0x0/_media-456456.jpg) |
 | height     | Height, or 0 for 'file' type |
 | width      | Width, or 0 for 'file' type |
+| alt        | Short text that can be used for an ALT tag |
+| variants   | array of variant objects for altering image |
 
 ### Media Content Type Definition
 

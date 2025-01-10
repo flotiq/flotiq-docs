@@ -156,7 +156,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         ```
         { data-search-exclude }
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 
@@ -229,125 +229,124 @@ To pass this query to the Flotiq, you need to call:
 
 !!! Example
 
-=== "CURL"
+    === "CURL"
 
-    ``` 
-    curl -X POST 'https://api.flotiq.com/api/graphql' \
-    --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
-    --header 'Content-Type: application/json' \
-    --data-raw '{"query":"query { blogposts(id: \"blogposts-456712\") { id title } }"}'
-    ```
-    { data-search-exclude }
+        ``` 
+        curl -X POST 'https://api.flotiq.com/api/graphql' \
+        --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
+        --header 'Content-Type: application/json' \
+        --data-raw '{"query":"query { blogposts(id: \"blogposts-456712\") { id title } }"}'
+        ```
+        { data-search-exclude }
 
-=== "JavaScript + Fetch"
+    === "JavaScript + Fetch"
 
-    ```
-    fetch('https://api.flotiq.com/api/graphql', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
-        },
-        body: JSON.stringify({
-            query: 'query { blogposts(id: "blogposts-456712") { id title } }'
+        ```
+        fetch('https://api.flotiq.com/api/graphql', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
+            },
+            body: JSON.stringify({
+                query: 'query { blogposts(id: "blogposts-456712") { id title } }'
+            })
         })
-    })
-    .then(response => response.json())
-    .then(data => console.log(data));
-    ```
-    { data-search-exclude }
+        .then(response => response.json())
+        .then(data => console.log(data));
+        ```
+        { data-search-exclude }
 
-=== "Node + Axios"
+    === "Node + Axios"
 
-    ```
-    const axios = require('axios');
+        ```
+        const axios = require('axios');
 
-    axios.post('https://api.flotiq.com/api/graphql', {
-        query: 'query { blogposts(id: "blogposts-456712") { id title } }'
-    }, {
-        headers: {
+        axios.post('https://api.flotiq.com/api/graphql', {
+            query: 'query { blogposts(id: "blogposts-456712") { id title } }'
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
+            }
+        })
+        .then(response => console.log(response.data))
+        .catch(error => console.log(error));
+        ```
+        { data-search-exclude }
+
+    === "Python + Requests"
+
+        ```
+        import requests
+
+        url = 'https://api.flotiq.com/api/graphql'
+        headers = {
             'Content-Type': 'application/json',
             'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
         }
-    })
-    .then(response => console.log(response.data))
-    .catch(error => console.log(error));
-    ```
-    { data-search-exclude }
+        data = {
+            'query': 'query { blogposts(id: "blogposts-456712") { id title } }'
+        }
 
-=== "Python + Requests"
-
-    ```
-    import requests
-
-    url = 'https://api.flotiq.com/api/graphql'
-    headers = {
-        'Content-Type': 'application/json',
-        'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
-    }
-    data = {
-        'query': 'query { blogposts(id: "blogposts-456712") { id title } }'
-    }
-
-    response = requests.post(url, headers=headers, json=data)
-    print(response.json())
-    ```
-    { data-search-exclude }
+        response = requests.post(url, headers=headers, json=data)
+        print(response.json())
+        ```
+        { data-search-exclude }
 
 
 !!! Response
-=== "200 OK"
+    === "200 OK"
 
-    Returned when the object was found
+        Returned when the object was found
 
-    ```json
-    {
-        "data": {
-            "blogposts": {
-                "id": "blogposts-456712",
-                "title": "New object"
+        ```json
+        {
+            "data": {
+                "blogposts": {
+                    "id": "blogposts-456712",
+                    "title": "New object"
+                }
             }
         }
-    }
-    ```
-    { data-search-exclude }
+        ```
+        { data-search-exclude }
 
-=== "401 Unauthorized"
+    === "401 Unauthorized"
 
-    Returned when the API key was missing or incorrect
+        Returned when the API key was missing or incorrect
 
-    ```json
-    {
-        "errors": [
-            {
-                "message": "Unauthorized",
-                "extensions": {
-                    "code": "UNAUTHORIZED"
+        ```json
+        {
+            "errors": [
+                {
+                    "message": "Unauthorized",
+                    "extensions": {
+                        "code": "UNAUTHORIZED"
+                    }
                 }
-            }
-        ]
-    }
-    ```
-    { data-search-exclude }
+            ]
+        }
+        ```
+        { data-search-exclude }
 
-=== "404 Not found"
+    === "404 Not found"
 
-    Returned when the content type definition wasn't found
+        Returned when the content type definition wasn't found
 
-    ```json
-    {
-        "errors": [
-            {
-                "message": "Not found",
-                "extensions": {
-                    "code": "NOT_FOUND"
+        ```json
+        {
+            "errors": [
+                {
+                    "message": "Not found",
+                    "extensions": {
+                        "code": "NOT_FOUND"
+                    }
                 }
-            }
-        ]
-    }
-    ```
-    { data-search-exclude }
-
+            ]
+        }
+        ```
+        { data-search-exclude }
 
 #### Step 2: Exploring Advanced Features
 Flotiq API offers various advanced features and functionalities to enhance your application. Here are a few examples:

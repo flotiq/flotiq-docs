@@ -12,12 +12,11 @@ There are two ways to update the content of an object:
 
 `PUT`:
 When updating the object (`PUT` requests), all properties must be present in the request body,
-as the object data are replaced with the request body. The id property inside the object is ignored in `PUT` requests.
+as the object data are replaced with the request body.
 Validation of update request works the same as in saving requests.
 
 `PATCH`:
 When updating an object (a `PATCH` request), it is not necessary to specify all the properties of the object.
-The id property inside the object is ignored in `PATCH` requests.
 Validating the update request works the same as it does when saving requests.
 
 !!! note
@@ -192,7 +191,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         { data-search-exclude }
 
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 
@@ -269,6 +268,9 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         ```
         { data-search-exclude }
 
+!!! note
+    The id property of the object can be updated through API if id provided in the request body is different from the one provided in request path.
+    This only works in updating single content object
 
 #### Possible validation errors
 

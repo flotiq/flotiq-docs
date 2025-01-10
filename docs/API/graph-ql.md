@@ -12,7 +12,7 @@ which understands GraphQL queries for your Content Objects.
 ## What is a GraphQL?
 
 GraphQL is a query language for APIs.
-It is designed to make API more flexible than REST API - it is all about giving clients precisely the data they request. 
+It is designed to make API more flexible than REST API - it is all about giving clients precisely the data they request.
 The developers can pull various data, in the desired shape, with a single API call.
 
 ## Graphql in Flotiq
@@ -46,14 +46,13 @@ To get the full GraphQL schema that describes your data you have to call the GET
 It describes the shape of your current Content Type Definitions, including attribute types,
 required fields and relations.
 
-
 !!! Request
      ```
      curl -X GET 'https://api.flotiq.com/api/graphql/schema' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
      ```
      { data-search-exclude }
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 
@@ -124,45 +123,97 @@ We can specify two types of queries - responsible for retrieving a single object
 
 #### Query single object
 
-To a get single object, you need to pass the object identifier and fields you want to receive in the response. 
+To a get single object, you need to pass the object identifier and fields you want to receive in the response.
 Example Query in GraphQL language to get `id` and `title` for the product with id `product-1` looks like:
 
-!!! GraphQL query
+!!! Example
 
-    ```graphql
-    query {
-        products(id:"product-1") {
-            id
-            title
-        }
-    }
-    ```
-    { data-search-exclude }
+    === "Use id to fetch object"
 
-To pass this query to the Flotiq, you need to call:
+        The most straight-forward way of querying your Flotiq single object with GraphQL is to use the objects ID:
 
-!!! Request
-    ```
-    curl -X POST 'https://api.flotiq.com/api/graphql' \
-        --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
-        --header 'Content-Type: application/json' \
-        --data-raw '{"query":"query{products(id:\"product-1\"){id,title,}}"}'
-    ```
-    { data-search-exclude }
+        !!! GraphQL query
 
-!!! Response
-    === "200 OK"
-        ```json
-        {
-            "data": {
-                "products": {
-                    "id": "product-1",
-                    "title": "Green Tea"
+            ```graphql
+            query {
+                products(id:"product-1") {
+                    id
+                    title
                 }
             }
-        }
-        ```
-        { data-search-exclude }
+            ```
+            { data-search-exclude }
+
+        To pass this query to the Flotiq, you need to call:
+
+        !!! Request
+            ```
+            curl -X POST 'https://api.flotiq.com/api/graphql' \
+                --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
+                --header 'Content-Type: application/json' \
+                --data-raw '{"query":"{ products(id: \"product-1\") { id title } }"}'
+            ```
+            { data-search-exclude }
+
+        !!! Response
+            === "200 OK"
+                ```json
+                {
+                    "data": {
+                        "products": {
+                            "id": "product-1",
+                            "title": "Green Tea"
+                        }
+                    }
+                }
+                ```
+                { data-search-exclude }
+
+    === "Use custom field to fetch object"
+
+        You can use your own field from your content type definition to query Flotiq data with GraphQL.
+        To do so, your content type definition has to have a text field with [unique property](../panel/content-types.md?h=unique#property-settings).
+        This will allow you to query objects of that type using arguments:
+
+        - field: `<your unique text field name>`,
+        - value: `<the value you want to query by>`
+
+        !!! GraphQL query
+
+            ```graphql
+            query {
+                products(field: "title", value: "Green Tea") {
+                    id
+                    title
+                }
+            }
+            ```
+            { data-search-exclude }
+
+        To pass this query to the Flotiq, you need to call:
+
+        !!! Request
+            ```
+            curl -X POST 'https://api.flotiq.com/api/graphql' \
+                --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
+                --header 'Content-Type: application/json' \
+                --data-raw '{"query":"{ products(field: \"title\", value: \"Green Tea\") { id title } }"}'
+            ```
+            { data-search-exclude }
+
+        !!! Response
+            === "200 OK"
+                ```json
+                {
+                    "data": {
+                        "products": {
+                            "id": "product-1",
+                            "title": "Green Tea"
+                        }
+                    }
+                }
+                ```
+                { data-search-exclude }
 
 #### List objects
 
@@ -179,48 +230,50 @@ While listing objects, you can use the optional parameters
 
 The below example shows how to list all products ordered by title, limited to 2 results:
 
-!!! GraphQL query
-    ```graphql
-    query {
-        productsList(limit: 2, order_by: "title", order_direction: "asc") {
-            id
-            title
-        }
-    }
-    ```
-    { data-search-exclude }
+!!! Example
 
-To pass this query to the Flotiq, you need to call:
-
-!!! Request
-    ```
-    curl -X POST 'https://api.flotiq.com/api/graphql' \
-        --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
-        --header 'Content-Type: application/json' \
-        --data-raw '{"query":"query {productsList(limit: 2, order_by: \"title\", order_direction: \"desc\") {id, title}}"}'
-    ```
-    { data-search-exclude }
-
-!!! Response
-
-    === "200 OK"
-        ```json
-        {
-          "data": {
-            "productsList": [
-              {
-                "id": "product-3",
-                "title": "Rooibos"
-              },
-              {
-                "id": "product-2",
-                "title": "Earl Grey"
-              }
-            ]
-          }
+    !!! GraphQL query
+        ```graphql
+        query {
+            productsList(limit: 2, order_by: "title", order_direction: "asc") {
+                id
+                title
+            }
         }
         ```
         { data-search-exclude }
+
+    To pass this query to the Flotiq, you need to call:
+
+    !!! Request
+        ```
+        curl -X POST 'https://api.flotiq.com/api/graphql' \
+            --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
+            --header 'Content-Type: application/json' \
+            --data-raw '{"query":"query {productsList(limit: 2, order_by: \"title\", order_direction: \"desc\") {id, title}}"}'
+        ```
+        { data-search-exclude }
+
+    !!! Response
+
+        === "200 OK"
+            ```json
+            {
+            "data": {
+                "productsList": [
+                {
+                    "id": "product-3",
+                    "title": "Rooibos"
+                },
+                {
+                    "id": "product-2",
+                    "title": "Earl Grey"
+                }
+                ]
+            }
+            }
+            ```
+            { data-search-exclude }
 
 ### Relation resolving (hydration)
 
@@ -241,7 +294,7 @@ For example, when we have a product object:
 ```
 { data-search-exclude }
 
-and category: 
+and category:
 ```json
 {
    "id": "category-1",
@@ -252,56 +305,57 @@ and category:
 
 The GraphQL query for listing objects including categories will look like:
 
-!!! GraphQL query
-    ```graphql
-    query {
-        productsList(limit: 1) {
-            id
-            title
-            categories {
+!!! Example
+
+    !!! GraphQL query
+        ```graphql
+        query {
+            productsList(limit: 1) {
                 id
-                name
-            }
-        }	
-    }
-    ```
-    { data-search-exclude }
-
-!!! Request
-    ```
-    curl --request POST \
-        --url 'https://api.flotiq.com/api/graphql?auth_token=__YOUR_AUTH_TOKEN__' \
-        --header 'content-type: application/json' \
-        --data '{"query":"query{productsList(limit:1){id,title,categories{id,name}}}"}'
-    ```
-    { data-search-exclude }
-
-!!! Response
-
-    === "200 OK"
-        Will return automatically resolved relation:
-        ```json
-        {
-            "data": {
-                "productsList": [
-                    {
-                        "id": "product-3",
-                        "title": "Rooibos",
-                        "categories": [
-                            {
-                                "id": "category-1",
-                                "name": "Tea"
-                            }
-                        ]
-                    }
-                ]
+                title
+                categories {
+                    id
+                    name
+                }
             }
         }
         ```
         { data-search-exclude }
 
-As you can see, the related element, `category`, was fetched, including its properties.
+    !!! Request
+        ```
+        curl --request POST \
+            --url 'https://api.flotiq.com/api/graphql?auth_token=__YOUR_AUTH_TOKEN__' \
+            --header 'content-type: application/json' \
+            --data '{"query":"query{productsList(limit:1){id,title,categories{id,name}}}"}'
+        ```
+        { data-search-exclude }
 
+    !!! Response
+
+        === "200 OK"
+            Will return automatically resolved relation:
+            ```json
+            {
+                "data": {
+                    "productsList": [
+                        {
+                            "id": "product-3",
+                            "title": "Rooibos",
+                            "categories": [
+                                {
+                                    "id": "category-1",
+                                    "name": "Tea"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+            ```
+            { data-search-exclude }
+
+    As you can see, the related element, `category`, was fetched, including its properties.
 
 ## Explore using Insomnia client
 

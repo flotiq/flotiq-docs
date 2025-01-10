@@ -28,6 +28,8 @@ You can use the search engine via the `GET /api/v1/search` endpoint to search th
     | order_by               | string | Name of the field to sort results by (they are always primarily sorted by `_score`)                                                                                                                                                                                                                                                                 |
     | order_direction        | string | Direction of sorting (`asc` for ascending or `desc` for descending, default `asc`)                                                                                                                                                                                                                                                                  |
     | random_seed            | number | Seed for random sorting order (overrides `order_by`)                                                                                                                                                                                                                                                                                                |
+!!! Note
+    The Flotiq search endpoint supports querying up to a maximum of 10,000 results.
 
 ## Example: Search for "Flotiq" in posts
 
@@ -111,3 +113,21 @@ You can use the `random_seed` parameter to retrieve random content objects. The 
 
 !!! Note
     Since random_seed is changing the order of retrieved content objects, it will override the value of your `order_by` parameter.
+
+## Increase scoring for specific content types
+
+!!! Note
+    Index boosting is available in Custom plan tier.
+
+Index boosting allows you to prioritize results from specific indices when performing searches across multiple content types (CTDs). This feature increases the score of results from certain indices based on user-defined weights, which is useful when some CTDs are more relevant than others.
+
+!!! Example
+    Pass the `indices_boost` parameter in your query to boost specific CTDs:
+
+    ```
+    /api/v1/search?indices_boost[ctd1Name]=2&indices_boost[ctd2Name]=1.5
+    ```
+    { data-search-exclude }
+
+    * ctd1Name, ctd2Name – names of the CTDs.
+    * 2, 1.5 – boost values (higher means more weight)

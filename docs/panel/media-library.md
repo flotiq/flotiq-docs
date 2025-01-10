@@ -20,6 +20,10 @@ This section of the Media Library gives you access to all of your files that you
 
 ![Flotiq Media Library](./images/MediaLibrary-home.png){: .border}
 
+### ALT property for images
+
+When editing an image, you can now add an optional `alt` text field, which you can later use to provide the value for `alt` tags for images in your project. You can modify the `alt` text in the media editing screen for each uploaded image.
+
 ## Stock photos
 
 This section gives you access to the Unsplash library of images.
@@ -48,6 +52,30 @@ After you are done with modifying the image, press `Save changes` button and a v
 
 !!! Note
     Flotiq variants currently do not support creating transformations for animated GIF files.
+
+## Media tags
+
+You can add tags to your media files to help categorize and find them.
+
+To add tag to the file, use the `add tags` button on the media listing:
+
+![Add tags](./images/AddTags.png){: .border .width50 .center}
+
+It will open a modal where you can choose existing tags or create new ones.
+
+![Add tags modal](./images/AddTagsModal.png){: .border .width50 .center}
+
+When you finish editing, click the `Save` button.
+
+You can manage your tags on the Tags page:
+
+![Listing tags](./images/ListingTags.png){: .border .width50 .center}
+
+The tag contains only name field.
+
+Tag editing is compatible with standard content object editing. See more in the [editing content object description](/docs/panel/content-objects/).
+
+Mass edit is not enabled for tags, as it has only unique fields.
 
 ## API Endpoints
 

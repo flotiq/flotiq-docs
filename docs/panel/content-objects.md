@@ -30,7 +30,7 @@ From the grid, the users can go to the form that allows them to edit particular 
 
 ![Flotiq Object Editor](images/EditObject.png){: .center .width75 .border}
 
-There are 15 types of controls in the dashboard, all described in detail below:
+There are 16 types of controls in the dashboard, all described in detail below:
 
 * [Text](#text)
 * [Long text](#long-text)
@@ -47,6 +47,7 @@ There are 15 types of controls in the dashboard, all described in detail below:
 * [Geo](#geo)
 * [Date](#date)
 * [Block](#block)
+* [Simple list](#simple-list)
 
 All required fields are marked with a red asterisk - *.
 You can save Content Object only when you insert values in all required fields.
@@ -157,22 +158,22 @@ Second row:
 * Image - add image by providing image URL
 * Media library - opens Media Library, where you can add new files or select the ones already added
 
-* Link object - opens modal with existing objects. Once object is selected a new span is embeded into the editor HTML. The span contains following attributes:
+* Link object - opens modal with existing objects. Once object is selected a new span is embedded into the editor HTML. The span contains following attributes:
     * `data-relation-object-id` - object id
     * `data-relation-object-type` - object type
     * `data-relation-url` - object data url
 
-    Note that the span is empty and its up to you to handle it on your page programatically.
+    Note that the span is empty and its up to you to handle it on your page programmatically.
 
 * Display source - shows editable HTML markup of field contents; please change it with caution.
 
 #### Image options
 
-After image is added, you can double click to format it. You can add alternative text, change the dimensions, position and border of the image. You can also add a hyperlink to it by switching to the `Link` tab.
+After image is added, you can double-click to format it. You can add alternative text, change the dimensions, position and border of the image. You can also add a hyperlink to it by switching to the `Link` tab.
   
 ![](images/co-form/richtext/ImageProperties.png){: .center .border .width50}
 
-You can make the editor bigger by dragging the grey arrow on the bottom right corner of the control.
+You can make the editor bigger by dragging the grey arrow in the bottom right corner of the control.
 
 ### Email
 
@@ -192,7 +193,7 @@ Standard checkbox control.
 
 ### Select
 
-Standard select control. You can choose only one option.
+Standard select control. Depending on `multiple` meta property you can choose only one or many options.
 
 ### Relation
 
@@ -312,7 +313,7 @@ remove the block (`X` button) and move the block down (`arrow down` button).
     After you choose this block, the `Media library` button will appear.
     To choose an image, video or text file, you need to click that button and find the file you need to attach to the block.
   
-    You can add a border, stretch or add background to the file in the tunes menu.
+    You can add a border, stretch or add background to the file in the tunes' menu.
   
     ![](images/co-form/block/MediaTunes.png){: .border .width25 .center}
 
@@ -331,6 +332,10 @@ remove the block (`X` button) and move the block down (`arrow down` button).
      ![](images/co-form/block/TableTunes.png){: .border .width25 .center}
 
     The tunes allow adding information whether the table has header or not.
+
+### Simple list
+
+Array of standard text inputs wit possibility of choosing the order, in other places referred as Options control.
 
 ## Deleting content
 

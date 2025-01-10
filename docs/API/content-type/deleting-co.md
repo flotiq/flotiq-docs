@@ -150,7 +150,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
         { data-search-exclude }
 
 
-!!! Responses
+!!! Response
 
     === "204 OK"
 

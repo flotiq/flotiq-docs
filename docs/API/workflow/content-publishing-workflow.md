@@ -75,6 +75,8 @@ Workflows are defined at the Content Type Definition level, in order to change t
 ```
 { data-search-exclude }
 
+To see which workflows have been implemented in Flotiq, you need to query the `GET` `/api/v1/workflow` endpoint.
+
 ### Transitioning objects in the workflow
 
 Every content object created in the system will automatically be assigned the first state of the workflow, in the example above - `draft`. In order to transition the object to a different state use a simple `PUT` request to `/api/v1/workflow/:content_type/:object_id` endpoint with the following body:

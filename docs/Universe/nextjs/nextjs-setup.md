@@ -25,6 +25,7 @@ Start the setup by installing Flotiq's CLI for Next.js integration:
 ```bash
 npm install -g flotiq-nextjs-setup
 ```
+{ data-search-exclude }
 
 Next, initialize the Next.js project using the following npx command:
 
@@ -54,12 +55,14 @@ Once you have your NextJS project setup, it's time to integrate it with Flotiq. 
 ```bash
 cd <path-to-nextjs-project>
 ```
+{ data-search-exclude }
 
 And run the Flotiq Next.js setup process with the following command:
 
 ```bash
 npx flotiq-nextjs-setup
 ```
+{ data-search-exclude }
 
 This command will guide you through the final steps of setting up your project. Notably it will:
 
@@ -80,6 +83,7 @@ To start, run the following command to deploy your project locally:
 ```bash
 npm run dev
 ```
+{ data-search-exclude }
 
 This will deploy your site on local address `http://localhost:3000` where you can preview its content (of course this address will change in staging or production environments, or if you used `--port` flag on application start).
 
@@ -102,12 +106,14 @@ To regenerate Flotiq SDK run the following command:
 ```bash
 npm exec flotiq-api-typegen
 ```
+{ data-search-exclude }
 
 If you change content types regularly and would like to regenerate the SDK automatically, run the following command to watch for changes and regenerate after each modification:
 
 ```bash
 npm exec flotiq-api-typegen --watch
 ```
+{ data-search-exclude }
 
 ## Content cache revalidation
 

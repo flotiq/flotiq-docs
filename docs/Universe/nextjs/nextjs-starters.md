@@ -8,7 +8,7 @@ description: Jump-start your projects with React NextJS Starters.
 
 # NextJS starters
 
-![](images/nextjs/nextjs-starters.png){: .center .width75 .border}
+![](../images/nextjs/nextjs-starters.png){: .center .width75 .border}
 
 Explore our specially crafted [starters](https://flotiq.com/starters/){:target="_blank"} designed to streamline your web development process. These starters are not only ready to use but also easily customizable to suit your unique requirements.
 
@@ -22,7 +22,7 @@ Discover our range of starters [here](https://flotiq.com/starters/){:target="_bl
 
 NextJS starter for creating a blog with Flotiq
 
-![](images/gatsby/flotiq-starter-blog-1.png){: .center .width75 .border}
+![](../images/gatsby/flotiq-starter-blog-1.png){: .center .width75 .border}
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-blog-1){:target="_blank"}
 
@@ -32,7 +32,7 @@ NextJS starter for creating a blog with Flotiq
 
 NextJS Starter to display information about events from Flotiq Events with Calendars
 
-![](images/gatsby/flotiq-starter-event-2.png){: .center .width75 .border}
+![](../images/gatsby/flotiq-starter-event-2.png){: .center .width75 .border}
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-event-2){:target="_blank"}
 
@@ -42,7 +42,7 @@ NextJS Starter to display information about events from Flotiq Events with Calen
 
 A boilerplate repository to jumpstart your next e-commerce project, using Snipcart, Flotiq and Next.js.
 
-![](images/gatsby/flotiq-starter-shop-2.png){: .center .width75 .border}
+![](../images/gatsby/flotiq-starter-shop-2.png){: .center .width75 .border}
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-shop-2){:target="_blank"}
 
@@ -52,7 +52,7 @@ A boilerplate repository to jumpstart your next e-commerce project, using Snipca
 
 A free, open-source, image-concentric starter for NextJS.
 
-![](images/gatsby/flotiq-starter-portfolio-2.png){: .center .width75 .border}
+![](../images/gatsby/flotiq-starter-portfolio-2.png){: .center .width75 .border}
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-portfolio-2){:target="_blank"}
 
@@ -62,7 +62,7 @@ A free, open-source, image-concentric starter for NextJS.
 
 A starter to build your own recipes page with Flotiq and NextJS.
 
-![](images/gatsby/flotiq-starter-recipe-2.png){: .center .width75 .border}
+![](../images/gatsby/flotiq-starter-recipe-2.png){: .center .width75 .border}
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-recipe-2){:target="_blank"}
 
@@ -72,7 +72,7 @@ A starter to build your own recipes page with Flotiq and NextJS.
 
 If you want to start from scratch with a prepared boilerplate, we have also created it for you.
 
-![](images/gatsby/flotiq-starter-boilerplate.png){: .center .width75 .border}
+![](../images/gatsby/flotiq-starter-boilerplate.png){: .center .width75 .border}
 
 [GitHub](https://github.com/flotiq/nextjs-starter-boilerplate){:target="_blank"}
 

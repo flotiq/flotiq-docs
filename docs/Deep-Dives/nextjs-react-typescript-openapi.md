@@ -79,17 +79,7 @@ Now that you added the API key, you can proceed with next steps.
 This package simplifies Typescript Fetch API integration for your Flotiq project, tailored to your Flotiq account data.
 To build your customized API package, just run this command:
 
-To install Flotiq SDK you can use flotiq-nextjs-setup CLI, that will not only seemlessly generate SDK for your Next.js project, but will also add content cache revalidation endpoint, handle draft mode for unpublished content on Flotiq and more. To use the flotiq-nextjs-setup CLI simply:
-
-* install flotiq-nextjs-setup CLI:
-
-    ```bash
-    npm install -g flotiq-nextjs-setup
-    ```
-    { data-search-exclude }
-
-* run the setup:
-
+To install Flotiq SDK you can use flotiq-nextjs-setup CLI, that will not only seemlessly generate SDK for your Next.js project, but will also add content cache revalidation endpoint, handle draft mode for unpublished content on Flotiq and more. To use the flotiq-nextjs-setup CLI simply run the setup:
     ```bash
     npx flotiq-nextjs-setup
     ```

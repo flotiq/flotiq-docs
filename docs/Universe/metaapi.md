@@ -4,7 +4,7 @@ tags:
 ---
 
 title: Flotiq and Meta-API integration | Flotiq docs
-description: Use Flotiq and Meta-API to integrate your data with any API 
+description: Use Flotiq and Meta-API to integrate your data with any API
 
 !!! caution
     Please note that the information and documentation provided on this page regarding the integration with Meta API is no longer valid.
@@ -14,9 +14,9 @@ description: Use Flotiq and Meta-API to integrate your data with any API
 
 # What is Meta-API
 
-[Meta-API](https://meta-api.io) is a platform for integrating and automating APIs. 
-It uses connectors to represent API endpoints and Spells to define automation and data exchange between Connectors. 
-You can define workflows for data mixing predefined APIs. 
+[Meta-API](https://meta-api.io) is a platform for integrating and automating APIs.
+It uses connectors to represent API endpoints and Spells to define automation and data exchange between Connectors.
+You can define workflows for data mixing predefined APIs.
 
 There are over 480 public APIs in Catalog, including popular apps like Gmail, Google Calendar,
 Google Spreadsheet, Twitter, etc.

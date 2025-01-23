@@ -144,7 +144,7 @@ Additional query parameters you may specify include:
 * `draft=true`|`draft=false` - whether the draft mode should be enabled or disabled
 * `redirect` - where brwser should be redirected after the request. E.g. `draft=true&redirect=/post/123` will enable draft mode and redirect to `/post/123`
 
-Refer to [Next.js Draft Mode](https://nextjs.org/docs/app/building-your-application/configuring/draft-mode) documentation to see how to implment code supporting draft mode.
+Refer to [Next.js Draft Mode](https://nextjs.org/docs/app/building-your-application/configuring/draft-mode) documentation to see how to implement code supporting draft mode.
 
 # Conclusion
 

@@ -4,7 +4,7 @@ tags:
   - Developer
 ---
 
-title: Flotiq deplyment modes | Flotiq docs
+title: Flotiq deployment modes | Flotiq docs
 description: Live and static modes for deploying your content.
 
 # Deployment modes

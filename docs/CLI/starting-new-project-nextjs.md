@@ -12,7 +12,7 @@ There are two main ways of starting Flotiq Next.js project with CLI:
 
 On top of using a starter that is ready to kick-start your project development, we recommend adding **Flotiq Node.js integration and SDK**. More on that in [Flotiq SDK section](#flotiq-sdk).
 
-To start develping new Next.js project with one of the Flotiq starters using [Flotiq CLI](./index.md) you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)) and your "Read and write API key" (more about API keys [here](../API/index.md)).
+To start developing new Next.js project with one of the Flotiq starters using [Flotiq CLI](./index.md) you need a Flotiq account (you can [register here](http://editor.flotiq.com/register.html)) and your "Read and write API key" (more about API keys [here](../API/index.md)).
 
 The command looks like this:
 

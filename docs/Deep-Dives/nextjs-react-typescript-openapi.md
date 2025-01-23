@@ -3,14 +3,13 @@ tags:
   - Developer
 ---
 
-title: Learn how to use data from Flotiq in React and Typescript projects | Flotiq docs
+title: Learn how to use data from Flotiq in React and Typescript projects with Flotiq SDK | Flotiq docs
 description: Generate an OpenAPI API client library and integrate it in Next.js projects, benefit from Typescript support and code autocompletion in your IDE.
 
 # Use data from Flotiq in React and Typescript projects
 
 !!! info
     This page demonstrates a TypeScript-based approach to React components hydrated with data coming from Flotiq
-
 
 ## Introduction
 
@@ -42,16 +41,17 @@ cd flotiq-component-demo
 Read more about [create-next-app here](https://nextjs.org/docs/api-reference/create-next-app).
 
 ## Get Flotiq API Key
+
 To access your Flotiq data in your app, you need to obtain your Flotiq API key.
 There are two ways of doing that:
 
 ### Flotiq Setup
+
 We can use `flotiq-setup` to import API keys to variable files like `.env`.
 
 Simply run `npx flotiq-setup` to automatically import your API keys to variable files.
 After running the `flotiq-setup` script, your browser will pop-up with a prompt to select which space the app will be able to access.
  ![](images/nextjs-react-typescript-openapi/flotiq-setup-prompt.png)
-
 
 ### Flotiq Dashboard
 
@@ -74,9 +74,30 @@ Now that you added the API key, you can proceed with next steps.
 !!! note
     You can read more about [API Keys here.](/docs/API/)
 
-## Flotiq Codegen TS 
+## Flotiq Codegen TS - Flotiq SDK
+
 This package simplifies Typescript Fetch API integration for your Flotiq project, tailored to your Flotiq account data.
 To build your customized API package, just run this command:
+
+To install Flotiq SDK you can use flotiq-nextjs-setup CLI, that will not only seemlessly generate SDK for your Next.js project, but will also add content cache revalidation endpoint, handle draft mode for unpublished content on Flotiq and more. To use the flotiq-nextjs-setup CLI simply:
+
+* install flotiq-nextjs-setup CLI:
+
+    ```bash
+    npm install -g flotiq-nextjs-setup
+    ```
+    { data-search-exclude }
+
+* run the setup:
+
+    ```bash
+    npx flotiq-nextjs-setup
+    ```
+    { data-search-exclude }
+
+If you want to read more about our flotiq-nextjs-setup CLI, refer to our [Flotiq NextJS docs](/docs/Universe//nextjs/nextjs-setup.md).
+
+If instead you prefer to install only Flotiq SDK, manually, do the following steps:
 
 ```bash
 npx flotiq-codegen-ts generate 
@@ -88,8 +109,8 @@ npx flotiq-codegen-ts generate
     you will need to rerun npx `flotiq-codegen-ts generate` command
 
 !!! note 
-    You can use the `flotiq-codegen-ts generate --watch` to enable automatic detection of changes to your 
-    `Content definitions` by `Flotiq Codegen TS`. This will automatically regenerate the SDK to reflect the current 
+    You can use the `flotiq-codegen-ts generate --watch` to enable automatic detection of changes to your
+    `Content definitions` by `Flotiq Codegen TS`. This will automatically regenerate the SDK to reflect the current
     state of your `Content definitons`.
 
 ## Use the API

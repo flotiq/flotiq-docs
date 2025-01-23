@@ -16,6 +16,8 @@ Preview each Next.js starter on our [GitHub](https://github.com/flotiq){:target=
 
 This should save you some time in creating your website and help you create a visually appealing page. Additionally, we have created two versions of starters using Gatsby and NextJS - depending on which framework you prefer. This page is dedicated to NextJS starters. You can check out our Gatsby starters [here](../gatsby/).
 
+On top of using a starter that is ready to kick-start your project development, we recommend adding **Flotiq Node.js integration and SDK**. More on that in [Flotiq SDK section](#flotiq-sdk).
+
 Discover our range of starters [here](https://flotiq.com/starters/){:target="_blank"}.
 
 ## Starter for the blog 1
@@ -79,3 +81,15 @@ If you want to start from scratch with a prepared boilerplate, we have also crea
 [Working example](https://flotiq-nextjs-boilerplate.netlify.app/){:target="_blank"}
 
 [Register to start your project today](https://editor.flotiq.com/register.html){: .flotiq-button}
+
+# Flotiq SDK
+
+The Flotiq SDK is a powerful tool designed to simplify the integration of Flotiq content into your Next.js projects. It provides an auto-generated, type-safe API client tailored to your specific content types, allowing you to focus on building your application rather than dealing with low-level API requests.
+
+## Installing Flotiq SDK
+
+To install the Flotiq SDK for your Next.js project, it is best to use our flotiq-nextjs-setup CLI, which will automatically generate SDK for your content and integrate it in your project, add content cache revalidation endpoint, handle draft mode for unpublished content on Flotiq and more.
+
+On how to setup Flotiq Next.js integration with flotiq-nextjs-setup CLI refer to our [page about integrating Flotiq and Next.js with CLI](/docs/Universe/nextjs/nextjs-setup.md#flotiq-nextjs-setup).
+
+If you prefer to just install Flotiq SDK and handle everything else by yourself, refer to [Flotiq SDK page](/docs/API/generate-package.md).

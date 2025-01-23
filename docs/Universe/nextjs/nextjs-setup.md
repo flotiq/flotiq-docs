@@ -18,16 +18,9 @@ In this guide, we go over steps for easy setup for fresh Flotiq Next.js project 
 
 `* although in the setup process an example content type "blog_post" will be proposed, that will allow to quickly get acquainted with the flotiq nextjs project.`
 
-# Project setup
+## NextJS Project setup
 
-Start the setup by installing Flotiq's CLI for Next.js integration:
-
-```bash
-npm install -g flotiq-nextjs-setup
-```
-{ data-search-exclude }
-
-Next, initialize the Next.js project using the following npx command:
+Start the setup by initializing the Next.js project using the following npx command:
 
 ```bash
 npx create-next-app@latest <path-to-nextjs-project>
@@ -54,6 +47,19 @@ Once you have your NextJS project setup, it's time to integrate it with Flotiq. 
 
 ```bash
 cd <path-to-nextjs-project>
+```
+{ data-search-exclude }
+
+Now your Next.js project is ready to install Flotiq Next.js integration.
+
+## Flotiq NextJS setup
+
+Once your base Next.js framework is set, you can install Flotiq Next.js in it.
+
+Start the setup by installing Flotiq's CLI for Next.js integration:
+
+```bash
+npm install -g flotiq-nextjs-setup
 ```
 { data-search-exclude }
 

@@ -8,7 +8,7 @@ description: Set up your Flotiq Next.js project using the CLI.
 
 # Setting up Flotiq Next.js project
 
-In this guide, we go over steps for easy setup for fresh Flotiq Next.js project using just a few CLI commands. If you wish to use a starter with predefined style and type of content, have a look at our [Next.js starters documentation page](/docs/Universe/nextjs/nextjs-starters/) instead.
+In this guide, we go over steps for easy setup for a fresh Flotiq Next.js project using just a few CLI commands. If you wish to use a starter with a predefined style and type of content, have a look at our [Next.js starters documentation page](/docs/Universe/nextjs/nextjs-starters/) instead.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ npx create-next-app@latest <path-to-nextjs-project>
 !!! Note
     Use `.` as `<path-to-nextjs-project>` if you want to setup the project in the directory that you are currently in.
 
-The command above will have you choose some of the NextJS project specifications. Below you can see the table presenting you options supported by the Flotiq Next.js setup CLI tool:
+The command above will prompt you to select specific configurations for your NextJS project. Below you can see the table presenting you options supported by the Flotiq Next.js setup CLI tool:
 
 | Feature                                  | Yes | No  |
 |------------------------------------------|-----|-----|
@@ -43,7 +43,7 @@ The command above will have you choose some of the NextJS project specifications
 | Turbopack for `next dev`?                | Optional | Optional |
 | Customized the import alias (`@/*`)?     | ✅  | ✅  |
 
-Once you have your NextJS project setup, it's time to integrate it with Flotiq. Start by logging into your Flotiq account. It's important to stay authenticated during following steps. Then go to your project directory:
+Once you have your NextJS project setup, it's time to integrate it with Flotiq. Start by logging into your Flotiq account. It's important to stay authenticated during the following steps. Then go to your project directory:
 
 ```bash
 cd <path-to-nextjs-project>
@@ -56,14 +56,7 @@ Now your Next.js project is ready to install Flotiq Next.js integration.
 
 Once your base Next.js framework is set, you can install Flotiq Next.js in it.
 
-Start the setup by installing Flotiq's CLI for Next.js integration:
-
-```bash
-npm install -g flotiq-nextjs-setup
-```
-{ data-search-exclude }
-
-And run the Flotiq Next.js setup process with the following command:
+Start by running the Flotiq Next.js setup process with the following command:
 
 ```bash
 npx flotiq-nextjs-setup
@@ -75,10 +68,10 @@ This command will guide you through the final steps of setting up your project. 
 * request access to your Flotiq account - if you have more than one space you can select the space that you wish to use for your project from dropdown
 * ask you which one of your content types from your Flotiq account you wish to integrate into your project (or provide you with an example content type).
 * generate SDK [read more about Flotiq SDK](/docs/API/generate-package/sdk-nodejs/).
-* ask if you wish it to set up example page.
+* ask if you wish it to set up an example page.
 * generate `FLOTIQ_CLIENT_AUTH_KEY` in `.env.local` environment variables - a random string used for entering draft mode and cache revalidation.
 
-Mind that the above process, especially generation of Flotiq SDK for your project, may take a while to finish.
+Please keep in mind that the above process, especially generating the Flotiq SDK for your project, may take a while to finish.
 
 Once the process is complete, your project is connected to your Flotiq data and ready to build!
 
@@ -93,13 +86,13 @@ npm run dev
 
 This will deploy your site on local address `http://localhost:3000` where you can preview its content (of course this address will change in staging or production environments, or if you used `--port` flag on application start).
 
-If you haven't done so yet, it's time to add content to your Flotiq account. Go to `https://editor.flotiq.com`, navigate to content type that you've selected in your setup process and add content objects and by so doing, provide content for your site. In the editor, you can also preview your content object's data on your site, using the `Content Preview` plugin, which is automatically configured for your local environment (`http://localhost:3000`).
+If you haven't done so yet, it's time to add content to your Flotiq account. Go to `https://editor.flotiq.com`, navigate to the content type that you've selected in your setup process and add content objects, and by so doing, provide content for your site. In the editor, you can also preview your content object's data on your site using the `Content Preview` plugin, which is automatically configured for your local environment (`http://localhost:3000`).
 
 !!! Note
     Note that by default, your project will display only published content, so if you save your content object and keep them as `draft` this data will not be displayed.
     This can be changed by [setting up draft mode](#draft-mode).
 
-Now that your Flotiq content is set up, it is available in your project. You can easily manipulate the data on your site using previously mentioned [Flotiq SDK](/docs/API/generate-package/sdk-nodejs/).
+Now that your Flotiq content is set up, it is available in your project. You can easily manipulate the data on your site using the previously mentioned [Flotiq SDK](/docs/API/generate-package/sdk-nodejs/).
 
 If you accepted the example page during setup, an example site like `app/blog_post/[slug]` will generate. Then if on your Flotiq account you have content objects of type `blog_post` with slug specified, you can preview their content at `http://localhost:3000/blog_post/<slug from your content object>`. In the generated `page.tsx` file you can see an example of how your Flotiq content is fetched and handled in your project with use of Flotiq SDK.
 
@@ -125,9 +118,9 @@ npm exec flotiq-api-typegen --watch
 
 Cache revalidation ensures that cached content is still valid and up-to-date, therefore in production environment, it is often best to revalidate each time you publish changes in your content.
 
-To revalidate your content cache, you can use endpoint `POST http://localhost:3000/api/flotiq/revalidate` with header `x-editor-key=<your flotiq client auth key>` (the key should be automatically generated in your env.local file).
+To revalidate your content cache, you can use endpoint `POST http://localhost:3000/api/flotiq/revalidate` with the header `x-editor-key=<your flotiq client auth key>` (the key should be automatically generated in your env.local file).
 
-You can easily automate the above process, by adding a webhook in Flotiq, that will trigger on changes in your content, sending POST call to endpoint specified above. The webhook should be configured as follows:
+You can easily automate the above process by adding a webhook in Flotiq that will trigger on the changes in your content, sending a POST call to the endpoint specified above. The webhook should be configured as follows:
 
 * type: `async`
 * url: `<Your sites domain>/api/flotiq/revalidate`
@@ -142,7 +135,7 @@ To view unpublished Flotiq content, you can enable draft mode. To do so enter th
 Additional query parameters you may specify include:
 
 * `draft=true`|`draft=false` - whether the draft mode should be enabled or disabled
-* `redirect` - where brwser should be redirected after the request. E.g. `draft=true&redirect=/post/123` will enable draft mode and redirect to `/post/123`
+* `redirect` - where the browser should be redirected after the request. E.g. `draft=true&redirect=/post/123` will enable draft mode and redirect to `/post/123`
 
 Refer to [Next.js Draft Mode](https://nextjs.org/docs/app/building-your-application/configuring/draft-mode) documentation to see how to implement code supporting draft mode.
 

@@ -189,13 +189,15 @@ nav:
   - Flotiq Universe:
     - 'Overview': Universe/index.md
     - Deployment:
-      - 'Overview': Universe/deployment/overview.md
-      - 'NextJS project to Vercel': Universe/deployment/vercel-nextjs.md
+      - 'Overview': Universe/overview.md
       - 'Gatsby project to Vercel': Universe/deployment/vercel-gatsby.md
-      - 'NextJS project to Netlify': Universe/deployment/netlify-nextjs.md
+      - 'NextJS project to Vercel': Universe/deployment/vercel-nextjs.md
       - 'Gatsby project to Netlify': Universe/deployment/netlify-gatsby.md
+      - 'NextJS project to Netlify': Universe/deployment/netlify-nextjs.md
+    - NextJS:
+      - 'Flotiq NextJS starters': Universe/nextjs/nextjs-starters.md
+      - 'Flotiq NextJS Setup CLI': Universe/nextjs/nextjs-setup.md
     - 'Gatsby': Universe/gatsby.md
-    - 'NextJS': Universe/nextjs.md
     - 'Meta-API': Universe/metaapi.md
     - 'Postman': Universe/postman.md
     - 'Scully': Universe/scully.md

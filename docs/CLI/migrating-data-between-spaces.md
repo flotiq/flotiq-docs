@@ -37,14 +37,14 @@ The exported files will include JSON representations of your Content Types and C
 To import previously exported data back into your Flotiq account, or migrate data between accounts, use the following command:
 
 ```
-flotiq import [projectName] [flotiqApiKey]
+flotiq import [directory] [flotiqApiKey]
 ```
 { data-search-exclude }
 
 
-This command reads Content Types and Content Objects from the specified directory and imports them into your Flotiq account. The directory structure must include folders such as `ContentType[0-9]` containing `ContentTypeDefinition.json` files and `contentObject[0-9].json` files.
+This command reads Content Types and Content Objects from the specified directory and imports them into your Flotiq account. The directory structure must include folders such as `ContentType[Name]` containing `ContentTypeDefinition.json` files and `contentObject[Name].json` file.
 
-The number at the end of the directory or file names defines the import order. Additionally, a `./images` directory within the project should store any images that will be imported into your Flotiq Media Library.
+Additionally, a `InternalContentTypeMedia` directory within the project should store any images that will be imported into your Flotiq Media Library.
 
 The `flotiq import` command ensures that your data is correctly structured and imported into Flotiq without data loss or corruption.
 

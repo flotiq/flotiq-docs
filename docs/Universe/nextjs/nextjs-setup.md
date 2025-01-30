@@ -67,11 +67,9 @@ This command will guide you through the final steps of setting up your project. 
 
 * request access to your Flotiq account - if you have more than one space you can select the space that you wish to use for your project from dropdown
 * ask you which one of your content types from your Flotiq account you wish to integrate into your project (or provide you with an example content type).
-* generate SDK [read more about Flotiq SDK](/docs/API/generate-package/sdk-nodejs/).
+* generate SDK.
 * ask if you wish it to set up an example page.
 * generate `FLOTIQ_CLIENT_AUTH_KEY` in `.env.local` environment variables - a random string used for entering draft mode and cache revalidation.
-
-Please keep in mind that the above process, especially generating the Flotiq SDK for your project, may take a while to finish.
 
 Once the process is complete, your project is connected to your Flotiq data and ready to build!
 
@@ -92,7 +90,7 @@ If you haven't done so yet, it's time to add content to your Flotiq account. Go 
     Note that by default, your project will display only published content, so if you save your content object and keep them as `draft` this data will not be displayed.
     This can be changed by [setting up draft mode](#draft-mode).
 
-Now that your Flotiq content is set up, it is available in your project. You can easily manipulate the data on your site using the previously mentioned [Flotiq SDK](/docs/API/generate-package/sdk-nodejs/).
+Now that your Flotiq content is set up, it is available in your project. You can easily manipulate the data on your site using the SDK.
 
 If you accepted the example page during setup, an example site like `app/blog_post/[slug]` will generate. Then if on your Flotiq account you have content objects of type `blog_post` with slug specified, you can preview their content at `http://localhost:3000/blog_post/<slug from your content object>`. In the generated `page.tsx` file you can see an example of how your Flotiq content is fetched and handled in your project with use of Flotiq SDK.
 

@@ -27,10 +27,10 @@ curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json"
 
 Possible request parameters:
 
-| Parameter | Description                                                                                          |
-| --------- | ---------------------------------------------------------------------------------------------------- |
-| version   | version of API Schema, possible values: `3` - default for Open API Schema 3.0, `2` - for Swagger 2.0 |
-| user_only | should the schema be rendered without system endpoints, default `false`                              |
+| Parameter | Description                                                                                                |
+| --------- |------------------------------------------------------------------------------------------------------------|
+| version   | version of API Schema, possible values: `3.1`,`3` - default for Open API Schema 3.0, `2` - for Swagger 2.0 |
+| user_only | should the schema be rendered without system endpoints, default `false`                                    |
 
 Version 3 is compatible with Open API tools
 ([SDK generator](https://github.com/OpenAPITools/openapi-generator), [swagger editor](https://editor.swagger.io/))

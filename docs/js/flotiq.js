@@ -24,6 +24,10 @@ function load_navpane() {
     for (var i = 0; i < nav.length; i++) {
         nav.item(i).checked = true;
     }
+
+    setTimeout(() => {
+        document.querySelector('a.md-nav__link--active')?.scrollIntoView({block: "nearest", inline: "nearest"});
+    }, 300);
 }
 
 function addHelpfulForm() {
@@ -123,3 +127,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 addHelpfulForm();
+
+// Scroll to top Button always visible
+document.querySelector(".md-top").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+document.addEventListener('scroll', function() {
+    var topButton = document.querySelector(".md-top");
+    if(window.scrollY === 0){
+        topButton.setAttribute("hidden", true);
+    } else {
+        topButton.removeAttribute('hidden');
+    }
+});

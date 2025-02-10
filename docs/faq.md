@@ -7,14 +7,14 @@ description: Frequently Asked Questions on Flotiq CMS
 
 In traditional CMSes, data, content and presentation is one monolith; in Flotiq, content is separated from presentation.
 Because of that, you can enable content reuse and an omnichannel experience.
-Learn more in our [blog post](https://flotiq.com/blog/advantages-of-headless-cms).
+Learn more in our [blog post](https://blog.flotiq.com/advantages-of-headless-cms).
 
 ## What's the difference between Flotiq and WordPress?
 
 WordPress at its core is traditional CMS with data entangled with the presentation,
 it introduced the headless version some time ago, but it still is not based on Open API, 
 so using it is more challenging than using Flotiq API.
-Learn more in our [blog post](https://flotiq.com/blog/why-you-should-consider-flotiq-headless-cms-over-wordpress).
+Learn more in our [blog post](https://blog.flotiq.com/why-you-should-consider-flotiq-headless-cms-over-wordpress).
 
 ## What's the difference between Flotiq and other headless CMSes?
 
@@ -28,8 +28,7 @@ reduce costs by making the work parallel, and help to prototype.
 
 ## How much does the Flotiq cost?
 
-Primary usage is free, and if that is not enough for your needs, you can check pricing 
-[here](https://flotiq.com/pricing){target="_blank"}.
+Primary usage is free, and if that is not enough for your needs, you can check [pricing page](https://flotiq.com/pricing){target="_blank"}.
 
 ## What programming language I have to know to use Flotiq?
 
@@ -42,7 +41,7 @@ fit the starters more to your needs or when our starters would not be close enou
 
 The answer varies based on what service you have.
 We have out of the box migration for projects based on WordPress -
-[Move WordPress to Flotiq](https://flotiq.com/blog/how-to-move-from-wordpress-to-jamstack-using-our-gatsby-wordpress-starter).
+[Move WordPress to Flotiq](https://blog.flotiq.com/how-to-move-from-wordpress-to-jamstack-using-our-gatsby-wordpress-starter).
 We are working on writing migrations tips and importers for other types of projects source.
 Please contact us to tell us what kind of service you wish to migrate to receive a more fitting solution.
 
@@ -50,8 +49,8 @@ Please contact us to tell us what kind of service you wish to migrate to receive
 
 Yes. You can use Flotiq to store your products, but we do not provide customer accounts or payment methods. 
 Our shop starters use [Snipcart](https://snipcart.com/) to manage purchase process.
-You can find shop starters [here](https://github.com/flotiq?q=gatsby-starter-products) 
-and [here](https://github.com/flotiq?q=scully-products).
+You can find shop starters in our repository for [Gatsby products](https://github.com/flotiq?q=gatsby-starter-products) 
+and [Scully products](https://github.com/flotiq?q=scully-products).
 
 ## Can I integrate Flotiq with other tools like Mailchimp or Gmail?
 
@@ -68,7 +67,7 @@ only to bring the service back to work if something went wrong with deploying th
 ## I'm running out of space; what can I do?
 
 There are two ways to deal with that, removing not used Content Objects and Medias or buying a higher tier of the plan. 
-You can check pricing [here](https://flotiq.com/pricing){target="_blank"}.
+You can check [Flotiq pricing page](https://flotiq.com/pricing){target="_blank"}.
 
 ## Contact us
 

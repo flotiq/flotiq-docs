@@ -1,5 +1,20 @@
+---
+tags:
+  - Developer
+---
+
 title: Integrate Gatsby Cloud and Flotiq | Flotiq documentation
 description: Enable seamless Gatsby content preview using Flotiq Gatsby plugin.
+
+!!! Caution
+    **Due to the [ending availability of Gatsby Cloud](https://www.netlify.com/blog/gatsby-cloud-evolution/),
+    the Gatsby Cloud plugin is now deprecated.**
+
+    We recommend transitioning to the [Netlify Build plugin](https://flotiq.com/docs/panel/Plugins/Netlify-integration/),
+    using the [Custom Links plugin](https://flotiq.com/docs/panel/Plugins/Custom-links/),
+    or implementing a [webhook](https://flotiq.com/docs/panel/webhooks/async-co-webhook/). 
+    Please make the necessary changes to ensure uninterrupted service. For questions, contact us on Discord or email [hello@flotiq.com](mailto:hello@flotiq.com).
+
 
 # Connecting your Flotiq account to Gatsby Cloud
 
@@ -14,15 +29,15 @@ This article will walk you through the process of connecting your Flotiq account
 !!! note 
     You might want to try one of our starters, which already come with predefined content:
     
-    - [Recipe website Gatsby starter](https://github.com/flotiq/gatsby-starter-recipes){:target="_blank"}
-    - [Event calendar Gatsby starter](https://github.com/flotiq/gatsby-starter-event-calendar){:target="_blank"}
-    - [Project portfolio Gatsby starter](https://github.com/flotiq/gatsby-starter-projects){:target="_blank"}
-    - [Simple blog Gatsby starter](https://github.com/flotiq/gatsby-starter-blog){:target="_blank"}
-    - [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/gatsby-starter-products){:target="_blank"}
-    - [Gatsby and Snipcart, e-commerce with products and categories from Flotiq](https://github.com/flotiq/gatsby-starter-products-with-categories){:target="_blank"}
+    - [Recipe website Gatsby starter](https://github.com/flotiq/flotiq-gatsby-recipe-1){:target="_blank"}
+    - [Event calendar Gatsby starter](https://github.com/flotiq/flotiq-gatsby-event-1){:target="_blank"}
+    - [Project portfolio Gatsby starter](https://github.com/flotiq/flotiq-gatsby-portfolio-1){:target="_blank"}
+    - [Simple blog Gatsby starter](https://github.com/flotiq/flotiq-gatsby-blog-1){:target="_blank"}
+    - [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/flotiq-gatsby-shop-1){:target="_blank"}
     - [Snipcart and Next.js, sourcing products from Flotiq](https://github.com/flotiq/snipcart-nextjs){:target="_blank"}
     
     These starters all come with detailed READMEs and a one-line content import command, be sure to check those!
+    You can find even more starters here: [Starting new Gatsby project with Flotiq](../../../CLI/starting-new-project-gatsby/){:target="_blank"}
 
 ## Signing in to Gatsby Cloud
 Select `Sign in with GitHub`. You'll be asked to authorize the Gatsby Cloud app with your GitHub account. If you need to request access to one or more repositories, you can click "request access" here or later, when creating an instance.
@@ -31,11 +46,9 @@ Once signed in, configuring Gatsby Cloud with Flotiq requires several steps that
 
 ## Creating an instance
 
-Once you've authenticated with Cloud and GitHub, you can create an instance from the ["Create a new Gatsby Cloud site"](https://gatsbyjs.com/dashboard/sites/create) page.
+Once you've authenticated with Cloud and GitHub, you can create an instance from the ["Create a new Gatsby Cloud site"](https://gatsbyjs.com/dashboard/sites) page and add a site.
 
-Use the "I already have a Gatsby site" flow to manually integrate your site.
-
-![Add my own site](https://www.gatsbyjs.com/static/4b0022bee38a8bb336252ebcb49c3f1d/6af66/import-flow-start.png){: .center .width75 .border}
+![Add my own site](images/gatsby-cloud-add-site.png){: .center .width75 .border}
 
 Pick your Gatsby site repo and branch from the list of GitHub repositories. You can use the search input to narrow down the list.
 
@@ -77,7 +90,7 @@ For example, if you're using the [Gatsby and Snipcart starter](https://github.co
 
 To obtain the Flotiq API key - in your Flotiq account, click your profile icon in the sidebar and go to `API keys`:
 
-![Access Flotiq API keys](../../API/images/user-profile.png){: .center .width25 .border}
+![Access Flotiq API keys](../../API/images/api-keys-menu.png){: .center .width25 .border}
 
 You can either select the application-wide read-only key:
 

@@ -1,4 +1,8 @@
 mkdocs
-mkdocs-material >= 7.3
+mkdocs-material==9.5.*
 mkdocs-awesome-pages-plugin
 mkdocs-git-revision-date-localized-plugin
+mkdocs-include-dir-to-nav
+mkdocs-glightbox
+mkdocs-alias-plugin
+mkdocs-markdownextradata-plugin

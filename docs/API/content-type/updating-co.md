@@ -1,12 +1,23 @@
+---
+tags:
+  - Developer
+---
+
 title: How to update Content Objects | Flotiq docs
 description: How to update Content Objects in Flotiq
 
 # Updating content through the API
 
+There are two ways to update the content of an object:
+
+`PUT`:
 When updating the object (`PUT` requests), all properties must be present in the request body,
-as the object data are replaced with the request body. The id property inside the object is ignored in `PUT` requests.
+as the object data are replaced with the request body.
 Validation of update request works the same as in saving requests.
 
+`PATCH`:
+When updating an object (a `PATCH` request), it is not necessary to specify all the properties of the object.
+Validating the update request works the same as it does when saving requests.
 
 !!! note
     You will need to use your `Application Read and write API KEY` to perform this action
@@ -25,6 +36,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
   "postContent": "This will be the new <b>content</b>"
 }
 ```
+{ data-search-exclude }
+
 
 * `name` is the name of the content type definition
 * `id` is the ID of the object to update
@@ -43,6 +56,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             "postContent": "This will be the new <b>content</b>"
         }'
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -54,6 +68,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         request.AddParameter("application/json", "{\"title\":\"Object with changed title\",\"postContent\":\"This will be the new <b>content</b>\"}", ParameterType.RequestBody);
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -88,6 +103,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -105,6 +121,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -115,6 +132,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             .body("{\"title\":\"Object with changed title\",\"postContent\":\"This will be the new <b>content</b>\"}")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -135,6 +153,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -169,9 +188,10 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 
@@ -190,6 +210,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             "postContent": "This will be the new <b>content</b>"
         }
         ```
+        { data-search-exclude }
 
     === "400 Validation error"
 
@@ -209,6 +230,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -220,6 +242,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -231,6 +254,23 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
+        
+    === "413 Request Entity Too Large"
+
+        Returned when the size of the object exceeds the limit allowed in Flotiq (1MB, except << plan_names.paid_3 >> plan)
+
+        ```
+        {
+            "code": 413,
+            "massage": "Content Object size limit exceeded by an object with ID: 185. Requested size 1.01 MB, limit: 1 MB)"
+        }
+        ```
+        { data-search-exclude }
+
+!!! note
+    The id property of the object can be updated through API if id provided in the request body is different from the one provided in request path.
+    This only works in updating single content object
 
 #### Possible validation errors
 
@@ -239,8 +279,12 @@ you can find the list [here](/docs/API/content-type/creating-co/#possible-valida
 
 ## Batch update Content Objects through API
 
-Updating up to 100 objects at once is described
+Updating up to 100 objects with single POST request at once is described
 [here](/docs/API/content-type/creating-co/#batch-create-content-objects-through-api),
 as batch creating and updating are done on the same API endpoint.
+
+It is also possible to update objects using the PATCH method.
+In the case of PATH, it is not required to provide all object fields, only those that are to be changed.
+When an object doesn't exist, the batch patch returns a 404 error response. The PATCH endpoint doesn't create new objects.
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}

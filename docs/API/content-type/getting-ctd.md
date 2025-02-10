@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to get single Content Type Definitions | Flotiq docs
 description: How to get single Content Type Definitions in Flotiq
 
@@ -28,6 +33,7 @@ Possible request parameters:
         --header 'accept: */*' \
         --header 'X-AUTH-TOKEN: YOUR_API_KEY'
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -37,6 +43,7 @@ Possible request parameters:
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -67,6 +74,7 @@ Possible request parameters:
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -81,6 +89,7 @@ Possible request parameters:
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -89,6 +98,7 @@ Possible request parameters:
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -107,6 +117,7 @@ Possible request parameters:
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -139,8 +150,9 @@ Possible request parameters:
             echo $response;
         }
         ```
+        { data-search-exclude }
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 
@@ -200,6 +212,7 @@ Possible request parameters:
           "updatedAt": "2020-07-20T16:34:11.000000+0000"
         }
         ```
+        { data-search-exclude }
 
     === "200 OK for resolveRef"
 
@@ -288,6 +301,7 @@ Possible request parameters:
           "updatedAt": "2020-07-20T16:34:11.000000+0000"
         }
         ```
+        { data-search-exclude }
 
     === "200 OK for resolveRef and strictSchema"
 
@@ -314,6 +328,7 @@ Possible request parameters:
           }
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -325,6 +340,7 @@ Possible request parameters:
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -336,5 +352,6 @@ Possible request parameters:
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to delete Content Objects | Flotiq docs
 description: How to delete Content Objects in Flotiq
 
@@ -25,6 +30,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
         --header "accept: application/json" \
         --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
         ``` 
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -34,7 +40,8 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
-    
+        { data-search-exclude }
+
     === "Go + Native"
 
         ```
@@ -64,6 +71,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -78,6 +86,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -86,6 +95,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -104,6 +114,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -136,9 +147,10 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             echo $response;
         }
         ```
+        { data-search-exclude }
 
 
-!!! Responses
+!!! Response
 
     === "204 OK"
 
@@ -155,6 +167,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             ]
         }
         ```
+        { data-search-exclude }
 
     === "401 Unauthorized"
 
@@ -166,6 +179,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
     === "404 Not found"
 
@@ -177,6 +191,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
             "massage": "Not found"
         }
         ```
+        { data-search-exclude }
 
 #### Possible validation errors
 
@@ -186,7 +201,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
 
 ## Batch deleting
 
-Batch deleting can remove up to 100 objects at a time.
+Batch deleting can remove up to 100[^1] objects at a time.
 If you need to batch delete items, you need to send `POST` request to `https://api.flotiq.com/api/v1/content/{CTD name}/batch-delete`, where:
 
 * `CTD name` is the name of the content type definition
@@ -199,6 +214,8 @@ If the system deleted all objects, the endpoint would return `200 OK` response w
     "deletedCount": numOfDeletedObjects
 }
 ```
+{ data-search-exclude }
+
 where:
 
 * `numOfDeletedObjects` is number of deleted objects as integer
@@ -209,6 +226,7 @@ For example:
     "deletedCount": 2
 }
 ```
+{ data-search-exclude }
 
 If any of the objects could not be removed (as being used in the relation or as not existing), the system will remove all items that exist and are not in the relation within another object; for the rest of objects, the endpoint will return `400 Validation error` response with:
 ```
@@ -218,6 +236,8 @@ If any of the objects could not be removed (as being used in the relation or as 
     ]
 }
 ```
+{ data-search-exclude }
+
 where:
 
 * `listOfErrors` is the list of errors; each line have information about the id
@@ -231,11 +251,15 @@ For example:
     ]
 }
 ```
+{ data-search-exclude }
 
 Request example:
 
 ```
 curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-delete" -H "accept: schema" -H "X-AUTH-TOKEN: YOUR_API_TOKEN" -H "Content-Type: application/json" -d "[\"blogposts-1\",\"blogposts-2\"]"
 ```
+{ data-search-exclude }
 
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+
+[^1]: Limit can be changed in the [<< plan_names.paid_3 >> plan](https://flotiq.com/pricing){:target="_blank"}

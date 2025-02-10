@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 # Predefined Content Types
 
 If you don't have any Content Type Definitions (CTD) yet, you see tiles with predefined CTDs from which you can choose your first one by clicking on the tile representing your chosen CTD.
@@ -8,7 +13,7 @@ Custom tile opens empty CTD.
 
 If you already have at least one CTD, you can use the dropdown menu on the top right corner to add more predefined CTDs.
 
-![](images/TypeDefinitionsAddButton.png){: .center .border}
+![](images/TypeDefinitionsAddButton.png){: .center .width25 .border}
 
 ## Blog Post
 
@@ -22,7 +27,7 @@ Type for storing simple blog posts. It contains properties storing title, slug, 
 | thumbnail   | Relation   | Restrict to type: Media        | Thumbnail image                    |
 | headerImage | Relation   | Restrict to type: Media        | Main image of the post             |
 
-![](../Deep-Dives/images/3-minute-blog-content-type-all-fields.png){: .center .width75 .border}
+![](images/AddContentTypeDefinitions.png){: .border}
 
 Full schema for the Blog Post type:
 
@@ -127,6 +132,7 @@ Full schema for the Blog Post type:
         }
     }
     ```
+    { data-search-exclude }
 
 Form generated for Blog Post:
 
@@ -134,9 +140,9 @@ Form generated for Blog Post:
 
 Gatsby starter for blog post:
 
-[GitHub](https://github.com/flotiq/gatsby-starter-blog){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-blog-1){:target="_blank"}
 
-[Working example](https://flotiq-blog.herokuapp.com/){:target="_blank"}
+[Working example](https://flotiqgatsbyblog1master.gatsbyjs.io){:target="_blank"}
 
 Scully starter for blog post:
 
@@ -271,6 +277,7 @@ Full schema for the Event type:
         }
     }
     ```
+    { data-search-exclude }
 
 Form generated for Event:
 
@@ -279,9 +286,9 @@ Form generated for Event:
 
 Gatsby starter for event calendar:
 
-[GitHub](https://github.com/flotiq/gatsby-starter-event-calendar){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-event-1){:target="_blank"}
 
-[Working example](https://flotiq-starter-for-events-cal.herokuapp.com/){:target="_blank"}
+[Working example](https://flotiqgatsbyevent1.gatsbyjs.io/){:target="_blank"}
 
 Scully starter for event calendar:
 
@@ -421,6 +428,7 @@ Full schema for the Product type:
         }
     }
     ```
+    { data-search-exclude }
 
 Form generated for Product:
 
@@ -429,9 +437,9 @@ Form generated for Product:
 
 Gatsby starter for products:
 
-[GitHub](https://github.com/flotiq/gatsby-starter-products){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-shop-1){:target="_blank"}
 
-[Working example](https://flotiq-starter-products.herokuapp.com/){:target="_blank"}
+[Working example](https://flotiqgatsbyshop1.gatsbyjs.io/){:target="_blank"}
 
 Scully starter for products:
 
@@ -544,6 +552,7 @@ Full schema for the Project type:
         }
     }
     ```
+    { data-search-exclude }
 
 Form generated for Project:
 
@@ -551,9 +560,9 @@ Form generated for Project:
 
 Gatsby starter for projects:
 
-[GitHub](https://github.com/flotiq/gatsby-starter-projects){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-portfolio-1){:target="_blank"}
 
-[Working example](https://flotiq-starter-for-projects.herokuapp.com/){:target="_blank"}
+[Working example](https://flotiqgatsbyportfolio1.gatsbyjs.io/){:target="_blank"}
 
 Scully starter for projects:
 
@@ -820,6 +829,7 @@ Full schema for the Recipe type:
         }
     }
     ```
+    { data-search-exclude }
 
 Form generated for Recipe:
 
@@ -828,9 +838,9 @@ Form generated for Recipe:
 
 Gatsby starter for recipes:
 
-[GitHub](https://github.com/flotiq/gatsby-starter-recipes){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-gatsby-recipe-1){:target="_blank"}
 
-[Working example](https://flotiq-starter-recipes.herokuapp.com/){:target="_blank"}
+[Working example](https://flotiqgatsbyrecipe1.gatsbyjs.io/){:target="_blank"}
 
 Scully starter for recipes:
 

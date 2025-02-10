@@ -1,13 +1,18 @@
+---
+tags:
+  - Developer
+---
+
 title: Flotiq Media Library | Flotiq docs
 description: Learn more about the powerful Media Library that Flotiq offers.
 
-#Media library
+# Media library
 
 You can interact with the media library via Flotiq Dashboard or REST API. In this section, we show you how to use our REST API to store and retrieve files.
 
-##File upload :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
+## File upload :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
-To upload a file to the Flotiq, you need to send `POST` multipart request to `/api/media` endpoint with required request parameters.
+To upload a file to the Flotiq, you need to send `POST` multipart request to the `/api/media` endpoint with the required request parameters.
 
 ### Request parameters
 
@@ -16,7 +21,7 @@ To upload a file to the Flotiq, you need to send `POST` multipart request to `/a
 | file      | binary data of a file                               |
 | type      | `image` for image types, `file` for everything else |
 
-Below example shows how to do simple file upload in nodeJS application:
+The example below shows how to do a simple file upload in nodeJS application:
 
 !!! example "Example nodeJs image upload"
     ```
@@ -33,6 +38,7 @@ Below example shows how to do simple file upload in nodeJS application:
     }).then(res => res.json());
     console.log(json); //logs example object return shown below
     ```
+    { data-search-exclude }
 
 ### Response parameters
 
@@ -54,9 +60,10 @@ The response will be a Content Object of type `_media`.
         "width": 150
     }
     ```
-    
-Now you can see uploaded images in the media library. Your files are accessible also via REST API like other Content Objects. 
-To get list of images with metadata use `GET /api/v1/content/_media` endpoint.
+    { data-search-exclude }
+
+Now you can see uploaded images in the media library. Your files are accessible also via REST API like other Content Objects.
+To get the list of images with metadata use `GET /api/v1/content/_media` endpoint.
 
 Fetching original or resized files directly is described in the next sections.
 
@@ -64,7 +71,7 @@ Fetching original or resized files directly is described in the next sections.
 ## Media Content Object
 
 As we see in the response uploaded media has its own representation as Content Object. You can use all the content 
-api methods to get, list, remove Content objects. Be aware, that changing the `_media` metadata can lead to unexpected behaviour.
+API methods to get, list and remove Content objects. Be aware, that changing the `_media` metadata can lead to unexpected behavior.
 
 Below we listed all parameters describing the `Media` object.
 
@@ -81,6 +88,8 @@ Below we listed all parameters describing the `Media` object.
 | url        | Url to original image without API host (e.g. /image/0x0/_media-456456.jpg) |
 | height     | Height, or 0 for 'file' type |
 | width      | Width, or 0 for 'file' type |
+| alt        | Short text that can be used for an ALT tag |
+| variants   | array of variant objects for altering image |
 
 ### Media Content Type Definition
 
@@ -131,7 +140,7 @@ All the Media Content Object parameters are described also in the `Media` Conten
                             "type": "string"
                         }
                     }
-                }   
+                }
             ],
             "required": [
                 "fileName",
@@ -215,14 +224,16 @@ All the Media Content Object parameters are described also in the `Media` Conten
         }
     }
     ```
+    { data-search-exclude }
 
 
+## Getting files
 
-
-##Getting files
-
-To fetch resized image use the `/image/{width}x{height}/{key}` endpoint where 
-`width` and `height` are the dimensions of the scaled photo and key is its `id` and `extension`. 
+To fetch resized image use the `/image/{width}x{height}/{id}.{extension}` endpoint where
+`width` and `height` are the dimensions of the scaled photo.
+Is it possible to use the file name in URL `/image/{width}x{height}/{id}/{fileName}.{extension}`,
+`fileName` is any name; it does not have to be the file's original name; you can choose whatever suits your need in particular usage.
+Using filenames improves SEO.
 
 To download the original photo, or download a non-photo file as width and height, 
 enter `0`, e.g. `/image/0x0/_media-54723892824.doc`.
@@ -230,20 +241,20 @@ enter `0`, e.g. `/image/0x0/_media-54723892824.doc`.
 !!! example 
     `image/1920x0/_media-5472384.jpg` will choose a photo with a width of 1920px and a proportional height of id `_media-5472384`, the file will be JPG. The extension must match the original extension of the uploaded file.
 
-##Resizing images
+## Resizing images
 
-You can choose different sizes and depend of them, you get other results.
+You can choose different sizes and depending on them, you get other results.
 
 Set the appropriate values `width` and `height` in the media url `https://api.flotiq.com/image/[width]x[height]/_media-123.jpg`, for example:
 
-* `0x0` This way let you download original pictures size and won't make any differents.
+* `0x0` This way lets you download original pictures size and won't make any differents.
 * `1920x0` This will force width defined by you and height will be scaled to a proportionate size.
-* `0x1920` This way let you to force height defined by you and width will be scaled to a proportionate size.
-* `1920x1920` This will force images size to choosen by you. When the image is taller or wider, it will crop it. Worth to know is that this endpoint won't upscale images.
+* `0x1920` This way lets you to force height defined by you and width will be scaled to a proportionate size.
+* `1920x1920` This will force images size to choosen by you. When the image is taller or wider, it will crop it. Worth knowing that this endpoint won't upscale images.
 
-As we can see below weight follows sizes, the smaller the size, the less weight. It's important to choose suitable size for your picture, without making it pixelated but having appropriate weight.
+As we can see below weight follows size, the smaller the size, the less weight. It's important to choose a suitable size for your picture, without making it pixelated but having appropriate weight.
 
-![](images/image_sizes.png)
+![](images/image_sizes.png){: .center .border}
 
 Flotiq automatically scale images and save them for future, faster use, if the size requested by the user does not yet exist.  
 
@@ -253,4 +264,4 @@ Flotiq automatically scale images and save them for future, faster use, if the s
 
 [Register to start storing your files](https://editor.flotiq.com/register.html){: .flotiq-button}
 
-[^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+[^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}

@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Flotiq deep dives | Flotiq docs
 description: Flotiq's Dynamic Content API offers a unique way of interacting with your content, the way you design it. The builtin SDKs and APi docs make it extremely easy to use.
 
@@ -15,15 +20,28 @@ The Dynamic Content API is how Flotiq provides you with access to your content. 
 
 ## API docs
 
+To access your API documentation from the editor, please navigate to the `API Docs` section in the sidebar, as shown in the screenshot below.
+
+![](../panel/images/ApiDocMenu.png){: .border style="height:50em"}
+
 Part of the Content API are the beautiful API docs, along with code samples to simplify your work. You can explore your Content API or share with other teams to jumpstart integration.
 
 There are 3 important parts of the API documentation that Flotiq provides for you:
 
-![](images/dynamic-content-api-docs.png)
+![](images/dynamic-content-api-docs-annotated.png){: .border}
 
 1. Every time you create a Content Type Definition - your API is extended with endpoints that support this new Content Type.
 2. The descriptions of these endpoints contain all the information regarding the structure and constraints of the Content Type you defined.
 3. The API docs are enriched with code samples in several popular languages, which make it extremely easy to integrate your content into any external application.
+
+If you want to send a test request, press the 'send test request' as shown in the image below.
+
+![](images/send-test-request.png){: .border}
+
+!!! note
+    The generated API documentation uses your read-only key to keep your account secure. If you wish to perform write actions, please enter your read-write API key in the field highlighted in the image below.
+
+![](images/set-api-key-for-test-request.png){: .border}
 
 ## SDKs
 
@@ -45,6 +63,6 @@ We currently support the following SDKs:
 
 In a similar fashion - we also provide a downloadable Postman collection, which fully describes your entire Content API. 
 
-![](images/postman.jpeg)
+![](images/postman.jpeg){: .border}
 
 Read more on how to configure Postman to work with Flotiq in [API access → Postman](../#postman)

@@ -1,10 +1,14 @@
+---
+tags:
+  - Developer
+---
+
 title: Flotiq Mobile Expo app for Content Editors & Developers | Flotiq docs
 description: Use the Flotiq Mobile Expo application to browse and manage your content directly from the mobile application
 
 # Flotiq Mobile Expo app for Content Editors & Developers
 
 ![Flotiq Mobile Expo application](images/head-image.jpg)
-
 
 [![Flotiq Mobile Expo on Apple App Store](https://user-images.githubusercontent.com/551004/29770691-a2082ff4-8bc6-11e7-89a6-964cd405ea8e.png)](https://apps.apple.com/app/flotiq-mobile-expo/id1505331246) [![Flotiq Mobile Expo on Google Play](https://user-images.githubusercontent.com/551004/29770692-a20975c6-8bc6-11e7-8ab0-1cde275496e0.png)](https://play.google.com/store/apps/details?id=com.flotiqmobiledemo)
 
@@ -29,9 +33,7 @@ A ready-to-use application is available on Google Play and Apple App Store. Inst
 ![](images/mobile-1.png){: .width25 }
 ![](images/mobile-2.png){: .width25 }
 
-
 ## For Developers: Boilerplate for your new application
-
 
 The Flotiq Mobile Expo is an MIT-licensed app, so you can modify it for your needs and use it in the next mobile project.
 
@@ -44,11 +46,9 @@ This project was implemented using:
 * Redux
 * Flotiq as the data source
 
-
 ![](images/react-native.png){: .margin20 }
 ![](images/logo-expo.png){: .margin20 }
 ![](images/react-native-elements.png){: .margin20 }
-
 
 ### Start your project in 3 simple steps
 
@@ -61,11 +61,13 @@ Follow these three steps to develop Flotiq based application:
 ```shell
 npm install --global expo-cli
 ```
+{ data-search-exclude }
 
 2. Clone [GitHub](https://github.com/flotiq/flotiq-mobile-demo) project
 ```shell
 git clone https://github.com/flotiq/flotiq-mobile-demo
 ```
+{ data-search-exclude }
 
 3. Start developing
 ```shell
@@ -73,6 +75,7 @@ cd flotiq-mobile-demo/
 npm install
 npm start
 ```
+{ data-search-exclude }
 
 This will start Metro server [http://localhost:19002](http://localhost:19002/) where you can start the app on Android and iOS simulator or the real device.
 
@@ -90,4 +93,3 @@ When you open the Expo Go app, you have to scan the QR code presented on the [ht
 
 Check out our [simple guide](/docs/Deep-Dives/mobile-expo-product-showcase/) on how to adapt the Flotiq Mobile Expo application source code
 to work as a product showcase app.
-

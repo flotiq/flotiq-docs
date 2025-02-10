@@ -1,9 +1,14 @@
+---
+tags:
+  - Developer
+---
+
 title: Building a store locator with Flotiq | Flotiq docs
 description: This tutorial shows how to build a store locator webpage using Flotiq and its geo capabilities.
 
 # Storing location data
 
-Flotiq plays really well with location data, especially once you get to use our search capabilities. In this quick tutorial we'll build a very simple web page that displays locations on a map and allows to easily search your location database.
+Flotiq plays really well with location data, especially once you get to use our search capabilities. In this quick tutorial, we'll build a very simple web page that displays locations on a map and allows you to easily search your location database.
 
 What we'll need:
 
@@ -13,14 +18,13 @@ What we'll need:
 - A scoped API key
 - Some HTML, CSS and plain Javascript (to keep things simple).
 
-And here's a sneak peak at what we'll build.
+And here's a sneak peek at what we'll build.
 
 ![Flotiq-based store locator](images/store-locator-1.png){: .center .border .width75}
 
-
 ## Setting up Flotiq
 
-Once you [registered a Flotiq account](https://editor.flotiq.com/register.html) and logged in, you'll have to create a new Content Type Definition. This is how you tell Flotiq what kind of data you will be dealing with. Mine looks like this:
+Once you [register a Flotiq account](https://editor.flotiq.com/register.html) and log in, you'll have to create a new Content Type Definition. This is how you tell Flotiq what kind of data you will be dealing with. Mine looks like this:
 
 ![Store Content Type Definition](images/store-locator-2.png){: .center .border .width75}
 
@@ -30,7 +34,7 @@ Next - create several Content Objects under the `Store` type. I added 3 shops in
 
 ![Store entries in grid](images/store-locator-3.png){: .center .border .width75}
 
-Finally - setup a scoped API key - you'll need it in a moment.
+Finally - set up a scoped API key - you'll need it in a moment.
 
 ## Building the page
 
@@ -50,6 +54,7 @@ Our `index.html`:
 </body>
 </html>
 ```
+{ data-search-exclude }
 
 We will be using Google Maps and Leaflet to display the locations on a map, so let's pull in the necessary scripts.
 
@@ -60,6 +65,7 @@ For Google Maps:
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_KEY" async defer></script>
 </body>
 ```
+{ data-search-exclude }
 
 And Leaflet:
 ```
@@ -88,6 +94,7 @@ And Leaflet:
     <script src='https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js'></script>
 </body>
 ```
+{ data-search-exclude }
 
 Now, add a map container to your `<body>`:
 ```
@@ -95,6 +102,7 @@ Now, add a map container to your `<body>`:
     <div data-map class="map-container"></div>
 </body>
 ```
+{ data-search-exclude }
 
 And you can now initialize the map, by adding this to your `index.js`:
 
@@ -121,6 +129,7 @@ document.querySelectorAll('[data-map]').forEach(function (mapContainer) {
     L.control.layers({"Google Maps": googleMaps, "Open Street Map": osm}, null, {position: "bottomleft"}).addTo(map);
   });
 ```
+{ data-search-exclude }
 
 !!! note 
     Thanks to Leaflet - it's super simple to use both Google Maps and Open Street Map as our map providers. You can leave both, or choose one and remove the other. If you stick with Google, though, please remember to provide your Google Maps API key.
@@ -138,6 +147,7 @@ body, html {
 }
 
 ```
+{ data-search-exclude }
 
 Once this is done - you should see a map rendered in your browser:
 ![First map rendered](images/store-locator-4.png){: .center .border .width75}
@@ -170,10 +180,11 @@ let placeCollection = {};
 let doNotUpdate = false;
 
 ```
-You will need to populate the `TOKEN` constant with your API key, copied from Flotiq. 
+You will need to populate the `TOKEN` constant with your API key, copied from Flotiq.
+{ data-search-exclude }
 
 !!! warning
-    We strongly recommend to create a dedicated key for every application you build and explicitly define the access scope to cover only the least amount of privileges required for a given app. Read more about [Flotiq's scoped API keys](https://flotiq.com/docs/API/#user-defined-api-keys) in our docs.
+    We strongly recommend creating a dedicated key for every application you build and explicitly defining the access scope to cover only the least amount of privileges required for a given app. Read more about [Flotiq's scoped API keys](https://flotiq.com/docs/API/#user-defined-api-keys) in our docs.
 
 Now, define the `loadMarkers()` function, like this:
 
@@ -206,6 +217,7 @@ function loadMarkers(map, onLoad) {
     .then(onLoad)
 }
 ```
+{ data-search-exclude }
 
 The most important part of this function is how you should setup the search query, particularly the `geo_filters` parameter. With the parameters defined above - we will be asking Flotiq's API to provide all locations within a given radius from the center of the map. You can read more about the `/search` API endpoint in the [Flotiq search API docs](https://flotiq.com/docs/API/search/).
 
@@ -249,6 +261,7 @@ The `loadMarkers()` function will be used to pass the results pulled from Flotiq
     ]
 }
 ```
+{ data-search-exclude }
 
 If you defined the Content Type exactly as I did, you'll have the latitude and longitude stored in the `item.Location` property of each of the entries of the `data` array.
 
@@ -287,6 +300,7 @@ The `onMarkersLoaded()` function will be used to put markers on the map.
     
   }
 ```
+{ data-search-exclude }
 
 Next, load the markers! Add this, below the `onMarkersLoaded` definition.
 
@@ -294,6 +308,7 @@ Next, load the markers! Add this, below the `onMarkersLoaded` definition.
   loadMarkers(map, onMarkersLoaded);
 ```
 When you reload the page - you should now see the markers appear on your map.
+{ data-search-exclude }
 
 ![First markers appear on map](images/store-locator-5.png){: .center .border .width75}
 
@@ -337,6 +352,7 @@ Add the event handlers:
     }
   });
 ```
+{ data-search-exclude }
 
 You can now verify if indeed moving around the map will load new markers. Let's now enable positioning to our current location - once we receive the current point coordinates from the browser - we will update the map's center.
 
@@ -361,6 +377,7 @@ You can now verify if indeed moving around the map will load new markers. Let's 
 
   document.getElementById('currentLocation').addEventListener('click', getCurrentLocation);
 ```
+{ data-search-exclude }
 
 We will now need to add a navigation box on top of the map. Add this under `<body>` in your index.html.
 
@@ -400,6 +417,7 @@ We will now need to add a navigation box on top of the map. Add this under `<bod
         </div>
     </div>
 ```
+{ data-search-exclude }
 
 and apply the required styling
 
@@ -429,12 +447,13 @@ and apply the required styling
  display:none;
 }
 ```
+{ data-search-exclude }
 
 A neat, yellow box with a positioning icon should appear in your browser:
 
 ![Browser location can be used to navigate the map](images/store-locator-6.png){: .center .border .width75}
 
-Let's now add an input field and connect the geocodeing service to translate location names to coordinates.
+Let's now add an input field and connect the geocoding service to translate location names to coordinates.
 
 Add a text input to the yellow overlay:
 ```
@@ -458,6 +477,7 @@ Add a text input to the yellow overlay:
     </div>
 </form>
 ```
+{ data-search-exclude }
 
 Now, let's add an event handler on the form's submit event. Once a user submits the form - we will take the address from the `searchAdress` input and pass it to the geocoding service. The service should then respond with the point coordinates of the address, which we will use to update the map's center.
 
@@ -484,8 +504,9 @@ Now, let's add an event handler on the form's submit event. Once a user submits 
   });
 
 ```
+{ data-search-exclude }
 
-You can now put cities or full addresses in the text input. When  you submit the form - your map should automatically move to the address you entered and the nearby stores should load.
+You can now put cities or full addresses in the text input. When you submit the form - your map should automatically move to the address you entered and the nearby stores should load.
 
 ## Final touches
 
@@ -498,6 +519,7 @@ Update the `onMarkersLoaded()` method and replace
 ```
 localMarkers[store.id] = L.marker([store.Location.lat, store.Location.lon])
 ```
+{ data-search-exclude }
 
 with
 
@@ -519,8 +541,9 @@ with
       localMarkers[store.id] = L.marker([store.Location.lat, store.Location.lon])
                                 .bindPopup(storePopupHtml);
 ```
+{ data-search-exclude }
 
-This should provide standard maps popovers, if you'd like to give them some extra style - add this to the CSS file and adjust to your needs:
+This should provide standard maps popovers if you'd like to give them some extra style - add this to the CSS file and adjust to your needs:
 
 ```
 .leaflet-popup-content-wrapper {
@@ -529,6 +552,7 @@ This should provide standard maps popovers, if you'd like to give them some extr
     width: 300px;
 }
 ```
+{ data-search-exclude }
 
 ### Store list
 
@@ -552,6 +576,7 @@ Add the container in HTML:
 </div>
 
 ```
+{ data-search-exclude }
 
 and the following method, which will populate the list:
 
@@ -592,6 +617,7 @@ function renderList(collection = placeCollection) {
     }
   }
 ```
+{ data-search-exclude }
 
 and the next one, that will clear the list's contents:
 
@@ -606,13 +632,15 @@ function resetList() {
     }
   }
 ```
+{ data-search-exclude }
 
 and finally - drop this at the end of the `onMarkersLoaded()` function:
 
 ```
  renderList(collection);
 ```
+{ data-search-exclude }
 
-That's it! You should  now have a fully working webpage, which will display the list of stores you store in Flotiq and will place the store's on a map. Look into our [Git repository](https://github.com/flotiq/flotiq-demo-storing-location-data) for some extra style and let us know in the comments when you build something!
+That's it! You should now have a fully working webpage, which will display the list of stores you store in Flotiq and will place the stores on a map. Look into our [Git repository](https://github.com/flotiq/flotiq-demo-storing-location-data) for some extra style and let us know in the comments when you build something!
 
 ![The final result - store locator webpage with data dynamically pulled from Flotiq](images/store-locator-7.png){: .center .border .width75}

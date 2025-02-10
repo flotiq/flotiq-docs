@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Client libraries and SDKs
 description: Flotiq provides SDKs, or client libraries, to access your Content, but if you would like to build your own - you can use the OpenAPI compatible schema to generate clients and servers for multiple languages.
 
@@ -7,7 +12,7 @@ description: Flotiq provides SDKs, or client libraries, to access your Content, 
 
 On your Flotiq dashboard, you can find links to download client libraries (SDK packages) for several frameworks and languages.
 
-![Available frameworks and languages](images/frameworkslogos.png)
+![Available frameworks and languages](images/frameworkslogos.png){: .width25 .center .border}
 
 Currently supported generators are:
 
@@ -31,19 +36,24 @@ Flotiq always provides your up-to-date API definition in an OpenAPI 3.0 compatib
 ``` shell
 npm install @openapitools/openapi-generator-cli@cli-4.2.3 -g
 ```
+{ data-search-exclude }
 
 
-This will instal the OpenAPI generator that will allow you to generate more packages. List of supported generators is mentioned [here](https://openapi-generator.tech/docs/generators)
+This will install the OpenAPI generator that will allow you to generate more packages. List of supported generators is mentioned on the [OpenAPI generator page](https://openapi-generator.tech/docs/generators).
 
 ```
 openapi-generator generate -g <name> -i <path_to_open_api_schema_json> --skip-validate-spec -o <output_path>
 ```
+{ data-search-exclude }
+
+_Worth to know is that you should have installed Java to run successfully command above._
+
 
 Parameters description:
 
-* `<name>` - name of framework/language you want to generate package for (ex. typescript-angular)
+* `<name>` - name of framework/language you want to generate package for (ex. typescript-angular).
 * `<path_to_open_api_schema_json>` - path to generated OpenApiSchema file.
-* `<output_path>` - specify where you want to output your generated package   
+* `<output_path>` - specify where you want to output your generated package.
 
 ## Use Swagger Editor to generate server and client libraries
 

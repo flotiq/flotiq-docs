@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to add a custom domain to your Heroku-hosted blog with Cloudflare workers | Flotiq docs
 description: Read this tutorial to learn how you can use Cloudflare workers to add a free custom domain to a Heroku-hosted blog.
 
@@ -6,7 +11,6 @@ description: Read this tutorial to learn how you can use Cloudflare workers to a
 Heroku is pretty great for hosting websites and their `Deploy to Heroku` buttons are so awesome, especially with how they can be integrated with static website generators, like Gatsby. Heroku's free account is also quite capable, you are allowed to deploy up to 5 applications, hosted in their `*.herokuapp.com` domain. But, as soon as you'd like to move this app to a custom domain - you have to pay. If you've already built and deployed your blog, for example using [this tutorial](../Building-a-blog-in-3-minutes/) your next step will probably be adding a custom domain for your blog.
 
 Here's a quick tutorial how to get around this, with Cloudflare Workers.
-
 
 !!! caution
     **Prerequisites:**
@@ -21,10 +25,10 @@ Cloudflare is a global CDN (Contend Delivery Network), which provides websites a
 
 ![](images/cloudflare-workers-edge.png)
 
-Cloudflare provides a pretty handy CLI tool to work with your Workers code, you can read more about how to get started [here](https://developers.cloudflare.com/workers/quickstart/). In this tutorial, however, we will use the Cloudflare GUI to build the solution.
+Cloudflare provides a pretty handy CLI tool to work with your Workers code, you can read more about how to get started from the [Cloudflare source directly](https://developers.cloudflare.com/workers/quickstart/). In this tutorial, however, we will use the Cloudflare GUI to build the solution.
 
 ### Creating the worker
-Once you login to your Cloudflare account go to Menu / Workers. From the Workers dashboard select Create Worker.
+Once you log in to your Cloudflare account go to Menu / Workers. From the Workers dashboard select Create Worker.
 
 ![](images/cloudflare-workers-dashboard-create.png)
 
@@ -80,6 +84,7 @@ addEventListener("fetch", event => {
 
 
 ```
+{ data-search-exclude }
 
 which is adapted from [this Cloudflare article](https://blog.cloudflare.com/subdomains-vs-subdirectories-improved-seo-part-2/).
 

@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Building a banner rotator with an admin interface | Flotiq docs
 description: This example shows how you can use Flotiq to build your own system that can rotate ads on your website.
 
@@ -40,7 +45,7 @@ Here are the properties we will require:
 
 after adding that into a new Flotiq Content Type you should see the following:
 
-![The Rotator Content Type Definition in Flotiq](images/building-a-banner-rotator/rotator-content-type-definition-flotiq.png){: .center .border .width75}
+![The Rotator Content Type Definition in Flotiq](images/building-a-banner-rotator/rotator-content-type-definition-flotiq.png){: .center .border .width50}
 
 Hit Save and you can start adding new Rotators!
 
@@ -48,7 +53,7 @@ Hit Save and you can start adding new Rotators!
 
 It's always recommended to use a scoped API key - that way access to content is restricted to specific Content Types and even if you add new data models in the future - your data will be safe.In our case - we will need access to 2 Content Types - `Rotator` and `Media`, so let's add a key for that purpose.
 
-![Flotiq scoped API Keys](images/building-a-banner-rotator/flotiq-api-keys.png){: .center .border .width75}
+![](images/building-a-banner-rotator/flotiq-api-keys.png){: .border}
 
 ## 3. Build the rotator script
 
@@ -61,6 +66,7 @@ The HTML container can look like this:
      data-rotator-key="__FLOTIQ_SCOPED_READ_ONLY_KEY__">
 </div>
 ```
+{ data-search-exclude }
 
 and here's a very simple JavaScript that downloads the banner and shows it in the target container:
 
@@ -107,6 +113,7 @@ document.querySelectorAll('[data-rotator-id]').forEach((element) => {
 })
 </script>
 ```
+{ data-search-exclude }
 
 Who! That's not even 40 lines of code and we have a working ad rotator!
 
@@ -128,6 +135,7 @@ With that - we don't need to put the entire script on our website, it's enough t
 </div>
 <script src="https://cdn.jsdelivr.net/gh/trzcina/flotiq-rotator@1/src/script.min.js" defer></script>
 ```
+{ data-search-exclude }
 
 This code can be pasted in any CMS. Here's how it looks in BoltCMS 
 

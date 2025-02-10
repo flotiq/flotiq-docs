@@ -1,0 +1,44 @@
+name: CI
+# Controls when the action will run. Triggers the workflow on push
+# events but only for the master branch
+on:
+  pull_request:
+    types: [ opened, synchronize ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # The type of runner that the job will run on
+    env:
+      SOURCE_EDITOR_URL: ${{ secrets.SOURCE_EDITOR_URL }}
+    steps: # Steps represent a sequence of tasks that will be executed as part of the job
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+    - run: bash ./.github/scripts/get-plugins-docs.sh
+    - run: pip install -r requirements.txt
+    - run: mkdocs build
+    - run: mkdir public
+    - run: mv ./site ./public/docs
+    - name: Cloudflare
+      run: |
+        npm install -g wrangler
+        # wrangler init --site cms-docs
+        sed -i '1i name = "cms-docs-mr-${{ github.event.pull_request.number }}"' wrangler.toml
+        sed -i 's+account_id = '\'\''+account_id = '"'"$ACCOUNT_ID"'"'+g' wrangler.toml
+        sed -i 's+bucket = ""+bucket = "./public"+g' wrangler.toml
+        sed -i 's+workers_dev = true++g' wrangler.toml
+        echo "[env.production]" >> wrangler.toml
+        mkdir -p /home/runner/.wrangler/config/
+        echo api_token = '"'"$API_TOKEN"'"' > /home/runner/.wrangler/config/default.toml
+        cat wrangler.toml
+        cd workers-site
+        npm install
+        cd ../
+        wrangler deploy --env=production
+      shell: bash
+      env:
+        API_TOKEN: ${{ secrets.API_TOKEN }}
+        ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
+        CLOUDFLARE_API_TOKEN: ${{ secrets.API_TOKEN }}

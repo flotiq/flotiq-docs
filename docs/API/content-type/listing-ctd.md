@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to list Content Type Definitions | Flotiq docs
 description: How to list Content Type Definitions in Flotiq
 
@@ -14,14 +19,15 @@ It returns a paginated list of Content Types defined for your account. It can be
 
 Possible request parameters:
 
-| Parameter       | Description                                                                                                                               |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| limit           | Number of objects on page, default `20`                                                                                                   |
-| page            | Number of the requested page, 1-based, default `1`                                                                                        |
-| order_by        | What field should list be ordered by, possible values: `name`, `id`, `createdAt`, `updatedAt`, default `name`                             |
-| order_direction | Order direction, possible values: `asc`, `desc`, default `asc`                                                                            |
-| name            | Used for filtering Content Types by name, filtering is case insensitive and returns everything containing parameter value, default empty  |
-| label           | Used for filtering Content Types by label, filtering is case insensitive and returns everything containing parameter value, default empty |
+| Parameter       | Description                                                                                                                                           |
+| --------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| limit           | Number of objects on page, default `20`                                                                                                               |
+| page            | Number of the requested page, 1-based, default `1`                                                                                                    |
+| order_by        | What field should list be ordered by, possible values: `name`, `id`, `createdAt`, `updatedAt`, default `name`                                         |
+| order_direction | Order direction, possible values: `asc`, `desc`, default `asc`                                                                                        |
+| name            | Used for filtering Content Types by name, filtering is case insensitive and returns everything containing parameter value, default empty              |
+| names           | Used for filtering Content Types by names, filtering is case insensitive and returns everything what is equal to values from parameter, default empty |
+| label           | Used for filtering Content Types by label, filtering is case insensitive and returns everything containing parameter value, default empty             |
 
 !!! Example
 
@@ -32,6 +38,7 @@ Possible request parameters:
         --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "accept: application/json"
         ```
+        { data-search-exclude }
 
     === "C# + Restasharp"
 
@@ -41,6 +48,7 @@ Possible request parameters:
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
         ```
+        { data-search-exclude }
     
     === "Go + Native"
 
@@ -71,6 +79,7 @@ Possible request parameters:
         
         }
         ```
+        { data-search-exclude }
     
     === "Java + Okhttp"
         
@@ -85,6 +94,7 @@ Possible request parameters:
         
         Response response = client.newCall(request).execute();
         ```
+        { data-search-exclude }
 
     === "Java + Unirest"
       
@@ -93,6 +103,7 @@ Possible request parameters:
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
+        { data-search-exclude }
 
     === "Node + Request"
       
@@ -118,6 +129,7 @@ Possible request parameters:
             console.log(body);
         });
         ```
+        { data-search-exclude }
 
     === "PHP + CURL"
     
@@ -149,8 +161,9 @@ Possible request parameters:
             echo $response;
         }
         ```
+        { data-search-exclude }
 
-!!! Responses
+!!! Response
 
     === "200 OK"
 
@@ -359,6 +372,7 @@ Possible request parameters:
           ]
         }
         ```
+        { data-search-exclude }
 
         `total_count` is the number of Content Types in the database (if any filters are present, it's a number of filtered Content Types).
         
@@ -380,5 +394,6 @@ Possible request parameters:
             "massage": "Unauthorized"
         }
         ```
+        { data-search-exclude }
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}

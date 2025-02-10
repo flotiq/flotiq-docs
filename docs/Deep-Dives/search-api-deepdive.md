@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 # Search API in Flotiq
 
 ## Overview
@@ -12,7 +17,6 @@ In this article we will focus on search operations like:
 * Limited Search using filters (objects with specific attributes)
 * Results aggregation (a.k.a. faceted search)
 * Results ranking / scoring (using ES field boosting).
-
 
 > Remember to check our [Flotiq Search API Documentation](https://flotiq.com/docs/API/search/) for more details and examples.
 
@@ -60,7 +64,6 @@ If you want to have more filters then add more parameters using syntax above by 
 ![](images/searchapi/filters.gif)
 
 
-
 ## Results aggregation
 
 This is, by far, one of the coolest features described in this article. Using this technique you'll be able to immediately build faceted search results that look like this
@@ -70,9 +73,8 @@ Simply add `aggregate_by[]=value` parameter to populate the `summary` object in 
 ![](images/searchapi/aggregate.gif)
 
 The part of response that is interesting us in this case looks like in image below:
+
 ![](images/searchapi/summaryres.png)
-
-
 
 
 ## Increase search score by using ElasticSearch field boosting
@@ -97,6 +99,7 @@ Search score for text found in title
     "score": 5.0425596
 }
 ```
+{ data-search-exclude }
 
 Search score for text found in content
 ```json
@@ -105,6 +108,8 @@ Search score for text found in content
     "score": 2.0425596
 }
 ```
+{ data-search-exclude }
+
 ## Conclusion
 
 Flotiq is built to be extremely easy to use, yet very powerful. Our search feature is trivial to use, but at the same time offers features that make us stand out from out competitors (see Headless CMS Full-text search comparison article). Using Flotiq's search you can now build a complex search engine into your apps without the need to worry about integrating with external solutions.

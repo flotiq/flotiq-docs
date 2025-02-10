@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: How to handle Content Objects | Flotiq docs
 description: How to handle Content Objects in Flotiq
 
@@ -14,7 +19,7 @@ The internal system API is used to define and list Content Types (models), which
 
 The user public API exposes the user-defined Content Types (models) via a REST interface.
 
-You can learn how to obtain your schema [here](open-api-schema.md).
+You can learn how to obtain your schema [in the next article about OpenAPI schema](open-api-schema.md).
 
 ## Key concepts
 
@@ -47,7 +52,7 @@ Example:
 
 API token (described across the documentation as `YOUR API TOKEN` or `YOUR_API_TOKEN`) should be obtained from the User profile view of the Flotiq panel. 
 All examples here have authentication in the request header, but you can also use `?auth_token=YOUR_API_TOKEN` in the request URL.
-You can learn how to obtain your API key [here](index.md).
+You can learn how to obtain your API key [in the next article](index.md).
 
 ## Working with Content Objects
 
@@ -55,7 +60,7 @@ The supporting endpoints of a given
 <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr>
 allow the user to perform basic REST operations
 
-![](images/endpoints.png){: .center .width75 .border}
+![](images/endpoints.png){: .border}
 
 * [Create](content-type/creating-co.md)
     * [Batch create](/docs/API/content-type/creating-co/#batch-create-content-objects-through-api)

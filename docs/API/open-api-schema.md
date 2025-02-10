@@ -1,3 +1,8 @@
+---
+tags:
+  - Developer
+---
+
 title: Get your own Open Api Schema | Flotiq docs
 description: How to get your open API schema
 
@@ -19,18 +24,20 @@ https://api.flotiq.com/api/v1/open-api-schema.json
 Or run a simple curl request in the terminal:
 
 ```
-curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" 
-     -H 'accept: */*' 
-     -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" \
+     -H 'accept: */*' \
+     -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
      -H 'Content-Type: application/json'
 ```
+{ data-search-exclude }
 
 Possible request parameters:
 
 | Parameter | Description                                                                                                |
-| --------- |------------------------------------------------------------------------------------------------------------|
+|-----------|------------------------------------------------------------------------------------------------------------|
 | version   | version of API Schema, possible values: `3.1`,`3` - default for Open API Schema 3.0, `2` - for Swagger 2.0 |
 | user_only | should the schema be rendered without system endpoints, default `false`                                    |
+| hydrate   | if relations to other CTDs should be expanded, default `0`, `1` - expand schema definition                 | 
 
 Version 3 is compatible with Open API tools
 ([SDK generator](https://github.com/OpenAPITools/openapi-generator), [swagger editor](https://editor.swagger.io/))
@@ -45,11 +52,12 @@ as not all tools can handle the whole Open API Schema format.
 
     Example curl request
     ```
-    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" 
-         -H 'accept: */*' 
-         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" \ 
+         -H 'accept: */*' \
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
          -H 'Content-Type: application/json'
     ```
+    { data-search-exclude }
 
     Response
     ```
@@ -967,7 +975,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "schema": {
                   "type": "number",
                   "minimum": 0,
@@ -1306,7 +1314,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "schema": {
                   "type": "number",
                   "minimum": 0,
@@ -1757,7 +1765,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "schema": {
                   "type": "number",
                   "minimum": 0,
@@ -2112,7 +2120,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "schema": {
                   "type": "number",
                   "minimum": 0,
@@ -3334,16 +3342,18 @@ as not all tools can handle the whole Open API Schema format.
     }
 
     ```
+    { data-search-exclude }
 
 ??? "Response for user only version 3"
 
     Example curl request
     ```
-    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?user_only=true" 
-         -H 'accept: */*' 
-         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?user_only=true" \
+         -H 'accept: */*' \
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
          -H 'Content-Type: application/json'
     ```
+    { data-search-exclude }
 
     Response
     
@@ -3861,7 +3871,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "schema": {
                   "type": "number",
                   "minimum": 0,
@@ -4200,7 +4210,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "schema": {
                   "type": "number",
                   "minimum": 0,
@@ -4411,16 +4421,18 @@ as not all tools can handle the whole Open API Schema format.
       }
     }
     ```
+    { data-search-exclude }
 
 ??? "Response for full version 2"
 
     Example curl request
     ```
-    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?version=2" 
-         -H 'accept: */*' 
-         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?version=2" \
+         -H 'accept: */*' \
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
          -H 'Content-Type: application/json'
     ```
+    { data-search-exclude }
 
     Response
     ```
@@ -5307,7 +5319,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "type": "number",
                 "minimum": 0,
                 "maximum": 1,
@@ -5583,7 +5595,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "type": "number",
                 "minimum": 0,
                 "maximum": 1,
@@ -5953,7 +5965,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "type": "number",
                 "minimum": 0,
                 "maximum": 1,
@@ -6229,7 +6241,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "type": "number",
                 "minimum": 0,
                 "maximum": 1,
@@ -7274,17 +7286,18 @@ as not all tools can handle the whole Open API Schema format.
       }
     }
     ```
-
+    { data-search-exclude }
 ??? "Response for user only version 2"
 
     Example curl request
     ```
-    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?version=2&user_only=true" 
-         -H 'accept: */*' 
-         -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+    curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json?version=2&user_only=true" \
+         -H 'accept: */*' \
+         -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
          -H 'Content-Type: application/json'
     ```
-
+    { data-search-exclude }
+    
     Response
     ```
     {
@@ -7769,7 +7782,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "type": "number",
                 "minimum": 0,
                 "maximum": 1,
@@ -8045,7 +8058,7 @@ as not all tools can handle the whole Open API Schema format.
                 "in": "query",
                 "name": "hydrate",
                 "required": false,
-                "description": "Should hydrate relations of object, for now only one level of hydration is possible",
+                "description": "Should hydrate relations of object, for now only two levels of hydration are possible",
                 "type": "number",
                 "minimum": 0,
                 "maximum": 1,
@@ -8211,11 +8224,82 @@ as not all tools can handle the whole Open API Schema format.
       }
     }
     ```
+    { data-search-exclude }
 
-## Getting your Scoped Open API Schema :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Unavailable in Free subscription plan" }[^1]
+## Hydration in Open API Schema
+
+If a content type has relations to another content type, the generated schema looks like this:
+
+```json
+"product": {
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+    },
+    {
+      "type": "object",
+      "properties": {
+        ...
+      "categories": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DataSource"
+        },
+        "minItems": 0,
+        "description": ""
+      }
+    }
+  }
+],
+
+...
+
+```
+{ data-search-exclude }
+
+!!! notice 
+    The `DataSource` schemas are a way we use to create relations (links)
+    between objects across different Content Type Definitions.
+
+
+In the schema above - the `categories` field requires objects of `category` type, but it's not 
+clear looking at the definition. When add the `hydrate=1` parameter when generating the OpenAPI 
+schema, we will get a schema properly reflecting the link to `category`:
+
+```json
+"product": {
+  "type": "object",
+   "allOf": [
+      {
+        "$ref": "#/components/schemas/AbstractContentTypeSchemaDefinition"
+      },
+      {
+        "type": "object",
+         "properties": {
+            ...
+            "categories": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/category"
+              },
+            "minItems": 0,
+            "description": ""
+          },
+        }
+      }
+   ],
+...
+```
+{ data-search-exclude }
+
+!!! tip
+    You can use the `hydrate=1` parameter along with the [OpenAPI generator](https://flotiq.com/docs/API/generate-package/#generate-server-libraries-or-clients-for-other-languages) to generate SDK packages that will support object hydration.
+
+## Getting your Scoped Open API Schema :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Unavailable in << plan_names.free >> subscription plan" }[^1]
 
 If you want to get your Scoped Open API Schema from Flotiq, 
-you have to make a call at the following endpoint with the User Defined API key (using a Web browser, Postman or Insomnia):
+you have to make a call at the following endpoint with the [User Defined API key](/docs/API/#user-defined-api-keys) (using a Web browser, Postman or Insomnia):
 
 `
 https://api.flotiq.com/api/v1/open-api-schema.json
@@ -8224,13 +8308,14 @@ https://api.flotiq.com/api/v1/open-api-schema.json
 Or run a simple curl request in the terminal:
 
 ```
-curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" 
-     -H 'accept: */*' 
-     -H 'X-AUTH-TOKEN: YOUR_API_KEY' 
+curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" \
+     -H 'accept: */*' \
+     -H 'X-AUTH-TOKEN: YOUR_API_KEY' \
      -H 'Content-Type: application/json'
 ```
+{ data-search-exclude }
 
-You can use the same request parameters for scoped API schemas as for full API schema.
+You can use the same request parameters for [scoped API](/docs/API/#user-defined-api-keys) schemas as for [full API](/docs/API/#application-api-keys) schema.
 
 ??? "Response for scoped key, create of blogposts only"
 
@@ -9302,6 +9387,7 @@ You can use the same request parameters for scoped API schemas as for full API s
       }
     }
     ```
+    { data-search-exclude }
 
 !!! note
     Read more about [API keys and scoped API keys](/docs/API/)
@@ -9309,4 +9395,4 @@ You can use the same request parameters for scoped API schemas as for full API s
 [Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
 
 
-[^1]: Unavailable in Free subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+[^1]: Unavailable in << plan_names.free >> subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

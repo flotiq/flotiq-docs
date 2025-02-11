@@ -5131,6 +5131,8 @@ as not all tools can handle the whole Open API Schema format.
     }
     }
     ```
+    { data-search-exclude }
+    
 ??? "Response for user only version 3.1"
 
     Example curl request
@@ -8965,6 +8967,8 @@ as not all tools can handle the whole Open API Schema format.
       }
     }
     ```
+    { data-search-exclude }
+
 ??? "Response for full version 3"
 
     Example curl request

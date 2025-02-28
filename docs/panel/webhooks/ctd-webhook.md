@@ -40,7 +40,6 @@ When a `Content Definition Changes` Webhook is executed, a payload containing in
     "id": "5c40813e-afbb-11ee-95b8-1275d669877f",
     "name": "product",
     "label": "Product",
-    "workflowId": "generic",
     "internal": false,
     "schemaDefinition": {
       "type": "object",

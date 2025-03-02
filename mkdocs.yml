@@ -172,6 +172,7 @@ nav:
       - 'Custom Links': panel/Plugins/Custom-links.md
       - 'Slug': panel/Plugins/Slug.md
       - 'Surfer SEO ': panel/Plugins/Surfer-seo.md
+      - 'Multilingual': panel/Plugins/Multilingual.md
     - UI Plugins Development:
       - 'Getting started': panel/PluginsDevelopment/plugins.md
       - 'Examples': panel/PluginsDevelopment/plugin-examples.md
@@ -221,7 +222,6 @@ nav:
     - 'Importing from WordPress': Deep-Dives/wordpress-import.md
     - 'E-commerce with Snipcart & Gatsby': Deep-Dives/node-js-ecommerce-snipcart-gatsby-demo.md
     - 'Full-text search': Deep-Dives/search-api-deepdive.md
-    - 'Multilingual content': Deep-Dives/multilingual-content.md
     - 'Securing JAMstack APIs': Deep-Dives/securing-write-api-access.md
     - 'Meta-API': Deep-Dives/metaapi.md
     - 'Custom domains in Heroku': Deep-Dives/add-a-custom-domain-to-heroku-for-free.md

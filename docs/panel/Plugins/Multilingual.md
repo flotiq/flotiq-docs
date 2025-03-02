@@ -68,6 +68,7 @@ Let's assume you have an object with `title` and `slug` fields. Before applying 
    "slug": "my-first-blog-post"
 }
 ```
+{ data-search-exclude }
 
 Now, let's consider that you are adding two languages: `Polish` and `English`, and your default language is `English`. After applying translations, the object will be:
 
@@ -82,6 +83,7 @@ Now, let's consider that you are adding two languages: `Polish` and `English`, a
    }]
 }
 ```
+{ data-search-exclude }
 
 ## Removing Content Type from plugin settings
 

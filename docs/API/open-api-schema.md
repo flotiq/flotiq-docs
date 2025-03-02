@@ -125,7 +125,9 @@ as not all tools can handle the whole Open API Schema format.
             "minLength": 1
           },
           "workflowId": {
-            "type": "string"
+            "type": "string",
+            "deprecated": true,
+            "description": "This field is deprecated. Use 'draftPublic' instead."
           },
           "schemaDefinition": {
             "type": "object",
@@ -9050,7 +9052,9 @@ as not all tools can handle the whole Open API Schema format.
                 "minLength": 1
               },
               "workflowId": {
-                "type": "string"
+                "type": "string",
+                "deprecated": true,
+                "description": "This field is deprecated. Use 'draftPublic' instead."
               },
               "schemaDefinition": {
                 "type": "object",
@@ -13423,7 +13427,9 @@ as not all tools can handle the whole Open API Schema format.
               "minLength": 1
             },
             "workflowId": {
-              "type": "string"
+              "type": "string",
+              "deprecated": true,
+              "description": "This field is deprecated. Use 'draftPublic' instead."
             },
             "schemaDefinition": {
               "type": "object",
@@ -17308,7 +17314,9 @@ You can use the same request parameters for [scoped API](/docs/API/#user-defined
                 "minLength": 1
               },
               "workflowId": {
-                "type": "string"
+                "type": "string",
+                "deprecated": true,
+                "description": "This field is deprecated. Use 'draftPublic' instead."
               },
               "schemaDefinition": {
                 "type": "object",

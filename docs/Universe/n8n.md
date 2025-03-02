@@ -46,7 +46,6 @@ This Content Type Definition can be set up either through the [Flotiq Dashbord](
     {
         "name": "email",
         "label": "Email",
-        "workflowId": "generic",
         "internal": false,
         "schemaDefinition": {
             "type": "object",

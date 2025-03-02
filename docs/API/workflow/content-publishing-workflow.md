@@ -67,8 +67,6 @@ Workflows are defined at the Content Type Definition level, in order to change t
     "name": "post",
     "label": "Blog posts",
     "internal": false,
-    "workflowId":"publishing",
-
  //   ...
 
 }

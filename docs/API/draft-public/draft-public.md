@@ -62,6 +62,7 @@ To enable `Draft & Public` feature, pass into request payload  `draftPublic:true
           "metaDefinition": {...}
         }'
     ```
+    { data-search-exclude }
 
 !!! Note
     Content object will be created with `Draft & Public` feature **enabled**. 

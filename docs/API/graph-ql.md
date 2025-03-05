@@ -126,6 +126,10 @@ We can specify two types of queries - responsible for retrieving a single object
 To a get single object, you need to pass the object identifier and fields you want to receive in the response.
 Example Query in GraphQL language to get `id` and `title` for the product with id `product-1` looks like:
 
+!!! Note
+    By default, this endpoint will return only objects with the status **public** [read more](/docs/API/draft-public/draft-public),
+    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode)
+
 !!! Example
 
     === "Use id to fetch object"

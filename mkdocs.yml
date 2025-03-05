@@ -148,6 +148,7 @@ nav:
       - 'Media library': API/media-library.md
       - 'Transformations': API/variants.md
     - 'Workflows': 'API/workflow/content-publishing-workflow.md'
+    - 'Draft & Public': 'API/draft-public/draft-public.md'
   - Dashboard:
     - 'Overview': panel/index.md
     - 'Spaces and Organization': panel/spaces.md

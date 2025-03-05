@@ -28,6 +28,10 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
 This is a basic request for listing content, without any additional parameters:
 
+!!! Note
+    By default, this endpoint will return only objects with the status **public** [read more](/docs/API/draft-public/draft-public),
+    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode)
+
 !!! Example
 
     === "CURL"
@@ -341,7 +345,10 @@ Request parameters
                     "contentType": "blogposts",
                     "createdAt": "2021-04-09T13:30:48+00:00",
                     "updatedAt": "2021-04-09T13:30:48+00:00",
-                    "deletedAt": ""
+                    "deletedAt": "",
+                    "publicVersion": -1,
+                    "publishedAt": "",
+                    "status": "public"
                 },
                 "title": "New object",
                 "postContent": "This will be the new <b>content</b>"

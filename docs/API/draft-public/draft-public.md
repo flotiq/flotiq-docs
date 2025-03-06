@@ -103,7 +103,7 @@ endpoint with `:content-type-definition-name` and `:content-type-object-id` para
 
 !!! Request
     ```
-    curl -X GET 'https://api.flotiq.com/api/v1/post/post-1/archive' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X GET 'https://api.flotiq.com/api/v1/posts/post-1/archive' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 
@@ -141,7 +141,7 @@ Let's see how the API response will look depending on the provided headers.
     
         !!! Request
             ```bash
-            curl -X GET 'https://api.flotiq.com/api/v1/post' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+                curl -X GET 'https://api.flotiq.com/api/v1/post' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
             ```
             { data-search-exclude }
         

@@ -28,9 +28,6 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 
 This is a basic request for listing content, without any additional parameters:
 
-!!! Note
-    By default, this endpoint will return only objects with the status `public`,
-    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode). Read more about [Draft & Public](/docs/API/draft-public/draft-public).
 !!! Example
 
     === "CURL"
@@ -158,6 +155,10 @@ This is a basic request for listing content, without any additional parameters:
         }
         ```
         { data-search-exclude }
+
+!!! Note
+    By default, this endpoint will return only objects with the status `public`, to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode).
+    Read more about [Draft & Public](/docs/API/draft-public/draft-public).
 
 The example below shows the use of multiple parameters in one complex API query.
 In the order of the parameters, we first specify the `page` of results,

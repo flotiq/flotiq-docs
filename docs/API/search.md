@@ -32,10 +32,6 @@ You can use the search engine via the `GET /api/v1/search` endpoint to search th
     The Flotiq search endpoint supports querying up to a maximum of 10,000 results.
 
 ## Example: Search for "Flotiq" in posts
-!!! Note
-    By default, this endpoint will return only objects with the status **public** [read more](/docs/API/draft-public/draft-public),
-    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode).
-
 Request:
 ```
 GET https://api.flotiq.com/api/v1/search?q=Flotiq&content_type[]=post
@@ -84,6 +80,10 @@ Response:
 }
 ```
 { data-search-exclude }
+
+!!! Note
+    By default, this endpoint will return only objects with the status `public` [read more](/docs/API/draft-public/draft-public),
+    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode).
 
 ## Limit the search to a specific Content Type
 

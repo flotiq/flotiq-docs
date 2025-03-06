@@ -39,7 +39,7 @@ To enable `Draft & Public` feature, pass into request payload  `draftPublic: tru
 
 !!! Note
     Content object will be created with `Draft & Public` feature **enabled**. 
-    From now all newly created content objects will be saved with a status **draft**
+    From now all newly created content objects will be saved with a status **draft**.
 
 ## Usage
 

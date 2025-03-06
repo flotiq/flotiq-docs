@@ -69,7 +69,7 @@ to do so we need to call the endpoint: `/api/v1/content/:content-type-definition
 with `:content-type-definition-name` and `:content-type-object-id` parameters matching your content.
 !!! Request
     ```
-    curl -X GET 'https://api.flotiq.com/api/v1/snipcart/snipcart-584874/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X GET 'https://api.flotiq.com/api/v1/posts/post-1/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 

@@ -15,7 +15,7 @@ This feature is disabled by default, and all saved content objects will have the
 
 !!! Note
     By default, all listing endpoints (like: [listing content objects](/docs/API/content-type/listing-co/)) will return only
-    objects with the status **public**, to modify this behavior use header [X-MODE](/docs/API/draft-public/draft-public/#preview-mode)
+    objects with the status `public`, to modify this behavior use header [X-MODE](/docs/API/draft-public/draft-public/#preview-mode).
 
 ## Enabling Draft & Public feature on Content definition
 

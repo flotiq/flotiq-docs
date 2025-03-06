@@ -19,7 +19,7 @@ This feature is disabled by default, and all saved content objects will have the
 
 ## Enabling Draft & Public feature on Content definition
 
-To enable `Draft & Public` feature, pass into request payload  `draftPublic:true` while creating `Content Type Definition`
+To enable `Draft & Public` feature, pass into request payload  `draftPublic: true` while creating `Content Type Definition`.
 
 !!! Example
     ```bash

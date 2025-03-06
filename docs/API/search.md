@@ -34,7 +34,7 @@ You can use the search engine via the `GET /api/v1/search` endpoint to search th
 ## Example: Search for "Flotiq" in posts
 !!! Note
     By default, this endpoint will return only objects with the status **public** [read more](/docs/API/draft-public/draft-public),
-    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode)
+    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode).
 
 Request:
 ```

@@ -53,8 +53,8 @@ the list of each status with a brief explanation has been written below:
 - **Archived** Status for content withdrawn from Public state
 
 !!! Note
-    **Only content in status Public will be visible via listing API**, by default, to access content in different statuses,
-    use header [X-MODE](#preview-mode) 
+    **Only content in status `public` will be visible via listing API**, by default, to access content in different statuses,
+    use header [X-MODE](#preview-mode).
 
 ### Draft & Public endpoints
 Flotiq API provides a set of endpoints to manage the status of your content.

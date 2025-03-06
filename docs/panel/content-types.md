@@ -15,6 +15,7 @@ Example:
 
     * id – string, unique, required, Flotiq Dashboard adds this automatically
     * title – string, required, part of the object title
+    * draftPublic – boolean, default: false, enable/disable [Draft & Public](/docs/API/draft-public/draft-public) feature
     * slug – string, unique, required 
     * excerpt - string, required
     * content – string, required
@@ -44,6 +45,10 @@ If you don't have any Content Types defined yet, you will see a list of tiles wh
 In this example, click `Blog Post` predefined type.
 
 ![](images/AddContentTypeDefinitions.png){: .center .width75 .border}
+
+!!! Note
+    The form includes a **Label** (Displayed in the dashboard) and a **Name** (visible to developers),
+    along with a **Draft & Public** switch to manage drafts and control when content is published ([read more](/docs/API/draft-public/draft-public/)).
 
 It has five properties:
 

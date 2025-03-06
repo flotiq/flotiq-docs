@@ -86,7 +86,7 @@ endpoint with `:content-type-definition-name` and `:content-type-object-id` para
 
 !!! Request
     ```
-    curl -X GET 'https://api.flotiq.com/api/v1/snipcart/snipcart-584874/unpublish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X GET 'https://api.flotiq.com/api/v1/posts/post-1/unpublish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 

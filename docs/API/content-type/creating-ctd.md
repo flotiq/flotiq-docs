@@ -24,7 +24,7 @@ Content Type</abbr> is simply a ``POST`` call with a payload similar to:
 
 !!! Hint
     If you wish to create Content type definition with [Draft & Public](/docs/API/draft-public/draft-public) feature enabled,
-    you need to pass `"draftPublic":true` into request body [read more](/docs/API/draft-public/draft-public/#enabling-draft-public-feature-on-content-definition)
+    you need to pass `"draftPublic": true` into request body ([read more](/docs/API/draft-public/draft-public/#enabling-draft-public-feature-on-content-definition)).
 
 ```
 {

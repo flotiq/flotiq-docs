@@ -8,9 +8,8 @@ description: Draft & Public Mode is a feature that allows teams to manage differ
 
 # Draft & Public
 
-Draft & Public Mode is a feature that allows teams to manage different content variants in the CTD system. When enabled,
-users
-can mark content as `published`, `modified`, or `archived`, making it easier to organize and control its state.
+The Draft & Public mode is designed to manage the visibility of content objects in the system and facilitate the publishing process. 
+When enabled, users can utilize statuses such as `draft`, `published`, `modified`, and `archived` to better organize content and control its state.
 
 !!! Note
     **By default, this feature is disabled and all saved content objects will have a status set as `public`**

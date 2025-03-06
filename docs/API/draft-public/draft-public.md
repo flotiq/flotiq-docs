@@ -13,31 +13,6 @@ When enabled, users can utilize statuses such as `draft`, `published`, `modified
 
 This feature is disabled by default, and all saved content objects will have their status set to `public`.
 
-Example content object of the definition with disabled **Draft & Public** feature
-```json
-{
-  "id": "snipcart-584874",
-  "name": "Gunpowder Temple Of Heaven",
-  "image": [
-    {
-      "type": "internal",
-      "dataUrl": "/api/v1/content/_media/_media-5e17192889e87"
-    }
-  ],
-  "price": 22,
-  "internal": {
-    "createdAt": "2020-01-08T13:29:28+00:00",
-    "deletedAt": "",
-    "updatedAt": "2020-01-09T12:30:38+00:00",
-    "contentType": "snipcart",
-    "publicVersion": -1,
-    "publishedAt": "",
-    "status": "public"
-  }
-}
-```
-{ data-search-exclude }
-
 !!! Note
     By default, all listing endpoints (like: [listing content objects](/docs/API/content-type/listing-co/)) will return only
     objects with the status **public**, to modify this behavior use header [X-MODE](/docs/API/draft-public/draft-public/#preview-mode)

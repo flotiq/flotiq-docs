@@ -137,6 +137,7 @@ nav:
       - 'Getting single Content Object': API/content-type/getting-co.md
       - 'Deleting Content Objects': API/content-type/deleting-co.md
       - 'Listing deleted Content Objects': API/content-type/listing-deleted-co.md
+      - 'Draft & Public': API/draft-public/draft-public.md
     - 'Dynamic Content API': API/dynamic-content-api.md
     - 'GraphQL': API/graph-ql.md
     - 'Generating SDKs':
@@ -148,7 +149,6 @@ nav:
       - 'Media library': API/media-library.md
       - 'Transformations': API/variants.md
     - 'Workflows': 'API/workflow/content-publishing-workflow.md'
-    - 'Draft & Public': 'API/draft-public/draft-public.md'
   - Dashboard:
     - 'Overview': panel/index.md
     - 'Spaces and Organization': panel/spaces.md

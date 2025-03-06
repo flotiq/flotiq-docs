@@ -27,9 +27,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
 (where `name` is the name of the content type definition and `id` is the ID of the object to retrieve) to get Content Object.
 
 !!! Note
-    By default, this endpoint will return only objects with the status **public** [read more](/docs/API/draft-public/draft-public),
-    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode)
-
+    By default, this endpoint will return only objects with the status `public`,
+    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode). Read more about [Draft & Public](/docs/API/draft-public/draft-public).
 !!! Example
 
     === "CURL"

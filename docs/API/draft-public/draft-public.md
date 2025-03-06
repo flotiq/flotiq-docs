@@ -120,7 +120,7 @@ endpoint with `:content-type-definition-name` and `:content-type-object-id` para
     Now object with the id snipcart-584874, **will have the status Draft and will not be visible, by default in the listing API**
 
 ### Content archiving
-If you wish to archive the public version to the draft, to make content withdrawn from the Public state you can use:
+If you wish to archive the public version to the draft, to make content withdrawn from the Public state and mark it as `archived` you can use:
 
 `/api/v1/content/:content-type-definition-name/:content-type-object-id/archive`
 

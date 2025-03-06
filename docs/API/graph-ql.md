@@ -128,7 +128,7 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
 
 !!! Note
     By default, this endpoint will return only objects with the status **public** [read more](/docs/API/draft-public/draft-public),
-    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode)
+    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode).
 
 !!! Example
 

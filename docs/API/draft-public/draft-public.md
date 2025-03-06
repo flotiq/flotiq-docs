@@ -9,7 +9,7 @@ description: Draft & Public Mode is a feature that allows teams to manage differ
 # Draft & Public
 
 The Draft & Public mode is designed to manage the visibility of content objects in the system and facilitate the publishing process. 
-When enabled, users can utilize statuses such as `draft`, `published`, `modified`, and `archived` to better organize content and control its state.
+When enabled, users can utilize statuses such as `draft`, `public`, `modified`, and `archived` to better organize content and control its state.
 
 This feature is disabled by default, and all saved content objects will have their status set to `public`.
 
@@ -27,8 +27,8 @@ To enable `Draft & Public` feature, pass into request payload  `draftPublic:true
         -H "Content-Type: application/json" \
         -H "X-AUTH-TOKEN: your_token" \
         -d '{
-          "name": "snipcart",
-          "label": "Snipcart",
+          "name": "post",
+          "label": "Post",
           "draftPublic": true,
           "featuredImage": [],
           "schemaDefinition": {...},
@@ -39,7 +39,7 @@ To enable `Draft & Public` feature, pass into request payload  `draftPublic:true
 
 !!! Note
     Content object will be created with `Draft & Public` feature **enabled**. 
-    From now all newly created content objects will be saved with a status **draft**
+    From now all newly created content objects will be saved with a status `draft`
 
 ## Usage
 
@@ -49,7 +49,7 @@ the list of each status with a brief explanation has been written below:
 
 - **Draft** default status for all newly created content objects.
 - **Public** is a status for your production ready content. 
-- **Modified** When object in the status `Public`, is edited then a new version with a `Modified` status will be created
+- **Modified** When object in the status `public`, is edited then a new version with a `public` status will be created
 - **Archived** Status for content withdrawn from Public state
 
 !!! Note
@@ -69,13 +69,13 @@ to do so we need to call the endpoint: `/api/v1/content/:content-type-definition
 with `:content-type-definition-name` and `:content-type-object-id` parameters matching your content.
 !!! Request
     ```
-    curl -X GET 'https://api.flotiq.com/api/v1/snipcart/snipcart-584874/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X GET 'https://api.flotiq.com/api/v1/post/post-1/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 
 
 !!! Note
-    Now object with the id snipcart-584874, **will have the status Public and will be visible, by default in the listing API**
+    Now object with the id post-1, **will have the status Public and will be visible, by default in the listing API**
 
 ### Unpublish content
 If you wish to revert the public version to the draft, to make content some adjustments you can use:
@@ -86,12 +86,12 @@ endpoint with `:content-type-definition-name` and `:content-type-object-id` para
 
 !!! Request
     ```
-    curl -X GET 'https://api.flotiq.com/api/v1/snipcart/snipcart-584874/unpublish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X GET 'https://api.flotiq.com/api/v1/post/post-1/unpublish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 
 !!! Note
-    Now object with the id snipcart-584874, **will have the status Draft and will not be visible, by default in the listing API**
+    Now object with the id post-1, **will have the status Draft and will not be visible, by default in the listing API**
 
 ### Content archiving
 If you wish to archive the public version to the draft, to make content withdrawn from the Public state and mark it as `archived` you can use:
@@ -99,6 +99,12 @@ If you wish to archive the public version to the draft, to make content withdraw
 `/api/v1/content/:content-type-definition-name/:content-type-object-id/archive`
 
 endpoint with `:content-type-definition-name` and `:content-type-object-id` parameters matching your content.
+
+!!! Request
+    ```
+    curl -X GET 'https://api.flotiq.com/api/v1/post/post-1/archive' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    ```
+    { data-search-exclude }
 
 !!! Note
     Now object with the id post-1, **will have the status `archived` and will not be visible, by default in the listing API**
@@ -114,17 +120,17 @@ this behavior will affect only content definitions with `Draft & Public` feature
 
 ### X-MODE header
 If you wish to modify this behavior, Flotiq API provides `X-MODE` HTTP header which **can enable returning** 
-content objects with status different from `Public` 
+content objects with status different from `public` 
 
-Let's go through a specific case. Suppose we have several objects of type `snipcart` with enabled `Draft & Public` listed in the table below.
+Let's go through a specific case. Suppose we have several objects of type `post` with enabled `Draft & Public` listed in the table below.
 Let's see how the API response will look depending on the provided headers.
 
-| Object-id       | Status   |
-|-----------------|----------|
-| snipcart-584874 | Public   |
-| snipcart-584875 | Public   |
-| snipcart-584876 | Draft    |
-| snipcart-584877 | Archived |
+| Object-id | Status     |
+|-----------|------------|
+| post-1    | `public`   |
+| post-2    | `public`   |
+| post-3    | `draft`    |
+| post-4    | `archived` |
 
 
 !!! Example
@@ -134,7 +140,7 @@ Let's see how the API response will look depending on the provided headers.
     
         !!! Request
             ```bash
-            curl -X GET 'https://api.flotiq.com/api/v1/snipcart' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+            curl -X GET 'https://api.flotiq.com/api/v1/post' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
             ```
             { data-search-exclude }
         
@@ -144,7 +150,7 @@ Let's see how the API response will look depending on the provided headers.
             ```json
                 [
                     {
-                        "id": "snipcart-584874",
+                        "id": "post-1",
                         // ...
                         "internal":{
                             // ...
@@ -154,7 +160,7 @@ Let's see how the API response will look depending on the provided headers.
                         }
                     },
                     {
-                        "id": "snipcart-584875",
+                        "id": "post-2",
                         // ...
                         "internal":{
                             // ...
@@ -174,7 +180,7 @@ Let's see how the API response will look depending on the provided headers.
         
         !!! Request
             ```bash
-                curl -X GET 'https://api.flotiq.com/api/v1/snipcart' \
+                curl -X GET 'https://api.flotiq.com/api/v1/post' \
                 --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
                 --header 'X-MODE: preview'
             ```
@@ -185,7 +191,7 @@ Let's see how the API response will look depending on the provided headers.
             ```json
                 [
                     {
-                        "id": "snipcart-584874",
+                        "id": "post-1",
                         // ...
                         "internal":{
                             // ...
@@ -195,7 +201,7 @@ Let's see how the API response will look depending on the provided headers.
                         }
                     },
                     {
-                        "id": "snipcart-584875",
+                        "id": "post-2",
                         // ...
                         "internal":{
                             // ...
@@ -205,7 +211,7 @@ Let's see how the API response will look depending on the provided headers.
                         }
                     },
                     {
-                        "id": "snipcart-584876",
+                        "id": "post-3",
                         // ...
                         "internal":{
                             // ...
@@ -215,7 +221,7 @@ Let's see how the API response will look depending on the provided headers.
                         }
                     },
                     {
-                        "id": "snipcart-584877",
+                        "id": "post-4",
                         // ...
                         "internal":{
                             // ...

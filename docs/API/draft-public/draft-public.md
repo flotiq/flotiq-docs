@@ -11,8 +11,7 @@ description: Draft & Public Mode is a feature that allows teams to manage differ
 The Draft & Public mode is designed to manage the visibility of content objects in the system and facilitate the publishing process. 
 When enabled, users can utilize statuses such as `draft`, `published`, `modified`, and `archived` to better organize content and control its state.
 
-!!! Note
-    **By default, this feature is disabled and all saved content objects will have a status set as `public`**
+This feature is disabled by default, and all saved content objects will have their status set to `public`.
 
 Example content object of the definition with disabled **Draft & Public** feature
 ```json

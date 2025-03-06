@@ -15,11 +15,11 @@ This feature is disabled by default, and all saved content objects will have the
 
 !!! Note
     By default, all listing endpoints (like: [listing content objects](/docs/API/content-type/listing-co/)) will return only
-    objects with the status **public**, to modify this behavior use header [X-MODE](/docs/API/draft-public/draft-public/#preview-mode)
+    objects with the status `public`, to modify this behavior use header [X-MODE](/docs/API/draft-public/draft-public/#preview-mode).
 
 ## Enabling Draft & Public feature on Content definition
 
-To enable `Draft & Public` feature, pass into request payload  `draftPublic:true` while creating `Content Type Definition`
+To enable `Draft & Public` feature, pass into request payload  `draftPublic: true` while creating `Content Type Definition`.
 
 !!! Example
     ```bash
@@ -41,6 +41,7 @@ To enable `Draft & Public` feature, pass into request payload  `draftPublic:true
     Content object will be created with `Draft & Public` feature **enabled**. 
     From now all newly created content objects will be saved with a status `draft`
 
+
 ## Usage
 
 ### Available content statuses
@@ -53,8 +54,8 @@ the list of each status with a brief explanation has been written below:
 - **Archived** Status for content withdrawn from Public state
 
 !!! Note
-    **Only content in status Public will be visible via listing API**, by default, to access content in different statuses,
-    use header [X-MODE](#preview-mode) 
+    **Only content in status `public` will be visible via listing API**, by default, to access content in different statuses,
+    use header [X-MODE](#preview-mode).
 
 ### Draft & Public endpoints
 Flotiq API provides a set of endpoints to manage the status of your content.
@@ -69,7 +70,7 @@ to do so we need to call the endpoint: `/api/v1/content/:content-type-definition
 with `:content-type-definition-name` and `:content-type-object-id` parameters matching your content.
 !!! Request
     ```
-    curl -X GET 'https://api.flotiq.com/api/v1/post/post-1/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X GET 'https://api.flotiq.com/api/v1/posts/post-1/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 
@@ -86,12 +87,12 @@ endpoint with `:content-type-definition-name` and `:content-type-object-id` para
 
 !!! Request
     ```
-    curl -X GET 'https://api.flotiq.com/api/v1/post/post-1/unpublish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X GET 'https://api.flotiq.com/api/v1/posts/post-1/unpublish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 
 !!! Note
-    Now object with the id post-1, **will have the status Draft and will not be visible, by default in the listing API**
+    Now object with the id post-1, **will have the status `draft` and will not be visible, by default in the listing API**
 
 ### Content archiving
 If you wish to archive the public version to the draft, to make content withdrawn from the Public state and mark it as `archived` you can use:

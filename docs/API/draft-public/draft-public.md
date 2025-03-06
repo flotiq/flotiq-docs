@@ -127,7 +127,7 @@ If you wish to archive the public version to the draft, to make content withdraw
 endpoint with `:content-type-definition-name` and `:content-type-object-id` parameters matching your content.
 
 !!! Note
-    Now object with the id snipcart-584874, **will have the status Archive and will not be visible, by default in the listing API**
+    Now object with the id post-1, **will have the status `archived` and will not be visible, by default in the listing API**
 
 ## Preview mode
 Listing content endpoints (listed below) will return, by default only content in status `Public`,

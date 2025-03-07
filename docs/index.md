@@ -44,7 +44,7 @@ You can also create and modify your Content Type Definitions using the API, plea
 
 ### Content Objects
 
-For each Content Type you define - you can store multiple Content Objects, this is the data you add to the system. You can access these entries from the application sidebar and create new entries via the [provided forms](panel/content-objects), which are automatically generated, based on the Content Type Definition you built. You can also work with your content in multiple ways through the API, please head to the [API description](API/index.md) for more information.
+For each Content Type you define - you can store multiple Content Objects, this is the data you add to the system. You can access these entries from the application sidebar and create new entries via the [provided forms](panel/ContentObjects/content-objects.md), which are automatically generated, based on the Content Type Definition you built. You can also work with your content in multiple ways through the API, please head to the [API description](API/index.md) for more information.
 
 
 ### Dynamic Content API

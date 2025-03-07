@@ -3,32 +3,7 @@ tags:
   - Content Creator
 ---
 
-# Content Objects
-
-Once a Content Type has been defined in the system - the user can create Content Objects of that Content Type.
-This is done either directly through the API or via the convenient Content Entry tools
-provided within the [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}.
-
-## Authoring content :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
-
-The Content Entry component consists of two elements - the content browser and the content editor.
-
-Click tile on the Type Definitions to go to the content browser page:
-
-![](images/TypeDefinitionsTilesAll.png){: .center .width75 .border}
-
-or entry in the left menu:
-
-![](images/ContentMenu.png){: .center .width25 .border}
-
-The content browser provides a convenient grid interface to browse and search through large amounts of data quickly.
-Users can customize the grid according to their preferences:
-
-![Flotiq content browser](images/GridView.png){: .center .width75 .border}
-
-From the grid, the users can go to the form that allows them to edit particular Content Objects:
-
-![Flotiq Object Editor](images/EditObject.png){: .center .width75 .border}
+# Field types
 
 There are 16 types of controls in the dashboard, all described in detail below:
 
@@ -54,7 +29,7 @@ You can save Content Object only when you insert values in all required fields.
 
 Interaction buttons of Content Objects are in the top right corner of the edit screen:
 
-![](images/co-form/EditButtons.png){: .center .width50 .border}
+![](../images/co-form/EditButtons.png){: .center .width50 .border}
 
 To save and stay on the form, click the `Save` button.
 
@@ -62,15 +37,15 @@ To save and leave the form, click the arrow on the right of the `Save` button an
 
 To leave the form without changing anything, click the `Cancel` button.
 
-### Text
+## Text
 
 Standard text input.
 
-### Long text
+## Long text
 
 Standard textarea input, preserving newlines as `\n`.
 
-### Markdown
+## Markdown
 
 Input for the markdown.
 You can write in markdown or use WYSIWYG to generate one; the switch is on the right bottom corner of the control.
@@ -78,7 +53,7 @@ Flotiq does not validate the Markdown code.
 
 Markdown controls:
 
-![](images/co-form/markdown/Controls.png){: .center .border .width50}
+![](../images/co-form/markdown/Controls.png){: .center .border .width50}
 
 * Full screen - opens the full-screen markdown editor, helpful when editing long texts.
 * Heading - switch edited line to a heading (`# heading 1`)
@@ -102,14 +77,14 @@ Markdown controls:
 
 For better explanation of markup please refer to [Markup Guide](https://www.markdownguide.org/basic-syntax/){:target="_blank"} by Matt Cone.
 
-### Rich text
+## Rich text
 
 Rich text control help format text and generates HTML markup.
 Formatting works similar to MS Word or Google Docs formatting.
 
-#### Rich text controls
+### Rich text controls
 
-![](images/co-form/richtext/Controls.png){: .center .border .width50}
+![](../images/co-form/richtext/Controls.png){: .center .border .width50}
 
 First row:
 
@@ -153,7 +128,7 @@ Second row:
 
 * Font/background color
 
-    ![](images/co-form/richtext/ColorControl.png){: .center .border .width25}
+  ![](../images/co-form/richtext/ColorControl.png){: .center .border .width25}
 
 * Image - add image by providing image URL
 * Media library - opens Media Library, where you can add new files or select the ones already added
@@ -163,114 +138,114 @@ Second row:
     * `data-relation-object-type` - object type
     * `data-relation-url` - object data url
 
-    Note that the span is empty and its up to you to handle it on your page programmatically.
+  Note that the span is empty and its up to you to handle it on your page programmatically.
 
 * Display source - shows editable HTML markup of field contents; please change it with caution.
 
-#### Image options
+### Image options
 
 After image is added, you can double-click to format it. You can add alternative text, change the dimensions, position and border of the image. You can also add a hyperlink to it by switching to the `Link` tab.
-  
-![](images/co-form/richtext/ImageProperties.png){: .center .border .width50}
+
+![](../images/co-form/richtext/ImageProperties.png){: .center .border .width50}
 
 You can make the editor bigger by dragging the grey arrow in the bottom right corner of the control.
 
-### Email
+## Email
 
 Text input with email validation.
 
-### Number
+## Number
 
 Number input. The range is from `-2^53 + 1` to `2^53 - 1`, safe precision is `10^-10`.
 
-### Radio button
+## Radio button
 
 Standard radio button control.
 
-### Checkbox
+## Checkbox
 
 Standard checkbox control.
 
-### Select
+## Select
 
 Standard select control. Depending on `multiple` meta property you can choose only one or many options.
 
-### Relation
+## Relation
 
 Flotiq has two types of relations in the dashboard (they are managed in the same way in the json object):
 
-![](images/co-form/datasource/Relations.png){: .center .width75 .border}
+![](../images/co-form/datasource/Relations.png){: .center .width75 .border}
 
 If you want to remove the linked object, click the `trash` icon on the object's right side.
 You can change the order of objects in relation using arrow buttons in the top right corner.
 If it is not a Media object, you can edit it by clicking the `pencil` button in the top right corner.
 
-#### Objects relations
+### Objects relations
 
 You can either open the form for object creation using the `Add new object and link` button:
 
-![](images/co-form/datasource/RelationAddModal.png){: .center .width75 .border}
+![](../images/co-form/datasource/RelationAddModal.png){: .center .width75 .border}
 
 After saving the object, the system automatically links it to the object you are editing/creating right now.
 
 Or you can also click the `Link existing object` button and link the object created earlier:
 
-![](images/co-form/datasource/LinkExistingObject.png){: .center .border}
+![](../images/co-form/datasource/LinkExistingObject.png){: .center .border}
 
 To add the object, click on the desired object and then the `Add` button.
 You can search and sort objects using the controls on top of the modal.
 
 !!! note    
-    For now, you can only add one object or file at a time.
+For now, you can only add one object or file at a time.
 
-#### Media relations
+### Media relations
 
 The `Open Media Library` button opens Media Library, where you can add new files or select the ones already added.
 
-![](images/co-form/datasource/MediaLibraryModal.png){: .center .width75 .border}
+![](../images/co-form/datasource/MediaLibraryModal.png){: .center .width75 .border}
 
 To add the media object, click on the desired file and the `Save changes` button.
 Newly uploaded files are automatically selected; you only need to click the `Save changes` button.
 
-### List
+## List
 
 If the object has a list property, Flotiq generates series of sub-forms with properties described in such list:
 
-![](images/co-form/list/List.png){: .center .width75 .border}
+![](../images/co-form/list/List.png){: .center .width75 .border}
 
 To add the new object to the list, click the `Add item` button.
 You can change the order of objects in the list using the up and down arrow in the top right corner of object form.
 You can remove the object from the list using the trash icon in the top right corner of the object form.
 
 If the list property contains a `list` child property, the nested form will be displayed.
-![](images/co-form/list/NestedList.png){: .center .width75 .border}
+![](../images/co-form/list/NestedList.png){: .center .width75 .border}
 
-### Geo
+## Geo
 
 Control for geolocation points. You can find the address using `Find on map` input or by dragging the marker on the map.
 You can put the coordinates in `Latitude` and `Longitude` inputs below the map if you know the coordinates without searching.
 
-![](images/co-form/geo/GeoControl.png){: .center .width75 .border}
+![](../images/co-form/geo/GeoControl.png){: .center .width75 .border}
 
-### Date
+## Date
 
 Date control. You can write the date and time or choose them from the popups.
 
-![](images/co-form/date/DateControl.png){: .center .width75 .border}
+![](../images/co-form/date/DateControl.png){: .center .width75 .border}
 
-### Block
+## Block
 
 Developers friendly content builder.
 You can add texts, headers, lists, media, YouTube videos, quotes, warnings and delimiters.
 The control generates json description of the blocks used.
 
-![](images/co-form/block/AddBlocks.png){: .center .width50 .border}
+![](../images/co-form/block/AddBlocks.png){: .center .width50 .border}
 
 To add the block different from standard text, click the `+` button and choose the block from the controls.
 
 Block controls:
 
-![](images/co-form/block/Controls.png){: .center .border .width25}
+![](../images/co-form/block/Controls.png){: .center .border .width25}
 
 You can tune every block by clicking the dots button after clicking on the block.
 In all the tune menus, you can move the block up (`arrow up` button),
@@ -278,101 +253,61 @@ remove the block (`X` button) and move the block down (`arrow down` button).
 
 * Text - block for standard paragraph content.
 
-    ![](images/co-form/block/TextTunes.png){: .border .width25 .center}
-  
-    The tunes allow to align the text in the paragraph (left, center and right).
-  
-    You can change the block type by selecting part of the text and opening the convert menu by clicking the `T` button.
-    You can also bold (`B` button) or slant (`i` button) selected text or add a link to it (chain button).
-  
-   ![](images/co-form/block/TextConversion.png){: .border .width25 .center}
+  ![](../images/co-form/block/TextTunes.png){: .border .width25 .center}
+
+  The tunes allow to align the text in the paragraph (left, center and right).
+
+  You can change the block type by selecting part of the text and opening the convert menu by clicking the `T` button.
+  You can also bold (`B` button) or slant (`i` button) selected text or add a link to it (chain button).
+
+  ![](../images/co-form/block/TextConversion.png){: .border .width25 .center}
 
 * Heading - block for standard header content.
 
-    ![](images/co-form/block/HeaderTunes.png){: .border .width25 .center}
-  
-    The tunes allow to change the level of the header, add an anchor link to it or align the text in the header (left, center and right).
-  
-    You can change the block type by selecting part of the text and opening the convert menu by clicking the `H` button.
-    You can also bold (`B` button) or slant (`i` button) selected text or add a link to it (chain button).
-  
-   ![](images/co-form/block/HeaderConversion.png){: .border .width25 .center}
+  ![](../images/co-form/block/HeaderTunes.png){: .border .width25 .center}
+
+  The tunes allow to change the level of the header, add an anchor link to it or align the text in the header (left, center and right).
+
+  You can change the block type by selecting part of the text and opening the convert menu by clicking the `H` button.
+  You can also bold (`B` button) or slant (`i` button) selected text or add a link to it (chain button).
+
+  ![](../images/co-form/block/HeaderConversion.png){: .border .width25 .center}
 
 * List - block for ordered and unordered lists; you can increase the level of the list using tab.
 
-    ![](images/co-form/block/ListTunes.png){: .border .width25 .center}
-  
-    The tunes allow changing the type of the list.
-  
-    You can bold (`B` button) or slant (`i` button) text or add a link to it (chain button) by selecting part of the text.
-  
-   ![](images/co-form/block/ListConversion.png){: .border .width25 .center}
+  ![](../images/co-form/block/ListTunes.png){: .border .width25 .center}
+
+  The tunes allow changing the type of the list.
+
+  You can bold (`B` button) or slant (`i` button) text or add a link to it (chain button) by selecting part of the text.
+
+  ![](../images/co-form/block/ListConversion.png){: .border .width25 .center}
 
 * Media - block for files (images, videos, audio, pdf)
 
-    After you choose this block, the `Media library` button will appear.
-    To choose an image, video or text file, you need to click that button and find the file you need to attach to the block.
-  
-    You can add a border, stretch or add background to the file in the tunes' menu.
-  
-    ![](images/co-form/block/MediaTunes.png){: .border .width25 .center}
+  After you choose this block, the `Media library` button will appear.
+  To choose an image, video or text file, you need to click that button and find the file you need to attach to the block.
+
+  You can add a border, stretch or add background to the file in the tunes' menu.
+
+  ![](../images/co-form/block/MediaTunes.png){: .border .width25 .center}
 
 * YouTube video - block for videos from YouTube; this block has only common tune settings.
 * Quote - block for quotes with captions
 
-    ![](images/co-form/block/QuoteTunes.png){: .border .width25 .center}
-  
-    The tunes allow aligning the text in the quote (left and center).
+  ![](../images/co-form/block/QuoteTunes.png){: .border .width25 .center}
+
+  The tunes allow aligning the text in the quote (left and center).
 
 * Warning - block for warnings with place for the name and message; this block has only common tune settings.
 * Delimiter - block indicating delimiter; it does not have any content; this block has only common tune settings.
 * Code - block indicating code block; this block has only common tune settings.
 * Table - block for table
 
-     ![](images/co-form/block/TableTunes.png){: .border .width25 .center}
+  ![](../images/co-form/block/TableTunes.png){: .border .width25 .center}
 
-    The tunes allow adding information whether the table has header or not.
+  The tunes allow adding information whether the table has header or not.
 
-### Simple list
+## Simple list
 
 Array of standard text inputs wit possibility of choosing the order, in other places referred as Options control.
-
-## Deleting content
-
-You can delete the object either by clicking the `Delete` button on the edit object page (in the top right corner):
-
-![](images/co-form/EditButtons.png){: .center .width50 .border}
-
-Or by selecting it on the content browser and clicking the `Remove selected` button:
-
-![](images/GridBatchDelete.png){: .center .width50 .border}
-
-!!! warning
-    You can only remove objects that are not linked to any other object in the system.
-
-## Content versioning
-
-The form view also displays information about previous versions of a particular Content Object.
-From this view, you can also switch to older revisions.
-To save older revisions, click on the version tile and click the `Save` button.
-
-## Mass edit
-
-You can edit multiple object at the same time. To do that you need to select needed objects in grid and then click
-`Mass edit selected` button that appears at the bottom of the grid.
-
-![](images/blogpost-grid-mass-edit.png){: .center .width50 .border}
-
-You can change fields that are not read only and are not unique (unless you edit only one object using mass edit).
-
-To edit particular field you need to turn on `Edit field` switch on the left of that field,
-the field will become enabled. If you insert data in the field, but turn off the switch, the data will not be saved.
-
-![](images/blogpost-mass-edit.png){: .center .width75 .border}
-
-To accept the changes click `Save changes` button in the modal.
-If all the data are correct the modal will disappear and toast with number of updated object will appear.
-If something was wrong the errors will appear in modal nest to fields that are incorrect.
-
-[^1]: The number of available Content Objects depends on the chosen subscription plan.
-Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

@@ -17,19 +17,19 @@ This feature is disabled by default, and all saved content objects will have the
 
 ## Available content statuses
 
-Draft & Public provides sets of content statuses to help teams manage and organize their content,
-the list of each status with a brief explanation has been written below:
+Draft & Public provide a set of content statuses to help teams manage and organize their content. 
+Below is a list of each status with a brief explanation:
 
-- **Draft** default status for all newly created content objects.
-- **Public** is a status for your production ready content.
-- **Modified** When object in the status `public`, is edited then a new version with a `public` status will be created
-- **Archived** Status for content withdrawn from `public` state
+- **Draft** – The default status for all newly created content objects.
+- **Public** – Indicates content that is ready for production.
+- **Modified** – When a content object with the `public` status is edited, a new `modified` version is created, while the existing `public` version remains unchanged.
+- **Archived** – Assigned to content that has been withdrawn from the Public state.
 
 ![cto-grid.png](../images/co-form/draftpublic/cto-grid.png){: .center .width75 .border}
 
 !!! Note
     **In the Dashboard, all content types will be visible** regardless of their status, unlike in the API.
-    [read more](/docs/API/draft-public/draft-public).
+    Read more about [Draft & Public API](/docs/API/draft-public/draft-public).
 
 ### Publishing content
 
@@ -39,26 +39,23 @@ This can be achieved by clicking the green **Publish** button located in the too
 ![publish-draft.png](../images/co-form/draftpublic/publish-draft.png){: .center .width75 .border}
 
 !!! Note
-    Now object  **will have the status `public` and will be visible, by default in the listing API**
-    [read more](/docs/API/draft-public/draft-public).
+    Now object  will have the status `public` and will be visible, by default in the [listing API](/docs/API/draft-public/draft-public).
 
-### Unpublish content
+### Unpublishing content
 
 If you wish to revert the public version to a draft to make some adjustments,
-you can use the **Unpublish** button located in the Extras menu
+you can use the **Unpublish** button located in the Extras menu.
 
 ![unpublishing.png](../images/co-form/draftpublic/unpublishing.png){: .center .width75 .border}
 
 !!! Note
-    Now object will be reverted from `public` state into the `draft` **and will not be visible, by default in the listing API**
-    [read more](/docs/API/draft-public/draft-public).
+    Now object will be reverted from `public` state into the `draft` and will not be visible, by default in the [listing API](/docs/API/draft-public/draft-public).
 
-### Content archiving
+### Archiving content
 If you wish to archive the public version, withdrawing it from the public state and marking it as archived,
-you can use the **Archive** button located in the **Extras** menu.
+you can use the **Archive** button located in the Extras menu.
 
 ![archive.png](../images/co-form/draftpublic/archive.png){: .center .width75 .border}
 
 !!! Note
-    Now object  **will have the status `archive` and will not be visible, by default in the listing API** 
-    [read more](/docs/API/draft-public/draft-public).
+    Now object  will have the status `archive` and will not be visible, by default in the [listing API](/docs/API/draft-public/draft-public).

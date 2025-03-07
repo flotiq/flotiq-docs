@@ -46,17 +46,16 @@ In this example, click `Blog Post` predefined type.
 
 ![](images/AddContentTypeDefinitions.png){: .center .width75 .border}
 
-!!! Note
-    The form includes a **Label** (Displayed in the dashboard) and a **Name** (visible to developers),
-    along with a **Draft & Public** switch to manage drafts and control when content is published ([read more](/docs/API/draft-public/draft-public/)).
+The form includes a **Label** (Displayed in the dashboard) and a **Name** (visible to developers),
+along with a **Draft & Public** switch to manage drafts and [control when content is published](../ContentObjects/draft-public/).
 
-It has five properties:
+An example entry includes the following properties:
 
-1. title
-2. slug
-3. excerpt
-4. content
-5. headerImage
+* title,
+* slug,
+* excerpt,
+* content,
+* headerImage.
     
 
 Click the pencil icon to edit the `title` property. As you can see - `title` is a required property of Text type. Once you create the CTD - this property will render as a Text Input in Blog Post Content Object form:

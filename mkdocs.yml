@@ -156,7 +156,7 @@ nav:
     - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md
     - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects':
-      - 'Overview': panel/ContentObjects/overview.md
+      - 'Overview': panel/ContentObjects/index.md
       - 'Field types': panel/ContentObjects/field-types.md
       - 'Draft & Public': panel/ContentObjects/draft-public.md
     - 'Media library': panel/media-library.md

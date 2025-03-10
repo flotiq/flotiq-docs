@@ -137,6 +137,7 @@ nav:
       - 'Getting single Content Object': API/content-type/getting-co.md
       - 'Deleting Content Objects': API/content-type/deleting-co.md
       - 'Listing deleted Content Objects': API/content-type/listing-deleted-co.md
+      - 'Draft & Public': API/draft-public/draft-public.md
     - 'Dynamic Content API': API/dynamic-content-api.md
     - 'GraphQL': API/graph-ql.md
     - 'Generating SDKs':
@@ -154,7 +155,10 @@ nav:
     - 'Content types': panel/content-types.md
     - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md
     - 'Predefined Content Types': panel/predefined-content-types.md
-    - 'Content objects': panel/content-objects.md
+    - 'Content objects':
+      - 'Overview': panel/ContentObjects/overview.md
+      - 'Field types': panel/ContentObjects/field-types.md
+      - 'Draft & Public': panel/ContentObjects/draft-public.md
     - 'Media library': panel/media-library.md
     - 'Users': panel/users.md
     - 'User Roles': panel/user-roles.md

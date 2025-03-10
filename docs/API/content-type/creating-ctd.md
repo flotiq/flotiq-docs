@@ -26,6 +26,7 @@ Content Type</abbr> is simply a ``POST`` call with a payload similar to:
 {
     "name": "blogposts",
     "label": "Blog Posts",
+    "draftPublic": false,
     "schemaDefinition": {
         "type": "object",
         "allOf": [
@@ -73,6 +74,10 @@ Content Type</abbr> is simply a ``POST`` call with a payload similar to:
 }
 ```
 { data-search-exclude }
+
+!!! Hint
+    If you wish to create Content type definition with [Draft & Public](/docs/API/draft-public/draft-public) feature enabled,
+    you need to pass `"draftPublic": true` into request body ([read more](/docs/API/draft-public/draft-public/#enabling-draft-public-feature-on-content-definition)).
 
 Let's quickly look at the properties of this object. On the top level, there are the following properties:
 

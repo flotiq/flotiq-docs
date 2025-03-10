@@ -173,7 +173,10 @@ Request parameters
                 "contentType": "blogposts",
                 "createdAt": "2021-04-09T13:30:48+00:00",
                 "updatedAt": "2021-04-09T13:30:48+00:00",
-                "deletedAt": ""
+                "deletedAt": "",
+                "publicVersion": -1,
+                "publishedAt": "",
+                "status": "public"
             },
             "title": "New object",
             "postContent": "This will be the new <b>content</b>"
@@ -205,6 +208,10 @@ Request parameters
         }
         ```
         { data-search-exclude }
+
+!!! Note
+    By default, this endpoint will return only objects with the status `public`,
+    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode). Read more about [Draft & Public](/docs/API/draft-public/draft-public).
 
 ### Hydrating object
 

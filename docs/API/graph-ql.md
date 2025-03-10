@@ -215,6 +215,10 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
                 ```
                 { data-search-exclude }
 
+!!! Note
+    By default, this endpoint will return only objects with the status `public` [read more](/docs/API/draft-public/draft-public),
+    to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#preview-mode).
+
 #### List objects
 
 While listing objects, you can use the optional parameters

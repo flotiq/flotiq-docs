@@ -15,6 +15,7 @@ Example:
 
     * id – string, unique, required, Flotiq Dashboard adds this automatically
     * title – string, required, part of the object title
+    * draftPublic – boolean, default: false, enable/disable [Draft & Public](/docs/API/draft-public/draft-public) feature
     * slug – string, unique, required 
     * excerpt - string, required
     * content – string, required
@@ -45,13 +46,16 @@ In this example, click `Blog Post` predefined type.
 
 ![](images/AddContentTypeDefinitions.png){: .center .width75 .border}
 
-It has five properties:
+The form includes a **Label** (Displayed in the dashboard) and a **Name** (visible to developers),
+along with a **Draft & Public** switch to manage drafts and [control when content is published](../ContentObjects/draft-public/).
 
-1. title
-2. slug
-3. excerpt
-4. content
-5. headerImage
+An example entry includes the following properties:
+
+* title,
+* slug,
+* excerpt,
+* content,
+* headerImage.
     
 
 Click the pencil icon to edit the `title` property. As you can see - `title` is a required property of Text type. Once you create the CTD - this property will render as a Text Input in Blog Post Content Object form:
@@ -61,7 +65,7 @@ Click the pencil icon to edit the `title` property. As you can see - `title` is 
 Also, because the `Part of object title` checkbox is checked, the value of this field will be used to describe objects in different places of Flotiq's UI - object listings or when linking objects through relations.
 
 !!! hint 
-    Learn more about connecting objects via relations in [managing Content Objects](content-objects.md#relations). 
+    Learn more about connecting objects via relations in [managing Content Objects](ContentObjects/content-objects.md#relations). 
     You can find more about other property settings [below](#property-settings).
 
 The `slug` property is also required, but also must be unique across all your blogpost objects in the system.

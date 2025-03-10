@@ -3,7 +3,7 @@ tags:
   - Content Creator
 ---
 
-# Overview
+# Content objects
 
 Once a Content Type has been defined in the system - the user can create Content Objects of that Content Type.
 This is done either directly through the API or via the convenient Content Entry tools

@@ -88,7 +88,8 @@ Below we listed all parameters describing the `Media` object.
 | url        | Url to original image without API host (e.g. /image/0x0/_media-456456.jpg) |
 | height     | Height, or 0 for 'file' type |
 | width      | Width, or 0 for 'file' type |
-| alt        | Short text that can be used for an ALT tag |
+| title      | Descriptive text that can be used as a title attribute or figcaption element |
+| alt        | Short text that can be used as an ALT atribbute |
 | variants   | array of variant objects for altering image |
 
 ### Media Content Type Definition
@@ -99,7 +100,7 @@ All the Media Content Object parameters are described also in the `Media` Conten
     ```json
     {
         "name": "_media",
-        "label": "Media",
+        "label": "Media (internal)",
         "schemaDefinition": {
             "type": "object",
             "allOf": [
@@ -110,10 +111,12 @@ All the Media Content Object parameters are described also in the `Media` Conten
                     "type": "object",
                     "properties": {
                         "fileName": {
-                            "type": "string"
+                            "type": "string",
+                            "minLength": 1
                         },
                         "mimeType": {
-                            "type": "string"
+                            "type": "string",
+                            "minLength": 1
                         },
                         "size": {
                             "type": "number"
@@ -125,19 +128,92 @@ All the Media Content Object parameters are described also in the `Media` Conten
                             "type": "number"
                         },
                         "url": {
-                            "type": "string"
+                            "type": "string",
+                            "minLength": 1
                         },
                         "externalId": {
                             "type": "string"
                         },
                         "source": {
-                            "type": "string"
+                            "type": "string",
+                            "minLength": 1
                         },
                         "extension": {
-                            "type": "string"
+                            "type": "string",
+                            "minLength": 1
                         },
                         "type": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "tags": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        },
+                        "alt": {
                             "type": "string"
+                        },
+                        "title": {
+                            "type": "string"
+                        },
+                        "variants": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "pattern": "^[_a-zA-Z0-9]+$"
+                                    },
+                                    "trim": {
+                                        "type": "object",
+                                        "properties": {
+                                            "top": {
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "maximum": 9999999
+                                            },
+                                            "right": {
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "maximum": 9999999
+                                            },
+                                            "bottom": {
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "maximum": 9999999
+                                            },
+                                            "left": {
+                                                "type": "number",
+                                                "minimum": 0,
+                                                "maximum": 9999999
+                                            },
+                                            "width": {
+                                                "type": "number",
+                                                "minimum": 1,
+                                                "maximum": 9999999
+                                            },
+                                            "height": {
+                                                "type": "number",
+                                                "minimum": 1,
+                                                "maximum": 9999999
+                                            }
+                                        },
+                                        "required": [
+                                            "top",
+                                            "left"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "name"
+                                ]
+                            },
+                            "minItems": 0
                         }
                     }
                 }
@@ -164,14 +240,18 @@ All the Media Content Object parameters are described also in the `Media` Conten
                 "externalId",
                 "source",
                 "extension",
-                "type"
+                "type",
+                "tags",
+                "alt",
+                "title",
+                "variants"
             ],
             "propertiesConfig": {
                 "fileName": {
                     "label": "File name",
                     "inputType": "text",
                     "unique": false,
-                    "idTitlePart": true
+                    "isTitlePart": true
                 },
                 "mimeType": {
                     "label": "MIME type",
@@ -207,7 +287,10 @@ All the Media Content Object parameters are described also in the `Media` Conten
                     "label": "Source",
                     "inputType": "select",
                     "unique": false,
-                    "options": ["disk","unsplash"]
+                    "options": [
+                        "disk",
+                        "unsplash"
+                    ]
                 },
                 "extension": {
                     "label": "Extension",
@@ -218,7 +301,94 @@ All the Media Content Object parameters are described also in the `Media` Conten
                     "label": "Type",
                     "inputType": "select",
                     "unique": false,
-                    "options": ["file","image"]
+                    "options": [
+                        "image",
+                        "file"
+                    ]
+                },
+                "tags": {
+                    "label": "Tags",
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "datasource",
+                    "validation": {
+                        "relationMultiple": true,
+                        "relationContenttype": "_tag"
+                    }
+                },
+                "alt": {
+                    "label": "ALT",
+                    "inputType": "text",
+                    "unique": false
+                },
+                "title": {
+                    "label": "Title",
+                    "inputType": "text",
+                    "unique": false
+                },
+                "variants": {
+                    "label": "Variants",
+                    "items": {
+                        "order": [
+                            "name",
+                            "trim"
+                        ],
+                        "propertiesConfig": {
+                            "name": {
+                                "label": "name",
+                                "inputType": "text",
+                                "unique": true
+                            },
+                            "trim": {
+                                "order": [
+                                    "top",
+                                    "right",
+                                    "bottom",
+                                    "left",
+                                    "width",
+                                    "height"
+                                ],
+                                "propertiesConfig": {
+                                    "top": {
+                                        "label": "Top",
+                                        "inputType": "number",
+                                        "unique": false
+                                    },
+                                    "right": {
+                                        "label": "Right",
+                                        "inputType": "number",
+                                        "unique": false
+                                    },
+                                    "bottom": {
+                                        "label": "Bottom",
+                                        "inputType": "number",
+                                        "unique": false
+                                    },
+                                    "left": {
+                                        "label": "Left",
+                                        "inputType": "number",
+                                        "unique": false
+                                    },
+                                    "width": {
+                                        "label": "Width",
+                                        "inputType": "number",
+                                        "unique": false
+                                    },
+                                    "height": {
+                                        "label": "Height",
+                                        "inputType": "number",
+                                        "unique": false
+                                    }
+                                },
+                                "inputType": "custom",
+                                "label": "Trim",
+                                "unique": false
+                            }
+                        }
+                    },
+                    "unique": false,
+                    "helpText": "",
+                    "inputType": "object"
                 }
             }
         }

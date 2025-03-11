@@ -20,9 +20,9 @@ This section of the Media Library gives you access to all of your files that you
 
 ![Flotiq Media Library](./images/MediaLibrary-home.png){: .border}
 
-### ALT property for images
+### Title and ALT properties for images
 
-When editing an image, you can now add an optional `alt` text field, which you can later use to provide the value for `alt` tags for images in your project. You can modify the `alt` text in the media editing screen for each uploaded image.
+When editing an image, you can now add an optional `title` and `alt` text fields, which you can later use to provide the value for `title` or `alt` attributes for images in your project. You can modify both fields in the media editing screen for each uploaded image.
 
 ## Stock photos
 

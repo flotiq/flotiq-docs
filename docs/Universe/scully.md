@@ -9,7 +9,7 @@ description: Jump-start your projects with Angular Scully Starters.
 # Scully starters
 
 !!! Caution
-    We are not actively maintaining this repository due to low interest from our users. PRs are welcome.
+    We are not actively maintaining this repositories due to low interest from our users. PRs are welcome.
 
 Scully is a static page generator using Angular.
 

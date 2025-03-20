@@ -267,8 +267,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         { data-search-exclude }
 
 !!! note
-    The id property of the object can be updated through API if id provided in the request body is different from the one provided in request path.
-    This only works in updating single content object
+    The id property of the object cannot be updated. 
+    Ensure that the id in the request body matches the one in the request path when updating a single content object.
 
 #### Possible validation errors
 

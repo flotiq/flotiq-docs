@@ -83,8 +83,9 @@ Let's quickly look at the properties of this object. On the top level, there are
 
 - **name** - is an API-friendly name of the <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">
   Content Type</abbr> and name of the endpoints that will be generated to handle requests with
-  <abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that type. Can only have `a-z` characters and `_`.
+  <abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that type. It can only have `a-z` characters and `_`.
 - **label** - is a human-friendly label used to refer to this Content Type in the UI
+- **draftPublic** - is information on whether the content type should have only public objects (`false`) or draft and public objects (`true`)
 - **schemaDefinition** - contains an OpenAPI-compliant schema of the Content Type (more about this below)
 - **metaDefinition** - contains additional properties of the fields (more about this below)
 

@@ -126,7 +126,7 @@ should contain all properties of the object), and about type and validation of t
 on relations of the object with other Content Types. 
 
 In this case, Blog Post will have `title` property which will be unique and will render as text input in the CMS panel 
-and `postContent`, which can be duplicated and presented as CKEditor input in the CMS panel. 
+and `postContent`, which can be duplicated and presented as Rich text input in the CMS panel. 
 The first input in the form in the CMS panel will be `title` input, and the second will be `postContent`.
 
 ### Creating Content Type Definition examples

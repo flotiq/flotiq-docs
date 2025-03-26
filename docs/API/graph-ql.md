@@ -226,8 +226,8 @@ While listing objects, you can use the optional parameters
 
 | Param name      | Param description                                                                                                                                                   | Defalut value |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| page            | Number of objects on page                                                                                                                                           | 20            |
-| limit           | Number of the requested page                                                                                                                                        | 1             |
+| page            | Number of the requested page                                                                                                                                           | 20            |
+| limit           | Number of objects on page, default `20`, maximum `1000`                                                                                                                                        | 1             |
 | order_by        | What field should list be ordered by                                                                                                                                |               |
 | order_direction | Order direction, possible values `asc`, `desc`                                                                                                                      | asc          |
 | filter          | Json encoded object containing conditions on which the list of CO should be filtered<br/> Example filter value: {"title":{"type":"equals","filter":"Hello world!"}} |               |

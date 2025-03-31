@@ -61,8 +61,11 @@ the list of each status with a brief explanation has been written below:
 Flotiq API provides a set of endpoints to manage the status of your content.
 
 - [`/api/v1/content/:content-type-definition-name/:content-type-object-id/publish`](#publishing-content)
+- [`/api/v1/content/:content-type-definition-name/batch-publish`](#batch-publish-content)
 - [`/api/v1/content/:content-type-definition-name/:content-type-object-id/unpublish`](#unpublish-content)
-- [`/api/v1/content/:content-type-definition-name/:content-type-object-id/archive`](#Content archiving)
+- [`/api/v1/content/:content-type-definition-name/batch-unpublish`](#batch-unpublish-content)
+- [`/api/v1/content/:content-type-definition-name/:content-type-object-id/archive`](#content-archiving)
+- [`/api/v1/content/:content-type-definition-name/batch-archive`](#batch-archive-content)
 
 ### Publishing content
 To make object that satisfies all requirements, available for all users, we have to make it public,
@@ -74,9 +77,21 @@ with `:content-type-definition-name` and `:content-type-object-id` parameters ma
     ```
     { data-search-exclude }
 
-
 !!! Note
     Now object with the id post-1, **will have the status Public and will be visible, by default in the listing API**
+
+#### Batch publish content
+There is a way to publish up to 100[^1] Content Objects at once. 
+It is possible by using the `/api/v1/content/:content-type-definition-name/batch-publish` 
+endpoint with a body consisting of an array containing object IDs as strings.
+
+!!! Example
+    ```sh
+    curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-publish" \
+         -H "Authorization: Bearer YOUR_API_KEY" \
+         -H "Content-Type: application/json" \
+         -d '["post-1", "post-2", "post-3"]'
+    ```
 
 ### Unpublish content
 If you wish to revert the public version to the draft, to make content some adjustments you can use:
@@ -94,6 +109,19 @@ endpoint with `:content-type-definition-name` and `:content-type-object-id` para
 !!! Note
     Now object with the id post-1, **will have the status `draft` and will not be visible, by default in the listing API**
 
+#### Batch unpublish content
+There is a way to unpublish up to 100[^1] Content Objects at once. 
+It is possible by using the `/api/v1/content/:content-type-definition-name/batch-unpublish` 
+endpoint with a body consisting of an array containing object IDs as strings.
+
+!!! Example
+    ```sh
+    curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-unpublish" \
+         -H "Authorization: Bearer YOUR_API_KEY" \
+         -H "Content-Type: application/json" \
+         -d '["post-1", "post-2", "post-3"]'
+    ```
+
 ### Content archiving
 If you wish to archive the public version, to make content withdrawn from the Public state and mark it as `archived` you can use:
 
@@ -109,6 +137,19 @@ endpoint with `:content-type-definition-name` and `:content-type-object-id` para
 
 !!! Note
     Now object with the id post-1, **will have the status `archived` and will not be visible, by default in the listing API**
+
+#### Batch archive content
+There is a way to archive up to 100[^1] Content Objects at once. 
+It is possible by using the `/api/v1/content/:content-type-definition-name/batch-archive` 
+endpoint with a body consisting of an array containing object IDs as strings.
+
+!!! Example
+    ```sh
+    curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-archive" \
+         -H "Authorization: Bearer YOUR_API_KEY" \
+         -H "Content-Type: application/json" \
+         -d '["post-1", "post-2", "post-3"]'
+    ```
 
 ## Preview mode
 Listing content endpoints (listed below) will return, by default only content in status `Public`,
@@ -234,3 +275,5 @@ Let's see how the API response will look depending on the provided headers.
                 ]
             ```
             { data-search-exclude }
+
+[^1]: Limit can be changed in the [<< plan_names.paid_3 >> plan](https://flotiq.com/pricing){:target="_blank"}

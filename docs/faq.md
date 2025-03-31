@@ -76,4 +76,4 @@ or on our [Discord server](https://discord.com/invite/FwXcHnX).
 
 <flotiq-form></flotiq-form>
 
-[Register to start your Flotiq journey](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start your Flotiq journey](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

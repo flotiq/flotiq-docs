@@ -287,4 +287,4 @@ It is also possible to update objects using the PATCH method.
 In the case of PATH, it is not required to provide all object fields, only those that are to be changed.
 When an object doesn't exist, the batch patch returns a 404 error response. The PATCH endpoint doesn't create new objects.
 
-[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

@@ -138,4 +138,4 @@ If you want to start from scratch with a prepared boilerplate, we have also crea
 
 [Working example](https://gatsby-starter-boilerplate.netlify.app){:target="_blank"}
 
-[Register to start your project today](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start your project today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

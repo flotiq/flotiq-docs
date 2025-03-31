@@ -260,6 +260,6 @@ curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-delete" -H "
 ```
 { data-search-exclude }
 
-[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 
 [^1]: Limit can be changed in the [<< plan_names.paid_3 >> plan](https://flotiq.com/pricing){:target="_blank"}

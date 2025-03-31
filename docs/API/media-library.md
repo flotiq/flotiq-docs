@@ -262,6 +262,6 @@ Flotiq automatically scale images and save them for future, faster use, if the s
     See also: [Manage assets using the Media Library in Dashboard](/docs/panel/media-library/)
 
 
-[Register to start storing your files](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start storing your files](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 
 [^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}

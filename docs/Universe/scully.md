@@ -64,4 +64,4 @@ Beautiful recipes website boilerplate project using Scully and Flotiq
 [Working example](https://vibrant-mclean-8da635.netlify.app/){:target="_blank"}
 
 
-[Register to start your project today](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start your project today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

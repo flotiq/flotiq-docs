@@ -18321,7 +18321,7 @@ You can use the same request parameters for [scoped API](/docs/API/#user-defined
 !!! note
     Read more about [API keys and scoped API keys](/docs/API/)
 
-[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 
 
 [^1]: Unavailable in << plan_names.free >> subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

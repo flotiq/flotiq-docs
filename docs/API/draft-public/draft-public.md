@@ -122,6 +122,7 @@ endpoint with a body consisting of an array containing object IDs as strings.
          -H "Content-Type: application/json" \
          -d '["post-1", "post-2", "post-3"]'
     ```
+    { data-search-exclude }
 
 ### Content archiving
 If you wish to archive the public version, to make content withdrawn from the Public state and mark it as `archived` you can use:
@@ -151,6 +152,7 @@ endpoint with a body consisting of an array containing object IDs as strings.
          -H "Content-Type: application/json" \
          -d '["post-1", "post-2", "post-3"]'
     ```
+    { data-search-exclude }
 
 ## Preview mode
 Listing content endpoints (listed below) will return, by default only content in status `Public`,

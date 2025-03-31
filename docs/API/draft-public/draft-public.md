@@ -92,6 +92,7 @@ endpoint with a body consisting of an array containing object IDs as strings.
          -H "Content-Type: application/json" \
          -d '["post-1", "post-2", "post-3"]'
     ```
+    { data-search-exclude }
 
 ### Unpublish content
 If you wish to revert the public version to the draft, to make content some adjustments you can use:

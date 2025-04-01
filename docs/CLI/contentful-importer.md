@@ -11,7 +11,7 @@ description: How to migrate Flotiq data from Contentful account
 With Flotiq CLI, you can move your data from Contentful to Flotiq with a single command.
 To migrate data, you will need the following:
 
-* A Flotiq account (you can [register here](http://editor.flotiq.com/register.html))
+* A Flotiq account (you can [register here](http://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa))
 * Flotiq's "Read and write API key" (more about API keys [here](../API/index.md))
 * Contentful Space ID (more on how to find your CF's space id [here](https://www.contentful.com/help/find-space-id/))
 * Contentful Content Management Token (more on how to get your CF's content management token in the section "How to get a Personal Access Token: the Web App" on Contentful's [Personal Access Tokens page](https://www.contentful.com/help/personal-access-tokens/))

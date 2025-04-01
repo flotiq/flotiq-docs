@@ -200,4 +200,4 @@ containing the date after which the Content Objects were deleted; the date must 
 
 It is impossible for now to list deleted Content Objects through Flotiq UI.
 
-[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

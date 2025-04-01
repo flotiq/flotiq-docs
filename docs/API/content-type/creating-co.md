@@ -1139,7 +1139,7 @@ Response parameters:
 | errors              | array of errors in the elements, errors are objects containing the id of the object and list of errors, present when there are no duplications in data |
 | data                | listing keys containing duplications (see example above), present only when there are duplications in data or batch_limit exceeded                     |
 
-[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 
 
 [^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}

@@ -12,4 +12,4 @@ Thanks to Zapier integrations, you can quickly rebuild your static site every ti
 You can jump-start your JAMStack projects using our [Gatsby](gatsby.md) (React), [Next.js](nextjs.md) (React) or [Scully](scully.md) (Angular) starters of static pages generators.
 
 
-[Register to explore our Universe for free today](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to explore our Universe for free today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

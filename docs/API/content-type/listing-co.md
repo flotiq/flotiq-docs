@@ -1785,4 +1785,4 @@ If you wish to receive underlying objects attached to the object you are retriev
 
 As you can see after adding hydrate instead of `{dataUrl: ...}` we get a full object, so we can immediately show the values ​​without additional requests.
 
-[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

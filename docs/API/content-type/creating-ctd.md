@@ -1223,6 +1223,6 @@ Input types of properties in `metaDefinition`:
 
 If you'd rather use our graphical interface to design your Content Types - read the [Content modeller documentation](/docs/panel/content-types/)
 
-[Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 
 [^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}

@@ -13,7 +13,7 @@ This guide shows how to combine an online website builder Divhunt with Flotiq AP
 
 ## Prerequisites
 
-1. Flotiq account [Register a Flotiq account here](https://editor.flotiq.com/register.html){:target="_blank"}.
+1. Flotiq account [Register a Flotiq account here](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){:target="_blank"}.
 2. Flotiq API Key [More about Flotiq API Keys](https://flotiq.com/docs/API/){:target="_blank"}.
 3. Divhunt account [Register a Divhunt account here](https://www.divhunt.com/sign-up){:target="_blank"}.
 

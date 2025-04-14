@@ -37,7 +37,7 @@ Let's dive deep.
 1. Netlify Account (free) [Sign up for Netlify](https://app.netlify.com/signup){:target="_blank"}
 2. GitHub/Gitlab/Bitbucket account (free) [Sign up for GitHub](https://github.com/join){:target="_blank"}
 3. Zapier account (free) [Sign up for Zapier](https://zapier.com/sign-up/){:target="_blank"}
-4. Flotiq account (free) [Register a Flotiq account here](https://editor.flotiq.com/register.html){:target="_blank"}.
+4. Flotiq account (free) [Register a Flotiq account here](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){:target="_blank"}.
 
 ## Grab one of our Gatsby Starters!
 

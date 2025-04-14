@@ -32,7 +32,7 @@ For this particular project - we'll use Flotiq to store the information about pr
 There's a couple of simple steps that shouldn't take longer than 1 minute to complete.
 
 ### Register an account, 30 seconds
-The first thing you'll need is a free Flotiq account, [register a free account in Flotiq](https://editor.flotiq.com/register.html). No payments, no credit cards, simply connect using your Github account or email. 
+The first thing you'll need is a free Flotiq account, [register a free account in Flotiq](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa). No payments, no credit cards, simply connect using your Github account or email. 
 
 ### Create your Content Type Definition, 30 seconds
 

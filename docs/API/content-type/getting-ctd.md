@@ -354,4 +354,4 @@ Possible request parameters:
         ```
         { data-search-exclude }
 
-[Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

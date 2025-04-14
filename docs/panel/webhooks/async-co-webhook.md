@@ -197,4 +197,4 @@ This status means that the target URL specified in the webhook configuration was
 The webhook will be queued immediately after the trigger action will be performed. Webhook processing (from queue handling to the final HTTP request) may take a few seconds.
 
 
-[Register to create your first webhook](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to create your first webhook](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

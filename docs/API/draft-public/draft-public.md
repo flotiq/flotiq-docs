@@ -24,9 +24,9 @@ To enable `Draft & Public` feature, pass into request payload  `draftPublic: tru
 !!! Example
     ```bash
         curl -X POST "https://api.flotiq.com/api/v1/internal/contenttype" \
-        -H "Content-Type: application/json" \
-        -H "X-AUTH-TOKEN: your_token" \
-        -d '{
+        --header "Content-Type: application/json" \
+        --header "X-AUTH-TOKEN: your_token" \
+        --data-raw '{
           "name": "post",
           "label": "Post",
           "draftPublic": true,
@@ -88,9 +88,9 @@ endpoint with a body consisting of an array containing object IDs as strings.
 !!! Example
     ```sh
     curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-publish" \
-         -H "Authorization: Bearer YOUR_API_KEY" \
-         -H "Content-Type: application/json" \
-         -d '["post-1", "post-2", "post-3"]'
+        --header "Authorization: Bearer YOUR_API_KEY" \
+        --header "Content-Type: application/json" \
+        --data-raw '["post-1", "post-2", "post-3"]'
     ```
     { data-search-exclude }
 
@@ -118,9 +118,9 @@ endpoint with a body consisting of an array containing object IDs as strings.
 !!! Example
     ```sh
     curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-unpublish" \
-         -H "Authorization: Bearer YOUR_API_KEY" \
-         -H "Content-Type: application/json" \
-         -d '["post-1", "post-2", "post-3"]'
+        --header "Authorization: Bearer YOUR_API_KEY" \
+        --header "Content-Type: application/json" \
+        --data-raw '["post-1", "post-2", "post-3"]'
     ```
     { data-search-exclude }
 
@@ -148,11 +148,28 @@ endpoint with a body consisting of an array containing object IDs as strings.
 !!! Example
     ```sh
     curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-archive" \
-         -H "Authorization: Bearer YOUR_API_KEY" \
-         -H "Content-Type: application/json" \
-         -d '["post-1", "post-2", "post-3"]'
+        --header "Authorization: Bearer YOUR_API_KEY" \
+        --header "Content-Type: application/json" \
+        --data-raw '["post-1", "post-2", "post-3"]'
     ```
     { data-search-exclude }
+
+### Draft & Public cascade actions
+Endpoints for publishing, unpublishing and archiving content with draft&public workflow enabled can be used with cascade options, so the system will automatically publish, unpublish or archive all related objects. This allows complex content structures with references to be handled consistently and ensures that dependent content remains in sync with the parent object's state.
+
+In order to use cascade action use `?hydrate=<value>` query parameter, exactly how it's done with [hydration for listing content objects](/docs/API/content-type/listing-co#hydrating-objects).
+
+!!! Request
+    ```sh
+    curl -X GET 'https://api.flotiq.com/api/v1/posts/post-1/publish?hydrate=1'
+        --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    ```
+    { data-search-exclude }
+
+The max depth of the relation-chain that the system will scan for Draft&Public objects with relation to the object in request is defined by the value for `hydrate` query parameter, for example `hydrate=1` will make Flotiq use the draft&public action on the target objects and it's related objects, but not further nested relations.
+
+!!! Note
+    `hydrate=1` is currently the highest level of hydration available for cascade actions.
 
 ## Preview mode
 Listing content endpoints (listed below) will return, by default only content in status `Public`,

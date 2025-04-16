@@ -37,7 +37,8 @@ async function handleEvent(event) {
   const has_assets_or_images_in_the_link = /\/(assets|images)\//.test(url.pathname);
   const has_file_extension = /[^\/]+\.[^\/]+$/.test(url.pathname);
   if(!has_slash_at_the_end && !has_assets_or_images_in_the_link && !has_file_extension) {
-    return Response.redirect(`${event.request.url}/`, 301);
+    url.pathname += '/';
+    return Response.redirect(url.toString(), 301);
   }
 
   try {

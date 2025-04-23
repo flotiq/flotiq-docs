@@ -5,13 +5,14 @@ description: Headless CMS documentation, tutorials, frameworks, API references, 
 
 Welcome to Flotiq Documentation.
 
-Here you will find everything you need to know about Flotiq. The documentation is divided into several sections:
+Here you will find everything you need to know about Flotiq. The documentation is organized into several sections:
 
-- API - provides essential information about accessing Flotiq's APIs,
-- Dashboard - gives a quick tour of the most important features of the User Interface,
-- CLI - discusses the Flotiq CLI application and its basic use cases,
-- Flotiq Universe - describes Flotiq integrations and tools that can be used with Flotiq API,
-- Deep dives - collects tutorials and technical documents that dive deep into a particular scenario.
+- API - essential information about accessing Flotiq's APIs,
+- Dashboard - a quick overview of the most important features of the user interface,
+- CLI - an introduction to the Flotiq CLI application and its basic use cases,
+- SDK - explains how to use the Flotiq SDK in various programming languages,
+- Flotiq Universe - details Flotiq integrations and tools that can be used with the Flotiq API,
+- Deep dives - a collection of tutorials and technical documents that explore specific scenarios in depth.
 
 ## What is Flotiq?
 

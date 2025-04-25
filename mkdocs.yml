@@ -140,9 +140,6 @@ nav:
       - 'Draft & Public': API/draft-public/draft-public.md
     - 'Dynamic Content API': API/dynamic-content-api.md
     - 'GraphQL': API/graph-ql.md
-    - 'Generating SDKs':
-      - 'Overview': API/generate-package.md
-      - 'SDK NodeJS': API/generate-package/sdk-nodejs.md
     - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
     - 'Working with media':
@@ -191,6 +188,10 @@ nav:
     - 'Migrate content from Contentful to Flotiq': CLI/contentful-importer.md
     - 'Purging data from Flotiq account': CLI/purge.md
     - 'Migrating Flotiq data to and from MS Excel': CLI/excel-data-migration.md
+  - SDK:
+    - 'Overview': SDK/overview.md
+    - 'JavaScript / TypeScript SDK': SDK/sdk-js-ts.md
+    - 'Custom SDKs': SDK/generate-package.md
   - Flotiq Universe:
     - 'Overview': Universe/index.md
     - Deployment:

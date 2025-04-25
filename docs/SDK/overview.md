@@ -24,7 +24,7 @@ SDKs help you:
 You have two main options for using SDKs with Flotiq - using official SDKs 
 or generating your own SDKs based on the OpenAPI specification.
 
-## Official JavaScript/TypeScript SDK
+## JavaScript/TypeScript SDK
 
 For JavaScript and TypeScript developers, we offer a ready-made
 SDK [@flotiq/flotiq-api-sdk](https://www.npmjs.com/package/@flotiq/flotiq-api-sdk)
@@ -38,19 +38,21 @@ This option works best if you’re building an application using JavaScript or T
 
 [Read more about JavaScript/TypeScript SDK →](./sdk-js-ts.md)
 
-## Your own SDK with OpenAPI
+## Custom SDK with OpenAPI
 
 Flotiq’s API is fully described using the OpenAPI Specification. 
-That means you can generate your own SDK in nearly any language – Python, Java, PHP, Ruby, Go, 
+That means you can generate a custom SDK in nearly any language – Python, Java, PHP, Ruby, Go, 
 and more – using tools like: 
 
 * OpenAPI Generator
 * Swagger Codegen
 
+The generated SDK will reflect the types and structure of your content model in the selected language.
+
 This is ideal if you’re working with a language other than JavaScript/TypeScript
 or want customized integration with your own stack.
 
-[Read more about generating SDKs with OpenAPI →](./generate-package.md)
+[Read more about generating Custom SDKs with OpenAPI →](./generate-package.md)
 
 ## Download a package for your language
 

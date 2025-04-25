@@ -190,8 +190,8 @@ nav:
     - 'Migrating Flotiq data to and from MS Excel': CLI/excel-data-migration.md
   - SDK:
     - 'Overview': SDK/overview.md
-    - 'Javascript / Typescript SDK': SDK/sdk-js-ts.md
-    - 'Generating SDK': SDK/generate-package.md
+    - 'JavaScript / TypeScript SDK': SDK/sdk-js-ts.md
+    - 'Custom SDKs': SDK/generate-package.md
   - Flotiq Universe:
     - 'Overview': Universe/index.md
     - Deployment:

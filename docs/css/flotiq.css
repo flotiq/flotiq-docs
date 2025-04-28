@@ -413,11 +413,12 @@ html .md-footer-meta.md-typeset a:hover {
 }
 
 li.md-nav__item {
-  border-left: 4px solid transparent;
+  padding-left: 3px;
 }
 
 li.md-nav__item.md-nav__item--active:not(.md-nav__item--nested) {
-  border-left: 4px solid #0083FC;
+  box-shadow: -4px 0 0 0 #0083FC;
+  padding-left: 4px;
 }
 
 .was-it-helpful-wrapper {

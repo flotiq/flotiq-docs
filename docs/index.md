@@ -7,12 +7,12 @@ Welcome to Flotiq Documentation.
 
 Here you will find everything you need to know about Flotiq. The documentation is organized into several sections:
 
-- API - essential information about accessing Flotiq's APIs,
-- Dashboard - a quick overview of the most important features of the user interface,
-- CLI - an introduction to the Flotiq CLI application and its basic use cases,
-- SDK - explains how to use the Flotiq SDK in various programming languages,
-- Flotiq Universe - details Flotiq integrations and tools that can be used with the Flotiq API,
-- Deep dives - a collection of tutorials and technical documents that explore specific scenarios in depth.
+- [API](API/get-started.md) - essential information about accessing Flotiq's APIs,
+- [Dashboard](panel/index.md) - a quick overview of the most important features of the user interface,
+- [SDK](SDK/overview.md) - explains how to use the Flotiq SDK in various programming languages,
+- [CLI](CLI/index.md) - an introduction to the Flotiq CLI application and its basic use cases,
+- [Flotiq Universe](Universe/overview.md) - details Flotiq integrations and tools that can be used with the Flotiq API,
+- [Deep dives](Deep-Dives/index.md) - a collection of tutorials and technical documents that explore specific scenarios in depth.
 
 ## What is Flotiq?
 

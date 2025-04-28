@@ -58,7 +58,7 @@ extra_css:
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/nord.min.css
   - https://flotiq-form-generator-styles.s3.amazonaws.com/styles.css
-  - 'css/flotiq.css'
+  - 'css/flotiq.css?v=20250428'
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
 markdown_extensions:

@@ -178,7 +178,7 @@ nav:
       - 'Getting started': panel/PluginsDevelopment/plugins.md
       - 'Examples': panel/PluginsDevelopment/plugin-examples.md
       - 'Faq & Troubleshooting': panel/PluginsDevelopment/plugin-faq-and-troubleshooting.md
-      - Plugins API Reference: panel/PluginsDevelopment/PluginDocs/
+      - 'Plugins API Reference': panel/PluginsDevelopment/PluginDocs/
   - SDK:
       - 'Overview': SDK/overview.md
       - 'JavaScript / TypeScript SDK': SDK/sdk-js-ts.md

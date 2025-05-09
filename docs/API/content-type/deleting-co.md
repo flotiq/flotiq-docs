@@ -256,7 +256,7 @@ For example:
 Request example:
 
 ```
-curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-delete" -H "accept: schema" -H "X-AUTH-TOKEN: YOUR_API_TOKEN" -H "Content-Type: application/json" -d "[\"blogposts-1\",\"blogposts-2\"]"
+curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-delete" --header "accept: schema" --header "X-AUTH-TOKEN: YOUR_API_TOKEN" --header "Content-Type: application/json" --data-raw "[\"blogposts-1\",\"blogposts-2\"]"
 ```
 { data-search-exclude }
 

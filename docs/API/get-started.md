@@ -24,6 +24,11 @@ Once you have your Content Type Definitions ready, you can proceed with integrat
 
 Flotiq provides two options for retrieving data: REST API and GraphQL. Here's an overview of the steps involved:
 
+!!! note
+    When working with the Flotiq API, the API may return the headers `x-deprecated-query-params` or `x-deprecated-payload` 
+    if you have sent a **payload or query parameters field that is no longer supported.**
+    You can find information about which fields or query parameters are deprecated in the content of these headers.
+
 ##### For REST API:
 Retrieve the schema of a specific Content Object by sending a `GET` request to the `https://api.flotiq.com/api/v1/content/{name}/{id}` endpoint. [Check the documentation](content-type/getting-co.md) for more details.
 

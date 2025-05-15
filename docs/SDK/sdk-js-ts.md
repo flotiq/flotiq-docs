@@ -80,7 +80,7 @@ console.log(filteredList.data); // Will return typed array of products
 ```
 { data-search-exclude }
 
-The SDK also supports other common operations such as get, create, update, patch,
+The SDK also supports other common operations such as get, create, batch create, update, patch,
 and delete for managing your content objects.
 These methods make it easy to retrieve a single entry, add new data, modify existing records,
 or remove content directly through the API.

@@ -117,7 +117,9 @@ also should have information about the connection with `AbstractContentTypeSchem
 ```
 { data-search-exclude }
 
-All property names should have only `a-z`, `A-Z`, `0-9` and `_` characters. `id` and `objectType` property names are restricted.
+Property names may only contain the following characters: `a-z`, `A-Z`, `0-9`, and `_`.
+
+Additionally, some property names are reserved due to Elasticsearch integration or internal Flotiq usage. The following names are not allowed: `id`, `_id`, `_index`, `_type`, `_source`, `_score`, `_routing`, `_version`, `_shards`, `objectType`, and `internal`.
 
 ### The meta definition property
 

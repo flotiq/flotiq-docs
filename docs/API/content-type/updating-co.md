@@ -10,13 +10,11 @@ description: How to update Content Objects in Flotiq
 
 There are two ways to update the content of an object:
 
-`PUT`:
-When updating the object (`PUT` requests), all properties must be present in the request body,
+* `PUT`: When updating the object (`PUT` requests), all properties must be present in the request body,
 as the object data are replaced with the request body.
 Validation of update request works the same as in saving requests.
 
-`PATCH`:
-When updating an object (a `PATCH` request), it is not necessary to specify all the properties of the object.
+* `PATCH`: When updating an object (a `PATCH` request), it is not necessary to specify all the properties of the object.
 Validating the update request works the same as it does when saving requests.
 
 !!! note
@@ -269,8 +267,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         { data-search-exclude }
 
 !!! note
-    The id property of the object can be updated through API if id provided in the request body is different from the one provided in request path.
-    This only works in updating single content object
+    The id property of the object cannot be updated. 
+    Ensure that the id in the request body matches the one in the request path when updating a single content object.
 
 #### Possible validation errors
 
@@ -287,4 +285,4 @@ It is also possible to update objects using the PATCH method.
 In the case of PATH, it is not required to provide all object fields, only those that are to be changed.
 When an object doesn't exist, the batch patch returns a 404 error response. The PATCH endpoint doesn't create new objects.
 
-[Register to start creating your content objects](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

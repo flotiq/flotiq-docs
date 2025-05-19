@@ -58,7 +58,7 @@ extra_css:
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/default.min.css
   - https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.1/build/styles/nord.min.css
   - https://flotiq-form-generator-styles.s3.amazonaws.com/styles.css
-  - 'css/flotiq.css'
+  - 'css/flotiq.css?v=20250428'
     #  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css
 
 markdown_extensions:
@@ -140,9 +140,6 @@ nav:
       - 'Draft & Public': API/draft-public/draft-public.md
     - 'Dynamic Content API': API/dynamic-content-api.md
     - 'GraphQL': API/graph-ql.md
-    - 'Generating SDKs':
-      - 'Overview': API/generate-package.md
-      - 'SDK NodeJS': API/generate-package/sdk-nodejs.md
     - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
     - 'Working with media':
@@ -181,14 +178,18 @@ nav:
       - 'Getting started': panel/PluginsDevelopment/plugins.md
       - 'Examples': panel/PluginsDevelopment/plugin-examples.md
       - 'Faq & Troubleshooting': panel/PluginsDevelopment/plugin-faq-and-troubleshooting.md
-      - Plugins API Reference: panel/PluginsDevelopment/PluginDocs/
+      - 'Plugins API Reference': panel/PluginsDevelopment/PluginDocs/
+  - SDK:
+      - 'Overview': SDK/overview.md
+      - 'JavaScript / TypeScript SDK': SDK/sdk-js-ts.md
+      - 'Custom SDKs': SDK/generate-package.md
   - CLI:
     - 'Overview': CLI/index.md
-    - 'Migrating Flotiq data between Spaces': CLI/migrating-data-between-spaces.md
-    - 'Starting new project with Gatsby and Flotiq': CLI/starting-new-project-gatsby.md
-    - 'Starting new project with Next.js and Flotiq': CLI/starting-new-project-nextjs.md
-    - 'Migrate WordPress blog content to Flotiq': CLI/wordpress-importer.md
-    - 'Migrate content from Contentful to Flotiq': CLI/contentful-importer.md
+    - 'Migrating data between Spaces': CLI/migrating-data-between-spaces.md
+    - 'Starting new project with Gatsby': CLI/starting-new-project-gatsby.md
+    - 'Starting new project with Next.js': CLI/starting-new-project-nextjs.md
+    - 'Migrate WordPress blog content': CLI/wordpress-importer.md
+    - 'Migrate content from Contentful': CLI/contentful-importer.md
     - 'Purging data from Flotiq account': CLI/purge.md
     - 'Migrating Flotiq data to and from MS Excel': CLI/excel-data-migration.md
   - Flotiq Universe:

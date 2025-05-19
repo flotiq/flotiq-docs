@@ -207,7 +207,7 @@ You can use the User Define API keys and create a key that has a limited scope a
 
 API request limits are assigned to your account, so all your keys' usage will add to the consumption of the API request quotas.
 
-[Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 
 
 [^1]: Number of available User API keys depends on the chosen subscription plan. [Check pricing and limits](https://flotiq.com/pricing){:target="_blank"}

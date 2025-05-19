@@ -33,7 +33,7 @@ We encourage you to download the Flotiq mobile expo application from Google Play
 
 We assume:
 
-- you already [registered a free Flotiq account](https://editor.flotiq.com/register.html)
+- you already [registered a free Flotiq account](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa)
 - you know how to [retrieve your API keys](https://flotiq.com/docs/API/).
 - you have Node 12 LTS or greater installed
 

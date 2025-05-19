@@ -83,8 +83,9 @@ Let's quickly look at the properties of this object. On the top level, there are
 
 - **name** - is an API-friendly name of the <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">
   Content Type</abbr> and name of the endpoints that will be generated to handle requests with
-  <abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that type. Can only have `a-z` characters and `_`.
+  <abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that type. It can only have `a-z` characters and `_`.
 - **label** - is a human-friendly label used to refer to this Content Type in the UI
+- **draftPublic** - is information on whether the content type should have only public objects (`false`) or draft and public objects (`true`)
 - **schemaDefinition** - contains an OpenAPI-compliant schema of the Content Type (more about this below)
 - **metaDefinition** - contains additional properties of the fields (more about this below)
 
@@ -126,7 +127,7 @@ should contain all properties of the object), and about type and validation of t
 on relations of the object with other Content Types. 
 
 In this case, Blog Post will have `title` property which will be unique and will render as text input in the CMS panel 
-and `postContent`, which can be duplicated and presented as CKEditor input in the CMS panel. 
+and `postContent`, which can be duplicated and presented as Rich text input in the CMS panel. 
 The first input in the form in the CMS panel will be `title` input, and the second will be `postContent`.
 
 ### Creating Content Type Definition examples
@@ -576,7 +577,7 @@ Input types of properties in `metaDefinition`:
 |            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                     |
 |            |                          |                                                                                                                    | hidden                      | bool   | Field will be hidden                                                                                                                                                                        | none allowed                                                         |                                                                                     |
 |            |                          |                                                                                                                    | readonly                    | bool   | Field cannot be modified                                                                                                                                                                    | none allowed                                                         |                                                                                     |
-| richtext   | string                   | Renders CKEditor in form                                                                                           | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                     |
+| richtext   | string                   | Renders Rich text editor in form                                                                                   | unique*                     | bool   | Information if the property's value should be unique in all object of the specified type.                                                                                                   | none allowed                                                         |                                                                                     |
 |            |                          |                                                                                                                    | helpText                    | string | Help text displayed in dashboard Content Object form and as description in Open API Schema                                                                                                  | none allowed                                                         |                                                                                     |
 |            |                          |                                                                                                                    | label*                      | string | People friendly name of the field                                                                                                                                                           | none allowed                                                         |                                                                                     |
 |            |                          |                                                                                                                    | hidden                      | bool   | Field will be hidden                                                                                                                                                                        | none allowed                                                         |                                                                                     |
@@ -1222,6 +1223,6 @@ Input types of properties in `metaDefinition`:
 
 If you'd rather use our graphical interface to design your Content Types - read the [Content modeller documentation](/docs/panel/content-types/)
 
-[Register to send all requests with your own API today](https://editor.flotiq.com/register.html){: .flotiq-button}
+[Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 
 [^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}

@@ -36,7 +36,7 @@ We need a type with two attributes:
 | message | textarea | Required | The message |
 
 
-Here's how you would create that Content Type Definition using the [Flotiq editor](https://editor.flotiq.com/register.html):
+Here's how you would create that Content Type Definition using the [Flotiq editor](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa):
 
 ![Configuring a content type for contact forms in Flotiq](images/contact-form-flotiq-editor.png){: .center .border .width75}
 

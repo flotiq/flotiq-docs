@@ -36,12 +36,12 @@ You can delete the object either by clicking the `Delete` button on the edit obj
 
 ![](../images/co-form/EditButtons.png){: .center .width50 .border}
 
-Or by selecting it on the content browser and clicking the `Remove selected` button:
+Or by selecting it on the content browser and clicking the `Action` then `Delete` button:
 
 ![](../images/GridBatchDelete.png){: .center .width50 .border}
 
 !!! warning
-You can only remove objects that are not linked to any other object in the system.
+    You can only remove objects that are not linked to any other object in the system.
 
 ## Content versioning
 
@@ -52,7 +52,7 @@ To save older revisions, click on the version tile and click the `Save` button.
 ## Mass edit
 
 You can edit multiple object at the same time. To do that you need to select needed objects in grid and then click
-`Mass edit selected` button that appears at the bottom of the grid.
+`Mass edit selected` button that appears at `Actions` menu
 
 ![](../images/blogpost-grid-mass-edit.png){: .center .width50 .border}
 

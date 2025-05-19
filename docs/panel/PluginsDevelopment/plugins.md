@@ -1,6 +1,6 @@
 ---
 tags:
-  - Developer
+   - Developer
 ---
 
 # Flotiq UI Plugins development

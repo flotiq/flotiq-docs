@@ -24,7 +24,7 @@ And here's a sneak peek at what we'll build.
 
 ## Setting up Flotiq
 
-Once you [register a Flotiq account](https://editor.flotiq.com/register.html) and log in, you'll have to create a new Content Type Definition. This is how you tell Flotiq what kind of data you will be dealing with. Mine looks like this:
+Once you [register a Flotiq account](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa) and log in, you'll have to create a new Content Type Definition. This is how you tell Flotiq what kind of data you will be dealing with. Mine looks like this:
 
 ![Store Content Type Definition](images/store-locator-2.png){: .center .border .width75}
 

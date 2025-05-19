@@ -227,7 +227,7 @@ The example below shows an example response for the product with a category, pro
     === "CURL"
 
         ``` 
-        curl -X GET "https://api.flotiq.com/api/v1/content/product/product-1" -H "X-AUTH-TOKEN: YOUR_API_KEY" -H "accept: application/json"
+        curl -X GET "https://api.flotiq.com/api/v1/content/product/product-1" --header "X-AUTH-TOKEN: YOUR_API_KEY" --header "accept: application/json"
         ```
         { data-search-exclude }
 

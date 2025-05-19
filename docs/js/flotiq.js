@@ -8,22 +8,12 @@ function load_navpane() {
         return;
     }
 
-    var nav = document.getElementsByClassName("md-nav");
-    for (var i = 0; i < nav.length; i++) {
-        if (typeof nav.item(i).style === "undefined") {
-            continue;
+    var toggles = document.querySelectorAll('input.md-nav__toggle');
+    toggles.forEach(toggle => {
+        if (toggle.id.match(/^__nav_\d+$/)) {
+            toggle.checked = true;
         }
-
-        if (nav.item(i).getAttribute("data-md-level") && nav.item(i).getAttribute("data-md-component")) {
-            nav.item(i).style.display = 'block';
-            nav.item(i).style.overflow = 'visible';
-        }
-    }
-
-    var nav = document.getElementsByClassName("md-nav__toggle");
-    for (var i = 0; i < nav.length; i++) {
-        nav.item(i).checked = true;
-    }
+    });
 
     setTimeout(() => {
         document.querySelector('a.md-nav__link--active')?.scrollIntoView({block: "nearest", inline: "nearest"});

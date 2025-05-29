@@ -19,7 +19,7 @@ If you wish to use our Flotiq - Excel migrator directly, you can use our [flotiq
 The command looks like this:
 
 ```bash
-flotiq excel-import [ctdName] [filePath] [flotiqApiKey]
+flotiq excel-export [ctdName] [filePath] [flotiqApiKey]
 ```
 { data-search-exclude }
 

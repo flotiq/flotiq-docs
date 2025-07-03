@@ -238,7 +238,9 @@ FlotiqPlugins.add(
         const button = document.createElement('button');
         button.textContent = `${data} (${counter})`;
 
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
+          e.stopPropagation();
+          e.preventDefault();
           counter++;
           button.textContent = `${data} (${counter})`;
         });
@@ -279,7 +281,10 @@ FlotiqPlugins.add(
         idButton.textContent = data;
         idButton.style.color = 'green';
 
-        idButton.addEventListener('click', async () => {
+        idButton.addEventListener('click', async (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          
           const result = await openModal({
             title: 'Some modal title',
             size: 'md',
@@ -342,7 +347,10 @@ FlotiqPlugins.add(
         idButton.textContent = data;
         idButton.style.color = 'green';
 
-        idButton.addEventListener('click', async () => {
+        idButton.addEventListener('click', async (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          
           const result = await openSchemaModal({
             title: 'Some modal title',
             size: 'lg',
@@ -418,7 +426,10 @@ FlotiqPlugins.add(
         idButton.textContent = data;
         idButton.style.color = 'green';
 
-        idButton.addEventListener('click', async () => {
+        idButton.addEventListener('click', async (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+
           const result = await openSchemaModal({
             title: 'Some modal title',
             size: 'lg',

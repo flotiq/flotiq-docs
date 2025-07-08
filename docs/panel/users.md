@@ -6,7 +6,7 @@ tags:
 title: Users
 description: How to manage users in Flotiq.
 
-This page describes how to manage **Users**, including your own settings, using [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 
+This page explains how to manage **Users**, including your own settings, using the [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 
 
 !!! hint
     Only a user Role headless admin can manage other users in Flotiq project. If you do not have the required role, you will not be able too see the `Users` tab.
@@ -27,15 +27,17 @@ If you don't have any new user added, you will see only your own user on the lis
 
 ## Adding new User :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
-You can add more team members to your Flotiq project by clicking the `Invite User` button in the Users tab, which opens user editor.
+You can invite more team members to your Flotiq project by clicking the `Invite User` button in the Users tab, which opens user editor.
 
 ![](images/AddUserMenu.png){: .center .border}
 
-When adding new user you have to define its: Email, Name, and Password. After saving, there will be registration verification email sent to the email you entered.
+When adding new user you have to define its: Email and Name. After saving, an invitation email will be sent to the provided address.
 
-![](images/NewUserVerificationEmail.png){: .center .border}
+![](images/NewUserVerificationEmail.png){:.width50 .center .border}
 
-Once new user verifies his email, he will be asked to enter a new password and the process of adding a new team member will be completed.
+Once the new user accepts the invitation, they will be prompted to set a password, completing the onboarding process.
+
+![](images/NewUserEnterPswd.png){: .center .border}
 
 ## Editing users
 

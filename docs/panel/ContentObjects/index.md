@@ -43,11 +43,17 @@ Or by selecting it on the content browser and clicking the `Action` then `Delete
 !!! warning
     You can only remove objects that are not linked to any other object in the system.
 
-## Content versioning
+## Version History
 
-The form view also displays information about previous versions of a particular Content Object.
-From this view, you can also switch to older revisions.
-To save older revisions, click on the version tile and click the `Save` button.
+Flotiq provides built-in version control for content objects, allowing users to view, compare, and restore previously saved versions.
+
+Each time a content object is updated, a new version is automatically saved and listed in the Versions panel on the right-hand side of the editor. The version log includes the timestamp and the name of the user who made the change, which supports full transparency and encourages collaborative workflows within teams.
+
+![Version list](../images/VersionsList.png){: .center .border}
+
+By clicking on a version entry, you can open a Version Diff window, where the current version and the selected historical version are displayed side by side. Any changed fields are clearly highlighted. This makes it easy to review differences and decide whether to revert.
+
+![Version diff](../images/VersionDiff.png){: .center .border}
 
 ## Mass edit
 

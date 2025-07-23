@@ -172,23 +172,24 @@ Standard select control. Depending on `multiple` meta property you can choose on
 
 ## Relation
 
-Flotiq has two types of relations in the dashboard (they are managed in the same way in the json object):
+Flotiq has two types of relations in the dashboard (they are managed in the same way in the json object),
+content object relation and media relation:
 
 ![](../images/co-form/datasource/Relations.png){: .center .width75 .border}
 
 If you want to remove the linked object, click the `trash` icon on the object's right side.
-You can change the order of objects in relation using arrow buttons in the top right corner.
-If it is not a Media object, you can edit it by clicking the `pencil` button in the top right corner.
+You can change the order of objects in relation using drag and drop, click on the right side of the relation panel to do that.
+You can edit it by clicking the `pencil` button, and swap to another object using `swap` button. To copy object ID use `copy link` button.
 
 ### Objects relations
 
-You can either open the form for object creation using the `Add new object and link` button:
+You can either open the form for object creation using the `Add (object name)` button:
 
 ![](../images/co-form/datasource/RelationAddModal.png){: .center .width75 .border}
 
 After saving the object, the system automatically links it to the object you are editing/creating right now.
 
-Or you can also click the `Link existing object` button and link the object created earlier:
+Or you can also click the `Pick (object name)` button and link the object created earlier:
 
 ![](../images/co-form/datasource/LinkExistingObject.png){: .center .border}
 
@@ -196,11 +197,11 @@ To add the object, click on the desired object and then the `Add` button.
 You can search and sort objects using the controls on top of the modal.
 
 !!! note    
-For now, you can only add one object or file at a time.
+  You can add all objects of the same type at once.
 
 ### Media relations
 
-The `Open Media Library` button opens Media Library, where you can add new files or select the ones already added.
+The `Add new media and link` button opens Media Library, where you can add new files or select the ones already added.
 
 ![](../images/co-form/datasource/MediaLibraryModal.png){: .center .width75 .border}
 

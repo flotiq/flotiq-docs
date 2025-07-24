@@ -92,8 +92,8 @@ You can create new user roles by clicking the **Add User Role** button or duplic
 1. **Role Creation**: To add a new user role, complete the form by providing a name, description, and at least one rule. These rules determine the permissions associated with the role.
 2. **Assigning Actions**: You can assign various actions to different Content Types. If you need additional rules, click **Add Rule**. To remove a rule, simply click the trash icon.
 3. **Rule Types**:
-    * `CO`: These rules apply to specific Content Objects of a certain Type. However, for managing the type definition itself, add a separate rule with the `CTD` type.
-    * `CTD`: These rules apply to Content Type Definitions.
+    * `Content Type Definition Rules`: These rules apply to Content Type Definitions.
+    * `Content Object Rules`: These rules apply to specific Content Objects of a certain Type. However, for managing the type definition itself, add a separate rule with the `Content Type Definition Rule` type.
 
 ![](images/user-roles/empty-role-form.png){: .center .width75 .border}
 

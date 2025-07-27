@@ -19,7 +19,7 @@ This guide shows how to combine an online website builder Divhunt with Flotiq AP
 
 ## Create new Divhunt project and connect it to Flotiq via Rest API
 
-Head to Divhunt [projects page](https://www.divhunt.com/projects/){:target="_blank"} and create a new project or edit existing one, and open it in Divhunt's builder.
+Head to Divhunt [dashboard](https://dashboard.divhunt.com/){:target="_blank"} and create a new project or edit existing one, and open it in Divhunt's builder.
 
 Then select `settings` in the top bar, navigate to `Browse Applications` and install Rest API.
 

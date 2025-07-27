@@ -58,13 +58,13 @@ Don't worry - your API key is secure. It's not displayed anywhere in the form an
 If you use the `Generate new API key` button - a fresh, scoped API key will be created automatically for you, along with the recommended permissions.
 
 
-![](images/GenerateModal3.png){: .center .border}
+![](images/GenerateFormModalBasic.png){: .center .border}
 
 When the domain and API key are in place, you can click on the `Generate` button. Please be patient; it may take up to a minute to generate the required code.
 
 You can specify some advanced settings to make the form fit better to your page by clicking the `Advanced` tab before generating the form (but you can always update it later):
 
-![](images/GenerateModal5.png){: .center .border}
+![](images/GenerateFormModalAdvanced.png){: .center .border}
 
 ### Advanced settings:
 
@@ -127,7 +127,7 @@ Once your Flotiq Forms are generated, you will see a window with three lines of 
 1. Put the second code - `<flotiq-form/>` in your page, wherever you want the form to be displayed.
 1. Paste the third line - `<script ... ></script>` at the end of your HTML, just before the  `</body>` tag.
 
-![](images/GenerateModal4.png){: .center .border}
+![](images/GeneratedForm.png){: .center .border}
 
 You can edit all settings of your form by clicking the `Edit form settings` button.
 

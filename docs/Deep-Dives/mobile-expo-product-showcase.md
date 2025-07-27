@@ -80,9 +80,10 @@ When you open the Expo Go app, you have to scan the QR code presented on the [ht
 
 Now, on your device (or emulator), you should see the start screen of the Flotiq app.
 
-![](images/mobile-expo-product-showcase/mobile-start.png){.width25}
+<img width="50%" src="https://api.flotiq.com/image/0x0/_media-312eac73-40fa-49e8-899d-dad955dcce5c.png" alt="Enter flotiq api key">
 
-The screen you will see allows you to connect with your Flotiq account, but we will do this through a simple change in the source code.
+
+ The screen you will see allows you to connect with your Flotiq account, but we will do this through a simple change in the source code.
 
 !!! note
     If you have any issues - consult the README file in the application repo.
@@ -123,7 +124,7 @@ The code in the repository uses a login screen to authenticate with your API key
 
 Once you save the file, the application should automatically reload in the emulator and skip the login screen. You should now see the application's home screen:
 
-![](../Flotiq-Mobile-Expo/images/mobile-0.png){: .width25}
+<img width="50%" src="https://api.flotiq.com/image/0x0/_media-e14b4826-377b-4c71-a922-3b4ed95a0dc6.png" alt="Flotiq Demo App main view">
 
 ### Simplify navigation
 
@@ -211,8 +212,10 @@ Here's the [complete list of changes](https://github.com/netboxsoft/flotiq-mobil
 
 That's it! You should now see the product list immediately after the app has loaded:
 
-![](images/mobile-expo-product-showcase/products-ready.png){: .width25 }
-![](images/mobile-expo-product-showcase/products-ready-2.png){: .width25 }
+<img width="50%" src="https://api.flotiq.com/image/0x0/_media-f082f83a-10b3-4271-80b7-90fb641f2ece.png" alt="Product showcase">
+
+<img width="50%" src="https://api.flotiq.com/image/0x0/_media-6ce3b769-d819-44ad-b653-dd5d3e7380f8.png" alt="Product showcase 2">
+
 
 Now, you can go and play with it and publish it straight to the App stores.
 

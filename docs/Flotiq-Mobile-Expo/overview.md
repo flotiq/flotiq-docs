@@ -8,7 +8,7 @@ description: Use the Flotiq Mobile Expo application to browse and manage your co
 
 # Flotiq Mobile Expo app for Content Editors & Developers
 
-![Flotiq Mobile Expo application](images/head-image.jpg)
+![Flotiq Mobile Expo application](images/head-image.png)
 
 [![Flotiq Mobile Expo on Apple App Store](https://user-images.githubusercontent.com/551004/29770691-a2082ff4-8bc6-11e7-89a6-964cd405ea8e.png)](https://apps.apple.com/app/flotiq-mobile-expo/id1505331246) [![Flotiq Mobile Expo on Google Play](https://user-images.githubusercontent.com/551004/29770692-a20975c6-8bc6-11e7-8ab0-1cde275496e0.png)](https://play.google.com/store/apps/details?id=com.flotiqmobiledemo)
 
@@ -29,9 +29,9 @@ Main features:
 
 A ready-to-use application is available on Google Play and Apple App Store. Install the app, use the QR code in your API keys to connect the app to Flotiq and browse through your content.
 
-<img width="50%" src="https://api.flotiq.com/image/0x0/_media-e14b4826-377b-4c71-a922-3b4ed95a0dc6.png" alt="Flotiq Demo App main view">
-<img width="50%" src="https://api.flotiq.com/image/0x0/_media-f082f83a-10b3-4271-80b7-90fb641f2ece.png" alt="Product showcase">
-<img width="50%" src="https://api.flotiq.com/image/0x0/_media-6ce3b769-d819-44ad-b653-dd5d3e7380f8.png" alt="Product showcase 2">
+![Flotiq Demo App main view](images/mobile-1.png){: .width25 }
+![Product showcase](images/mobile-2.png){: .width25 }
+![Product showcase 2](images/mobile-3.png){: .width25 }
 
 ## For Developers: Boilerplate for your new application
 

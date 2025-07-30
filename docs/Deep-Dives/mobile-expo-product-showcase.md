@@ -8,7 +8,7 @@ description: This example shows how to use Flotiq and the Flotiq Mobile Expo to 
 
 # React-native mobile product showcase
 
-![Flotiq Mobile Expo application](../Flotiq-Mobile-Expo/images/head-image.jpg)
+![Flotiq Mobile Expo application](../Flotiq-Mobile-Expo/images/head-image.png)
 
 This simple guide will show you how to adapt the [Flotiq Mobile Expo](https://github.com/flotiq/flotiq-mobile-demo) application source code to work as a product showcase app.
 
@@ -124,7 +124,7 @@ The code in the repository uses a login screen to authenticate with your API key
 
 Once you save the file, the application should automatically reload in the emulator and skip the login screen. You should now see the application's home screen:
 
-<img width="50%" src="https://api.flotiq.com/image/0x0/_media-e14b4826-377b-4c71-a922-3b4ed95a0dc6.png" alt="Flotiq Demo App main view">
+![Flotiq Demo App main view](../Flotiq-Mobile-Expo/images/mobile-1.png){: .width25 }
 
 ### Simplify navigation
 
@@ -212,10 +212,8 @@ Here's the [complete list of changes](https://github.com/netboxsoft/flotiq-mobil
 
 That's it! You should now see the product list immediately after the app has loaded:
 
-<img width="50%" src="https://api.flotiq.com/image/0x0/_media-f082f83a-10b3-4271-80b7-90fb641f2ece.png" alt="Product showcase">
-
-<img width="50%" src="https://api.flotiq.com/image/0x0/_media-6ce3b769-d819-44ad-b653-dd5d3e7380f8.png" alt="Product showcase 2">
-
+![Product showcase](../Flotiq-Mobile-Expo/images/mobile-2.png){: .width25 }
+![Product showcase 2](../Flotiq-Mobile-Expo/images/mobile-3.png){: .width25 }
 
 Now, you can go and play with it and publish it straight to the App stores.
 

@@ -29,9 +29,9 @@ Main features:
 
 A ready-to-use application is available on Google Play and Apple App Store. Install the app, use the QR code in your API keys to connect the app to Flotiq and browse through your content.
 
-![Flotiq Demo App main view](images/mobile-1.png){: .width25 }
-![Product showcase](images/mobile-2.png){: .width25 }
-![Product showcase 2](images/mobile-3.png){: .width25 }
+![Flotiq Demo App main view](images/mobile-1.png){: .width50 }
+![Product showcase](images/mobile-2.png){: .width50 }
+![Product showcase 2](images/mobile-3.png){: .width50 }
 
 ## For Developers: Boilerplate for your new application
 

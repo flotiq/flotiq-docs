@@ -74,6 +74,20 @@ You can check [Flotiq pricing page](https://flotiq.com/pricing){target="_blank"}
 If you do not see your question, feel free to ask us directly using the form below,
 or on our [Discord server](https://discord.com/invite/FwXcHnX).
 
+<style>
+    body[data-md-color-scheme="slate"] .flotiq-form .mat-form-field-appearance-legacy .mat-form-field-underline{
+        background-color: #d1d5db;
+    }
+
+    body[data-md-color-scheme="slate"] .mat-form-field-label-wrapper span{
+        color: #d1d5db;
+    }
+    
+    body[data-md-color-scheme="slate"] input[data-focus-visible-added] + .mat-form-field-label-wrapper span {
+        color: #0083FC;
+    }
+    
+</style>
 <flotiq-form></flotiq-form>
 
 [Register to start your Flotiq journey](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

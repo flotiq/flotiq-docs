@@ -85,7 +85,7 @@ To install Flotiq SDK, you can use flotiq-nextjs-setup CLI, that will not only s
     ```
     { data-search-exclude }
 
-If you want to read more about our flotiq-nextjs-setup CLI, refer to our [Flotiq NextJS docs](/docs/Universe//nextjs/nextjs-setup.md).
+If you want to read more about our flotiq-nextjs-setup CLI, refer to our [Flotiq NextJS docs](docs/CLI/starting-new-project-nextjs.md).
 
 If instead you prefer to install only Flotiq SDK manually, do the following steps:
 

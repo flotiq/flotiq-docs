@@ -142,19 +142,12 @@ Gatsby starter for blog post:
 
 [GitHub](https://github.com/flotiq/flotiq-gatsby-blog-1){:target="_blank"}
 
-[Working example](https://flotiqgatsbyblog1master.gatsbyjs.io){:target="_blank"}
-
 Scully starter for blog post:
 
 [GitHub](https://github.com/flotiq/scully-blog-starter){:target="_blank"}
 
-[Working example](https://thirsty-hoover-9327b3.netlify.app/){:target="_blank"}
 
 Documentation examples:
-
-[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=MjNhNDE5ZGQyNmYyZGJlNjFjZjM3YzM2MjVjZjc3ZGVAZjdhNTE3OWYtM2UxYS0xMWViLThkNTctMDJiMTYyOGYzNzNh){:target="_blank"}
-
-[Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3D23a419dd26f2dbe61cf37c3625cf77de){:target="_blank"}
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/a5c3102f2b2bfb71783e#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
 

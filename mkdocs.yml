@@ -37,9 +37,6 @@ theme:
        - content.code.copy
 
 plugins:
-  - alias:
-      verbose: true
-      use_anchor_titles: true
   - search
   - awesome-pages
   - glightbox
@@ -156,6 +153,7 @@ nav:
       - 'Overview': panel/ContentObjects/index.md
       - 'Field types': panel/ContentObjects/field-types.md
       - 'Draft & Public': panel/ContentObjects/draft-public.md
+      - 'Scheduling publication': panel/ContentObjects/publication-scheduling.md
     - 'Media library': panel/media-library.md
     - 'Users': panel/users.md
     - 'User Roles': panel/user-roles.md

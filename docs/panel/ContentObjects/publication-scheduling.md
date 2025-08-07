@@ -16,8 +16,8 @@ can be easily modified or canceled at any time before the content is published, 
 the publishing workflow.
 
 !!! Note
-This feature is available only in `ContentObject` with
-enabled  [Draft & Public Mode](/docs/panel/ContentObjects/draft-public)
+    This feature is available only in `ContentObject` with
+    enabled  [Draft & Public Mode](/docs/panel/ContentObjects/draft-public)
 
 ## Usage
 

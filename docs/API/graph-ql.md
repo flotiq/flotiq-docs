@@ -5,9 +5,9 @@ tags:
 
 # GraphQL
 
-The Flotiq API supports a GraphQL queries. 
+The Flotiq API supports a GraphQL queries.
 It is an alternative way to REST API to get your data. We provide the complete, **always up-to-date** GraphQL description of your data and the endpoint
-which understands GraphQL queries for your Content Objects. 
+which understands GraphQL queries for your Content Objects.
 
 ## What is a GraphQL?
 
@@ -17,17 +17,17 @@ The developers can pull various data, in the desired shape, with a single API ca
 
 ## Graphql in Flotiq
 
-The system supports GraphQL queries for Content Objects. 
-Endpoints that allow you to interact with the system in a GraphqQL way are:
+The system supports GraphQL queries for Content Objects.
+Endpoints that allow you to interact with the system in a GraphQL way are:
 
-* `GET /api/graphql/schema` - get GraphQL schema,
-* `POST /api/graphql` - execute GraphQL query.
+* `GET /api/v2/graphql/schema` - get GraphQL schema,
+* `POST /api/v2/graphql` - execute GraphQL query.
 
 
 ### Authentication
 
 To authenticate the GraphQL query, you need to use one of the Application API Keys [available in your
-Flotiq Dashboard](/docs/API/). 
+Flotiq Dashboard](/docs/API/).
 
 As in the whole Flotiq API, you can pass your API Key in the following way:
 
@@ -47,10 +47,10 @@ It describes the shape of your current Content Type Definitions, including attri
 required fields and relations.
 
 !!! Request
-     ```
-     curl -X GET 'https://api.flotiq.com/api/graphql/schema' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
-     ```
-     { data-search-exclude }
+    ```
+    curl -X GET 'https://api.flotiq.com/api/v2/graphql/schema' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    ```
+    { data-search-exclude }
 
 !!! Response
 
@@ -59,48 +59,188 @@ required fields and relations.
         Returned when the request was correctly formatted
 
         ```
-        type Query {
-            category(id: String!): category
-            categoryList(page: Int, limit: Int, order_by: String, order_direction: String, filter: String): [category]
-            product(id: String!): product
-            productList(page: Int, limit: Int, order_by: String, order_direction: String, filter: String): [product]
-            _media(id: String!): _media
-            _mediaList(page: Int, limit: Int, order_by: String, order_direction: String, filter: String): [_media]
+        """Filter input for individual field conditions"""
+        input FlotiqFieldFilterInput {
+            type: String!
+            filter: String!
         }
-        
+
+        type Query {
+            _media(id: String, field: String, value: String, first: Int, offset: Int, order_by: String, order_direction: String, filter: _mediaFilterInput): _mediaConnection
+            _tag(id: String, field: String, value: String, first: Int, offset: Int, order_by: String, order_direction: String, filter: _tagFilterInput): _tagConnection
+            category(id: String, field: String, value: String, first: Int, offset: Int, order_by: String, order_direction: String, filter: categoryFilterInput): categoryConnection
+            product(id: String, field: String, value: String, first: Int, offset: Int, order_by: String, order_direction: String, filter: productFilterInput): productConnection
+        }
+
         """Auto generated Headless CMS type: _media"""
         type _media {
-            id: String
-            url: String
-            size: Float
-            type: String
+            internal: flotiq___internal
+            id: String!
+            alt: String
+            url: String!
+            size: Float!
+            tags: [_tag]
+            type: String!
+            title: String
             width: Float
             height: Float
-            source: String
+            source: String!
             fileName: String
-            mimeType: String
-            extension: String
+            mimeType: String!
+            variants: [_media_variants]
+            extension: String!
             externalId: String
         }
-        
+
+        type _mediaConnection {
+            edges: [_mediaEdge]
+            pageInfo: _mediaPageInfo
+            totalCount: Int
+        }
+
+        type _mediaEdge {
+            node: _media
+        }
+
+        """Filter container for fields in _media"""
+        input _mediaFilterInput {
+            alt: FlotiqFieldFilterInput
+            url: FlotiqFieldFilterInput
+            size: FlotiqFieldFilterInput
+            tags: FlotiqFieldFilterInput
+            type: FlotiqFieldFilterInput
+            title: FlotiqFieldFilterInput
+            width: FlotiqFieldFilterInput
+            height: FlotiqFieldFilterInput
+            source: FlotiqFieldFilterInput
+            fileName: FlotiqFieldFilterInput
+            mimeType: FlotiqFieldFilterInput
+            variants: FlotiqFieldFilterInput
+            extension: FlotiqFieldFilterInput
+            externalId: FlotiqFieldFilterInput
+        }
+
+        type _mediaPageInfo {
+            hasNextPage: Boolean
+        }
+
+        type _media_variants {
+            name: String
+            trim: [_media_variants_trim]
+        }
+
+        type _media_variants_trim {
+            top: Float
+            left: Float!
+            right: Float
+            width: Float
+            bottom: Float
+            height: Float
+        }
+
+        """Auto generated Headless CMS type: _tag"""
+        type _tag {
+            internal: flotiq___internal
+            id: String!
+            name: String
+        }
+
+        type _tagConnection {
+            edges: [_tagEdge]
+            pageInfo: _tagPageInfo
+            totalCount: Int
+        }
+
+        type _tagEdge {
+            node: _tag
+        }
+
+        """Filter container for fields in _tag"""
+            input _tagFilterInput {
+            name: FlotiqFieldFilterInput
+        }
+
+        type _tagPageInfo {
+            hasNextPage: Boolean
+        }
+
         """Auto generated Headless CMS type: category"""
         type category {
-            id: String
+            internal: flotiq___internal
+            id: String!
             name: String
             description: String
         }
-        
+
+        type categoryConnection {
+            edges: [categoryEdge]
+            pageInfo: categoryPageInfo
+            totalCount: Int
+        }
+
+        type categoryEdge {
+            node: category
+        }
+
+        """Filter container for fields in category"""
+        input categoryFilterInput {
+            name: FlotiqFieldFilterInput
+            description: FlotiqFieldFilterInput
+        }
+
+        type categoryPageInfo {
+            hasNextPage: Boolean
+        }
+
+        """Default internal type"""
+        type flotiq___internal {
+            status: String
+            createdAt: String
+            deletedAt: String
+            updatedAt: String
+            contentType: String
+            objectTitle: String
+            latestVersion: Int
+        }
+
         """Auto generated Headless CMS type: product"""
         type product {
-            id: String
+            internal: flotiq___internal
+            id: String!
             name: String
             slug: String
             price: Float
             categories: [category]
             description: String
-            productImage: [_media]
-            productGallery: [_media]
+            productimage: [_media]
+            productgallery: [_media]
         }
+
+        type productConnection {
+            edges: [productEdge]
+            pageInfo: productPageInfo
+            totalCount: Int
+        }
+
+        type productEdge {
+            node: product
+        }
+
+        """Filter container for fields in product"""
+            input productFilterInput {
+            name: FlotiqFieldFilterInput
+            slug: FlotiqFieldFilterInput
+            price: FlotiqFieldFilterInput
+            categories: FlotiqFieldFilterInput
+            description: FlotiqFieldFilterInput
+            productimage: FlotiqFieldFilterInput
+            productgallery: FlotiqFieldFilterInput
+        }
+
+        type productPageInfo {
+            hasNextPage: Boolean
+        }
+
         ```
         { data-search-exclude }
 
@@ -118,7 +258,7 @@ required fields and relations.
 
 ### Execute GraphQL Query
 
-To make a query for your objects, you need to call `POST /api/graphql` GraphQL endpoint.
+To make a query for your objects, you need to call `POST /api/v2/graphql` GraphQL endpoint.
 We can specify two types of queries - responsible for retrieving a single object and listing objects.
 
 #### Query single object
@@ -135,10 +275,14 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
         !!! GraphQL query
 
             ```graphql
-            query {
-                products(id:"product-1") {
-                    id
-                    title
+            {
+                product(id: "product-1") {
+                    edges {
+                        node {
+                            id
+                            name
+                        }
+                    }
                 }
             }
             ```
@@ -148,10 +292,10 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
 
         !!! Request
             ```
-            curl -X POST 'https://api.flotiq.com/api/graphql' \
+            curl -X POST 'https://api.flotiq.com/api/v2/graphql' \
                 --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
                 --header 'Content-Type: application/json' \
-                --data-raw '{"query":"{ products(id: \"product-1\") { id title } }"}'
+                --data-raw '{"query":"{ product(id: \"product-1\") { edges { node { id title }}}}"}'
             ```
             { data-search-exclude }
 
@@ -160,9 +304,15 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
                 ```json
                 {
                     "data": {
-                        "products": {
-                            "id": "product-1",
-                            "title": "Green Tea"
+                        "product": {
+                            "edges": [
+                                {
+                                    "node": {
+                                        "id": "product-1",
+                                        "name": "Green Tea"
+                                    }
+                                }
+                            ]
                         }
                     }
                 }
@@ -194,10 +344,10 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
 
         !!! Request
             ```
-            curl -X POST 'https://api.flotiq.com/api/graphql' \
+            curl -X POST 'https://api.flotiq.com/api/v2/graphql' \
                 --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
                 --header 'Content-Type: application/json' \
-                --data-raw '{"query":"{ products(field: \"title\", value: \"Green Tea\") { id title } }"}'
+                --data-raw '{"query":"{ products(field: \"title\", value: \"Green Tea\") { id title }}"}'
             ```
             { data-search-exclude }
 
@@ -224,13 +374,12 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
 While listing objects, you can use the optional parameters
 `page`, `limit`, `order_by`, `order_direction`, or `filter`.
 
-| Param name      | Param description                                                                                                                                                   | Defalut value |
-|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| page            | Number of the requested page                                                                                                                                           | 20            |
-| limit           | Number of objects on page, default `20`, maximum `1000`                                                                                                                                        | 1             |
-| order_by        | What field should list be ordered by                                                                                                                                |               |
-| order_direction | Order direction, possible values `asc`, `desc`                                                                                                                      | asc          |
-| filter          | Json encoded object containing conditions on which the list of CO should be filtered<br/> Example filter value: {"title":{"type":"equals","filter":"Hello world!"}} |               |
+| Param name     | Param description                                       | Defalut value |
+|----------------|---------------------------------------------------------|---------------|
+| offset         | Number of records to skip                               | 0             |
+| first          | Number of objects on page, default `10`, maximum `1000` | 10            |
+| order_by       | What field should list be ordered by                    |               |
+| order_direction | Order direction, possible values `asc`, `desc`         | asc           |
 
 The below example shows how to list all products ordered by title, limited to 2 results:
 
@@ -239,9 +388,9 @@ The below example shows how to list all products ordered by title, limited to 2 
     !!! GraphQL query
         ```graphql
         query {
-            productsList(limit: 2, order_by: "title", order_direction: "asc") {
+            productsList(first: 2, order_by: "name", order_direction: "asc") {
                 id
-                title
+                name
             }
         }
         ```
@@ -251,10 +400,10 @@ The below example shows how to list all products ordered by title, limited to 2 
 
     !!! Request
         ```
-        curl -X POST 'https://api.flotiq.com/api/graphql' \
+        curl -X POST 'https://api.flotiq.com/api/v2/graphql' \
             --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
             --header 'Content-Type: application/json' \
-            --data-raw '{"query":"query {productsList(limit: 2, order_by: \"title\", order_direction: \"desc\") {id, title}}"}'
+            --data-raw '{"query":"query {product(first: 2, order_by: \"name\", order_direction: \"desc\") { edges { node {id, name}}}}"}'
         ```
         { data-search-exclude }
 
@@ -264,24 +413,29 @@ The below example shows how to list all products ordered by title, limited to 2 
             ```json
             {
             "data": {
-                "productsList": [
-                {
-                    "id": "product-3",
-                    "title": "Rooibos"
-                },
-                {
-                    "id": "product-2",
-                    "title": "Earl Grey"
+                "product": {
+                    "edges": [
+                        {
+                            "node": {
+                                "id": "e883fc8e-31bd-42da-8fab-09d1f8ed767f",
+                                "name": "test"
+                            }
+                        },
+                        {
+                            "node": {
+                                "id": "9c8c7a07-4f71-4167-a38c-c883a92dbbe4",
+                                "name": "Green Tea"
+                            }
+                        }
+                    ]
                 }
-                ]
-            }
             }
             ```
             { data-search-exclude }
 
 ### Relation resolving (hydration)
 
-GraphQLs flexibility also covers object relations (e.g. product has category). 
+GraphQLs flexibility also covers object relations (e.g. product has category).
 In Flotiq, the related objects are resolved automatically based on the type of `DataSource`.
 
 For example, when we have a product object:
@@ -313,13 +467,17 @@ The GraphQL query for listing objects including categories will look like:
 
     !!! GraphQL query
         ```graphql
-        query {
-            productsList(limit: 1) {
-                id
-                title
-                categories {
-                    id
-                    name
+        query Product {
+            product(first: 1) {
+                edges {
+                    node {
+                        id
+                        name
+                        categories {
+                            id
+                            name
+                        }
+                    }
                 }
             }
         }
@@ -329,9 +487,9 @@ The GraphQL query for listing objects including categories will look like:
     !!! Request
         ```
         curl --request POST \
-            --url 'https://api.flotiq.com/api/graphql?auth_token=__YOUR_AUTH_TOKEN__' \
+            --url 'https://api.flotiq.com/api/v2/graphql?auth_token=__YOUR_AUTH_TOKEN__' \
             --header 'content-type: application/json' \
-            --data '{"query":"query{productsList(limit:1){id,title,categories{id,name}}}"}'
+            --data '{"query":"query{product(first:1)edges{node{{id,name,categories{id,name}}}}}"}'
         ```
         { data-search-exclude }
 
@@ -342,18 +500,22 @@ The GraphQL query for listing objects including categories will look like:
             ```json
             {
                 "data": {
-                    "productsList": [
-                        {
-                            "id": "product-3",
-                            "title": "Rooibos",
-                            "categories": [
-                                {
-                                    "id": "category-1",
-                                    "name": "Tea"
+                    "product": {
+                        "edges": [
+                            {
+                                "node": {
+                                    "id": "product-1",
+                                    "name": "Green Tea",
+                                    "categories": [
+                                        {
+                                            "id": "category-1",
+                                            "name": "Tea"
+                                        }
+                                    ]
                                 }
-                            ]
-                        }
-                    ]
+                            }
+                        ]
+                    }
                 }
             }
             ```
@@ -361,13 +523,90 @@ The GraphQL query for listing objects including categories will look like:
 
     As you can see, the related element, `category`, was fetched, including its properties.
 
-## Explore using Insomnia client
+### Filtering
 
-GraphQL queries can be complex. To efficiently interact with Flotiq GraphQL API, we suggest you use
-apps like Insomnia. It helps to create queries with autocomplete, based on your current schema, 
-validate your input and display a preview of the response.
+GraphQL also allows filtering. The filter object is provided in the variables and follows the same syntax as regular [filtering](/docs/API/content-type/listing-co/?h=listin#filtering-data) in REST API.
 
-An example query using [Insomnia REST Client](https://insomnia.rest/) with endpoint
-`https://api.flotiq.com/api/graphql?auth_token=YOUR_AUTH_TOKEN`:
+!!! Example
 
-![](images/graph-ql/graphql-insomnia.gif)
+    !!! Query
+        ```graphql
+            query Products($productsFilter: productFilterInput){ 
+                product(filter: $productsFilter)
+                {
+                    edges {
+                        node {
+                            id
+                            name
+                            internal {
+                                createdAt 
+                            }
+                        }
+                    }
+                    totalCount
+                    pageInfo {
+                        hasNextPage
+                    }
+                }
+            }
+        ```
+        { data-search-exclude }
+
+    !!! Variables
+        ```json
+        {
+            "productsFilter": {
+                "name": {
+                    "type": "contains",
+                    "filter": "Rooibos"
+                }
+            }
+        }
+        ```
+        { data-search-exclude }
+    !!! Request
+        ```
+        curl --request POST \
+            --url 'https://api.flotiq.com/api/v2/graphql?auth_token=__YOUR_AUTH_TOKEN__' \
+            --header 'content-type: application/json' \
+            --data '{
+                "query": "query Products($productsFilter: productFilterInput) { product(filter: $productsFilter) { edges { node { id name internal { createdAt } } } totalCount pageInfo { hasNextPage } } }",
+                "variables": {
+                    "productsFilter": {
+                        "name": {
+                            "type": "contains",
+                            "filter": "Rooibos"
+                        }
+                    }
+                }
+            }'
+        ```
+        { data-search-exclude }
+
+    !!! Response
+
+        === "200 OK"
+            Will return filtered data:
+            ```json
+            {
+                "data": {
+                    "product": {
+                    "edges": [
+                        {
+                            "node": {
+                                "id": "e883fc8e-31bd-42da-8fab-09d1f8ed767f",
+                                "name": "Rooibos",
+                                "internal": {
+                                    "createdAt": "2025-08-25T10:31:54+00:00"
+                                }
+                            }
+                        }
+                    ],
+                    "totalCount": 1,
+                    "pageInfo": {
+                        "hasNextPage": false
+                    }
+                }
+            }
+            ```
+            { data-search-exclude }

@@ -137,6 +137,7 @@ nav:
       - 'Draft & Public': API/draft-public/draft-public.md
     - 'Dynamic Content API': API/dynamic-content-api.md
     - 'GraphQL': API/graph-ql.md
+    - 'GraphQL Legacy': API/graph-ql-legacy.md
     - 'Open API schema': API/open-api-schema.md
     - 'Full-text search': API/search.md
     - 'Working with media':

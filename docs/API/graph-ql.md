@@ -332,9 +332,13 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
 
             ```graphql
             query {
-                products(field: "title", value: "Green Tea") {
-                    id
-                    title
+                product(field: "title", value: "Green Tea") {
+                    edges {
+                        node {
+                            id
+                            title
+                        }
+                    }
                 }
             }
             ```
@@ -347,7 +351,7 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
             curl -X POST 'https://api.flotiq.com/api/v2/graphql' \
                 --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
                 --header 'Content-Type: application/json' \
-                --data-raw '{"query":"{ products(field: \"title\", value: \"Green Tea\") { id title }}"}'
+                --data-raw '{"query":"{ product(field: \"title\", value: \"Green Tea\") edges{ node{ id title }}}}"}'
             ```
             { data-search-exclude }
 
@@ -356,9 +360,15 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
                 ```json
                 {
                     "data": {
-                        "products": {
-                            "id": "product-1",
-                            "title": "Green Tea"
+                        "product": {
+                            edges: [
+                                {
+                                    "node": {
+                                        "id": "product-1",
+                                        "name": "Green Tea"
+                                    }
+                                }
+                            ]
                         }
                     }
                 }
@@ -388,9 +398,13 @@ The below example shows how to list all products ordered by title, limited to 2 
     !!! GraphQL query
         ```graphql
         query {
-            productsList(first: 2, order_by: "name", order_direction: "asc") {
-                id
-                name
+            product(first: 2, order_by: "name", order_direction: "asc") {
+                edges {
+                    node {
+                        id
+                        name
+                    }
+                }
             }
         }
         ```

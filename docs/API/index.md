@@ -203,11 +203,29 @@ If you accidentally committed your `.env` file to a public repository or in any 
 
 You can use the User Define API keys and create a key that has a limited scope and permissions. For example - you can easily create a new key that only provides access to `Product` data and set it to be read-only.
 
-### Are the API request limits calculated on a per-key or per-account basis?
+### Are the API request limits[^2] calculated on a per-key or per-account basis?
 
 API request limits are assigned to your account, so all your keys' usage will add to the consumption of the API request quotas.
+
+### Why my API call limit did not reset at the end of the month?
+
+The API call limit is based on a 30-day rolling window, not a fixed calendar month. This means your usage is tracked over the past 30 days from the current date. For example, if you made 100 API calls today, those 100 calls will count towards your limit for the next 30 days. On the 31st day, the calls you made today will drop off and no longer count against your limit.
+
+#### How it Works
+
+Imagine a window that's exactly 30 days wide. Every day, this window slides forward, dropping the oldest day's usage and adding the newest day's usage. The system continuously calculates your total calls within this 30-day period.
+
+* **Fixed Monthly**: A fixed monthly limit would reset to zero on the first day of each month (e.g., January 1st, February 1st). This can lead to a "use it or lose it" rush at the end of the month and then a sudden drop in usage.
+* **Rolling Window**: A rolling window ensures a more consistent and fair usage policy. It prevents you from being penalized for high usage at the end of a month or having your quota completely reset, which could cause a service disruption. It allows for more flexible and predictable scaling of your application's usage over time.
+
+#### Key Benefits for You
+
+* **Flexibility**: You're not restricted by the calendar. If you have a period of high demand in the middle of a month, you can use your quota as needed without waiting for a new month to start.
+* **Predictability**: It provides a steady, continuous look at your usage, making it easier for you to manage and anticipate your needs. You can always see exactly how many calls you've made in the last 30 days.
+* **Fairness**: This model ensures that the limit is applied consistently, regardless of when you began your subscription. Everyone's limit is managed in the same way, based on their individual usage history.
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 
 
 [^1]: Number of available User API keys depends on the chosen subscription plan. [Check pricing and limits](https://flotiq.com/pricing){:target="_blank"}
+[^2]: Number of available API calls depends on the chosen subscription plan. [Check pricing and limits](https://flotiq.com/pricing){:target="_blank"}

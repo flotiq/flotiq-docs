@@ -106,7 +106,7 @@ Keep in mind that ordering by a field that is nested in the `object` input type 
 
 ### Order by `_geo_distance`
 
-Flotiq allows searching geo fields based on the distance from a point specified in `geo_filters`.
+Flotiq allows sorting based on the distance from a point specified in `geo_filters`. By using `order_by=_geo_distance`, you can sort both in ascending and descending order, using `order_direction`.
 
 !!! Note
     The `_geo_distance` sort cannot be used unless `geo_filters` are provided

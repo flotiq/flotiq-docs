@@ -104,6 +104,17 @@ Keep in mind that ordering by a field that is nested in the `object` input type 
 !!! Note
     You may also use the `.keyword` suffix for other data than text fields, for example, if you are using an `id` field that uses a `number` type in Flotiq, you may still want to consider using the `.keyword` suffix when ordering by such field. This will result in slightly faster searching and will sort objects by id alphabetically, not from the highest number to the lowest.
 
+### Order by `_geo_distance`
+
+Flotiq allows sorting based on the distance from a point specified in `geo_filters`. By using `order_by=_geo_distance`, you can sort both in ascending and descending order, using `order_direction`.
+
+!!! Note
+    The `_geo_distance` sort cannot be used unless `geo_filters` are provided
+
+!!! Example
+    GET https://api.flotiq.com/api/v1/search?q=\*&**order_by=_geo_distance&geo_filters[geo]=geo_distance,300km,51,17.2**
+
+
 ## Limit the search to a specific field
 
 You can restrict queries to a specific field by passing the `fields[]` argument, for example, `fields[]=name` would only search in the `name` field.

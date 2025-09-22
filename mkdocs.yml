@@ -183,6 +183,7 @@ nav:
       - 'Kanban Board': panel/Plugins/Kanban-board.md
       - 'ChatGPT FAQ Generator': panel/Plugins/ChatGPT-faq-generator.md
       - 'Display Content Type image in Object forms': panel/Plugins/Content-types-image-in-co-form.md
+      - 'Color Picker': panel/Plugins/Color-picker.md
     - UI Plugins Development:
       - 'Getting started': panel/PluginsDevelopment/plugins.md
       - 'Examples': panel/PluginsDevelopment/plugin-examples.md

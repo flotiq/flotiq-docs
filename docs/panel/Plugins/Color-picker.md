@@ -58,6 +58,7 @@ The color palette must be a JSON array containing arrays of colors. Each color c
   ]
 ]
 ```
+{ data-search-exclude }
 
 **Example 2: Named colors**
 ```json
@@ -84,6 +85,7 @@ The color palette must be a JSON array containing arrays of colors. Each color c
   ]
 ]
 ```
+{ data-search-exclude }
 
 If the format is correct, you should see the chosen file in the plugin settings:
 

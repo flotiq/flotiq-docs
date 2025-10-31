@@ -202,7 +202,7 @@ You can check if your API key is valid by sending a request to `/api/auth-contex
     === "CURL"
 
         ``` 
-        curl --location --request GET "https://api.flotiq.com/api/`auth-context`" \
+        curl --location --request GET "https://api.flotiq.com/api/auth-context" \
         --header 'accept: */*' \
         --header 'X-AUTH-TOKEN: YOUR_API_KEY'
         ```
@@ -211,7 +211,7 @@ You can check if your API key is valid by sending a request to `/api/auth-contex
     === "C# + Restasharp"
 
         ```
-        var client = new RestClient("https://api.flotiq.com/api/`auth-context`");
+        var client = new RestClient("https://api.flotiq.com/api/auth-context");
         var request = new RestRequest(Method.GET);
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);

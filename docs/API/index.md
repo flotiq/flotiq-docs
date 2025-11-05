@@ -193,6 +193,139 @@ Or an example queries with `X-AUTH-TOKEN` header:
         ```
         { data-search-exclude }
 
+## Validating API key
+
+You can check if your API key is valid by sending a request to `/api/auth-context`.
+
+!!! Example
+
+    === "CURL"
+
+        ``` 
+        curl --location --request GET "https://api.flotiq.com/api/auth-context" \
+        --header 'accept: */*' \
+        --header 'X-AUTH-TOKEN: YOUR_API_KEY'
+        ```
+        { data-search-exclude }
+
+    === "C# + Restasharp"
+
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/auth-context");
+        var request = new RestRequest(Method.GET);
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
+        IRestResponse response = client.Execute(request);
+        ```
+        { data-search-exclude }
+    
+    === "Go + Native"
+
+        ```
+        package main
+
+        import (
+            "fmt"
+            "net/http"
+            "io/ioutil"
+        )
+        
+        func main() {
+        
+            url := "https://api.flotiq.com/api/auth-context"
+        
+            req, _ := http.NewRequest("GET", url, nil)
+
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_KEY")
+        
+            res, _ := http.DefaultClient.Do(req)
+        
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+        
+            fmt.Println(res)
+            fmt.Println(string(body))
+        
+        }
+        ```
+        { data-search-exclude }
+    
+    === "Java + Okhttp"
+        
+        ```
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+            .url("https://api.flotiq.com/api/auth-context")
+            .get()
+            .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .build();
+        
+        Response response = client.newCall(request).execute();
+        ```
+        { data-search-exclude }
+
+    === "Java + Unirest"
+      
+        ```
+        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/auth-context")
+            .header("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .asString();
+        ```
+        { data-search-exclude }
+
+    === "Node + Request"
+      
+        ```
+        const request = require('request');
+
+        const options = {
+            method: 'DELETE',
+            url: 'https://api.flotiq.com/api/auth-context',
+            headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
+        };
+        
+        request(options, function (error, response, body) {
+            if (error) throw new Error(error);
+            
+            console.log(body);
+        });
+        ```
+        { data-search-exclude }
+
+    === "PHP + CURL"
+    
+        ```
+        <?php
+
+        $curl = curl_init();
+        
+        curl_setopt_array($curl, [
+            CURLOPT_URL => "https://api.flotiq.com/api/auth-context",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_HTTPHEADER => [
+                    "X-AUTH-TOKEN: YOUR_API_KEY",
+                ],
+        ]);
+        
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        
+        curl_close($curl);
+        
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
+        { data-search-exclude }
+
+
 ## Frequently Asked Questions
 
 ### What can I do if my API key got compromised?

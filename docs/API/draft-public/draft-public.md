@@ -73,7 +73,7 @@ to do so we need to call the endpoint: `/api/v1/content/:content-type-definition
 with `:content-type-definition-name` and `:content-type-object-id` parameters matching your content.
 !!! Request
     ```
-    curl -X GET 'https://api.flotiq.com/api/v1/posts/post-1/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X POST 'https://api.flotiq.com/api/v1/posts/post-1/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 
@@ -103,7 +103,7 @@ endpoint with `:content-type-definition-name` and `:content-type-object-id` para
 
 !!! Request
     ```
-    curl -X GET 'https://api.flotiq.com/api/v1/posts/post-1/unpublish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X POST 'https://api.flotiq.com/api/v1/posts/post-1/unpublish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 
@@ -133,7 +133,7 @@ endpoint with `:content-type-definition-name` and `:content-type-object-id` para
 
 !!! Request
     ```
-    curl -X GET 'https://api.flotiq.com/api/v1/posts/post-1/archive' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X POST 'https://api.flotiq.com/api/v1/posts/post-1/archive' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 
@@ -161,7 +161,7 @@ In order to use cascade action use `?hydrate=<value>` query parameter, exactly h
 
 !!! Request
     ```sh
-    curl -X GET 'https://api.flotiq.com/api/v1/posts/post-1/publish?hydrate=1'
+    curl -X POST 'https://api.flotiq.com/api/v1/posts/post-1/publish?hydrate=1'
         --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }

@@ -7,8 +7,8 @@ title: DeepL Translation plugin | Flotiq documentation
 description: This plugin provides automated translation using the DeepL API. It requires that the Multilingual plugin.
 
 !!! Note
-This is the legacy version of the DeepL plugin documentation.
-Please refer to the updated [Multilingual documentation](Multilingual.md).
+    This is the legacy version of the DeepL plugin documentation.
+    Please refer to the updated [Multilingual documentation](Multilingual.md).
 
 This plugin provides automated translation using the DeepL API. It requires that the [Multilingual plugin](./Multilingual.md) is installed and configured. It supports multiple languages and enables users to define and manage their own language sets.
 

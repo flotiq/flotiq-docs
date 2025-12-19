@@ -32,6 +32,10 @@ After the modal is opened, fill in the details and click `Save changes` to compl
 
 * Default language - Select default language from available languages
 
+* DeepL API key - Paste your DeepL API key here to enable automatic translations. You can get your API key by creating an account on [DeepL](https://www.deepl.com/pro#developer) (optional).
+
+* DeepL Configuration - Select content types and fields for which automatic translation will be applied.
+
 ## Usage
 
 ### Managing Content Objects

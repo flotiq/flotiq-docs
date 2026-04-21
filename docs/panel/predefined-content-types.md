@@ -155,16 +155,19 @@ Documentation examples:
 
 ## Event
 
-Type for storing simple events. It contains name, slug, address, date, description and gallery for the event:
+Type for storing simple events. It contains name, slug, image, address, date, price, description, excerpt and gallery for the event:
 
-| Field name  | Field type | Additional attributes             | Comments                                              |
-|-------------|------------|-----------------------------------|-------------------------------------------------------|
-| name        | Text       | Required, Part of object title    | Name of your event                                    |
-| slug        | Text       | Required, Unique                  | URL of the event                                      |
-| address     | Textarea   | Required                          | Address of the event                                  |
-| date        | Text       | Required                          | Date of the event, you can use any format of the date |
-| description | Rich Text  | -                                 | Description of the event, with HTML content           |
-| gallery     | Relation   | Restrict to type: Media, Multiple | Gallery for the event                                 |
+| Field name  | Field type | Additional attributes                        | Comments                          |
+|-------------|------------|----------------------------------------------|-----------------------------------|
+| name        | Text       | Required, Part of object title               | Name of your event                |
+| slug        | Text       | Required, Unique                             | URL of the event                  |
+| image       | Relation   | Restrict to type: Media                      | Featured image of the event       |
+| address     | Textarea   | Required                                     | Address of the event              |
+| date        | DateTime   | Required, Show time                          | Date and time of the event (ISO 8601 format) |
+| price       | Textarea   | -                                            | Ticket price                      |
+| description | Rich Text  | -                                            | Description of the event, with HTML content |
+| excerpt     | Textarea   | -                                            | Short description excerpt         |
+| gallery     | Relation   | Restrict to type: Media, Multiple            | Gallery for the event             |
 
 ![](./images/PredefinedCTDEvent.png){: .center .width75 .border}
 
@@ -184,6 +187,11 @@ Full schema for the Event type:
                 {
                     "type": "object",
                     "properties": {
+                        "date": {
+                            "type": "string",
+                            "pattern": "^$|^([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))T?(([0-1]?[0-9]|2[0-3]):[0-5][0-9])?(:[0-5][0-9])?(\\.[0-9]{3})?(Z|([\\+-]\\d{2}(:\\d{2})?))?$",
+                            "minLength": 1
+                        },
                         "name": {
                             "type": "string",
                             "minLength": 1
@@ -192,15 +200,21 @@ Full schema for the Event type:
                             "type": "string",
                             "minLength": 1
                         },
+                        "image": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        },
+                        "price": {
+                            "type": "string"
+                        },
                         "address": {
                             "type": "string",
                             "minLength": 1
                         },
-                        "date": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "description": {
+                        "excerpt": {
                             "type": "string"
                         },
                         "gallery": {
@@ -209,6 +223,9 @@ Full schema for the Event type:
                                 "$ref": "#/components/schemas/DataSource"
                             },
                             "minItems": 0
+                        },
+                        "description": {
+                            "type": "string"
                         }
                     }
                 }
@@ -223,48 +240,79 @@ Full schema for the Event type:
         },
         "metaDefinition": {
             "propertiesConfig": {
+                "date": {
+                    "label": "Date",
+                    "inputType": "dateTime",
+                    "unique": false,
+                    "helpText": "",
+                    "showTime": true
+                },
                 "name": {
                     "label": "Name",
                     "inputType": "text",
                     "unique": false,
+                    "helpText": "",
                     "isTitlePart": true
                 },
                 "slug": {
                     "label": "Slug",
                     "inputType": "text",
-                    "unique": true
+                    "unique": true,
+                    "helpText": ""
+                },
+                "image": {
+                    "label": "Event featured image",
+                    "inputType": "datasource",
+                    "unique": false,
+                    "helpText": "",
+                    "validation": {
+                        "relationContenttype": "_media"
+                    }
+                },
+                "price": {
+                    "label": "Ticket price",
+                    "inputType": "textarea",
+                    "unique": false,
+                    "helpText": ""
                 },
                 "address": {
                     "label": "Address",
                     "inputType": "textarea",
-                    "unique": false
+                    "unique": false,
+                    "helpText": ""
                 },
-                "date": {
-                    "label": "Date",
-                    "inputType": "text",
-                    "unique": false
-                },
-                "description": {
-                    "label": "Description",
-                    "inputType": "richtext",
-                    "unique": false
+                "excerpt": {
+                    "label": "Description excerpt",
+                    "inputType": "textarea",
+                    "unique": false,
+                    "helpText": ""
                 },
                 "gallery": {
                     "label": "Gallery",
                     "inputType": "datasource",
                     "unique": false,
+                    "helpText": "",
                     "validation": {
-                        "relationContenttype": "_media",
-                        "relationMultiple": true
+                        "relationMultiple": true,
+                        "relationContenttype": "_media"
                     }
+                },
+                "description": {
+                    "label": "Description",
+                    "inputType": "richtext",
+                    "unique": false,
+                    "helpText": ""
                 }
             },
             "order": [
                 "name",
                 "slug",
+                "image",
                 "address",
                 "date",
+                "price",
                 "description",
+                "excerpt",
                 "gallery"
             ]
         }

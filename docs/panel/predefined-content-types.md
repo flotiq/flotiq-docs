@@ -17,15 +17,15 @@ If you already have at least one CTD, you can use the dropdown menu on the top r
 
 ## Blog Post
 
-Type for storing simple blog posts. It contains properties storing title, slug, content and images for the post:
+Type for storing simple blog posts. It contains properties storing title, slug, excerpt, content and images for the post:
 
-| Field name  | Field type | Additional attributes          | Comments                           |
-|-------------|------------|--------------------------------|------------------------------------|
-| title       | Text       | Required, Part of object title | Title of your post                 |
-| slug        | Text       | Required, Unique               | URL of the post                    |
-| content     | Rich Text  | Required                       | The post itself, with HTML content |
-| thumbnail   | Relation   | Restrict to type: Media        | Thumbnail image                    |
-| headerImage | Relation   | Restrict to type: Media        | Main image of the post             |
+| Field name  | Field type | Additional attributes          | Comments                                              |
+|-------------|------------|--------------------------------|-------------------------------------------------------|
+| title       | Text       | Required, Part of object title | Title of your post                                    |
+| slug        | Text       | Required, Unique               | URL of the post (alphanumeric characters, `-` and `_` only) |
+| excerpt     | Textarea   | Required                       | Short description of the post                         |
+| content     | Block       | Required                       | The post itself, in block editor format               |
+| headerImage | Relation   | Restrict to type: Media        | Main image of the post                                |
 
 ![](images/AddContentTypeDefinitions.png){: .border}
 
@@ -47,6 +47,7 @@ Full schema for the Blog Post type:
                     "properties": {
                         "slug": {
                             "type": "string",
+                            "pattern": "^[a-zA-Z0-9-_]*$",
                             "minLength": 1
                         },
                         "title": {
@@ -54,15 +55,44 @@ Full schema for the Blog Post type:
                             "minLength": 1
                         },
                         "content": {
+                            "type": "object",
+                            "minLength": 1,
+                            "properties": {
+                                "time": {
+                                    "type": "number"
+                                },
+                                "blocks": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "data": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "text": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "additionalProperties": true
+                                            },
+                                            "type": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                },
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "additionalProperties": false
+                        },
+                        "excerpt": {
                             "type": "string",
                             "minLength": 1
-                        },
-                        "thumbnail": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/components/schemas/DataSource"
-                            },
-                            "minItems": 0
                         },
                         "headerImage": {
                             "type": "array",
@@ -77,6 +107,7 @@ Full schema for the Blog Post type:
             "required": [
                 "title",
                 "slug",
+                "excerpt",
                 "content"
             ],
             "additionalProperties": false
@@ -85,15 +116,15 @@ Full schema for the Blog Post type:
             "order": [
                 "title",
                 "slug",
+                "excerpt",
                 "content",
-                "thumbnail",
                 "headerImage"
             ],
             "propertiesConfig": {
                 "slug": {
                     "label": "Slug",
                     "unique": true,
-                    "helpText": "",
+                    "helpText": "Slug can only have alphanumerical characters, - and _",
                     "inputType": "text"
                 },
                 "title": {
@@ -107,17 +138,13 @@ Full schema for the Blog Post type:
                     "label": "Content",
                     "unique": false,
                     "helpText": "",
-                    "inputType": "richtext"
+                    "inputType": "block"
                 },
-                "thumbnail": {
-                    "label": "Thumbnail",
+                "excerpt": {
+                    "label": "Excerpt",
                     "unique": false,
                     "helpText": "",
-                    "inputType": "datasource",
-                    "validation": {
-                        "relationMultiple": false,
-                        "relationContenttype": "_media"
-                    }
+                    "inputType": "textarea"
                 },
                 "headerImage": {
                     "label": "Header image",
@@ -155,16 +182,19 @@ Documentation examples:
 
 ## Event
 
-Type for storing simple events. It contains name, slug, address, date, description and gallery for the event:
+Type for storing simple events. It contains name, slug, image, address, date, price, description, excerpt and gallery for the event:
 
-| Field name  | Field type | Additional attributes             | Comments                                              |
-|-------------|------------|-----------------------------------|-------------------------------------------------------|
-| name        | Text       | Required, Part of object title    | Name of your event                                    |
-| slug        | Text       | Required, Unique                  | URL of the event                                      |
-| address     | Textarea   | Required                          | Address of the event                                  |
-| date        | Text       | Required                          | Date of the event, you can use any format of the date |
-| description | Rich Text  | -                                 | Description of the event, with HTML content           |
-| gallery     | Relation   | Restrict to type: Media, Multiple | Gallery for the event                                 |
+| Field name  | Field type | Additional attributes                        | Comments                          |
+|-------------|------------|----------------------------------------------|-----------------------------------|
+| name        | Text       | Required, Part of object title               | Name of your event                |
+| slug        | Text       | Required, Unique                             | URL of the event                  |
+| image       | Relation   | Restrict to type: Media                      | Featured image of the event       |
+| address     | Textarea   | Required                                     | Address of the event              |
+| date        | DateTime   | Required, Show time                          | Date and time of the event (ISO 8601 format) |
+| price       | Textarea   | -                                            | Ticket price                      |
+| description | Rich Text  | -                                            | Description of the event, with HTML content |
+| excerpt     | Textarea   | -                                            | Short description excerpt         |
+| gallery     | Relation   | Restrict to type: Media, Multiple            | Gallery for the event             |
 
 ![](./images/PredefinedCTDEvent.png){: .center .width75 .border}
 
@@ -184,6 +214,11 @@ Full schema for the Event type:
                 {
                     "type": "object",
                     "properties": {
+                        "date": {
+                            "type": "string",
+                            "pattern": "^$|^([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))T?(([0-1]?[0-9]|2[0-3]):[0-5][0-9])?(:[0-5][0-9])?(\\.[0-9]{3})?(Z|([\\+-]\\d{2}(:\\d{2})?))?$",
+                            "minLength": 1
+                        },
                         "name": {
                             "type": "string",
                             "minLength": 1
@@ -192,15 +227,21 @@ Full schema for the Event type:
                             "type": "string",
                             "minLength": 1
                         },
+                        "image": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        },
+                        "price": {
+                            "type": "string"
+                        },
                         "address": {
                             "type": "string",
                             "minLength": 1
                         },
-                        "date": {
-                            "type": "string",
-                            "minLength": 1
-                        },
-                        "description": {
+                        "excerpt": {
                             "type": "string"
                         },
                         "gallery": {
@@ -209,6 +250,9 @@ Full schema for the Event type:
                                 "$ref": "#/components/schemas/DataSource"
                             },
                             "minItems": 0
+                        },
+                        "description": {
+                            "type": "string"
                         }
                     }
                 }
@@ -223,48 +267,79 @@ Full schema for the Event type:
         },
         "metaDefinition": {
             "propertiesConfig": {
+                "date": {
+                    "label": "Date",
+                    "inputType": "dateTime",
+                    "unique": false,
+                    "helpText": "",
+                    "showTime": true
+                },
                 "name": {
                     "label": "Name",
                     "inputType": "text",
                     "unique": false,
+                    "helpText": "",
                     "isTitlePart": true
                 },
                 "slug": {
                     "label": "Slug",
                     "inputType": "text",
-                    "unique": true
+                    "unique": true,
+                    "helpText": ""
+                },
+                "image": {
+                    "label": "Event featured image",
+                    "inputType": "datasource",
+                    "unique": false,
+                    "helpText": "",
+                    "validation": {
+                        "relationContenttype": "_media"
+                    }
+                },
+                "price": {
+                    "label": "Ticket price",
+                    "inputType": "textarea",
+                    "unique": false,
+                    "helpText": ""
                 },
                 "address": {
                     "label": "Address",
                     "inputType": "textarea",
-                    "unique": false
+                    "unique": false,
+                    "helpText": ""
                 },
-                "date": {
-                    "label": "Date",
-                    "inputType": "text",
-                    "unique": false
-                },
-                "description": {
-                    "label": "Description",
-                    "inputType": "richtext",
-                    "unique": false
+                "excerpt": {
+                    "label": "Description excerpt",
+                    "inputType": "textarea",
+                    "unique": false,
+                    "helpText": ""
                 },
                 "gallery": {
                     "label": "Gallery",
                     "inputType": "datasource",
                     "unique": false,
+                    "helpText": "",
                     "validation": {
-                        "relationContenttype": "_media",
-                        "relationMultiple": true
+                        "relationMultiple": true,
+                        "relationContenttype": "_media"
                     }
+                },
+                "description": {
+                    "label": "Description",
+                    "inputType": "richtext",
+                    "unique": false,
+                    "helpText": ""
                 }
             },
             "order": [
                 "name",
                 "slug",
+                "image",
                 "address",
                 "date",
+                "price",
                 "description",
+                "excerpt",
                 "gallery"
             ]
         }
@@ -452,18 +527,19 @@ Documentation examples:
 
 ## Project
 
-Type for storing simple project portfolio entries. It contains properties storing name, slug, description and images for the project:
+Type for storing simple project portfolio entries. It contains properties storing name, slug, description, header image, gallery and gallery details for the project:
 
-| Field name  | Field type | Additional attributes                  | Comments                                          |
-|-------------|------------|----------------------------------------|---------------------------------------------------|
-| name        | Text       | Required, Unique, Part of object title | Name of your project                              |
-| slug        | Text       | Required, Unique                       | URL of the project                                |
-| description | Rich Text  | -                                      | The description of the project, with HTML content |
-| gallery     | Relation   | Restrict to type: Media, Multiple      | Gallery for the project                           |
+| Field name          | Field type | Additional attributes                  | Comments                                          |
+|---------------------|------------|----------------------------------------|---------------------------------------------------|
+| name                | Text       | Required, Unique, Part of object title | Name of your project                              |
+| slug                | Text       | Required, Unique                       | URL of the project (alphanumeric characters, `-` and `_` only) |
+| description         | Rich Text  | -                                      | The description of the project, with HTML content |
+| headerImage         | Relation   | Restrict to type: Media                | Header image of the project                       |
+| gallery_name        | Text       | -                                      | Name of the gallery                               |
+| gallery_description | Rich Text  | -                                      | Description of the gallery, with HTML content     |
+| gallery             | Relation   | Restrict to type: Media, Multiple      | Gallery for the project                           |
 
 ![](./images/PredefinedCTDProject.png){: .center .width75 .border}
-
-Gatsby starter for projects:
 
 Full schema for the Project type:
 
@@ -487,10 +563,8 @@ Full schema for the Project type:
                         },
                         "slug": {
                             "type": "string",
+                            "pattern": "^[a-zA-Z0-9-_]*$",
                             "minLength": 1
-                        },
-                        "description": {
-                            "type": "string"
                         },
                         "gallery": {
                             "type": "array",
@@ -498,6 +572,22 @@ Full schema for the Project type:
                                 "$ref": "#/components/schemas/DataSource"
                             },
                             "minItems": 0
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "headerImage": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DataSource"
+                            },
+                            "minItems": 0
+                        },
+                        "gallery_name": {
+                            "type": "string"
+                        },
+                        "gallery_description": {
+                            "type": "string"
                         }
                     }
                 }
@@ -509,39 +599,67 @@ Full schema for the Project type:
             "additionalProperties": false
         },
         "metaDefinition": {
+            "order": [
+                "name",
+                "slug",
+                "description",
+                "headerImage",
+                "gallery_name",
+                "gallery_description",
+                "gallery"
+            ],
             "propertiesConfig": {
                 "name": {
                     "label": "Name",
                     "inputType": "text",
                     "unique": true,
+                    "helpText": "",
                     "isTitlePart": true
                 },
                 "slug": {
                     "label": "Slug",
                     "inputType": "text",
-                    "unique": true
-                },
-                "description": {
-                    "label": "Description",
-                    "inputType": "richtext",
-                    "unique": false
+                    "unique": true,
+                    "helpText": ""
                 },
                 "gallery": {
                     "label": "Gallery",
                     "inputType": "datasource",
                     "unique": false,
+                    "helpText": "",
                     "validation": {
-                        "relationContenttype": "_media",
-                        "relationMultiple": true
+                        "relationMultiple": true,
+                        "relationContenttype": "_media"
                     }
+                },
+                "description": {
+                    "label": "Description",
+                    "inputType": "richtext",
+                    "unique": false,
+                    "helpText": ""
+                },
+                "headerImage": {
+                    "label": "Header image",
+                    "inputType": "datasource",
+                    "unique": false,
+                    "helpText": "",
+                    "validation": {
+                        "relationContenttype": "_media"
+                    }
+                },
+                "gallery_name": {
+                    "label": "Gallery name",
+                    "inputType": "text",
+                    "unique": false,
+                    "helpText": ""
+                },
+                "gallery_description": {
+                    "label": "Gallery description",
+                    "inputType": "richtext",
+                    "unique": false,
+                    "helpText": ""
                 }
-            },
-            "order": [
-                "name",
-                "slug",
-                "description",
-                "gallery"
-            ]
+            }
         }
     }
     ```

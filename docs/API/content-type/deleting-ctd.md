@@ -181,7 +181,7 @@ You can only delete Content Types that do not have any Content Objects or are no
         ```
         {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
         }
         ```
         { data-search-exclude }
@@ -193,7 +193,7 @@ You can only delete Content Types that do not have any Content Objects or are no
         ```
         {
             "code": 404,
-            "massage": "Not found"
+            "message": "Not found"
         }
         ```
         { data-search-exclude }

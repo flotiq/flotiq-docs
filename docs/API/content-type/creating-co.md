@@ -245,7 +245,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         ```
         {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
         }
         ```
         { data-search-exclude }
@@ -257,7 +257,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         ```
         {
             "code": 404,
-            "massage": "Not found"
+            "message": "Not found"
         }
         ```
         { data-search-exclude }
@@ -269,7 +269,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         ```
         {
             "code": 413,
-            "massage": "Content Object size limit exceeded by an object with ID: 185. Requested size 1.01 MB, limit: 1 MB)"
+            "message": "Content Object size limit exceeded by an object with ID: 185. Requested size 1.01 MB, limit: 1 MB)"
         }
         ```
         { data-search-exclude }

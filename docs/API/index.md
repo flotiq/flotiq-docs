@@ -147,7 +147,7 @@ Or an example queries with `X-AUTH-TOKEN` header:
         const request = require('request');
 
         const options = {
-            method: 'DELETE',
+            method: 'GET',
             url: 'https://api.flotiq.com/api/v1/internal/contenttype/blogposts',
             headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
         };
@@ -174,7 +174,7 @@ Or an example queries with `X-AUTH-TOKEN` header:
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                     "X-AUTH-TOKEN: YOUR_API_KEY",
                 ],

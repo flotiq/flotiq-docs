@@ -115,7 +115,7 @@ curl -X GET 'https://api.flotiq.com/api/graphql/schema' --header 'X-AUTH-TOKEN: 
         ```
         {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
         }
         ```
         { data-search-exclude }

@@ -337,7 +337,7 @@ Possible request parameters:
         ```
         {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
         }
         ```
         { data-search-exclude }
@@ -349,7 +349,7 @@ Possible request parameters:
         ```
         {
             "code": 404,
-            "massage": "Not found"
+            "message": "Not found"
         }
         ```
         { data-search-exclude }

@@ -652,7 +652,7 @@ as not all tools can handle the whole Open API Schema format.
         "examples": [
           {
             "code": 404,
-            "massage": "Not found"
+            "message": "Not found"
           }
         ]
       },
@@ -669,7 +669,7 @@ as not all tools can handle the whole Open API Schema format.
         "examples": [
           {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
           }
         ]
       },
@@ -689,7 +689,7 @@ as not all tools can handle the whole Open API Schema format.
         "examples": [
           {
             "code": 403,
-            "massage": "Access denied or quota limit exceeded"
+            "message": "Access denied or quota limit exceeded"
           }
         ]
       },
@@ -5428,7 +5428,7 @@ as not all tools can handle the whole Open API Schema format.
             "examples": [
               {
                 "code": 404,
-                "massage": "Not found"
+                "message": "Not found"
               }
             ]
           },
@@ -5445,7 +5445,7 @@ as not all tools can handle the whole Open API Schema format.
             "examples": [
               {
                 "code": 401,
-                "massage": "Unauthorized"
+                "message": "Unauthorized"
               }
             ]
           },
@@ -5465,7 +5465,7 @@ as not all tools can handle the whole Open API Schema format.
             "examples": [
               {
                 "code": 403,
-                "massage": "Access denied or quota limit exceeded"
+                "message": "Access denied or quota limit exceeded"
               }
             ]
           },
@@ -9468,7 +9468,7 @@ as not all tools can handle the whole Open API Schema format.
             },
             "example": {
               "code": 404,
-              "massage": "Not found"
+              "message": "Not found"
             }
           },
           "401Response": {
@@ -9483,7 +9483,7 @@ as not all tools can handle the whole Open API Schema format.
             },
             "example": {
               "code": 401,
-              "massage": "Unauthorized"
+              "message": "Unauthorized"
             }
           },
           "403Response": {
@@ -9501,7 +9501,7 @@ as not all tools can handle the whole Open API Schema format.
             },
             "example": {
               "code": 403,
-              "massage": "Access denied or quota limit exceeded"
+              "message": "Access denied or quota limit exceeded"
             }
           },
           "blogpostsWithoutInternal": {
@@ -12534,7 +12534,7 @@ as not all tools can handle the whole Open API Schema format.
             },
             "example": {
               "code": 404,
-              "massage": "Not found"
+              "message": "Not found"
             }
           },
           "401Response": {
@@ -12549,7 +12549,7 @@ as not all tools can handle the whole Open API Schema format.
             },
             "example": {
               "code": 401,
-              "massage": "Unauthorized"
+              "message": "Unauthorized"
             }
           },
           "403Response": {
@@ -12567,7 +12567,7 @@ as not all tools can handle the whole Open API Schema format.
             },
             "example": {
               "code": 403,
-              "massage": "Access denied or quota limit exceeded"
+              "message": "Access denied or quota limit exceeded"
             }
           },
           "blogpostsWithoutInternal": {
@@ -13843,7 +13843,7 @@ as not all tools can handle the whole Open API Schema format.
           },
           "example": {
             "code": 404,
-            "massage": "Not found"
+            "message": "Not found"
           }
         },
         "401Response": {
@@ -13858,7 +13858,7 @@ as not all tools can handle the whole Open API Schema format.
           },
           "example": {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
           }
         },
         "403Response": {
@@ -13876,7 +13876,7 @@ as not all tools can handle the whole Open API Schema format.
           },
           "example": {
             "code": 403,
-            "massage": "Access denied or quota limit exceeded"
+            "message": "Access denied or quota limit exceeded"
           }
         },
         "blogpostsWithoutInternal": {
@@ -16476,7 +16476,7 @@ as not all tools can handle the whole Open API Schema format.
           },
           "example": {
             "code": 404,
-            "massage": "Not found"
+            "message": "Not found"
           }
         },
         "401Response": {
@@ -16491,7 +16491,7 @@ as not all tools can handle the whole Open API Schema format.
           },
           "example": {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
           }
         },
         "403Response": {
@@ -16509,7 +16509,7 @@ as not all tools can handle the whole Open API Schema format.
           },
           "example": {
             "code": 403,
-            "massage": "Access denied or quota limit exceeded"
+            "message": "Access denied or quota limit exceeded"
           }
         },
         "blogpostsWithoutInternal": {
@@ -17730,7 +17730,7 @@ You can use the same request parameters for [scoped API](/docs/API/#user-defined
             },
             "example": {
               "code": 404,
-              "massage": "Not found"
+              "message": "Not found"
             }
           },
           "401Response": {
@@ -17745,7 +17745,7 @@ You can use the same request parameters for [scoped API](/docs/API/#user-defined
             },
             "example": {
               "code": 401,
-              "massage": "Unauthorized"
+              "message": "Unauthorized"
             }
           },
           "403Response": {
@@ -17763,7 +17763,7 @@ You can use the same request parameters for [scoped API](/docs/API/#user-defined
             },
             "example": {
               "code": 403,
-              "massage": "Access denied or quota limit exceeded"
+              "message": "Access denied or quota limit exceeded"
             }
           },
           "blogpostsWithoutInternal": {

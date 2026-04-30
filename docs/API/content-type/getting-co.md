@@ -108,7 +108,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
         const request = require('request');
 
         const options = {
-            method: 'DELETE',
+            method: 'GET',
             url: 'https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712',
             headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
         };
@@ -135,7 +135,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                     "X-AUTH-TOKEN: YOUR_API_KEY",
                 ],
@@ -302,7 +302,7 @@ The example below shows an example response for the product with a category, pro
         const request = require('request');
 
         const options = {
-            method: 'DELETE',
+            method: 'GET',
             url: 'https://api.flotiq.com/api/v1/content/product/product-1',
             headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
         };
@@ -329,7 +329,7 @@ The example below shows an example response for the product with a category, pro
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                     "X-AUTH-TOKEN: YOUR_API_KEY",
                 ],

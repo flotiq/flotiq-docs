@@ -27,6 +27,10 @@ endpoint or through the Content Modeler tool provided with the platform.
 Updating <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">
 Content Type</abbr> is simply a ``PUT`` call with a payload similar to:
 
+!!! note
+    Unlike [Content Objects](/docs/API/content-type/updating-co/), Content Type Definitions do not support partial updates (`PATCH`).
+    Every update requires a full `PUT` request with the complete schema definition.
+
 ```
 {
     "name": "blogposts",

@@ -260,6 +260,16 @@ curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-delete" --he
 ```
 { data-search-exclude }
 
+## Restoring deleted objects
+
+Deleted content objects are soft-deleted and retained for **60 days** before being permanently removed.
+During this period, it is possible to restore them by contacting Flotiq support.
+
+To request a restore, send an email to [support@flotiq.com](mailto:support@flotiq.com) with the following information:
+
+* **Content Type name** – the name of the Content Type Definition the objects belong to
+* **Object IDs** – the IDs of the objects you wish to restore (if you want to restore all deleted objects of a given type, provide the Content Type name and indicate that a full restore is needed)
+
 [Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 
 [^1]: Limit can be changed in the [<< plan_names.paid_3 >> plan](https://flotiq.com/pricing){:target="_blank"}

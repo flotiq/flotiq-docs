@@ -71,6 +71,7 @@ Flotiq API provides a set of endpoints to manage the status of your content.
 To make object that satisfies all requirements, available for all users, we have to make it public,
 to do so we need to call the endpoint: `/api/v1/content/:content-type-definition-name/:content-type-object-id/publish` 
 with `:content-type-definition-name` and `:content-type-object-id` parameters matching your content.
+
 !!! Request
     ```
     curl -X POST 'https://api.flotiq.com/api/v1/posts/post-1/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
@@ -88,7 +89,7 @@ endpoint with a body consisting of an array containing object IDs as strings.
 !!! Example
     ```sh
     curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-publish" \
-        --header "Authorization: Bearer YOUR_API_KEY" \
+        --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "Content-Type: application/json" \
         --data-raw '["post-1", "post-2", "post-3"]'
     ```
@@ -118,7 +119,7 @@ endpoint with a body consisting of an array containing object IDs as strings.
 !!! Example
     ```sh
     curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-unpublish" \
-        --header "Authorization: Bearer YOUR_API_KEY" \
+        --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "Content-Type: application/json" \
         --data-raw '["post-1", "post-2", "post-3"]'
     ```
@@ -148,7 +149,7 @@ endpoint with a body consisting of an array containing object IDs as strings.
 !!! Example
     ```sh
     curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-archive" \
-        --header "Authorization: Bearer YOUR_API_KEY" \
+        --header "X-AUTH-TOKEN: YOUR_API_KEY" \
         --header "Content-Type: application/json" \
         --data-raw '["post-1", "post-2", "post-3"]'
     ```

@@ -141,7 +141,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                     "X-AUTH-TOKEN: YOUR_API_KEY",
                 ],

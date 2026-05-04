@@ -114,7 +114,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         const request = require('request');
 
         const options = {
-            method: 'DELETE',
+            method: 'GET',
             url: 'https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712',
             headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
         };

@@ -176,7 +176,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
         ```
         {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
         }
         ```
         { data-search-exclude }
@@ -188,7 +188,7 @@ Deleting is done by sending `DELETE` request to `https://api.flotiq.com/api/v1/c
         ```
         {
             "code": 404,
-            "massage": "Not found"
+            "message": "Not found"
         }
         ```
         { data-search-exclude }

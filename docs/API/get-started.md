@@ -189,7 +189,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         ```
         {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
         }
         ```
         { data-search-exclude }
@@ -201,7 +201,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         ```
         {
             "code": 404,
-            "massage": "Not found"
+            "message": "Not found"
         }
         ```
         { data-search-exclude }

@@ -185,7 +185,7 @@ containing the date after which the Content Objects were deleted; the date must 
         ```
         {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
         }
         ```
         { data-search-exclude }

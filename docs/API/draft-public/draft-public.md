@@ -66,6 +66,38 @@ Flotiq API provides a set of endpoints to manage the status of your content.
 - [`/api/v1/content/:content-type-definition-name/batch-unpublish`](#batch-unpublish-content)
 - [`/api/v1/content/:content-type-definition-name/:content-type-object-id/archive`](#content-archiving)
 - [`/api/v1/content/:content-type-definition-name/batch-archive`](#batch-archive-content)
+  
+All endpoints listed above return the same set of possible responses:
+
+!!! Response
+
+    === "204 No Content"
+ 
+        Returned when the action was successfully applied. No response body is returned.
+ 
+    === "401 Unauthorized"
+ 
+        Returned when API key was missing or incorrect
+ 
+        ```
+        {
+            "code": 401,
+            "message": "Unauthorized"
+        }
+        ```
+        { data-search-exclude }
+ 
+    === "404 Not found"
+ 
+        Returned when the content object wasn't found
+ 
+        ```
+        {
+            "code": 404,
+            "message": "Not found"
+        }
+        ```
+        { data-search-exclude }
 
 ### Publishing content
 To make object that satisfies all requirements, available for all users, we have to make it public,

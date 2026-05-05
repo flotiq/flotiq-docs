@@ -90,6 +90,7 @@ Response:
 
     The `object_data` field contains a JSON-encoded string representation of the full Content Object.
     To access individual fields, you need to parse it first, e.g. `JSON.parse(item.object_data).title`.
+    You can also access fields by field name in the `item` object, without any parsing, as the information is duplicated.
 
 ## Limit the search to a specific Content Type
 

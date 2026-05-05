@@ -443,7 +443,7 @@ The first input in the form in the CMS panel will be `title` input, and the seco
         ```
         {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
         }
         ```
         { data-search-exclude }

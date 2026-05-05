@@ -426,7 +426,7 @@ When you change existing property, depending on the type of changes, Flotiq will
         ```
         {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
         }
         ```
         { data-search-exclude }
@@ -438,7 +438,7 @@ When you change existing property, depending on the type of changes, Flotiq will
         ```
         {
             "code": 404,
-            "massage": "Not found"
+            "message": "Not found"
         }
         ```
         { data-search-exclude }

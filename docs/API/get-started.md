@@ -114,7 +114,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         const request = require('request');
 
         const options = {
-            method: 'DELETE',
+            method: 'GET',
             url: 'https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712',
             headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
         };
@@ -141,7 +141,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                     "X-AUTH-TOKEN: YOUR_API_KEY",
                 ],
@@ -189,7 +189,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         ```
         {
             "code": 401,
-            "massage": "Unauthorized"
+            "message": "Unauthorized"
         }
         ```
         { data-search-exclude }
@@ -201,7 +201,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         ```
         {
             "code": 404,
-            "massage": "Not found"
+            "message": "Not found"
         }
         ```
         { data-search-exclude }

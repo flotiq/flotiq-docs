@@ -374,7 +374,7 @@ Blocks:
         {
             "id": "i5RZbGlOWy",
             "data": {
-                "text": "<b>Exaple</b> <i>paragraph </i>with formatting"
+                "text": "<b>Example</b> <i>paragraph </i>with formatting"
             },
             "type": "paragraph",
             "tunes": {
@@ -464,7 +464,7 @@ Blocks:
                                 "content": "Example <i>list</i>"
                             }
                         ],
-                        "content": "Exaple list"
+                        "content": "Example list"
                     }
                 ],
                 "style": "ordered"
@@ -547,7 +547,7 @@ Blocks:
         | --------- | -------- | --------------------------------------------------------- |
         | text      | true     | Text of the quote                                         |
         | caption   | true     | Caption of the quote                                      |
-        | text      | true     | Alignment of the quote. Possible values: `left`, `center` |
+        | alignment | true     | Alignment of the quote. Possible values: `left`, `center` |
 
 
     === "Example"
@@ -581,7 +581,7 @@ Blocks:
         {
             "id": "sVDwJq9ZCe",
             "data": {
-                "title": "Exaple warning name",
+                "title": "Example warning name",
                 "message": "Example warning message"
             },
             "type": "warning"
@@ -623,7 +623,7 @@ Blocks:
         {
             "id": "sVDwJq9ZCf",
             "data": {
-                "code": "npm run dev",
+                "code": "npm run dev"
             },
             "type": "code"
         }
@@ -716,7 +716,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
               {
                 "id": "i5RZbGlOWy",
                 "data": {
-                  "text": "<b>Exaple</b> <i>paragraph </i>with formatting"
+                  "text": "<b>Example</b> <i>paragraph </i>with formatting"
                 },
                 "type": "paragraph",
                 "tunes": {
@@ -736,7 +736,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
                           "content": "Example <i>list</i>"
                         }
                       ],
-                      "content": "Exaple list"
+                      "content": "Example list"
                     }
                   ],
                   "style": "ordered"
@@ -795,7 +795,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
               {
                 "id": "sVDwJq9ZCe",
                 "data": {
-                  "title": "Exaple warning name",
+                  "title": "Example warning name",
                   "message": "Example warning message"
                 },
                 "type": "warning"
@@ -808,7 +808,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
               {
                 "id": "sVDwJq9ZCf",
                 "data": {
-                  "code": "npm run dev",
+                  "code": "npm run dev"
                 },
                 "type": "code"
               },
@@ -882,7 +882,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
           {
             "id": "i5RZbGlOWy",
             "data": {
-              "text": "<b>Exaple</b> <i>paragraph </i>with formatting"
+              "text": "<b>Example</b> <i>paragraph </i>with formatting"
             },
             "type": "paragraph",
             "tunes": {
@@ -902,7 +902,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
                       "content": "Example <i>list</i>"
                     }
                   ],
-                  "content": "Exaple list"
+                  "content": "Example list"
                 }
               ],
               "style": "ordered"
@@ -961,7 +961,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
           {
             "id": "sVDwJq9ZCe",
             "data": {
-              "title": "Exaple warning name",
+              "title": "Example warning name",
               "message": "Example warning message"
             },
             "type": "warning"
@@ -974,7 +974,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
           {
             "id": "sVDwJq9ZCf",
             "data": {
-              "code": "npm run dev",
+              "code": "npm run dev"
             },
             "type": "code"
           },
@@ -1047,86 +1047,534 @@ Updating one blog post and adding one new:
 
 !!! Example
 
-    ```
-    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' --header 'accept: application/json' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' --header 'Content-Type: application/json' --data-binary '[{"id":"existing-id-1","title":"Updated object","postContent":"This will be the updated <b>content</b>"},{"id":"new-object-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
-    ```
-    { data-search-exclude }
+    === "CURL"
+ 
+        ```
+        curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' \
+        --header 'accept: application/json' \
+        --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
+        --header 'Content-Type: application/json' \
+        --data-binary '[{"id":"existing-id-1","title":"Updated object","postContent":"This will be the updated <b>content</b>"},{"id":"new-object-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+        ```
+        { data-search-exclude }
+ 
+    === "C# + Restasharp"
+ 
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true");
+        var request = new RestRequest(Method.POST);
+        request.AddHeader("accept", "application/json");
+        request.AddHeader("content-type", "application/json");
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_TOKEN");
+        request.AddParameter("application/json", "[{\"id\":\"existing-id-1\",\"title\":\"Updated object\",\"postContent\":\"This will be the updated <b>content</b>\"},{\"id\":\"new-object-1\",\"title\":\"New object 2\",\"postContent\":\"This will be the brand new <b>content</b>\"}]", ParameterType.RequestBody);
+        IRestResponse response = client.Execute(request);
+        ```
+        { data-search-exclude }
+ 
+    === "Go + Native"
+ 
+        ```
+        package main
+ 
+        import (
+            "fmt"
+            "strings"
+            "net/http"
+            "io/ioutil"
+        )
+ 
+        func main() {
+ 
+            url := "https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true"
+ 
+            payload := strings.NewReader("[{\"id\":\"existing-id-1\",\"title\":\"Updated object\",\"postContent\":\"This will be the updated <b>content</b>\"},{\"id\":\"new-object-1\",\"title\":\"New object 2\",\"postContent\":\"This will be the brand new <b>content</b>\"}]")
+ 
+            req, _ := http.NewRequest("POST", url, payload)
+ 
+            req.Header.Add("accept", "application/json")
+            req.Header.Add("content-type", "application/json")
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_TOKEN")
+ 
+            res, _ := http.DefaultClient.Do(req)
+ 
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+ 
+            fmt.Println(res)
+            fmt.Println(string(body))
+ 
+        }
+        ```
+        { data-search-exclude }
+ 
+    === "Java + Okhttp"
+ 
+        ```
+        OkHttpClient client = new OkHttpClient();
+ 
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, "[{\"id\":\"existing-id-1\",\"title\":\"Updated object\",\"postContent\":\"This will be the updated <b>content</b>\"},{\"id\":\"new-object-1\",\"title\":\"New object 2\",\"postContent\":\"This will be the brand new <b>content</b>\"}]");
+        Request request = new Request.Builder()
+        .url("https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true")
+        .post(body)
+        .addHeader("accept", "application/json")
+        .addHeader("content-type", "application/json")
+        .addHeader("X-AUTH-TOKEN", "YOUR_API_TOKEN")
+        .build();
+ 
+        Response response = client.newCall(request).execute();
+        ```
+        { data-search-exclude }
+ 
+    === "Java + Unirest"
+ 
+        ```
+        HttpResponse<String> response = Unirest.post("https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true")
+            .header("accept", "application/json")
+            .header("content-type", "application/json")
+            .header("X-AUTH-TOKEN", "YOUR_API_TOKEN")
+            .body("[{\"id\":\"existing-id-1\",\"title\":\"Updated object\",\"postContent\":\"This will be the updated <b>content</b>\"},{\"id\":\"new-object-1\",\"title\":\"New object 2\",\"postContent\":\"This will be the brand new <b>content</b>\"}]")
+            .asString();
+        ```
+        { data-search-exclude }
+ 
+    === "Node + Request"
+ 
+        ```
+        const request = require('request');
+ 
+        const options = {
+            method: 'POST',
+            url: 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true',
+            headers: {'accept': 'application/json', 'content-type': 'application/json', 'X-AUTH-TOKEN': 'YOUR_API_TOKEN'},
+            body: [
+                {id: 'existing-id-1', title: 'Updated object', postContent: 'This will be the updated <b>content</b>'},
+                {id: 'new-object-1', title: 'New object 2', postContent: 'This will be the brand new <b>content</b>'}
+            ],
+            json: true
+        };
+ 
+        request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+ 
+        console.log(body);
+        });
+        ```
+        { data-search-exclude }
+ 
+    === "PHP + CURL"
+ 
+        ```
+        <?php
+ 
+        $curl = curl_init();
+ 
+        curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "[{\"id\":\"existing-id-1\",\"title\":\"Updated object\",\"postContent\":\"This will be the updated <b>content</b>\"},{\"id\":\"new-object-1\",\"title\":\"New object 2\",\"postContent\":\"This will be the brand new <b>content</b>\"}]",
+        CURLOPT_HTTPHEADER => [
+                "accept: application/json",
+                "X-AUTH-TOKEN: YOUR_API_TOKEN",
+                "content-type: application/json"
+            ],
+        ]);
+ 
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+ 
+        curl_close($curl);
+ 
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
+        { data-search-exclude }
 
-    response (code: 200):
-    ```
-    {
-        "batch_total_count": 2,
-        "batch_success_count": 2,
-        "batch_error_count": 0,
-        "errors": []
-    }
-    ```
-    { data-search-exclude }
+!!! Response
+
+    === "200 OK"
+ 
+        ```
+        {
+            "batch_total_count": 2,
+            "batch_success_count": 2,
+            "batch_error_count": 0,
+            "errors": []
+        }
+        ```
+        { data-search-exclude }
 
 Trying updating one blog post and adding one new with wrong data:
 
 !!! Example
 
-    ```
-    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' --header 'accept: application/json' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' --header 'Content-Type: application/json' --data-binary '[{"id":"existing-id-1","title":"Updated object"},{"id":"new-object-2","title":"New object 3","postContent":"This will be the brand new <b>content</b>"}]'
-    ```
-    { data-search-exclude }
+    === "CURL"
+ 
+        ```
+        curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' \
+        --header 'accept: application/json' \
+        --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
+        --header 'Content-Type: application/json' \
+        --data-binary '[{"id":"existing-id-1","title":"Updated object"},{"id":"new-object-2","title":"New object 3","postContent":"This will be the brand new <b>content</b>"}]'
+        ```
+        { data-search-exclude }
+ 
+    === "C# + Restasharp"
+ 
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true");
+        var request = new RestRequest(Method.POST);
+        request.AddHeader("accept", "application/json");
+        request.AddHeader("content-type", "application/json");
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_TOKEN");
+        request.AddParameter("application/json", "[{\"id\":\"existing-id-1\",\"title\":\"Updated object\"},{\"id\":\"new-object-2\",\"title\":\"New object 3\",\"postContent\":\"This will be the brand new <b>content</b>\"}]", ParameterType.RequestBody);
+        IRestResponse response = client.Execute(request);
+        ```
+        { data-search-exclude }
+ 
+    === "Go + Native"
+ 
+        ```
+        package main
+ 
+        import (
+            "fmt"
+            "strings"
+            "net/http"
+            "io/ioutil"
+        )
+ 
+        func main() {
+ 
+            url := "https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true"
+ 
+            payload := strings.NewReader("[{\"id\":\"existing-id-1\",\"title\":\"Updated object\"},{\"id\":\"new-object-2\",\"title\":\"New object 3\",\"postContent\":\"This will be the brand new <b>content</b>\"}]")
+ 
+            req, _ := http.NewRequest("POST", url, payload)
+ 
+            req.Header.Add("accept", "application/json")
+            req.Header.Add("content-type", "application/json")
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_TOKEN")
+ 
+            res, _ := http.DefaultClient.Do(req)
+ 
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+ 
+            fmt.Println(res)
+            fmt.Println(string(body))
+ 
+        }
+        ```
+        { data-search-exclude }
+ 
+    === "Java + Okhttp"
+ 
+        ```
+        OkHttpClient client = new OkHttpClient();
+ 
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, "[{\"id\":\"existing-id-1\",\"title\":\"Updated object\"},{\"id\":\"new-object-2\",\"title\":\"New object 3\",\"postContent\":\"This will be the brand new <b>content</b>\"}]");
+        Request request = new Request.Builder()
+        .url("https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true")
+        .post(body)
+        .addHeader("accept", "application/json")
+        .addHeader("content-type", "application/json")
+        .addHeader("X-AUTH-TOKEN", "YOUR_API_TOKEN")
+        .build();
+ 
+        Response response = client.newCall(request).execute();
+        ```
+        { data-search-exclude }
+ 
+    === "Java + Unirest"
+ 
+        ```
+        HttpResponse<String> response = Unirest.post("https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true")
+            .header("accept", "application/json")
+            .header("content-type", "application/json")
+            .header("X-AUTH-TOKEN", "YOUR_API_TOKEN")
+            .body("[{\"id\":\"existing-id-1\",\"title\":\"Updated object\"},{\"id\":\"new-object-2\",\"title\":\"New object 3\",\"postContent\":\"This will be the brand new <b>content</b>\"}]")
+            .asString();
+        ```
+        { data-search-exclude }
+ 
+    === "Node + Request"
+ 
+        ```
+        const request = require('request');
+ 
+        const options = {
+            method: 'POST',
+            url: 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true',
+            headers: {'accept': 'application/json', 'content-type': 'application/json', 'X-AUTH-TOKEN': 'YOUR_API_TOKEN'},
+            body: [
+                {id: 'existing-id-1', title: 'Updated object'},
+                {id: 'new-object-2', title: 'New object 3', postContent: 'This will be the brand new <b>content</b>'}
+            ],
+            json: true
+        };
+ 
+        request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+ 
+        console.log(body);
+        });
+        ```
+        { data-search-exclude }
+ 
+    === "PHP + CURL"
+ 
+        ```
+        <?php
+ 
+        $curl = curl_init();
+ 
+        curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "[{\"id\":\"existing-id-1\",\"title\":\"Updated object\"},{\"id\":\"new-object-2\",\"title\":\"New object 3\",\"postContent\":\"This will be the brand new <b>content</b>\"}]",
+        CURLOPT_HTTPHEADER => [
+                "accept: application/json",
+                "X-AUTH-TOKEN: YOUR_API_TOKEN",
+                "content-type: application/json"
+            ],
+        ]);
+ 
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+ 
+        curl_close($curl);
+ 
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
+        { data-search-exclude }
 
-    response (code: 400):
-    ```
-    {
-        "batch_total_count": 2,
-        "batch_success_count": 1,
-        "batch_error_count": 1,
-        "errors": [
-          {
-            "data": {
-              "id": "existing-id-1",
-              "title": "Updated object"
-            },
-            "errors": {
-              "postContent": [
-                "The property postContent is required"
-              ]
-            }
-          }
-        ]
-    }
-    ```
-    { data-search-exclude }
+!!! Response
+
+    === "400 Bad Request"
+ 
+        ```
+        {
+            "batch_total_count": 2,
+            "batch_success_count": 1,
+            "batch_error_count": 1,
+            "errors": [
+              {
+                "data": {
+                  "id": "existing-id-1",
+                  "title": "Updated object"
+                },
+                "errors": {
+                  "postContent": [
+                    "The property postContent is required"
+                  ]
+                }
+              }
+            ]
+        }
+        ```
+        { data-search-exclude }
 
 Trying updating one blog post and adding one new with duplicated id:
 
 !!! Example
 
-    ```
-    curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' --header 'accept: application/json' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' --header 'Content-Type: application/json' --data-binary '[{"id":"example-id-1","title":"New object","content": "This will be the new <b>content</b>"},{"id":"example-id-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
-    ```
-    { data-search-exclude }
+    === "CURL"
+ 
+        ```
+        curl 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true' \
+        --header 'accept: application/json' \
+        --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
+        --header 'Content-Type: application/json' \
+        --data-binary '[{"id":"example-id-1","title":"New object","content": "This will be the new <b>content</b>"},{"id":"example-id-1","title":"New object 2","postContent":"This will be the brand new <b>content</b>"}]'
+        ```
+        { data-search-exclude }
+ 
+    === "C# + Restasharp"
+ 
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true");
+        var request = new RestRequest(Method.POST);
+        request.AddHeader("accept", "application/json");
+        request.AddHeader("content-type", "application/json");
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_TOKEN");
+        request.AddParameter("application/json", "[{\"id\":\"example-id-1\",\"title\":\"New object\",\"content\":\"This will be the new <b>content</b>\"},{\"id\":\"example-id-1\",\"title\":\"New object 2\",\"postContent\":\"This will be the brand new <b>content</b>\"}]", ParameterType.RequestBody);
+        IRestResponse response = client.Execute(request);
+        ```
+        { data-search-exclude }
+ 
+    === "Go + Native"
+ 
+        ```
+        package main
+ 
+        import (
+            "fmt"
+            "strings"
+            "net/http"
+            "io/ioutil"
+        )
+ 
+        func main() {
+ 
+            url := "https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true"
+ 
+            payload := strings.NewReader("[{\"id\":\"example-id-1\",\"title\":\"New object\",\"content\":\"This will be the new <b>content</b>\"},{\"id\":\"example-id-1\",\"title\":\"New object 2\",\"postContent\":\"This will be the brand new <b>content</b>\"}]")
+ 
+            req, _ := http.NewRequest("POST", url, payload)
+ 
+            req.Header.Add("accept", "application/json")
+            req.Header.Add("content-type", "application/json")
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_TOKEN")
+ 
+            res, _ := http.DefaultClient.Do(req)
+ 
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+ 
+            fmt.Println(res)
+            fmt.Println(string(body))
+ 
+        }
+        ```
+        { data-search-exclude }
+ 
+    === "Java + Okhttp"
+ 
+        ```
+        OkHttpClient client = new OkHttpClient();
+ 
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, "[{\"id\":\"example-id-1\",\"title\":\"New object\",\"content\":\"This will be the new <b>content</b>\"},{\"id\":\"example-id-1\",\"title\":\"New object 2\",\"postContent\":\"This will be the brand new <b>content</b>\"}]");
+        Request request = new Request.Builder()
+        .url("https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true")
+        .post(body)
+        .addHeader("accept", "application/json")
+        .addHeader("content-type", "application/json")
+        .addHeader("X-AUTH-TOKEN", "YOUR_API_TOKEN")
+        .build();
+ 
+        Response response = client.newCall(request).execute();
+        ```
+        { data-search-exclude }
+ 
+    === "Java + Unirest"
+ 
+        ```
+        HttpResponse<String> response = Unirest.post("https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true")
+            .header("accept", "application/json")
+            .header("content-type", "application/json")
+            .header("X-AUTH-TOKEN", "YOUR_API_TOKEN")
+            .body("[{\"id\":\"example-id-1\",\"title\":\"New object\",\"content\":\"This will be the new <b>content</b>\"},{\"id\":\"example-id-1\",\"title\":\"New object 2\",\"postContent\":\"This will be the brand new <b>content</b>\"}]")
+            .asString();
+        ```
+        { data-search-exclude }
+ 
+    === "Node + Request"
+ 
+        ```
+        const request = require('request');
+ 
+        const options = {
+            method: 'POST',
+            url: 'https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true',
+            headers: {'accept': 'application/json', 'content-type': 'application/json', 'X-AUTH-TOKEN': 'YOUR_API_TOKEN'},
+            body: [
+                {id: 'example-id-1', title: 'New object', content: 'This will be the new <b>content</b>'},
+                {id: 'example-id-1', title: 'New object 2', postContent: 'This will be the brand new <b>content</b>'}
+            ],
+            json: true
+        };
+ 
+        request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+ 
+        console.log(body);
+        });
+        ```
+        { data-search-exclude }
+ 
+    === "PHP + CURL"
+ 
+        ```
+        <?php
+ 
+        $curl = curl_init();
+ 
+        curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts/batch?updateExisting=true",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "[{\"id\":\"example-id-1\",\"title\":\"New object\",\"content\":\"This will be the new <b>content</b>\"},{\"id\":\"example-id-1\",\"title\":\"New object 2\",\"postContent\":\"This will be the brand new <b>content</b>\"}]",
+        CURLOPT_HTTPHEADER => [
+                "accept: application/json",
+                "X-AUTH-TOKEN: YOUR_API_TOKEN",
+                "content-type: application/json"
+            ],
+        ]);
+ 
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+ 
+        curl_close($curl);
+ 
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
+        { data-search-exclude }
 
-    response (code: 400):
-    ```
-    {
-        "batch_total_count": 2,
-        "batch_success_count": 1,
-        "batch_error_count": 2,
-        "errors": [
-          {
-            "data": {
-               "id": "example-id-1",
-               "title": "New object",
-               "content": "This will be the new <b>content</b>"
-            },
-            "errors": {
-              "id": [
-                "There are duplications in object data, key: id"
-              ]
-            }
-          }
-        ]
-    }
-    ```
-    { data-search-exclude }
+!!! Response
+
+    === "400 Bad Request"
+ 
+        ```
+        {
+            "batch_total_count": 2,
+            "batch_success_count": 1,
+            "batch_error_count": 2,
+            "errors": [
+              {
+                "data": {
+                   "id": "example-id-1",
+                   "title": "New object",
+                   "content": "This will be the new <b>content</b>"
+                },
+                "errors": {
+                  "id": [
+                    "There are duplications in object data, key: id"
+                  ]
+                }
+              }
+            ]
+        }
+        ```
+        { data-search-exclude }
+
 
 Response parameters:
 

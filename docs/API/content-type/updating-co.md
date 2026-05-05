@@ -40,7 +40,11 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
 * `name` is the name of the content type definition
 * `id` is the ID of the object to update
 
-!!! Example
+!!! note
+    The id property of the object cannot be updated.
+    Ensure that the id in the request body matches the one in the request path when updating a single content object.
+
+!!! Example "PUT – full update (all fields required)"
 
     === "CURL"
 
@@ -189,6 +193,154 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         { data-search-exclude }
 
 
+!!! Example "PATCH – partial update (only changed fields)"
+
+    === "CURL"
+ 
+        ```
+        curl --location --request PATCH 'https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712' \
+        --header 'X-AUTH-TOKEN: YOUR_API_KEY' \
+        --header 'Content-Type: application/json' \
+        --header 'Accept: */*' \
+        --data-raw '{
+            "title": "Object with changed title"
+        }'
+        ```
+        { data-search-exclude }
+ 
+    === "C# + Restasharp"
+ 
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712");
+        var request = new RestRequest(Method.PATCH);
+        request.AddHeader("content-type", "application/json");
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
+        request.AddParameter("application/json", "{\"title\":\"Object with changed title\"}", ParameterType.RequestBody);
+        IRestResponse response = client.Execute(request);
+        ```
+        { data-search-exclude }
+ 
+    === "Go + Native"
+ 
+        ```
+        package main
+ 
+        import (
+            "fmt"
+            "strings"
+            "net/http"
+            "io/ioutil"
+        )
+ 
+        func main() {
+ 
+            url := "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712"
+ 
+            payload := strings.NewReader("{\"title\":\"Object with changed title\"}")
+ 
+            req, _ := http.NewRequest("PATCH", url, payload)
+ 
+            req.Header.Add("content-type", "application/json")
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_KEY")
+ 
+            res, _ := http.DefaultClient.Do(req)
+ 
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+ 
+            fmt.Println(res)
+            fmt.Println(string(body))
+ 
+        }
+        ```
+        { data-search-exclude }
+ 
+    === "Java + Okhttp"
+ 
+        ```
+        OkHttpClient client = new OkHttpClient();
+ 
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, "{\"title\":\"Object with changed title\"}");
+        Request request = new Request.Builder()
+        .url("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712")
+        .patch(body)
+        .addHeader("content-type", "application/json")
+        .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
+        .build();
+ 
+        Response response = client.newCall(request).execute();
+        ```
+        { data-search-exclude }
+ 
+    === "Java + Unirest"
+ 
+        ```
+        HttpResponse<String> response = Unirest.patch("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712")
+            .header("content-type", "application/json")
+            .header("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .body("{\"title\":\"Object with changed title\"}")
+            .asString();
+        ```
+        { data-search-exclude }
+ 
+    === "Node + Request"
+ 
+        ```
+        const request = require('request');
+ 
+        const options = {
+            method: 'PATCH',
+            url: 'https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712',
+            headers: {'content-type': 'application/json', 'X-AUTH-TOKEN': 'YOUR_API_KEY'},
+            body: {title: 'Object with changed title'},
+            json: true
+        };
+ 
+        request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+ 
+        console.log(body);
+        });
+        ```
+        { data-search-exclude }
+ 
+    === "PHP + CURL"
+ 
+        ```
+        <?php
+ 
+        $curl = curl_init();
+ 
+        curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "PATCH",
+        CURLOPT_POSTFIELDS => "{\"title\":\"Object with changed title\"}",
+        CURLOPT_HTTPHEADER => [
+                "X-AUTH-TOKEN: YOUR_API_KEY",
+                "content-type: application/json"
+            ],
+        ]);
+ 
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+ 
+        curl_close($curl);
+ 
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
+        { data-search-exclude }
+
+
 !!! Response
 
     === "200 OK"
@@ -266,10 +418,6 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         ```
         { data-search-exclude }
 
-!!! note
-    The id property of the object cannot be updated. 
-    Ensure that the id in the request body matches the one in the request path when updating a single content object.
-
 #### Possible validation errors
 
 Possible validation errors are the same as in creating Content Object,
@@ -282,7 +430,7 @@ Updating up to 100 objects with single POST request at once is described
 as batch creating and updating are done on the same API endpoint.
 
 It is also possible to update objects using the PATCH method.
-In the case of PATH, it is not required to provide all object fields, only those that are to be changed.
+In the case of PATCH, it is not required to provide all object fields, only those that are to be changed.
 When an object doesn't exist, the batch patch returns a 404 error response. The PATCH endpoint doesn't create new objects.
 
 [Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

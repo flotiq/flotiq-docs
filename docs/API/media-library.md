@@ -21,24 +21,167 @@ To upload a file to the Flotiq, you need to send `POST` multipart request to the
 | file      | binary data of a file                               |
 | type      | `image` for image types, `file` for everything else |
 
-The example below shows how to do a simple file upload in nodeJS application:
+The examples below show how to do a simple file upload:
 
-!!! example "Example nodeJs image upload"
-    ```
-    const fs = require(`fs`)
-    const FormData = require(`form-data`)
-    ...
-    const form = new FormData();
-    form.append(`file`, fs.createReadStream(file), file);
-    form.append(`type`, `image`);
-    let json = await fetch(`https://api.flotiq.com/api/media`, {
-        method: `POST`,
-        body: form,
-        headers: headers,
-    }).then(res => res.json());
-    console.log(json); //logs example object return shown below
-    ```
-    { data-search-exclude }
+!!! Example
+
+    === "CURL"
+ 
+        ```
+        curl --location --request POST "https://api.flotiq.com/api/media" \
+        --header 'X-AUTH-TOKEN: YOUR_API_KEY' \
+        --header 'Accept: */*' \
+        --form 'file=@"$file"' \
+        --form 'type=image'
+        ```
+        { data-search-exclude }
+ 
+    === "C# + Restasharp"
+ 
+        ```
+        var client = new RestClient("https://api.flotiq.com/api/media");
+        var request = new RestRequest(Method.POST);
+        request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
+        request.AlwaysMultipartFormData = true;
+        request.AddFile("file", file);
+        request.AddParameter("type", "image");
+        IRestResponse response = client.Execute(request);
+        ```
+        { data-search-exclude }
+ 
+    === "Go + Native"
+ 
+        ```
+        package main
+ 
+        import (
+            "fmt"
+            "bytes"
+            "io"
+            "mime/multipart"
+            "os"
+            "path/filepath"
+            "net/http"
+            "io/ioutil"
+        )
+ 
+        func main() {
+ 
+            payload := &bytes.Buffer{}
+            writer := multipart.NewWriter(payload)
+ 
+            f, _ := os.Open(file)
+            defer f.Close()
+            part, _ := writer.CreateFormFile("file", filepath.Base(file))
+            io.Copy(part, f)
+            writer.WriteField("type", "image")
+            writer.Close()
+ 
+            req, _ := http.NewRequest("POST", `https://api.flotiq.com/api/media`, payload)
+            req.Header.Add("X-AUTH-TOKEN", "YOUR_API_KEY")
+            req.Header.Set("Content-Type", writer.FormDataContentType())
+ 
+            res, _ := http.DefaultClient.Do(req)
+            defer res.Body.Close()
+            body, _ := ioutil.ReadAll(res.Body)
+ 
+            fmt.Println(res)
+            fmt.Println(string(body))
+ 
+        }
+        ```
+        { data-search-exclude }
+ 
+    === "Java + Okhttp"
+ 
+        ```
+        OkHttpClient client = new OkHttpClient();
+ 
+        RequestBody body = new MultipartBody.Builder()
+            .setType(MultipartBody.FORM)
+            .addFormDataPart("file", file,
+                RequestBody.create(MediaType.parse("image/jpeg"), new File(file)))
+            .addFormDataPart("type", "image")
+            .build();
+ 
+        Request request = new Request.Builder()
+            .url("https://api.flotiq.com/api/media")
+            .post(body)
+            .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .build();
+ 
+        Response response = client.newCall(request).execute();
+        ```
+        { data-search-exclude }
+ 
+    === "Java + Unirest"
+ 
+        ```
+        HttpResponse<String> response = Unirest.post("https://api.flotiq.com/api/media")
+            .header("X-AUTH-TOKEN", "YOUR_API_KEY")
+            .field("file", new File(file))
+            .field("type", "image")
+            .asString();
+        ```
+        { data-search-exclude }
+ 
+    === "Node + Fetch"
+ 
+        ```
+        const fs = require(`fs`)
+        const FormData = require(`form-data`)
+        ...
+        const form = new FormData();
+        form.append(`file`, fs.createReadStream(file), file);
+        form.append(`type`, `image`);
+        let json = await fetch(`https://api.flotiq.com/api/media`, {
+            method: `POST`,
+            body: form,
+            headers: {
+                ...form.getHeaders(),
+                'X-AUTH-TOKEN': YOUR_API_KEY,
+            },
+        }).then(res => res.json());
+        console.log(json); //logs example object return shown below
+        ```
+        { data-search-exclude }
+ 
+    === "PHP + CURL"
+ 
+        ```
+        <?php
+ 
+        $curl = curl_init();
+ 
+        curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.flotiq.com/api/media",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => [
+            "file" => new CURLFile($file, "image/jpeg", $file),
+            "type" => "image"
+        ],
+        CURLOPT_HTTPHEADER => [
+                "X-AUTH-TOKEN: YOUR_API_KEY"
+            ],
+        ]);
+ 
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+ 
+        curl_close($curl);
+ 
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            echo $response;
+        }
+        ```
+        { data-search-exclude }
 
 ### Response parameters
 

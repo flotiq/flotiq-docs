@@ -448,6 +448,18 @@ The first input in the form in the CMS panel will be `title` input, and the seco
         ```
         { data-search-exclude }
 
+    === "415 Unsupported Media Type"
+    
+        Returned when the `Content-Type` header is missing or has an unsupported value
+ 
+        ```
+        {
+            "code": 415,
+            "message": "Unsupported Media Type"
+        }
+        ```
+        { data-search-exclude }
+
 ### Possible validation errors
 
 | Property path                                      | Possible errors                                                                                                                                                                                                                                                           | Description                                                                                                                                                            |

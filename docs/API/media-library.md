@@ -187,23 +187,52 @@ The examples below show how to do a simple file upload:
 
 The response will be a Content Object of type `_media`. 
 
-!!! example "Example response"
-    ```
-    {
-        "id": "_media-456456",
-        "extension": "jpg",
-        "fileName": "example_image.jpg",
-        "mimeType": "image/jpeg",
-        "size": 45896,
-        "type": "image",
-        "source": "disk",
-        "externalId": "",
-        "url": "/image/0x0/_media-456456.jpg",
-        "height": 300,
-        "width": 150
-    }
-    ```
-    { data-search-exclude }
+!!! Response
+
+    === "200 OK"
+ 
+        Returned when the file was uploaded successfully
+ 
+        ```
+        {
+            "id": "_media-456456",
+            "extension": "jpg",
+            "fileName": "example_image.jpg",
+            "mimeType": "image/jpeg",
+            "size": 45896,
+            "type": "image",
+            "source": "disk",
+            "externalId": "",
+            "url": "/image/0x0/_media-456456.jpg",
+            "height": 300,
+            "width": 150
+        }
+        ```
+        { data-search-exclude }
+ 
+    === "401 Unauthorized"
+ 
+        Returned when API key was missing or incorrect
+ 
+        ```
+        {
+            "code": 401,
+            "message": "Unauthorized"
+        }
+        ```
+        { data-search-exclude }
+ 
+    === "415 Unsupported Media Type"
+ 
+        Returned when the `Content-Type` header is missing or not `multipart/form-data`
+ 
+        ```
+        {
+            "code": 415,
+            "message": "Unsupported Media Type"
+        }
+        ```
+        { data-search-exclude }
 
 Now you can see uploaded images in the media library. Your files are accessible also via REST API like other Content Objects.
 To get the list of images with metadata use `GET /api/v1/content/_media` endpoint.

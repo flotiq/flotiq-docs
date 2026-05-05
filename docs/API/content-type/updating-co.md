@@ -418,6 +418,18 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}` t
         ```
         { data-search-exclude }
 
+    === "415 Unsupported Media Type"
+
+        Returned when the `Content-Type` header is missing or has an unsupported value
+ 
+        ```
+        {
+            "code": 415,
+            "message": "Unsupported Media Type"
+        }
+        ```
+        { data-search-exclude }
+
 #### Possible validation errors
 
 Possible validation errors are the same as in creating Content Object,

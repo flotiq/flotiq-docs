@@ -443,6 +443,18 @@ When you change existing property, depending on the type of changes, Flotiq will
         ```
         { data-search-exclude }
 
+    === "415 Unsupported Media Type"
+ 
+        Returned when the `Content-Type` header is missing or has an unsupported value
+ 
+        ```
+        {
+            "code": 415,
+            "message": "Unsupported Media Type"
+        }
+        ```
+        { data-search-exclude }
+
 #### Possible validation errors
 
 Possible validation errors resemble those encountered when creating Content Types.

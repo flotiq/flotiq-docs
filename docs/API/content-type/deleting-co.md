@@ -260,6 +260,10 @@ curl -X POST "https://api.flotiq.com/api/v1/content/blogposts/batch-delete" --he
 ```
 { data-search-exclude }
 
+## Deleting via Purge endpoint
+
+It is possible to remove all objects for a given content type. To learn more, see [Deleting Content Type](/docs/API/content-type/deleting-ctd#deleting-content-types-via-purge-endpoint).
+
 ## Restoring deleted objects
 
 Deleted content objects are soft-deleted and retained for **60 days** before being permanently removed.

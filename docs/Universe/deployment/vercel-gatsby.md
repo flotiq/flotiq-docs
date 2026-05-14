@@ -58,7 +58,9 @@ Then select the repository that contains your project.
  ![](images/vercel-gatsby-import-git-repo.png){: .center .width75 .border}
 
 
-After selecting the repository, you can specify a name for your site, root directory, build command, and environmental variables.\nAs our project is in the repository’s root, the root directory remains empty.
+After selecting the repository, you can specify a name for your site, root directory, build command, and environmental variables.
+
+As our project is in the repository’s root, the root directory remains empty.
 
  ![](images/vercel-gatsby-configure-project.png){: .center .width75 .border}
 

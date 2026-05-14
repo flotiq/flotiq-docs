@@ -384,7 +384,7 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
 While listing objects, you can use the optional parameters
 `page`, `limit`, `order_by`, `order_direction`, or `filter`.
 
-| Param name     | Param description                                       | Defalut value |
+| Param name     | Param description                                       | Default value |
 |----------------|---------------------------------------------------------|---------------|
 | offset         | Number of records to skip                               | 0             |
 | first          | Number of objects on page, default `10`, maximum `1000` | 10            |

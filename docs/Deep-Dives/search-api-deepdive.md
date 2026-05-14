@@ -112,7 +112,7 @@ Search score for text found in content
 
 ## Conclusion
 
-Flotiq is built to be extremely easy to use, yet very powerful. Our search feature is trivial to use, but at the same time offers features that make us stand out from out competitors (see Headless CMS Full-text search comparison article). Using Flotiq's search you can now build a complex search engine into your apps without the need to worry about integrating with external solutions.
+Flotiq is built to be extremely easy to use, yet very powerful. Our search feature is trivial to use, but at the same time offers features that make us stand out from our competitors (see Headless CMS Full-text search comparison article). Using Flotiq's search you can now build a complex search engine into your apps without the need to worry about integrating with external solutions.
 
 
 

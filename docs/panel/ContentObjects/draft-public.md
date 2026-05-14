@@ -90,7 +90,7 @@ you can use the **Archive** button located in the Extras menu.
 ![Archiving object](../images/co-form/draftpublic/archive.png){: .center .width75 .border}
 
 !!! Note
-    Now object  will have the status `archive` and will not be visible, by default in the [listing API](/docs/API/draft-public/draft-public).
+    Now object will have the status `archived` and will not be visible, by default in the [listing API](/docs/API/draft-public/draft-public).
 
 Or by selecting it on the content browser and clicking `Actions` and then `Archive` button:
 

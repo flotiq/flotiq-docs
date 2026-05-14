@@ -72,7 +72,7 @@ Flotiq.
 
 ![](images/pabbly/pabbly-configure-webhook-1.png){: .center .width75 .border}
 
-### Creating webhook in Fltoiq
+### Creating webhook in Flotiq
 
 Webhooks are a way to notify external systems when a specific event happens in Flotiq. They enable seamless integrations
 with a wide range of other systems by triggering actions based on defined events.

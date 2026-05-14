@@ -44,9 +44,9 @@ On GitHub, click "Code" and "Download ZIP".
 
 ![Download starter](images/heroku/github-download.png){: .center .border}
 
-## Update packages.json
+## Update package.json
 
-Add `-$PORT` to command `start` in packages.json
+Add `-$PORT` to command `start` in package.json
 
 ```json
   "scripts": {
@@ -103,7 +103,7 @@ heroku git:remote -a flotiq-blog-1
 
 ## Push your code to Heroku
 
-Now commit your code changes (packages.json) and push it to Heroku:
+Now commit your code changes (package.json) and push it to Heroku:
 
 ```bash
 git commit -a -m "Heroku deploy"

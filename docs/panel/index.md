@@ -41,7 +41,7 @@ Once you create a Content Type you can go to the Content menu in the left pane a
 
 ## Content Object editor
 
-From the grid view you can easily access individual objects by clicking the pencil icon in the right-most column. You can also create new objects by clicking the `Add Object` button in the top right corner. The Content Object editor itself offers a convenient form, which is automatically generated based on the Content Type Definintion that you previously created. Since Content Objects are automatically versioned - this view also allows to switch to different versions of a particular object.
+From the grid view you can easily access individual objects by clicking the pencil icon in the right-most column. You can also create new objects by clicking the `Add Object` button in the top right corner. The Content Object editor itself offers a convenient form, which is automatically generated based on the Content Type Definition that you previously created. Since Content Objects are automatically versioned - this view also allows to switch to different versions of a particular object.
 
 ![Flotiq object editor](images/EditObject.png){: .border}
 

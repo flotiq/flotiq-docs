@@ -57,7 +57,7 @@ By clicking on a version entry, you can open a Version Diff window, where the cu
 
 ## Mass edit
 
-You can edit multiple object at the same time. To do that you need to select needed objects in grid and then click
+You can edit multiple objects at the same time. To do that you need to select needed objects in grid and then click
 `Mass edit selected` button that appears at `Actions` menu
 
 ![](../images/blogpost-grid-mass-edit.png){: .center .width50 .border}

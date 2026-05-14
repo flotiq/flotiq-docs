@@ -30,9 +30,9 @@ Next, fill in the details and click `Save changes` to complete your plugin setup
 
 ## Usage
 
-Now you will see single media images for the selected types in objects gird.
+Now you will see single media images for the selected types in objects grid.
 
-![Thumbnails in Flotiq editor gird](images/thumbnails/grid.png){: .center .width75 .border}
+![Thumbnails in Flotiq editor grid](images/thumbnails/grid.png){: .center .width75 .border}
 
 And after clicking on it the modal is visible.
 

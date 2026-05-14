@@ -770,7 +770,7 @@ Input types of properties in `metaDefinition`:
                                         },
                                         "additionalProperties": false
                                     },
-                                    "emain_in_subobject": {
+                                    "email_in_subobject": {
                                         "type": "string"
                                     },
                                     "media_in_subobject": {
@@ -980,7 +980,7 @@ Input types of properties in `metaDefinition`:
                             "textarea_in_subobject",
                             "markdown_in_subobject",
                             "rich_text_in_subobject",
-                            "emain_in_subobject",
+                            "email_in_subobject",
                             "number_in_subobject",
                             "radio_in_subobject",
                             "checkbox_in_subobject",
@@ -1027,7 +1027,7 @@ Input types of properties in `metaDefinition`:
                                     "delimiter"
                                 ]
                             },
-                            "emain_in_subobject": {
+                            "email_in_subobject": {
                                 "label": "Emain in subobject",
                                 "unique": false,
                                 "helpText": "Email field in subobject",

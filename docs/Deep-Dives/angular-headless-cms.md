@@ -91,7 +91,7 @@ import { ApiModule, Configuration, ConfigurationParameters } from 'flotiq';
 { data-search-exclude }
 
 
-In `environments` directory are two `env` files. Add your `API_KEY` as a key-value pair in your `environtment.ts` file, so it should look like this:
+In `environments` directory are two `env` files. Add your `API_KEY` as a key-value pair in your `environment.ts` file, so it should look like this:
 
 ```typescript
 export const environment = {
@@ -118,7 +118,7 @@ export function apiConfigFactory(): Configuration {
 ```
 { data-search-exclude }
 
-For the final step add Flotiq `ApiModule` into imports array in your application `AppModule`. You must call `fotRoot()` function on `ApiModule` providing required configuration that you set step before:
+For the final step add Flotiq `ApiModule` into imports array in your application `AppModule`. You must call `forRoot()` function on `ApiModule` providing required configuration that you set step before:
 
 ```typescript
 ApiModule.forRoot(apiConfigFactory);
@@ -233,5 +233,5 @@ Generated package based on your OpenApiSchema is a powerful tool, that can speed
     Helpful links:
 
     1. Learn how to get your own [OpenApiSchema](https://flotiq.com/docs/API/open-api-schema/).
-    2. Didn't find a package in a langauage or framework you love? No problem check this [article](https://flotiq.com/docs/API/generate-package/) to learn how to generate your own!
+    2. Didn't find a package in a language or framework you love? No problem check this [article](https://flotiq.com/docs/API/generate-package/) to learn how to generate your own!
 

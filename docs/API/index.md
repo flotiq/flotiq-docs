@@ -334,7 +334,7 @@ If you accidentally committed your `.env` file to a public repository or in any 
 
 ### How can I provide read-only access to a single kind of data?
 
-You can use the User Define API keys and create a key that has a limited scope and permissions. For example - you can easily create a new key that only provides access to `Product` data and set it to be read-only.
+You can use the User Defined API keys and create a key that has a limited scope and permissions. For example - you can easily create a new key that only provides access to `Product` data and set it to be read-only.
 
 ### Are the API request limits[^2] calculated on a per-key or per-account basis?
 

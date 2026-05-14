@@ -78,11 +78,11 @@ Congratulations, you’ve successfully deployed your Flotiq-based site on Vercel
 
 ### Setting up Environment Variables
 
-An environment variable references a value that can affect how running processes will behave on a computer, for example, in staging and production environments. You must save environment variables in Netlify to authorize your instance to pull source data from Flotiq.
+An environment variable references a value that can affect how running processes will behave on a computer, for example, in staging and production environments. You must save environment variables in Vercel to authorize your instance to pull source data from Flotiq.
 
-The essential two environment variables needed for every Gatsby project are `FLOTIQ_API_KEY` and `FLOTIQ_API_URL`. In some cases, you will provide additional environmental variables for your application to work.
+The essential two environment variables needed for every Next.js project are `FLOTIQ_API_KEY` and `FLOTIQ_API_URL`. In some cases, you will provide additional environmental variables for your application to work.
 
-For example, if you're using the [Gatsby and Snipcart starter](https://github.com/flotiq/gatsby-starter-products) you will also provide the Snipcart API key. The project Readme always describes the needed variables.
+For example, if you're using the [Next.js and Snipcart starter](https://github.com/flotiq/flotiq-nextjs-shop-2) you will also provide the Snipcart API key. The project Readme always describes the needed variables.
 
 To obtain the Flotiq API key - in your Flotiq account, click `API keys` in the sidebar:
 

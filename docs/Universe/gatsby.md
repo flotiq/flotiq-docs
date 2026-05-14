@@ -14,7 +14,7 @@ We have a variety of [starters](https://flotiq.com/starters/){:target="_blank"} 
 
 Each starter is available for preview on our [GitHub](https://github.com/flotiq){:target="_blank"} and you can see how the built version works. You can also build it locally by following our step-by-step instructions.
 
-This should save you some time in creating your website and help you create a visually appealing page. Additionally, we have created two versions of starters using Gatsby and NextJS - depending on which framework you prefer. This page is dedicated to Gatsby starters. You can check out our NextJS starters [here](../nextjs/).
+This should save you some time in creating your website and help you create a visually appealing page. Additionally, we have created two versions of starters using Gatsby and NextJS - depending on which framework you prefer. This page is dedicated to Gatsby starters. You can check out our NextJS starters [here](../nextjs/nextjs-starters/).
 
 You can see all of our starters [here](https://flotiq.com/starters/){:target="_blank"}.
 

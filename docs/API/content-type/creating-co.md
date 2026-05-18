@@ -850,7 +850,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
               }
             ]
           },
-          "emain_in_subobject": "emain_in_subobject",
+          "email_in_subobject": "email_in_subobject",
           "media_in_subobject": [
             {
               "dataUrl": "/api/v1/content/_media/_media-1",

@@ -37,7 +37,7 @@ For the integration, it’s necessary to establish a Content Type Definition for
 * `subject`: text, required,
 * `message`: textarea.
 
-This Content Type Definition can be set up either through the [Flotiq Dashbord](https://flotiq.com/docs/panel/content-types/){target="_blank"} or by utilizing the [API](https://flotiq.com/docs/API/content-type/creating-ctd/){target="_blank"}.
+This Content Type Definition can be set up either through the [Flotiq Dashboard](https://flotiq.com/docs/panel/content-types/){target="_blank"} or by utilizing the [API](https://flotiq.com/docs/API/content-type/creating-ctd/){target="_blank"}.
 
 ![](images/n8n/add-email-ctd.png){: .border .width50 .center}
 
@@ -149,7 +149,7 @@ Begin by navigating to the n8n panel to add a new workflow. Click `Add first ste
 
 ![](images/n8n/add_webhook_trigger.png){: .center .width25 .border}
 
-As a next setps:
+As a next steps:
 
 * Set the HTTP Method to POST.
 * Copy the Test URL from n8n and paste it into [a new webhook on the Flotiq dashboard](../panel/webhooks/index.md){target="_blank"}.
@@ -202,7 +202,7 @@ Test this step by sending an email to yourself. It should appear in Flotiq after
 
 ### Troubleshooting
 
-If a sent email doesn’t show up in output column in n8n, check a **webhook page** in Flotiq Dashoboard for errors.
+If a sent email doesn’t show up in output column in n8n, check a **webhook page** in Flotiq Dashboard for errors.
 
 ![](images/n8n/flotiq_errors.png)
 

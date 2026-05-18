@@ -9,7 +9,7 @@ description: How to manage users in Flotiq.
 This page explains how to manage **Users**, including your own settings, using the [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 
 
 !!! hint
-    Only a user Role headless admin can manage other users in Flotiq project. If you do not have the required role, you will not be able too see the `Users` tab.
+    Only a user Role headless admin can manage other users in Flotiq project. If you do not have the required role, you will not be able to see the `Users` tab.
 
 To manage users, navigate to `Manage Spaces` or `Organization Settings`.
 

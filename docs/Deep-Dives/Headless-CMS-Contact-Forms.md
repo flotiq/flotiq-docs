@@ -44,7 +44,7 @@ Once you save that Content Type - you can see the endpoints that were generated 
 
 ![Contact Form API docs](images/contact-form-api-docs.png){: .center .border .width75}
 
-Now you can manage contact form entries via Flotiq. Let's now create a contact form on your site to post data directly to the FLotiq API.
+Now you can manage contact form entries via Flotiq. Let's now create a contact form on your site to post data directly to the Flotiq API.
 
 
 ## HTML Form implementation

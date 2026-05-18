@@ -20,6 +20,13 @@ Check out our examples and use them in your projects or treat them as a signpost
 !!! Note
     If you are new in webhooks, read the [Flotiq Webhooks introduction](/docs/panel/webhooks/) first.
 
+!!! caution
+    **Due to the [ending availability of Gatsby Cloud](https://www.netlify.com/blog/gatsby-cloud-evolution/),
+    examples 1 and 2 are outdated and no longer applicable.**
+
+    We recommend using the [Netlify build hook](#3-trigger-a-netlify-build-when-a-build-site-button-was-clicked)
+    as an alternative (see example 3 below).
+
 ## 1. Trigger a Gatsby preview when site content was changed
 
 Prerequisites:

@@ -78,7 +78,7 @@ An environment variable references a value that can affect how running processes
 
 The essential two environment variables needed for every Gatsby project are `GATSBY_FLOTIQ_API_KEY` and `GATSBY_FLOTIQ_BASE_URL`. In some cases, you will provide additional env variables for your application to work.
 
-For example, if you're using the [Gatsby and Snipcart starter](https://github.com/flotiq/gatsby-starter-products){:target="_blank"} you will also provide the Snipcart API key. The project Readme always described the needed variables.
+For example, if you're using the [Gatsby and Snipcart starter](https://github.com/flotiq/gatsby-starter-products){:target="_blank"} you will also provide the Snipcart API key. The project Readme always describes the needed variables.
 
 To obtain the Flotiq API key - in your Flotiq account, Find in the right sidebar panel `Api keys` and select:
 

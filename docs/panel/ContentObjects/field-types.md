@@ -115,7 +115,7 @@ First row:
     * Comic Sans Ms
     * Courier New
     * Georgia
-    * Lucida SAns Unicode
+    * Lucida Sans Unicode
     * Tahoma
     * Times New Roman
     * Trebuchet MS
@@ -311,4 +311,4 @@ remove the block (`X` button) and move the block down (`arrow down` button).
 
 ## Simple list
 
-Array of standard text inputs wit possibility of choosing the order, in other places referred as Options control.
+Array of standard text inputs with possibility of choosing the order, in other places referred as Options control.

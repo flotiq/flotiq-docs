@@ -29,7 +29,7 @@ When editing an image, you can now add an optional `title` and `alt` text fields
 This section gives you access to the Unsplash library of images.
 All Unsplash images are available to use for free and Flotiq takes care of the necessary attributions.
 
-In order to use images from Unsplash - you need to download them to your library first. This is a very simple operation - once you select an image you like, simply click the download icon on that image and it will momentarily appear in you `Uploaded files`.
+In order to use images from Unsplash - you need to download them to your library first. This is a very simple operation - once you select an image you like, simply click the download icon on that image and it will momentarily appear in your `Uploaded files`.
 
 ![Downloading from Unsplash](./images/MediaLibraryUnsplash.png){: .border}
 

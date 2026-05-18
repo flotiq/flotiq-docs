@@ -59,7 +59,7 @@ There are many cases when the ability to modify data being received by Flotiq co
 - calculating field values based on other fields
 - populating object's fields with data from external sources
 
-it can now be easily done through a mutating webhook. Once the processing system receives the standard webhook payload from Flotiq - it can freely the object contents (as long as it conforms with the object's Content Type Definition). Once the object is processed - the system responds with a HTTP 200 code and a JSON object of the following form:
+it can now be easily done through a mutating webhook. Once the processing system receives the standard webhook payload from Flotiq - it can freely modify the object contents (as long as it conforms with the object's Content Type Definition). Once the object is processed - the system responds with a HTTP 200 code and a JSON object of the following form:
 
 ```
 HTTP 200:

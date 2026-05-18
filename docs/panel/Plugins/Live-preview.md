@@ -30,7 +30,7 @@ Next, fill in the details and click `Save changes` to complete your plugin setup
 
 * **Page base URL** - To start, you may want to use `http://localhost:3000` to easily navigate between Flotiq and your local development environment. This will be accessible to all developers working on the site locally. Once you have your page deployed and publicly visible, you should change this URL.
 
-* **Client Authorisation Key** - This key grants access to view live preview data on your website. Make sure to define it in your application's environment variables. Without validating this key, evenrybody can see your live preview data. This key is defined by you.
+* **Client Authorisation Key** - This key grants access to view live preview data on your website. Make sure to define it in your application's environment variables. Without validating this key, everybody can see your live preview data. This key is defined by you.
 
 * **API Key** - Flotiq API key used to authorize websocket connection.
 

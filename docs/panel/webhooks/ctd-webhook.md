@@ -10,7 +10,7 @@ description: Async Content Definition webhooks in Flotiq
 
 ## What is a Content Definition webhook?
 
-`Content Definition Changes` webhook type is very similar to `Async Content Object Changes`, but with minor differences. First of all that kid of webhook is executed on each action (`Create`, `Update`, `Delete`), preformed on yours `Content Definition's`.
+`Content Definition Changes` webhook type is very similar to `Async Content Object Changes`, but with minor differences. First of all, that kind of webhook is executed on each action (`Create`, `Update`, `Delete`), performed on your `Content Definition's`.
 
 ## Creating a Content Definition changes webhook
 

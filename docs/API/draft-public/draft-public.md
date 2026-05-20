@@ -49,9 +49,22 @@ Draft & Public provides sets of content statuses to help teams manage and organi
 the list of each status with a brief explanation has been written below:
 
 - **Draft** default status for all newly created content objects.
-- **Public** is a status for your production ready content. 
+- **Public** is a status for your production ready content.
 - **Modified** When object in the status `public`, is edited then a new version with a `public` status will be created
 - **Archived** Status for content withdrawn from `public` state
+
+### Status flow
+
+| Current status | Action                   | Result     |
+|----------------|--------------------------|------------|
+| `draft`        | Publish (`/publish`)     | `public`   |
+| `public`       | Edit                     | `modified` |
+| `public`       | Unpublish (`/unpublish`) | `draft`    |
+| `public`       | Archive (`/archive`)     | `archived` |
+| `modified`     | Publish (`/publish`)     | `public`   |
+| `modified`     | Unpublish (`/unpublish`) | `draft`    |
+| `modified`     | Archive (`/archive`)     | `archived` |
+| `archived`     | Publish (`/publish`)     | `public`   |
 
 !!! Note
     **Only content in status `public` will be visible via listing API**, by default, to access content in different statuses,
@@ -106,7 +119,7 @@ with `:content-type-definition-name` and `:content-type-object-id` parameters ma
 
 !!! Request
     ```
-    curl -X POST 'https://api.flotiq.com/api/v1/posts/post-1/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    curl -X POST 'https://api.flotiq.com/api/v1/content/posts/post-1/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }
 
@@ -173,9 +186,23 @@ endpoint with `:content-type-definition-name` and `:content-type-object-id` para
 !!! Note
     Now object with the id post-1, **will have the status `archived` and will not be visible, by default in the listing API**
 
+### Restoring archived content
+You can restore archived content by publishing it again with:
+
+`/api/v1/content/:content-type-definition-name/:content-type-object-id/publish`
+
+!!! Request
+    ```
+    curl -X POST 'https://api.flotiq.com/api/v1/posts/post-1/publish' --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
+    ```
+    { data-search-exclude }
+
+!!! Note
+    Publishing an archived object changes its status to `public`.
+
 #### Batch archive content
-There is a way to archive up to 100[^1] Content Objects at once. 
-It is possible by using the `/api/v1/content/:content-type-definition-name/batch-archive` 
+There is a way to archive up to 100[^1] Content Objects at once.
+It is possible by using the `/api/v1/content/:content-type-definition-name/batch-archive`
 endpoint with a body consisting of an array containing object IDs as strings.
 
 !!! Example
@@ -194,7 +221,7 @@ In order to use cascade action use `?hydrate=<value>` query parameter, exactly h
 
 !!! Request
     ```sh
-    curl -X POST 'https://api.flotiq.com/api/v1/posts/post-1/publish?hydrate=1'
+    curl -X POST 'https://api.flotiq.com/api/content/v1/posts/post-1/publish?hydrate=1'
         --header 'X-AUTH-TOKEN: YOUR_API_TOKEN'
     ```
     { data-search-exclude }

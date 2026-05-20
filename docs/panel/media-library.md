@@ -73,7 +73,7 @@ You can manage your tags on the Tags page:
 
 The tag contains only name field.
 
-Tag editing is compatible with standard content object editing. See more in the [editing content object description](/docs/panel/content-objects/).
+Tag editing is compatible with standard content object editing. See more in the [editing content object description](ContentObjects/index.md).
 
 Mass edit is not enabled for tags, as it has only unique fields.
 

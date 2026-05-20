@@ -17,11 +17,11 @@ the publishing workflow.
 
 !!! Note
     This feature is available only in `ContentObject` with
-    enabled  [Draft & Public Mode](/docs/panel/ContentObjects/draft-public)
+    enabled [Draft & Public Mode](/docs/panel/ContentObjects/draft-public)
 
 ## Usage
 
-Click the clock icon next to the `Publish` button to schedule the publication of the current draft.
+Click the clock icon next to the `Publish` button to schedule the publication of the current `draft` or `modified` version.
 
 ![Scheduling publication button](../images/schedule-publication.png)
 
@@ -33,8 +33,14 @@ Once you click the button, a modal will appear where you can configure the `publ
     **Please note that the publication must be scheduled more than 5 minutes in advance. Setting it to exactly 5 minutes
     ahead is not permitted.**
 
-Clicking the `Set Schedule` button sets the object’s status to `scheduled`. When the scheduled date and time are
-reached, the object is automatically published and its status is updated to `public`
+Clicking the `Set Schedule` button creates a scheduled publication for the object.
+When the scheduled date and time are reached, the object is automatically published and its status is updated to `public`.
+
+### Status and scheduling
+
+- Scheduling does not add a separate Draft & Public status.
+- While waiting for publication, the object remains in its current workflow state (`draft` or `modified`).
+- If a scheduled object is edited, the schedule is canceled automatically.
 
 ![overview of scheduled object](../images/schedule-publication-co-view.png)
 
@@ -47,8 +53,8 @@ removes the publication schedule and resets the object's state.
 ![Scheduled object settings](../images/schedule-publication-scheduling-settings.png)
 
 !!! Note
-    **Modifying the content of the object in any way will automatically cancel the scheduled publication and change the
-    object's status back to draft.**
+    **Modifying the content of the object in any way will automatically cancel the scheduled publication.
+    The object then stays in editable workflow state (`draft` or `modified`).**
 
 Clicking the `Publish` button on a scheduled object opens a modal indicating that the object is scheduled for future publication,
 with an option to override the schedule and publish it immediately.

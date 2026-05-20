@@ -47,7 +47,7 @@ In this example, click `Blog Post` predefined type.
 ![](images/AddContentTypeDefinitions.png){: .center .width75 .border}
 
 The form includes a **Label** (Displayed in the dashboard) and a **Name** (visible to developers),
-along with a **Draft & Public** switch to manage drafts and [control when content is published](../ContentObjects/draft-public/).
+along with a **Draft & Public** switch to manage drafts and [control when content is published](ContentObjects/draft-public.md).
 
 An example entry includes the following properties:
 
@@ -65,7 +65,7 @@ Click the pencil icon to edit the `title` property. As you can see - `title` is 
 Also, because the `Part of object title` checkbox is checked, the value of this field will be used to describe objects in different places of Flotiq's UI - object listings or when linking objects through relations.
 
 !!! hint 
-    Learn more about connecting objects via relations in [managing Content Objects](ContentObjects/content-objects.md#relations). 
+    Learn more about connecting objects via relations in [field types for Content Objects](ContentObjects/field-types.md#objects-relations). 
     You can find more about other property settings [below](#property-settings).
 
 The `slug` property is also required, but also must be unique across all your blogpost objects in the system.

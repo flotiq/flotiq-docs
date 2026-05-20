@@ -225,7 +225,7 @@ We will need to add a couple more changes to synchronise the completion state. T
 
             const options = {
                 method: 'POST',
-                headers: {'content-type': 'application/json', 'X-AUTH-TOKEN': RW_AUTH_TOKEN},
+                headers: {'content-type': 'application/json', 'X-AUTH-TOKEN': FLOTIQ_API_KEY},
                 body: JSON.stringify({title: action.payload.title, completed: false}),
             };
 
@@ -243,7 +243,7 @@ We will need to add a couple more changes to synchronise the completion state. T
 
             const options = {
                 method: 'PATCH',
-                headers: {'content-type': 'application/json', 'X-AUTH-TOKEN': RW_AUTH_TOKEN},
+                headers: {'content-type': 'application/json', 'X-AUTH-TOKEN': FLOTIQ_API_KEY},
                 body: JSON.stringify({id: action.payload.id, completed: !item.completed}), // negate current value of completed
             };
 

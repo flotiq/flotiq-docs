@@ -47,4 +47,18 @@ When browsing users list in `Users` tab from the left panel, you can make change
 
 Here you can change your settings, like your name and password, but also edit your email subscription preferences, or the user.
 
+## Deleting users
+
+Users can be permanently deleted from the project by a user with the `headless admin` role.
+
+!!! warning
+    Deleting a user is permanent and cannot be undone.
+
+### What happens after deleting a user
+
+- Content created by the deleted user is not removed.
+- Existing Content Objects stay in place and remain available according to their current status and permissions.
+- Version History entries are preserved. Changes made by a deleted user are still visible in the history as edits made by a deleted account.
+- Personal data of the deleted user is anonymized in the database.
+
 [^1]: Number of available Team Members depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

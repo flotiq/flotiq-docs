@@ -3,7 +3,7 @@ tags:
   - Developer
 ---
 
-title: Thumbnails plugin | Flotiq documentation
+title: Singleton Types plugin | Flotiq documentation
 description: The plugin allows setting selected content types as singletons, redirecting object views to creation or editing skipping the content objects grid.
 
 The plugin allows setting selected content types as singletons, redirecting object views to creation or editing skipping the content objects grid.

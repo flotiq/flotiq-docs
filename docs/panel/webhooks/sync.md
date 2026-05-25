@@ -110,7 +110,7 @@ HTTP 400:
     "event": "pre-create",
     "sequenceNumber": 0,
     "response": {
-      errors: []
+      "errors": []
     },
     "payload": {
         ...

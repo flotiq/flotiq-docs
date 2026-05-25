@@ -264,7 +264,7 @@ We can specify two types of queries - responsible for retrieving a single object
 #### Query single object
 
 To a get single object, you need to pass the object identifier and fields you want to receive in the response.
-Example Query in GraphQL language to get `id` and `title` for the product with id `product-1` looks like:
+Example Query in GraphQL language to get `id` and `name` for the product with id `product-1` looks like:
 
 !!! Example
 
@@ -295,7 +295,7 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
             curl -X POST 'https://api.flotiq.com/api/v2/graphql' \
                 --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
                 --header 'Content-Type: application/json' \
-                --data-raw '{"query":"{ product(id: \"product-1\") { edges { node { id title }}}}"}'
+                --data-raw '{"query":"{ product(id: \"product-1\") { edges { node { id name }}}}"}'
             ```
             { data-search-exclude }
 
@@ -332,11 +332,11 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
 
             ```graphql
             query {
-                product(field: "title", value: "Green Tea") {
+                product(field: "name", value: "Green Tea") {
                     edges {
                         node {
                             id
-                            title
+                            name
                         }
                     }
                 }
@@ -351,7 +351,7 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
             curl -X POST 'https://api.flotiq.com/api/v2/graphql' \
                 --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
                 --header 'Content-Type: application/json' \
-                --data-raw '{"query":"{ product(field: \"title\", value: \"Green Tea\") edges{ node{ id title }}}}"}'
+                --data-raw '{"query":"{ product(field: \"name\", value: \"Green Tea\") edges{ node{ id name }}}}"}'
             ```
             { data-search-exclude }
 
@@ -384,14 +384,14 @@ Example Query in GraphQL language to get `id` and `title` for the product with i
 While listing objects, you can use the optional parameters
 `page`, `limit`, `order_by`, `order_direction`, or `filter`.
 
-| Param name     | Param description                                       | Default value |
-|----------------|---------------------------------------------------------|---------------|
-| offset         | Number of records to skip                               | 0             |
-| first          | Number of objects on page, default `10`, maximum `1000` | 10            |
-| order_by       | What field should list be ordered by                    |               |
-| order_direction | Order direction, possible values `asc`, `desc`         | asc           |
+| Param name      | Param description                                       | Default value |
+|-----------------|---------------------------------------------------------|---------------|
+| offset          | Number of records to skip                               | 0             |
+| first           | Number of objects on page, default `10`, maximum `1000` | 10            |
+| order_by        | What field should list be ordered by                    |               |
+| order_direction | Order direction, possible values `asc`, `desc`          | asc           |
 
-The below example shows how to list all products ordered by title, limited to 2 results:
+The below example shows how to list all products ordered by name, limited to 2 results:
 
 !!! Example
 

@@ -3,8 +3,8 @@ tags:
   - Developer
 ---
 
-title: Flotiq deep dives | Flotiq docs
-description: Flotiq's Dynamic Content API offers a unique way of interacting with your content, the way you design it. The builtin SDKs and APi docs make it extremely easy to use.
+title: Flotiq Dynamic Content API | Flotiq docs
+description: Flotiq's Dynamic Content API offers a flexible way to interact with your content. Built-in SDKs and API docs make integration easier.
 
 # Dynamic Content API
 
@@ -60,4 +60,4 @@ In a similar fashion - we also provide a downloadable Postman collection, which 
 
 ![](images/postman.jpeg){: .border}
 
-Read more on how to configure Postman to work with Flotiq in [API access → Postman](../#postman)
+Read more on how to configure Postman to work with Flotiq in [Postman Sandbox Packages](../Universe/postman.md)

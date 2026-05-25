@@ -25,7 +25,7 @@ On each update of a `Blog Post` object we will increment the field `edit_counter
 
   app.post('/increment-edit-counter', (req, res) => {
     const payload = req.body.payload;
-    payload.edit_counter + 1;  
+    payload.edit_counter++;  
     const response = {
       type: "response",
       subject: "content-object",

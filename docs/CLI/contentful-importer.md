@@ -30,7 +30,7 @@ flotiq contentful-import [flotiqApiKey] [contentfulSpaceId] [contentfulContentMa
 
 ## Imported data
 
-The migrator will export from Contentful the following data from Flotiq:
+The migrator will import into Flotiq the following data from Contentful:
 
 * Content Type Definitions (from Contentful's `Content Model`)
 * Content Objects (from Contentful's `Content`) - this includes relations to other exported content

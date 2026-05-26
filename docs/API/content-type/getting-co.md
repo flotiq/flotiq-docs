@@ -3,8 +3,8 @@ tags:
   - Developer
 ---
 
-title: How to list Content Objects | Flotiq docs
-description: How to list Content Objects in Flotiq
+title: How to get single Content Object | Flotiq docs
+description: How to get a single Content Object in Flotiq
 
 # Getting single Content Object
 
@@ -40,7 +40,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
     === "C# + Restasharp"
 
         ```
-        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712");
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712");
         var request = new RestRequest(Method.GET);
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
@@ -60,7 +60,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
         
         func main() {
         
-            url := "https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712"
+            url := "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712"
         
             req, _ := http.NewRequest("GET", url, nil)
 
@@ -84,7 +84,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-            .url("https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712")
+            .url("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712")
             .get()
             .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
             .build();
@@ -96,7 +96,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
     === "Java + Unirest"
       
         ```
-        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712")
+        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712")
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
@@ -156,8 +156,8 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}/{id}`
 
 Request parameters
 
-| Parameter | Description                                                                                                                           |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameter | Description                                                                                                                                                                                                                          |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | hydrate   | If you want to hydrate data sources in the object, you need to set it to `1`, it will hydrate one level of data sources in objects, `2` will hydrate deeper objects, and it's the highest level of hydration available in Flotiq API |
 
 !!! Response
@@ -227,14 +227,14 @@ The example below shows an example response for the product with a category, pro
     === "CURL"
 
         ``` 
-        curl -X GET "https://api.flotiq.com/api/v1/content/product/product-1" --header "X-AUTH-TOKEN: YOUR_API_KEY" --header "accept: application/json"
+        curl -X GET "https://api.flotiq.com/api/v1/content/product/product-1?hydrate=1" --header "X-AUTH-TOKEN: YOUR_API_KEY" --header "accept: application/json"
         ```
         { data-search-exclude }
 
     === "C# + Restasharp"
 
         ```
-        var client = new RestClient("https://api.flotiq.com/api/v1/content/product/product-1");
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/product/product-1?hydrate=1");
         var request = new RestRequest(Method.GET);
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
@@ -254,7 +254,7 @@ The example below shows an example response for the product with a category, pro
         
         func main() {
         
-            url := "https://api.flotiq.com/api/v1/content/product/product-1"
+            url := "https://api.flotiq.com/api/v1/content/product/product-1?hydrate=1"
         
             req, _ := http.NewRequest("GET", url, nil)
 
@@ -278,7 +278,7 @@ The example below shows an example response for the product with a category, pro
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-            .url("https://api.flotiq.com/api/v1/content/product/product-1")
+            .url("https://api.flotiq.com/api/v1/content/product/product-1?hydrate=1")
             .get()
             .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
             .build();
@@ -290,7 +290,7 @@ The example below shows an example response for the product with a category, pro
     === "Java + Unirest"
       
         ```
-        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/product/product-1")
+        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/product/product-1?hydrate=1")
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```
@@ -303,7 +303,7 @@ The example below shows an example response for the product with a category, pro
 
         const options = {
             method: 'GET',
-            url: 'https://api.flotiq.com/api/v1/content/product/product-1',
+            url: 'https://api.flotiq.com/api/v1/content/product/product-1?hydrate=1',
             headers: {'X-AUTH-TOKEN': 'YOUR_API_KEY'},
         };
         
@@ -323,7 +323,7 @@ The example below shows an example response for the product with a category, pro
         $curl = curl_init();
         
         curl_setopt_array($curl, [
-            CURLOPT_URL => "https://api.flotiq.com/api/v1/content/product/product-1",
+            CURLOPT_URL => "https://api.flotiq.com/api/v1/content/product/product-1?hydrate=1",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,

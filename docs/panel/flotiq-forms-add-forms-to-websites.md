@@ -158,6 +158,8 @@ Multiple relations display example:
 
 You can see a working example below, it's just a `<flotiq-form/>` tag, that we pasted in our HTML:
 
+<div style="background: #cccccc; padding: 10px;">
 <flotiq-form></flotiq-form>
+</div>
 
 You can use the form to tell us what you think about Flotiq Forms :)

@@ -46,7 +46,9 @@ Then select the repository that contains your project.
 
  ![](images/netlify-gatsby-select-repository.png)
 
-After selecting the repository, you can specify a name for your site, base directory, build command, and environmental variables.\nAs our project is in the repository’s root, the base directory remains empty.
+After selecting the repository, you can specify a name for your site, base directory, build command, and environmental variables.
+
+As our project is in the repository’s root, the base directory remains empty.
 
  ![](images/netlify-gatsby-configure-project.png)
 
@@ -72,7 +74,7 @@ An environment variable references a value that can affect how running processes
 
 The environment variable needed for every Gatsby project is **GATSBY_FLOTIQ_API_KEY**. In some cases, you will provide additional environmental variables for your application to work.
 
-For example, if you're using the [Gatsby and Snipcart starter](https://github.com/flotiq/gatsby-starter-products) you will also provide the Snipcart API key. The project Readme always described the needed variables.
+For example, if you're using the [Gatsby and Snipcart starter](https://github.com/flotiq/gatsby-starter-products) you will also provide the Snipcart API key. The project Readme always describes the needed variables.
 
 To obtain the Flotiq API key - in your Flotiq account, click your profile icon in the sidebar and go to **API keys**:  
 
@@ -92,6 +94,6 @@ Copy the Read-Only key and paste it into Netlify settings as **GATSBY_FLOTIQ_API
 
     ## Installing the Netlify plugin
 
-    Flotiq Netlify plugin allows you to trigger Netlifly builds within Content Objects forms. You will also be able to quickly navigate to your Netlify pages from the Flotiq content editor.
+    Flotiq Netlify plugin allows you to trigger Netlify builds within Content Objects forms. You will also be able to quickly navigate to your Netlify pages from the Flotiq content editor.
 
     [Netlify Integration](https://flotiq.com/docs/panel/Plugins/Netlify-integration/)

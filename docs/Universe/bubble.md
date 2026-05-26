@@ -28,7 +28,7 @@ to import prepared by us "CTD" (Content Type Definition) along with several "CO"
 for the blog's functionality.
 
 All you need is an installed [flotiq-cli](https://github.com/flotiq/flotiq-cli){target="_blank"} and a copied
-floder `./flotiq` from [this repository](https://github.com/flotiq/flotiq-blog){target="_blank"} in this folder there
+folder `./flotiq` from [this repository](https://github.com/flotiq/flotiq-blog){target="_blank"} in this folder there
 are several sub-folders containing `.json` files with definitions for `Content type Definition` and `Content Objects`.
 
 ### Usage

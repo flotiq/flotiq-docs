@@ -146,6 +146,7 @@ nav:
     - 'Workflows': 'API/workflow/content-publishing-workflow.md'
   - Dashboard:
     - 'Overview': panel/index.md
+    - 'SSO': panel/sso.md
     - 'Spaces and Organization': panel/spaces.md
     - 'Content types': panel/content-types.md
     - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md
@@ -173,7 +174,6 @@ nav:
       - 'Slug': panel/Plugins/Slug.md
       - 'Surfer SEO ': panel/Plugins/Surfer-seo.md
       - 'Multilingual': panel/Plugins/Multilingual.md
-      - 'DeepL': panel/Plugins/DeepL.md
       - 'Live Preview': panel/Plugins/Live-preview.md
       - 'Content Preview': panel/Plugins/Content-preview.md
       - 'Cloudflare Stream': panel/Plugins/Cloudflare-stream.md

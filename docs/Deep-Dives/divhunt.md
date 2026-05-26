@@ -69,7 +69,7 @@ Below, we present you an example of functions used to get the ID from the first 
 
 You can easily create an image gallery on your Divhunt Page with Flotiq data. To do so you will need previously mentioned prerequisites and Flotiq content object, that contains `asset` property with `multiple` option enabled.
 
-Once you have your Flotiq content ready, add a new GET request in your Divhunt's RST API application, which will source data from the content object with the gallery. This time you have to also add a request param with key: `hydrate`, and value: `1`, and a key with api name of your asset property in Flotiq. This will result in relation content properties like `asset` to retrieve the content object the relation is pointing towards.
+Once you have your Flotiq content ready, add a new GET request in your Divhunt's REST API application, which will source data from the content object with the gallery. This time you have to also add a request param with key: `hydrate`, and value: `1`, and a key with api name of your asset property in Flotiq. This will result in relation content properties like `asset` to retrieve the content object the relation is pointing towards.
 
 ![Configure GET request for image gallery](images/divhunt/divhunt-flotiq-gallery-config.png){: .center .border}
 

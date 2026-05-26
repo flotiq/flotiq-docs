@@ -32,7 +32,7 @@ Next, fill in the details and click `Save changes` to complete your plugin setup
 
 ## Usage
 
-To generate a snippet, go to the edit page of the selected video and click **Generate Snippet**. After the snippet is generated, the snippet code will apear in the right sidebar.
+To generate a snippet, go to the edit page of the selected video and click **Generate Snippet**. After the snippet is generated, the snippet code will appear in the right sidebar.
 
 ![Generated snippet for Cloudflare video](images/cf-stream/generated-snippet.png){: .center .width75 .border}
 

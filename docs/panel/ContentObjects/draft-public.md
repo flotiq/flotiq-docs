@@ -17,13 +17,26 @@ This feature is disabled by default, and all saved content objects will have the
 
 ## Available content statuses
 
-Draft & Public provide a set of content statuses to help teams manage and organize their content. 
+Draft & Public provide a set of content statuses to help teams manage and organize their content.
 Below is a list of each status with a brief explanation:
 
-- **Draft** – The default status for all newly created content objects.
-- **Public** – Indicates content that is ready for production.
-- **Modified** – When a content object with the `public` status is edited, a new `modified` version is created, while the existing `public` version remains unchanged.
-- **Archived** – Assigned to content that has been withdrawn from the Public state.
+- **Draft** - The default status for all newly created content objects.
+- **Public** - Indicates content that is ready for production.
+- **Modified** - When a content object with the `public` status is edited, a new `modified` version is created, while the existing `public` version remains unchanged.
+- **Archived** - Assigned to content that has been withdrawn from the `public` state.
+
+### Status flow
+
+| Current status | Action    | Result     |
+|----------------|-----------|------------|
+| `draft`        | Publish   | `public`   |
+| `public`       | Edit      | `modified` |
+| `public`       | Unpublish | `draft`    |
+| `public`       | Archive   | `archived` |
+| `modified`     | Publish   | `public`   |
+| `modified`     | Unpublish | `draft`    |
+| `modified`     | Archive   | `archived` |
+| `archived`     | Publish   | `public`   |
 
 ![Content objects grid](../images/co-form/draftpublic/cto-grid.png){: .center .width75 .border}
 
@@ -90,8 +103,17 @@ you can use the **Archive** button located in the Extras menu.
 ![Archiving object](../images/co-form/draftpublic/archive.png){: .center .width75 .border}
 
 !!! Note
-    Now object  will have the status `archive` and will not be visible, by default in the [listing API](/docs/API/draft-public/draft-public).
+    Now object will have the status `archived` and will not be visible, by default in the [listing API](/docs/API/draft-public/draft-public).
 
 Or by selecting it on the content browser and clicking `Actions` and then `Archive` button:
 
 ![GridMassArchive.png](../images/GridMassArchive.png){: .center .width75 .border}
+
+### Restoring archived content
+
+To restore archived content, use the **Publish** action on the archived object.
+
+!!! Note
+    Publishing an archived object changes its status to `public`.
+
+You can do this from the object form (toolbar) or from the content browser using `Actions` -> `Publish`.

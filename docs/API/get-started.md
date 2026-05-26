@@ -46,7 +46,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
     === "C# + Restasharp"
 
         ```
-        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712");
+        var client = new RestClient("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712");
         var request = new RestRequest(Method.GET);
         request.AddHeader("X-AUTH-TOKEN", "YOUR_API_KEY");
         IRestResponse response = client.Execute(request);
@@ -66,7 +66,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         
         func main() {
         
-            url := "https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712"
+            url := "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712"
         
             req, _ := http.NewRequest("GET", url, nil)
 
@@ -90,7 +90,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-            .url("https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712")
+            .url("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712")
             .get()
             .addHeader("X-AUTH-TOKEN", "YOUR_API_KEY")
             .build();
@@ -102,7 +102,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
     === "Java + Unirest"
       
         ```
-        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/blogpostsblogposts-456712")
+        HttpResponse<String> response = Unirest.get("https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712")
             .header("X-AUTH-TOKEN", "YOUR_API_KEY")
             .asString();
         ```

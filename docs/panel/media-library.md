@@ -29,7 +29,7 @@ When editing an image, you can now add an optional `title` and `alt` text fields
 This section gives you access to the Unsplash library of images.
 All Unsplash images are available to use for free and Flotiq takes care of the necessary attributions.
 
-In order to use images from Unsplash - you need to download them to your library first. This is a very simple operation - once you select an image you like, simply click the download icon on that image and it will momentarily appear in you `Uploaded files`.
+In order to use images from Unsplash - you need to download them to your library first. This is a very simple operation - once you select an image you like, simply click the download icon on that image and it will momentarily appear in your `Uploaded files`.
 
 ![Downloading from Unsplash](./images/MediaLibraryUnsplash.png){: .border}
 
@@ -73,7 +73,7 @@ You can manage your tags on the Tags page:
 
 The tag contains only name field.
 
-Tag editing is compatible with standard content object editing. See more in the [editing content object description](/docs/panel/content-objects/).
+Tag editing is compatible with standard content object editing. See more in the [editing content object description](ContentObjects/index.md).
 
 Mass edit is not enabled for tags, as it has only unique fields.
 

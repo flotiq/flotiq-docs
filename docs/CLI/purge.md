@@ -24,4 +24,4 @@ After running the command, all your objects should be removed.
 
 * `--withInternal` or `--internal` - purge will also remove internal type objects like (`_media`)
 
-* `--force` or `--f` - purge will remove data even if Content Types relations loop to each other.
+* `--force` or `-f` - purge will remove data even if Content Types relations loop to each other.

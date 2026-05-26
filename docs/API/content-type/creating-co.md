@@ -850,7 +850,7 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
               }
             ]
           },
-          "emain_in_subobject": "emain_in_subobject",
+          "email_in_subobject": "email_in_subobject",
           "media_in_subobject": [
             {
               "dataUrl": "/api/v1/content/_media/_media-1",
@@ -1568,7 +1568,7 @@ Trying updating one blog post and adding one new with duplicated id:
         {
             "batch_total_count": 2,
             "batch_success_count": 1,
-            "batch_error_count": 2,
+            "batch_error_count": 1,
             "errors": [
               {
                 "data": {
@@ -1591,7 +1591,7 @@ Trying updating one blog post and adding one new with duplicated id:
 Response parameters:
 
 | Parameter           | Description                                                                                                                                            |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | batch_total_count   | number of elements sent in the request, present when there are no duplications in data                                                                 |
 | batch_success_count | number of correct elements sent in the request, present when there are no duplications in data                                                         |
 | batch_error_count   | number of incorrect elements sent in the request, present when there are no duplications in data                                                       |

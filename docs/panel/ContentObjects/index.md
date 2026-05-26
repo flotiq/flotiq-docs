@@ -49,6 +49,8 @@ Flotiq provides built-in version control for content objects, allowing users to 
 
 Each time a content object is updated, a new version is automatically saved and listed in the Versions panel on the right-hand side of the editor. The version log includes the timestamp and the name of the user who made the change, which supports full transparency and encourages collaborative workflows within teams.
 
+If the editor account is deleted, version entries are preserved and remain visible as edits made by a deleted user.
+
 ![Version list](../images/VersionsList.png){: .center .border}
 
 By clicking on a version entry, you can open a Version Diff window, where the current version and the selected historical version are displayed side by side. Any changed fields are clearly highlighted. This makes it easy to review differences and decide whether to revert.
@@ -57,7 +59,7 @@ By clicking on a version entry, you can open a Version Diff window, where the cu
 
 ## Mass edit
 
-You can edit multiple object at the same time. To do that you need to select needed objects in grid and then click
+You can edit multiple objects at the same time. To do that you need to select needed objects in grid and then click
 `Mass edit selected` button that appears at `Actions` menu
 
 ![](../images/blogpost-grid-mass-edit.png){: .center .width50 .border}

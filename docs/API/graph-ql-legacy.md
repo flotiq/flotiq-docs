@@ -228,7 +228,7 @@ to modify this behavior use [preview mode](/docs/API/draft-public/draft-public/#
 While listing objects, you can use the optional parameters
 `page`, `limit`, `order_by`, `order_direction`, or `filter`.
 
-| Param name      | Param description                                                                                                                                                   | Defalut value |
+| Param name      | Param description                                                                                                                                                   | Default value |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | page            | Number of the requested page                                                                                                                                           | 20            |
 | limit           | Number of objects on page, default `20`, maximum `1000`                                                                                                                                        | 1             |

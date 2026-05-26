@@ -20,7 +20,7 @@ If you're building a JAMstack app - odds are you're not just going to use Flotiq
 
 ## Cloudflare Workers
 
-Cloudflare is a global CDN (Contend Delivery Network), which provides websites across the globe with features like anti-DDoS protection, global content distribution and the possibility to run serverless applications "on the edge".
+Cloudflare is a global CDN (Content Delivery Network), which provides websites across the globe with features like anti-DDoS protection, global content distribution and the possibility to run serverless applications "on the edge".
 
 ![](images/cloudflare-workers-edge.png)
 

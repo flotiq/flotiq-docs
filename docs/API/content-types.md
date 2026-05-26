@@ -8,7 +8,7 @@ description: How to handle Content Type Definitions in Flotiq
 
 # Content Types
 
-##API description
+## API description
 
 The CMS system API is divided into separate parts:
 
@@ -48,7 +48,7 @@ Example:
     * PostContent – string, required 
 
 
-##API token
+## API token
 
 API token (described across the documentation as `YOUR API TOKEN` or `YOUR_API_TOKEN`) should be obtained from the User profile view of the Flotiq panel. 
 All examples here have authentication in the request header, but you can also use `?auth_token=YOUR_API_TOKEN` in the request URL.

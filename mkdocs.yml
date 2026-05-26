@@ -146,6 +146,7 @@ nav:
     - 'Workflows': 'API/workflow/content-publishing-workflow.md'
   - Dashboard:
     - 'Overview': panel/index.md
+    - 'SSO': panel/sso.md
     - 'Spaces and Organization': panel/spaces.md
     - 'Content types': panel/content-types.md
     - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md

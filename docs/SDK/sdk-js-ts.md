@@ -112,3 +112,46 @@ What it does:
 - Generates dynamic pages for your existing Content Types.
 
 Learn more about [`flotiq-nextjs-setup`](https://www.npmjs.com/package/flotiq-nextjs-setup) in its npm package documentation.
+
+### Draft & Public with draftMode
+
+If your content type has **Draft & Public** enabled, you can use Next.js `draftMode()` to preview unpublished content:
+
+```typescript
+import { draftMode } from 'next/headers';
+import { Flotiq } from '@flotiq/flotiq-api-sdk';
+
+export default async function Page() {
+  const { isEnabled } = draftMode();
+  const api = new Flotiq({
+    apiKey: process.env.FLOTIQ_API_KEY
+  });
+
+  // When draft mode is enabled, pass preview headers to fetch draft content
+  const options = isEnabled ? {
+    headers: {
+      'X-MODE': 'preview'  // Flotiq header to access draft and modified content
+    }
+  } : {};
+
+  const blogposts = await api.content.blogposts.list(options);
+  
+  return (
+    <main>
+      {blogposts.data.map(post => (
+        <article key={post.id}>
+          <h1>{post.title}</h1>
+          {isEnabled && <p>Draft version</p>}
+        </article>
+      ))}
+    </main>
+  );
+}
+```
+
+**Key points:**
+
+- **X-MODE: preview** header forces Flotiq to return all content states (draft, modified, public) instead of just public
+- Without the header, only published (public) content is visible
+- Use the Content Preview plugin to quickly toggle draft mode and test your content
+- See [Draft & Public documentation](/docs/API/draft-public/draft-public/) for more state management options

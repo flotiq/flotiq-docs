@@ -6,9 +6,26 @@ tags:
 title: Content Preview plugin | Flotiq documentation
 description: The plugin generates links that let you open drafts and public versions of pages directly from the editor. With one click, users can quickly save and open the draft version, streamlining their workflow for maximum efficiency. It works best with Next.js-based sites that use draft mode.
 
-The plugin generates links that let you open drafts and public versions of pages directly from the editor. With one click, users can quickly save and open the draft version, streamlining their workflow for maximum efficiency. It works best with Next.js-based sites that use draft mode.
+# Content Preview Plugin
 
-## Installing the Thumbnails plugin
+The Content Preview plugin generates links that let you open drafts and public versions of pages directly from the editor. With one click, users can quickly save and open the draft version, streamlining their workflow for maximum efficiency. It works best with Next.js-based sites that use draft mode.
+
+## Content Preview vs Live Preview
+
+Flotiq offers two preview plugins for different use cases:
+
+| Feature              | Content Preview                            | Live Preview                        |
+|----------------------|--------------------------------------------|-------------------------------------|
+| **Preview type**     | Static link to draft page                  | Real-time websocket stream          |
+| **Updates**          | Manual - refresh to see changes            | Automatic - updates as you type     |
+| **Technology**       | Static HTTP link                           | WebSocket connection                |
+| **Setup complexity** | Simple - just configure URL template       | Requires npm package integration    |
+| **Use case**         | Quick draft verification, simple workflows | Real-time editing with live preview |
+| **Performance**      | Lower bandwidth, no ongoing connection     | Continuous connection required      |
+
+Choose **Content Preview** if you need a simple way to preview your draft content. Choose **Live Preview** if you want real-time synchronization between your editor and website.
+
+## Installing the Content Preview Plugin
 
 Find in the right sidebar panel `Plugins` and select.
 

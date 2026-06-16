@@ -148,6 +148,7 @@ export default async function Page() {
   );
 }
 ```
+{ data-search-exclude }
 
 **Key points:**
 

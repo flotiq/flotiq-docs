@@ -165,13 +165,11 @@ Form generated for Blog Post:
 
 ![](images/BlogPostForm.png){: .center .width75 .border}
 
-Gatsby starter for blog post:
+Next.js starter for blog post:
 
-[GitHub](https://github.com/flotiq/flotiq-gatsby-blog-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-nextjs-blog-1){:target="_blank"}
 
-Scully starter for blog post:
-
-[GitHub](https://github.com/flotiq/scully-blog-starter){:target="_blank"}
+[Working example](https://flotiq-nextjs-blog.netlify.app){:target="_blank"}
 
 
 Documentation examples:
@@ -352,17 +350,11 @@ Form generated for Event:
 ![](images/EventForm.png){: .center .width75 .border}
 
 
-Gatsby starter for event calendar:
+Next.js starter for event calendar:
 
-[GitHub](https://github.com/flotiq/flotiq-gatsby-event-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-nextjs-event-2){:target="_blank"}
 
-[Working example](https://flotiqgatsbyevent1.gatsbyjs.io/){:target="_blank"}
-
-Scully starter for event calendar:
-
-[GitHub](https://github.com/flotiq/scully-event-calendar-starter){:target="_blank"}
-
-[Working example](https://awesome-sammet-8accee.netlify.app/){:target="_blank"}
+[Working example](https://flotiq-nextjs-event-2.netlify.app){:target="_blank"}
 
 Documentation examples:
 
@@ -503,17 +495,11 @@ Form generated for Product:
 ![](images/ProductForm.png){: .center .width75 .border}
 
 
-Gatsby starter for products:
+Next.js starter for products:
 
-[GitHub](https://github.com/flotiq/flotiq-gatsby-shop-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-nextjs-shop-2){:target="_blank"}
 
-[Working example](https://flotiqgatsbyshop1.gatsbyjs.io/){:target="_blank"}
-
-Scully starter for products:
-
-[GitHub](https://github.com/flotiq/scully-products-starter){:target="_blank"}
-
-[Working example](https://competent-visvesvaraya-bb732c.netlify.app/){:target="_blank"}
+[Working example](https://flotiq-nextjs-shop-2.netlify.app){:target="_blank"}
 
 Documentation examples:
 
@@ -669,17 +655,11 @@ Form generated for Project:
 
 ![](images/ProjectForm.png){: .center .width75 .border}
 
-Gatsby starter for projects:
+Next.js starter for projects:
 
-[GitHub](https://github.com/flotiq/flotiq-gatsby-portfolio-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-nextjs-portfolio-2){:target="_blank"}
 
-[Working example](https://flotiqgatsbyportfolio1.gatsbyjs.io/){:target="_blank"}
-
-Scully starter for projects:
-
-[GitHub](https://github.com/flotiq/scully-projects-starter){:target="_blank"}
-
-[Working example](https://angry-brattain-f446a1.netlify.app/){:target="_blank"}
+[Working example](https://flotiq-nextjs-portfolio-2.netlify.app){:target="_blank"}
 
 Documentation examples:
 
@@ -947,17 +927,11 @@ Form generated for Recipe:
 ![](images/RecipeForm.png){: .center .width75 .border}
 
 
-Gatsby starter for recipes:
+Next.js starter for recipes:
 
-[GitHub](https://github.com/flotiq/flotiq-gatsby-recipe-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-nextjs-recipe-2){:target="_blank"}
 
-[Working example](https://flotiqgatsbyrecipe1.gatsbyjs.io/){:target="_blank"}
-
-Scully starter for recipes:
-
-[GitHub](https://github.com/flotiq/scully-recipes-starter){:target="_blank"}
-
-[Working example](https://vibrant-mclean-8da635.netlify.app/){:target="_blank"}
+[Working example](https://flotiq-nextjs-recipe-2.netlify.app/){:target="_blank"}
 
 Documentation examples:
 

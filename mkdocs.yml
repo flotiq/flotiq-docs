@@ -179,7 +179,6 @@ nav:
       - 'Content Preview': panel/Plugins/Content-preview.md
       - 'Cloudflare Stream': panel/Plugins/Cloudflare-stream.md
       - 'Singleton Types': panel/Plugins/Singleton-types.md
-      - 'Thumbnails': panel/Plugins/Thumbnails.md
       - 'Google Search Console': panel/Plugins/Google-search-console.md
       - 'Kanban Board': panel/Plugins/Kanban-board.md
       - 'ChatGPT FAQ Generator': panel/Plugins/ChatGPT-faq-generator.md

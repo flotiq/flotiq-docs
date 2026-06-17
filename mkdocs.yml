@@ -159,6 +159,7 @@ nav:
     - 'Media library': panel/media-library.md
     - 'Users': panel/users.md
     - 'User Roles': panel/user-roles.md
+    - 'Support issue reporting': panel/support-issue-reporting.md
     - Webhooks:
       - 'Overview': panel/webhooks/index.md
       - 'Async CO webhooks': panel/webhooks/async-co-webhook.md

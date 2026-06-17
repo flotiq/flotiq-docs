@@ -8,8 +8,8 @@ description: Get started with integrating Flotiq API into your application.
 
 !!! note "Before you begin, make sure you have the following:"
     * Flotiq Account: Sign up for an account on [Flotiq website](https://www.flotiq.com/){target="_blank"} if you haven't already.
-    * Content Types: Make sure you have already created the necessary [Content Type Definitions](https://editor.flotiq.com/content-type-definitions){target="_blank"} in your Flotiq account. It should contain at least one Content Object.
-    * API Key: Obtain your Application Read and Write API Key from the [Flotiq dashboard](https://editor.flotiq.com/api-keys){target="_blank"}. You'll need it to perform API operations.
+    * Content Types: Make sure you have already created the necessary [Content Type Definitions](/docs/panel/content-types/). It should contain at least one Content Object.
+    * API Key: Obtain your Application Read and Write API Key from [API access and scoped keys](/docs/API/#application-api-keys). You'll need it to perform API operations.
     * Basic understanding of RESTful APIs: Familiarize yourself with the concepts of [RESTful APIs](https://restfulapi.net/){target="_blank"} if you're new to this.
     
 

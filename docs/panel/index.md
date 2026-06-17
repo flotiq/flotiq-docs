@@ -59,5 +59,5 @@ Follow these resources to learn more about Flotiq:
 
 - [how to create Content Type Definitions](./content-types/)
 - [how to retrieve your API keys](../API/)
-- [how to use Unsplash in Flotiq](./media-library/)
+- [how to use Unsplash in Flotiq](./media-library/#stock-photos)
 - [how to report a support issue in the Panel](./support-issue-reporting/)

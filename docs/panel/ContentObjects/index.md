@@ -57,6 +57,18 @@ By clicking on a version entry, you can open a Version Diff window, where the cu
 
 ![Version diff](../images/VersionDiff.png){: .center .border}
 
+## Thumbnails in content object grids
+
+Flotiq displays image thumbnails directly in the content object grid for any content type that includes a media field.
+No plugin or extra configuration is required.
+
+When a content object contains an image, the grid shows a preview thumbnail instead of a generic link icon.
+Clicking the thumbnail opens a modal with a larger version of the image.
+
+![Thumbnails in Flotiq content object grid](../images/thumbnails/grid.png){: .center .width75 .border}
+
+![Thumbnail modal in Flotiq](../images/thumbnails/modal.png){: .center .width75 .border}
+
 ## Mass edit
 
 You can edit multiple objects at the same time. To do that you need to select needed objects in grid and then click

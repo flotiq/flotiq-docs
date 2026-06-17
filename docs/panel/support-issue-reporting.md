@@ -14,8 +14,9 @@ Your message goes directly to Support.
 ## Open the issue form
 
 1. In the Panel, go to `Help Center -> Send message`.
-   ![Report issue menu placement](images/SupportIssueMenuPlacement.png){: .border}
 2. The report issue window opens.
+
+![Report issue menu placement](images/SupportIssueMenuPlacement.png){: .border .center}
 
 ## Fill in the form
 
@@ -27,7 +28,7 @@ Add the details below:
     - how to repeat the issue (step by step).
 - `Attachment` (optional) - add files (PDF, PNG, or JPG), up to 10 MB.
 
-![Report issue modal](images/SupportIssueModal.png){: .border}
+![Report issue modal](images/SupportIssueModal.png){: .border .width75 .center}
 
 For faster help, include names of pages, content types, or objects related to the issue.
 

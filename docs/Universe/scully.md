@@ -12,47 +12,13 @@ description: Scully starters are no longer supported. Use Next.js starters for a
     Scully starter projects are no longer supported.
     Use the [Next.js starters](/docs/Universe/nextjs/nextjs-starters/) for active support.
 
-Scully is a static page generator using Angular.
+Legacy Scully repositories are still available for reference:
 
-## Starter for the simple blog
-
-Scully starter for creating a blog with Flotiq
-
-![](images/scully/flotiq-starter-blogposts.png){: .center .width75 .border}
-
-[GitHub](https://github.com/flotiq/scully-blog-starter){:target="_blank"}
-
-## Starter for event calendar
-
-Scully starter for creating an events calendar with Flotiq
-
-![](images/scully/home.png){: .center .width75 .border}
-
-[GitHub](https://github.com/flotiq/scully-event-calendar-starter){:target="_blank"}
-
-## Starter for products
-
-E-commerce starter for Flotiq with Angular and Scully
-
-![](images/scully/flotiq-starter-products.png){: .center .width75 .border}
-
-[GitHub](https://github.com/flotiq/scully-products-starter){:target="_blank"}
-
-## Starter for projects
-
-Scully starter for creating a projects portfolio with Flotiq
-
-![](images/scully/flotiq-starter-projects.png){: .center .width75 .border}
-
-[GitHub](https://github.com/flotiq/scully-projects-starter){:target="_blank"}
-
-## Starter for recipes
-
-Beautiful recipes website boilerplate project using Scully and Flotiq
-
-![](images/scully/Scully-Recipes-Starter.png){: .center .width75 .border}
-
-[GitHub](https://github.com/flotiq/scully-recipes-starter){:target="_blank"}
+* [scully-blog-starter](https://github.com/flotiq/scully-blog-starter){:target="_blank"}
+* [scully-event-calendar-starter](https://github.com/flotiq/scully-event-calendar-starter){:target="_blank"}
+* [scully-products-starter](https://github.com/flotiq/scully-products-starter){:target="_blank"}
+* [scully-projects-starter](https://github.com/flotiq/scully-projects-starter){:target="_blank"}
+* [scully-recipes-starter](https://github.com/flotiq/scully-recipes-starter){:target="_blank"}
 
 
 

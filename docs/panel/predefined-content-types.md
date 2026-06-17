@@ -169,7 +169,7 @@ Next.js starter for blog post:
 
 [GitHub](https://github.com/flotiq/flotiq-nextjs-blog-1){:target="_blank"}
 
-[Working example](https://flotiq-nextjs-blog.netlify.app){:target="_blank"}
+[Working example](https://flotiq-nextjs-blog-1.netlify.app){:target="_blank"}
 
 
 Documentation examples:

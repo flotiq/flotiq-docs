@@ -8,7 +8,12 @@ description: Read this tutorial to learn how you can use Cloudflare workers to a
 
 # How to add custom domains to free Heroku apps
 
-Heroku is pretty great for hosting websites and their `Deploy to Heroku` buttons are so awesome, especially with how they can be integrated with static website generators, like Gatsby. Heroku's free account is also quite capable, you are allowed to deploy up to 5 applications, hosted in their `*.herokuapp.com` domain. But, as soon as you'd like to move this app to a custom domain - you have to pay. If you've already built and deployed your blog, for example using [this tutorial](../Building-a-blog-in-3-minutes/) your next step will probably be adding a custom domain for your blog.
+!!! caution
+    Heroku removed its free plan in November 2022.
+
+    This article is legacy documentation. The approach still works only for paid Heroku apps.
+
+Heroku is a popular hosting platform, and `Deploy to Heroku` buttons can integrate with static website generators such as Gatsby. This article was originally written for the old free Heroku plan and custom domain limitations from that period. If you've already built and deployed your blog, for example using [this tutorial](../Building-a-blog-in-3-minutes/), this guide explains the historical workaround that was used.
 
 Here's a quick tutorial how to get around this, with Cloudflare Workers.
 

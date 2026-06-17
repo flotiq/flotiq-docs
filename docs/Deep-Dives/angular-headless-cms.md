@@ -3,10 +3,15 @@ tags:
   - Developer
 ---
 
-title: Angular 9 and Flotiq headless CMS - getting started with your custom application using Angular 8 generated package in Flotiq.
-description: Start building your Angular 9 app quickly with an SDK package generated in Flotiq.
+title: Angular 9 and Flotiq headless CMS (legacy guide)
+description: Legacy guide for Angular 9 projects using an SDK package generated in Flotiq.
 
 # Angular 9 with Flotiq SDK
+
+!!! caution
+    This tutorial targets Angular 9 and uses an `@NgModule`-based setup.
+
+    In Angular 14+ projects, standalone components are common and many apps are no longer centered on `NgModule`. Adapt module/bootstrap steps to your current Angular version.
 
 ## Overview
 

@@ -15,18 +15,26 @@ We use one of our starters as an example, so you might want to check them out, c
 3. **Website, sourcing content from Flotiq.**
 
 !!! info
-You might want to try one of our starters, which already comes with predefined content:
+    You might want to try one of our starters, which already comes with predefined content:
 
-* [Recipe website Gatsby starter](https://github.com/flotiq/flotiq-gatsby-recipe-1)
-* [Event calendar Gatsby starter](https://github.com/flotiq/flotiq-gatsby-event-1)
-* [Project portfolio Gatsby starter](https://github.com/flotiq/flotiq-gatsby-portfolio-1)
-* [Simple blog Gatsby starter](https://github.com/flotiq/flotiq-gatsby-blog-1)
-* [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/flotiq-gatsby-shop-1)
-* [Snipcart and Next.js, sourcing products from Flotiq](https://github.com/flotiq/snipcart-nextjs)
-* [Snipcart and Angular with Scully, sourcing products from Flotiq](https://github.com/flotiq/scully-products-starter)
-* [Simple blog using Angular with Scully](https://github.com/flotiq/scully-blog-starter)
+    Active examples:
 
-These starters all come with detailed READMEs and a one-line content import command, be sure to check those!
+    * [Snipcart and Next.js, sourcing products from Flotiq](https://github.com/flotiq/snipcart-nextjs)
+
+    Legacy Scully examples:
+    
+    * [Snipcart and Angular with Scully, sourcing products from Flotiq](https://github.com/flotiq/scully-products-starter)
+    * [Simple blog using Angular with Scully](https://github.com/flotiq/scully-blog-starter)
+
+    Legacy Gatsby examples:
+
+    * [Recipe website Gatsby starter](https://github.com/flotiq/flotiq-gatsby-recipe-1)
+    * [Event calendar Gatsby starter](https://github.com/flotiq/flotiq-gatsby-event-1)
+    * [Project portfolio Gatsby starter](https://github.com/flotiq/flotiq-gatsby-portfolio-1)
+    * [Simple blog Gatsby starter](https://github.com/flotiq/flotiq-gatsby-blog-1)
+    * [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/flotiq-gatsby-shop-1)
+
+    These starters come with detailed READMEs and a one-line content import command.
 
 ## Signing in to Netlify
 
@@ -90,10 +98,12 @@ Copy the Read-Only key and paste it into Netlify settings as **GATSBY_FLOTIQ_API
 
 !!! Note
 
-    Flotiq doesn't enforce any particular way of selecting drafts or non-public versions of your pages. The Read-Only key you copied will give you access to all your content. If you'd like to set up draft and public versions of your pages - you can do so by adding an extra field to your content types and querying for it in your GraphQL queries.
+    Flotiq now includes a built-in Draft & Public workflow.
 
-    ## Installing the Netlify plugin
+    The Read-Only key you copied can access content according to your API key scope and publication state. You do not need to add a custom status field to model draft/public content.
 
-    Flotiq Netlify plugin allows you to trigger Netlify builds within Content Objects forms. You will also be able to quickly navigate to your Netlify pages from the Flotiq content editor.
+## Installing the Netlify plugin
 
-    [Netlify Integration](https://flotiq.com/docs/panel/Plugins/Netlify-integration/)
+Flotiq Netlify plugin allows you to trigger Netlify builds within Content Objects forms. You will also be able to quickly navigate to your Netlify pages from the Flotiq content editor.
+
+[Netlify Integration](https://flotiq.com/docs/panel/Plugins/Netlify-integration/)

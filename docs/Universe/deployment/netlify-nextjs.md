@@ -89,10 +89,12 @@ Copy the Read-Only key and paste it into Netlify settings as **FLOTIQ_API_KEY**.
 
 !!! Note
 
-    Flotiq doesn't enforce any particular way of selecting drafts or non-public versions of your pages. The Read-Only key you copied will give you access to all your content. If you'd like to set up draft and public versions of your pages - you can do so by adding an extra field to your content types and querying for it in your GraphQL queries.
+    Flotiq now includes a built-in Draft & Public workflow.
 
-    ## Installing the Netlify plugin
+    The Read-Only key you copied can access content according to your API key scope and publication state. You do not need to add a custom status field to model draft/public content.
 
-    Flotiq Netlify plugin allows you to trigger Netlify builds within Content Objects forms. You will also be able to quickly navigate to your Netlify pages from the Flotiq content editor.
+## Installing the Netlify plugin
 
-    [Netlify Integration](https://flotiq.com/docs/panel/Plugins/Netlify-integration/)
+Flotiq Netlify plugin allows you to trigger Netlify builds within Content Objects forms. You will also be able to quickly navigate to your Netlify pages from the Flotiq content editor.
+
+[Netlify Integration](https://flotiq.com/docs/panel/Plugins/Netlify-integration/)

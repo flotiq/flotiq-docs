@@ -69,13 +69,14 @@ We offer a number of SDKs, that are also automatically generated based on your c
 
 We currently support the following SDKs:
 
+* Angular
+* C#
+* Go
+* Java
+* JavaScript
+* TypeScript
 * PHP
 * Python
-* Java
-* Go
-* C#
-* Node.js
-* Angular
 
 ## Postman collection
 
@@ -83,4 +84,4 @@ In a similar fashion - we also provide a downloadable Postman collection, which 
 
 ![](images/postman.jpeg){: .border}
 
-Read more on how to configure Postman to work with Flotiq in [Postman Sandbox Packages](../Universe/postman.md)
+Read more on how to configure Postman to work with Flotiq on the [Postman Sandbox Packages page](/docs/Universe/postman/).

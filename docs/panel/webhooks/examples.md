@@ -11,75 +11,22 @@ description: How to use webhooks in Flotiq - examples
 As we said, webhooks can help with many scenarios.
 Check out our examples and use them in your projects or treat them as a signpost for your work:
 
-1. [Trigger a Gatsby preview when site content was changed](#1-trigger-a-gatsby-preview-when-site-content-was-changed).
-2. [Trigger a Gatsby production build when a `Build production` button was clicked](#2-trigger-a-gatsby-production-build-when-a-build-production-button-was-clicked).
-3. [Trigger a Netlify build when a `Build site` button was clicked](#3-trigger-a-netlify-build-when-a-build-site-button-was-clicked).
-4. [Send a RocketChat notification when the contact form was submitted](#4-send-a-rocketchat-notification-when-the-contact-form-was-submitted).
-5. [Trigger AWS Lambda serverless function when entry is changed](#5-trigger-aws-lambda-serverless-function-when-entry-is-changed).
+1. [Trigger a Netlify build when a `Build site` button was clicked](#1-trigger-a-netlify-build-when-a-build-site-button-was-clicked).
+2. [Send a RocketChat notification when the contact form was submitted](#2-send-a-rocketchat-notification-when-the-contact-form-was-submitted).
+3. [Trigger AWS Lambda serverless function when entry is changed](#3-trigger-aws-lambda-serverless-function-when-entry-is-changed).
+4. [Legacy: Trigger a Gatsby preview when site content was changed](#4-legacy-trigger-a-gatsby-preview-when-site-content-was-changed).
+5. [Legacy: Trigger a Gatsby production build when a `Build production` button was clicked](#5-legacy-trigger-a-gatsby-production-build-when-a-build-production-button-was-clicked).
 
 !!! Note
     If you are new in webhooks, read the [Flotiq Webhooks introduction](/docs/panel/webhooks/) first.
 
 !!! caution
-    **Due to the [ending availability of Gatsby Cloud](https://www.netlify.com/blog/gatsby-cloud-evolution/),
-    examples 1 and 2 are outdated and no longer applicable.**
+    **Gatsby Cloud was shut down by Netlify in 2023, so examples 4 and 5 are legacy and no longer applicable for new projects.**
 
-    We recommend using the [Netlify build hook](#3-trigger-a-netlify-build-when-a-build-site-button-was-clicked)
-    as an alternative (see example 3 below).
+    We recommend using the [Netlify build hook](#1-trigger-a-netlify-build-when-a-build-site-button-was-clicked)
+    as an alternative (see example 1 below).
 
-## 1. Trigger a Gatsby preview when site content was changed
-
-Prerequisites:
-We assume, that you have `Product` Content Type Definition in Flotiq.
-
-In the [Gatsby Cloud](https://www.gatsbyjs.com/dashboard) dashboard:
-
-1. Go to your site settings.
-2. In the `General` -> `Webhook` menu find a `Preview` webhook URL:
-   ![](../images/webhooks/examples/gatsby/gatsby-cloud-a.png){: .border .mt5}
-
-In the [Flotiq](https://editor.flotiq.com) dashboard:
-
-1. Go to the `Webhooks` page and click `Add new webhook`.
-2. Name the webhook (e.g. `Gatsby Preview`) and paste obtained `Preview` URL as a webhook `URL`.
-3. As a trigger, choose `Create`, `Update` and `Delete` actions on the `Product` and save the webhook:
-   ![](../images/webhooks/examples/gatsby/gatsby-cloud-2.png){: .border .width75 .center .mt5}
-
-### Check the result
-
-After the `Create`, `Update`, `Delete` action on the `Product`, Gatsby Cloud Preview will be triggered automatically.
-
-![](../images/webhooks/examples/gatsby/gatsby-cloud-5b.png){: .border}
-
-## 2. Trigger a Gatsby production build when a Build production button was clicked
-
-Prerequisites:
-We assume, that you have `Blog Post` Content Type Definition in Flotiq.
-
-In the [Gatsby Cloud](https://www.gatsbyjs.com/dashboard) dashboard:
-
-1. Go to your site settings.
-2. In the `General` -> `Webhook` menu find a `Builds` webhook URL:
-   ![](../images/webhooks/examples/gatsby/gatsby-cloud-b.png){: .border .mt5}
-
-In the [Flotiq](https://editor.flotiq.com) dashboard:
-
-1. Go to the `Webhooks` page and click `Add new webhook`.
-2. Name the webhook (e.g. `Gatsby Build Production`) and paste obtained `Builds` URL as a webhook `URL`.
-3. As a trigger, choose `Custom` action on the `Blog Post` and save the webhook:
-   ![](../images/webhooks/examples/gatsby/gatsby-cloud-3.png){: .border .width75 .center .mt5}
-
-### Check the result
-
-Now, the `Gatsby Build Production` webhook button will be available in the Edit `Blog Post` form.
-
-![](../images/webhooks/examples/gatsby/gatsby-cloud-4.png){: .border}
-
-After clicking the `Gatsby Build Production` button in Flotiq, the Gatsby Production build will be triggered:
-
-![](../images/webhooks/examples/gatsby/gatsby-cloud-5.png){: .border}
-
-## 3. Trigger a Netlify build when a Build site button was clicked
+## 1. Trigger a Netlify build when a Build site button was clicked
 
 Prerequisites:
 We assume, that you have `Blog Post` Content Type Definition in Flotiq.
@@ -114,7 +61,7 @@ After clicking the `Netlify Build` button in Flotiq, the Netlify build will be t
 !!! Note
     Choosing actions `Create`, `Update`, `Delete`, the build will be triggered automatically. The button `Netlify Build` is visible only when you choose a `Custom` trigger.
 
-## 4. Send a RocketChat notification when the contact form was submitted.
+## 2. Send a RocketChat notification when the contact form was submitted.
 
 Prerequisites:
 We assume, that you have `Contact Form` Content Type Definition in Flotiq with the `message` attribute.
@@ -159,7 +106,7 @@ After the `Create` action on the `Contact Form` (or submitting Contact Form base
 ![](../images/webhooks/examples/rocket/rocket-3.png){: .border}
 
 
-## 5. Trigger AWS Lambda serverless function when entry is changed
+## 3. Trigger AWS Lambda serverless function when entry is changed
 
 To integrate Flotiq Webhooks and AWS Lambda follow the steps below:
 
@@ -182,6 +129,62 @@ Now you can use the received payload to implement your own business logic.
     This is a simple example without authentication.
     You can add it by yourself or [set up API keys using AWS](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-setup-api-key-with-console.html).
     that allows you to track the API Keys usage, throttle the requests or use a quota for your applications.
+
+## 4. Legacy: Trigger a Gatsby preview when site content was changed
+
+This workflow is kept for historical reference only. Gatsby Cloud screenshots in this section are outdated.
+
+Prerequisites:
+We assume, that you have `Product` Content Type Definition in Flotiq.
+
+In the [Gatsby Cloud](https://www.gatsbyjs.com/dashboard) dashboard:
+
+1. Go to your site settings.
+2. In the `General` -> `Webhook` menu find a `Preview` webhook URL:
+   ![](../images/webhooks/examples/gatsby/gatsby-cloud-a.png){: .border .mt5}
+
+In the [Flotiq](https://editor.flotiq.com) dashboard:
+
+1. Go to the `Webhooks` page and click `Add new webhook`.
+2. Name the webhook (e.g. `Gatsby Preview`) and paste obtained `Preview` URL as a webhook `URL`.
+3. As a trigger, choose `Create`, `Update` and `Delete` actions on the `Product` and save the webhook:
+   ![](../images/webhooks/examples/gatsby/gatsby-cloud-2.png){: .border .width75 .center .mt5}
+
+### Check the result
+
+After the `Create`, `Update`, `Delete` action on the `Product`, Gatsby Cloud Preview will be triggered automatically.
+
+![](../images/webhooks/examples/gatsby/gatsby-cloud-5b.png){: .border}
+
+## 5. Legacy: Trigger a Gatsby production build when a Build production button was clicked
+
+This workflow is kept for historical reference only. Gatsby Cloud screenshots in this section are outdated.
+
+Prerequisites:
+We assume, that you have `Blog Post` Content Type Definition in Flotiq.
+
+In the [Gatsby Cloud](https://www.gatsbyjs.com/dashboard) dashboard:
+
+1. Go to your site settings.
+2. In the `General` -> `Webhook` menu find a `Builds` webhook URL:
+   ![](../images/webhooks/examples/gatsby/gatsby-cloud-b.png){: .border .mt5}
+
+In the [Flotiq](https://editor.flotiq.com) dashboard:
+
+1. Go to the `Webhooks` page and click `Add new webhook`.
+2. Name the webhook (e.g. `Gatsby Build Production`) and paste obtained `Builds` URL as a webhook `URL`.
+3. As a trigger, choose `Custom` action on the `Blog Post` and save the webhook:
+   ![](../images/webhooks/examples/gatsby/gatsby-cloud-3.png){: .border .width75 .center .mt5}
+
+### Check the result
+
+Now, the `Gatsby Build Production` webhook button will be available in the Edit `Blog Post` form.
+
+![](../images/webhooks/examples/gatsby/gatsby-cloud-4.png){: .border}
+
+After clicking the `Gatsby Build Production` button in Flotiq, the Gatsby Production build will be triggered:
+
+![](../images/webhooks/examples/gatsby/gatsby-cloud-5.png){: .border}
 
 
 [Register to create your first webhook](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

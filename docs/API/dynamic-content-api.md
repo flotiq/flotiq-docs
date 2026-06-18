@@ -8,7 +8,30 @@ description: Flotiq's Dynamic Content API offers a flexible way to interact with
 
 # Dynamic Content API
 
-The Dynamic Content API is how Flotiq provides you with access to your content. For every Content Type you define - Flotiq will provide a set of RESTful endpoints that allow you to interact with your content, all based on the Content Type Definition you provided, either through the UI or through the API.
+## What is the Dynamic Content API?
+
+The Dynamic Content API is Flotiq's primary interface for accessing your content. Unlike the internal system API (which manages Content Type Definitions), the Dynamic Content API is the **user-facing API** that provides RESTful endpoints automatically generated from your custom Content Type Definitions.
+
+Every time you create a new Content Type Definition, Flotiq instantly generates a complete set of REST endpoints for that type. This means your API grows dynamically with your content model. For example, if you define a "Blog Post" content type, the system automatically creates endpoints like:
+
+* `GET /api/v1/content/blogposts` - List all blog posts
+* `GET /api/v1/content/blogposts/{id}` - Get a specific blog post
+* `POST /api/v1/content/blogposts` - Create a new blog post
+* `PATCH /api/v1/content/blogposts/{id}` - Update a blog post
+* `DELETE /api/v1/content/blogposts/{id}` - Delete a blog post
+
+## Internal API vs Dynamic Content API
+
+Flotiq's API is divided into two parts:
+
+| Feature       | Internal API                                         | Dynamic Content API                               |
+|---------------|------------------------------------------------------|---------------------------------------------------|
+| **Purpose**   | Define and manage Content Type Definitions (schemas) | Access and manipulate your content objects (data) |
+| **Endpoint**  | `/api/v1/internal/contenttype`                       | `/api/v1/content/{type}/{id}`                     |
+| **Use case**  | Setup and administration                             | Application development and content delivery      |
+| **Generated** | Static, fixed structure                              | Dynamic, generated from your content types        |
+
+The Dynamic Content API is designed for developers building applications that consume your content. It is the endpoint you will use most frequently in your projects.
 
 !!! hint
     Remember - to work with the API you will need your API keys, you can find them in your User profile.

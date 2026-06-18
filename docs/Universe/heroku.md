@@ -8,9 +8,14 @@ description: Deploy Next.js starter to Heroku
 
 # Deploy a NextJS to Heroku
 
-Flotiq Team prepared a few starters. They use frameworks like gatsby and NextJS.
-Such starters can be hosted on many popular, often free clouds.
-This post will guide you through the deployment process for one of the popular free clouds, Heroku.
+!!! caution
+    Heroku removed its free plan in November 2022. This tutorial is now a legacy guide and requires a paid Heroku app.
+
+    For free hosting, use alternatives such as Netlify or Vercel.
+
+Flotiq Team prepared a few starters. They use frameworks like Gatsby and NextJS.
+Such starters can be hosted on many popular clouds.
+This post guides you through deployment to Heroku.
 An example will be a starter written in the NextJS framework.
 
 ## Before start

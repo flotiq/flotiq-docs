@@ -17,16 +17,22 @@ We use one of our starters as an example, so you might want to check them out, c
 !!! info
     You might want to try one of our starters, which already comes with predefined content:
 
+    * [Snipcart and Next.js, sourcing products from Flotiq](https://github.com/flotiq/snipcart-nextjs)
+
+    Legacy Scully examples:  
+
+    * [Snipcart and Angular with Scully, sourcing products from Flotiq](https://github.com/flotiq/scully-products-starter)
+    * [Simple blog using Angular with Scully](https://github.com/flotiq/scully-blog-starter)
+
+    Legacy Gatsby examples:
+
     * [Recipe website Gatsby starter](https://github.com/flotiq/flotiq-gatsby-recipe-1)
     * [Event calendar Gatsby starter](https://github.com/flotiq/flotiq-gatsby-event-1)
     * [Project portfolio Gatsby starter](https://github.com/flotiq/flotiq-gatsby-portfolio-1)
     * [Simple blog Gatsby starter](https://github.com/flotiq/flotiq-gatsby-blog-1)
     * [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/flotiq-gatsby-shop-1)
-    * [Snipcart and Next.js, sourcing products from Flotiq](https://github.com/flotiq/snipcart-nextjs)
-    * [Snipcart and Angular with Scully, sourcing products from Flotiq](https://github.com/flotiq/scully-products-starter)
-    * [Simple blog using Angular with Scully](https://github.com/flotiq/scully-blog-starter)
 
-    These starters all come with detailed READMEs and a one-line content import command, be sure to check those!
+    These starters come with detailed READMEs and a one-line content import command.
 
 ## Signing in to Vercel
 

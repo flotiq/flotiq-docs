@@ -226,6 +226,9 @@ In order to use cascade action use `?hydrate=<value>` query parameter, exactly h
     ```
     { data-search-exclude }
 
+!!! warning
+    The batch endpoints does not support cascade actions.
+
 The max depth of the relation-chain that the system will scan for Draft&Public objects with relation to the object in request is defined by the value for `hydrate` query parameter, for example `hydrate=1` will make Flotiq use the draft&public action on the target objects and it's related objects, but not further nested relations.
 
 !!! Note

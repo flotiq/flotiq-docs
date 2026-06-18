@@ -44,9 +44,10 @@ Below is a list of each status with a brief explanation:
     **In the Dashboard, all content types will be visible** regardless of their status, unlike in the API.
     Read more about [Draft & Public API](/docs/API/draft-public/draft-public).
 
-### Mass publishing
+### Mass actions
 In the content browser, objects of a type with draft & public mode enabled have access to bulk status change options.
-![GridBatchPublishingActionMenu.png](../images/GridBatchPublishingActionMenu.png){: .center .width75 .border}
+
+![GridBatchPublishingActionMenu.png](../images/GridBatchPublishingActionMenu.png){: .center .width50 .border}
 
 !!! Note
     A bulk status change to, for example, `public` will move all selected objects to that state, regardless of their current status.
@@ -59,12 +60,27 @@ This can be achieved by clicking the green **Publish** button located in the too
 ![Publishing object](../images/co-form/draftpublic/publish-draft.png){: .center .width75 .border}
 
 !!! Note
-    Now object  will have the status `public` and will be visible, by default in the [listing API](/docs/API/draft-public/draft-public).
+    Now object will have the status `public` and will be visible, by default in the [listing API](/docs/API/draft-public/draft-public).
 
-Or by selecting it on the content browser and clicking `Actions` and then `Publish` button:
+#### Mass publishing
 
-![GridMassPublish](../images/GridMassPublish.png){: .center .width75 .border}
+You can also publish multiple objects by selecting them in the content objects table and clicking `Actions` and then `Publish`:
 
+![GridMassPublish](../images/GridMassPublish.png){: .center .width50 .border}
+
+If selected objects have relations to other objects that are not public yet, Flotiq may display an additional warning
+modal: **You have unpublished objects**. This means that the selected objects reference content that has not been
+published yet, and you need to decide how Flotiq should handle those related objects. Read more about this choice in the
+[Cascading publication](#cascading-publication) section.
+
+!!! note
+    For a single object, Flotiq may show a detailed list of related unpublished content. For multiple selected objects,
+    Flotiq shows a general message because the full list could be long and difficult to read.
+
+!!! warning
+    When you select a large number of objects (>20), Flotiq does not check objects references before publication. Instead, it informs you
+    that you are publishing many objects and asks whether you also want to publish their related unpublished content if such
+    content exists.
 
 #### Cascading publication
 
@@ -90,9 +106,11 @@ you can use the **Unpublish** button located in the Extras menu.
 !!! Note
     Now object will be reverted from `public` state into the `draft` and will not be visible, by default in the [listing API](/docs/API/draft-public/draft-public).
 
-Or by selecting it on the content browser and clicking `Actions` and then `Unpublish` button:
+#### Mass unpublishing
 
-![GridMassUnpublish.png](../images/GridMassUnpublish.png){: .center .width75 .border}
+You can also unpublish multiple objects by selecting them in the content objects table and clicking `Actions` and then `Unpublish`:
+
+![GridMassUnpublish.png](../images/GridMassUnpublish.png){: .center .width50 .border}
 
 
 ### Archiving content
@@ -105,9 +123,11 @@ you can use the **Archive** button located in the Extras menu.
 !!! Note
     Now object will have the status `archived` and will not be visible, by default in the [listing API](/docs/API/draft-public/draft-public).
 
-Or by selecting it on the content browser and clicking `Actions` and then `Archive` button:
+#### Mass archiving
 
-![GridMassArchive.png](../images/GridMassArchive.png){: .center .width75 .border}
+You can also archive multiple objects by selecting them in the content objects table and clicking `Actions` and then `Archive`:
+
+![GridMassArchive.png](../images/GridMassArchive.png){: .center .width50 .border}
 
 ### Restoring archived content
 

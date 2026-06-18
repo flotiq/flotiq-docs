@@ -570,7 +570,28 @@ You can use every type of property multiple times across the Content Type Defini
 
 ### Meta definition properties types
 
+!!! note "Common properties for all input types"
+    The following properties are available for most input types unless stated otherwise:
+    
+    * **label** (string, required) - Human-friendly name of the field
+    * **unique** (bool, optional) - Whether the field value should be unique across all objects of this type
+    * **isTitlePart** (bool, optional) - Whether this field should be displayed when listing objects in relation select
+    * **helpText** (string, optional) - Help text shown in the dashboard and OpenAPI documentation
+    * **hidden** (bool, optional) - Whether the field should be hidden from the dashboard UI
+    * **readonly** (bool, optional) - Whether the field cannot be modified in the dashboard (API users can still edit)
+
 Input types of properties in `metaDefinition`:
+
+**Summary of available input types:**
+
+- **Text inputs**: `text`, `textarea`, `markdown`, `richtext`, `email`, `number`, `dateTime` - support common properties + type-specific options
+- **Selection inputs**: `radio`, `checkbox`, `select` - require `options` or `useOptionsWithLabels`
+- **Relations**: `datasource` - requires `validation` with relationContenttype and relationMultiple
+- **Complex types**: `object`, `simpleList` - require `items` meta definition
+- **Geo data**: `geo` - renders lat/lon fields
+- **Block editor**: `block` - supports blockEditorTypes for editor plugins
+
+**Detailed input type specifications:**
 
 | inputType  | Possible for schema type | Description                                                                                                        | Additional keys in property | Type   | Description                                                                                                                                                                                 | Additional keys                                                      | Description                                                                         |
 |------------|--------------------------|--------------------------------------------------------------------------------------------------------------------|-----------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|-------------------------------------------------------------------------------------|

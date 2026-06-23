@@ -3,10 +3,14 @@ tags:
   - Developer
 ---
 
-title: Building a stunning recipe website with Flotiq and Gatsby | Flotiq docs
-description: A deep dive tutorial on Flotiq's complex data structures and accidentally building a stunning recipes website with Gatsby.
+title: Building a recipe website with Flotiq (legacy Gatsby tutorial) | Flotiq docs
+description: A deep dive tutorial on Flotiq's complex data structures with an archived Gatsby example.
 
 # Building a recipes website using complex data structures
+
+!!! warning
+    This tutorial uses a legacy Gatsby starter.
+    Gatsby and Scully starters are no longer supported. Use Next.js starters for new projects.
 
 ## Introduction
 
@@ -122,7 +126,7 @@ And this is how the form for that Content Type would render:
 
 ![Flotiq form for a content object using lists](images/jamstack-recipes-complex-data-structures/recipe-object-scrambled-eggs-list.png){: .center .width50 }
 
-We used the `list` datatype in this [Gatsby & Flotiq recipes starter](https://github.com/flotiq/gatsby-starter-recipes) and you can see the results [here](https://flotiq-starter-recipes.herokuapp.com/). With this data model it's now really simple for a frontend developer to interpret that content on the website.
+We used the `list` datatype in this archived [Gatsby & Flotiq recipes starter](https://github.com/flotiq/gatsby-starter-recipes). With this data model it's now really simple for a frontend developer to interpret that content on the website.
 
 ![Full example of a recipe using Flotiq lists](images/jamstack-recipes-complex-data-structures/full-example-recipe-scrambled-eggs.png){: .center .width75 .border}
 
@@ -185,4 +189,4 @@ Flotiq's list data type is an extremely easy to use solution for structuring you
 Go play with the recipe website project - we've shared a Gatsby starter for that:
 
 * [Gatsby starter recipes - GitHub](https://github.com/flotiq/gatsby-starter-recipes)
-* [Gatsby starter recipes - deployed on Heroku](https://flotiq-starter-recipes.herokuapp.com)
+* [Next.js starters (supported)](/docs/Universe/nextjs/nextjs-starters/)

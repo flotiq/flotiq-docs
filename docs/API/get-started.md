@@ -8,8 +8,8 @@ description: Get started with integrating Flotiq API into your application.
 
 !!! note "Before you begin, make sure you have the following:"
     * Flotiq Account: Sign up for an account on [Flotiq website](https://www.flotiq.com/){target="_blank"} if you haven't already.
-    * Content Types: Make sure you have already created the necessary [Content Type Definitions](https://editor.flotiq.com/content-type-definitions){target="_blank"} in your Flotiq account. It should contain at least one Content Object.
-    * API Key: Obtain your Application Read and Write API Key from the [Flotiq dashboard](https://editor.flotiq.com/api-keys){target="_blank"}. You'll need it to perform API operations.
+    * Content Types: Make sure you have already created the necessary [Content Type Definitions](/docs/panel/content-types/). It should contain at least one Content Object.
+    * API Key: Obtain your Application Read and Write API Key from [API access and scoped keys](/docs/API/#application-api-keys). You'll need it to perform API operations.
     * Basic understanding of RESTful APIs: Familiarize yourself with the concepts of [RESTful APIs](https://restfulapi.net/){target="_blank"} if you're new to this.
     
 
@@ -211,8 +211,11 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
 
 Flotiq supports [GraphQL queries](graph-ql.md) for Content Objects. You can use the following endpoints to interact with the system using GraphQL:
 
-* `GET /api/graphql/schema` - Retrieve the GraphQL schema that describes your data.
-* `POST /api/graphql` - Execute GraphQL queries to retrieve specific data.
+* `GET /api/v2/graphql/schema` - Retrieve the GraphQL schema that describes your data.
+* `POST /api/v2/graphql` - Execute GraphQL queries to retrieve specific data.
+
+!!! note "GraphQL API Versioning"
+    The GraphQL API uses versioned endpoints (`/api/v2/graphql`) to ensure stability and allow for future improvements without breaking existing integrations. Always use the latest stable version in your applications.
 
 To a get single object, you need to pass the object identifier and fields you want to receive in the response. 
 Example Query in GraphQL language to get `id` and `title` for the product with id `blogposts-456712` looks like:
@@ -236,7 +239,7 @@ To pass this query to the Flotiq, you need to call:
     === "CURL"
 
         ``` 
-        curl -X POST 'https://api.flotiq.com/api/graphql' \
+        curl -X POST 'https://api.flotiq.com/api/v2/graphql' \
         --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
         --header 'Content-Type: application/json' \
         --data-raw '{"query":"query { blogposts(id: \"blogposts-456712\") { id title } }"}'
@@ -246,7 +249,7 @@ To pass this query to the Flotiq, you need to call:
     === "JavaScript + Fetch"
 
         ```
-        fetch('https://api.flotiq.com/api/graphql', {
+        fetch('https://api.flotiq.com/api/v2/graphql', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -266,7 +269,7 @@ To pass this query to the Flotiq, you need to call:
         ```
         const axios = require('axios');
 
-        axios.post('https://api.flotiq.com/api/graphql', {
+        axios.post('https://api.flotiq.com/api/v2/graphql', {
             query: 'query { blogposts(id: "blogposts-456712") { id title } }'
         }, {
             headers: {
@@ -284,7 +287,7 @@ To pass this query to the Flotiq, you need to call:
         ```
         import requests
 
-        url = 'https://api.flotiq.com/api/graphql'
+        url = 'https://api.flotiq.com/api/v2/graphql'
         headers = {
             'Content-Type': 'application/json',
             'X-AUTH-TOKEN': 'YOUR_API_TOKEN'

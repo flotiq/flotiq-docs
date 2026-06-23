@@ -23,7 +23,7 @@ should be redirected to a dedicated page for that particular post.
 
 To start working on connecting Flotiq with Bubble.io, we need to have some data in Flotiq to display. We are going to
 use the
-[flotiq-cli](https://flotiq.com/docs/CLI/contentful-importer/?h=flotiq+import#imported-data){target="_blank"}
+[flotiq-cli](https://flotiq.com/docs/CLI/){target="_blank"}
 to import prepared by us "CTD" (Content Type Definition) along with several "CO" (Content Objects) necessary
 for the blog's functionality.
 
@@ -81,7 +81,7 @@ Then press “Add another API” button
 We select the name of our API, which in our case will be "Flotiq," and then click the "add a shared header" button. In
 the key field, we enter "X-AUTH-TOKEN," and in the value field, we input our API key for Flotiq. Then, we click "expand"
 in the "API Call" section. You can read more about Flotiq API keys
-in [our documentation](https://flotiq.com/docs/API/?h=api+keys##application-api-keys){target="_blank"}
+in [our documentation](https://flotiq.com/docs/API/#application-api-keys){target="_blank"}
 
 ![](images/bubble/bubble-configure-api-headers.png){: .center .width75 .border}
 
@@ -93,7 +93,7 @@ URL: [Docs](https://flotiq.com/docs/API/content-type/listing-co/){target="_blank
 
 Next, we click on "Add parameter" to set the parameter "hydrate" to 1, which enables us to retrieve data from
 relationships such as tags or the author of our post. (more about hydrate
-parameter: [Docs](https://flotiq.com/docs/API/content-type/listing-co/##hydrating-objects){target="_blank"}) And
+parameter: [Docs](https://flotiq.com/docs/API/content-type/listing-co/#hydrating-objects){target="_blank"}) And
 finally, we click on "
 Initialize call."
 

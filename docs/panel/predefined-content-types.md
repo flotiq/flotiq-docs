@@ -19,13 +19,13 @@ If you already have at least one CTD, you can use the dropdown menu on the top r
 
 Type for storing simple blog posts. It contains properties storing title, slug, excerpt, content and images for the post:
 
-| Field name  | Field type | Additional attributes          | Comments                                              |
-|-------------|------------|--------------------------------|-------------------------------------------------------|
-| title       | Text       | Required, Part of object title | Title of your post                                    |
+| Field name  | Field type | Additional attributes          | Comments                                                    |
+|-------------|------------|--------------------------------|-------------------------------------------------------------|
+| title       | Text       | Required, Part of object title | Title of your post                                          |
 | slug        | Text       | Required, Unique               | URL of the post (alphanumeric characters, `-` and `_` only) |
-| excerpt     | Textarea   | Required                       | Short description of the post                         |
-| content     | Block       | Required                       | The post itself, in block editor format               |
-| headerImage | Relation   | Restrict to type: Media        | Main image of the post                                |
+| excerpt     | Textarea   | Required                       | Short description of the post                               |
+| content     | Block      | Required                       | The post itself, in block editor format                     |
+| headerImage | Relation   | Restrict to type: Media        | Main image of the post                                      |
 
 ![](images/AddContentTypeDefinitions.png){: .border}
 
@@ -165,16 +165,16 @@ Form generated for Blog Post:
 
 ![](images/BlogPostForm.png){: .center .width75 .border}
 
-Gatsby starter for blog post:
+Next.js starter for blog post:
 
-[GitHub](https://github.com/flotiq/flotiq-gatsby-blog-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-nextjs-blog-1){:target="_blank"}
 
-Scully starter for blog post:
-
-[GitHub](https://github.com/flotiq/scully-blog-starter){:target="_blank"}
+[Working example](https://flotiq-nextjs-blog-1.netlify.app){:target="_blank"}
 
 
 Documentation examples:
+
+[Our API documentation](https://flotiq-apidoc-prod-data.s3.us-east-1.amazonaws.com/organization-codewave-29d93d743f1edb08bdbde2f429a7c3a8){:target="_blank"}
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/a5c3102f2b2bfb71783e#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
 
@@ -184,17 +184,17 @@ Documentation examples:
 
 Type for storing simple events. It contains name, slug, image, address, date, price, description, excerpt and gallery for the event:
 
-| Field name  | Field type | Additional attributes                        | Comments                          |
-|-------------|------------|----------------------------------------------|-----------------------------------|
-| name        | Text       | Required, Part of object title               | Name of your event                |
-| slug        | Text       | Required, Unique                             | URL of the event                  |
-| image       | Relation   | Restrict to type: Media                      | Featured image of the event       |
-| address     | Textarea   | Required                                     | Address of the event              |
-| date        | DateTime   | Required, Show time                          | Date and time of the event (ISO 8601 format) |
-| price       | Textarea   | -                                            | Ticket price                      |
-| description | Rich Text  | -                                            | Description of the event, with HTML content |
-| excerpt     | Textarea   | -                                            | Short description excerpt         |
-| gallery     | Relation   | Restrict to type: Media, Multiple            | Gallery for the event             |
+| Field name  | Field type | Additional attributes             | Comments                                     |
+|-------------|------------|-----------------------------------|----------------------------------------------|
+| name        | Text       | Required, Part of object title    | Name of your event                           |
+| slug        | Text       | Required, Unique                  | URL of the event                             |
+| image       | Relation   | Restrict to type: Media           | Featured image of the event                  |
+| address     | Textarea   | Required                          | Address of the event                         |
+| date        | DateTime   | Required, Show time               | Date and time of the event (ISO 8601 format) |
+| price       | Textarea   | -                                 | Ticket price                                 |
+| description | Rich Text  | -                                 | Description of the event, with HTML content  |
+| excerpt     | Textarea   | -                                 | Short description excerpt                    |
+| gallery     | Relation   | Restrict to type: Media, Multiple | Gallery for the event                        |
 
 ![](./images/PredefinedCTDEvent.png){: .center .width75 .border}
 
@@ -352,23 +352,15 @@ Form generated for Event:
 ![](images/EventForm.png){: .center .width75 .border}
 
 
-Gatsby starter for event calendar:
+Next.js starter for event calendar:
 
-[GitHub](https://github.com/flotiq/flotiq-gatsby-event-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-nextjs-event-2){:target="_blank"}
 
-[Working example](https://flotiqgatsbyevent1.gatsbyjs.io/){:target="_blank"}
-
-Scully starter for event calendar:
-
-[GitHub](https://github.com/flotiq/scully-event-calendar-starter){:target="_blank"}
-
-[Working example](https://awesome-sammet-8accee.netlify.app/){:target="_blank"}
+[Working example](https://flotiq-nextjs-event-2.netlify.app){:target="_blank"}
 
 Documentation examples:
 
-[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=ZjQyYTUwYWJkZWRiOTRkYTVmZjU3M2QwOGNiYWVlOTdAYzFkMDA2MjctM2UxYy0xMWViLThkNTctMDJiMTYyOGYzNzNh){:target="_blank"}
-
-[Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3Df42a50abdedb94da5ff573d08cbaee97){:target="_blank"}
+[Our API documentation](https://flotiq-apidoc-prod-data.s3.us-east-1.amazonaws.com/organization-codewave-059050e2bca123e0cff08ebf3f421d69){:target="_blank"}
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/0591d738333d41ce50e7#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
 
@@ -503,23 +495,15 @@ Form generated for Product:
 ![](images/ProductForm.png){: .center .width75 .border}
 
 
-Gatsby starter for products:
+Next.js starter for products:
 
-[GitHub](https://github.com/flotiq/flotiq-gatsby-shop-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-nextjs-shop-2){:target="_blank"}
 
-[Working example](https://flotiqgatsbyshop1.gatsbyjs.io/){:target="_blank"}
-
-Scully starter for products:
-
-[GitHub](https://github.com/flotiq/scully-products-starter){:target="_blank"}
-
-[Working example](https://competent-visvesvaraya-bb732c.netlify.app/){:target="_blank"}
+[Working example](https://flotiq-nextjs-shop-2.netlify.app){:target="_blank"}
 
 Documentation examples:
 
-[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=OWE3ZGM5NDJjOTQ1MWY2N2Q4NmE0Y2FjMjQxNDUzYzhANGEyZGY2ODMtM2UyNy0xMWViLThkNTctMDJiMTYyOGYzNzNh){:target="_blank"}
-
-[Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3D9a7dc942c9451f67d86a4cac241453c8){:target="_blank"}
+[Our API documentation](https://flotiq-apidoc-prod-data.s3.us-east-1.amazonaws.com/organization-codewave-75f6fbed3f4149c8d2ad4345af21107e){:target="_blank"}
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/7f5d59a7a21b8e368ed1#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
 
@@ -529,15 +513,15 @@ Documentation examples:
 
 Type for storing simple project portfolio entries. It contains properties storing name, slug, description, header image, gallery and gallery details for the project:
 
-| Field name          | Field type | Additional attributes                  | Comments                                          |
-|---------------------|------------|----------------------------------------|---------------------------------------------------|
-| name                | Text       | Required, Unique, Part of object title | Name of your project                              |
+| Field name          | Field type | Additional attributes                  | Comments                                                       |
+|---------------------|------------|----------------------------------------|----------------------------------------------------------------|
+| name                | Text       | Required, Unique, Part of object title | Name of your project                                           |
 | slug                | Text       | Required, Unique                       | URL of the project (alphanumeric characters, `-` and `_` only) |
-| description         | Rich Text  | -                                      | The description of the project, with HTML content |
-| headerImage         | Relation   | Restrict to type: Media                | Header image of the project                       |
-| gallery_name        | Text       | -                                      | Name of the gallery                               |
-| gallery_description | Rich Text  | -                                      | Description of the gallery, with HTML content     |
-| gallery             | Relation   | Restrict to type: Media, Multiple      | Gallery for the project                           |
+| description         | Rich Text  | -                                      | The description of the project, with HTML content              |
+| headerImage         | Relation   | Restrict to type: Media                | Header image of the project                                    |
+| gallery_name        | Text       | -                                      | Name of the gallery                                            |
+| gallery_description | Rich Text  | -                                      | Description of the gallery, with HTML content                  |
+| gallery             | Relation   | Restrict to type: Media, Multiple      | Gallery for the project                                        |
 
 ![](./images/PredefinedCTDProject.png){: .center .width75 .border}
 
@@ -669,23 +653,15 @@ Form generated for Project:
 
 ![](images/ProjectForm.png){: .center .width75 .border}
 
-Gatsby starter for projects:
+Next.js starter for projects:
 
-[GitHub](https://github.com/flotiq/flotiq-gatsby-portfolio-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-nextjs-portfolio-2){:target="_blank"}
 
-[Working example](https://flotiqgatsbyportfolio1.gatsbyjs.io/){:target="_blank"}
-
-Scully starter for projects:
-
-[GitHub](https://github.com/flotiq/scully-projects-starter){:target="_blank"}
-
-[Working example](https://angry-brattain-f446a1.netlify.app/){:target="_blank"}
+[Working example](https://flotiq-nextjs-portfolio-2.netlify.app){:target="_blank"}
 
 Documentation examples:
 
-[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=NDBiMWZiMzk2MzhjODM2N2I5ODM5ZmJkOTE4YzkwM2RAZGJiYWY1MzYtM2UyNy0xMWViLThkNTctMDJiMTYyOGYzNzNh){:target="_blank"}
-
-[Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3D40b1fb39638c8367b9839fbd918c903d){:target="_blank"}
+[Our API documentation](https://flotiq-apidoc-prod-data.s3.us-east-1.amazonaws.com/organization-codewave-a4c90d75d24898295a5a25c571682cef){:target="_blank"}
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/1fdce8e3ec5d3d793471#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
 
@@ -947,23 +923,15 @@ Form generated for Recipe:
 ![](images/RecipeForm.png){: .center .width75 .border}
 
 
-Gatsby starter for recipes:
+Next.js starter for recipes:
 
-[GitHub](https://github.com/flotiq/flotiq-gatsby-recipe-1){:target="_blank"}
+[GitHub](https://github.com/flotiq/flotiq-nextjs-recipe-2){:target="_blank"}
 
-[Working example](https://flotiqgatsbyrecipe1.gatsbyjs.io/){:target="_blank"}
-
-Scully starter for recipes:
-
-[GitHub](https://github.com/flotiq/scully-recipes-starter){:target="_blank"}
-
-[Working example](https://vibrant-mclean-8da635.netlify.app/){:target="_blank"}
+[Working example](https://flotiq-nextjs-recipe-2.netlify.app/){:target="_blank"}
 
 Documentation examples:
 
-[Our API documentation](https://lambda-api.flotiq.com/apidoc/get?token=ZjFkZjhiMDMxZjVhYTdjMzA5MmYxNzdjNWY5MTM5YTVAMzIwNTVjMTAtM2UyOC0xMWViLThkNTctMDJiMTYyOGYzNzNh){:target="_blank"}
-
-[Swagger playground](https://apidoc.flotiq.com/?url=https%3A%2F%2Fapi.flotiq.com%2Fapi%2Fv1%2Fopen-api-schema.json%3Fauth_token%3Df1df8b031f5aa7c3092f177c5f9139a5){:target="_blank"}
+[Our API documentation](https://flotiq-apidoc-prod-data.s3.us-east-1.amazonaws.com/organization-codewave-4f0955f8eab6309f9e7c0e4120e9db92){:target="_blank"}
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/d65e364c6a0e41c2cc1e#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
 

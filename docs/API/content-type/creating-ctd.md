@@ -132,6 +132,47 @@ In this case, Blog Post will have `title` property which will be unique and will
 and `postContent`, which can be duplicated and presented as Rich text input in the CMS panel. 
 The first input in the form in the CMS panel will be `title` input, and the second will be `postContent`.
 
+### The slugs property
+
+The optional `slugs` property defines rules for automatic slug generation on
+<abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>
+of this type. Each rule specifies a source field (used as input) and a target field
+(where the slugified value will be written).
+
+```
+{
+    "name": "blogposts",
+    "label": "Blog Posts",
+    "schemaDefinition": { ... },
+    "metaDefinition": { ... },
+    "slugs": [
+        { "source": "title", "target": "slug", "active": true }
+    ]
+}
+```
+{ data-search-exclude }
+
+Each rule has three fields:
+
+| Field    | Type    | Description                                                                                                                              |
+|----------|---------|------------------------------------------------------------------------------------------------------------------------------------------|
+| `source` | string  | Name of the field used as input for slug generation. Must exist in the Content Type schema.                                              |
+| `target` | string  | Name of the field where the generated slug will be stored. Must exist in the Content Type schema.                                        |
+| `active` | boolean | Whether the rule should run during Content Object creation/updates. Inactive rules are kept on the definition but ignored at runtime.    |
+
+#### Validation rules
+
+When you create or update a Content Type Definition with `slugs`:
+
+* For **active** rules, both `source` and `target` must reference fields that exist
+  in the Content Type schema. Otherwise the request returns `400 Bad Request` with
+  violations on `slugs[i].source` and/or `slugs[i].target`.
+* `source` and `target` must be different — a rule where they are equal is rejected.
+* For **inactive** rules with missing fields, the rule is silently dropped during
+  save — no error is returned, but the rule will not be persisted.
+  See the [Content Object documentation](/docs/API/content-type/creating-co/#auto-generated-slug-fields) for details
+  on how slug generation works at runtime.
+
 ### Creating Content Type Definition examples
 
 !!! Example
@@ -484,7 +525,10 @@ The first input in the form in the CMS panel will be `title` input, and the seco
 |                                                    | `Property name {propertyName} not existing in schema definition`                                                                                                                                                                                                          | Send when property existing in `metaDefinition` is not included in the `schemaDefinition` properties config                                                            |
 | metaDefinition.propertiesConfig.\{name\}           | `Wrong meta type for type of {propertyName}`                                                                                                                                                                                                                              | Send when property has incompatible inputType in `metaDefinition` properties config to its type in `schemaDefinition`                                                  |
 |                                                    | `You have to specify type of relation for {propertyName}`                                                                                                                                                                                                                 | Send when property is a relation to other type, but not specify in `validation` to which type it is restricted                                                         |
-
+| slugs[i].source                                    | `Slug source is required.`                                                                                                                                                                                                                                                | Send when slug rule's source field is empty, null, or missing                                                                                                          |
+|                                                    | `Field "{name}" used as slug source does not exist in the type definition.`                                                                                                                                                                                               | Send when slug rule's source references a field not present in the schema                                                                                              |
+| slugs[i].target                                    | `Slug target is required.`                                                                                                                                                                                                                                                | Send when slug rule's target field is empty, null, or missing                                                                                                          |
+|                                                    | `Field "{name}" used as slug target does not exist in the type definition.`                                                                                                                                                                                               | Send when slug rule's target references a field not present in the schema                                                                                              |
 
 After such call is made the 
 <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 

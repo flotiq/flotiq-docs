@@ -67,8 +67,5 @@ The endpoint documentation is provided in the API docs and describes the followi
 * [Get single](content-type/getting-ctd.md)
 * [Delete](content-type/deleting-ctd.md)
 
-Each Content Type Definition can also configure [slug generation rules](content-type/creating-ctd.md#the-slugs-property) — a
-mechanism for automatically populating a target field (e.g. `slug`) based on the value of a source field (e.g. `title`)
-when a Content Object is created.
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

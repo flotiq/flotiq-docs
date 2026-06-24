@@ -154,11 +154,11 @@ of this type. Each rule specifies a source field (used as input) and a target fi
 
 Each rule has three fields:
 
-| Field    | Type    | Description                                                                                                                              |
-|----------|---------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `source` | string  | Name of the field used as input for slug generation. Must exist in the Content Type schema.                                              |
-| `target` | string  | Name of the field where the generated slug will be stored. Must exist in the Content Type schema.                                        |
-| `active` | boolean | Whether the rule should run during Content Object creation/updates. Inactive rules are kept on the definition but ignored at runtime.    |
+| Field    | Type    | Description                                                                                               |
+|----------|---------|-----------------------------------------------------------------------------------------------------------|
+| `source` | string  | Name of the field used as input for slug generation. Must exist in the Content Type schema.               |
+| `target` | string  | Name of the field where the generated slug will be stored. Must exist in the Content Type schema.         |
+| `active` | boolean | Whether the rule generates slugs at runtime. Active rules generate slugs on Content Object create/update. |
 
 #### Validation rules
 

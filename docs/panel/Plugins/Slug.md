@@ -12,13 +12,13 @@ description: This plugin simplifies the process of creating slugs for your Conte
 
     See the updated documentation:
 
-    * [Configuring slug rules on Content Types](/docs/API/content-type/creating-ctd/#the-slugs-property)
-    * [How auto-generation works on Content Objects](/docs/API/content-type/creating-co/#auto-generated-slug-fields)
+    * [Generating slugs in the Dashboard](/docs/panel/ContentObjects/slugs/)
+    * [Configuring slug rules via API](/docs/API/content-type/creating-ctd/#the-slugs-property)
 
     Existing plugin configurations are migrated automatically — no action required.
     For questions, contact us on Discord or email [hello@flotiq.com](mailto:hello@flotiq.com).
 
-# Slug generation plugin
+# [Legacy] Slug generation plugin
 
 This plugin simplifies the process of creating slugs for your Content Object. It’s particularly useful when you want to generate slugs automatically based on existing data within a Content Object (e.g. the title of a blog post).
 

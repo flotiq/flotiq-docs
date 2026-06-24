@@ -1083,7 +1083,7 @@ For each active rule:
     ```
     { data-search-exclude }
 
-To override the generated value, send the target field explicitly:
+    To override the generated value, send the target field explicitly:
 
     ```
     {
@@ -1092,7 +1092,7 @@ To override the generated value, send the target field explicitly:
         "postContent": "..."
     }
     ```
-{ data-search-exclude }
+    { data-search-exclude }
 
 ## Batch create Content Objects through API
 

@@ -39,8 +39,7 @@ Enabling the switch opens the **Slug settings** modal, where you configure the r
 
 ## Configuring slug rules
 
-In the **Slug settings** modal, each rule is presented as a card (e.g. *Slug #1*) with
-the following controls:
+In the **Slug settings** modal, each rule has the following controls:
 
 ![Slug settings modal](../images/slug-rules/slug-settings-modal.png){: .center .width75 .border}
 
@@ -58,7 +57,7 @@ as usual.
 !!! note
     Both the source and target fields must already exist in the Content Type Definition.
     For an active rule, if either field is missing, saving the definition will fail with a
-    validation error. The source and target must also be two different fields.
+    validation error. The source and target should also be two different fields.
 
 ## How slug generation works
 

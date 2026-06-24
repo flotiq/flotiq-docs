@@ -167,7 +167,6 @@ When you create or update a Content Type Definition with `slugs`:
 * For **active** rules, both `source` and `target` must reference fields that exist
   in the Content Type schema. Otherwise the request returns `400 Bad Request` with
   violations on `slugs[i].source` and/or `slugs[i].target`.
-* `source` and `target` must be different — a rule where they are equal is rejected.
 * For **inactive** rules with missing fields, the rule is silently dropped during
   save — no error is returned, but the rule will not be persisted.
   See the [Content Object documentation](/docs/API/content-type/creating-co/#auto-generated-slug-fields) for details

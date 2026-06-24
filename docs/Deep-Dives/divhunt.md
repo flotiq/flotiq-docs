@@ -19,7 +19,7 @@ This guide shows how to combine an online website builder Divhunt with Flotiq AP
 
 ## Create new Divhunt project and connect it to Flotiq via Rest API
 
-Head to Divhunt [dashboard](https://dashboard.divhunt.com/){:target="_blank"} and create a new project or edit existing one, and open it in Divhunt's builder.
+Head to Divhunt [dashboard](https://divhunt.com/){:target="_blank"} and create a new project or edit existing one, and open it in Divhunt's builder.
 
 Then select `settings` in the top bar, navigate to `Browse Applications` and install Rest API.
 
@@ -44,7 +44,7 @@ Now your new element can use Flotiq data to get its content, but it doesn't poin
 To get the value from the source, head to `settings` of the selected element in Divhunt and modify the `Content` field using the `Set Variable` option.
 A new window will pop up presenting you with variables available in your project. Data from Flotiq will be located in the `Custom` section in the `Value` dropdown.
 
-The structure of the data in this section will vary, depending on whether you used an [endpoint for getting a single content object](https://flotiq.com/docs/API/content-type/getting-co/){:target="_blank"} from Flotiq, or an [endpoint for listing all content objects of your content type](https://flotiq.com/docs/API/content-type/listing-deleted-co/){:target="_blank"}.
+The structure of the data in this section will vary, depending on whether you used an [endpoint for getting a single content object](https://flotiq.com/docs/API/content-type/getting-co/){:target="_blank"} from Flotiq, or an [endpoint for listing all content objects of your content type](https://flotiq.com/docs/API/content-type/listing-co/){:target="_blank"}.
 
 If you used an endpoint for a single content object, all there is left to do is select the exact property, Divhunt element is supposed to get its value from.
 

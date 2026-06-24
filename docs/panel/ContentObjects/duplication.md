@@ -15,13 +15,13 @@ To use this feature, go to the Content Object list view select and click the dup
 to
 copy.
 
-![](../images/duplicate-co-list.png){: .border}
+![](../images/duplicate-co-list.png){: .center .border}
 
 A modal window will open with available relations for duplication, so you can quickly duplicate the object and its
 relations. or you can leave the relations out and duplicate only the object itself. After selecting the relations you
 want to duplicate, click the `Duplicate` button.
 
-![](../images/duplicate-co.png){: .border}
+![](../images/duplicate-co.png){: .center .border}
 
 ### Limitations
 

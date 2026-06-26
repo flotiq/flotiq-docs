@@ -10,6 +10,21 @@ description: Use live preview plugin for real-time transmission of data from con
 
 The Live Preview Plugin is used for real-time transmission of data from content object forms, allowing the end application to display content changes live. The plugin generates links that let you open drafts of your pages directly from the editor with a live streaming preview. It works best with Next.js-based sites.
 
+## Live Preview vs Content Preview
+
+Flotiq offers two preview plugins for different use cases:
+
+| Feature              | Live Preview                        | Content Preview                            |
+|----------------------|-------------------------------------|--------------------------------------------|
+| **Preview type**     | Real-time websocket stream          | Static link to draft page                  |
+| **Updates**          | Automatic - updates as you type     | Manual - refresh to see changes            |
+| **Technology**       | WebSocket connection                | Static HTTP link                           |
+| **Setup complexity** | Requires npm package integration    | Simple - just configure URL template       |
+| **Use case**         | Real-time editing with live preview | Quick draft verification, simple workflows |
+| **Performance**      | Continuous connection required      | Lower bandwidth, no ongoing connection     |
+
+Choose **Live Preview** if you want real-time synchronization between your editor and website. Choose **Content Preview** if you need a simple way to preview your draft content.
+
 ## Installing Live Preview Plugin
 
 Find in the right sidebar panel `Plugins` and select.

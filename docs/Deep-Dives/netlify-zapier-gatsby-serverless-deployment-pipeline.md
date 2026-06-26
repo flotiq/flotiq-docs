@@ -143,7 +143,7 @@ Learn more about building powerful integrations with Zapier and Flotiq:
 
 1. [More about Zapier Integrations in Flotiq](../../Universe/zapier/)
 
-Or try one of the awesome Gatsby starters we've integrated with Flotiq:
+Legacy Gatsby resources:
 
 1. [Build an e-commerce site using Gatsby, Flotiq and Snipcart](https://dev.to/flotiq/build-an-e-commerce-site-with-gatsby-and-snipcart-3jpg)
 2. [Build a recipe website using Gatsby and Flotiq](https://dev.to/flotiq/building-a-recipes-website-using-gatsby-and-flotiq-2b3a)

@@ -9,6 +9,9 @@ description: Live and static modes for deploying your content.
 
 # Deployment modes
 
+!!! caution
+    Gatsby Cloud was shut down by Netlify in 2023. If you use Gatsby, treat Gatsby Cloud-based workflows as legacy and deploy with supported platforms such as Netlify or Vercel.
+
 Headless CMS systems are commonly used with JAMstack projects, which have 2 basic modes of deployment and operation:
 
 * live - traditional, where the content is pulled from the CMS on demand, for example every time a user opens a website, this usually involves a tool that has SSR (server-side rendering) capabilities,
@@ -80,4 +83,6 @@ If you’re looking for greater flexibility and you can accept the additional co
 
 Of course - as usual, you can also think about building a hybrid solution, with a static site that runs occasional API calls to Flotiq to update the data that is frequently changing (for example to check stock in your e-commerce).
 
-You can jump-start your JAMStack projects using our Next.js (React) or Gatsby (React) starters of static pages generators.
+You can jump-start your JAMStack projects using our Next.js (React) starters.
+
+Gatsby starters are still available as legacy examples.

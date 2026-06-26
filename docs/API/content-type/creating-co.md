@@ -16,9 +16,9 @@ This is done either directly through the API or via the convenient Content Entry
 Content Management Platform.
 
 !!! note
-You will need to use your `Application Read and write API KEY` to perform this action
-or `User API KEY` scoped to accept create on the Content Type you wish to add.
-Read more about [API keys and scoped API keys](/docs/API/).
+    You will need to use your `Application Read and write API KEY` to perform this action
+    or `User API KEY` scoped to accept create on the Content Type you wish to add.
+    Read more about [API keys and scoped API keys](/docs/API/).
 
 ## Creating Content Objects through the API
 
@@ -39,16 +39,16 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 { data-search-exclude }
 
 !!! note
-The maximum size of a single CO in the system is 1MB. If your project requires a larger CO size, please contact Flotiq
-support.
+    The maximum size of a single CO in the system is 1MB. If your project requires a larger CO size, please contact Flotiq
+    support.
 
 !!! note
-You can send custom `id` in the object data to assign a particular `id` to the object.
-Id must match a regular expression `^[a-zA-Z0-9-_.,:=!#$%&(\`\’\{\}\" ]*$`.
+    You can send custom `id` in the object data to assign a particular `id` to the object.
+    Id must match a regular expression `^[a-zA-Z0-9-_.,:=!#$%&(\`\’\{\}\" ]*$`.
     Random `id` will be assigned when the `id` property is not present in the object.
 
 !!! note
-Content object's `id` in endpoint `https://api.flotiq.com/api/v1/content/contenttype/{id}` is case insensitive.
+    Content object's `id` in endpoint `https://api.flotiq.com/api/v1/content/contenttype/{id}` is case insensitive.
 
 !!! Example
 
@@ -1055,7 +1055,7 @@ All objects must meet the same conditions as when adding a single object.
 The only difference is an array of objects in the request body instead of one object.
 
 !!! note
-In the next examples we assume that we have an object with id `existing-id-1` in our system.
+    In the next examples we assume that we have an object with id `existing-id-1` in our system.
 
 Updating one blog post and adding one new:
 
@@ -1600,8 +1600,7 @@ Response parameters:
 | errors              | array of errors in the elements, errors are objects containing the id of the object and list of errors, present when there are no duplications in data |
 | data                | listing keys containing duplications (see example above), present only when there are duplications in data or batch_limit exceeded                     |
 
-[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){:
-.flotiq-button}
+[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){:.flotiq-button}
 
 [^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits on
 the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
@@ -1624,9 +1623,9 @@ the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
 
 #### Request body
 
-| Field                       | Type            | Required | Description                         |  
-|-----------------------------|-----------------|----------|-------------------------------------|  
-| `relatedObjectsToDuplicate` | array\<string\> | yes      | IDs of related objects to duplicate |
+| Field                       | Type           | Required | Description                         |  
+|-----------------------------|----------------|----------|-------------------------------------|  
+| `relatedObjectsToDuplicate` | array<string\> | yes      | IDs of related objects to duplicate |
 
 ```json
 {

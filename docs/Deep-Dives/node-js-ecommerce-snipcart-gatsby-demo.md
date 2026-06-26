@@ -64,7 +64,7 @@ Finally - click the `Save button`.
 Repeat for as many products as you want.
 
 !!! hint
-    If you'd like to programmatically import hundreds or thousands of products, instead of typing them by hand - you can use Flotiq's `batch` endpoints in your API. Read more about [batch content creation in Flotiq](https://flotiq.com/docs/API/content-types/#batch-content-upload).
+    If you'd like to programmatically import hundreds or thousands of products, instead of typing them by hand - you can use Flotiq's `batch` endpoints in your API. Read more about [batch content creation in Flotiq](https://flotiq.com/docs/API/content-type/creating-co/#batch-create-content-objects-through-api).
 
 
 ## Start your Gatsby project, 2 minutes

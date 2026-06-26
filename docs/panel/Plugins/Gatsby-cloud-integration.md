@@ -7,8 +7,9 @@ title: Integrate Gatsby Cloud and Flotiq | Flotiq documentation
 description: Enable seamless Gatsby content preview using Flotiq Gatsby plugin.
 
 !!! Caution
-    **Due to the [ending availability of Gatsby Cloud](https://www.netlify.com/blog/gatsby-cloud-evolution/),
-    the Gatsby Cloud plugin is now deprecated.**
+    **Gatsby Cloud was shut down by Netlify in 2023, and the Gatsby Cloud plugin is deprecated.**
+
+    This page is kept as legacy documentation. Screenshots and setup steps refer to a service that is no longer available.
 
     We recommend transitioning to the [Netlify Build plugin](https://flotiq.com/docs/panel/Plugins/Netlify-integration/),
     using the [Custom Links plugin](https://flotiq.com/docs/panel/Plugins/Custom-links/),
@@ -16,7 +17,7 @@ description: Enable seamless Gatsby content preview using Flotiq Gatsby plugin.
     Please make the necessary changes to ensure uninterrupted service. For questions, contact us on Discord or email [hello@flotiq.com](mailto:hello@flotiq.com).
 
 
-# Connecting your Flotiq account to Gatsby Cloud
+# [Legacy] Connecting your Flotiq account to Gatsby Cloud
 
 This article will walk you through the process of connecting your Flotiq account and your Gatsby Cloud account. By doing so, your content will be automatically synchronized with your Gatsby Cloud preview instance. You will also be able to easily navigate to your Gatsby Preview pages from the Flotiq content editor.
 
@@ -36,7 +37,9 @@ This article will walk you through the process of connecting your Flotiq account
     - [Gatsby and Snipcart boilerplate, sourcing products from Flotiq](https://github.com/flotiq/flotiq-gatsby-shop-1){:target="_blank"}
     - [Snipcart and Next.js, sourcing products from Flotiq](https://github.com/flotiq/snipcart-nextjs){:target="_blank"}
     
-    These starters all come with detailed READMEs and a one-line content import command, be sure to check those!
+    These starters are legacy Gatsby examples. For new projects, we recommend choosing Next.js starters and Netlify or Vercel deployment.
+
+    Legacy starters still include detailed READMEs and a one-line content import command.
     You can find even more starters here: [Starting new Gatsby project with Flotiq](../../CLI/starting-new-project-gatsby.md){:target="_blank"}
 
 ## Signing in to Gatsby Cloud

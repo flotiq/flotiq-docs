@@ -19,7 +19,7 @@ flotiq wordpress-import [wordpressUrl] [flotiqApiKey]
 ```
 { data-search-exclude }
 
-After running the command, you should have new content types added to your Flotiq account that was imported from WordPress site.
+After running the command, you should have new content types added to your Flotiq account that were imported from the WordPress site.
 
 ### Parameters
 

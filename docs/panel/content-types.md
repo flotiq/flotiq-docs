@@ -86,6 +86,12 @@ The `headerImage` is defined as a relation to Media CTD - a system type definiti
 
 You can add more fields by clicking the `Add property` button, which opens the modal window, where you can define the property name, data type, and it's basic validation. It opens the same modal as for editing of the property.
 
+!!! hint
+    You can also configure automatic slug generation for this Content Type using the
+    **Generate Slug** switch, located next to the **Draft & Public** switch. This lets Flotiq
+    populate a target field (e.g. `slug`) from a source field (e.g. `title`) whenever an object
+    is created. See [Generating slugs](ContentObjects/slugs.md) for the full walkthrough.
+
 After saving your CTD you will be redirected to the CTDs list, where you can click on the tile to list Content Objects or click on the cog to further edit CTD.
 
 ![](images/TypeDefinitions.png){: .center .width75 .border}

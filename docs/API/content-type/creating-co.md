@@ -1043,6 +1043,60 @@ please leave a comment below or contact us on [hello@flotiq.com](mailto:hello@fl
     ```
     { data-search-exclude }
 
+### Auto-generated slug fields
+
+If the Content Type Definition has [slug rules](/docs/API/content-type/creating-ctd/#the-slugs-property) configured,
+target fields can be auto-generated from source fields during Content Object creation
+and updates.
+
+For each active rule:
+
+* If the target field is **not present** in the request payload, the slug is generated
+  from the source field value and written to the target field.
+* If the target field **is present** in the payload (even as empty string or `null`),
+  the client-supplied value is preserved and no generation happens.
+* If the source field is missing, empty, or not a string, the rule is skipped.
+  This means clients can always override auto-generation by explicitly sending a value
+  for the target field.
+
+!!! Example "Auto-generated slug"
+
+    Given a Content Type `blogposts` with a slug rule `title → slug`:
+    
+    Request payload:
+    
+    ```
+    {
+        "title": "Hello World",
+        "postContent": "..."
+    }
+    ```
+    { data-search-exclude }
+    
+    Stored Content Object:
+    
+    ```
+    {
+        "id": "blogposts-456712",
+        "title": "Hello World",
+        "slug": "hello-world",
+        "postContent": "...",
+        "internal": { ... }
+    }
+    ```
+    { data-search-exclude }
+
+    To override the generated value, send the target field explicitly:
+
+    ```
+    {
+        "title": "Hello World",
+        "slug": "my-custom-slug",
+        "postContent": "..."
+    }
+    ```
+    { data-search-exclude }
+
 ## Batch create Content Objects through API
 
 There is a way to add up to 100[^2] Content Objects at once.

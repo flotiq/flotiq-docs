@@ -114,6 +114,15 @@ When you change existing property, depending on the type of changes, Flotiq will
     type to reflect changes in the schema, which can result in data loss, if the old types and new types of
     the properties are not compatible.
 
+## What happens if you change slug rules?
+
+The `slugs` array is replaced wholesale on each update — there is no merge semantics.
+If you want to add a new rule, include the existing rules in the payload along with
+the new one. If you remove a rule from the payload, it will be deleted.
+
+Validation rules for `slugs` are the same as on create — see
+[the slugs property](/docs/API/content-type/creating-ctd/#the-slugs-property) for details.
+
 
 !!! Example
 

@@ -9,7 +9,7 @@ To migrate content from WordPress blog with Flotiq CLI you need a Flotiq account
 
 !!! hint
     Instead of coding, you can try our [one-click migration tool](https://flotiq.com/services/migrate-wordpress-to-flotiq-headless-cms/) to move your data from WordPress to Flotiq.
-    All you need is your personal [Flotiq Read And Write API Key](http://flotiq.com/docs/API/#application-api-keys) and your WordPress Site address.
+    All you need is your personal [Flotiq read and write API key](/docs/API/#application-api-keys) and your WordPress site address.
     Read more in our [blog post](https://blog.flotiq.com/migrate-wordpress-to-flotiq-headless-cms).
 
 The command looks like this:

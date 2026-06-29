@@ -12,9 +12,26 @@ description: Flotiq support for custom workflows helps teams collaborate and pro
     Flotiq workflows can be customized only in the << plan_names.paid_3 >> plan.
     Reach out to us to discuss possible implementation.
 
-Workflows are a powerful feature that helps teams collaborate and produce quality content.
-Flotiq implements workflows for all content types defined in the system, however the default 
-workflow supports only a single state - `saved`. Every content object in the system carries a `workflowState` field under the `internal` section, see last line of the snippet below:
+## Overview
+
+Workflows are a powerful feature that helps teams collaborate and produce quality content. Flotiq implements workflows for all content types defined in the system. The default workflow supports only a single state - `saved`. Every content object in the system carries a `workflowState` field under the `internal` section. Custom workflows allow you to define additional states and transitions that match your editorial process.
+
+## Workflows vs Draft & Public
+
+Flotiq offers two distinct systems for managing content state. Choose the one that fits your workflow:
+
+| Aspect                 | Workflows                                                                        | Draft & Public                                                                                             |
+|------------------------|----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| **States**             | Custom - examples: draft, review, public, archive                                | Fixed: draft, public, modified, archived                                                                   |
+| **State field**        | `workflowState` under `internal`                                                 | `status` under `internal`                                                                                  |
+| **Enable**             | Custom workflows (paid plan)                                                     | `draftPublic: true` on Content Type Definition                                                             |
+| **API endpoints**      | `/api/v1/workflow/:type/:id` for state transitions                               | `/api/v1/content/:type/:id/publish`, `/unpublish`, `/archive`                                              |
+| **Use case**           | Complex multi-step approval processes (e.g., draft → review → approval → public) | Simple two-state publishing (draft vs public)                                                              |
+| **Visibility control** | Public state requires using `x-visibility: public` header                        | All listing endpoints respect Draft & Public states by default; use `X-MODE: preview` header to see drafts |
+
+**Key difference**: Workflows are for **defining custom editorial processes** with flexible states and transitions. Draft & Public is a **pre-built publishing system** optimized for separating published content from unpublished changes.
+
+You cannot use both systems simultaneously on a single Content Type Definition. Choose one based on your requirements.
 
 ```json
 {
@@ -37,6 +54,9 @@ workflow supports only a single state - `saved`. Every content object in the sys
 }
 ```
 { data-search-exclude }
+
+!!! note "Default workflow"
+    The default workflow has only one state: `saved`. See the comparison table above to learn when to use Workflows versus Draft & Public.
 
 ## Custom workflows
 

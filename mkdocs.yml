@@ -156,9 +156,11 @@ nav:
       - 'Field types': panel/ContentObjects/field-types.md
       - 'Draft & Public': panel/ContentObjects/draft-public.md
       - 'Scheduling publication': panel/ContentObjects/publication-scheduling.md
+      - 'Duplication': panel/ContentObjects/duplication.md
     - 'Media library': panel/media-library.md
     - 'Users': panel/users.md
     - 'User Roles': panel/user-roles.md
+    - 'Support issue reporting': panel/support-issue-reporting.md
     - Webhooks:
       - 'Overview': panel/webhooks/index.md
       - 'Async CO webhooks': panel/webhooks/async-co-webhook.md
@@ -178,7 +180,6 @@ nav:
       - 'Content Preview': panel/Plugins/Content-preview.md
       - 'Cloudflare Stream': panel/Plugins/Cloudflare-stream.md
       - 'Singleton Types': panel/Plugins/Singleton-types.md
-      - 'Thumbnails': panel/Plugins/Thumbnails.md
       - 'Google Search Console': panel/Plugins/Google-search-console.md
       - 'Kanban Board': panel/Plugins/Kanban-board.md
       - 'ChatGPT FAQ Generator': panel/Plugins/ChatGPT-faq-generator.md
@@ -206,10 +207,10 @@ nav:
     - 'Overview': Universe/index.md
     - Deployment:
       - 'Overview': Universe/overview.md
-      - 'Gatsby project to Vercel': Universe/deployment/vercel-gatsby.md
       - 'NextJS project to Vercel': Universe/deployment/vercel-nextjs.md
-      - 'Gatsby project to Netlify': Universe/deployment/netlify-gatsby.md
+      - 'Gatsby project to Vercel': Universe/deployment/vercel-gatsby.md
       - 'NextJS project to Netlify': Universe/deployment/netlify-nextjs.md
+      - 'Gatsby project to Netlify': Universe/deployment/netlify-gatsby.md
     - NextJS:
       - 'Flotiq NextJS starters': Universe/nextjs/nextjs-starters.md
       - 'Flotiq NextJS Setup CLI': Universe/nextjs/nextjs-setup.md

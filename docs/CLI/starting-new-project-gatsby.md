@@ -5,6 +5,11 @@ tags:
 
 # Starting new Gatsby project with Flotiq CLI
 
+!!! caution
+    Gatsby starter workflows are now treated as legacy documentation.
+
+    Gatsby Cloud was shut down by Netlify in 2023, so use Netlify or Vercel for Gatsby deployments.
+
 To start a new Gatsby project with [Flotiq CLI](./index.md) you need a Flotiq account (you can [register here](http://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa)) and your "Read and write API key" (more about API keys [here](../API/index.md)).
 
 The command looks like this:

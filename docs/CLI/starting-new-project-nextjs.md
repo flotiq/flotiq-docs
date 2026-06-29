@@ -5,12 +5,20 @@ tags:
 
 # Starting new Next.js project with Flotiq CLI
 
-There are two main ways of starting Flotiq Next.js project with CLI:
+## Recommended approach: flotiq-nextjs-setup
 
-- **Create your project from the ground up** - Using flotiq-nextjs-setup CLI you can start with Flotiq Next.js project framework with automatically generated SDK. To do so refer to our [Next.js setup guide](/docs/Universe/nextjs/nextjs-setup/).
-- **Create your project using starter** - Flotiq starters are designed to streamline your web development process, providing you with predefined data model and customizable site for blog, portfolio and more. The guide below will guide you through the process of starting your project with one of the starters.
+For new Next.js projects, we recommend using `flotiq-nextjs-setup` CLI, which sets up your project with:
 
-On top of using a starter that is ready to kick-start your project development, we recommend adding **Flotiq Node.js integration and SDK**. More on that in [Flotiq SDK section](#flotiq-sdk).
+* Flotiq Next.js project framework with automatically generated SDK
+* Content cache revalidation endpoint
+* Draft mode for unpublished content
+* Full Flotiq integration out of the box
+
+To get started, refer to our [Next.js setup guide](/docs/Universe/nextjs/nextjs-setup/).
+
+## Legacy approach: flotiq start starters
+
+If you prefer to start with a predefined template, Flotiq starters provide quick-start projects with prebuilt data models and UI for common use cases like blog, portfolio, and e-commerce. However, note that starters are a legacy approach; for new and production projects, `flotiq-nextjs-setup` is recommended.
 
 To start developing a new Next.js project with one of the Flotiq starters using [Flotiq CLI](./index.md) you need a Flotiq account (you can [register here](http://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa)) and your "Read and write API key" (more about API keys [here](../API/index.md)).
 
@@ -54,7 +62,7 @@ Before production deployment:
 
 Compatibility is validated per starter repository, not globally for all starters listed on this page.
 
-## Next.js Starters
+### Available starters
 
 * [Recipe website Next.js starter-2](https://github.com/flotiq/flotiq-nextjs-recipe-2) - to use this starter use: `https://github.com/flotiq/flotiq-nextjs-recipe-2` as the `flotiqStarterUrl`
 * [Event calendar Next.js starter-2](https://github.com/flotiq/flotiq-nextjs-event-2) - to use this starter use: `https://github.com/flotiq/flotiq-nextjs-event-2` as the `flotiqStarterUrl`

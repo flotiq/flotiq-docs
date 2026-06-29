@@ -133,21 +133,21 @@ For every sheet in the workbook:
 
 The form in which Flotiq data is exported to / imported from xlsx varies on property type:
 
-| Flotiq field property | Form in which data is exported to xlsx                                                                                                       |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Text                  | Text                                                                                                                                         |
-| Textarea              | Text                                                                                                                                         |
-| Markdown              | Text (with markdown syntax)                                                                                                                  |
-| Rich text             | Text (with HTML tags)                                                                                                                        |
-| Email                 | Text                                                                                                                                         |
-| Number                | Number (with ms excel's default decimal separator)                                                                                           |
-| Radio                 | Text                                                                                                                                         |
-| Checkbox              | TRUE / FALSE                                                                                                                                 |
-| Select                | Text                                                                                                                                         |
-| Simple List           | Objects that are not supported are excluded from export                                                                                            |
-| Relation              | API Url's in the form of text, separated with commas, for example: `/api/v1/content/[ctdName]/[coName1],/api/v1/content/[ctdName]/[coName2]` |
-| List                  | JSON                                                                                                                                         |
-| Geo                   | JSON                                                                                                                                         |
-| Media                 | API Url in form of text, separated with commas, for example: `/api/v1/content/_media/[mediaId1],/api/v1/content/_media/[mediaId2]`           |
-| Date time             | Date                                                                                                                                         |
-| Block                 | JSON                                                                                                                                         |
+| Flotiq field property | Form in which data is exported to xlsx |
+| --- | --- |
+| Text | Text |
+| Textarea | Text |
+| Markdown | Text (with Markdown syntax) |
+| Rich text | Text (with HTML tags) |
+| Email | Text |
+| Number | Number (with MS Excel's default decimal separator) |
+| Radio | Text |
+| Checkbox | TRUE / FALSE |
+| Select | Text |
+| Simple List | JSON (array of strings) |
+| Relation | API URLs in the form of text, separated with commas, for example: `/api/v1/content/[ctdName]/[coName1],/api/v1/content/[ctdName]/[coName2]` |
+| List | JSON |
+| Geo | JSON |
+| Media | API URLs in the form of text, separated with commas, for example: `/api/v1/content/_media/[mediaId1],/api/v1/content/_media/[mediaId2]` |
+| Date time | Date |
+| Block | JSON |

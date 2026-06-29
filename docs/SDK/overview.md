@@ -41,7 +41,7 @@ This option works best if you’re building an application using JavaScript or T
 ## Custom SDK with OpenAPI
 
 Flotiq’s API is fully described using the OpenAPI Specification. 
-That means you can generate a custom SDK in nearly any language – Python, Java, php, Ruby, Go, 
+That means you can generate a custom SDK in nearly any language – Python, Java, PHP, Ruby, Go,
 and more – using tools like: 
 
 * OpenAPI Generator

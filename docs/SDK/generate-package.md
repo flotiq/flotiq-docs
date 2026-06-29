@@ -20,7 +20,7 @@ Currently supported generators are:
 * Go client,
 * Java client,
 * Node client,
-* PHP client,
+* php client,
 * Python client,
 * Angular client,
 * Postman collection.

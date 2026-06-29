@@ -10,7 +10,7 @@ To start a new Gatsby project with [Flotiq CLI](./index.md) you need a Flotiq ac
 The command looks like this:
 
 ```bash
-flotiq start [projectName] [flotiqStarterUrl] [flotiqApiKey]
+flotiq start [directory] [url] [flotiqApiKey] [framework]
 ```
 { data-search-exclude }
 
@@ -18,11 +18,31 @@ After running the command, you should have a new project cloned with installed d
 
 ### Parameters
 
-`projectName` - project name or project path (if you wish to start or import data from the current directory - use `.`)
+* `directory` - project name or project path (if you wish to start or import data from the current directory - use `.`)
+* `url` - full link to Gatsby starter (see list below)
+* `flotiqApiKey` - API key to your Flotiq account
+* `framework` - optional, defaults to `gatsby`
 
-`flotiqStarterUrl` - full link to GatsbyJs starter, the list below
+### Flags
 
-`flotiqApiKey` - API key to your Flotiq account
+* `--framework` or `--fw` - choose `gatsby` or `nextjs`
+* `--no-import` or `-n` - skip importing example objects
+
+## Support and compatibility
+
+!!! warning
+    Before using a Gatsby starter in production, verify its maintenance status and dependency versions in the starter repository.
+
+Flotiq Gatsby starters are reference projects that help you start quickly.
+Depending on when a starter was last updated, you may need to update dependencies before production use.
+
+Before production deployment:
+
+* verify supported Node.js and Gatsby versions in the selected starter repository,
+* install dependencies and run a clean build,
+* test key user paths and plugin integrations in your environment.
+
+Compatibility is validated per starter repository, not globally for all starters listed on this page.
 
 ## Gatsby Starters
 
@@ -41,19 +61,6 @@ You can choose one of our starters:
 
 ## Import example data
 
-If you have cloned one of Gatsby starters, you can import example data.
+The `flotiq start` command automatically imports example data to your Flotiq account. If you need to import data separately, you can use the general-purpose `flotiq import` command for importing JSON data exports.
 
-The command looks like this:
-
-```bash
-flotiq import [projectName] [flotiqApiKey]
-```
-{ data-search-exclude }
-
-After running the command, you should have data imported to your Flotiq account.
-
-### Parameters
-
-`projectName` - project name or project path (if you wish to start or import data from the directory you are in, use `.`)
-
-`flotiqApiKey` - API key to your Flotiq account
+For more information on the `flotiq import` command, refer to [Migrating data between spaces](./migrating-data-between-spaces.md).

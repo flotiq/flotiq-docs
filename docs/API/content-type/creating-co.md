@@ -8,10 +8,11 @@ description: How to add Content Objects in Flotiq
 
 # Content Objects :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 
-Once a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
-has been defined in the system - the user can create 
-<abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that Content Type. 
-This is done either directly through the API or via the convenient Content Entry tools provided within the 
+Once a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content
+Type</abbr>
+has been defined in the system - the user can create
+<abbr title="Content Object - an instance of a Content Type.">Content Objects</abbr>  of that Content Type.
+This is done either directly through the API or via the convenient Content Entry tools provided within the
 Content Management Platform.
 
 !!! note
@@ -21,9 +22,11 @@ Content Management Platform.
 
 ## Creating Content Objects through the API
 
-For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content Type</abbr> 
-defined according to the [create Content Type example](/docs/API/content-type/creating-ctd/), a very simple `POST` payload can be sent 
-to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}` 
+For a <abbr title="Content Type - a model of data that has been defined inside the Content Repository.">Content
+Type</abbr>
+defined according to the [create Content Type example](/docs/API/content-type/creating-ctd/), a very simple `POST`
+payload can be sent
+to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 (where `name` is the name of the content type definition) to create a new Content Object:
 
 ```
@@ -32,10 +35,12 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
   "postContent": "This will be the new <b>content</b>"
 }
 ```
+
 { data-search-exclude }
 
 !!! note
-    The maximum size of a single CO in the system is 1MB. If your project requires a larger CO size, please contact Flotiq support.
+    The maximum size of a single CO in the system is 1MB. If your project requires a larger CO size, please contact Flotiq
+    support.
 
 !!! note
     You can send custom `id` in the object data to assign a particular `id` to the object.
@@ -286,11 +291,10 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
         ```
         { data-search-exclude }
 
-
 #### Possible validation errors
 
 | Error                                                                                    | Description                                                                                                 |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+|------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
 | This value is already used                                                               | Send when the property has to be unique, and the value is already used in an existing object of that type   |
 | Must be at least 1 characters long                                                       | Send when the property is required, and an empty string was sent in object                                  |
 | The property \{name\} is required                                                        | Send when the property is required and was missing in the sent object                                       |
@@ -300,13 +304,12 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
 | This value does not exist in database                                                    | Send when object attached in relation or media array does not exist in the database                         |
 | One of the block types (\{block type\} on index \{index\}) does not match possible types | Send when one of the types in the property of the type `block` does not match types specified in the schema |
 
-
 ### Creating Content Objects with relations to other types or media
 
-To add objects with relations, you need to know ids and types of related objects. 
-Relations are always an array, even if only one relation object is allowed. 
-Order of relation object is preserved. 
-Every relation object have to have `type` property (now only `internal` is possible), 
+To add objects with relations, you need to know ids and types of related objects.
+Relations are always an array, even if only one relation object is allowed.
+Order of relation object is preserved.
+Every relation object have to have `type` property (now only `internal` is possible),
 and `dataUrl` property containing relative url to the object (`/api/v1/content/{type}/{id}`).
 
 !!! Example
@@ -347,12 +350,12 @@ to make sure that the data will be displayed correctly in every environment
 
 Block parameters:
 
-| Parameter | Required | Description                                                                                                                                                                  |
-| --------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id        | true     | Random identifier of the block                                                                                                                                               |
-| data      | true     | Data of the block, the parameters depend on the type of the block                                                                                                            |
+| Parameter | Required | Description                                                                                                                                                                                  |
+|-----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| id        | true     | Random identifier of the block                                                                                                                                                               |
+| data      | true     | Data of the block, the parameters depend on the type of the block                                                                                                                            |
 | type      | true     | Type of the block, the supported types are `paragraph`, `header`, `list`, `image`, `youtubeEmbed`, `quote`, `warning`, `code`, `table` and `delimiter`, types can be narrowed down in schema |
-| tunes     | false    | Additional settings of the block, parameters depend on the type of the block                                                                                                 |
+| tunes     | false    | Additional settings of the block, parameters depend on the type of the block                                                                                                                 |
 
 Blocks:
 
@@ -1096,13 +1099,13 @@ For each active rule:
 
 ## Batch create Content Objects through API
 
-There is a way to add up to 100[^2] Content Objects at once. 
-It is possible by using the `/batch` endpoint 
-(in our example, the URL would be `https://api.flotiq.com/api/v1/content/blogposts/batch`). 
-It can be only `insert` or `insert or update` operation. To use `insert or update` 
-you need to set `updateExisting` to `true` in the query. 
+There is a way to add up to 100[^2] Content Objects at once.
+It is possible by using the `/batch` endpoint
+(in our example, the URL would be `https://api.flotiq.com/api/v1/content/blogposts/batch`).
+It can be only `insert` or `insert or update` operation. To use `insert or update`
+you need to set `updateExisting` to `true` in the query.
 
-All objects must meet the same conditions as when adding a single object. 
+All objects must meet the same conditions as when adding a single object.
 The only difference is an array of objects in the request body instead of one object.
 
 !!! note
@@ -1640,7 +1643,6 @@ Trying updating one blog post and adding one new with duplicated id:
         ```
         { data-search-exclude }
 
-
 Response parameters:
 
 | Parameter           | Description                                                                                                                                            |
@@ -1652,8 +1654,42 @@ Response parameters:
 | errors              | array of errors in the elements, errors are objects containing the id of the object and list of errors, present when there are no duplications in data |
 | data                | listing keys containing duplications (see example above), present only when there are duplications in data or batch_limit exceeded                     |
 
-[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
+[Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){:.flotiq-button}
 
-
-[^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
+[^1]: Number of available Content Objects depends on the chosen subscription plan. Check pricing and limits on
+the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
 [^2]: Limit can be changed in the [<< plan_names.paid_3 >> plan](https://flotiq.com/pricing){:target="_blank"}
+
+## Object duplication
+
+### Duplicate Content Object API Documentation
+
+**Endpoint**: `POST /api/v1/content/{name}/{objectId}/duplicate`  
+**Tag**: `Headless CMS ContentObject`  
+**Summary**: Duplicates one content object, optionally duplicating selected related objects.
+
+#### Path parameters
+
+| Name       | Type   | Required | Description       |  
+|------------|--------|----------|-------------------|  
+| `name`     | string | yes      | Content type name |  
+| `objectId` | string | yes      | Content object id |
+
+#### Request body
+
+| Field                       | Type           | Required | Description                         |  
+|-----------------------------|----------------|----------|-------------------------------------|  
+| `relatedObjectsToDuplicate` | array<string\> | yes      | IDs of related objects to duplicate |
+
+```json
+{
+  "relatedObjectsToDuplicate": [
+    "rel-1",
+    "rel-2"
+  ]
+}
+```
+{ data-search-exclude }
+
+If a related object ID is not present in the body, that related object is not duplicated and is kept as a reference in the duplicated content object.
+

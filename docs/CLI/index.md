@@ -34,7 +34,7 @@ Flotiq CLI currently supports the following commands:
 
 * `flotiq start` quickly launches one of our Next.js or Gatsby starters. This is a starter-based approach. For new Next.js projects, prefer `flotiq-nextjs-setup`. Check support and compatibility notes on the starter pages: [Gatsby](./starting-new-project-gatsby.md#support-and-compatibility) and [Next.js](./starting-new-project-nextjs.md#support-and-compatibility).
 
-* `flotiq import` imports data from a local JSON export directory produced by `flotiq export`, and it can also be used to seed starter projects from their `.flotiq` directory. (more on `flotiq import` for [Gatsby](./starting-new-project-gatsby.md/#import-example-data) and [Next.js](./starting-new-project-nextjs.md/#import-example-data))
+* `flotiq import` imports data from a local JSON export directory produced by `flotiq export`, and it can also be used to seed starter projects from their `.flotiq` directory. (more on `flotiq import` for [Gatsby](./starting-new-project-gatsby.md#import-example-data) and [Next.js](./starting-new-project-nextjs.md#import-example-data))
 
 * `flotiq export` exports data from the Flotiq account to local JSON files. If the key is limited to selected Content Types, then the data available for this key will be exported.
 

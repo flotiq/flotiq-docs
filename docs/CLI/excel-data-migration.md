@@ -34,8 +34,8 @@ Command logs the following information:
     Exported CTD is saved as plain text of properties id's. No metadata is being exported.
 
 !!! note
-    `Max string length` for all values is set to 30.000 because MS Excel has trouble handling text with length > 30 000 in one cell.
-    Object who char values are biggest that 30000 are skipped from export.
+    `Max string length` for all values is set to 30,000 because MS Excel has trouble handling text with length > 30,000 in one cell.
+    Objects with character values longer than 30,000 are skipped from export.
 
 ### Export parameters
 

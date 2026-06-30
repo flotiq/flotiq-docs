@@ -22,7 +22,7 @@ jobs:
     - run: mkdir public
     - run: mv ./site ./public/docs
     - name: Cloudflare
-      if: github.ref == 'refs/heads/master' # Run only for the master branch
+      if: github.ref == 'refs/heads/main' # Run only for the main branch
       run: |
         npm install -g wrangler
         # wrangler init --site cms-docs

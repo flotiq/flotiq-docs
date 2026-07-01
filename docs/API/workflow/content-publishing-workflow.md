@@ -27,7 +27,7 @@ Flotiq offers two distinct systems for managing content state. Choose the one th
 | **Enable**             | Custom workflows (paid plan)                                                     | `draftPublic: true` on Content Type Definition                                                                                                       |
 | **API endpoints**      | `/api/v1/workflow/:type/:id` for state transitions                               | `/api/v1/content/:type/:id/publish`, `/unpublish`, `/archive`                                                                                        |
 | **Use case**           | Complex multi-step approval processes (e.g., draft → review → approval → public) | Simple two-state publishing (draft vs public)                                                                                                        |
-| **Visibility control** | Public state requires using `x-visibility: public` header                        | Listing endpoints, single-object reads, GraphQL, and search respect Draft & Public states by default; use `X-MODE: preview` header to include drafts |
+| **Visibility control** | Public state requires using `x-visibility: public` header                        | Listing endpoints, single-object reads, GraphQL, and search respect Draft & Public states by default; use `X-MODE: preview` header to return all statuses |
 
 **Key difference**: Workflows are for **defining custom editorial processes** with flexible states and transitions. Draft & Public is a **pre-built publishing system** optimized for separating published content from unpublished changes.
 

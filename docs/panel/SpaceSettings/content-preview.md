@@ -54,7 +54,7 @@ The **Page route template** is configured per content type, in the Content
 Preview panel shown when you edit a Content Type Definition. Set it for each
 content type you want to preview.
 
-[![Content Preview route template](../images/space-settings/content-preview-config-ctd.png)](../images/space-settings/content-preview-config-ctd.png){: .border}
+[![Content Preview route template](../images/space-settings/content-preview-config-ctd.png)](../images/space-settings/content-preview-config-ctd.png){: .center .width50 }
 
 - **Page route template** *(required)* - The URL path of your content pages,
   for example `/blog/{slug}`, where `{slug}` is a field of the content type.

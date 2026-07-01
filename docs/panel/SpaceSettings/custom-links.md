@@ -20,15 +20,16 @@ quick access to wherever that content is used.
 Use **Add link** to create a new custom link, and the trash icon to remove one.
 Select a link to open its configuration.
 
-[![Custom link configuration](../images/space-settings/custom-link-modal.png)](../images/space-settings/custom-link-modal.png){: .border}
+[![Custom link configuration](../images/space-settings/custom-link-modal.png)](../images/space-settings/custom-link-modal.png){: .center .width75 }
 
 - **Content types** - The content types this link appears for. Leave empty to
   show the link for all content types.
-- **URL template** *(required)* - It's a place to enter the link template, 
-  e.g. https://my-blog/post/{slug}, where slug is the name of the content field 
-  of the type selected below. Instead of {slug}, you can use any field of a given
-  content type, it is also possible to use nesting, e.g. {internal.createdAt}.
-  You can also use list fields: {addresses[0].city}.
+- **URL template** *(required)* - It's a place to enter the link template,
+  e.g. `https://my-blog/post/{slug}`, where `slug` is the name of the content
+  field of the type selected below. Instead of `{slug}`, you can use any field
+  of a given content type, it is also possible to use nesting,
+  e.g. `{internal.createdAt}`. You can also use list fields:
+  `{addresses[0].city}`.
 - **Link name template** *(required)* - The label shown on the button. It can
   also include object fields, for example `Open {title}`.
 
@@ -50,7 +51,7 @@ duplicating an object.
 A common use case is a direct link to a preview or staging environment from the
 editor. Configure a URL template that points to your preview site:
 
-[![Custom link configuration for a preview environment](../images/space-settings/simple-routing-modal.png)](../images/space-settings/simple-routing-modal.png){: .border}
+[![Custom link configuration for a preview environment](../images/space-settings/simple-routing-modal.png)](../images/space-settings/simple-routing-modal.png){: .center .width75 }
 
 With an object like this:
 
@@ -64,7 +65,7 @@ you get a `green-plant` link leading to
 When a page URL needs several fields — for example a category name *and* a slug —
 combine them in the URL template:
 
-[![Custom link configuration with complex routing](../images/space-settings/complex-routing-modal.png)](../images/space-settings/complex-routing-modal.png){: .border}
+[![Custom link configuration with complex routing](../images/space-settings/complex-routing-modal.png)](../images/space-settings/complex-routing-modal.png){: .center .width75 }
 
 With an object like this:
 

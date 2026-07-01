@@ -6,8 +6,7 @@ tags:
 # Space Settings
 
 Space Settings is the place to configure features that apply across a whole
-space. Each feature has its own page.
-
+space.
 - [Content Preview](content-preview.md) - open draft and published versions of
   your content directly from the editor.
 - [Custom Links](custom-links.md) - add buttons with dynamic links to the

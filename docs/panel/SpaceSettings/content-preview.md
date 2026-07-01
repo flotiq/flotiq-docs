@@ -51,7 +51,7 @@ remove the Content Preview configuration from the space.
 ## Content types and route templates
 
 The **Page route template** is configured per content type, in the Content
-Preview panel shown when you edit a content type definition. Set it for each
+Preview panel shown when you edit a Content Type Definition. Set it for each
 content type you want to preview.
 
 [![Content Preview route template](../images/space-settings/content-preview-config-ctd.png)](../images/space-settings/content-preview-config-ctd.png){: .border}

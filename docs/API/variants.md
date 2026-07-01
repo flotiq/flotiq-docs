@@ -284,13 +284,7 @@ The resulting image will be formatted according to the variant's properties you 
 
 ## Transforming images without creating variants
 
-There are two options for fetching transformed images from your media library without the need for defining variants for corresponding objects of `_media` content type definition.
-
-The first one is to use the standard endpoint for fetching images and adding `?transform` query parameter to it that contains the same object for transformation a variant would, excluding the `name` key, for example:
-
-GET `https://api.flotiq.com/image/0x0/id/fileName.ext?transform={"trim":{"top":0,"right":50,"bottom":50,"left":50,"width":200,"height":200}}`
-
-Another way of retrieving transformed assets from the media library without creating a variant is to use a designated endpoint for such transformations. To use this endpoint, send the GET request to `https://api.flotiq.com/image/{width}x{height}/{id}/{fileName}.{extension}/transform/{transformation-type}/{parameters}`
+There is an option for fetching transformed images from your media library without the need for defining variants for corresponding objects of `_media` content type definition. To retrieve transformed assets from the media library without creating a variant, use a designated endpoint for such transformations. To use this endpoint, send the GET request to `https://api.flotiq.com/image/{width}x{height}/{id}/{fileName}.{extension}/transform/{transformation-type}/{parameters}`
 
 For trimming the image, you have to provide `trim` value for `transformation-type` path parameter, and the following parameters: top,right,width,height; separated with commas, for example:
 

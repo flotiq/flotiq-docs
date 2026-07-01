@@ -46,13 +46,12 @@ This command reads Content Types and Content Objects from the specified director
 
 Additionally, a `InternalContentTypeMedia` directory within the project should store any images that will be imported into your Flotiq Media Library.
 
-The `flotiq import` command ensures that your data is correctly structured and imported into Flotiq without data loss or corruption.
+The `flotiq import` command ensures that your data is correctly structured and imported into Flotiq without data loss or corruption. It also guarantees the correct order of data and media import, so users do not have to worry about relationships between content types.
+In practice, import order is handled automatically as: Content Type Definitions first, then Content Objects, then media.
 
 ## Manual Import/Export via API
 
 While the CLI provides a straightforward way to handle data export and import, you can also perform these operations manually using the Flotiq API. When choosing this approach, however, be aware that image URLs in your Content Objects will need to be updated manually. This is because images will receive new IDs during the import process, which can result in broken links if not handled properly.
-
-For more details on how to adjust image URLs and manage the import/export process via API, please refer to the attached documentation.
 
 ---
 

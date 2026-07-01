@@ -22,11 +22,16 @@ Once you are done getting hold of all of the keys, all you need to do is run a s
 
 ```bash
 
-flotiq contentful-import [flotiqApiKey] [contentfulSpaceId] [contentfulContentManagementToken] [translation (optional)]
+flotiq contentful-import [contentfulSpaceId] [contentfulContentManagementToken] [flotiqApiKey] [translation]
 ```
 { data-search-exclude }
 
-`translation` - is Contentful's space locale that will be exported to Flotiq. If skipped, the command will export Contentful's default locale - `en-us`. You can find more information on Contentful's locale [here](https://www.contentful.com/help/working-with-translations/)
+### Parameters
+
+* `contentfulSpaceId` - Contentful Space ID
+* `contentfulContentManagementToken` - Contentful Content Management Token
+* `flotiqApiKey` - Flotiq read and write API key
+* `translation` - optional Contentful locale, default `en-US`
 
 ## Imported data
 

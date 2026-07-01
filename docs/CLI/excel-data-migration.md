@@ -34,7 +34,8 @@ Command logs the following information:
     Exported CTD is saved as plain text of properties id's. No metadata is being exported.
 
 !!! note
-    `Max string length` for all values is set to 30.000 because MS Excel has trouble handling text with length > 30 000 in one cell.
+    `Max string length` for all values is set to 30,000 because MS Excel has trouble handling text with length > 30,000 in one cell.
+    Objects with character values longer than 30,000 are skipped from export.
 
 ### Export parameters
 
@@ -133,19 +134,20 @@ For every sheet in the workbook:
 The form in which Flotiq data is exported to / imported from xlsx varies on property type:
 
 | Flotiq field property | Form in which data is exported to xlsx |
-|--|--|
+| --- | --- |
 | Text | Text |
 | Textarea | Text |
-| Markdown | Text (with markdown syntax) |
+| Markdown | Text (with Markdown syntax) |
 | Rich text | Text (with HTML tags) |
 | Email | Text |
-| Number | Number (with ms excel's default decimal separator) |
+| Number | Number (with MS Excel's default decimal separator) |
 | Radio | Text |
 | Checkbox | TRUE / FALSE |
 | Select | Text |
-| Relation | API Url's in the form of text, separated with commas, for example: `/api/v1/content/[ctdName]/[coName1],/api/v1/content/[ctdName]/[coName2]` |
+| Simple List | JSON (array of strings) |
+| Relation | API URLs in the form of text, separated with commas, for example: `/api/v1/content/[ctdName]/[coName1],/api/v1/content/[ctdName]/[coName2]` |
 | List | JSON |
 | Geo | JSON |
-| Media | API Url in form of text, separated with commas, for example: `/api/v1/content/_media/[mediaId1],/api/v1/content/_media/[mediaId2]` |
+| Media | API URLs in the form of text, separated with commas, for example: `/api/v1/content/_media/[mediaId1],/api/v1/content/_media/[mediaId2]` |
 | Date time | Date |
 | Block | JSON |

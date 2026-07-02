@@ -1,3 +1,10 @@
+---
+tags:
+  - Developer
+  - Administrator
+  - Content Creator
+---
+
 title: Flotiq Developers Documentation
 description: Headless CMS documentation, tutorials, frameworks, API references, Deep Dives, plugins and integrations.
 
@@ -20,7 +27,7 @@ Flotiq is an API-first content management platform. It allows you to design your
 
 ## How is Flotiq different from other systems?
 
-Flotiq is one of popular headless content management systems, sharing many similiarities with tools like [Strapi](https://strapi.io), [Sanity](https://sanity.io), [Contentful](https://contentful.com) and others. There are, however, several important differences:
+Flotiq is one of popular headless content management systems, sharing many similarities with tools like [Strapi](https://strapi.io), [Sanity](https://sanity.io), [Contentful](https://contentful.com) and others. There are, however, several important differences:
 
 1. we want you to be able to use your data easily regardless of the size of your business or dataset by providing easy ways to immediately prototype, publish and share your APIs,
 2. being partly an API design tool we let you define your own RESTful API based on the data model you define (read more about the [Dynamic Content API](API/dynamic-content-api.md) concept),
@@ -55,3 +62,11 @@ Flotiq does not force you to learn your API, instead we let you define it. Whene
 ![](API/images/dynamic-content-api-docs.png)
 
 Read more in [Dynamic Content API](API/dynamic-content-api.md) section.
+
+## Related docs
+
+- [API access & scoped keys](./API/index.md)
+- [Panel overview](./panel/index.md)
+- [Universe overview](./Universe/overview.md)
+- [SDK overview](./SDK/overview.md)
+

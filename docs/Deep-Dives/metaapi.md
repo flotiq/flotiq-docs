@@ -124,8 +124,8 @@ Now you should see the edit Spell view.
 
 ## 6. Authenticate your Connectors
 
-We need to add API keys both from google and from flotiq, so we can fetch the data from the API and push it to the google sheet.
-Here is step by step guide how to do it:
+We need to add API keys both from Google and from flotiq, so we can fetch the data from the API and push it to the Google sheet.
+Here is step-by-step guide how to do it:
 
 As you can see in the right sidebar, there are a few alerts. 
 To update our configuration, click the "Fix" button next to Flotiq User API.
@@ -149,7 +149,7 @@ Click "Fix" next to "Google Spreadsheet".
 
 ![Fix Google Spreadsheet issues](images/metaapi/meta-14.png){: .border}
 
-This configuration is slightly different from Flotiq because it uses oAuth2.0. 
+This configuration is slightly different from Flotiq because it uses OAuth2.0. 
 Use the "One-click Auth with Meta Api" wizard to authenticate.
 
 ![Run step-by-step Authentication wizard](images/metaapi/meta-15.png){: .border}
@@ -192,7 +192,7 @@ And in the Google Spreadsheet connector code replace null with our dataRow:
 ```
 { data-search-exclude }
 
-We do this to tell the google spreadsheet connector what it should pull from the spreadsheet, in this case, data rows.
+We do this to tell the Google spreadsheet connector what it should pull from the spreadsheet, in this case, data rows.
 
 ![Modify connector code](images/metaapi/meta-17a.png){: .border}
 
@@ -220,3 +220,11 @@ We suggest you play with Flotiq and Meta-API:
 * [Deploy your Spell](https://docs.meta-api.io/docs/deployment/versions) to run it with a simple HTTP request 
 * Try to [schedule the Spell](https://docs.meta-api.io/docs/deployment/Scheduler) - run our stock report once an hour [link]
 * Fire the Spell automagically after product update [using Flotiq Webhooks](https://flotiq.com/docs/panel/webhooks/)
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

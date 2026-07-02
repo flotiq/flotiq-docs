@@ -93,7 +93,7 @@ Or as a safer option, create a scoped read-only API key that will only be used f
 Copy the Read-Only key and paste it in Netlify settings as `GATSBY_FLOTIQ_API_KEY`. For the `GATSBY_FLOTIQ_BASE_URL` put `https://api.flotiq.com`.
 
 !!! Note
-    Flotiq doesn't enforce any particular way of selecting drafts or non-public versions of your pages. The Read-Only key you copied will give you access to all your content. If you'd like to setup draft and public versions of your pages - you can do so by adding an extra field to your content types and querying for it in you GraphQL queries.
+    Flotiq doesn't enforce any particular way of selecting drafts or non-public versions of your pages. The Read-Only key you copied will give you access to all your content. If you'd like to set up draft and public versions of your pages - you can do so by adding an extra field to your content types and querying for it in you GraphQL queries.
 
 ## Installing the Netlify plugin
 
@@ -109,7 +109,7 @@ Once the plugin is enabled, click `Manage` to open the modal with the form.
 
 ![Manage Netlify](images/netlify/manage.png){: .center .width75 .border}
 
-After the modal is opened, click `Add item`. Next - fill in the details from your Netlify account and click `Save changes` to finish your Netlify Build setup.
+After the modal is opened, click `Add item`. Next - fill in the details from your Netlify account and click `Save changes` to finish your Netlify Build set up.
 
 ![Setting up Netlify Build in Flotiq](images/netlify/settings.png){: .center .width75 .border}
 
@@ -132,7 +132,7 @@ The two elements you will need to copy from Netlify is the Build instance URL:
 
 and the Builds Webhook URL from Settings:
 
-First, navigate to Settings -> Build & deploy
+First, navigate to Settings → Build & deploy
 
 ![Netlify Build and Builds Webhook URLs](images/netlify/netlify-webhooks-1.png){: .center .width75 .border}
 
@@ -157,3 +157,11 @@ You will paste both of them in Flotiq Netlify Build plugin settings, don't forge
 You're done. Now you will see `Build site` in Content Objects forms, and you will be able to build site after you made changes to the content.
 
 ![Netlify build button in Flotiq editor](images/netlify/netlify-build-in-editor.png){: .center .width75 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

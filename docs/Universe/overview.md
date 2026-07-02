@@ -46,7 +46,7 @@ There are some drawbacks of using the live mode:
 All server-based technologies, e.g.:
 
 * PHP with its web frameworks like Symfony or Laravel,
-* Node.JS, for example Express, Next.JS and similar,
+* Node.js, for example Express, Next.js and similar,
 * Python’s Django and similar,
 * and many more.
 
@@ -75,14 +75,30 @@ This list is quite a bit shorter as not all solutions have out-of-the-box suppor
 
 ## Conclusions
 
-Depending on what you’re trying to achieve - one type might work better than the other.
+The best deployment mode depends on your goals. Below are the three most common scenarios.
 
-If you're trying to optimize the cost - it's still possible to keep a website running for free using a static site generator like Gatsby or Next.js deployed to a hosting platform with a free tier (such as Netlify or Vercel) and a << plan_names.free >> tier of Flotiq, but you will have to use 3rd party solutions for any non-static behavior (for example - handling payments through Snipcart, processing forms with Flotiq Forms, etc.). With a statically generated site your content is uploaded to a cloud-based file hosting service of your choice during the deployment and that is the only time when you use your Flotiq quotas.
+**Minimize cost:**
 
-If you’re looking for greater flexibility and you can accept the additional cost and complexity related to hosting your web application - you can choose one of the technologies supporting this, like Next.JS or Symfony. In this case - your website traffic will be proportional to the usage of your Flotiq quotas.
+- Use a static site generator (Gatsby or Next.js) with a free-tier hosting platform (Netlify or Vercel) and the `<< plan_names.free >>` tier of Flotiq.
+- Flotiq quotas are only consumed during deployment, not on each page visit.
+- For non-static behavior — such as payments (Snipcart) or form processing (Flotiq Forms) — use third-party services.
 
-Of course - as usual, you can also think about building a hybrid solution, with a static site that runs occasional API calls to Flotiq to update the data that is frequently changing (for example to check stock in your e-commerce).
+**Maximize flexibility:**
 
-You can jump-start your JAMStack projects using our Next.js (React) starters.
+- Use a server-side technology such as Next.js or Symfony.
+- This gives you full control over business logic.
+- Flotiq quota usage scales with your website traffic.
+
+**Hybrid approach:**
+
+- Serve a static site but make occasional API calls to Flotiq for frequently changing data (for example, product stock levels in an e-commerce store).
+
+To get started quickly, use our Next.js (React) starters for your JAMstack projects.
 
 Gatsby starters are still available as legacy examples.
+
+## Related docs
+
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Deep Dives overview](../Deep-Dives/index.md)

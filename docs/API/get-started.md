@@ -39,7 +39,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
         ``` 
         curl --location --request GET "https://api.flotiq.com/api/v1/content/blogposts/blogposts-456712" \
         --header "accept: application/json" \
-        --header "X-AUTH-TOKEN: YOUR_API_TOKEN"
+        --header "X-AUTH-TOKEN: YOUR_API_KEY"
         ```
         { data-search-exclude }
 
@@ -164,7 +164,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
 
     === "200 OK"
 
-        Returned when the object was found
+        The API returns this response when the object is found.
 
         ```
         {
@@ -184,7 +184,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
 
     === "401 Unauthorized"
 
-        Returned when API key was missing or incorrect
+        The API returns this response when the API key is missing or incorrect.
   
         ```
         {
@@ -196,7 +196,7 @@ Retrieve the schema of a specific Content Object by sending a `GET` request to t
 
     === "404 Not found"
 
-        Returned when content type definition wasn't found
+        The API returns this response when the content type definition is not found.
 
         ```
         {
@@ -240,7 +240,7 @@ To pass this query to the Flotiq, you need to call:
 
         ``` 
         curl -X POST 'https://api.flotiq.com/api/v2/graphql' \
-        --header 'X-AUTH-TOKEN: YOUR_API_TOKEN' \
+        --header 'X-AUTH-TOKEN: YOUR_API_KEY' \
         --header 'Content-Type: application/json' \
         --data-raw '{"query":"query { blogposts(id: \"blogposts-456712\") { id title } }"}'
         ```
@@ -253,7 +253,7 @@ To pass this query to the Flotiq, you need to call:
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
+                'X-AUTH-TOKEN': 'YOUR_API_KEY'
             },
             body: JSON.stringify({
                 query: 'query { blogposts(id: "blogposts-456712") { id title } }'
@@ -274,7 +274,7 @@ To pass this query to the Flotiq, you need to call:
         }, {
             headers: {
                 'Content-Type': 'application/json',
-                'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
+                'X-AUTH-TOKEN': 'YOUR_API_KEY'
             }
         })
         .then(response => console.log(response.data))
@@ -290,7 +290,7 @@ To pass this query to the Flotiq, you need to call:
         url = 'https://api.flotiq.com/api/v2/graphql'
         headers = {
             'Content-Type': 'application/json',
-            'X-AUTH-TOKEN': 'YOUR_API_TOKEN'
+            'X-AUTH-TOKEN': 'YOUR_API_KEY'
         }
         data = {
             'query': 'query { blogposts(id: "blogposts-456712") { id title } }'
@@ -305,7 +305,7 @@ To pass this query to the Flotiq, you need to call:
 !!! Response
     === "200 OK"
 
-        Returned when the object was found
+        The API returns this response when the object is found.
 
         ```json
         {
@@ -321,7 +321,7 @@ To pass this query to the Flotiq, you need to call:
 
     === "401 Unauthorized"
 
-        Returned when the API key was missing or incorrect
+        The API returns this response when the API key is missing or incorrect.
 
         ```json
         {
@@ -339,7 +339,7 @@ To pass this query to the Flotiq, you need to call:
 
     === "404 Not found"
 
-        Returned when the content type definition wasn't found
+        The API returns this response when the content type definition is not found.
 
         ```json
         {
@@ -362,3 +362,11 @@ Flotiq API offers various advanced features and functionalities to enhance your 
 * Media Management: Upload and [manage media](media-library.md) assets such as images and videos in your application.
 
 Congratulations! You now have a basic understanding of integrating Flotiq API into your application. Start by creating your Content Type Definitions and then follow the API integration steps to build powerful applications using Flotiq. If you need further assistance, refer to the specific sections in the documentation or reach out to our support team.
+
+## Related docs
+
+- [API access & scoped keys](./index.md)
+- [Dynamic Content API](./dynamic-content-api.md)
+- [GraphQL](./graph-ql.md)
+- [Search API](./search.md)
+

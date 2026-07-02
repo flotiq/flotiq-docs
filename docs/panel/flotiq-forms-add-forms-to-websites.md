@@ -163,3 +163,11 @@ You can see a working example below, it's just a `<flotiq-form/>` tag, that we p
 </div>
 
 You can use the form to tell us what you think about Flotiq Forms :)
+
+## Related docs
+
+- [Panel overview](./index.md)
+- [API access & scoped keys](../API/index.md)
+- [Content Objects](../API/content-objects.md)
+- [Webhooks overview](./webhooks/index.md)
+

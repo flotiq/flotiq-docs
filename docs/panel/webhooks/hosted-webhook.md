@@ -99,3 +99,11 @@ function _webhook(ctx) {
 { data-search-exclude }
 
 Using validating hosted webhook is an easy tool to make sure that your content will not contain any mistakes, like setting a promotional price higher than the regular price of the product.
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](./index.md)
+

@@ -501,3 +501,11 @@ Result:
 
 <video class="border" src="../img/custom-modal-ctd-schema-async-return.mp4" controls=""><a href="../img/custom-modal-ctd-schema-async-return.mp4">Form
 with custom submit and button labels</a></video>
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

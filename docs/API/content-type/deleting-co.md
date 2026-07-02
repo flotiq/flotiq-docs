@@ -269,10 +269,18 @@ It is possible to remove all objects for a given content type. To learn more, se
 Deleted content objects are soft-deleted and retained for **60 days** before being permanently removed.
 During this period, it is possible to restore them by contacting Flotiq support.
 
-To request a restore, send an email to [support@flotiq.com](mailto:support@flotiq.com) with the following information:
+To request a restoration, send an email to [support@flotiq.com](mailto:support@flotiq.com) with the following information:
 
 * **Content Type name** – the name of the Content Type Definition the objects belong to
 * **Object IDs** – the IDs of the objects you wish to restore (if you want to restore all deleted objects of a given type, provide the Content Type name and indicate that a full restore is needed)
+
+
+## Related docs
+
+- [Content Objects](../content-objects.md)
+- [Content Types](../content-types.md)
+- [Dynamic Content API](../dynamic-content-api.md)
+- [API access & scoped keys](../index.md)
 
 [Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 

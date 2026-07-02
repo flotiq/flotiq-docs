@@ -165,7 +165,7 @@ Each rule has three fields:
 When you create or update a Content Type Definition with `slugs`:
 
 * For **active** rules, both `source` and `target` must reference fields that exist
-  in the Content Type schema. Otherwise the request returns `400 Bad Request` with
+  in the Content Type schema. Otherwise, the request returns `400 Bad Request` with
   violations on `slugs[i].source` and/or `slugs[i].target`.
 * For **inactive** rules with missing fields, the rule is silently dropped during
   save — no error is returned, but the rule will not be persisted.
@@ -1302,6 +1302,14 @@ Input types of properties in `metaDefinition`:
 ## Creating Content Types through the Content modeller
 
 If you'd rather use our graphical interface to design your Content Types - read the [Content modeller documentation](/docs/panel/content-types/)
+
+
+## Related docs
+
+- [Content Objects](../content-objects.md)
+- [Content Types](../content-types.md)
+- [Dynamic Content API](../dynamic-content-api.md)
+- [API access & scoped keys](../index.md)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 

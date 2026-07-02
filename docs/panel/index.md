@@ -8,9 +8,11 @@ tags:
 
 Here you will find the documentation about Flotiq Panel, which is the graphical interface that you will be using to work with your Content Type Definitions and Content Objects.
 
+A Space is an isolated workspace for one project. It has its own content, users, limits, and settings.
+
 ## Dashboard
 
-After logging in you will see Flotiq's dashboard, by default it will show a welcome screen, the onboarding checklist and links to SDK packages that you can download in order to use the content provided by Flotiq in your project.
+After logging in you will see Flotiq's dashboard. By default, it will show a welcome screen, the onboarding checklist and links to SDK packages - that you can download in order to use the content provided by Flotiq in your project.
 
 ![Flotiq dashboard](images/Dashboard.png){: .border}
 
@@ -29,7 +31,7 @@ This part of Flotiq's interface will be your starting point whenever you begin w
 
 ## Content Type editor
 
-From the main screen showing all Content Type Definitions you can either create a new CTD or edit an existing one. Both actions will take you to the Content Type editor, which is a convenient UI to define your data model.
+From the main screen showing all Content Type Definitions you can either create a new Content Type Definition (CTD) or edit an existing one. Both actions will take you to the Content Type editor, which is a convenient UI to define your data model.
 
 ![Flotiq Content Type Editor](images/EditContentTypeDefinitions.png){: .center .width75 .border}
 
@@ -60,4 +62,9 @@ Follow these resources to learn more about Flotiq:
 - [how to create Content Type Definitions](./content-types/)
 - [how to retrieve your API keys](../API/)
 - [how to use Unsplash in Flotiq](./media-library/#stock-photos)
+- [how to use the Dashboard](./dashboard/)
+- [how plans and billing work](./billing/)
+- [how to manage account settings](./account-settings/)
+- [how authentication works](./authentication/)
+- [how to choose templates and starters](./templates/)
 - [how to report a support issue in the Panel](./support-issue-reporting/)

@@ -6,11 +6,11 @@ tags:
 title: Media transformations | Flotiq docs
 description: How to transform an image in Flotiq
 
-# Overview
+# Media Variants
 
 This document describes the functionality of variants and transformations for `_media` content type definition and images in the Flotiq. It outlines the structure of variants, acceptable transformation types, endpoints for variant operations, and considerations for using variants effectively.
 
-# Media Variants
+## Overview
 
 A variant refers to an altered version of an original media asset. Variants are created by applying transformations to the original media, such as cropping, resizing, or other image manipulations. These transformations are defined within the variant object in the _media content type definition (CTD) schema.
 
@@ -41,7 +41,7 @@ The schema allows for the addition of variants with transformations. A variant o
 ```
 { data-search-exclude }
 
-Note that the `variants` key above is an optional key inside of the object of type `_media`.
+Note that the `variants` key above is an optional key inside the object of type `_media`.
 
 !!! Example
 
@@ -61,7 +61,7 @@ Note that the `variants` key above is an optional key inside of the object of ty
 !!! Note
     - Media objects without any variants initially won't have the "variants" key in their object data. It will be automatically added when the first variant for that media is created.
     - Removing all variants of an asset won't delete the "variants" key from object data.
-    - Variant names must be unique and follow the regex pattern: `^[_a-zA-Z0-9]+$` (case insensitive).
+    - Variant names must be unique and follow the regex pattern: `^[_a-zA-Z0-9]+$` (case-insensitive).
 
 ## Transformation Types
 
@@ -300,6 +300,14 @@ GET `https://api.flotiq.com/image/0x0/id/fileName.ext/transform/trim/50,50,200,2
 
 Operations on variants are accessible through our dashboard. For more information visit here [dashboard for media library](https://flotiq.com/docs/panel/media-library/).
 
-# Conclusion
+## Conclusion
 
 Flotiq allows for the creation, management, and retrieval of variants, offering practical examples and response handling. By following these guidelines, users can efficiently optimize and customize media assets for various use cases, enhancing application performance and flexibility. Overall, this documentation serves as a valuable resource for developers looking to leverage Flotiq's capabilities for media transformation.
+
+## Related docs
+
+- [Media library](./media-library.md)
+- [Content Objects](./content-objects.md)
+- [Dynamic Content API](./dynamic-content-api.md)
+- [API access & scoped keys](./index.md)
+

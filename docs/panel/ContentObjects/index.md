@@ -5,7 +5,7 @@ tags:
 
 # Content objects
 
-Once a Content Type has been defined in the system - the user can create Content Objects of that Content Type.
+Once you define a Content Type in the system, you can create Content Objects of that Content Type.
 This is done either directly through the API or via the convenient Content Entry tools
 provided within the [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}.
 
@@ -47,7 +47,7 @@ Or by selecting it on the content browser and clicking the `Action` then `Delete
 
 Flotiq provides built-in version control for content objects, allowing users to view, compare, and restore previously saved versions.
 
-Each time a content object is updated, a new version is automatically saved and listed in the Versions panel on the right-hand side of the editor. The version log includes the timestamp and the name of the user who made the change, which supports full transparency and encourages collaborative workflows within teams.
+Each time you update a content object, Flotiq automatically saves a new version and lists it in the Versions panel on the right-hand side of the editor. The version log includes the timestamp and the name of the user who made the change, which supports full transparency and encourages collaborative workflows within teams.
 
 If the editor account is deleted, version entries are preserved and remain visible as edits made by a deleted user.
 
@@ -110,3 +110,11 @@ If something was wrong the errors will appear in modal nest to fields that are i
 
 [^1]: The number of available Content Objects depends on the chosen subscription plan.
 Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

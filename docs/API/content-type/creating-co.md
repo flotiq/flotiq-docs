@@ -48,7 +48,7 @@ to the supporting endpoint `https://api.flotiq.com/api/v1/content/{name}`
     Random `id` will be assigned when the `id` property is not present in the object.
 
 !!! note
-    Content object's `id` in endpoint `https://api.flotiq.com/api/v1/content/contenttype/{id}` is case insensitive.
+    Content object's `id` in endpoint `https://api.flotiq.com/api/v1/content/contenttype/{id}` is case-insensitive.
 
 !!! Example
 
@@ -344,9 +344,9 @@ and `dataUrl` property containing relative url to the object (`/api/v1/content/{
 
 ### Creating Content Objects with the editor.js blocks
 
-Blocks contain json definitions of the html blocks instead of the real html blocks
-to make sure that the data will be displayed correctly in every environment
-(developer can manage them correctly in the standard React and React Native for example).
+Blocks contain JSON definitions of the HTML blocks instead of the real HTML blocks
+to make sure that the data will be displayed correctly in every environment. 
+Developer can manage them correctly in the standard React and React Native for example.
 
 Block parameters:
 
@@ -1692,4 +1692,12 @@ the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}
 { data-search-exclude }
 
 If a related object ID is not present in the body, that related object is not duplicated and is kept as a reference in the duplicated content object.
+
+## Related docs
+
+- [Content Objects](../content-objects.md)
+- [Content Types](../content-types.md)
+- [Dynamic Content API](../dynamic-content-api.md)
+- [API access & scoped keys](../index.md)
+
 

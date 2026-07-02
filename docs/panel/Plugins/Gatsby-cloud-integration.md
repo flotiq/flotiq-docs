@@ -108,7 +108,7 @@ Click **Save** once you've entered your variables.
 Select **Create Site** and wait for the first preview instance to be created.
 
 !!! Note
-    Flotiq doesn't enforce any particular way of selecting drafts or non-public versions of your pages. The Read-Only key you copied will give you access to all your content. If you'd like to setup draft and public versions of your pages - you can do so by adding an extra field to your content types and querying for it in you GraphQL queries.
+    Flotiq doesn't enforce any particular way of selecting drafts or non-public versions of your pages. The Read-Only key you copied will give you access to all your content. If you'd like to set up draft and public versions of your pages - you can do so by adding an extra field to your content types and querying for it in you GraphQL queries.
 
 ## Installing the Gatsby plugin
 
@@ -143,3 +143,11 @@ You will paste all three of them in Flotiq Gatsby Preview plugin settings, don't
 You're done. All your content will now automatically stay in sync with your Gatsby Cloud preview instance, and you will see the preview button in the Flotiq content editor.
 
 ![Gatsby preview button in Flotiq editor](images/gatsby-preview-in-editor.png){: .center .width75 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

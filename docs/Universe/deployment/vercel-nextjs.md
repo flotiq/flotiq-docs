@@ -3,9 +3,9 @@ tags:
   - Developer
 ---
 
-# NextJS Vercel Deployment
+# Next.js Vercel Deployment
 
-This article will walk you through the process of deploying your NextJS project to Vercel.
+This article will walk you through the process of deploying your Next.js project to Vercel.
 We use one of our starters as an example, so you might want to check them out, check the links below.
 
 ## Prerequisites
@@ -28,7 +28,7 @@ We use one of our starters as an example, so you might want to check them out, c
 
 If you do not have a Vercel account, the easiest way to create one and use this tutorial is to use GitHub on the Vercel sign-up page. Vercel will ask you to authorize with your GitHub account. If you need to request access to one or more repositories, you can click request access here or later when creating an instance.
 
-Go to the Vercel site and click the Sign Up button on the top right of the site.
+Go to the Vercel site and click the `Sign Up` button on the top right of the site.
 
 You will be asked about the Plan type and your name. 
 
@@ -100,3 +100,11 @@ Copy the Read-Only key and paste it into Vercel settings as **FLOTIQ_API_KEY**. 
     Flotiq doesn't enforce any particular way of selecting drafts or non-public versions of your pages.
 
     The Read-Only key you copied will give you access to all your content. If you'd like to set up draft and public versions of your pages, you can do so by adding an extra field to your content types and querying for it in your GraphQL queries.
+
+## Related docs
+
+- [Universe overview](../overview.md)
+- [Get Started with API](../../API/get-started.md)
+- [SDK overview](../../SDK/overview.md)
+- [Deep Dives overview](../../Deep-Dives/index.md)
+

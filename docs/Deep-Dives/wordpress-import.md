@@ -3,21 +3,21 @@ tags:
   - Developer
 ---
 
-title: Importing Wordpress posts, migrate from Wordpress to Flotiq headless CMS | Flotiq docs
-description: Get into this deep dive into Flotiq to learn how to easily import your blog posts from Wordpress to Flotiq.
+title: Importing WordPress posts, migrate from WordPress to Flotiq headless CMS | Flotiq docs
+description: Get into this deep dive into Flotiq to learn how to easily import your blog posts from WordPress to Flotiq.
 
 # Importing posts from WordPress
 
-Replacing Wordpress is one of the most common use cases for Headless CMS, and for good reasons. Let's take a look at how easy it's going to be.
+Replacing WordPress is one of the most common use cases for Headless CMS, and for good reasons. Let's take a look at how easy it's going to be.
 
 !!! hint
     Instead of coding, you can try our [one-click migration tool](https://flotiq.com/services/migrate-wordpress-to-flotiq-headless-cms/) to move your data from WordPress to Flotiq.
     All you need is your personal [Flotiq Read And Write API Key](http://flotiq.com/docs/API/#application-api-keys) and your WordPress Site address.
     Read more in our [blog post](https://blog.flotiq.com/migrate-wordpress-to-flotiq-headless-cms).
 
-## Export Wordpress data
+## Export WordPress data
 
-Go to Tools → Export in the main Wordpress menu
+Go to Tools → Export in the main WordPress menu
 
 ![](images/wordpress-export-menu.png)
 
@@ -191,4 +191,12 @@ for item in items:
 Please mind that we only cared to import the basic fields, like slug, title, content, etc. Feel free to amend this code and import anything else you might need.
 
 !!! success
-    Hopefully, you now have a bunch of blog posts imported from Wordpress. Go ahead and fork our [example Gatsby starter](https://github.com/flotiq/flotiq-gatsby-blog-1) and deploy it to Heroku - if you followed our naming closely - you will only need to provide your Read Only API key to have a fully working blog page in a couple of minutes!
+    Hopefully, you now have a bunch of blog posts imported from WordPress. Go ahead and fork our [example Gatsby starter](https://github.com/flotiq/flotiq-gatsby-blog-1) and deploy it to Heroku - if you followed our naming closely - you will only need to provide your Read Only API key to have a fully working blog page in a couple of minutes!
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

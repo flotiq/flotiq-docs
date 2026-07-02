@@ -8,6 +8,8 @@ description: How to use synchronous webhooks in Flotiq
 
 # Synchronous webhooks
 
+For reliability and troubleshooting guidance, see [Synchronous webhooks deep dive](./sync-deep-dive.md).
+
 ## What is a synchronous webhook?
 
 Sync webhooks are executed in-band during Flotiq request processing on the following events:
@@ -53,13 +55,15 @@ Flotiq backend will make sure to send this payload to the system you registered 
 
 ## Mutating webhooks
 
+Use mutating webhooks when payload values should be changed before save.
+
 There are many cases when the ability to modify data being received by Flotiq comes in handy, for example:
 
 - generating slugs for web pages
 - calculating field values based on other fields
 - populating object's fields with data from external sources
 
-it can now be easily done through a mutating webhook. Once the processing system receives the standard webhook payload from Flotiq - it can freely modify the object contents (as long as it conforms with the object's Content Type Definition). Once the object is processed - the system responds with a HTTP 200 code and a JSON object of the following form:
+it can now be easily done through a mutating webhook. Once the processing system receives the standard webhook payload from Flotiq - it can freely modify the object contents (as long as it conforms with the object's Content Type Definition). Once the object is processed - the system responds with an HTTP 200 code and a JSON object of the following form:
 
 ```
 HTTP 200:
@@ -77,6 +81,8 @@ HTTP 200:
 { data-search-exclude }
 
 ## Validating webhooks
+
+Use validating webhooks when payload should be accepted or rejected without modification.
 
 The second use case for sync webhooks is external validation. In a similar way as with the mutating webhook - an external system receives payload from Flotiq. Once the system processes the object it can respond in 2 ways:
 
@@ -134,6 +140,8 @@ Once this is configured - the payload will be sent to an external system and the
 
 ## How errors are handled
 
+For timeout budgets and an operational failure playbook, see [Synchronous webhooks deep dive](./sync-deep-dive.md#timeout-and-failure-behavior).
+
 In case the remote system fails to respond according to one of the formats described above - Flotiq will stop processing the request and respond with an HTTP `400` error like the following:
 
 ```
@@ -150,3 +158,11 @@ in such case please check the following:
 
 1. Make sure the remote system is returning a proper `200` or `400` response, as described above.
 2. Check the remote system's logs to verify the cause of misbehavior.
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](./index.md)
+

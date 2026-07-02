@@ -89,3 +89,11 @@ Now, the content of the selected field will be analyzed based on the tags you ha
 
 You can read more about SurferSeo
 plugin [here](https://surferseo.notion.site/Surfer-Guidelines-in-your-CMS-ba2ea6b1a3234850bc1b49caa1a7acda)
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

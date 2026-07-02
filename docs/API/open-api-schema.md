@@ -33,11 +33,11 @@ curl -X GET "https://api.flotiq.com/api/v1/open-api-schema.json" \
 
 Possible request parameters:
 
-| Parameter | Description                                                                                                |
-|-----------|------------------------------------------------------------------------------------------------------------|
+| Parameter | Description                                                                                                 |
+|-----------|-------------------------------------------------------------------------------------------------------------|
 | version   | version of API Schema, possible values: `3.1`, `3` - default for Open API Schema 3.0, `2` - for Swagger 2.0 |
-| user_only | should the schema be rendered without system endpoints, default `false`                                    |
-| hydrate   | if relations to other CTDs should be expanded, default `0`, `1` - expand schema definition                 | 
+| user_only | should the schema be rendered without system endpoints, default `false`                                     |
+| hydrate   | if relations to other CTDs should be expanded, default `0`, `1` - expand schema definition                  | 
 
 Version 3 is compatible with Open API tools
 ([SDK generator](https://github.com/OpenAPITools/openapi-generator), [swagger editor](https://editor.swagger.io/))
@@ -18320,6 +18320,13 @@ You can use the same request parameters for [scoped API](/docs/API/#user-defined
 
 !!! note
     Read more about [API keys and scoped API keys](/docs/API/)
+
+## Related docs
+
+- [Dynamic Content API](./dynamic-content-api.md)
+- [Content Types](./content-types.md)
+- [Get Started with API](./get-started.md)
+- [API access & scoped keys](./index.md)
 
 [Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 

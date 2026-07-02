@@ -61,7 +61,7 @@ as usual.
 
 ## How slug generation works
 
-Once a slug rule is active, the target field is auto-filled in the Content Object form.
+Once a slug rule is active, the target field is autofilled in the Content Object form.
 
 ![Slug refresh button in object form](../images/slug-rules/slug-refresh-button.png){: .center .width75 .border}
 
@@ -81,3 +81,11 @@ slug rule. Its behaviour is:
     target field explicitly, your value is preserved. See
     [auto-generated slug fields](../../API/content-type/creating-co.md#auto-generated-slug-fields)
     for details.
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

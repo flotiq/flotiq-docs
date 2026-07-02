@@ -8,7 +8,7 @@ description: Use live preview plugin for real-time transmission of data from con
 
 # Live Preview Plugin
 
-The Live Preview Plugin is used for real-time transmission of data from content object forms, allowing the end application to display content changes live. The plugin generates links that let you open drafts of your pages directly from the editor with a live streaming preview. It works best with Next.js-based sites.
+The Live Preview Plugin is used for real-time transmission of data from content object forms, allowing the end application to display content changes live. The plugin generates links that let you open drafts of your pages directly from the editor with a live-streaming preview. It works best with Next.js-based sites.
 
 ## Live Preview vs Content Preview
 
@@ -82,3 +82,11 @@ In this view you can:
 - change the viewport of the application
 - open application in the new tab
 - close the preview
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

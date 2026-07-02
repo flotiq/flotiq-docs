@@ -8,7 +8,7 @@ description: A deep dive tutorial on how to build your first blog using a headle
 
 # Building a blog in 3 minutes with Flotiq, Gatsby and Netlify
 
-In this deep dive you will learn how easy it is to build and deploy a blog with Flotiq, Gatsby and Netlify. Follow along and you should end up with a working blog page in no more than 3 minutes!
+In this deep dive you will learn how easy it is to build and deploy a blog with Flotiq, Gatsby and Netlify. Follow along, and you should end up with a working blog page in no more than 3 minutes!
 
 ## Define a Content Type
 
@@ -65,7 +65,7 @@ Also make sure to give your app a name, then click `Save & Deploy` and there - i
     Congratulations! You just deployed your Flotiq-based blog. Please share your success with us - drop us an email, a chat message or mention us on Twitter. We're eager to see what you build!
 
 !!! note 
-    For this particular example we used our blog boilerplate with the main Gatsby configuration in order to provide integrations with Flotiq and Netlify. You can explore [our Github repository](https://github.com/flotiq/flotiq-gatsby-blog-1) to see how easy it was to connect Gatsby to Flotiq. 
+    For this particular example we used our blog boilerplate with the main Gatsby configuration in order to provide integrations with Flotiq and Netlify. You can explore [our GitHub repository](https://github.com/flotiq/flotiq-gatsby-blog-1) to see how easy it was to connect Gatsby to Flotiq. 
     
 The end result should look like this:
 
@@ -83,6 +83,14 @@ Congrats! Your all-shiny blog should now be live. You also learned a couple of i
 2. Populating data,
 3. Deploying a Flotiq-powered blog to Netlify, via Gatsby.
 
-You probably want to get your hands dirty now, huh? Try the [next deep dive](wordpress-import.md) and see how Flotiq makes your work easier with SDK packages that will put your Content Types straight into your favorite IDE. Oh, and by the way we will import all your Wordpress posts at the same time.
+You probably want to get your hands dirty now, huh? Try the [next deep dive](wordpress-import.md) and see how Flotiq makes your work easier with SDK packages that will put your Content Types straight into your favorite IDE. Oh, and by the way we will import all your WordPress posts at the same time.
 
 You can also learn how to add a custom domain to your blog, for free, in [this Deep Dive](../add-a-custom-domain-to-heroku-for-free/), featuring Cloudflare Workers.
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

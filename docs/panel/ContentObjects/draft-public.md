@@ -137,3 +137,11 @@ To restore archived content, use the **Publish** action on the archived object.
     Publishing an archived object changes its status to `public`.
 
 You can do this from the object form (toolbar) or from the content browser using `Actions` -> `Publish`.
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

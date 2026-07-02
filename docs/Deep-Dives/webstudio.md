@@ -9,7 +9,7 @@ description: Integrate Flotiq with Webstudio to jump-start your project code-fre
 
 # Using Flotiq with Webstudio to build a headless website code free
 
-In this deepdive you will learn how to easily integrate Flotiq with Webstudio to build a website code-free with all the advantages of a headless workflow.
+In this deep dive you will learn how to easily integrate Flotiq with Webstudio to build a website code-free with all the advantages of a headless workflow.
 
 ## Prerequisites
 
@@ -106,15 +106,15 @@ Once you add the data variable, you will be able to inspect it. If all propertie
 ### Embed data from Flotiq to Webstudio page
 
 Now that your Flotiq data is fetched and saved in the Webstudio data variable, you can embed it in components on your page.
-To do so, add a new component to your page in Webstudio, and open it's settings.
+To do so, add a new component to your page in Webstudio, and open its settings.
 There you can edit the properties of the selected component and assign them values from your content objects data fetched from Flotiq,
 for example for a text field, edit the `Text Content` property, open Expression editor (accessed by clicking the blue "plus" button),
 type in the data variable name that you defined earlier, and select the values from your fields, for example: `VariableName.data.data.blogpost.title`.
 
  ![Binding text in Webstudio](images/webstudio/webstudio-binding-text.gif){: .center .border}
 
-Different content fields may require embedding them in different components. For example in order to insert an image from Flotiq, you should add `image` component to your page,
-open expression editor for `Source` property, and provide the URL value from the media link from your content object, with Flotiq's base url at the start of the expression, like so:
+Different content fields may require embedding them in different components. For example in order to insert an image from Flotiq, you should add `image` component to your page.
+To do that, open expression editor for `Source` property, and provide the URL value from the media link from your content object, with Flotiq's base url at the start of the expression, like so:
 
   `"https://api.flotiq.com/" + VariableName.data.data.blogpost.headerImage[0].url`.
 
@@ -141,7 +141,7 @@ query Posts {
 ```
 { data-search-exclude }
 
-After you have your data variable working correctly, add a `Collection` component to your page in Webstudio, select it, and edit it's `data` property with an expression,
+After you have your data variable working correctly, add a `Collection` component to your page in Webstudio, select it, and edit its `data` property with an expression,
 similarly to how it's done for [embedding data to dynamic page](#embed-data-from-flotiq-to-webstudio-page), however this time you will use the whole array of objects,
 so the expression will look more or less like this:
 
@@ -153,10 +153,18 @@ You may edit it by giving it a custom name of your choice.
 
  ![Editing variable for collection items](images/webstudio/webstudio-config-collection-item-variable.png){: .center .border}
 
-Once you have a collection item with items from our Flotiq's content list, you can edit the collection by adding new components to the collection items. Mind that editing one item will automatically edit all of them. Now you can create the custom card using the data from your content object, similarly to [embedding data to dynamic page](#embed-data-from-flotiq-to-webstudio-page) but now you are going to use the `Collection Item` variable.
+Once you have a collection item with items from our Flotiq's content list, you can edit the collection by adding new components to the collection items. Mind that editing one item will automatically edit all of them. Now you can create the custom card using the data from your content object, similarly to [embedding data to dynamic page](#embed-data-from-flotiq-to-webstudio-page), but now you are going to use the `Collection Item` variable.
 
  ![Editing variable for collection items](images/webstudio/webstudio-creating-overview.gif){: .center .border .width90}
 
 ## Conclusion
 
 Integrating Flotiq with Webstudio enables the seamless creation of dynamic, content-driven websites using a headless workflow without the need for coding. This combination empowers users to manage and deliver content efficiently while focusing on design and functionality. By simplifying the process, it ensures both developers and non-technical users can achieve professional results effortlessly.
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

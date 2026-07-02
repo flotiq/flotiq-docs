@@ -40,7 +40,7 @@ This option works best if you’re building an application using JavaScript or T
 
 ## Custom SDK with OpenAPI
 
-Flotiq’s API is fully described using the OpenAPI Specification. 
+Flotiq's API is fully described using the OpenAPI Specification. 
 That means you can generate a custom SDK in nearly any language – Python, Java, PHP, Ruby, Go, 
 and more – using tools like: 
 
@@ -59,4 +59,11 @@ or want customized integration with your own stack.
 On your Flotiq dashboard, you can always find shortcuts to SDKs for specific frameworks or languages.
 
 ![Available frameworks and languages](images/frameworkslogos.png){: .width25 .center .border}
+
+## Related docs
+
+- [Open API schema](../API/open-api-schema.md)
+- [Get Started with API](../API/get-started.md)
+- [Universe overview](../Universe/overview.md)
+
 

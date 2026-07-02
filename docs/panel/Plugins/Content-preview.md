@@ -56,7 +56,7 @@ Imagine you've already published a blog post, but now you want to make some upda
 
 ![Content publishing workflow](images/content-preview/publishing-workflow.png){: .center .width75 .border}
 
-This feature uses draft mode in NextJS, allowing you to view changes before they are visible to your readers.
+This feature uses draft mode in Next.js, allowing you to view changes before they are visible to your readers.
 
 
 ### Simple workflow
@@ -64,3 +64,10 @@ This feature uses draft mode in NextJS, allowing you to view changes before they
 With the simple workflow, any changes you save are immediately visible on your website. Click the Save and View button to quickly save your work and see the updated page.
 
 ![Generic workflow](images/content-preview/generic-workflow.png){: .center .width75 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)

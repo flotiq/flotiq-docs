@@ -38,7 +38,7 @@ We use one of our starters as an example, so you might want to check them out, c
 
 ## Signing in to Netlify
 
-If you do not have the Netlify account, the easiest way to create the account and use it in this tutorial will be to use `GitHub` on the Netlify sign-up page. Netlify will ask you to authorize with your GitHub account. If you need to request access to one or more repositories, you can click "**request access** here or later, when creating an instance.
+If you do not have the Netlify account, the easiest way to create the account and use it in this tutorial will be to use `GitHub` on the Netlify sign-up page. Netlify will ask you to authorize with your GitHub account. If you need to request access to one or more repositories, you can click **request access** here or later, when creating an instance.
 
  ![](images/netlify-signup.png)  
  ![](images/netlify-authorize.png)
@@ -107,3 +107,11 @@ Copy the Read-Only key and paste it into Netlify settings as **GATSBY_FLOTIQ_API
 Flotiq Netlify plugin allows you to trigger Netlify builds within Content Objects forms. You will also be able to quickly navigate to your Netlify pages from the Flotiq content editor.
 
 [Netlify Integration](https://flotiq.com/docs/panel/Plugins/Netlify-integration/)
+
+## Related docs
+
+- [Universe overview](../overview.md)
+- [Get Started with API](../../API/get-started.md)
+- [SDK overview](../../SDK/overview.md)
+- [Deep Dives overview](../../Deep-Dives/index.md)
+

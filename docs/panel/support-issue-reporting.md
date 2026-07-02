@@ -69,3 +69,11 @@ Example values are shown below.
 {"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","platform":"macOS","screen":{"width":1710,"height":1107,"viewportWidth":1710,"viewportHeight":888,"pixelRatio":2},"locale":"en-US"}
 ```
 { data-search-exclude }
+
+## Related docs
+
+- [Panel overview](./index.md)
+- [API access & scoped keys](../API/index.md)
+- [Content Objects](../API/content-objects.md)
+- [Webhooks overview](./webhooks/index.md)
+

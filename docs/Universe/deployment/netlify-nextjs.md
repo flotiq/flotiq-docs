@@ -3,9 +3,9 @@ tags:
   - Developer
 ---
 
-# NextJS Netlify deployment
+# Next.js Netlify deployment
 
-This article will walk you through the process of deploying your NextJS project to Netlify.
+This article will walk you through the process of deploying your Next.js project to Netlify.
 We use one of our starters as an example, so you might want to check them out, check the links below.
 
 ## Prerequisites
@@ -98,3 +98,11 @@ Copy the Read-Only key and paste it into Netlify settings as **FLOTIQ_API_KEY**.
 Flotiq Netlify plugin allows you to trigger Netlify builds within Content Objects forms. You will also be able to quickly navigate to your Netlify pages from the Flotiq content editor.
 
 [Netlify Integration](https://flotiq.com/docs/panel/Plugins/Netlify-integration/)
+
+## Related docs
+
+- [Universe overview](../overview.md)
+- [Get Started with API](../../API/get-started.md)
+- [SDK overview](../../SDK/overview.md)
+- [Deep Dives overview](../../Deep-Dives/index.md)
+

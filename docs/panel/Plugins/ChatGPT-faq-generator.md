@@ -48,3 +48,11 @@ Go to object form in one of the selected content types. Next, Locate the target 
 Once new FAQ is generated, save the content object.
 
 ![FAQ generated in Flotiq](images/faq/generated-faq.png){: .center .width75 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

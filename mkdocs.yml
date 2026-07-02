@@ -119,6 +119,9 @@ nav:
   - API:
     - 'Getting Started with API': API/get-started.md
     - 'API access & scoped keys': API/index.md
+    - 'API key lifecycle': API/api-key-lifecycle.md
+    - 'Rate limits and API usage': API/rate-limits.md
+    - 'API and content versioning': API/versioning.md
     - 'Working with Content Types':
       - 'Overview': API/content-types.md
       - 'Creating new Content Types': API/content-type/creating-ctd.md
@@ -143,33 +146,26 @@ nav:
     - 'Working with media':
       - 'Media library': API/media-library.md
       - 'Transformations': API/variants.md
-    - 'Workflows': 'API/workflow/content-publishing-workflow.md'
-  - Dashboard:
+    - Workflows:
+      - 'Overview': 'API/workflow/content-publishing-workflow.md'
+      - 'Advanced patterns': 'API/workflow/advanced-workflow.md'
+  - Panel:
     - 'Overview': panel/index.md
-    - 'SSO': panel/sso.md
-    - 'Spaces and Organization': panel/spaces.md
+    - 'Dashboard': panel/dashboard.md
+    - 'Templates and Starters': panel/templates.md
     - 'Content types': panel/content-types.md
-    - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md
     - 'Predefined Content Types': panel/predefined-content-types.md
     - 'Content objects':
       - 'Overview': panel/ContentObjects/index.md
       - 'Field types': panel/ContentObjects/field-types.md
       - 'Draft & Public': panel/ContentObjects/draft-public.md
-      - 'Scheduling publication': panel/ContentObjects/publication-scheduling.md
+      - 'Publication scheduling': panel/ContentObjects/publication-scheduling.md
       - 'Generating slugs': panel/ContentObjects/slugs.md
       - 'Duplication': panel/ContentObjects/duplication.md
+      - 'Advanced duplication patterns': panel/ContentObjects/duplication-advanced.md
     - 'Media library': panel/media-library.md
-    - 'Users': panel/users.md
-    - 'User Roles': panel/user-roles.md
-    - 'Support issue reporting': panel/support-issue-reporting.md
-    - Webhooks:
-      - 'Overview': panel/webhooks/index.md
-      - 'Async CO webhooks': panel/webhooks/async-co-webhook.md
-      - 'CTD webhooks': panel/webhooks/ctd-webhook.md
-      - 'Async examples': panel/webhooks/examples.md
-      - 'Sync webhooks':  panel/webhooks/sync.md
-      - 'Sync examples': panel/webhooks/sync-examples.md
-      - 'Hosted webhooks': panel/webhooks/hosted-webhook.md
+    - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md
+    - 'Plugins overview': panel/plugins-overview.md
     - Available Plugins:
       - 'Gatsby Cloud': panel/Plugins/Gatsby-cloud-integration.md
       - 'Netlify': panel/Plugins/Netlify-integration.md
@@ -186,6 +182,24 @@ nav:
       - 'ChatGPT FAQ Generator': panel/Plugins/ChatGPT-faq-generator.md
       - 'Display Content Type image in Object forms': panel/Plugins/Content-types-image-in-co-form.md
       - 'Color Picker': panel/Plugins/Color-picker.md
+    - Webhooks:
+      - 'Overview': panel/webhooks/index.md
+      - 'Async CO webhooks': panel/webhooks/async-co-webhook.md
+      - 'CTD webhooks': panel/webhooks/ctd-webhook.md
+      - 'Async examples': panel/webhooks/examples.md
+      - 'Sync webhooks':  panel/webhooks/sync.md
+      - 'Sync deep dive': panel/webhooks/sync-deep-dive.md
+      - 'Sync examples': panel/webhooks/sync-examples.md
+      - 'Hosted webhooks': panel/webhooks/hosted-webhook.md
+    - 'Account Settings': panel/account-settings.md
+    - 'Authentication': panel/authentication.md
+    - 'Access control': panel/access-control.md
+    - 'SSO': panel/sso.md
+    - 'Users': panel/users.md
+    - 'User Roles': panel/user-roles.md
+    - 'Spaces and Organization': panel/spaces.md
+    - 'Plans and Billing': panel/billing.md
+    - 'Support issue reporting': panel/support-issue-reporting.md
     - UI Plugins Development:
       - 'Getting started': panel/PluginsDevelopment/plugins.md
       - 'Examples': panel/PluginsDevelopment/plugin-examples.md
@@ -208,19 +222,19 @@ nav:
     - 'Overview': Universe/index.md
     - Deployment:
       - 'Overview': Universe/overview.md
-      - 'NextJS project to Vercel': Universe/deployment/vercel-nextjs.md
+      - 'Next.js project to Vercel': Universe/deployment/vercel-nextjs.md
       - 'Gatsby project to Vercel': Universe/deployment/vercel-gatsby.md
-      - 'NextJS project to Netlify': Universe/deployment/netlify-nextjs.md
+      - 'Next.js project to Netlify': Universe/deployment/netlify-nextjs.md
       - 'Gatsby project to Netlify': Universe/deployment/netlify-gatsby.md
-    - NextJS:
-      - 'Flotiq NextJS starters': Universe/nextjs/nextjs-starters.md
-      - 'Flotiq NextJS Setup CLI': Universe/nextjs/nextjs-setup.md
+    - Next.js:
+      - 'Flotiq Next.js starters': Universe/nextjs/nextjs-starters.md
+      - 'Flotiq Next.js Setup CLI': Universe/nextjs/nextjs-setup.md
     - 'Gatsby': Universe/gatsby.md
     - 'Meta-API': Universe/metaapi.md
     - 'Postman': Universe/postman.md
     - 'Scully': Universe/scully.md
     - 'WordPress': Universe/wordpress.md
-    - 'Zapier': Universe/zapier.md
+    - 'Zapier integration': Universe/zapier-integration.md
 #    - 'Netlify': Universe/netlify.md
     - 'Heroku': Universe/heroku.md
     - 'Bubble': Universe/bubble.md
@@ -243,7 +257,7 @@ nav:
     - 'Meta-API': Deep-Dives/metaapi.md
     - 'Custom domains in Heroku': Deep-Dives/add-a-custom-domain-to-heroku-for-free.md
     - 'Use Netlify, Zapier and Gatsby to instantly deploy your Flotiq content': 'Deep-Dives/netlify-zapier-gatsby-serverless-deployment-pipeline.md'
-    - 'Use Next.js, Typescript and OpenAPI with Flotiq content': 'Deep-Dives/nextjs-react-typescript-openapi.md'
+    - 'Use Next.js, TypeScript and OpenAPI with Flotiq content': 'Deep-Dives/nextjs-react-typescript-openapi.md'
     - 'Upload media example app': Deep-Dives/upload-media.md
     - 'Build headless no-code website Divhunt': Deep-Dives/divhunt.md
     - 'Build headless no-code website Webstudio': Deep-Dives/webstudio.md

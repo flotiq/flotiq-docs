@@ -48,10 +48,10 @@ Example:
     * PostContent – string, required 
 
 
-## API token
+## API key
 
-API token (described across the documentation as `YOUR API TOKEN` or `YOUR_API_TOKEN`) should be obtained from the User profile view of the Flotiq panel. 
-All examples here have authentication in the request header, but you can also use `?auth_token=YOUR_API_TOKEN` in the request URL.
+API key (described across the documentation as `YOUR_API_KEY`) should be obtained from the API Keys view in the Flotiq Panel.
+All examples here have authentication in the request header, but you can also use `?auth_token=YOUR_API_KEY` in the request URL.
 You can learn how to obtain your API key [in the next article](index.md).
 
 ## Working with Content Type Definitions
@@ -67,5 +67,11 @@ The endpoint documentation is provided in the API docs and describes the followi
 * [Get single](content-type/getting-ctd.md)
 * [Delete](content-type/deleting-ctd.md)
 
+## Related docs
+
+- [Content Objects](./content-objects.md)
+- [Dynamic Content API](./dynamic-content-api.md)
+- [Open API schema](./open-api-schema.md)
+- [API access & scoped keys](./index.md)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

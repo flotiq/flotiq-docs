@@ -1,6 +1,5 @@
 ---
 tags:
-  - Administrator
   - Developer
 ---
 
@@ -9,7 +8,7 @@ description: Read this tutorial to learn how you can use Cloudflare workers to s
 
 # How to secure your write API
 
-If you're building a JAMstack app - odds are you're not just going to use Flotiq for pulling your content, you might also need to update or create new content objects. In such case you should be careful not to expose your API key that allows write access to your content. While it's usually safe to expose the Read Only API key - the read/write key should be protected at all times. In this article we'll cover one way of doing it, by using Cloudflare Workers.
+If you're building a JAMstack app - odds are you're not just going to use Flotiq for pulling your content, you might also need to update or create new content objects. In such case you should be careful not to expose your API key that allows the write access to your content. While it's usually safe to expose the Read Only API key - the read/write key should be protected at all times. In this article we'll cover one way of doing it, by using Cloudflare Workers.
 
 !!! caution
     **Prerequisites:**
@@ -27,7 +26,7 @@ Cloudflare is a global CDN (Content Delivery Network), which provides websites a
 Cloudflare provides a pretty handy CLI tool to work with your Workers code, you can read more about how to get started [here](https://developers.cloudflare.com/workers/quickstart/). In this tutorial, however, we will use the Cloudflare GUI to build the solution.
 
 ### Creating the worker
-Once you login to your Cloudflare account go to Menu / Workers. From the Workers dashboard select Create Worker.
+Once you log in to your Cloudflare account go to Menu / Workers. From the Workers dashboard select Create Worker.
 
 ![](images/cloudflare-workers-dashboard-create.png)
 
@@ -80,3 +79,11 @@ That's it! Cloudflare has deployed your worker to an automatically generated end
 ## Conclusions
 
 With Cloudflare workers it's extremely easy to add an extra layer of security to your JAMstack apps. You can create a Worker in a couple of minutes and their free tier is generous enough to work for most of the typical use cases.
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

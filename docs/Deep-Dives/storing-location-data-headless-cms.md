@@ -16,7 +16,7 @@ What we'll need:
 - A `Store` Content Type Definition
 - Some `Store` objects
 - A scoped API key
-- Some HTML, CSS and plain Javascript (to keep things simple).
+- Some HTML, CSS and plain JavaScript (to keep things simple).
 
 And here's a sneak peek at what we'll build.
 
@@ -132,7 +132,7 @@ document.querySelectorAll('[data-map]').forEach(function (mapContainer) {
 { data-search-exclude }
 
 !!! note 
-    Thanks to Leaflet - it's super simple to use both Google Maps and Open Street Map as our map providers. You can leave both, or choose one and remove the other. If you stick with Google, though, please remember to provide your Google Maps API key.
+    Thanks to Leaflet - it's super simple to use both Google Maps and OpenStreetMap as our map providers. You can leave both, or choose one and remove the other. If you stick with Google, though, please remember to provide your Google Maps API key.
 
 Finally - to make your map render in the browser, set the proper size in the `index.css` file:
 ```css
@@ -219,7 +219,7 @@ function loadMarkers(map, onLoad) {
 ```
 { data-search-exclude }
 
-The most important part of this function is how you should setup the search query, particularly the `geo_filters` parameter. With the parameters defined above - we will be asking Flotiq's API to provide all locations within a given radius from the center of the map. You can read more about the `/search` API endpoint in the [Flotiq search API docs](https://flotiq.com/docs/API/search/).
+The most important part of this function is how you should set up the search query, particularly the `geo_filters` parameter. With the parameters defined above - we will be asking Flotiq's API to provide all locations within a given radius from the center of the map. You can read more about the `/search` API endpoint in the [Flotiq search API docs](https://flotiq.com/docs/API/search/).
 
 The `loadMarkers()` function will be used to pass the results pulled from Flotiq's API to the `onMarkersLoaded()` function, which will then render the location markers. The resulting object will look similar to:
 
@@ -318,7 +318,7 @@ When you reload the page - you should now see the markers appear on your map.
 
 ### Handling events
 
-We will now add several event handlers that will refresh the list of locations when the map is moved or zoomed and we will enable navigating to the current location, based on Leaflet's `map.locate()` method.
+We will now add several event handlers that will refresh the list of locations when the map is moved or zoomed, and we will enable navigating to the current location, based on Leaflet's `map.locate()` method.
 
 Add the event handlers:
 ```
@@ -644,3 +644,11 @@ and finally - drop this at the end of the `onMarkersLoaded()` function:
 That's it! You should now have a fully working webpage, which will display the list of stores you store in Flotiq and will place the stores on a map. Look into our [Git repository](https://github.com/flotiq/flotiq-demo-storing-location-data) for some extra style and let us know in the comments when you build something!
 
 ![The final result - store locator webpage with data dynamically pulled from Flotiq](images/store-locator-7.png){: .center .border .width75}
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

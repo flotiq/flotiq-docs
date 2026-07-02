@@ -67,3 +67,11 @@ if you use this configuration with an object similar to this
 ![Content object with category and slug](images/custom-links/complex-routing-co-form.png){: .center .width75 .border}
 
 you will see a preview link that will lead you to `https://my-site.com/green-plant/15`.
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

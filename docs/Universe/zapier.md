@@ -8,6 +8,8 @@ description: Flotiq allows you to integrate your content with any system easily.
 
 # Zapier integrations (version 1.2.0)
 
+For the current integration guide, see [Zapier integration](./zapier-integration.md).
+
 Thanks to Zapier, it has become straightforward to build complex pipelines that integrate multiple sources of content. Flotiq's goal is to help you make the best use of your content, so we provide [Zapier integrations](https://zapier.com/apps/flotiq/integrations) 
 for the following events:
 
@@ -62,3 +64,11 @@ without writing a single line of code.
 
     
 [Register to automate your content today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
+
+## Related docs
+
+- [Universe overview](./overview.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Deep Dives overview](../Deep-Dives/index.md)
+

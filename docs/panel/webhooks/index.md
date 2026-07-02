@@ -10,7 +10,7 @@ description: How to use webhooks in Flotiq
 
 ## What is a Webhook?
 
-Webhooks are a form of contacint external systems when an event occurs in Flotiq. It's one of many features that make integrations with thousands of other systems possible. With the addition of [synchronous webhooks](sync) it's also a fantastic way to extend Flotiq core functionality with your business logic.
+Webhooks are a way to contact external systems when an event occurs in Flotiq. This feature makes integrations with thousands of other systems possible. With the addition of [synchronous webhooks](sync), it is also a practical way to extend Flotiq core functionality with your business logic.
 
 We support 2 types of webhooks:
 
@@ -18,3 +18,9 @@ We support 2 types of webhooks:
 - [synchronous](sync) - these webhooks are synchronous calls that are made to an external system *during* the processing of data in Flotiq, for example to perform data validation.
 
 Follow the links above to read more about each type of webhooks and example use cases.
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)

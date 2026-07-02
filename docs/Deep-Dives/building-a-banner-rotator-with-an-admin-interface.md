@@ -51,7 +51,8 @@ Hit Save and you can start adding new Rotators!
 
 ## 2. Create an API Key
 
-It's always recommended to use a scoped API key - that way access to content is restricted to specific Content Types and even if you add new data models in the future - your data will be safe.In our case - we will need access to 2 Content Types - `Rotator` and `Media`, so let's add a key for that purpose.
+It's always recommended to use a scoped API key - that way access to content is restricted to specific Content Types and even if you add new data models in the future - your data will be safe.
+In our case - we will need access to 2 Content Types - `Rotator` and `Media`, so let's add a key for that purpose.
 
 ![](images/building-a-banner-rotator/flotiq-api-keys.png){: .border}
 
@@ -115,7 +116,7 @@ document.querySelectorAll('[data-rotator-id]').forEach((element) => {
 ```
 { data-search-exclude }
 
-Who! That's not even 40 lines of code and we have a working ad rotator!
+Who! That's not even 40 lines of code, and we have a working ad rotator!
 
 ## 4. Simple CDN - GitHub + jsDelivr
 
@@ -141,9 +142,9 @@ This code can be pasted in any CMS. Here's how it looks in BoltCMS
 
 ![Flotiq Rotator in Bolt CMS](images/building-a-banner-rotator/rotator-bolt-cms.png){: .center .border .width75}
 
-and Wordpress
+and WordPress
 
-![Flotiq Rotator in Wordpress](images/building-a-banner-rotator/rotator-wordpress.png){: .center .border .width75}
+![Flotiq Rotator in WordPress](images/building-a-banner-rotator/rotator-wordpress.png){: .center .border .width75}
 
 
 ## Next Steps
@@ -156,3 +157,11 @@ The solution shown in this article meets the basic requirements and is ready to 
 
 !!! hint 
         Heads up! Try not to use `ad` or `adv` or `banner` in your paths and filenames. This way your chances of triggering AdBlock tools are lower!
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

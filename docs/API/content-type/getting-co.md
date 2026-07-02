@@ -418,4 +418,12 @@ The example below shows an example response for the product with a category, pro
         ```
         { data-search-exclude }
 
+
+## Related docs
+
+- [Content Objects](../content-objects.md)
+- [Content Types](../content-types.md)
+- [Dynamic Content API](../dynamic-content-api.md)
+- [API access & scoped keys](../index.md)
+
 [Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

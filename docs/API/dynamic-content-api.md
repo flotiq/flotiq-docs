@@ -85,3 +85,11 @@ In a similar fashion - we also provide a downloadable Postman collection, which 
 ![](images/postman.jpeg){: .border}
 
 Read more on how to configure Postman to work with Flotiq on the [Postman Sandbox Packages page](/docs/Universe/postman/).
+
+## Related docs
+
+- [Get Started with API](./get-started.md)
+- [Content Objects](./content-objects.md)
+- [Search API](./search.md)
+- [API access & scoped keys](./index.md)
+

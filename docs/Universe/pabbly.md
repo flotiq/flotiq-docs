@@ -58,7 +58,7 @@ Choose a name for your workflow and click "Create"
 
 ![](images/pabbly/pabbly-create-workflow-2.png){: .center .width75 .border}
 
-Now we have to choose a trigger for our workflow, in our case it will be a Webhook because Flotiq can generate a webhook
+Now we have to choose a trigger for our workflow. In our case it will be a Webhook because Flotiq can generate a webhook
 when creating a new object (in our case an event) to which we want to send invitations to people from the mailing list.
 
 ![](images/pabbly/pabbly-create-workflow-3.png){: .center .width75 .border}
@@ -86,7 +86,7 @@ async-co-webhook, more details about async-co-webhook can be
 found [in Flotiq Documentation](https://flotiq.com/docs/panel/webhooks/async-co-webhook/){target="_blank"}
 
 To create a webhook go to `Webhooks` -> `Add new Webhook`. Enter a name, in our case it will be "announce event", as a
-webhook type select "Content Object Changes Asynchronus (non blocking)". Then as the URL, paste the previously copied
+webhook type select "Content Object Changes Asynchronous (non-blocking)". Then as the URL, paste the previously copied
 from Pabbly Connect webhook "URL", enable it and select the "Create" event and as Content Type Definition select CTD "
 Event", and press save.
 
@@ -116,7 +116,7 @@ it [Flotiq Documentation](https://flotiq.com/docs/API/content-type/listing-co/){
 
 Now we need to add a header with a read-only API key from Flotiq. How to generate it you can
 read [in Flotiq Documentation](https://flotiq.com/docs/API/?h=api+key#application-api-keys){target="_blank"},
-then we need to uncheck the "Simple Response" option and press “Save & Send Test Request".
+then we need to uncheck the "Simple Response" option and press "Save & Send Test Request".
 
 ![](images/pabbly/pabbly-add-api-request-4.png){: .center .width75 .border}
 
@@ -153,7 +153,7 @@ Then, from the list of actions, select "Send Email".
 
 ![](images/pabbly/pabbly-configure-gmail-2.png){: .center .width75 .border}
 
-Click "Connect With Gmail" then you will need to log into the google account from which you want to send emails.
+Click "Connect With Gmail" then you will need to log into the Google account from which you want to send emails.
 
 ![](images/pabbly/pabbly-configure-gmail-3.png){: .center .width75 .border}
 
@@ -184,3 +184,10 @@ under 18 years old.
 Additionally, you can enhance the webhook with update actions to send emails containing information about changes,
 such as price or venue. The integration of Flotiq CMS with Pabbly Connect provides great opportunities to automate 
 many tasks.
+
+## Related docs
+
+- [Universe overview](./overview.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Deep Dives overview](../Deep-Dives/index.md)

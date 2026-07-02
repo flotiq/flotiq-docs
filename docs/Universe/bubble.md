@@ -142,9 +142,12 @@ And select the option " 's data."
 
 ![](images/bubble/bubble-configure-reapeating-group-5.png){: .center .width75 .border}
 
-Next, we add a "Group" element to our "Repeating Group." We set it in the element tree as a child of the "Repeating
-Group," adjust its width and height to match a single cell of the "Repeating Group," and set the "type of content" to "
-Get all posts data" and the "data source" to "Current cell's Get all posts data."
+Next, we:
+1. add a "Group" element to our "Repeating Group",
+2. set it in the element tree as a child of the "Repeating Group,",
+3. adjust its width and height to match a single cell of the "Repeating Group",
+4. set the "type of content" to "Get all posts data",
+5. the "data source" to "Current cell's Get all posts data".
 
 ![](images/bubble/bubble-create-section-element.png){: .center .width75 .border}
 
@@ -294,3 +297,11 @@ title of our post displayed in the center.
 
 Now you can customize your page to display all post information, comments, links to social media, or implement post
 filtering by any field, and much more, according to your preferences.
+
+## Related docs
+
+- [Universe overview](./overview.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Deep Dives overview](../Deep-Dives/index.md)
+

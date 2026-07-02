@@ -69,7 +69,7 @@ In the data variable configuration, you have to define the following properties:
 
 * Name - a name for the variable of your choice,
 * Type - the type of the variable, in this guide we use GraphQL, although the `resource` type could also be used (mind that both variable types require a Pro Webstudio account),
-* URL - if you are using GraphQL type, it should always be `https://api.flotiq.com/api/graphql`. For resource type this value will differ, depending on your contenttype name,
+* URL - if you are using GraphQL type, it should always be `https://api.flotiq.com/api/v2/graphql`. For resource type this value will differ, depending on your contenttype name,
 * Headers - the headers for the request to Flotiq. Here, you have to add a header with `X-Auth-Token` in the title [Flotiq API Key](https://flotiq.com/docs/API/){:target="_blank"} as a value,
 * Query - here you have to define a Query for fetching data from Flotiq in GraphQL. It should fetch the custom field, that you've selected as your dynamic page identifier earlier,
         using the [content object GraphQL fetch with custom field](https://flotiq.com/docs/API/graph-ql/#__tabbed_2_2), so in this case we use `slug`. Whole query for fetching the content of blogpost from Flotiq BlogPost template is presented below:

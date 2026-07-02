@@ -12,7 +12,7 @@ description: Overview of Flotiq CLI tool
 
 We've prepared Flotiq CLI (command-line interface) to help launch and manage Flotiq projects more efficiently using Flotiq's blazing-fast API.
 
-It allows for many actions for your Flotiq account management, like automatically starting one of our Gatsby or NextJs starters, importing data from a third-party service or programs like excel or WordPress and much more.
+It allows for many actions for your Flotiq account management, like automatically starting one of our Gatsby or Next.js starters, importing data from a third-party service or programs like Excel or WordPress and much more.
 
 ## Installation
 
@@ -32,9 +32,9 @@ npm install -g flotiq-cli
 
 Flotiq CLI currently supports the following commands:
 
-* `flotiq start` quickly launches one of our NextJs or Gatsby starters. (more on `flotiq start` for [Gatsby](./starting-new-project-gatsby.md) and [Next.js](./starting-new-project-nextjs.md))
+* `flotiq start` quickly launches one of our Next.js or Gatsby starters. (more on `flotiq start` for [Gatsby](./starting-new-project-gatsby.md) and [Next.js](./starting-new-project-nextjs.md))
 
-* `flotiq import` imports example data for your NextJs or Gatsby starter. (more on `flotiq import` for [Gatsby](./starting-new-project-gatsby.md/#import-example-data) and [Next.js](./starting-new-project-nextjs.md/#import-example-data))
+* `flotiq import` imports example data for your Next.js or Gatsby starter. (more on `flotiq import` for [Gatsby](./starting-new-project-gatsby.md/#import-example-data) and [Next.js](./starting-new-project-nextjs.md/#import-example-data))
 
 * `flotiq export` exports data from the Flotiq account to local JSON files. If the key is limited to selected Content Types, then the data available for this key will be exported.
 
@@ -53,3 +53,10 @@ Flotiq CLI currently supports the following commands:
 * `flotiq stats` displays your Flotiq API Key statistics, i.e. number of Content Types, Content Objects and other types of data of your Flotiq API key.
 
 For more information on each CLI command explore further the CLI section in this documentation or visit our [Flotiq CLI](https://github.com/flotiq/flotiq-cli) site on GitHub.
+
+## Related docs
+
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

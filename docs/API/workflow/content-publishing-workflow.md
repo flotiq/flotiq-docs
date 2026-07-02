@@ -16,6 +16,8 @@ description: Flotiq support for custom workflows helps teams collaborate and pro
 
 Workflows are a powerful feature that helps teams collaborate and produce quality content. Flotiq implements workflows for all content types defined in the system. The default workflow supports only a single state - `saved`. Every content object in the system carries a `workflowState` field under the `internal` section. Custom workflows allow you to define additional states and transitions that match your editorial process.
 
+For integration and operational guidance, see [Advanced workflow patterns](./advanced-workflow.md).
+
 ## Workflows vs Draft & Public
 
 Flotiq offers two distinct systems for managing content state. Choose the one that fits your workflow:
@@ -79,7 +81,8 @@ can be used to help teams curate content, manage publication and archiving of co
 
 ### Changing the workflow of a Content Type Definition
 
-Workflows are defined at the Content Type Definition level, in order to change the workflow of a Content Type Definition from the default one - execute a `PUT` update on the `/api/v1/internal/contenttype/:label` endpoint and provide the additional attribute pointing to the workflow identifier:
+Workflows are defined at the Content Type Definition level.
+In order to change the workflow of a Content Type Definition from the default one - execute a `PUT` update on the `/api/v1/internal/contenttype/:label` endpoint and provide the additional attribute pointing to the workflow identifier:
 
 ```json
 {
@@ -108,7 +111,8 @@ Every content object created in the system will automatically be assigned the fi
 
 ### Verifying possible transitions of an object
 
-If you'd like to verify what are the possible transitions of an object, given its current state - you can issue a `GET` request to `/api/v1/workflow/:content_type/:object_id`, the response will contain the current state of the object as well as possible transitions from that state:
+If you'd like to verify what are the possible transitions of an object, given its current state - you can issue a `GET` request to `/api/v1/workflow/:content_type/:object_id`.
+The response will contain the current state of the object as well as possible transitions from that state:
 
 ```json
 {
@@ -169,3 +173,11 @@ Every content object has `workflowPublishedAt` and `workflowPublicVersion` field
 ### Published content
 
 The `public` state is a special state name, which teams can use in their workflows for an easy way to query for approved content. All Flotiq endpoints support a `x-visibility` header, which - if set to `public` - will force the endpoints to limit their work to content that is in the `public` state.
+
+## Related docs
+
+- [Advanced workflow patterns](./advanced-workflow.md)
+- [Draft & Public](../draft-public/draft-public.md)
+- [Content Types](../content-types.md)
+- [API access & scoped keys](../index.md)
+

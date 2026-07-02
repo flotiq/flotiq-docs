@@ -70,7 +70,7 @@ We will use a simple HTML form. The code below code is a complete, working solut
 ```
 { data-search-exclude }
 
-We need also a few lines of javascript to pass data from our form to the Flotiq API:
+We need also a few lines of JavaScript to pass data from our form to the Flotiq API:
 
 
 ```html
@@ -156,3 +156,11 @@ That's all. You will now get an email notification about every message left thro
 * It's super easy to create forms without any backend code.
 * Flotiq's Integration with Zapier allows you to use your data with many applications, check more ways to [integrate with Flotiq](https://zapier.com/apps/flotiq/integrations)
 * Contact form data will be available in your Flotiq account.
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

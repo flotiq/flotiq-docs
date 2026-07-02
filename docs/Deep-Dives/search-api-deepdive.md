@@ -28,7 +28,7 @@ Let's dive deep into it!
 
 ## Global search
 
-By default, you would probably want to find everything related to a entered query. This is what most of our competitors offer as well, so no surprises here.
+By default, you would probably want to find everything related to an entered query. This is what most of our competitors offer as well, so no surprises here.
 
 To achieve that you have to pass the query parameter `q`. The result set will contain all entries in your Flotiq instance that match the query content.
 
@@ -68,7 +68,7 @@ If you want to have more filters then add more parameters using syntax above by 
 
 This is, by far, one of the coolest features described in this article. Using this technique you'll be able to immediately build faceted search results that look like this
 
-Simply add `aggregate_by[]=value` parameter to populate the `summary` object in your response - it will now contain the numbers of unique occurences per property value that you provided earlier.
+Simply add `aggregate_by[]=value` parameter to populate the `summary` object in your response - it will now contain the numbers of unique occurrences per property value that you provided earlier.
 
 ![](images/searchapi/aggregate.gif)
 
@@ -86,7 +86,7 @@ Achieving it is - again - extremely simple. You only need to add fields weights 
 For example if you define your field boosting like this:
 `fields[]=category^2&fields[]=title^5`
 
-you basically say that entries matching your query in the `title` field will be considered more important than those, where the match is in `category`. The order of the results returned by the search endpoint will reflect that and you will also find the score assigned by ES in the `score` property for each entry.
+you basically say that entries matching your query in the `title` field will be considered more important than those, where the match is in `category`. The order of the results returned by the search endpoint will reflect that, and you will also find the score assigned by ES in the `score` property for each entry.
 
 ![](images/searchapi/boosting.gif)
 
@@ -113,6 +113,14 @@ Search score for text found in content
 ## Conclusion
 
 Flotiq is built to be extremely easy to use, yet very powerful. Our search feature is trivial to use, but at the same time offers features that make us stand out from our competitors (see Headless CMS Full-text search comparison article). Using Flotiq's search you can now build a complex search engine into your apps without the need to worry about integrating with external solutions.
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+
 
 
 

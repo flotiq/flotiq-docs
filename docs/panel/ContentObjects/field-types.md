@@ -47,15 +47,15 @@ Standard textarea input, preserving newlines as `\n`.
 
 ## Markdown
 
-Input for the markdown.
-You can write in markdown or use WYSIWYG to generate one; the switch is on the right bottom corner of the control.
+Input for the Markdown.
+You can write in Markdown or use WYSIWYG to generate one; the switch is on the right bottom corner of the control.
 Flotiq does not validate the Markdown code.
 
 Markdown controls:
 
 ![](../images/co-form/markdown/Controls.png){: .center .border .width50}
 
-* Full screen - opens the full-screen markdown editor, helpful when editing long texts.
+* Full screen - opens the full-screen Markdown editor, helpful when editing long texts.
 * Heading - switch edited line to a heading (`# heading 1`)
 * Bold text - bolds texts (`**text**`)
 * Italic text - slants text (`*text*`)
@@ -69,7 +69,7 @@ Markdown controls:
 * Outdent - makes indentation smaller
 * Insert table (2x2 - 10x15) - inserts table with the header and at least one row
 * Insert image - please use it only for adding images from outside of the Flotiq (switching the tab to `URL`),
-  as it puts base64 of the image into the markdown, if you wish to add an image from Flotiq, use the `Open media library` button
+  as it puts base64 of the image into the Markdown, if you wish to add an image from Flotiq, use the `Open media library` button
 * Insert link - inserts link, (`[link description](link url)`)
 * Open media library - opens Media Library, where you can add new files or select the ones already added
 * Inline code - insert inline code formatting (`` `inline code` ``)
@@ -172,7 +172,7 @@ Standard select control. Depending on `multiple` meta property you can choose on
 
 ## Relation
 
-Flotiq has two types of relations in the dashboard (they are managed in the same way in the json object),
+Flotiq has two types of relations in the dashboard (they are managed in the same way in the JSON object),
 content object relation and media relation:
 
 ![](../images/co-form/datasource/Relations.png){: .center .width75 .border}
@@ -238,7 +238,7 @@ Date control. You can write the date and time or choose them from the popups.
 
 Developers friendly content builder.
 You can add texts, headers, lists, media, YouTube videos, quotes, warnings and delimiters.
-The control generates json description of the blocks used.
+The control generates JSON description of the blocks used.
 
 ![](../images/co-form/block/AddBlocks.png){: .center .width50 .border}
 
@@ -284,7 +284,7 @@ remove the block (`X` button) and move the block down (`arrow down` button).
 
   ![](../images/co-form/block/ListConversion.png){: .border .width25 .center}
 
-* Media - block for files (images, videos, audio, pdf)
+* Media - block for files (images, videos, audio, PDFs)
 
   After you choose this block, the `Media library` button will appear.
   To choose an image, video or text file, you need to click that button and find the file you need to attach to the block.
@@ -312,3 +312,11 @@ remove the block (`X` button) and move the block down (`arrow down` button).
 ## Simple list
 
 Array of standard text inputs with possibility of choosing the order, in other places referred as Options control.
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

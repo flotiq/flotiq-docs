@@ -3,10 +3,10 @@ tags:
   - Developer
 ---
 
-title: Flotiq NextJS starters | Flotiq docs
-description: Jump-start your projects with React NextJS Starters.
+title: Flotiq Next.js starters | Flotiq docs
+description: Jump-start your projects with React Next.js Starters.
 
-# NextJS starters
+# Next.js starters
 
 ![](../images/nextjs/nextjs-starters.png){: .center .width75 .border}
 
@@ -22,7 +22,7 @@ Discover our range of starters [here](https://flotiq.com/starters/){:target="_bl
 
 ## Starter for the blog 1
 
-NextJS starter for creating a blog with Flotiq
+Next.js starter for creating a blog with Flotiq
 
 ![](../images/nextjs/flotiq-starter-blog-1.png){: .center .width75 .border}
 
@@ -32,7 +32,7 @@ NextJS starter for creating a blog with Flotiq
 
 ## Starter for event calendar 2
 
-NextJS Starter to display information about events from Flotiq Events with Calendars
+Next.js Starter to display information about events from Flotiq Events with Calendars
 
 ![](../images/nextjs/flotiq-starter-event-2.png){: .center .width75 .border}
 
@@ -52,7 +52,7 @@ A boilerplate repository to jumpstart your next e-commerce project, using Snipca
 
 ## Starter for portfolio 2
 
-A free, open-source, image-concentric starter for NextJS.
+A free, open-source, image-concentric starter for Next.js.
 
 ![](../images/nextjs/flotiq-starter-portfolio-2.png){: .center .width75 .border}
 
@@ -62,7 +62,7 @@ A free, open-source, image-concentric starter for NextJS.
 
 ## Starter for recipe 2
 
-A starter to build your own recipes page with Flotiq and NextJS.
+A starter to build your own recipes page with Flotiq and Next.js.
 
 ![](../images/nextjs/flotiq-starter-recipe-2.png){: .center .width75 .border}
 
@@ -88,8 +88,19 @@ The Flotiq SDK is a powerful tool designed to simplify the integration of Flotiq
 
 ## Installing Flotiq SDK
 
-The best way to install the Flotiq SDK for your Next.js project is to use our flotiq-nextjs-setup CLI, which will automatically generate SDK for your content and integrate it in your project, add content cache revalidation endpoint, handle draft mode for unpublished content on Flotiq and more.
+The best way to install the Flotiq SDK for your Next.js project is to use our flotiq-nextjs-setup CLI, which will:
+*automatically generate SDK for your content and integrate it in your project,
+add content cache revalidation endpoint, handle draft mode for unpublished content on Flotiq,
+and more.
 
-On how to setup Flotiq Next.js integration with the flotiq-nextjs-setup CLI refer to our [page about integrating Flotiq and Next.js with CLI](/docs/Universe/nextjs/nextjs-setup/#flotiq-nextjs-setup).
+On how to set up Flotiq Next.js integration with the flotiq-nextjs-setup CLI refer to our [page about integrating Flotiq and Next.js with CLI](/docs/Universe/nextjs/nextjs-setup/#flotiq-nextjs-setup).
 
 If you prefer to just install Flotiq SDK and handle everything else by yourself, refer to the [Flotiq SDK page](/docs/SDK/sdk-js-ts).
+
+## Related docs
+
+- [Universe overview](../overview.md)
+- [Get Started with API](../../API/get-started.md)
+- [SDK overview](../../SDK/overview.md)
+- [Deep Dives overview](../../Deep-Dives/index.md)
+

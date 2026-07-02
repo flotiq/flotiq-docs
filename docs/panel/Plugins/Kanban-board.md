@@ -39,3 +39,11 @@ Go to the configured Content Type list of objects.
 Instead of the table view you will see the kanban view of the objects.
 
 ![Using Kanban view plugin in Flotiq](images/kanban/kanban-view.png){: .center .width75 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

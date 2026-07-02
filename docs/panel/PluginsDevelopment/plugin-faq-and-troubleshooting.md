@@ -18,6 +18,13 @@ The most likely cause is that your plugin script is not loading properly and the
 
 This is the standard message returned by the console when an executed script does not return any values. Don't worry about it.
 
-## My plugin is not refreshing it's HTML content
+## My plugin is not refreshing its HTML content
 
-Each time Flotiq renders a certain part of the UI, your plugin's `::render` is called. Make sure to update the content of your html element each time the render is executed. This may be either updating the content in the returned `div`, or rerendering react application.
+Each time Flotiq renders a certain part of the UI, your plugin's `::render` is called. Make sure to update the content of your HTML element each time the render is executed. This may be either updating the content in the returned `div`, or rerendering react application.
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)

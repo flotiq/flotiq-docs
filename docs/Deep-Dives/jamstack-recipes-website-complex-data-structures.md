@@ -43,7 +43,7 @@ This model might be acceptable for very simple websites, but having the `Ingredi
 
 Here's why:
 
-1. No easy, programmatic, access to ingredients - eg. no way to build a shopping list out of it
+1. No easy, programmatic, access to ingredients - e.g. no way to build a shopping list out of it
 2. Can't easily iterate through the recipe's steps - difficult to build an interactive UI, doesn't help with SEO either
 3. People editing the content will use different formatting every time and the content will quickly become messy. You'll get entries like:
 
@@ -190,3 +190,11 @@ Go play with the recipe website project - we've shared a Gatsby starter for that
 
 * [Gatsby starter recipes - GitHub](https://github.com/flotiq/gatsby-starter-recipes)
 * [Next.js starters (supported)](/docs/Universe/nextjs/nextjs-starters/)
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

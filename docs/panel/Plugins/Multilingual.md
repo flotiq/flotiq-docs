@@ -97,3 +97,11 @@ When removing the content type from the settings, you will be asked whether to k
 * **Keeping**: If you choose the "Keep translation fields" option, you can remove `__translations` field later manually by editing the content type.
 
 ![Remove translations from Content Types](images/multilingual/remove-translations-modal.png){: .center .width75 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

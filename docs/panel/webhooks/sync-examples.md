@@ -45,8 +45,16 @@ On each update of a `Blog Post` object we will increment the field `edit_counter
     - provide the URL where your processing app is available
     - check the `Enabled` field
     - select the `Update` action to trigger the webhook
-    - pick the `Blog Post` Content Type Definition as a source for thie webhook.
+    - pick the `Blog Post` Content Type Definition as a source for the webhook.
   ![](../images/webhooks-lifecycle/Example1.png){: .center .border .width75}
 4. Once the webhook is added - each update on a `Blog Post` object will call the service above and the `edit_counter` field will be incremented!
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](./index.md)
+
   
 

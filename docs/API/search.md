@@ -106,7 +106,9 @@ You can sort the results from the search endpoint by Content Type's field using 
 Keep in mind that ordering by a field that is nested in the `object` input type (list) is not possible.
 
 !!! Note
-    You may also use the `.keyword` suffix for other data than text fields, for example, if you are using an `id` field that uses a `number` type in Flotiq, you may still want to consider using the `.keyword` suffix when ordering by such field. This will result in slightly faster searching and will sort objects by id alphabetically, not from the highest number to the lowest.
+    You may also use the `.keyword` suffix for other data than text fields.
+    For example, if you are using an `id` field that uses a `number` type in Flotiq, you may still want to consider using the `.keyword` suffix when ordering by such field.
+    This will result in slightly faster searching and will sort objects by id alphabetically, not from the highest number to the lowest.
 
 ### Order by `_geo_distance`
 
@@ -129,7 +131,7 @@ If you'd like to search in several fields but give better score to results that 
 
 ## Aggregate results by field
 
-If you'd like to display faceted results of your searches you can use the `aggregate_by[]` param. Add `aggregate_by[]=category` to aggregate by the `category` field. This works best with fields that have discreet values (like status, category, etc), and only works with string fields, if you wish to aggregate with numeric fields, use `aggregate_by_numeric[]` param.
+If you'd like to display faceted results of your searches you can use the `aggregate_by[]` param. Add `aggregate_by[]=category` to aggregate by the `category` field. This works best with fields that have discreet values (like status, category, etc.), and only works with string fields, if you wish to aggregate with numeric fields, use `aggregate_by_numeric[]` param.
 
 ## Get random content objects
 
@@ -155,3 +157,11 @@ Index boosting allows you to prioritize results from specific indices when perfo
 
     * ctd1Name, ctd2Name – names of the CTDs.
     * 2, 1.5 – boost values (higher means more weight)
+
+## Related docs
+
+- [Dynamic Content API](./dynamic-content-api.md)
+- [Get Started with API](./get-started.md)
+- [Rate limits and API usage](./rate-limits.md)
+- [API access & scoped keys](./index.md)
+

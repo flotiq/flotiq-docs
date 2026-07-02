@@ -230,10 +230,10 @@ While listing objects, you can use the optional parameters
 
 | Param name      | Param description                                                                                                                                                   | Default value |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| page            | Number of the requested page                                                                                                                                           | 20            |
-| limit           | Number of objects on page, default `20`, maximum `1000`                                                                                                                                        | 1             |
+| page            | Number of the requested page                                                                                                                                        | 20            |
+| limit           | Number of objects on page, default `20`, maximum `1000`                                                                                                             | 1             |
 | order_by        | What field should list be ordered by                                                                                                                                |               |
-| order_direction | Order direction, possible values `asc`, `desc`                                                                                                                      | asc          |
+| order_direction | Order direction, possible values `asc`, `desc`                                                                                                                      | asc           |
 | filter          | Json encoded object containing conditions on which the list of CO should be filtered<br/> Example filter value: {"title":{"type":"equals","filter":"Hello world!"}} |               |
 
 The below example shows how to list all products ordered by title, limited to 2 results:
@@ -375,3 +375,10 @@ An example query using [Insomnia REST Client](https://insomnia.rest/) with endpo
 `https://api.flotiq.com/api/graphql?auth_token=YOUR_AUTH_TOKEN`:
 
 ![](images/graph-ql/graphql-insomnia.gif)
+
+## Related docs
+
+- [GraphQL](./graph-ql.md)
+- [Get Started with API](./get-started.md)
+- [Rate limits and API usage](./rate-limits.md)
+- [API access & scoped keys](./index.md)

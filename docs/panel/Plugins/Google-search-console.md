@@ -41,3 +41,10 @@ Once the plugin is configured - go to the configured Content Type and edit one o
 Google index status will display in the right sidebar after a moment.
 
 ![Google Search Console integration in Flotiq](images/google-search-console/form.png){: .center .width50 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)

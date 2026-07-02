@@ -234,7 +234,7 @@ nav:
     - 'Postman': Universe/postman.md
     - 'Scully': Universe/scully.md
     - 'WordPress': Universe/wordpress.md
-    - 'Zapier integration': Universe/zapier-integration.md
+    - 'Zapier': Universe/zapier.md
 #    - 'Netlify': Universe/netlify.md
     - 'Heroku': Universe/heroku.md
     - 'Bubble': Universe/bubble.md

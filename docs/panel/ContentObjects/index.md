@@ -57,6 +57,27 @@ By clicking on a version entry, you can open a Version Diff window, where the cu
 
 ![Version diff](../images/VersionDiff.png){: .center .border}
 
+## Collaboration (beta)
+
+Flotiq supports collaboration when users edit the same Content Object.
+The feature is currently in beta and works in the Content Object form.
+You can enable this feature in `Space Settings` from the left menu.
+
+![](../images/SpaceSettings.png){: .center .width25 .border}
+
+To save changes in Collaboration settings, you need to click `Save` button in right top corner of the form.
+
+![](../images/SpaceSettingsCollaboration.png){: .center .width75 .border}
+
+When more than one user opens the same Content Object form, the editor shows who else is editing that object.
+It also shows their changes directly in the form.
+
+![](../images/Collaboration.png){: .center .width75 .border}
+
+Collaboration is available only in the Content Object form.
+If more than one person changes an object, clicking `Save` saves all current changes at once.
+All saved changes are attributed to the user who clicked `Save`.
+
 ## Thumbnails in content object grids
 
 Flotiq displays image thumbnails directly in the content object grid for any content type that includes a media field.

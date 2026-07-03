@@ -628,7 +628,8 @@ Input types of properties in `metaDefinition`:
 **Summary of available input types:**
 
 - **Text inputs**: `text`, `textarea`, `markdown`, `richtext`, `email`, `number`, `dateTime` - support common properties + type-specific options
-- **Selection inputs**: `radio`, `checkbox`, `select` - require `options` or `useOptionsWithLabels`
+- **Selection inputs**: `radio`, `select` - use `options`; `select` can also use `optionsWithLabels` with `useOptionsWithLabels`
+- **Boolean input**: `checkbox` - standalone `true`/`false` field (no `options`)
 - **Relations**: `datasource` - requires `validation` with relationContenttype and relationMultiple
 - **Complex types**: `object`, `simpleList` - require `items` meta definition
 - **Geo data**: `geo` - renders lat/lon fields

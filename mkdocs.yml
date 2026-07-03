@@ -148,6 +148,10 @@ nav:
     - 'Overview': panel/index.md
     - 'SSO': panel/sso.md
     - 'Spaces and Organization': panel/spaces.md
+    - Space Settings:
+        - Overview: panel/SpaceSettings/index.md
+        - Content Preview: panel/SpaceSettings/content-preview.md
+        - Custom Links: panel/SpaceSettings/custom-links.md
     - 'Content types': panel/content-types.md
     - 'Flotiq Forms': panel/flotiq-forms-add-forms-to-websites.md
     - 'Predefined Content Types': panel/predefined-content-types.md

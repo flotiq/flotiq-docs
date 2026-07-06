@@ -6,17 +6,17 @@ tags:
 title: Deploy Next.js starter to Heroku | Flotiq docs
 description: Deploy Next.js starter to Heroku
 
-# Deploy a NextJS to Heroku
+# Deploy a Next.js to Heroku
 
 !!! caution
     Heroku removed its free plan in November 2022. This tutorial is now a legacy guide and requires a paid Heroku app.
 
     For free hosting, use alternatives such as Netlify or Vercel.
 
-Flotiq Team prepared a few starters. They use frameworks like Gatsby and NextJS.
+Flotiq Team prepared a few starters. They use frameworks like Gatsby and Next.js.
 Such starters can be hosted on many popular clouds.
 This post guides you through deployment to Heroku.
-An example will be a starter written in the NextJS framework.
+An example will be a starter written in the Next.js framework.
 
 ## Before start
 To start, you need an account on Heroku and install Heroku CLI on your PC.
@@ -39,7 +39,7 @@ When we log in, the CLI tool is ready to go.
 Select one starter from Flotiq NetJs starter:
 [https://github.com/flotiq](https://github.com/flotiq)
 
-For example, next's steps show deployment starter nextjs blog 1.
+For example, next's steps show deployment of the Next.js blog 1 starter.
 Fork this repository to your GitHub account.
 
 ![Fork starter on GitHub](images/heroku/github-fork.png){: .center .border}
@@ -122,3 +122,11 @@ git push heroku main
 After a few minutes, Heroku return URL address for your page:
 
 ![Done deploy](images/heroku/result.png){: .center .border}
+
+## Related docs
+
+- [Universe overview](./overview.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Deep Dives overview](../Deep-Dives/index.md)
+

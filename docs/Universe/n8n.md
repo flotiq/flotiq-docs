@@ -15,7 +15,7 @@ description: Jump-start your workflow automation tool with n8n.
 * Send an email when a new content object is created.
 * Record data in Flotiq upon receiving an email.
 
-Additionally, we will use an n8n HTTP request node credentials for [header authentication](https://docs.n8n.io/integrations/builtin/credentials/httprequest/?_gl=1*ufu4gh*_ga*MTY5ODcxNjE2MC4xNzE0MDM4Njcy*_ga_0SC4FF2FH9*MTcxNTI0OTgzMi41LjEuMTcxNTI1MDYwNi4zLjAuMA..#using-header-auth) with the [Flotiq API key](../API/index.md?h=api+keys#application-api-keys){target="_blank"}.
+Additionally, we will use a n8n HTTP request node credentials for [header authentication](https://docs.n8n.io/integrations/builtin/credentials/httprequest/?_gl=1*ufu4gh*_ga*MTY5ODcxNjE2MC4xNzE0MDM4Njcy*_ga_0SC4FF2FH9*MTcxNTI0OTgzMi41LjEuMTcxNTI1MDYwNi4zLjAuMA..#using-header-auth) with the [Flotiq API key](../API/index.md?h=api+keys#application-api-keys){target="_blank"}.
 
 ## Preparation Steps
 
@@ -202,7 +202,7 @@ Test this step by sending an email to yourself. It should appear in Flotiq after
 
 ### Troubleshooting
 
-If a sent email doesn’t show up in output column in n8n, check a **webhook page** in Flotiq Dashboard for errors.
+If a sent email doesn’t show up in the output column in n8n, check a **webhook page** in Flotiq Dashboard for errors.
 
 ![](images/n8n/flotiq_errors.png)
 
@@ -231,3 +231,11 @@ Here are the final steps to complete the integration:
 ![](images/n8n/activate.png)
 
 That’s it! You’re all set. Now, you should be able to receive messages from your mailbox and send emails by creating Content Objects in Flotiq.
+
+## Related docs
+
+- [Universe overview](./overview.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Deep Dives overview](../Deep-Dives/index.md)
+

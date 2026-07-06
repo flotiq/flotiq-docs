@@ -11,6 +11,8 @@ To duplicate an object, open the Content Object list view and click the duplicat
 
 ## Duplicating Content Objects
 
+For scale and operations guidance, see [Advanced duplication patterns](./duplication-advanced.md).
+
 Flotiq makes duplicating Content Objects fast and effortless. Create a new object based on an existing one in seconds,
 without re-entering data or rebuilding relations.
 
@@ -34,3 +36,10 @@ that keeps shared relations, so your content stays consistent and ready to use.
 After duplication, Flotiq automatically updates unique and required fields by adding a hash suffix, so each new object
 stays unique and ready to use right away.
 You can edit these values at any time to match your content needs.
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)

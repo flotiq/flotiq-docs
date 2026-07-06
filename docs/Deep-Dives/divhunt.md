@@ -75,8 +75,8 @@ Once you have your Flotiq content ready, add a new GET request in your Divhunt's
 
 After you finish configuring your request for an object with the gallery, go back to the builder and create a container that will hold images from the gallery. In the `designer` tab, you can change its layout to `grid` or any other type of layout you prefer.
 
-Inside of your new container for the gallery create a single element of type `image` and set its source to your newly added GET request in `Advanced` tab.
-Below the `Source` section, there will be `attributes` field you need to edit to change the default Divhunts URL to Flotiqs, and add a function for retrieving `url` value from your object: `https://api.flotiq.com${value->get('url')}`.
+Inside your new container for the gallery create a single element of type `image` and set its source to your newly added GET request in `Advanced` tab.
+Below the `Source` section, there will be `attributes` field you need to edit to change the default Divhunt's URL to Flotiq's, and add a function for retrieving `url` value from your object: `https://api.flotiq.com${value->get('url')}`.
 
 You should end up with a grid containing all of your images from your Flotiq content object. You can then transform the size, scale and other properties of the images in the `designer` section.
 
@@ -85,3 +85,11 @@ You should end up with a grid containing all of your images from your Flotiq con
 ## Conclusion
 
 Flotiq and Divhunt form a dynamic duo for website creation, enabling users to effortlessly build headless websites without the need for coding. This powerful combination streamlines the development process, offering a user-friendly solution that caters to both seasoned developers and beginners alike. With Flotiq's advanced content management capabilities and Divhunt's intuitive site-building tools, crafting captivating websites has never been easier.
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

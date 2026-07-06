@@ -6,7 +6,7 @@ tags:
 title: Publication scheduling
 description: Publication scheduling is a feature that allows content editors to schedule the publication of a specified `ContentObject`.
 
-## Publication scheduling
+# Publication scheduling
 
 Publication scheduling allows content editors to define the exact date, time, and time zone when a specific
 ContentObject should be published. Similar to features available in platforms like WordPress, where users can schedule
@@ -60,3 +60,11 @@ Clicking the `Publish` button on a scheduled object opens a modal indicating tha
 with an option to override the schedule and publish it immediately.
 
 ![Force publishing scheduled object](../images/try-publish-scheduled-post.png)
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

@@ -3,22 +3,22 @@ tags:
   - Developer
 ---
 
-title: Learn how to use data from Flotiq in React and Typescript projects with Flotiq SDK | Flotiq docs
-description: Generate an OpenAPI API client library and integrate it in Next.js projects, benefit from Typescript support and code autocompletion in your IDE.
+title: Learn how to use data from Flotiq in React and TypeScript projects with Flotiq SDK | Flotiq docs
+description: Generate an OpenAPI API client library and integrate it in Next.js projects, benefit from TypeScript support and code autocompletion in your IDE.
 
-# Use data from Flotiq in React and Typescript projects
+# Use data from Flotiq in React and TypeScript projects
 
 !!! info
     This page demonstrates a TypeScript-based approach to React components hydrated with data coming from Flotiq
 
 ## Introduction
 
-In this short article we will show how to setup a Flotiq content type and use your OpenAPI schema to generate a Typescript-compatible API client that will integrate seamlessly with your Next.js project. As a result, you will be able to consume any data you store in Flotiq in Next.js with benefits like code completion in your IDE.
+In this short article we will show how to set up a Flotiq content type and use your OpenAPI schema to generate a TypeScript-compatible API client that will integrate seamlessly with your Next.js project. As a result, you will be able to consume any data you store in Flotiq in Next.js with benefits like code completion in your IDE.
 
 ## Prerequisites
 
 * Flotiq account
-* basic Typescript and React knowledge.
+* basic TypeScript and React knowledge.
 
 ## Create a content type in Flotiq
 
@@ -28,9 +28,9 @@ Start with a simple content type, for example one that represents a Hero section
 
 Once you create the content type definition - go ahead and add some objects too.
 
-## Create NextJS project
+## Create Next.js project
 
-Next, use the `create-next-app` to setup a fresh Next.js project
+Next, use the `create-next-app` to set up a fresh Next.js project
 
 ```bash
 npx create-next-app@latest flotiq-component-demo --typescript --eslint
@@ -50,7 +50,7 @@ There are two ways of doing that:
 We can use `flotiq-setup` to import API keys to variable files like `.env`.
 
 Simply run `npx flotiq-setup` to automatically import your API keys to variable files.
-After running the `flotiq-setup` script, your browser will pop-up with a prompt to select which space the app will be able to access.
+After running the `flotiq-setup` script, your browser will pop up with a prompt to select which space the app will be able to access.
  ![](images/nextjs-react-typescript-openapi/flotiq-setup-prompt.png)
 
 ### Flotiq Dashboard
@@ -76,7 +76,7 @@ Now that you added the API key, you can proceed with the next steps.
 
 ## Flotiq Codegen TS - Flotiq SDK
 
-This package simplifies Typescript Fetch API integration for your Flotiq project, tailored to your Flotiq account data.
+This package simplifies TypeScript Fetch API integration for your Flotiq project, tailored to your Flotiq account data.
 To build your customized API package, just run this command:
 
 To install Flotiq SDK, you can use flotiq-nextjs-setup CLI, that will not only seamlessly generate SDK for your Next.js project but will also add content cache revalidation endpoint, handle draft mode for unpublished content on Flotiq, and more. To use the flotiq-nextjs-setup CLI simply run the setup:
@@ -85,7 +85,7 @@ To install Flotiq SDK, you can use flotiq-nextjs-setup CLI, that will not only s
     ```
     { data-search-exclude }
 
-If you want to read more about our flotiq-nextjs-setup CLI, refer to our [Flotiq NextJS docs](/docs/CLI/starting-new-project-nextjs/).
+If you want to read more about our flotiq-nextjs-setup CLI, refer to our [Flotiq Next.js docs](/docs/CLI/starting-new-project-nextjs/).
 
 If instead you prefer to install only Flotiq SDK manually, do the following steps:
 
@@ -105,7 +105,7 @@ npx flotiq-codegen-ts generate
 
 ## Use the API
 
-We’re almost done! Now you have to edit 2 files in the NextJS repo: 1. `src/app/page.tsx` and 2. `src/app/components/hero.tsx` (new file) to start using the API.
+We’re almost done! Now you have to edit 2 files in the Next.js repo: 1. `src/app/page.tsx` and 2. `src/app/components/hero.tsx` (new file) to start using the API.
 
 Let’s start with `page.tsx`. First, we need to connect to Flotiq API, add the following lines to your file
 
@@ -183,3 +183,11 @@ export default function HeroComponent({hero} : HeroProps){
 That’s it! Start using TypeScript with Flotiq data. By now you probably noticed how convenient it is to have explicit typing and code completion in your editor:
 
  ![IDE autocompleting property names of your objects](images/nextjs-react-typescript-openapi/ide-code-completion.png){: .center .border}
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

@@ -54,6 +54,14 @@ After clicking the **Inject Snippet** button, the snippet will automatically be 
 
 ![Media picker modal in richtext](images/cf-stream/snippet-injected-to-editor.png){: .center .width75 .border}
 
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+
+
 
 
 

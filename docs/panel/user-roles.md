@@ -27,6 +27,27 @@ User role allows you to restrict the actions for specific Content Type Definitio
 !!! note
     Managing user roles is available only for `Organization Admin`. It’s important to note that a user without any assigned role has unrestricted access to all resources.
 
+## Role Scope: Organization vs Space
+
+Flotiq uses two role scopes:
+
+- **Organization role** controls organization-level management.
+- **Space role** controls what a user can do with content inside a specific Space.
+
+| Role                 | Scope        | Main capabilities                                                                               |
+|----------------------|--------------|-------------------------------------------------------------------------------------------------|
+| `Organization Admin` | Organization | Manage Spaces, users, billing, and user role assignments across the Organization.               |
+| `Admin`              | Space        | Full access to content and definitions in an assigned Space.                                    |
+| `Content Editor`     | Space        | Manage content objects in an assigned Space, with read-only access to content type definitions. |
+| `Viewer`             | Space        | Read-only access in an assigned Space.                                                          |
+
+`Admin`, `Content Editor`, and `Viewer` do not grant organization-level management on their own.
+
+## Related role docs
+
+- For Organization-level roles (`Organization Admin`, `Organization User`), see [Spaces and Organization](./spaces.md#what-is-an-organization).
+- For combined user, role, and API credential model, see [Access control](./access-control.md).
+
 ## Predefined User Roles
 
 In Flotiq, predefined user roles streamline the management of user permissions, ensuring that users can perform only the actions their roles permit. These roles cover typical organizational needs.
@@ -45,6 +66,7 @@ In Flotiq, predefined user roles streamline the management of user permissions, 
 - **Permissions**:
     - **CO**: Read, create, update, delete.
     - **CTD**: Read, create, update, delete.
+- **Scope note**: This is a Space role. It does not grant access to organization management unless the user is also an `Organization Admin`.
 
 #### **Content Editor**
 
@@ -52,6 +74,8 @@ In Flotiq, predefined user roles streamline the management of user permissions, 
 - **Permissions**:
     - **CO**: Read, create, update, delete.
     - **CTD**: Read.
+- **Scope note**: This is a Space role focused on content operations. It does not include organization management.
+- **When access is denied**: Contact your Space administrator to adjust role permissions.
 
 #### **Viewer**
 
@@ -134,3 +158,11 @@ We grant users permission to perform any action with any Content Type Definition
 Outcome for the user with the assigned role:
 
 ![](images/user-roles/ctds_role_effect.png){: .border}
+
+## Related docs
+
+- [Panel overview](./index.md)
+- [API access & scoped keys](../API/index.md)
+- [Content Objects](../API/content-objects.md)
+- [Webhooks overview](./webhooks/index.md)
+

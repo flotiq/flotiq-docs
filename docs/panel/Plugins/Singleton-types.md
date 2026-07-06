@@ -34,4 +34,12 @@ Now when you click on the types selected in the plugin configuration you will be
 
 ![Navigation in Singleton Types plugin](images/singleton-types/navigation.png){: .center .width5 .border}
 
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+
+
 

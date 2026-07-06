@@ -156,3 +156,11 @@ export default async function Page() {
 - Without the header, only published (public) content is visible
 - Use the Content Preview plugin to quickly toggle draft mode and test your content
 - See [Draft & Public documentation](/docs/API/draft-public/draft-public/) for more state management options
+
+## Related docs
+
+- [SDK overview](./overview.md)
+- [Open API schema](../API/open-api-schema.md)
+- [Get Started with API](../API/get-started.md)
+- [Universe overview](../Universe/overview.md)
+

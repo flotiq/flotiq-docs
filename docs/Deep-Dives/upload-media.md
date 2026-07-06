@@ -44,7 +44,7 @@ The video below shows how, simply, test the operation of the media upload endpoi
 1. Use the endpoint `/api/media` to transfer the file
 1. Check, if the file has appeared in the application
 
-## Upload files - simple html form
+## Upload files - simple HTML form
 
 Now that we know how to upload files to the media library, we can prepare a simple file transfer form.
 
@@ -157,3 +157,11 @@ Remember that in production solutions, the API key should not be included in the
  * [About Postman](https://www.postman.com)
  * [Flotiq Developer Documentation: Api keys](https://flotiq.com/docs/API/)
  * [Flotiq Developer Documentation: Media library](https://flotiq.com/docs/API/media-library/)
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

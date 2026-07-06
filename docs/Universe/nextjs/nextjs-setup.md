@@ -18,7 +18,7 @@ In this guide, we go over steps for easy setup for a fresh Flotiq Next.js projec
 
 `* although in the setup process an example content type "blog_post" will be proposed, that will allow to quickly get acquainted with the flotiq nextjs project.`
 
-## NextJS Project setup
+## Next.js Project setup
 
 Start the setup by initializing the Next.js project using the following npx command:
 
@@ -28,22 +28,22 @@ npx create-next-app@latest <path-to-nextjs-project>
 { data-search-exclude }
 
 !!! Note
-    Use `.` as `<path-to-nextjs-project>` if you want to setup the project in the directory that you are currently in.
+    Use `.` as `<path-to-nextjs-project>` if you want to set up the project in the directory that you are currently in.
 
-The command above will prompt you to select specific configurations for your NextJS project. Below you can see the table presenting you options supported by the Flotiq Next.js setup CLI tool:
+The command above will prompt you to select specific configurations for your Next.js project. Below you can see the table presenting you options supported by the Flotiq Next.js setup CLI tool:
 
-| Feature                                  | Yes | No  |
-|------------------------------------------|-----|-----|
-| Next.js version >= 15                    | ✅  | ❌  |
-| TypeScript?                              | ✅  | ✅  |
-| ESLint?                                  | Optional | Optional |
-| Tailwind CSS?                            | ✅  | ✅  |
-| Code inside a `src/` directory?          | ✅  | ✅  |
-| App Router?                              | ✅  | ❌  |
-| Turbopack for `next dev`?                | Optional | Optional |
-| Customized the import alias (`@/*`)?     | ✅  | ✅  |
+| Feature                              | Yes      | No       |
+|--------------------------------------|----------|----------|
+| Next.js version >= 15                | ✅        | ❌        |
+| TypeScript?                          | ✅        | ✅        |
+| ESLint?                              | Optional | Optional |
+| Tailwind CSS?                        | ✅        | ✅        |
+| Code inside a `src/` directory?      | ✅        | ✅        |
+| App Router?                          | ✅        | ❌        |
+| Turbopack for `next dev`?            | Optional | Optional |
+| Customized the import alias (`@/*`)? | ✅        | ✅        |
 
-Once you have your NextJS project setup, it's time to integrate it with Flotiq. Start by logging into your Flotiq account. It's important to stay authenticated during the following steps. Then go to your project directory:
+Once you have your Next.js project setup, it's time to integrate it with Flotiq. Start by logging into your Flotiq account. It's important to stay authenticated during the following steps. Then go to your project directory:
 
 ```bash
 cd <path-to-nextjs-project>
@@ -139,4 +139,12 @@ Refer to [Next.js Draft Mode](https://nextjs.org/docs/app/building-your-applicat
 
 # Conclusion
 
-This documentation provides a comprehensive guide to setting up, using, and maintaining your project with Flotiq and NextJS. By following the steps outlined above, you can efficiently manage your content, integrate updates seamlessly, and ensure your site remains fast and reliable. Should you encounter any challenges, revisit this guide or consult Flotiq's official resources for further support. With these tools at your disposal, you're well-equipped to create and maintain a dynamic, content-rich site.
+This documentation provides a comprehensive guide to setting up, using, and maintaining your project with Flotiq and Next.js. By following the steps outlined above, you can efficiently manage your content, integrate updates seamlessly, and ensure your site remains fast and reliable. Should you encounter any challenges, revisit this guide or consult Flotiq's official resources for further support. With these tools at your disposal, you're well-equipped to create and maintain a dynamic, content-rich site.
+
+## Related docs
+
+- [Universe overview](../overview.md)
+- [Get Started with API](../../API/get-started.md)
+- [SDK overview](../../SDK/overview.md)
+- [Deep Dives overview](../../Deep-Dives/index.md)
+

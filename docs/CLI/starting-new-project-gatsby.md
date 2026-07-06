@@ -62,3 +62,11 @@ After running the command, you should have data imported to your Flotiq account.
 `projectName` - project name or project path (if you wish to start or import data from the directory you are in, use `.`)
 
 `flotiqApiKey` - API key to your Flotiq account
+
+## Related docs
+
+- [CLI overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

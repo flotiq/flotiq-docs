@@ -44,8 +44,12 @@ An Organization is essentially a collection of Spaces. Within an Organization, t
 
 Roles within an Organization:
 
-- **Organization Admin:** Has full control over management privileges, including the ability to manage Spaces and users.
-- **Organization User:** Restricted to operating within Spaces specifically assigned by an Administrator, focusing solely on content related to that Space.
+- **Organization Admin** (`ROLE_HEADLESS_ADMIN`): Has full control over organization management, including Spaces, users, and billing, not only within assigned Spaces.
+- **Organization User** (`ROLE_HEADLESS_USER`): Restricted to content and operations within assigned Spaces.
+
+## Related role docs
+
+- For Space-level permissions (`Admin`, `Content Editor`, `Viewer`), see [User Roles](./user-roles.md#role-scope-organization-vs-space).
 
 ## Navigating Through Spaces
 
@@ -126,3 +130,11 @@ After each billing cycle an invoice is generated and available for download for 
 To manage subscriptions or download invoices go to organization settings and open `Billing info` page.
 
 ![Billing info](images/BillingInfo.png){: .border}
+
+## Related docs
+
+- [Panel overview](./index.md)
+- [API access & scoped keys](../API/index.md)
+- [Content Objects](../API/content-objects.md)
+- [Webhooks overview](./webhooks/index.md)
+

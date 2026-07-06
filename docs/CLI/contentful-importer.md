@@ -18,7 +18,7 @@ To migrate data, you will need the following:
 
 ## Usage
 
-Once you are done getting hold of all of the keys, all you need to do is run a simple command in Flotiq CLI, which looks like this:
+Once you are done getting hold of all the keys, all you need to do is run a simple command in Flotiq CLI, which looks like this:
 
 ```bash
 
@@ -46,3 +46,11 @@ When the migrator finishes its work, it will log into your console three tables 
 Both Content Types and Media tables will show the success count, and error count of the total number of entities migrated. Also, for every error that has occurred, it will present the error code, name, and additional description with a pointer to an entity that caused the problem, for example, Contentful asset ID.
 
 The table for Content Objects will show you separate success and error count for each Content Type you are migrating.
+
+## Related docs
+
+- [CLI overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

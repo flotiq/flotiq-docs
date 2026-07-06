@@ -170,3 +170,11 @@ When a `Content Definition Changes` Webhook is executed, a payload containing in
 }
 ```
 { data-search-exclude }
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](./index.md)
+

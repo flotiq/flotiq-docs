@@ -50,7 +50,7 @@ What happens here?
 1. **Registration** - First, the plugin needs to introduce itself to Flotiq. Most of the information here is for end-users, so that they can review what kind of plugins they are running. There are several pieces of info that are more important to the plugin API:
     - `id` - this must be a unique string for all plugins. Only one plugin with a given `id` can be registered. If subsequent registration is executed with the same `id`, the previous plugin instance will be removed.
       We recommend prefixing each plugin `id` with your company name to avoid `id` conflicts.
-    - `name`* - A user friendly name of the plugin. It will be shown in plugin management page
+    - `name`* - A user-friendly name of the plugin. It will be shown in plugin management page
     - `url`* - Full URL to the js file that contains the plugin.
     - `version`* - Current version of the plugin. It is required for Flotiq to determine if the version used by the user is still up to date.
     - `permissions` - if the plugin requires access to user data via Flotiq API, it must present a set of required permissions. This is the only way, to get an `apiClient` object that will allow you to access user content or schema.
@@ -71,7 +71,7 @@ Often plugins require access to user data. E.g. to display options stored in ano
 
 Flotiq UI plugins are allowed to access API only with pre-prepared API client, after declaring the scope of access. 
 
-**Important**: plugins are not using own API Keys, nor there are direct `fetch` calls from plugin code to API. Instead, plugins **must** use the provided API client. All of the write actions will be registered as if a user made the change.
+**Important**: plugins are not using own API Keys, nor there are direct `fetch` calls from plugin code to API. Instead, plugins **must** use the provided API client. All the write actions will be registered as if a user made the change.
 
 To be able to do it, a plugin needs to request API access with [[PluginInfo.md#class-pluginpermission|`permissions`]] field during registration:
 
@@ -359,7 +359,7 @@ Once you have your plugin written, you have several options to install it into F
 Your plugin also must contain all required information in the `plugin-manifest.json` file. Manifest file has the same structure as the object provided when plugin registers its event handlers, however, some fields are no longer optional when manifest is provided. 
 
 <details>
-<summary>See an example of `plugin-maniest.json` that can be used to register new plugin</summary>
+<summary>See an example of `plugin-manifest.json` that can be used to register new plugin</summary>
 
 ```json
 {
@@ -393,3 +393,11 @@ If your plugin is ready for wider use within your organization:
 5. Add your plugin to the organization (gray "+" to the right of the plugin name) and enable it. 
 
 ![Adding plugin to an organization](./img/adding-plugin-to-organization.png)
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

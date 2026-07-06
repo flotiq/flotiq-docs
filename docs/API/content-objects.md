@@ -72,4 +72,12 @@ allow the user to perform basic REST operations
     * [Batch delete](/docs/API/content-type/deleting-co/#batch-deleting)
 * [List ids of deleted objects](content-type/listing-deleted-co.md)
 
+
+## Related docs
+
+- [Content Types](./content-types.md)
+- [Dynamic Content API](./dynamic-content-api.md)
+- [Open API schema](./open-api-schema.md)
+- [API access & scoped keys](./index.md)
+
 [Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

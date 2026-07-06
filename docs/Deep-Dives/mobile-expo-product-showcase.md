@@ -217,3 +217,11 @@ That's it! You should now see the product list immediately after the app has loa
 Now, you can go and play with it and publish it straight to the App stores.
 
 The original application has already been approved by Apple and Google stores, so it should be a quick and easy task to get your app approved too!
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

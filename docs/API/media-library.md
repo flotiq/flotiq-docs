@@ -17,7 +17,7 @@ To upload a file to the Flotiq, you need to send `POST` multipart request to the
 ### Request parameters
 
 | Parameter | Description                                         |
-| --------- | --------------------------------------------------- |
+|-----------|-----------------------------------------------------|
 | file      | binary data of a file                               |
 | type      | `image` for image types, `file` for everything else |
 
@@ -247,22 +247,22 @@ API methods to get, list and remove Content objects. Be aware, that changing the
 
 Below we listed all parameters describing the `Media` object.
 
-| Parameter  | Description |
-| ---------- | ----------- |
+| Parameter  | Description                                                                                                                                                                   |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | id         | The id is given by the backend by which the file on the disk is named. The `id` property is unique, final and immutable and is used to create the URI of the uploaded object. |
-| extension  | File extension without dot |
-| fileName   | Full name of uploaded file |
-| mimeType   | Mime type of uploaded file |
-| size       | Size of file in bytes |
-| type       | Type of the file, it can be 'image' or 'file' |
-| source     | Source of the file, it can be 'disk' or 'unsplash' |
-| externalId | Id of the photo on unsplash if it was downloaded from there
-| url        | Url to original image without API host (e.g. /image/0x0/_media-456456.jpg) |
-| height     | Height, or 0 for 'file' type |
-| width      | Width, or 0 for 'file' type |
-| title      | Descriptive text that can be used as a title attribute or figcaption element |
-| alt        | Short text that can be used as an ALT atribbute |
-| variants   | array of variant objects for altering image |
+| extension  | File extension without dot                                                                                                                                                    |
+| fileName   | Full name of uploaded file                                                                                                                                                    |
+| mimeType   | Mime type of uploaded file                                                                                                                                                    |
+| size       | Size of file in bytes                                                                                                                                                         |
+| type       | Type of the file, it can be 'image' or 'file'                                                                                                                                 |
+| source     | Source of the file, it can be 'disk' or 'unsplash'                                                                                                                            |
+| externalId | Id of the photo on unsplash if it was downloaded from there                                                                                                                   |
+| url        | Url to original image without API host (e.g. /image/0x0/_media-456456.jpg)                                                                                                    |
+| height     | Height, or 0 for 'file' type                                                                                                                                                  |
+| width      | Width, or 0 for 'file' type                                                                                                                                                   |
+| title      | Descriptive text that can be used as a title attribute or figcaption element                                                                                                  |
+| alt        | Short text that can be used as an ALT atribbute                                                                                                                               |
+| variants   | array of variant objects for altering image                                                                                                                                   |
 
 ### Media Content Type Definition
 
@@ -589,10 +589,10 @@ You can choose different sizes and depending on them, you get other results.
 
 Set the appropriate values `width` and `height` in the media url `https://api.flotiq.com/image/[width]x[height]/_media-123.jpg`, for example:
 
-* `0x0` This way lets you download original pictures size and won't make any differents.
-* `1920x0` This will force width defined by you and height will be scaled to a proportionate size.
-* `0x1920` This way lets you to force height defined by you and width will be scaled to a proportionate size.
-* `1920x1920` This will force images size to choosen by you. When the image is taller or wider, it will crop it. Worth knowing that this endpoint won't upscale images.
+* `0x0` This way lets you download original pictures size and won't make any changes.
+* `1920x0` This will enforce width defined by you and height will be scaled to a proportionate size.
+* `0x1920` This way lets you enforce height defined by you and width will be scaled to a proportionate size.
+* `1920x1920` This will enforce images size to the chosen by you. When the image is taller or wider, it will crop it. Worth knowing that this endpoint won't upscale images.
 
 As we can see below weight follows size, the smaller the size, the less weight. It's important to choose a suitable size for your picture, without making it pixelated but having appropriate weight.
 
@@ -602,6 +602,13 @@ Flotiq automatically scale images and save them for future, faster use, if the s
 
 !!! note
     See also: [Manage assets using the Media Library in Dashboard](/docs/panel/media-library/)
+
+## Related docs
+
+- [Media transformations](./variants.md)
+- [Content Objects](./content-objects.md)
+- [Dynamic Content API](./dynamic-content-api.md)
+- [API access & scoped keys](./index.md)
 
 
 [Register to start storing your files](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

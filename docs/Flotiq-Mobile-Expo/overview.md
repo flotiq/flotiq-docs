@@ -93,3 +93,11 @@ When you open the Expo Go app, you have to scan the QR code presented on the [ht
 
 Check out our [simple guide](/docs/Deep-Dives/mobile-expo-product-showcase/) on how to adapt the Flotiq Mobile Expo application source code
 to work as a product showcase app.
+
+## Related docs
+
+- [Mobile Expo deep dive](../Deep-Dives/mobile-expo-product-showcase.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

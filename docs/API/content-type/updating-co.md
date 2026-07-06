@@ -445,4 +445,12 @@ It is also possible to update objects using the PATCH method.
 In the case of PATCH, it is not required to provide all object fields, only those that are to be changed.
 When an object doesn't exist, the batch patch returns a 404 error response. The PATCH endpoint doesn't create new objects.
 
+
+## Related docs
+
+- [Content Objects](../content-objects.md)
+- [Content Types](../content-types.md)
+- [Dynamic Content API](../dynamic-content-api.md)
+- [API access & scoped keys](../index.md)
+
 [Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

@@ -50,6 +50,14 @@ Next, fill in the details and click `Save changes` to complete your plugin setup
 
 * Target field - Specifies the field to which the slug will be entered.
 
-You're done. Now you will see the refresh icon next to the slug field in the Content Object form. If you’re creating a new object and the field is currently empty, it will be auto-filled. If you’re editing an existing object or the field contains data, click the refresh icon to regenerate the slug.
+You're done. Now you will see the refresh icon next to the slug field in the Content Object form. If you’re creating a new object and the field is currently empty, it will be autofilled. If you’re editing an existing object or the field contains data, click the refresh icon to regenerate the slug.
 
 ![Slug outcome](images/slug/outcome.png){: .center .width75 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

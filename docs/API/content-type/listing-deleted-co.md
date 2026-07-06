@@ -21,7 +21,7 @@ has been defined in the system - the user can list ids of removed objects
 
 To list ids of the deleted Content Objects, you use the `/api/v1/content/{name}/removed` endpoint
 (where `name` is the name of the content type definition).
-It lists all of the deleted Content Objects of the Content Type.
+It lists all the deleted Content Objects of the Content Type.
 You can filter Content Objects using the `deletedAfter` query parameter
 containing the date after which the Content Objects were deleted; the date must be in the format accepted by the [DateTime::format](https://www.php.net/manual/en/datetime.format.php) function.
 
@@ -199,5 +199,13 @@ containing the date after which the Content Objects were deleted; the date must 
 ## Listing ids of deleted Content Objects through Content modeller
 
 It is impossible for now to list deleted Content Objects through Flotiq UI.
+
+
+## Related docs
+
+- [Content Objects](../content-objects.md)
+- [Content Types](../content-types.md)
+- [Dynamic Content API](../dynamic-content-api.md)
+- [API access & scoped keys](../index.md)
 
 [Register to start creating your content objects](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

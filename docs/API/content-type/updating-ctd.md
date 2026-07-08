@@ -86,7 +86,7 @@ Content Type</abbr> is simply a ``PUT`` call with a payload similar to:
 You can find description of the schema [here](/docs/API/content-type/creating-ctd/#creating-new-content-types-via-api)
 
 !!! tip
-    After every change in Content Definition Schema Flotiq automatically updates your API documentation and Elastic Search
+    After every change in Content Definition Schema Flotiq automatically updates your API documentation and ElasticSearch
     index attached to this type. This means your API docs will always stay up to date with your current schema, and so will
     the results of the [full-text search feature](/docs/API/search/).
 
@@ -113,6 +113,15 @@ When you change existing property, depending on the type of changes, Flotiq will
     When updating Content Definition Schema, you must remember that Flotiq will try to update objects of that
     type to reflect changes in the schema, which can result in data loss, if the old types and new types of
     the properties are not compatible.
+
+## What happens if you change slug rules?
+
+The `slugs` array is replaced wholesale on each update — there is no merge semantics.
+If you want to add a new rule, include the existing rules in the payload along with
+the new one. If you remove a rule from the payload, it will be deleted.
+
+Validation rules for `slugs` are the same as on create — see
+[the slugs property](/docs/API/content-type/creating-ctd/#the-slugs-property) for details.
 
 
 !!! Example
@@ -467,7 +476,7 @@ Validation can also fail when updating the schema by modifying required fields o
 When you modify a schema, any associated objects undergo a transformation process. This process ensures that the objects conform to the new schema's structure. However, there are certain considerations to keep in mind:
 
 1. Required Fields: If a field is marked as "required" in the schema, the system expects all existing objects to have a value for that field. The transformation will fail during the conversion process if an existing object lacks a value for a newly marked required field.
-2. Changing Field Types: If you change the data type of a field, particularly from one type to another, that cannot be automatically transformed (e.g., from "Text" to "Relationship"), updating existing objects automatically becomes challenging.
+2. Changing Field Types: If you change the data type of field, particularly from one type to another, that cannot be automatically transformed (e.g., from "Text" to "Relationship"), updating existing objects automatically becomes challenging.
 
 When encountering issues during schema conversion, you might receive error messages like the following:
 
@@ -677,5 +686,12 @@ When encountering issues during schema conversion, you might receive error messa
 ## Updating Content Types through the Content modeller
 
 If you'd rather use our graphical interface to update your Content Types - read the [Content modeller documentation](/docs/panel/content-types/)
+
+## Related docs
+
+- [Content Objects](../content-objects.md)
+- [Content Types](../content-types.md)
+- [Dynamic Content API](../dynamic-content-api.md)
+- [API access & scoped keys](../index.md)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}

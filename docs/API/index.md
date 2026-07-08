@@ -11,6 +11,8 @@ There are two types of API keys - [Application Keys](#application-api-keys) and 
 
 ![](images/api-keys-menu.png){: .center .width25 .border}
 
+If you are looking for a panel-first workflow, see [Access control](../panel/access-control.md#manage-api-keys-in-panel).
+
 All keys restrict access to not only CRUD of the Content Objects, but also to their hydration and search; the same restrictions apply to GraphQL endpoint.
 
 !!! note 
@@ -35,11 +37,11 @@ Only user defined keys can be removed using ![](images/remove_button.png){: styl
 
 ![](images/api-keys_2.png){: .center .width75 .border}
 
-You can add your own API keys restricted to specific Content Objects (e.g. Media) and actions (create, read, update, delete). 
+You can add your own API keys restricted to specific content types (for example `_media`) and actions (create, read, update, delete).
 
 ![](images/api-keys_3.png){: .center .width75 .border}
 
-You can also mix and match access to any Content Objects from your account, to add new access rule for CO, click "Add Rule" button. When the key is complete, don't forget to save it using the "Save" button. 
+You can also mix and match access to content types from your account. To add a new access rule for Content Objects (CO), click `Add Rule`. When the key is complete, save it using the `Save` button.
 
 ![](images/api-keys_4.png){: .center .width75 .border}
 
@@ -356,6 +358,12 @@ Imagine a window that's exactly 30 days wide. Every day, this window slides forw
 * **Flexibility**: You're not restricted by the calendar. If you have a period of high demand in the middle of a month, you can use your quota as needed without waiting for a new month to start.
 * **Predictability**: It provides a steady, continuous look at your usage, making it easier for you to manage and anticipate your needs. You can always see exactly how many calls you've made in the last 30 days.
 * **Fairness**: This model ensures that the limit is applied consistently, regardless of when you began your subscription. Everyone's limit is managed in the same way, based on their individual usage history.
+
+## Related docs
+
+- [API key lifecycle](./api-key-lifecycle.md)
+- [Rate limits and API usage](./rate-limits.md)
+- [Get Started with API](./get-started.md)
 
 [Register to send all requests with your own API today](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
 

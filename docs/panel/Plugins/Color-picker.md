@@ -102,3 +102,11 @@ Transformed text field into color picker:
 **With predefined color palette**
 
 ![Color picker with palette in Flotiq content object form](images/color-picker/input-color-picker-with-palette.png){: .center .width75 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

@@ -6,7 +6,19 @@ tags:
 title: Slug | Flotiq documentation
 description: This plugin simplifies the process of creating slugs for your Content Object.
 
-# Slug generation plugin
+!!! Caution
+    **The Slug plugin is now deprecated.** Slug generation has been moved into Flotiq core
+    and is configured directly on a Content Type Definition through a new `slugs` field.
+
+    See the updated documentation:
+
+    * [Generating slugs in the Dashboard](/docs/panel/ContentObjects/slugs/)
+    * [Configuring slug rules via API](/docs/API/content-type/creating-ctd/#the-slugs-property)
+
+    Existing plugin configurations are migrated automatically — no action required.
+    For questions, contact us on Discord or email [hello@flotiq.com](mailto:hello@flotiq.com).
+
+# [Legacy] Slug generation plugin
 
 This plugin simplifies the process of creating slugs for your Content Object. It’s particularly useful when you want to generate slugs automatically based on existing data within a Content Object (e.g. the title of a blog post).
 
@@ -38,6 +50,14 @@ Next, fill in the details and click `Save changes` to complete your plugin setup
 
 * Target field - Specifies the field to which the slug will be entered.
 
-You're done. Now you will see the refresh icon next to the slug field in the Content Object form. If you’re creating a new object and the field is currently empty, it will be auto-filled. If you’re editing an existing object or the field contains data, click the refresh icon to regenerate the slug.
+You're done. Now you will see the refresh icon next to the slug field in the Content Object form. If you’re creating a new object and the field is currently empty, it will be autofilled. If you’re editing an existing object or the field contains data, click the refresh icon to regenerate the slug.
 
 ![Slug outcome](images/slug/outcome.png){: .center .width75 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

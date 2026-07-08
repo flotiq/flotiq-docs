@@ -22,3 +22,11 @@ You're done. Now you will see Content Type featured images in the right sidebar 
 
 ![Display Content Type image in Object forms in Flotiq](images/ctd-image-co-form/featured-image.png){: .center .width50 .border}
 
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+
+

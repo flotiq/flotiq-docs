@@ -9,7 +9,12 @@ description: How to manage users in Flotiq.
 This page explains how to manage **Users**, including your own settings, using the [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 
 
 !!! hint
-    Only a user Role headless admin can manage other users in Flotiq project. If you do not have the required role, you will not be able to see the `Users` tab.
+    Only `Organization Admin` can manage users in an Organization. In API and internal role names, this role is represented as `ROLE_HEADLESS_ADMIN` (legacy wording: `headless admin`). If you do not have this role, you will not see the `Users` tab.
+
+## Who can manage users
+
+- **Organization Admin** can invite, edit, and delete users in the Organization.
+- **Content Editor** is a Space role. It can manage content in assigned Spaces but cannot manage Organization users, Spaces, or billing.
 
 To manage users, navigate to `Manage Spaces` or `Organization Settings`.
 
@@ -49,7 +54,7 @@ Here you can change your settings, like your name and password, but also edit yo
 
 ## Deleting users
 
-Users can be permanently deleted from the project by a user with the `headless admin` role.
+Users can be permanently deleted from the project only by an `Organization Admin` user (sometimes labeled `headless admin`).
 
 !!! warning
     Deleting a user is permanent and cannot be undone.
@@ -60,5 +65,13 @@ Users can be permanently deleted from the project by a user with the `headless a
 - Existing Content Objects stay in place and remain available according to their current status and permissions.
 - Version History entries are preserved. Changes made by a deleted user are still visible in the history as edits made by a deleted account.
 - Personal data of the deleted user is anonymized in the database.
+
+## Related docs
+
+- [Panel overview](./index.md)
+- [API access & scoped keys](../API/index.md)
+- [Content Objects](../API/content-objects.md)
+- [Webhooks overview](./webhooks/index.md)
+
 
 [^1]: Number of available Team Members depends on the chosen subscription plan. Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}

@@ -6,6 +6,13 @@ tags:
 title: Custom Links | Flotiq documentation
 description: This plugin allows to create custom links in each entity view.
 
+!!! Caution
+    **The Custom Links plugin is now deprecated.** Custom Links are now built into Flotiq 
+    and configured in [Space Settings](../SpaceSettings/index.md). You no longer need to
+    install this plugin — see the Space Settings page for the current setup.
+
+# [Legacy] Custom Links plugin
+
 This plugin will display a button with a link in the edit content object. The link will be supplemented with data from the currently edited object.
 Thanks to this link, you will be able to get easy access to the preview of where the content is used.
 
@@ -67,3 +74,11 @@ if you use this configuration with an object similar to this
 ![Content object with category and slug](images/custom-links/complex-routing-co-form.png){: .center .width75 .border}
 
 you will see a preview link that will lead you to `https://my-site.com/green-plant/15`.
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

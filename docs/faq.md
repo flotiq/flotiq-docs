@@ -1,3 +1,10 @@
+---
+tags:
+  - Developer
+  - Administrator
+  - Content Creator
+---
+
 title: Flotiq FAQ
 description: Frequently Asked Questions on Flotiq CMS
 
@@ -11,8 +18,8 @@ Learn more in our [blog post](https://blog.flotiq.com/advantages-of-headless-cms
 
 ## What's the difference between Flotiq and WordPress?
 
-WordPress at its core is traditional CMS with data entangled with the presentation,
-it introduced the headless version some time ago, but it still is not based on Open API, 
+WordPress at its core is traditional CMS with data entangled with the presentation.
+It introduced the headless version some time ago, but it still is not based on Open API, 
 so using it is more challenging than using Flotiq API.
 Learn more in our [blog post](https://blog.flotiq.com/why-you-should-consider-flotiq-headless-cms-over-wordpress).
 
@@ -91,3 +98,11 @@ or on our [Discord server](https://discord.com/invite/FwXcHnX).
 <flotiq-form></flotiq-form>
 
 [Register to start your Flotiq journey](https://editor.flotiq.com/register?plan=1ef44daa-fdc3-6790-960e-cb20a0848bfa){: .flotiq-button}
+
+## Related docs
+
+- [API access & scoped keys](./API/index.md)
+- [Panel overview](./panel/index.md)
+- [Universe overview](./Universe/overview.md)
+- [SDK overview](./SDK/overview.md)
+

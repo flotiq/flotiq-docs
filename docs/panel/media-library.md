@@ -29,7 +29,7 @@ When editing an image, you can now add an optional `title` and `alt` text fields
 This section gives you access to the Unsplash library of images.
 All Unsplash images are available to use for free and Flotiq takes care of the necessary attributions.
 
-In order to use images from Unsplash - you need to download them to your library first. This is a very simple operation - once you select an image you like, simply click the download icon on that image and it will momentarily appear in your `Uploaded files`.
+In order to use images from Unsplash - you need to download them to your library first. This is a very simple operation - once you select an image you like, simply click the download icon on that image, and it will momentarily appear in your `Uploaded files`.
 
 ![Downloading from Unsplash](./images/MediaLibraryUnsplash.png){: .border}
 
@@ -83,5 +83,13 @@ Media library is accessible via `/api/v1/media/` endpoints. Visit your API docs 
 
 !!! note
     See also: [Working with media using API](/docs/API/media-library/)
+
+## Related docs
+
+- [Panel overview](./index.md)
+- [API access & scoped keys](../API/index.md)
+- [Content Objects](../API/content-objects.md)
+- [Webhooks overview](./webhooks/index.md)
+
 
 [^1]: Number of available Content Objects and available disk space depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}

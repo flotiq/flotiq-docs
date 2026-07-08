@@ -16,18 +16,20 @@ description: Flotiq support for custom workflows helps teams collaborate and pro
 
 Workflows are a powerful feature that helps teams collaborate and produce quality content. Flotiq implements workflows for all content types defined in the system. The default workflow supports only a single state - `saved`. Every content object in the system carries a `workflowState` field under the `internal` section. Custom workflows allow you to define additional states and transitions that match your editorial process.
 
+For integration and operational guidance, see [Advanced workflow patterns](./advanced-workflow.md).
+
 ## Workflows vs Draft & Public
 
 Flotiq offers two distinct systems for managing content state. Choose the one that fits your workflow:
 
-| Aspect                 | Workflows                                                                        | Draft & Public                                                                                             |
-|------------------------|----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| **States**             | Custom - examples: draft, review, public, archive                                | Fixed: draft, public, modified, archived                                                                   |
-| **State field**        | `workflowState` under `internal`                                                 | `status` under `internal`                                                                                  |
-| **Enable**             | Custom workflows (paid plan)                                                     | `draftPublic: true` on Content Type Definition                                                             |
-| **API endpoints**      | `/api/v1/workflow/:type/:id` for state transitions                               | `/api/v1/content/:type/:id/publish`, `/unpublish`, `/archive`                                              |
-| **Use case**           | Complex multi-step approval processes (e.g., draft → review → approval → public) | Simple two-state publishing (draft vs public)                                                              |
-| **Visibility control** | Public state requires using `x-visibility: public` header                        | All listing endpoints respect Draft & Public states by default; use `X-MODE: preview` header to see drafts |
+| Aspect                 | Workflows                                                                        | Draft & Public                                                                                                                                       |
+|------------------------|----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **States**             | Custom - examples: draft, review, public, archive                                | Fixed: draft, public, modified, archived                                                                                                             |
+| **State field**        | `workflowState` under `internal`                                                 | `status` under `internal`                                                                                                                            |
+| **Enable**             | Custom workflows (paid plan)                                                     | `draftPublic: true` on Content Type Definition                                                                                                       |
+| **API endpoints**      | `/api/v1/workflow/:type/:id` for state transitions                               | `/api/v1/content/:type/:id/publish`, `/unpublish`, `/archive`                                                                                        |
+| **Use case**           | Complex multi-step approval processes (e.g., draft → review → approval → public) | Simple two-state publishing (draft vs public)                                                                                                        |
+| **Visibility control** | Public state requires using `x-visibility: public` header                        | Listing endpoints, single-object reads, GraphQL, and search respect Draft & Public states by default; use `X-MODE: preview` header to return all statuses |
 
 **Key difference**: Workflows are for **defining custom editorial processes** with flexible states and transitions. Draft & Public is a **pre-built publishing system** optimized for separating published content from unpublished changes.
 
@@ -79,7 +81,8 @@ can be used to help teams curate content, manage publication and archiving of co
 
 ### Changing the workflow of a Content Type Definition
 
-Workflows are defined at the Content Type Definition level, in order to change the workflow of a Content Type Definition from the default one - execute a `PUT` update on the `/api/v1/internal/contenttype/:label` endpoint and provide the additional attribute pointing to the workflow identifier:
+Workflows are defined at the Content Type Definition level.
+In order to change the workflow of a Content Type Definition from the default one - execute a `PUT` update on the `/api/v1/internal/contenttype/:label` endpoint and provide the additional attribute pointing to the workflow identifier:
 
 ```json
 {
@@ -108,7 +111,8 @@ Every content object created in the system will automatically be assigned the fi
 
 ### Verifying possible transitions of an object
 
-If you'd like to verify what are the possible transitions of an object, given its current state - you can issue a `GET` request to `/api/v1/workflow/:content_type/:object_id`, the response will contain the current state of the object as well as possible transitions from that state:
+If you'd like to verify what are the possible transitions of an object, given its current state - you can issue a `GET` request to `/api/v1/workflow/:content_type/:object_id`.
+The response will contain the current state of the object as well as possible transitions from that state:
 
 ```json
 {
@@ -169,3 +173,11 @@ Every content object has `workflowPublishedAt` and `workflowPublicVersion` field
 ### Published content
 
 The `public` state is a special state name, which teams can use in their workflows for an easy way to query for approved content. All Flotiq endpoints support a `x-visibility` header, which - if set to `public` - will force the endpoints to limit their work to content that is in the `public` state.
+
+## Related docs
+
+- [Advanced workflow patterns](./advanced-workflow.md)
+- [Draft & Public](../draft-public/draft-public.md)
+- [Content Types](../content-types.md)
+- [API access & scoped keys](../index.md)
+

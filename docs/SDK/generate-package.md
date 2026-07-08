@@ -62,3 +62,11 @@ Refer to the included README file for instructions on how to use it.
 ## Use Swagger Editor to generate server and client libraries
 
 Alternatively, you can go to [Swagger Editor](https://editor.swagger.io), paste the contents of you open-api-schema.json file there and generate a package that you are interested in.
+
+## Related docs
+
+- [SDK overview](./overview.md)
+- [Open API schema](../API/open-api-schema.md)
+- [Get Started with API](../API/get-started.md)
+- [Universe overview](../Universe/overview.md)
+

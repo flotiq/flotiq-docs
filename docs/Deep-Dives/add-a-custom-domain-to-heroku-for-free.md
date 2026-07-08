@@ -119,3 +119,11 @@ and finally - define the route, where you'd like to display the Heroku-hosted co
 ## Conclusions
 
 You can use a free Cloudflare Workers account to add custom domains to your free Heroku Apps account. 
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

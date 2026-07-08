@@ -6,7 +6,12 @@ tags:
 title: Content Preview plugin | Flotiq documentation
 description: The plugin generates links that let you open drafts and public versions of pages directly from the editor. With one click, users can quickly save and open the draft version, streamlining their workflow for maximum efficiency. It works best with Next.js-based sites that use draft mode.
 
-# Content Preview Plugin
+!!! Caution
+    **The Content Preview plugin is now deprecated.** Content Preview is now built 
+    into Flotiq and configured in [Space Settings](../SpaceSettings/index.md).
+    You no longer need to install this plugin — see the Space Settings page for the current setup.
+
+# [Legacy] Content Preview Plugin
 
 The Content Preview plugin generates links that let you open drafts and public versions of pages directly from the editor. With one click, users can quickly save and open the draft version, streamlining their workflow for maximum efficiency. It works best with Next.js-based sites that use draft mode.
 
@@ -56,7 +61,7 @@ Imagine you've already published a blog post, but now you want to make some upda
 
 ![Content publishing workflow](images/content-preview/publishing-workflow.png){: .center .width75 .border}
 
-This feature uses draft mode in NextJS, allowing you to view changes before they are visible to your readers.
+This feature uses draft mode in Next.js, allowing you to view changes before they are visible to your readers.
 
 
 ### Simple workflow
@@ -64,3 +69,10 @@ This feature uses draft mode in NextJS, allowing you to view changes before they
 With the simple workflow, any changes you save are immediately visible on your website. Click the Save and View button to quickly save your work and see the updated page.
 
 ![Generic workflow](images/content-preview/generic-workflow.png){: .center .width75 .border}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)

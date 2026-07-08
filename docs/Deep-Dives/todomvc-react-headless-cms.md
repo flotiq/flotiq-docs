@@ -1,6 +1,5 @@
 ---
 tags:
-  - Administrator
   - Developer
 ---
 
@@ -202,7 +201,7 @@ The simplest way to achieve that, without breaking the reducer, is to add an API
    ```
    { data-search-exclude }
 
-4. Last thing - we need to update the existing reducer to support IDs that are generated outside of the reducer itself:
+4. Last thing - we need to update the existing reducer to support IDs that are generated outside the reducer itself:
    ```bash
        switch (action.type) {
            case ADD_ITEM:
@@ -270,3 +269,10 @@ In this short walkthrough, we demonstrated how to run the React version of the c
 Next steps? Fetch the list of todo items from Flotiq when the application starts!
 
 Follow us to get notified about our next article, where we will complete the demo.
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)

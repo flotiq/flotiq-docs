@@ -9,7 +9,7 @@ description: Legacy guide for Angular 9 projects using an SDK package generated 
 # Angular 9 with Flotiq SDK
 
 !!! caution
-    This tutorial targets Angular 9 and uses an `@NgModule`-based setup.
+    This tutorial targets Angular 9 and uses an `@NgModule`-based set up.
 
     In Angular 14+ projects, standalone components are common and many apps are no longer centered on `NgModule`. Adapt module/bootstrap steps to your current Angular version.
 
@@ -17,7 +17,7 @@ description: Legacy guide for Angular 9 projects using an SDK package generated 
 
 ### About packages
 
-We love VS Code. And Atom. And VIM. And Sublime. And PHP Storm. Whatever IDE or language you choose - your CMS should help you work with your content. The library packages that you can download from your Flotiq dashboard do exactly that. They contain all the required information about your Content Type Definitions to work with your content through Flotiq's API. Once you import a package into your project - your IDE will pick up your attributes, classes and methods and you'll be able to use autocomplete and code documentation. Yay!
+We love VS Code. And Atom. And VIM. And Sublime. And PHP Storm. Whatever IDE or language you choose - your CMS should help you work with your content. The library packages that you can download from your Flotiq dashboard do exactly that. They contain all the required information about your Content Type Definitions to work with your content through Flotiq's API. Once you import a package into your project - your IDE will pick up your attributes, classes and methods, and you'll be able to use autocomplete and code documentation. Yay!
 
 !!!note 
     Flotiq is using OpenAPI 3.0 behind the scenes to support generating library packages and API docs. Thanks to [Open API Generator](https://github.com/OpenAPITools/openapi-generator) it's possible to work with various frameworks or programming languages as well as a Postman Collection just for API calls.
@@ -34,9 +34,9 @@ We love VS Code. And Atom. And VIM. And Sublime. And PHP Storm. Whatever IDE or 
 
 ## Package overview
 
-When we extract downloaded package we will see some directories and typescript configuration files. We are interested mostly in only two positions:
+When we extract downloaded package we will see some directories and TypeScript configuration files. We are interested mostly in only two positions:
 
-*    `/api` directory, which contains services for every content type object definition as well as for some internal types like media and also for functionalities like graphQL and search.
+*    `/api` directory, which contains services for every content type object definition as well as for some internal types like media and also for functionalities like GraphQL and search.
 *    `/model` directory, which has all Content Type Definitions that exists on your Flotiq account. They are implemented as exported interfaces with the following template body:
 
 Example: 
@@ -130,7 +130,7 @@ ApiModule.forRoot(apiConfigFactory);
 ```
 { data-search-exclude }
 
-It's important to also import `HttpClientModule` from `@angular/common/http`. Otherwise you won't be able to make API calls to Flotiq.
+It's important to also import `HttpClientModule` from `@angular/common/http`. Otherwise, you won't be able to make API calls to Flotiq.
 
 
 Your `@NgModule` decorator should look like that after whole setup process:
@@ -160,7 +160,7 @@ Create a simple service file `blogpost.service.ts`
 
 Export a class and provide an `@Injectable()` decorator, so you can inject other services into this service. Remember to import it from `@angular/core`.
 
-To make this service application-wide pass an parameter object `{providedIn: 'root'}` to `Injectable` decorator (it's a shortcut, you can also import and add your service to `providers` array in `app.module.ts` file)
+To make this service application-wide pass a parameter object `{providedIn: 'root'}` to `Injectable` decorator (it's a shortcut, you can also import and add your service to `providers` array in `app.module.ts` file)
 
 Your file should like this:
 
@@ -208,7 +208,7 @@ addBlogpost(blogpost: Blogpost) {
 ```
 { data-search-exclude }
 
-It's important here to pass an object of type `Blogpost` here, because in other cases types will mismatch and Typescript will throw an error.
+It's important here to pass an object of type `Blogpost` here, because in other cases types will mismatch and TypeScript will throw an error.
 
 As the last step, modify your `tsconfig.app.json` by adding the following line in `compilerOptions` section:
 
@@ -239,4 +239,12 @@ Generated package based on your OpenApiSchema is a powerful tool, that can speed
 
     1. Learn how to get your own [OpenApiSchema](https://flotiq.com/docs/API/open-api-schema/).
     2. Didn't find a package in a language or framework you love? No problem check this [article](https://flotiq.com/docs/API/generate-package/) to learn how to generate your own!
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+
 

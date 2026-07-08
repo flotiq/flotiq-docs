@@ -5,13 +5,15 @@ tags:
 
 # Predefined Content Types
 
+Looking for starter projects and setup paths? See [Templates and Starters](./templates.md).
+
 If you don't have any Content Type Definitions (CTD) yet, you see tiles with predefined CTDs from which you can choose your first one by clicking on the tile representing your chosen CTD.
 
 ![](images/TypeDefinitionsTiles.png){: .center .width75 .border}
 
 Custom tile opens empty CTD.
 
-If you already have at least one CTD, you can use the dropdown menu on the top right corner to add more predefined CTDs.
+If you already have at least one CTD, you can use the dropdown menu in the top right corner to add more predefined CTDs.
 
 ![](images/TypeDefinitionsAddButton.png){: .center .width25 .border}
 
@@ -31,7 +33,7 @@ Type for storing simple blog posts. It contains properties storing title, slug, 
 
 Full schema for the Blog Post type:
 
-??? "Blog Post json schema"
+??? "Blog Post JSON schema"
     ```json
     {
         "name": "blogpost",
@@ -200,7 +202,7 @@ Type for storing simple events. It contains name, slug, image, address, date, pr
 
 Full schema for the Event type:
 
-??? "Event json schema"
+??? "Event JSON schema"
     ```json
     {
         "name": "event",
@@ -383,7 +385,7 @@ Type for storing simple products. It contains properties storing name, slug, pri
 
 Full schema for the Product type:
 
-??? "Product json schema"
+??? "Product JSON schema"
     ```json
     {
         "name": "product",
@@ -527,7 +529,7 @@ Type for storing simple project portfolio entries. It contains properties storin
 
 Full schema for the Project type:
 
-??? "Project json schema"
+??? "Project JSON schema"
     ```json
     {
         "name": "project",
@@ -702,7 +704,7 @@ Steps list properties description:
 
 Full schema for the Recipe type:
 
-??? "Recipe json schema"
+??? "Recipe JSON schema"
     ```json
     {
         "name": "recipe",
@@ -936,3 +938,11 @@ Documentation examples:
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/d65e364c6a0e41c2cc1e#?env%5BFlotiq%20API%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxvdGlxLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==){:target="_blank"}
 
 [Postman documentation](https://documenter.getpostman.com/view/10599962/TVzYfZdJ){:target="_blank"}
+
+## Related docs
+
+- [Panel overview](./index.md)
+- [API access & scoped keys](../API/index.md)
+- [Content Objects](../API/content-objects.md)
+- [Webhooks overview](./webhooks/index.md)
+

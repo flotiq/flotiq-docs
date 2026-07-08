@@ -9,7 +9,6 @@ This page describes how to create a **Content Type Definition** (**CTD**) using 
 
 We will use a simple Blog Post CTD as an example:
 
-Example: 
 !!! note "Example: Content Type Definition for Blog Post"
     A blog post typically can be described with the following set of properties:
 
@@ -86,6 +85,12 @@ The `headerImage` is defined as a relation to Media CTD - a system type definiti
 
 You can add more fields by clicking the `Add property` button, which opens the modal window, where you can define the property name, data type, and it's basic validation. It opens the same modal as for editing of the property.
 
+!!! hint
+    You can also configure automatic slug generation for this Content Type using the
+    **Generate Slug** switch, located next to the **Draft & Public** switch. This lets Flotiq
+    populate a target field (e.g. `slug`) from a source field (e.g. `title`) whenever an object
+    is created. See [Generating slugs](ContentObjects/slugs.md) for the full walkthrough.
+
 After saving your CTD you will be redirected to the CTDs list, where you can click on the tile to list Content Objects or click on the cog to further edit CTD.
 
 ![](images/TypeDefinitions.png){: .center .width75 .border}
@@ -120,7 +125,7 @@ Here you can find the explanation of property settings and for what types of pro
 | Restrict to type        | Relation                                                   | yes (only when Property type == Relation) | no     | Information on which types can be attached as the relation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Show Time               | Date time                                                  | no                                        | no     | Enables the time picker next to the date picker                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | Restrict to block types | Block                                                      | yes (only when Property type == Block)    | no     | Names of plugins used in editor, possible plugins: `header`, `list`, `image`, `youtubeEmbed`, `quote`, `warning`, `delimiter`. `Paragraph` is available always as it is default text block.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Password               | Text                                                       | no                                        | no     | Masks the field value in the Flotiq Dashboard. This is a visual-only change and does not affect how data is returned by the API.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Password                | Text                                                       | no                                        | no     | Masks the field value in the Flotiq Dashboard. This is a visual-only change and does not affect how data is returned by the API.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 Property types:
 
@@ -142,6 +147,14 @@ Property types:
 | Media       | Array type accepts only Media objects, items in array cannot be duplicated                                                                                                                       |
 | Date time   | String type, the correct format is: YYYY-MM-DD or YYYY-MM-DDTHH-mm. Example: 2021-06-17T13:10 or 2021-06-17.                                                                                     |
 | Block       | Object type, generates editor.js in object form                                                                                                                                                  |
+
+## Related docs
+
+- [Panel overview](./index.md)
+- [API access & scoped keys](../API/index.md)
+- [Content Objects](../API/content-objects.md)
+- [Webhooks overview](./webhooks/index.md)
+
 
 
 [^1]: Number of available Content Type Definitions depends on the chosen subscription plan. Check pricing and limits on the [Flotiq Pricing page](https://flotiq.com/pricing){:target="_blank"}

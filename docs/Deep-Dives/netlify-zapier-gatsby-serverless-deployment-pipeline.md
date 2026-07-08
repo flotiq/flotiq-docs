@@ -10,7 +10,7 @@ description: Build your own serverless deployment pipeline using Gatsby, Netlify
 
 ## Overview
 
-In this article, we'll setup an extremely powerful, yet totally effortless (and free!) deployment pipeline for your Gatsby websites. We'll use Netlify as a deployment target, so no servers required.
+In this article, we'll set up an extremely powerful, yet totally effortless (and free!) deployment pipeline for your Gatsby websites. We'll use Netlify as a deployment target, so no servers required.
 
 ## Why?
 
@@ -22,11 +22,11 @@ You can easily set up GitHub hooks to update your website when your code changes
 
 What you want to have is an automated process that will publish the website once your **content** is updated.
 
-This article covers step by step guide, how to: 
+This article covers step-by-step guide, how to: 
 
-1. Setup your data source using a Gatsby Starter and Flotiq
-2. Setup your page deployment in Netlify
-3. Setup an automation workflow in Zapier
+1. Set up your data source using a Gatsby Starter and Flotiq
+2. Set up your page deployment in Netlify
+3. Set up an automation workflow in Zapier
 
 In the end - whenever you update your page content in Flotiq, Zapier will trigger deploy process in Netlify to make sure your site is up to date!
 
@@ -41,7 +41,7 @@ Let's dive deep.
 
 ## Grab one of our Gatsby Starters!
 
-Head out to our [Github repository](https://github.com/flotiq) and pick one of Gatsby starter projects. Let's use the popular [Gatsby Recipes Starter](https://github.com/flotiq/gatsby-starter-recipes). 
+Head out to our [GitHub repository](https://github.com/flotiq) and pick one of Gatsby starter projects. Let's use the popular [Gatsby Recipes Starter](https://github.com/flotiq/gatsby-starter-recipes). 
 
 ```bash
 gatsby new gatsby-starter-recipes https://github.com/flotiq/gatsby-starter-recipes.git
@@ -96,7 +96,7 @@ That's all! You will be redirected to your Netlify dashboard. You can check the 
 
 ## Manage Netlify deploys using Zapier
 
-By default, Netlify will observe any changes in your repository, so any push will trigger a build on Netlify. This is usually what you want because you might be pushing some new features to your website and you want them to automatically appear online.  
+By default, Netlify will observe any changes in your repository, so any push will trigger a build on Netlify. This is usually what you want because you might be pushing some new features to your website, and you want them to automatically appear online.  
 
 But your website is not just the code in your repository. You want your **content** to be up to date too! We'll show you how to use [Zapier](https://zapier.com) to update your website every time you create new content.
 
@@ -147,6 +147,14 @@ Legacy Gatsby resources:
 
 1. [Build an e-commerce site using Gatsby, Flotiq and Snipcart](https://dev.to/flotiq/build-an-e-commerce-site-with-gatsby-and-snipcart-3jpg)
 2. [Build a recipe website using Gatsby and Flotiq](https://dev.to/flotiq/building-a-recipes-website-using-gatsby-and-flotiq-2b3a)
+
+## Related docs
+
+- [Deep Dives overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+
 
 
 

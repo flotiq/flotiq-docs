@@ -69,3 +69,11 @@ You can choose one of our starters:
 The `flotiq start` command automatically imports example data to your Flotiq account. If you need to import data separately, you can use the general-purpose `flotiq import` command for importing JSON data exports.
 
 For more information on the `flotiq import` command, refer to [Migrating data between spaces](./migrating-data-between-spaces.md).
+
+## Related docs
+
+- [CLI overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)
+

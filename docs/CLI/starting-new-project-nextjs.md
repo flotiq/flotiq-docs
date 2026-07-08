@@ -62,7 +62,7 @@ Before production deployment:
 
 Compatibility is validated per starter repository, not globally for all starters listed on this page.
 
-### Available starters
+### Next.js Starters
 
 * [Recipe website Next.js starter-2](https://github.com/flotiq/flotiq-nextjs-recipe-2) - to use this starter use: `https://github.com/flotiq/flotiq-nextjs-recipe-2` as the `url`
 * [Event calendar Next.js starter-2](https://github.com/flotiq/flotiq-nextjs-event-2) - to use this starter use: `https://github.com/flotiq/flotiq-nextjs-event-2` as the `url`
@@ -82,8 +82,19 @@ The Flotiq SDK is a powerful tool designed to simplify the integration of Flotiq
 
 ## Installing Flotiq SDK
 
-The best way to install the Flotiq SDK for your Next.js project is to use our flotiq-nextjs-setup CLI, which will automatically generate SDK for your content and integrate it in your project, add content cache revalidation endpoint, handle draft mode for unpublished content on Flotiq and more.
+The best way to install the Flotiq SDK for your Next.js project is to use our flotiq-nextjs-setup CLI, which will:
+* automatically generate SDK for your content and integrate it in your project,
+* add content cache revalidation endpoint,
+* handle draft mode for unpublished content on Flotiq,
+* and more.
 
-On how to setup Flotiq Next.js integration with the flotiq-nextjs-setup CLI refer to our [page about integrating Flotiq and Next.js with CLI](/docs/Universe/nextjs/nextjs-setup/#flotiq-nextjs-setup).
+On how to set up Flotiq Next.js integration with the flotiq-nextjs-set up CLI refer to our [page about integrating Flotiq and Next.js with CLI](/docs/Universe/nextjs/nextjs-setup/#flotiq-nextjs-setup).
 
 If you prefer to just install Flotiq SDK and handle everything else by yourself, refer to the [Flotiq SDK page](/docs/SDK/sdk-js-ts).
+
+## Related docs
+
+- [CLI overview](./index.md)
+- [Get Started with API](../API/get-started.md)
+- [SDK overview](../SDK/overview.md)
+- [Universe overview](../Universe/overview.md)

@@ -5,7 +5,7 @@ tags:
 
 # Content objects
 
-Once a Content Type has been defined in the system - the user can create Content Objects of that Content Type.
+Once you define a Content Type in the system, you can create Content Objects of that Content Type.
 This is done either directly through the API or via the convenient Content Entry tools
 provided within the [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}.
 
@@ -47,7 +47,7 @@ Or by selecting it on the content browser and clicking the `Action` then `Delete
 
 Flotiq provides built-in version control for content objects, allowing users to view, compare, and restore previously saved versions.
 
-Each time a content object is updated, a new version is automatically saved and listed in the Versions panel on the right-hand side of the editor. The version log includes the timestamp and the name of the user who made the change, which supports full transparency and encourages collaborative workflows within teams.
+Each time you update a content object, Flotiq automatically saves a new version and lists it in the Versions panel on the right-hand side of the editor. The version log includes the timestamp and the name of the user who made the change, which supports full transparency and encourages collaborative workflows within teams.
 
 If the editor account is deleted, version entries are preserved and remain visible as edits made by a deleted user.
 
@@ -56,6 +56,27 @@ If the editor account is deleted, version entries are preserved and remain visib
 By clicking on a version entry, you can open a Version Diff window, where the current version and the selected historical version are displayed side by side. Any changed fields are clearly highlighted. This makes it easy to review differences and decide whether to revert.
 
 ![Version diff](../images/VersionDiff.png){: .center .border}
+
+## Collaboration (beta)
+
+Flotiq supports collaboration when users edit the same Content Object.
+The feature is currently in beta and works in the Content Object form.
+You can enable this feature in `Space Settings` from the left menu.
+
+![](../images/SpaceSettings.png){: .center .width25 .border}
+
+To save changes in Collaboration settings, you need to click `Save` button in right top corner of the form.
+
+![](../images/SpaceSettingsCollaboration.png){: .center .width75 .border}
+
+When more than one user opens the same Content Object form, the editor shows who else is editing that object.
+It also shows their changes directly in the form.
+
+![](../images/Collaboration.png){: .center .width75 .border}
+
+Collaboration is available only in the Content Object form.
+If more than one person changes an object, clicking `Save` saves all current changes at once.
+All saved changes are attributed to the user who clicked `Save`.
 
 ## Thumbnails in content object grids
 
@@ -89,3 +110,11 @@ If something was wrong the errors will appear in modal nest to fields that are i
 
 [^1]: The number of available Content Objects depends on the chosen subscription plan.
 Check pricing and limits [here](https://flotiq.com/pricing){:target="_blank"}
+
+## Related docs
+
+- [Panel overview](../index.md)
+- [API access & scoped keys](../../API/index.md)
+- [Content Objects](../../API/content-objects.md)
+- [Webhooks overview](../webhooks/index.md)
+

@@ -229,7 +229,8 @@ In order to use cascade action use `?hydrate=<value>` query parameter, exactly h
 !!! warning
     The batch endpoints does not support cascade actions.
 
-The max depth of the relation-chain that the system will scan for Draft&Public objects with relation to the object in request is defined by the value for `hydrate` query parameter, for example `hydrate=1` will make Flotiq use the draft&public action on the target objects and it's related objects, but not further nested relations.
+The max depth of the relation-chain that the system will scan for Draft&Public objects with relation to the object in request is defined by the value for `hydrate` query parameter.
+For example `hydrate=1` will make Flotiq use the draft&public action on the target objects, and it's related objects, but not further nested relations.
 
 !!! Note
     `hydrate=1` is currently the highest level of hydration available for cascade actions.
@@ -358,5 +359,12 @@ Let's see how the API response will look depending on the provided headers.
                 ]
             ```
             { data-search-exclude }
+
+## Related docs
+
+- [Content Objects](../content-objects.md)
+- [List Content Objects](../content-type/listing-co.md)
+- [Content publishing workflow](../workflow/content-publishing-workflow.md)
+- [Search API](../search.md)
 
 [^1]: Limit can be changed in the [<< plan_names.paid_3 >> plan](https://flotiq.com/pricing){:target="_blank"}

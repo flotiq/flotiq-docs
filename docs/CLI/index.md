@@ -38,9 +38,9 @@ Flotiq CLI currently supports the following commands:
 
 * `flotiq export` exports data from the Flotiq account to local JSON files. If the key is limited to selected Content Types, then the data available for this key will be exported.
 
-* `flotiq sdk install` installs Flotiq SDK in the selected language. You can choose from the following languages: `csharp`, `go`, `java`, `javascript`, `PHP`, `python`, and `typescript`.
+* `flotiq sdk install` installs Flotiq SDK in the selected language. You can choose from the following languages: `csharp`, `go`, `java`, `javascript`, `php`, `python`, and `typescript`.
 
-* `flotiq wordpress-import` setups your Flotiq account to include required Content Type Definitions and pull tags, categories, media, posts and pages from the provided WordPress URL into your Flotiq account. (more on `flotiq wordpress-import` [here](./wordpress-importer.md))
+* `flotiq wordpress-import` sets up your Flotiq account to include required Content Type Definitions and pull tags, categories, media, posts and pages from the provided WordPress URL into your Flotiq account. (more on `flotiq wordpress-import` [here](./wordpress-importer.md))
 
 * `flotiq contentful-import` imports content types, assets and content objects from Contentful space to your Flotiq account. (more on `flotiq contentful-import` [here](./contentful-importer.md))
 

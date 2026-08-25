@@ -30,6 +30,8 @@ You can use the search engine via the `GET /api/v1/search` endpoint to search th
     | random_seed            | number | Seed for random sorting order (overrides `order_by`)                                                                                                                                                                                                                                                                                                |
     | hydrate                | number | Hydrate level for relations to get a schema properly reflecting linked objects                                                                                                                                                                                                                                                                      |
     | query_mode             | string | Query mode has a default value of default, but it also supports exact and fuzzy as possible values. Fuzzy mode helps with searching when a typo is made. Exact mode is used for strict matching.                                                                                                                                                    |
+    | order_missing          | string | Position of objects that don't have the field used in `order_by`. Allowed values: `_first` (missing values first) or `_last` (missing values last). Requires `order_by` to be set.                                                                                                                                                                  |
+    | decay_old              | boolean | When set to `true`, the score of older objects is decayed, so newer content ranks higher in the results.                                                                                                                                                                                                                                           |
 
 !!! Note
     The Flotiq search endpoint supports querying up to a maximum of 10,000 results.
@@ -120,6 +122,18 @@ Flotiq allows sorting based on the distance from a point specified in `geo_filte
 !!! Example
     GET https://api.flotiq.com/api/v1/search?q=\*&**order_by=_geo_distance&geo_filters[geo]=geo_distance,300km,51,17.2**
 
+### Position of missing values
+
+When you sort by a field that is not present in every object (e.g. an optional field, or a field that exists only in some of the queried Content Types), use `order_missing` to decide where those objects land:
+
+!!! Example
+    GET https://api.flotiq.com/api/v1/search?q=\*&**order_by=date&order_missing=_first**
+
+* `_first` – objects without the field are returned before objects that have it,
+* `_last` – objects without the field are returned after objects that have it.
+
+!!! Note
+    `order_missing` has no effect unless `order_by` is provided.
 
 ## Limit the search to a specific field
 
@@ -157,6 +171,13 @@ Index boosting allows you to prioritize results from specific indices when perfo
 
     * ctd1Name, ctd2Name – names of the CTDs.
     * 2, 1.5 – boost values (higher means more weight)
+
+## Decay score of old content
+
+Set `decay_old=true` to reduce the `_score` of older Content Objects. Results that match the query equally well will then be ordered with the newer ones first, without having to sort by date explicitly.
+
+!!! Example
+    GET https://api.flotiq.com/api/v1/search?q=Flotiq&content_type[]=post&**decay_old=true**
 
 ## Related docs
 

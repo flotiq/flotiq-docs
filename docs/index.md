@@ -38,7 +38,7 @@ Flotiq is one of popular headless content management systems, sharing many simil
 
 ## Getting started with Flotiq
 
-There are 2 primary ways to interact with Flotiq: 1. through the [user interface (dashboard)](panel/) and 2. through the [APIs](API/) we provide (RESTful and GraphQL). Whichever way you choose - when working with the system you will interact with 2 kinds of entities - 1. ones that define your **data model** and 2. ones that constitute your actual **data**.
+There are 3 primary ways to get started with Flotiq: 1. through the [user interface (dashboard)](panel/), 2. through the [APIs](API/) we provide (RESTful and GraphQL), or 3. by setting up a project with [Next.js](Universe/nextjs/nextjs-setup.md). Whichever way you choose - when working with the system you will interact with 2 kinds of entities - 1. ones that define your **data model** and 2. ones that constitute your actual **data**.
 
 ### Data model
 

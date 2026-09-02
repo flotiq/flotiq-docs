@@ -26,7 +26,6 @@ Use the following address wherever your client asks for an MCP server URL:
 ```
 https://mcp.flotiq.com/mcp
 ```
-
 { data-search-exclude }
 
 The server uses the **streamable HTTP** transport.

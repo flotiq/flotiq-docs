@@ -47,18 +47,18 @@ Space.
 
 **Permissions** - choose the access scope:
 
-| Scope          | Available tools                                                         |
-|----------------|-------------------------------------------------------------------------|
-| `Read`         | `list_content_types`, `list_objects`, `get_object`, `get_content_type`  |
-| `Read & Write` | all tools, including `create_object`, `update_object`, `publish_object` |
+| Scope          | Available tools                                                             |
+|----------------|-----------------------------------------------------------------------------|
+| `Read`         | `data_efficient_list_ctd`, `get_content_type`, `list_objects`, `get_object` |
+| `Read & Write` | all tools, including `create_object`, `update_object`, `publish_object`     |
 
 Grant `Read` unless you actually want the assistant to change your content. This limit is enforced by Flotiq, so it
 holds regardless of how your client is configured.
 
 !!! Note
-   To switch to a different Space or change the scope, reconnect the server in your client and go through the login flow
-   again. You can also add the server twice under different names - for example a read-only connection to production and a
-   read-write one to a test Space.
+    To switch to a different Space or change the scope, reconnect the server in your client and go through the login flow
+    again. You can also add the server twice under different names - for example a read-only connection to production and
+    a read-write one to a test Space.
 
 The assistant acts on your behalf and inherits your permissions within the selected Space.
 
@@ -66,15 +66,15 @@ Most clients support Dynamic Client Registration, so the OAuth Client ID and Cli
 
 ## Available tools
 
-| Tool                 | Access | Description                                               |
-|----------------------|--------|-----------------------------------------------------------|
-| `list_content_types` | read   | Lists all Content Type Definitions in your Flotiq account |
-| `list_objects`       | read   | Lists Content Objects of a given Content Type             |
-| `get_object`         | read   | Fetches a single Content Object by its ID                 |
-| `get_content_type`   | read   | Fetches a single Content Type                             |
-| `create_object`      | write  | Creates a new Content Object of a given Content Type      |
-| `update_object`      | write  | Updates an existing Content Object                        |
-| `publish_object`     | write  | Publishes a draft object so it becomes publicly visible   |
+| Tool                      | Access | Description                                               |
+|---------------------------|--------|-----------------------------------------------------------|
+| `data_efficient_list_ctd` | read   | Lists all Content Type Definitions in your Flotiq account |
+| `get_content_type`        | read   | Fetches a single Content Type                             |
+| `list_objects`            | read   | Lists Content Objects of a given Content Type             |
+| `get_object`              | read   | Fetches a single Content Object by its ID                 |
+| `create_object`           | write  | Creates a new Content Object of a given Content Type      |
+| `update_object`           | write  | Updates an existing Content Object                        |
+| `publish_object`          | write  | Publishes a draft object so it becomes publicly visible   |
 
 Objects created through `create_object` follow the same [Draft & Public](../../panel/ContentObjects/draft-public.md)
 rules as objects created in the Flotiq editor.
@@ -91,20 +91,18 @@ Any other MCP-compatible client will work as well - point it at the server URL a
 
 ## Working safely with write tools
 
-The write tools change content in your Flotiq account immediately - there is no confirmation step on the Flotiq side.
-Before you start:
+The write tools are available only if you granted the `Read & Write` scope, and they change content in your Flotiq
+account immediately - Flotiq does not ask for a second confirmation. Before you start:
 
 1. **Require confirmation for write tools.** Most clients let you decide per tool whether the model may run it
-   automatically. Allow `list_content_types`, `list_objects` and `get_object`, and require confirmation for
-   `create_object`, `update_object` and `publish_object`.
+   automatically. Allow `data_efficient_list_ctd`, `get_content_type`, `list_objects` and `get_object`, and require
+   confirmation for `create_object`, `update_object` and `publish_object`.
 2. **Test on a separate Space.** [Spaces](../../panel/spaces.md) are isolated, so you can experiment without touching
    production content - just pick the test Space on the login screen when connecting.
-3. **Review the diff.** Assistants can misread your data model. Check changed objects in the Flotiq editor - every
-   object keeps its [version history](../../API/versioning.md).
+3. **Review the diff.** Assistants can misread your data model. Check changed objects in the Flotiq editor.
 
 ## Related docs
 
 - [Universe overview](../overview.md)
 - [Get Started with API](../../API/get-started.md)
-- [Access control](../../panel/access-control.md)
 - [Spaces and Organization](../../panel/spaces.md)

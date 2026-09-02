@@ -21,41 +21,33 @@ Claude desktop app and on claude.ai.
 
 ### 1. Open the connector list
 
-Go to **Settings &rarr; Customize &rarr; Connectors**, click **+** and choose **Add custom connector**.
+Go to **Settings &rarr; Connectors** and click **Add**.
 
 ![](../images/mcp/claude-custom-connector.png){: .center .width75 .border}
 
 ### 2. Enter the configuration
 
-![](../images/mcp/claude-add-connector.png){: .center .width75 .border}
+Enter `Flotiq` as the name and `https://mcp.flotiq.com/mcp` as the URL, then click **Continue**.
 
-Click **Continue**.
+![](../images/mcp/claude-add-connector.png){: .center .width50 .border}
 
-![](../images/mcp/claude-add-connector2.png){: .center .width75 .border}
+![](../images/mcp/claude-add-connector_2.png){: .center .width50 .border}
 
-Leave **Advanced settings** untouched and click **Add**.
+Leave the detected **No client ID - register one automatically** option and click **Add**.
 
-### 3. Sign in to Flotiq
+### 3. Connect
 
-Claude opens the Flotiq authorization page. Sign in with your Flotiq credentials, select
-the [Space](../../panel/spaces.md) and the permission scope (`Read` or `Read & Write`), then click **Grant access**.
+Open the connector and click **Connect**.
 
 ![](../images/mcp/claude-connect.png){: .center .width75 .border}
+
+Flotiq takes you through the [authorization flow](index.md#authentication), where you pick the Space and the access
+scope.
 
 ### 4. Adjust tool permissions
 
 Open the connector in **Settings &rarr; Connectors &rarr; Flotiq** and set **Tool permissions** so Claude cannot change
 your content without asking. A good starting point:
-
-| Tool                 | Permission |
-|----------------------|------------|
-| `list_content_types` | Allow      |
-| `get_content_type`   | Allow      |
-| `get_object`         | Allow      |
-| `list_objects`       | Allow      |
-| `create_object`      | Ask        |
-| `publish_object`     | Ask        |
-| `update_object`      | Ask        |
 
 ![](../images/mcp/claude-tool-permissions.png){: .center .width75 .border}
 

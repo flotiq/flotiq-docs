@@ -27,8 +27,8 @@ Open the Command Palette (`Cmd/Ctrl` + `Shift` + `P`) and run **MCP: Add Server*
 3. Enter `FlotiqMCP` as the server name
 4. Choose whether to store the configuration in your user settings or in the workspace
 
-VS Code starts the OAuth flow automatically - sign in to Flotiq, select the [Space](../../panel/spaces.md) and the
-permission scope (`Read` or `Read & Write`), then click **Grant access**.
+VS Code starts the Flotiq [authorization flow](index.md#authentication) automatically, where you pick the Space and
+the access scope.
 
 ### 2. Or edit `mcp.json` manually
 
@@ -44,7 +44,6 @@ Instead of using the Command Palette you can add the server to `.vscode/mcp.json
   }
 }
 ```
-
 { data-search-exclude }
 
 ## Check the configuration
@@ -53,7 +52,8 @@ In the Copilot Chat sidebar click the **Tools** icon. You should see all Flotiq 
 
 ![](../images/mcp/vscode-tools.png){: .center .width75 .border}
 
-Uncheck `create_object`, `update_object` and `publish_object` if you want Copilot to work in read-only mode.
+Leave only `data_efficient_list_ctd`, `get_content_type`, `list_objects` and `get_object` checked if you want Copilot
+to work in read-only mode.
 
 !!! Note
     If the OAuth flow does not start, or fails with a registration error, your VS Code version may not support Dynamic
@@ -62,5 +62,5 @@ Uncheck `create_object`, `update_object` and `publish_object` if you want Copilo
 ## Related docs
 
 - [Flotiq MCP Server overview](index.md)
-- [GitHub Copilot CLI](github-copilot-cli.md)
+- [GitHub Copilot CLI](copilot-cli.md)
 - [Universe overview](../overview.md)

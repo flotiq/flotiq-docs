@@ -25,15 +25,14 @@ experimental_use_rmcp_client = true
 [mcp_servers.flotiq]
 url = "https://mcp.flotiq.com/mcp"
 ```
-
 { data-search-exclude }
 
 !!! Note
     `experimental_use_rmcp_client` is required - without it Codex uses the legacy MCP client, which does not support remote
     HTTP servers with OAuth.
 
-Restart Codex. On the first tool call it opens the Flotiq authorization page in your browser - sign in, select
-the [Space](../../panel/spaces.md) and the permission scope (`Read` or `Read & Write`), then click **Grant access**.
+Restart Codex. On the first tool call it opens the Flotiq [authorization flow](index.md#authentication) in your
+browser, where you pick the Space and the access scope.
 
 ## Check the configuration
 
@@ -42,8 +41,9 @@ Start Codex and ask it about your content, for example:
 ```
 check how many content types i have in flotiq
 ```
-
 { data-search-exclude }
+
+Codex should call `data_efficient_list_ctd` and answer with the number of Content Types in the Space you connected.
 
 ## Related docs
 

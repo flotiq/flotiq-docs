@@ -233,6 +233,13 @@ nav:
     - Next.js:
       - 'Flotiq Next.js starters': Universe/nextjs/nextjs-starters.md
       - 'Flotiq Next.js Setup CLI': Universe/nextjs/nextjs-setup.md
+    - MCP Server:
+      - 'Overview': Universe/MCP/index.md
+      - 'ChatGPT': Universe/MCP/chatgpt.md
+      - 'Claude': Universe/MCP/claude.md
+      - 'VS Code Copilot': Universe/MCP/copilot.md
+      - 'Codex': Universe/MCP/codex.md
+      - 'GitHub Copilot CLI': Universe/MCP/copilot-cli.md
     - 'Gatsby': Universe/gatsby.md
     - 'Meta-API': Universe/metaapi.md
     - 'Postman': Universe/postman.md

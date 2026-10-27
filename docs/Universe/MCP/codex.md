@@ -12,7 +12,7 @@ This guide shows how to add the [Flotiq MCP Server](index.md) to the Codex CLI.
 
 ## Prerequisites
 
-1. [Flotiq account](https://editor.flotiq.com){:target="_blank"}
+1. [Flotiq account](https://editor.flotiq.com){:target="_blank"} with a Space on a paid plan
 2. Codex CLI installed
 
 ## Setup

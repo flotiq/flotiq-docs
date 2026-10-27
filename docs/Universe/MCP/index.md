@@ -19,6 +19,10 @@ Instead of copying content between your CMS and a chat window, you can simply as
 * *"Create a blog post about our new pricing and leave it as a draft."*
 * *"Find all events without a cover image."*
 
+!!! note
+    The Flotiq MCP Server is available on paid plans only. The Space you connect must be on a paid plan - see the
+    [Flotiq pricing page](https://flotiq.com/pricing){:target="_blank"} for details.
+
 ## Server URL
 
 Use the following address wherever your client asks for an MCP server URL:

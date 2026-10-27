@@ -13,7 +13,7 @@ This guide shows how to connect the [Flotiq MCP Server](index.md) to ChatGPT as 
 
 ## Prerequisites
 
-1. [Flotiq account](https://editor.flotiq.com){:target="_blank"}
+1. [Flotiq account](https://editor.flotiq.com){:target="_blank"} with a Space on a paid plan
 2. ChatGPT plan that supports custom connectors
 
 ## Setup

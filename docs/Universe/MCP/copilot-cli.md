@@ -12,7 +12,7 @@ This guide shows how to add the [Flotiq MCP Server](index.md) to GitHub Copilot 
 
 ## Prerequisites
 
-1. [Flotiq account](https://editor.flotiq.com){:target="_blank"} with a Space on a paid plan
+1. [Flotiq account](https://editor.flotiq.com){:target="_blank"}
 2. GitHub Copilot CLI installed and authenticated with your GitHub account
 
 ## Setup

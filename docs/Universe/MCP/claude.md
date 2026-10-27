@@ -14,7 +14,7 @@ Claude desktop app and on claude.ai.
 
 ## Prerequisites
 
-1. [Flotiq account](https://editor.flotiq.com){:target="_blank"} with a Space on a paid plan
+1. [Flotiq account](https://editor.flotiq.com){:target="_blank"}
 2. Claude plan that supports custom connectors
 
 ## Setup

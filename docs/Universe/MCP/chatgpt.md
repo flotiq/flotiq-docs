@@ -57,7 +57,7 @@ Start a new chat, make sure the Flotiq plugin is enabled in the message composer
 !!! Note
     ChatGPT decides on its own which tools to call.
     Read [Working safely with write tools](index.md#working-safely-with-write-tools) before letting it create or update
-    content.
+    content or Content Types.
 
 ## Related docs
 

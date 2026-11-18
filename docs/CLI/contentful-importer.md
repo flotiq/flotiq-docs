@@ -1,6 +1,6 @@
 ---
-title: Contentful - Flotiq data migration
-description: How to migrate Flotiq data from Contentful account
+title: Migrate from Contentful to Flotiq (CLI)
+description: "Move content from a Contentful space to Flotiq with one Flotiq CLI command: parameters, what gets imported and the result."
 tags:
   - Developer
 ---

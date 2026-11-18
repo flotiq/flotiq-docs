@@ -1,6 +1,6 @@
 ---
-title: Setting up a Flotiq Next.js project
-description: Set up your Flotiq Next.js project using the CLI.
+title: Next.js headless CMS setup with Flotiq
+description: Set up a Next.js project with Flotiq as its headless CMS using the Flotiq CLI, then regenerate the typed SDK when your content types change.
 tags:
   - Developer
 ---

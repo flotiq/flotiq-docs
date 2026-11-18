@@ -1,10 +1,9 @@
 ---
+title: ChatGPT FAQ Generator plugin
+description: The ChatGPT FAQ Generator plugin automates the creation of FAQs from your content, streamlining the process of generating and saving FAQs to your desired field.
 tags:
   - Developer
 ---
-
-title: ChatGPT FAQ Generator plugin | Flotiq documentation
-description: The ChatGPT FAQ Generator plugin automates the creation of FAQs from your content, streamlining the process of generating and saving FAQs to your desired field.
 
 The ChatGPT FAQ Generator plugin automates the creation of FAQs from your content, streamlining the process of generating and saving FAQs to your desired field.
 

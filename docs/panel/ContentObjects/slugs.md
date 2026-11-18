@@ -1,10 +1,9 @@
 ---
+title: Generating slugs
+description: How to automatically generate slugs for Content Objects in the Flotiq Dashboard
 tags:
   - Developer
 ---
-
-title: Generating slugs | Flotiq docs
-description: How to automatically generate slugs for Content Objects in the Flotiq Dashboard
 
 # Generating slugs
 

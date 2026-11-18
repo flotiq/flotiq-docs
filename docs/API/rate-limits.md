@@ -1,10 +1,9 @@
 ---
+title: Rate limits and API usage
+description: How API request limits work and how to design integrations around them.
 tags:
   - Developer
 ---
-
-title: Rate limits and API usage
-description: How API request limits work and how to design integrations around them.
 
 # Rate limits and API usage
 

@@ -1,10 +1,9 @@
 ---
+title: Flotiq Gatsby starters (legacy)
+description: Gatsby starters are no longer supported. Use Next.js starters for active support.
 tags:
   - Developer
 ---
-
-title: Flotiq Gatsby starters (legacy) | Flotiq docs
-description: Gatsby starters are no longer supported. Use Next.js starters for active support.
 
 # Gatsby starters
 

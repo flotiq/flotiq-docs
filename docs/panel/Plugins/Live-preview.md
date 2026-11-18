@@ -1,10 +1,9 @@
 ---
+title: Live Preview Plugin
+description: Use live preview plugin for real-time transmission of data from content object forms to display content changes live.
 tags:
   - Developer
 ---
-
-title: Live Preview Plugin | Flotiq documentation
-description: Use live preview plugin for real-time transmission of data from content object forms to display content changes live.
 
 # Live Preview Plugin
 

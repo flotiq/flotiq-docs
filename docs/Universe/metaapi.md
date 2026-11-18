@@ -1,10 +1,9 @@
 ---
+title: Flotiq and Meta-API integration
+description: Use Flotiq and Meta-API to integrate your data with any API
 tags:
   - Developer
 ---
-
-title: Flotiq and Meta-API integration | Flotiq docs
-description: Use Flotiq and Meta-API to integrate your data with any API
 
 !!! caution
     Please note that the information and documentation provided on this page regarding the integration with Meta API is no longer valid.

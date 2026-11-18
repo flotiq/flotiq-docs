@@ -1,10 +1,9 @@
 ---
+title: Multilingual
+description: This plugin helps you manage multilingual data in Flotiq and includes built-in DeepL integration for automatic translations.
 tags:
   - Developer
 ---
-
-title: Multilingual | Flotiq documentation
-description: This plugin helps you manage multilingual data in Flotiq and includes built-in DeepL integration for automatic translations.
 
 Multilingual plugin is an advanced plugin that allows easy addition and management of translations while editing objects. It supports multiple languages, lets users define and manage their own language sets, and includes DeepL integration for automatic translations.
 

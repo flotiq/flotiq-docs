@@ -1,10 +1,8 @@
 ---
+description: The plugin displays feature image from the Content Type Definition in the Object form. This plugin requires no setup. Once enabled, for every Content Type with a featured image, a panel with the image will appear in the Content Object form.
 tags:
   - Developer
 ---
-
-title: Display Content Type image in Object forms plugin | Flotiq documentation
-description: The plugin displays feature image from the Content Type Definition in the Object form. This plugin requires no setup. Once enabled, for every Content Type with a featured image, a panel with the image will appear in the Content Object form.
 
 The plugin displays feature image from the Content Type Definition in the Object form. This plugin requires no setup. Once enabled, for every Content Type with a featured image, a panel with the image will appear in the Content Object form.
 

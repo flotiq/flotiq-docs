@@ -1,10 +1,9 @@
 ---
+title: Async CO webhooks
+description: Async webhooks in Flotiq
 tags:
   - Developer
 ---
-
-title: Async CO webhooks
-description: Async webhooks in Flotiq
 
 # Async webhooks
 

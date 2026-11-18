@@ -1,10 +1,9 @@
 ---
+title: Integrate Gatsby Cloud and Flotiq
+description: Enable seamless Gatsby content preview using Flotiq Gatsby plugin.
 tags:
   - Developer
 ---
-
-title: Integrate Gatsby Cloud and Flotiq | Flotiq documentation
-description: Enable seamless Gatsby content preview using Flotiq Gatsby plugin.
 
 !!! Caution
     **Gatsby Cloud was shut down by Netlify in 2023, and the Gatsby Cloud plugin is deprecated.**

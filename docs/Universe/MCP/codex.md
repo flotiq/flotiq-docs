@@ -1,10 +1,9 @@
 ---
+title: Flotiq MCP Server in Codex
+description: Add the Flotiq MCP Server to your Codex CLI configuration.
 tags:
   - Developer
 ---
-
-title: Flotiq MCP Server in Codex | Flotiq docs
-description: Add the Flotiq MCP Server to your Codex CLI configuration.
 
 # Flotiq MCP Server in Codex
 

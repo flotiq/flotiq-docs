@@ -1,11 +1,10 @@
 ---
+title: Access control
+description: How authentication and authorization work across panel roles and API access.
 tags:
   - Administrator
   - Developer
 ---
-
-title: Access control
-description: How authentication and authorization work across panel roles and API access.
 
 # Access control
 

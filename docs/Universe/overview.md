@@ -1,11 +1,10 @@
 ---
+title: Flotiq deployment modes
+description: Live and static modes for deploying your content.
 tags:
   - Administrator
   - Developer
 ---
-
-title: Flotiq deployment modes | Flotiq docs
-description: Live and static modes for deploying your content.
 
 # Deployment modes
 

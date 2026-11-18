@@ -1,10 +1,9 @@
 ---
+title: Flotiq Next.js starters
+description: Jump-start your projects with React Next.js Starters.
 tags:
   - Developer
 ---
-
-title: Flotiq Next.js starters | Flotiq docs
-description: Jump-start your projects with React Next.js Starters.
 
 # Next.js starters
 

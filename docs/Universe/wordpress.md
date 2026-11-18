@@ -1,10 +1,9 @@
 ---
+title: Flotiq WordPress sync plugin
+description: Move your WordPress content pain-free to Flotiq
 tags:
   - Developer
 ---
-
-title: Flotiq WordPress sync plugin | Flotiq docs
-description: Move your WordPress content pain-free to Flotiq
 
 # WordPress Flotiq sync plugin
 

@@ -1,12 +1,11 @@
 ---
+title: Dashboard
+description: How to use the Dashboard in Flotiq.
 tags:
   - Content Creator
   - Developer
   - Administrator
 ---
-
-title: Dashboard
-description: How to use the Dashboard in Flotiq.
 
 # Dashboard
 

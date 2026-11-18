@@ -1,10 +1,9 @@
 ---
+title: How to add Content Type Definitions
+description: How to add Content Type Definitions in Flotiq API
 tags:
   - Developer
 ---
-
-title: How to add Content Type Definitions | Flotiq docs
-description: How to add Content Type Definitions in Flotiq API
 
 # Creating new Content Types :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 

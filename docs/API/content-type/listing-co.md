@@ -1,10 +1,9 @@
 ---
+title: How to list Content Objects
+description: How to list Content Objects in Flotiq
 tags:
   - Developer
 ---
-
-title: How to list Content Objects | Flotiq docs
-description: How to list Content Objects in Flotiq
 
 # Listing content
 

@@ -1,10 +1,9 @@
 ---
+title: Webhooks - examples
+description: How to use webhooks in Flotiq - examples
 tags:
   - Developer
 ---
-
-title: Webhooks - examples
-description: How to use webhooks in Flotiq - examples
 
 # Webhook examples
 

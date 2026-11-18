@@ -1,6 +1,6 @@
 ---
-title: Flotiq MCP Server
-description: Connect Flotiq to ChatGPT, Claude, Copilot and other AI assistants using the Model Context Protocol.
+title: Flotiq MCP server for ChatGPT, Claude, Copilot
+description: "Connect ChatGPT, Claude, GitHub Copilot or Codex to your Flotiq content with the Model Context Protocol: server URL, authentication and tools."
 tags:
   - Developer
   - Content Creator

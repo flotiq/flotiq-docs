@@ -1,10 +1,9 @@
 ---
+title: Setting up a Flotiq Next.js project
+description: Set up your Flotiq Next.js project using the CLI.
 tags:
   - Developer
 ---
-
-title: Setting up a Flotiq Next.js project | Flotiq docs
-description: Set up your Flotiq Next.js project using the CLI.
 
 # Setting up Flotiq Next.js project
 

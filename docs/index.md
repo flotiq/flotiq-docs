@@ -1,12 +1,10 @@
 ---
+description: Headless CMS documentation, tutorials, frameworks, API references, Deep Dives, plugins and integrations.
 tags:
   - Developer
   - Administrator
   - Content Creator
 ---
-
-title: Flotiq Developers Documentation
-description: Headless CMS documentation, tutorials, frameworks, API references, Deep Dives, plugins and integrations.
 
 # Home
 

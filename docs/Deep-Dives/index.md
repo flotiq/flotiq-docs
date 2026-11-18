@@ -1,10 +1,9 @@
 ---
+title: Flotiq deep dives
+description: Browse through the deep dives and learn how to integrate Flotiq in your application.
 tags:
   - Developer
 ---
-
-title: Flotiq deep dives | Flotiq docs
-description: Browse through the deep dives and learn how to integrate Flotiq in your application.
 
 # Introduction
 

@@ -1,10 +1,9 @@
 ---
+title: Advanced workflow patterns
+description: Advanced workflow and scheduling patterns for Flotiq integrations.
 tags:
   - Developer
 ---
-
-title: Advanced workflow patterns
-description: Advanced workflow and scheduling patterns for Flotiq integrations.
 
 # Advanced workflow patterns
 

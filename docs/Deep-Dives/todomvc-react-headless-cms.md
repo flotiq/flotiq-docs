@@ -1,10 +1,9 @@
 ---
+description: Discover how to seamlessly connect a headless CMS to your React applications with our step-by-step guide. Learn to use Flotiq with the classic TodoMVC app for efficient data storage and management, making your frontend development smoother and more scalable.
 tags:
   - Developer
 ---
 
-title: Hooking-up React TodoMVC with Flotiq headless CMS  | Flotiq docs
-description: Discover how to seamlessly connect a headless CMS to your React applications with our step-by-step guide. Learn to use Flotiq with the classic TodoMVC app for efficient data storage and management, making your frontend development smoother and more scalable.
 keywords: React, headless CMS, TodoMVC, Flotiq, frontend development, web application, data storage, API integration, JavaScript, React hooks, content management system
 
 # Hooking-up a headless CMS to React apps

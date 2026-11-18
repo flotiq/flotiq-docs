@@ -1,10 +1,9 @@
 ---
+title: Flotiq Zapier integration
+description: Flotiq allows you to integrate your content with any system easily.
 tags:
   - Developer
 ---
-
-title: Flotiq Zapier integration | Flotiq docs
-description: Flotiq allows you to integrate your content with any system easily.
 
 # Zapier integrations (version 1.2.0)
 

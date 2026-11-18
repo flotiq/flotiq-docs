@@ -1,11 +1,10 @@
 ---
+title: Flotiq Webstudio integration
+description: Integrate Flotiq with Webstudio to jump-start your project code-free
 tags:
   - Content Creator
   - Developer
 ---
-
-title: Flotiq Webstudio integration | Flotiq docs
-description: Integrate Flotiq with Webstudio to jump-start your project code-free
 
 # Using Flotiq with Webstudio to build a headless website code free
 

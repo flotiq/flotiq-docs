@@ -1,10 +1,9 @@
 ---
+title: SurferSEO Content Optimization Plugin
+description: "Use leading content optimization platform directly in Flotiq and never miss a chance to increase your visibility in search engines!"
 tags:
   - Developer
 ---
-
-title: SurferSEO Content Optimization Plugin | Flotiq documentation
-description: Use leading content optimization platform directly in Flotiq and never miss a chance to increase your visibility in search engines!
 
 # SurferSEO Content Optimization Plugin
 

@@ -1,10 +1,9 @@
 ---
+title: Report an issue
+description: Step-by-step guide for reporting issues from the Flotiq Panel
 tags:
   - Content Creator
 ---
-
-title: Report an issue
-description: Step-by-step guide for reporting issues from the Flotiq Panel
 
 # Report an issue
 

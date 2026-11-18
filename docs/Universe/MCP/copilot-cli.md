@@ -1,10 +1,8 @@
 ---
+description: Add the Flotiq MCP Server to GitHub Copilot CLI.
 tags:
   - Developer
 ---
-
-title: Flotiq MCP Server in GitHub Copilot CLI | Flotiq docs
-description: Add the Flotiq MCP Server to GitHub Copilot CLI.
 
 # Flotiq MCP Server in GitHub Copilot CLI
 

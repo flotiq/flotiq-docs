@@ -1,11 +1,10 @@
 ---
+title: Account Settings
+description: How to manage account and organization settings in Flotiq.
 tags:
   - Content Creator
   - Administrator
 ---
-
-title: Account Settings
-description: How to manage account and organization settings in Flotiq.
 
 # Account Settings
 

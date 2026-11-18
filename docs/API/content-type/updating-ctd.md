@@ -1,10 +1,8 @@
 ---
+description: How to update Content Type Definitions in Flotiq API
 tags:
   - Developer
 ---
-
-title: How to update Content Type Definitions | Flotiq docs
-description: How to update Content Type Definitions in Flotiq API
 
 # Updating Content Types
 

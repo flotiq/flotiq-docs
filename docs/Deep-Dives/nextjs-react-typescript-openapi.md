@@ -1,10 +1,8 @@
 ---
+description: Generate an OpenAPI API client library and integrate it in Next.js projects, benefit from TypeScript support and code autocompletion in your IDE.
 tags:
   - Developer
 ---
-
-title: Learn how to use data from Flotiq in React and TypeScript projects with Flotiq SDK | Flotiq docs
-description: Generate an OpenAPI API client library and integrate it in Next.js projects, benefit from TypeScript support and code autocompletion in your IDE.
 
 # Use data from Flotiq in React and TypeScript projects
 

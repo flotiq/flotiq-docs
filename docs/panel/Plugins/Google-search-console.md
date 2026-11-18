@@ -1,10 +1,9 @@
 ---
+title: Google Search Console plugin
+description: This plugin integrates with the Google Search Console API to provide up-to-date information about indexing status of your pages.
 tags:
   - Developer
 ---
-
-title: Google Search Console plugin | Flotiq documentation
-description: This plugin integrates with the Google Search Console API to provide up-to-date information about indexing status of your pages.
 
 This plugin integrates with the Google Search Console API to provide up-to-date information about indexing status of your pages.
 

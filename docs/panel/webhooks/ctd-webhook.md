@@ -1,10 +1,9 @@
 ---
+title: Async CTD webhooks
+description: Async Content Definition webhooks in Flotiq
 tags:
   - Developer
 ---
-
-title: Async CTD webhooks
-description: Async Content Definition webhooks in Flotiq
 
 # Content Definition webhooks
 

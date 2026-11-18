@@ -1,10 +1,8 @@
 ---
+description: "A deep dive tutorial on Flotiq's complex data structures with an archived Gatsby example."
 tags:
   - Developer
 ---
-
-title: Building a recipe website with Flotiq (legacy Gatsby tutorial) | Flotiq docs
-description: A deep dive tutorial on Flotiq's complex data structures with an archived Gatsby example.
 
 # Building a recipes website using complex data structures
 

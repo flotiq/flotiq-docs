@@ -1,12 +1,11 @@
 ---
+title: Flotiq FAQ
+description: Frequently Asked Questions on Flotiq CMS
 tags:
   - Developer
   - Administrator
   - Content Creator
 ---
-
-title: Flotiq FAQ
-description: Frequently Asked Questions on Flotiq CMS
 
 # FAQ
 

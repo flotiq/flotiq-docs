@@ -1,10 +1,9 @@
 ---
+title: Flotiq MCP Server in VS Code Copilot
+description: Use Flotiq content directly from GitHub Copilot Chat in Visual Studio Code.
 tags:
   - Developer
 ---
-
-title: Flotiq MCP Server in VS Code Copilot | Flotiq docs
-description: Use Flotiq content directly from GitHub Copilot Chat in Visual Studio Code.
 
 # Flotiq MCP Server in VS Code Copilot
 

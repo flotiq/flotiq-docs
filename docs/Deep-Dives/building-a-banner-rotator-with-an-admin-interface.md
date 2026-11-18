@@ -1,10 +1,8 @@
 ---
+description: This example shows how you can use Flotiq to build your own system that can rotate ads on your website.
 tags:
   - Developer
 ---
-
-title: Building a banner rotator with an admin interface | Flotiq docs
-description: This example shows how you can use Flotiq to build your own system that can rotate ads on your website.
 
 # Building a banner rotator with an admin interface
 

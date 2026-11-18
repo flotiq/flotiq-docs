@@ -1,10 +1,8 @@
 ---
+description: Legacy guide for Angular 9 projects using an SDK package generated in Flotiq.
 tags:
   - Developer
 ---
-
-title: Angular 9 and Flotiq headless CMS (legacy guide)
-description: Legacy guide for Angular 9 projects using an SDK package generated in Flotiq.
 
 # Angular 9 with Flotiq SDK
 

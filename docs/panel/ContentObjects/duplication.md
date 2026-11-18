@@ -1,10 +1,9 @@
 ---
+title: How to duplicate Content Objects
+description: How to duplicate Content Objects in Flotiq
 tags:
   - Developer
 ---
-
-title: How to duplicate Content Objects | Flotiq docs
-description: How to duplicate Content Objects in Flotiq
 
 Flotiq helps teams scale content faster by letting you duplicate Content Objects in seconds. Reuse proven structures and data without manual re\-entry, keep content consistent, and reduce repetitive work.
 To duplicate an object, open the Content Object list view and click the duplicate icon next to the item you want to copy.

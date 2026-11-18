@@ -1,10 +1,9 @@
 ---
+title: How to delete Content Objects
+description: How to delete Content Objects in Flotiq
 tags:
   - Developer
 ---
-
-title: How to delete Content Objects | Flotiq docs
-description: How to delete Content Objects in Flotiq
 
 # Deleting content objects
 

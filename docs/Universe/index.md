@@ -1,10 +1,9 @@
 ---
+title: Flotiq Universe
+description: Explore Flotiq Universe to discover new ways of using your API.
 tags:
   - Developer
 ---
-
-title: Flotiq Universe | Flotiq documentation
-description: Explore Flotiq Universe to discover new ways of using your API.
 
 # Flotiq Universe
 

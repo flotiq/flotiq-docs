@@ -1,10 +1,9 @@
 ---
+title: Custom Links
+description: This plugin allows to create custom links in each entity view.
 tags:
   - Developer
 ---
-
-title: Custom Links | Flotiq documentation
-description: This plugin allows to create custom links in each entity view.
 
 !!! Caution
     **The Custom Links plugin is now deprecated.** Custom Links are now built into Flotiq 

@@ -1,11 +1,10 @@
 ---
+title: Templates and Starters
+description: How to choose and use Flotiq templates and starters.
 tags:
   - Developer
   - Content Creator
 ---
-
-title: Templates and Starters
-description: How to choose and use Flotiq templates and starters.
 
 # Templates and Starters
 

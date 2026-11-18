@@ -1,10 +1,9 @@
 ---
+title: How to add Content Objects
+description: How to add Content Objects in Flotiq
 tags:
   - Developer
 ---
-
-title: How to add Content Objects | Flotiq docs
-description: How to add Content Objects in Flotiq
 
 # Content Objects :fontawesome-solid-triangle-exclamation:{ .pricing-info title="Limits apply" }[^1]
 

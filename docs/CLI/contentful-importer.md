@@ -1,10 +1,9 @@
 ---
+title: Contentful - Flotiq data migration
+description: How to migrate Flotiq data from Contentful account
 tags:
   - Developer
 ---
-
-title: Contentful - Flotiq data migration | Flotiq docs
-description: How to migrate Flotiq data from Contentful account
 
 # Migrate Contentful's content to Flotiq
 

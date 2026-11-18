@@ -1,10 +1,8 @@
 ---
+description: Use the Flotiq Mobile Expo application to browse and manage your content directly from the mobile application
 tags:
   - Developer
 ---
-
-title: Flotiq Mobile Expo app for Content Editors & Developers | Flotiq docs
-description: Use the Flotiq Mobile Expo application to browse and manage your content directly from the mobile application
 
 # Flotiq Mobile Expo app for Content Editors & Developers
 

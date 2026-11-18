@@ -1,10 +1,9 @@
 ---
+title: Flotiq JavaScript / TypeScript SDK
+description: Flotiq provides SDKs, or client libraries, to access your Content, but if you would like to build your own - you can use the OpenAPI compatible schema to generate clients and servers for multiple languages.
 tags:
   - Developer
 ---
-
-title: Flotiq JavaScript / TypeScript SDK
-description: Flotiq provides SDKs, or client libraries, to access your Content, but if you would like to build your own - you can use the OpenAPI compatible schema to generate clients and servers for multiple languages.
 
 # Flotiq JavaScript / TypeScript SDK
 

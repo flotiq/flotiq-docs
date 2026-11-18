@@ -1,10 +1,9 @@
 ---
+title: How to get single Content Object
+description: How to get a single Content Object in Flotiq
 tags:
   - Developer
 ---
-
-title: How to get single Content Object | Flotiq docs
-description: How to get a single Content Object in Flotiq
 
 # Getting single Content Object
 

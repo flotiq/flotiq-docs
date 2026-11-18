@@ -1,11 +1,10 @@
 ---
+title: Single Sign-On (SSO)
+description: How SSO works in Flotiq and what administrators need before setup.
 tags:
   - Content Creator
   - Developer
 ---
-
-title: Single Sign-On (SSO)
-description: How SSO works in Flotiq and what administrators need before setup.
 
 ## Active Directory Single Sign-On (Enterprise)
 

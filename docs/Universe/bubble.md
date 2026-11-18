@@ -1,10 +1,9 @@
 ---
+title: Flotiq Bubble integration
+description: Flotiq allows you to integrate your content with any system easily.
 tags:
   - Developer
 ---
-
-title: Flotiq Bubble integration | Flotiq docs
-description: Flotiq allows you to integrate your content with any system easily.
 
 # Flotiq and bubble integration
 

@@ -1,10 +1,9 @@
 ---
+title: Color picker plugin
+description: This plugin renders a color picker for selected text inputs.
 tags:
   - Developer
 ---
-
-title: Color picker plugin | Flotiq documentation
-description: This plugin renders a color picker for selected text inputs.
 
 The Flotiq Color Picker plugin transforms standard text input fields into intuitive color selection interfaces. This plugin provides a visual way to select and manage colors for your content, eliminating the need to manually enter hex color codes.
 

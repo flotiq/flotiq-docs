@@ -1,10 +1,9 @@
 ---
+title: "Draft & Public"
+description: "Draft & Public Mode is a feature that allows teams to manage different content variants in the CTD system"
 tags:
   - Content Creator
 ---
-
-title: Draft & Public
-description: Draft & Public Mode is a feature that allows teams to manage different content variants in the CTD system
 
 # Draft & Public
 

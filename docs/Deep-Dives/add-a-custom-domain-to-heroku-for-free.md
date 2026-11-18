@@ -1,10 +1,8 @@
 ---
+description: Read this tutorial to learn how you can use Cloudflare workers to add a free custom domain to a Heroku-hosted blog.
 tags:
   - Developer
 ---
-
-title: How to add a custom domain to your Heroku-hosted blog with Cloudflare workers | Flotiq docs
-description: Read this tutorial to learn how you can use Cloudflare workers to add a free custom domain to a Heroku-hosted blog.
 
 # How to add custom domains to free Heroku apps
 

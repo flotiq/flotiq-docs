@@ -1,10 +1,8 @@
 ---
+description: Get started with integrating Flotiq API into your application.
 tags:
   - Developer
 ---
-
-title: Get Started with Flotiq API Integration
-description: Get started with integrating Flotiq API into your application.
 
 !!! note "Before you begin, make sure you have the following:"
     * Flotiq Account: Sign up for an account on [Flotiq website](https://www.flotiq.com/){target="_blank"} if you haven't already.

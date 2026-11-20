@@ -1,10 +1,9 @@
 ---
+title: Cloudflare stream plugin
+description: This plugin offers seamless integration of Cloudflare Stream with Flotiq.
 tags:
   - Developer
 ---
-
-title: Cloudflare stream plugin | Flotiq documentation
-description: This plugin offers seamless integration of Cloudflare Stream with Flotiq.
 
 This plugin offers seamless integration of Cloudflare Stream with Flotiq, providing users with an intuitive way to embed video content directly from the rich text editor. With this solution, adding Cloudflare Stream videos becomes effortless, eliminating the need for manual embed code insertion. It's a perfect tool for those looking to enhance their content with multimedia elements while keeping the process simple and efficient.
 

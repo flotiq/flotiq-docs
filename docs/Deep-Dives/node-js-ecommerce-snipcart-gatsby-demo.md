@@ -1,10 +1,8 @@
 ---
+description: Start selling products online instantly. Use our step-by-step tutorial on Snipcart, Gatsby and Flotiq and put your e-commerce live in 5 minutes.
 tags:
   - Developer
 ---
-
-title: Start selling online - Node.js e-commerce tutorial using Snipcart, Flotiq and Gatsby | Flotiq deep dives
-description: Start selling products online instantly. Use our step-by-step tutorial on Snipcart, Gatsby and Flotiq and put your e-commerce live in 5 minutes.
 
 # Start selling online with Snipcart, Flotiq, Gatsby and Netlify
 

@@ -1,10 +1,9 @@
 ---
+title: Kanban view plugin
+description: This plugin transforms the default Flotiq content-type-objects page into a Kanban board, where content objects are displayed as cards within their respective columns.
 tags:
   - Developer
 ---
-
-title: Kanban view plugin | Flotiq documentation
-description: This plugin transforms the default Flotiq content-type-objects page into a Kanban board, where content objects are displayed as cards within their respective columns.
 
 This plugin transforms the default Flotiq content-type-objects page into a Kanban board, where content objects are displayed as cards within their respective columns.
 

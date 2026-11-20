@@ -1,10 +1,9 @@
 ---
+title: Advanced duplication patterns
+description: Advanced guidance for duplicating Content Objects safely at scale.
 tags:
   - Developer
 ---
-
-title: Advanced duplication patterns
-description: Advanced guidance for duplicating Content Objects safely at scale.
 
 # Advanced duplication patterns
 

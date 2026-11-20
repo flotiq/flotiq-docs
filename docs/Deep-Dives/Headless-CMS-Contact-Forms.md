@@ -1,9 +1,9 @@
 ---
+title: Contact form using Flotiq
 tags:
   - Developer
 ---
 
-title: Contact form using Flotiq | Flotiq docs
 description:
 
 # Contact form using Flotiq

@@ -1,10 +1,9 @@
 ---
+title: Plans and Billing
+description: How plans, subscriptions, and billing work in Flotiq.
 tags:
   - Administrator
 ---
-
-title: Plans and Billing
-description: How plans, subscriptions, and billing work in Flotiq.
 
 # Plans and Billing
 

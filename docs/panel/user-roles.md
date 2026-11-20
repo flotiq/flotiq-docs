@@ -1,10 +1,9 @@
 ---
+title: User Roles
+description: How to manage User Roles in Flotiq.
 tags:
   - Administrator
 ---
-
-title: User Roles
-description: How to manage User Roles in Flotiq.
 
 # User Roles
 

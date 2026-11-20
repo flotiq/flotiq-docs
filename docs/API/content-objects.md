@@ -1,10 +1,9 @@
 ---
+title: How to handle Content Objects
+description: How to handle Content Objects in Flotiq
 tags:
   - Developer
 ---
-
-title: How to handle Content Objects | Flotiq docs
-description: How to handle Content Objects in Flotiq
 
 # Content Objects
 

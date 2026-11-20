@@ -1,11 +1,10 @@
 ---
+title: Flotiq MCP Server in ChatGPT
+description: Connect your Flotiq content to ChatGPT using a custom MCP plugin.
 tags:
   - Developer
   - Content Creator
 ---
-
-title: Flotiq MCP Server in ChatGPT | Flotiq docs
-description: Connect your Flotiq content to ChatGPT using a custom MCP plugin.
 
 # Flotiq MCP Server in ChatGPT
 

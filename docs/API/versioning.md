@@ -1,10 +1,9 @@
 ---
+title: API and content versioning
+description: Versioning behavior for APIs and content updates in Flotiq.
 tags:
   - Developer
 ---
-
-title: API and content versioning
-description: Versioning behavior for APIs and content updates in Flotiq.
 
 # API and content versioning
 

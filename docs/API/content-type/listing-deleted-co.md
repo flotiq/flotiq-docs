@@ -1,10 +1,9 @@
 ---
+title: How to list deleted Content Objects
+description: How to list deleted Content Objects in Flotiq
 tags:
   - Developer
 ---
-
-title: How to list deleted Content Objects | Flotiq docs
-description: How to list deleted Content Objects in Flotiq
 
 # Listing ids of deleted Content Objects
 

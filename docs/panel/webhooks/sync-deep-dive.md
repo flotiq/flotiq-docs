@@ -1,10 +1,9 @@
 ---
+title: Synchronous webhooks deep dive
+description: Operational guidance for synchronous webhook design, reliability, and troubleshooting.
 tags:
   - Developer
 ---
-
-title: Synchronous webhooks deep dive
-description: Operational guidance for synchronous webhook design, reliability, and troubleshooting.
 
 # Synchronous webhooks deep dive
 

@@ -1,10 +1,9 @@
 ---
+title: Users
+description: How to manage users in Flotiq.
 tags:
   - Administrator
 ---
-
-title: Users
-description: How to manage users in Flotiq.
 
 This page explains how to manage **Users**, including your own settings, using the [Flotiq Dashboard](https://editor.flotiq.com){:target="_blank"}. 
 

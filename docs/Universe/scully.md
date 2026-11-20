@@ -1,10 +1,9 @@
 ---
+title: Flotiq Scully starters (legacy)
+description: Scully starters are no longer supported. Use Next.js starters for active support.
 tags:
   - Developer
 ---
-
-title: Flotiq Scully starters (legacy) | Flotiq docs
-description: Scully starters are no longer supported. Use Next.js starters for active support.
 
 # Scully starters
 

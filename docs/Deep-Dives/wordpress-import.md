@@ -1,10 +1,8 @@
 ---
+description: Get into this deep dive into Flotiq to learn how to easily import your blog posts from WordPress to Flotiq.
 tags:
   - Developer
 ---
-
-title: Importing WordPress posts, migrate from WordPress to Flotiq headless CMS | Flotiq docs
-description: Get into this deep dive into Flotiq to learn how to easily import your blog posts from WordPress to Flotiq.
 
 # Importing posts from WordPress
 

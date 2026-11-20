@@ -1,10 +1,9 @@
 ---
+title: Flotiq - MSExcel Migration
+description: How to migrate Flotiq data to/from MS Excel file
 tags:
   - Developer
 ---
-
-title: Flotiq - MSExcel Migration | Flotiq docs
-description: How to migrate Flotiq data to/from MS Excel file
 
 # Migrating data between Flotiq and MS Excel
 

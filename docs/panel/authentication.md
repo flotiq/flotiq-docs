@@ -1,12 +1,11 @@
 ---
+title: Authentication
+description: Authentication methods and access flow in Flotiq.
 tags:
   - Content Creator
   - Developer
   - Administrator
 ---
-
-title: Authentication
-description: Authentication methods and access flow in Flotiq.
 
 # Authentication
 

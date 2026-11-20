@@ -1,11 +1,10 @@
 ---
+title: Spaces and Organization
+description: How to manage Spaces in Flotiq.
 tags:
   - Administrator
   - Developer
 ---
-
-title: Spaces and Organization
-description: How to manage Spaces in Flotiq.
 
 ## What is a Space?
 

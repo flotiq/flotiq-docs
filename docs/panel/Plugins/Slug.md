@@ -1,10 +1,9 @@
 ---
+title: Slug
+description: This plugin simplifies the process of creating slugs for your Content Object.
 tags:
   - Developer
 ---
-
-title: Slug | Flotiq documentation
-description: This plugin simplifies the process of creating slugs for your Content Object.
 
 !!! Caution
     **The Slug plugin is now deprecated.** Slug generation has been moved into Flotiq core

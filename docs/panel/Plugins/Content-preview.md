@@ -1,10 +1,9 @@
 ---
+title: Content Preview plugin
+description: The plugin generates links that let you open drafts and public versions of pages directly from the editor. With one click, users can quickly save and open the draft version, streamlining their workflow for maximum efficiency. It works best with Next.js-based sites that use draft mode.
 tags:
   - Developer
 ---
-
-title: Content Preview plugin | Flotiq documentation
-description: The plugin generates links that let you open drafts and public versions of pages directly from the editor. With one click, users can quickly save and open the draft version, streamlining their workflow for maximum efficiency. It works best with Next.js-based sites that use draft mode.
 
 !!! Caution
     **The Content Preview plugin is now deprecated.** Content Preview is now built 

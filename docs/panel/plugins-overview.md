@@ -1,11 +1,10 @@
 ---
+title: Plugins overview
+description: How to discover, enable, and manage plugins in the Flotiq Panel.
 tags:
   - Administrator
   - Developer
 ---
-
-title: Plugins overview
-description: How to discover, enable, and manage plugins in the Flotiq Panel.
 
 # Plugins overview
 

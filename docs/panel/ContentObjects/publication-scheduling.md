@@ -1,10 +1,9 @@
 ---
+title: Publication scheduling
+description: "Publication scheduling is a feature that allows content editors to schedule the publication of a specified `ContentObject`."
 tags:
   - Content Creator
 ---
-
-title: Publication scheduling
-description: Publication scheduling is a feature that allows content editors to schedule the publication of a specified `ContentObject`.
 
 # Publication scheduling
 

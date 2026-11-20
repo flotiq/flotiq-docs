@@ -1,10 +1,9 @@
 ---
+title: Flotiq Dynamic Content API
+description: "Flotiq's Dynamic Content API offers a flexible way to interact with your content. Built-in SDKs and API docs make integration easier."
 tags:
   - Developer
 ---
-
-title: Flotiq Dynamic Content API | Flotiq docs
-description: Flotiq's Dynamic Content API offers a flexible way to interact with your content. Built-in SDKs and API docs make integration easier.
 
 # Dynamic Content API
 

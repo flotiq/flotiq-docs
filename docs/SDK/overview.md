@@ -1,10 +1,9 @@
 ---
+title: Flotiq SDKs
+description: Discover how to use Flotiq SDKs to simplify development with your headless CMS. Learn about our official JavaScript/TypeScript SDK or generate SDKs for any language using OpenAPI.
 tags:
   - Developer
 ---
-
-title: Flotiq SDKs
-description: Discover how to use Flotiq SDKs to simplify development with your headless CMS. Learn about our official JavaScript/TypeScript SDK or generate SDKs for any language using OpenAPI.
 
 # Flotiq SDKs
 

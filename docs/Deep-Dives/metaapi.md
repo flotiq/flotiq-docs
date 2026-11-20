@@ -1,10 +1,9 @@
 ---
+title: Flotiq and Meta-API integration
+description: This tutorial shows how to use Flotiq and Meta-API to integrate with another API
 tags:
   - Developer
 ---
-
-title: Flotiq and Meta-API integration | Flotiq docs
-description: This tutorial shows how to use Flotiq and Meta-API to integrate with another API
 
 !!! caution
     Please note that the information and documentation provided on this page regarding the integration with Meta API is no longer valid.

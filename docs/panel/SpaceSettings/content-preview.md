@@ -33,7 +33,7 @@ synchronization between your editor and website.
 
 ## Configuration
 
-[![Content Preview Settings](../images/space-settings/content-preview.png)](../images/space-settings/content-preview.png){: .border}
+![Content Preview Settings](../images/space-settings/content-preview/page-config.png){: .border}
 
 - **Page base URL** *(required)* - The base address of the site that renders
   your content, for example `http://localhost:3000` during local development.
@@ -54,7 +54,7 @@ The **Page route template** is configured per content type, in the Content
 Preview panel shown when you edit a Content Type Definition. Set it for each
 content type you want to preview.
 
-[![Content Preview route template](../images/space-settings/content-preview-config-ctd.png)](../images/space-settings/content-preview-config-ctd.png){: .center .width50 }
+![Content Preview route template](../images/space-settings/content-preview/ctd-config.png){: .center .width50 }
 
 - **Page route template** *(required)* - The URL path of your content pages,
   for example `/blog/{slug}`, where `{slug}` is a field of the content type.
@@ -79,7 +79,7 @@ actions:
 - **Public Version** - opens the currently published version of the same page,
   letting you compare your draft against what readers see.
 
-[![Content publishing workflow](../Plugins/images/content-preview/publishing-workflow.png)](../Plugins/images/content-preview/publishing-workflow.png){: .border}
+![Content publishing workflow](../images/space-settings/content-preview/draft-public-workflow.png){: .border}
 
 This uses draft mode in Next.js, so you can view changes before they are
 visible to your readers.
@@ -90,4 +90,4 @@ When a content type doesn't use the draft/public workflow, any saved change is
 immediately visible on your site. The editor shows a single **Save and View**
 action that saves your work and opens the updated page.
 
-[![Simple workflow](../Plugins/images/content-preview/generic-workflow.png)](../Plugins/images/content-preview/generic-workflow.png){: .border}
+![Simple workflow](../images/space-settings/content-preview/generic-workflow-co-form.png){: .border}

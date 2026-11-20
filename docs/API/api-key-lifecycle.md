@@ -1,10 +1,9 @@
 ---
+title: API key lifecycle
+description: Best practices for creating, rotating, and revoking API keys in Flotiq.
 tags:
   - Developer
 ---
-
-title: API key lifecycle
-description: Best practices for creating, rotating, and revoking API keys in Flotiq.
 
 # API key lifecycle
 

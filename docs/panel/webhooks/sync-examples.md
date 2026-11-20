@@ -1,10 +1,9 @@
 ---
+title: Synchronous webhooks examples
+description: How to use sync webhooks in Flotiq - examples
 tags:
   - Developer
 ---
-
-title: Synchronous webhooks examples
-description: How to use sync webhooks in Flotiq - examples
 
 # Sync Webhook examples
 

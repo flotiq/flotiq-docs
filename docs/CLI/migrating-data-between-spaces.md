@@ -1,10 +1,9 @@
 ---
+title: Migrating Flotiq data between Spaces
+description: "How to migrate data using CLI export&import through JSON features"
 tags:
   - Developer
 ---
-
-title: Migrating Flotiq data between Spaces | Flotiq docs
-description: How to migrate data using CLI export&import through JSON features
 
 # Migrating Flotiq data between Spaces
 

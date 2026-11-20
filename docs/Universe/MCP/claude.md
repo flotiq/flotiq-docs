@@ -1,11 +1,10 @@
 ---
+title: Flotiq MCP Server in Claude
+description: Connect your Flotiq content to Claude using a custom connector.
 tags:
   - Developer
   - Content Creator
 ---
-
-title: Flotiq MCP Server in Claude | Flotiq docs
-description: Connect your Flotiq content to Claude using a custom connector.
 
 # Flotiq MCP Server in Claude
 

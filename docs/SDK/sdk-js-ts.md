@@ -1,6 +1,6 @@
 ---
-title: Flotiq JavaScript / TypeScript SDK
-description: Flotiq provides SDKs, or client libraries, to access your Content, but if you would like to build your own - you can use the OpenAPI compatible schema to generate clients and servers for multiple languages.
+title: TypeScript SDK for the Flotiq headless CMS
+description: "Install @flotiq/flotiq-api-sdk, a fully typed JavaScript and TypeScript client for your Flotiq content, with Next.js draft mode support."
 tags:
   - Developer
 ---

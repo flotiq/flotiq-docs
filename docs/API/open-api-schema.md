@@ -1,6 +1,6 @@
 ---
-title: Get your own Open Api Schema
-description: How to get your open API schema
+title: OpenAPI schema for your content types
+description: Generate an OpenAPI schema for every Content Type Definition in your Flotiq account, or a scoped schema for a user-defined API key.
 tags:
   - Developer
 ---

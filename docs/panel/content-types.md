@@ -1,4 +1,6 @@
 ---
+title: "Content modeling: create Content Types"
+description: "Model your content in Flotiq: create and update Content Type Definitions in the dashboard and configure their fields."
 tags:
   - Developer
 ---
